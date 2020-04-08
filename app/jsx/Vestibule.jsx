@@ -16,6 +16,8 @@ class Vestibule extends Component {
         this.state = {
 
         }
+
+        console.log('jitsi api:', window.JitsiMeetExternalAPI)
     }
 
     async componentDidMount() {
