@@ -15,3 +15,18 @@ npm install
 cd app/
 bash run.sh
 ```
+
+### A slightly irritating note
+It seems like the Jitsi Meet library isn't intended to be consumed the way you'd use a regular JS library in a modern app. We have to use a script tag to get it working: 
+```html
+<body>
+  ...
+  <script src='https://meet.jit.si/external_api.js'></script>
+  <script type="text/javascript" src="js/bundle.js"></script>
+</body>
+```
+
+```javascript
+// To use inside a React component
+const JitsiAPI = window.JitsiMeetExternalAPI
+```
