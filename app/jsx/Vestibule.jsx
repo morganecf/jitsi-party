@@ -23,19 +23,45 @@ class Vestibule extends Component {
     async componentDidMount() {
         // Example usage of redux
         this.props.updateState('test')
+
+        try {
+            const domain = 'meet.jit.si'
+            const options = {
+                roomName: 'morgane',
+                height: 500,
+                parentNode: document.getElementById('jitsi-container'),
+                interfaceConfigOverwrite: {
+                    filmStripOnly: false,
+                    SHOW_JITSI_WATERMARK: false
+                },
+                configOverwrite: {
+                    disableSimulcast: false
+                }
+            }
+            const api = new window.JitsiMeetExternalAPI(domain, options)
+            api.addEventListener('videoConferenceJoined', () => {
+                console.log('user joined')
+                api.executeCommand('displayName', 'morg')
+            })
+        } catch (err) {
+            console.log('failed:', err)
+        }
     }
 
     render() {
         return (
-            <ul className="room-list">
-                {this.roomNames.map((name, index) => {
-                    return (
-                        <li key={index.toString()}>
-                            <a href={`https://meet.jit.si/${name}`}>{name}</a>
-                        </li>
-                    )
-                })}
-            </ul>
+            <div>
+                <ul className="room-list">
+                    {this.roomNames.map((name, index) => {
+                        return (
+                            <li key={index.toString()}>
+                                <a href={`https://meet.jit.si/${name}`}>{name}</a>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <div id="jitsi-container"></div>
+            </div>
         )
     }
 }
