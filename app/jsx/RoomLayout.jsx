@@ -58,7 +58,7 @@ export default {
         directions: {
             north: 'Gallery Room 1',
             west: 'Living Room',
-            east: 'Friends'
+            east: 'Feelings'
         }
     },
     'Gallery Room 1': {
@@ -135,10 +135,10 @@ export default {
         capacity: 5,
         isJitsi: true,
         directions: {
-            south: 'Friends'
+            south: 'Feelings'
         }
     },
-    'Friends': {
+    'Feelings': {
         capacity: 6,
         isJitsi: true,
         directions: {
@@ -152,7 +152,7 @@ export default {
         capacity: 7,
         isJitsi: true,
         directions: {
-            north: 'Friends',
+            north: 'Feelings',
             east: 'Literally Hell',
             west: 'Vestibule'
         }
@@ -171,7 +171,7 @@ export default {
         capacity: 4,
         isJitsi: true,
         directions: {
-            west: 'Friends',
+            west: 'Feelings',
             south: 'Literally Hell'
         }
     }
