@@ -16,6 +16,8 @@ cd app/
 bash run.sh
 ```
 
+The app should now be running on localhost:3000
+
 ### Jitsi API documentation
 https://github.com/jitsi/jitsi-meet/blob/master/doc/api.md
 
