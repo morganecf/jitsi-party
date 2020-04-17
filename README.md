@@ -16,6 +16,9 @@ cd app/
 bash run.sh
 ```
 
+### Jitsi API documentation
+https://github.com/jitsi/jitsi-meet/blob/master/doc/api.md
+
 ### A slightly irritating note
 It seems like the Jitsi Meet library isn't intended to be consumed the way you'd use a regular JS library in a modern app, i.e., it seems you can't import it. We have to use a script tag to get it working, and then access the global variable: 
 ```html
