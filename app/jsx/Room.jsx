@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import Navigation from './Navigation.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import directions from './directions.jsx'
+import RoomLayout from './RoomLayout.jsx'
 
 class Room extends Component { 
     constructor(props) {
@@ -17,7 +17,7 @@ class Room extends Component {
     }
 
     componentDidMount() {
-        this.connectToRoom(this.state.room)
+        this.enterRoom(this.state.room)
     }
 
     componentWillUnmount() {
@@ -26,17 +26,14 @@ class Room extends Component {
         }
     }
 
-    connectToRoom(room) {
-        if (this.api) {
-            this.api.dispose()
-        }
+    connectToRoom(room, roomData) {
         // TODO need to disable the ability to hang up I think
         // TODO persist video/sound on/off
         try {
-            const domain = 'meet.jit.si'
+            const domain = 'jitsi.gbre.org'
             const options = {
                 roomName: room,
-                height: 800,
+                height: roomData.videoHeight || 600,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
                     filmStripOnly: false,
@@ -57,10 +54,24 @@ class Room extends Component {
         }
     }
 
+    enterRoom(room) {
+        if (this.api) {
+            this.api.dispose()
+        }
+        if (room === 'The Great Outdoors') {
+            this.setState({ redirect: '/bye' })
+        } else {
+            const roomData = RoomLayout[room]
+            if (roomData.isJitsi) {
+                this.connectToRoom(room, roomData)
+            }
+        }
+    }
+
     onSwitchRoom(room) {
         this.setState({ room })
         this.props.updateCurrentRoom(room)
-        this.connectToRoom(room)
+        this.enterRoom(room)
     }
 
     getLoadingSpinner() {
@@ -69,13 +80,36 @@ class Room extends Component {
         }
     }
 
+    getRoomDescription() {
+        if (RoomLayout[this.state.room].description) {
+            return <p className="room-content">{RoomLayout[this.state.room].description}</p>
+        }
+    }
+
+    getRoomArt() {
+        if (RoomLayout[this.state.room].art) {
+            const { src, title, artist } = RoomLayout[this.state.room].art
+            return (
+                <div className="art-section">
+                    <img src={src}/>
+                    <p><i>{title}</i> by {artist}</p>
+                </div>
+            )
+        }
+    }
+
     render() {
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect}/>
+        }
         return (
             <div className="room">
                 <h2 className="room-name">{this.state.room}</h2>
                 {this.getLoadingSpinner()}
+                {this.getRoomDescription()}
+                {this.getRoomArt()}
                 <div id="jitsi-container"></div>
-                <Navigation directions={directions[this.state.room]} onClick={this.onSwitchRoom.bind(this)}></Navigation>
+                <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
                 <Link to="/map" activeclassname="active">Map</Link>
             </div>
         )

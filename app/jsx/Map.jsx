@@ -11,17 +11,6 @@ class Map extends Component {
         }
     }
 
-    async componentDidMount() {
-        try {
-            const domain = 'meet.jit.si'
-            const options = {}
-            this.api = new window.JitsiMeetExternalAPI(domain, options)
-            console.log(this.api)
-        } catch (err) {
-            console.log('failed:', err)
-        }
-    }
-
     render() {
         return (
             <div className="map">
