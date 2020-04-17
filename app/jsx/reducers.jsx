@@ -1,27 +1,24 @@
 import { handleActions } from 'redux-actions'
 
-const EXAMPLE_ACTION = 'EXAMPLE_ACTION'
+const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME'
 
 const initialState = {
-    data: {
-        example: ''
-    },
+    displayName: '',
+    avatar: ''
 }
 
-function exampleAction(state, example) {
-    return Object.assign({}, state, {
-        data: { example }
-    })
+function updateDisplayNameAction(state, displayName) {
+    return Object.assign({}, state, { displayName })
 }
 
 export default {
     /* Action creators: return actions for reducers */
-    exampleActionCreator: example => ({
-        type: EXAMPLE_ACTION,
-        example
+    updateDisplayNameActionCreator: displayName => ({
+        type: UPDATE_DISPLAY_NAME,
+        displayName
     }),
     /* Reducers */
     reducer: handleActions({
-        [EXAMPLE_ACTION]: exampleAction,
+        [UPDATE_DISPLAY_NAME]: updateDisplayNameAction,
     }, initialState)
 }
