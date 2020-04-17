@@ -7,13 +7,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import RoomLayout from './RoomLayout.jsx'
 
-class Room extends Component { 
+class Room extends Component {
     constructor(props) {
         super(props)
         this.state = {
             room: this.props.currentRoom,
             hasLoaded: false
         }
+        this.toolbarButtons = [
+            'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
+            'fodeviceselection', 'profile', 'chat', 'recording',
+            'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
+            'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
+            'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone',
+            'e2ee'
+        ]
     }
 
     componentDidMount() {
@@ -27,8 +35,6 @@ class Room extends Component {
     }
 
     connectToRoom(room, roomData) {
-        // TODO need to disable the ability to hang up I think
-        // TODO persist video/sound on/off
         try {
             const domain = 'jitsi.gbre.org'
             const options = {
@@ -36,8 +42,12 @@ class Room extends Component {
                 height: roomData.videoHeight || 600,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
-                    filmStripOnly: false,
-                    SHOW_JITSI_WATERMARK: false
+                    // filmStripOnly: true,
+                    SHOW_JITSI_WATERMARK: false,
+                    DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
+                    SHOW_WATERMARK_FOR_GUESTS: false,
+                    TOOLBAR_BUTTONS: this.toolbarButtons,
+                    
                 },
                 configOverwrite: {
                     disableSimulcast: false

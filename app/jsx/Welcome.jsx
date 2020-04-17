@@ -14,11 +14,17 @@ class Welcome extends Component {
         }
     }
 
+
+    // TODO only sound for art?
+    // TODO error checking for name (shouldn't be empty)
     // TODO see if there's option to hide room link
     // TODO redirect from /party
-    // TODO handle room capacity
     // TODO create avatars 
     // TODO skins / backgrounds for each room
+    // TODO need to disable the ability to hang up I think
+    // TODO persist video/sound on/off
+    // ================================
+    // TODO handle room capacity
     // TODO look into emby video stream service
 
     handleDisplayNameChange(event) {
@@ -26,7 +32,6 @@ class Welcome extends Component {
     }
 
     handleReady() {
-        // TODO make sure don't submit empty name
         this.props.updateDisplayName(this.state.displayName)
         this.props.updateCurrentRoom('Vestibule')
         this.setState({ redirect: '/party' })
