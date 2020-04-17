@@ -14,6 +14,14 @@ class Welcome extends Component {
         }
     }
 
+    // TODO see if there's option to hide room link
+    // TODO redirect from /party
+    // TODO create art room / art hallway
+    // TODO look into emby video stream service
+    // TODO create avatars 
+    // TODO skins / backgrounds for each room
+    // TODO look into creating room sizes
+
     handleDisplayNameChange(event) {
         this.setState({ displayName: event.target.value })
     }

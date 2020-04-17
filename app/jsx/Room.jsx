@@ -31,6 +31,7 @@ class Room extends Component {
             this.api.dispose()
         }
         // TODO need to disable the ability to hang up I think
+        // TODO persist video/sound on/off
         try {
             const domain = 'meet.jit.si'
             const options = {
@@ -49,6 +50,7 @@ class Room extends Component {
             this.setState({ hasLoaded: true })
             this.api.addEventListener('videoConferenceJoined', () => {
                 this.api.executeCommand('displayName', this.props.displayName)
+                // this.api.executeCommand('avatarUrl', this.props.avatar)
             })
         } catch (err) {
             console.log('failed:', err)
@@ -68,7 +70,6 @@ class Room extends Component {
     }
 
     render() {
-        console.log(directions[this.state.room])
         return (
             <div className="room">
                 <h2 className="room-name">{this.state.room}</h2>
