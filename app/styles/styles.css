@@ -5,6 +5,25 @@ body {
     color: #ea03c3;
     text-align: center;
 }
+.vestibule {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.vestibule .display-name {
+    margin-top: 50px;
+}
+.vestibule .display-name input[type=text] {
+    width: 30%;
+    height: 30px;
+    font-size: 25px;
+}
+.vestibule .display-name input[type=button] {
+    margin-left: 10px;
+}
+.vestibule a {
+    margin-top: 50px;
+}
 .about {
     color: #fff;
 }
