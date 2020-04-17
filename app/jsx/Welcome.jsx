@@ -14,19 +14,6 @@ class Welcome extends Component {
         }
     }
 
-
-    // TODO only sound for art?
-    // TODO error checking for name (shouldn't be empty)
-    // TODO see if there's option to hide room link
-    // TODO redirect from /party
-    // TODO create avatars 
-    // TODO skins / backgrounds for each room
-    // TODO need to disable the ability to hang up I think
-    // TODO persist video/sound on/off
-    // ================================
-    // TODO handle room capacity
-    // TODO look into emby video stream service
-
     handleDisplayNameChange(event) {
         this.setState({ displayName: event.target.value })
     }
