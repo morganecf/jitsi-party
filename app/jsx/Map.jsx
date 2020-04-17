@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
+import { Link } from 'react-router-dom'
 
 class Map extends Component { 
     constructor(props) {
@@ -11,12 +12,22 @@ class Map extends Component {
     }
 
     async componentDidMount() {
-        
+        try {
+            const domain = 'meet.jit.si'
+            const options = {}
+            this.api = new window.JitsiMeetExternalAPI(domain, options)
+            console.log(this.api)
+        } catch (err) {
+            console.log('failed:', err)
+        }
     }
 
     render() {
         return (
-            <h1>MAP</h1>
+            <div className="map">
+                <h1>Marauder's Map</h1>
+                <Link to="/party" activeclassname="active">Back</Link>
+            </div>
         )
     }
 }
