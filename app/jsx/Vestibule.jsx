@@ -8,34 +8,42 @@ import { Link } from 'react-router-dom'
 class Vestibule extends Component { 
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            displayName: this.props.displayName,
+            avatar: this.props.vatar,
+            isReady: !!(this.props.displayName)
+        }
     }
 
-    async componentDidMount() {
-        // Example usage of redux
-        this.props.updateState('test')
+    handleDisplayNameChange(event) {
+        this.setState({ displayName: event.target.value })
+        this.props.updateDisplayName(event.target.value)
     }
 
-    /*
-        - Enter username
-        - Map network of rooms to generated routes
-        - Keep track of where the user is and their path, show path on map
-        - Session!?
-        - Create map
-            - "You are here"
-            - Who's in which room
-        - Covid sprites floating in the background
-    */
+    handleReady() {
+        this.setState({ isReady: true })
+    }
+
+    getContent() {
+        if (this.state.isReady) {
+            return <Room roomName='Clarendon Vestibule' displayName={this.state.displayName}></Room>
+        }
+        return (
+            <div className="display-name">
+                <input type="text" name="name" onChange={this.handleDisplayNameChange.bind(this)}/>
+                <input type="button" onClick={this.handleReady.bind(this)} value="Go!"/>
+            </div>
+        )
+    }
 
     render() {
         return (
             <div className="vestibule">
                 <Link to="/about" activeclassname="active">About</Link>
-                <Room roomName='testjitsiroom' displayName='morg'></Room>
+                {this.getContent()}
             </div>
         )
     }
 }
 
-// Example usage of redux
-export default connect(state => state, { updateState: reducers.exampleActionCreator })(Vestibule)
+export default connect(state => state, { updateDisplayName: reducers.updateDisplayNameActionCreator })(Vestibule)

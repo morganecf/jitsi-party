@@ -10,5 +10,6 @@ export default (
         <Route exact path="/" component={Vestibule} />
         <Route path="/about" component={About}/>
         <Route path="/map" component={Map}/>
+        <Route path="/room" component={Room}/>
     </Router>
 )

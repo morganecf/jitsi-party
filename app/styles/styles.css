@@ -1,5 +1,5 @@
 body {
-    background: #000;
+    /* background: #000; */
 }
 .container h1 {
     color: #ea03c3;
@@ -7,4 +7,20 @@ body {
 }
 .about {
     color: #fff;
+}
+.navigation-container .top-row {
+    text-align: center;
+}
+.navigation-container .bottom-row {
+    text-align: center;
+}
+.navigation-container .middle-row {
+    display: flex;
+    justify-content: space-around;
+}
+.navigation-container .navigation-room-name {
+    margin: 10px;
+}
+.navigation-container button:disabled {
+    visibility: hidden;
 }
