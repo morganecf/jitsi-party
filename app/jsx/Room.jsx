@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Room extends Component { 
     constructor(props) {
@@ -12,7 +13,7 @@ export default class Room extends Component {
             const domain = 'meet.jit.si'
             const options = {
                 roomName: this.props.roomName,
-                height: 500,
+                height: 800,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
                     filmStripOnly: false,
@@ -32,6 +33,11 @@ export default class Room extends Component {
     }
 
     render() {
-        return <div id="jitsi-container"></div>
+        return (
+            <div className="room">
+                <div id="jitsi-container"></div>
+                <Link to="/map" activeclassname="active">Map</Link>
+            </div>
+        )
     }
 }
