@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the room page.
+// -----------------------------------------------------------------------------
+
+.room {
+	height: 100vh;
+	max-height: 100vh;
+	display: flex;
+	flex-flow: column;
+
+	.room-header {
+		display: flex;
+		justify-content: center;
+	}
+
+
+
+	#jitsi-container {
+		display: flex;
+		flex: 1;
+
+		> iframe {
+			height: 100% !important; // override stupid jitsi script
+		}
+	}
+
+	#nav-container {
+		display: flex;
+		flex-flow: column;
+		flex: 1;
+		justify-content: space-around;
+		align-items: center;
+		max-height: 160px;
+
+		.navigation-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 40%;
+			padding: 10px 0;
+
+
+			.middle-row {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			button:disabled {
+				opacity: 0;
+			}
+		}
+	}
+
+	#map-link {
+		position: fixed;
+		bottom: 1em;
+		right: 1.2em;
+	}
+}
