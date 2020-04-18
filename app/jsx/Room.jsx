@@ -114,13 +114,17 @@ class Room extends Component {
         }
         return (
             <div className="room">
-                <h2 className="room-name">{this.state.room}</h2>
+                <div className="room-header">
+                    <h2 className="room-header">{this.state.room}</h2>
+                </div>
                 {this.getLoadingSpinner()}
                 {this.getRoomDescription()}
                 {this.getRoomArt()}
                 <div id="jitsi-container"></div>
-                <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
-                <Link to="/map" activeclassname="active">Map</Link>
+                <div id="nav-container">
+                    <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
+                </div>
+                <Link to="/map" activeclassname="active" id="map-link">Map</Link>
             </div>
         )
     }
