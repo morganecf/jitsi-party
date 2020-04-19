@@ -24,6 +24,11 @@
 		}
 	}
 
+	#jitsi-placeholder {
+		position: absolute;
+		z-index: -1;
+	}
+
 	#nav-container {
 		display: flex;
 		flex-flow: column;
