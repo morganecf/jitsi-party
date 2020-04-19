@@ -5,7 +5,6 @@ import Welcome from './Welcome.jsx'
 import About from './About.jsx'
 import Map from './Map.jsx'
 import Room from './Room.jsx'
-import Exit from './Exit.jsx'
 
 export default (
     <Router history={createBrowserHistory()}>
@@ -13,6 +12,5 @@ export default (
         <Route path="/about" component={About}/>
         <Route path="/map" component={Map}/>
         <Route path="/party" component={Room}/>
-        <Route path="/bye" component={Exit}/>
     </Router>
 )

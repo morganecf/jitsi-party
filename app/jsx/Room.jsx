@@ -1,93 +1,48 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
-import Navigation from './Navigation.jsx'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import RoomLayout from './RoomLayout.jsx'
+import JitsiVideo from './JitsiVideo.jsx'
+import ArtRoom from './ArtRoom.jsx'
+import Exit from './Exit.jsx'
+import Navigation from './Navigation.jsx'
 
 class Room extends Component {
+    /*
+    * A room has the following:
+    *   1. Name of room
+    *   2. Optional description
+    *   3. Content (video, art, text explanations, whatever)
+    *   4. Navigation component used to move through rooms
+    *   5. Optional artifact, i.e. something the user finds or unlocks, like a map
+    * Add new rooms to RoomLayout.jsx, where individual rooms are defined. Add new TYPES of rooms
+    * by creating a new component for that room and updating the getRoomType() mapping. 
+    */
     constructor(props) {
         super(props)
         this.state = {
-            room: this.props.currentRoom,
-            hasLoaded: false
-        }
-        this.toolbarButtons = [
-            'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
-            'fodeviceselection', 'profile', 'chat', 'recording',
-            'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
-            'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-            'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone',
-            'e2ee'
-        ]
-    }
-
-    componentDidMount() {
-        this.enterRoom(this.state.room)
-    }
-
-    componentWillUnmount() {
-        if (this.api) {
-            this.api.dispose()
+            room: this.props.currentRoom
         }
     }
 
-    connectToRoom(room, roomData) {
-        try {
-            const domain = 'jitsi.gbre.org'
-            const options = {
-                roomName: room,
-                height: roomData.videoHeight || 600,
-                parentNode: document.getElementById('jitsi-container'),
-                interfaceConfigOverwrite: {
-                    // filmStripOnly: true,
-                    SHOW_JITSI_WATERMARK: false,
-                    DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
-                    SHOW_WATERMARK_FOR_GUESTS: false,
-                    TOOLBAR_BUTTONS: this.toolbarButtons,
-                    
-                },
-                configOverwrite: {
-                    disableSimulcast: false
-                }
-            }
-            this.api = new window.JitsiMeetExternalAPI(domain, options)
-            this.setState({ hasLoaded: true })
-            this.api.addEventListener('videoConferenceJoined', () => {
-                this.api.executeCommand('displayName', this.props.displayName)
-                // this.api.executeCommand('avatarUrl', this.props.avatar)
-            })
-        } catch (err) {
-            console.log('failed:', err)
-        }
-    }
-
-    enterRoom(room) {
-        if (this.api) {
-            this.api.dispose()
-        }
-        if (room === 'The Great Outdoors') {
-            this.setState({ redirect: '/bye' })
-        } else {
-            const roomData = RoomLayout[room]
-            if (roomData.isJitsi) {
-                this.connectToRoom(room, roomData)
-            }
-        }
-    }
-
-    onSwitchRoom(room) {
-        this.setState({ room })
-        this.props.updateCurrentRoom(room)
-        this.enterRoom(room)
-    }
-
-    getLoadingSpinner() {
-        if (!this.state.hasLoaded) {
-            return <FontAwesomeIcon icon={faSpinner}/>
-        }
+    getRoomType() {
+        /*
+        * There are currently 3 different types of rooms:
+        *   1. Regular Jitsi room that just has video
+        *   2. Art room which has a small video panel and one art piece
+        *   3. The Great Outdoors, an exit page that can send you to a random room
+        *   4. Room that just has some text content
+        */
+       const jitsiData = {
+           displayName: this.props.displayName,
+           roomName: this.state.room,
+           height: RoomLayout[this.state.room].height
+       }
+       return {
+           art: <ArtRoom jitsiData={jitsiData} art={RoomLayout[this.state.room].art}></ArtRoom>,
+           jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
+           exit: <Exit></Exit>
+       }[RoomLayout[this.state.room].type]
     }
 
     getRoomDescription() {
@@ -96,42 +51,27 @@ class Room extends Component {
         }
     }
 
-    getRoomArt() {
-        if (RoomLayout[this.state.room].art) {
-            const { src, title, artist } = RoomLayout[this.state.room].art
-            return (
-                <div className="art-section">
-                    <img src={src}/>
-                    <p><i>{title}</i> by {artist}</p>
-                </div>
-            )
-        }
+    onSwitchRoom(room) {
+        this.setState({ room })
+        this.props.updateCurrentRoom(room)
     }
 
     render() {
-        if (this.state.redirect) {
-            return <Redirect to={this.state.redirect}/>
-        }
-        return (
+       return (
             <div className="room">
                 <div className="room-header">
                     <h2 className="room-header">{this.state.room}</h2>
                 </div>
-                {this.getLoadingSpinner()}
                 {this.getRoomDescription()}
-                {this.getRoomArt()}
-                <div id="jitsi-container"></div>
+                {this.getRoomType()}
                 <div id="nav-container">
                     <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
                 </div>
-                <Link to="/map" activeclassname="active" id="map-link">Map</Link>
             </div>
         )
     }
 }
 
-export default connect(
-    state => state, 
-    {
-        updateCurrentRoom: reducers.updateCurrentRoomActionCreator
-     })(Room)
+export default connect(state => state, {
+    updateCurrentRoom: reducers.updateCurrentRoomActionCreator
+})(Room)
