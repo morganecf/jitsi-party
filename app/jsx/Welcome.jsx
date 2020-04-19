@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Link, Redirect } from 'react-router-dom'
+import PuckSelect from './PuckSelect.jsx'
 
-class Welcome extends Component { 
+class Welcome extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -13,6 +14,7 @@ class Welcome extends Component {
             redirect: null
         }
     }
+
 
     handleDisplayNameChange(event) {
         this.setState({ displayName: event.target.value })
@@ -25,16 +27,18 @@ class Welcome extends Component {
     }
 
     render() {
+
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect}/>
         }
         return (
             <div className="vestibule">
-                <h1>Welcome have fun</h1>
+                <h1>Welcome have phun</h1>
                 <div className="display-name">
                     <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/>
                     <input type="button" onClick={this.handleReady.bind(this)} value="Party!"/>
                 </div>
+                <PuckSelect />
                 <Link to="/about" activeclassname="active">About</Link>
             </div>
         )
@@ -42,7 +46,7 @@ class Welcome extends Component {
 }
 
 export default connect(
-    state => state, 
+    state => state,
     {
         updateDisplayName: reducers.updateDisplayNameActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
