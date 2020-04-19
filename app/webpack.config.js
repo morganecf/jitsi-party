@@ -1,3 +1,5 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
     entry: './jsx/app.jsx',
     output: {
@@ -5,7 +7,16 @@ module.exports = {
         filename: 'bundle.js'
     },
     devtool: '#sourcemap',
-    mode: 'development',
+    mode: 'production',
+    plugins: [
+        new MiniCssExtractPlugin({
+          // Options similar to the same options in webpackOptions.output
+          // all options are optional
+          filename: 'styles.css',
+          chunkFilename: 'styles_chunk.css',
+          ignoreOrder: false, // Enable to remove warnings about conflicting order
+        }),
+    ],
     module: {
         rules: [
             {
@@ -15,12 +26,13 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                  // Creates `style` nodes from JS strings
-                  'style-loader',
-                  // Translates CSS into CommonJS
-                  'css-loader',
-                  // Compiles Sass to CSS
-                  'sass-loader',
+                    MiniCssExtractPlugin.loader,
+                    // Creates `style` nodes from JS strings
+                    // 'style-loader',
+                    // Translates CSS into CommonJS
+                    'css-loader',
+                    // Compiles Sass to CSS
+                    'sass-loader',
                 ],
             },
             {
