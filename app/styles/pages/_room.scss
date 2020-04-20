@@ -13,7 +13,9 @@
 		justify-content: center;
 	}
 
-
+	.room-content {
+		text-align: center;
+	}
 
 	#jitsi-container {
 		display: flex;
@@ -27,6 +29,8 @@
 	#jitsi-placeholder {
 		position: absolute;
 		z-index: -1;
+		width: 100%;
+		text-align: center;
 	}
 
 	#nav-container {
