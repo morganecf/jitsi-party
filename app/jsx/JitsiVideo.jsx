@@ -66,7 +66,7 @@ export default class JitsiVideo extends Component {
         return (
             <div className="jitsi-video">
                 <div id="jitsi-placeholder">
-                    Walking into room... :)
+                    Loading video...
                 </div>
                 <div id="jitsi-container"></div>
             </div>
