@@ -176,6 +176,30 @@ export default {
         }
     },
     'The Great Outdoors': {
-        type: null
+        type: 'adventure',
+        adventureOptions: {
+            text: "Are you sure you want to leave!? Why don't you pop into a random room instead?",
+            buttons: [
+                {
+                    text: 'Ok',
+                    getNextRoom: roomLayout => {
+                        const rooms = Object.keys(roomLayout).filter(
+                            room => room !== 'The Great Outdoors' && room !== 'Bye'
+                        )
+                        const randomRoom = rooms[Math.floor(Math.random() * rooms.length)]
+                        return randomRoom
+                    }
+                },
+                {
+                    text: 'I want to leave!',
+                    getNextRoom: () => 'Bye'
+                }
+            ]
+        },
+        directions: {}
+    },
+    'Bye': {
+        type: 'redirect',
+        route: '/bye'
     }
 }
