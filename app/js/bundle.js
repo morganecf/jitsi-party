@@ -276,7 +276,7 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "jitsi-video"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "jitsi-placeholder"
-    }, "Walking into room... :)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Loading video..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "jitsi-container"
     }));
   }
