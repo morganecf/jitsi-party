@@ -12,26 +12,27 @@ export default class Navigation extends Component {
         const { north, south, east, west } = this.props.directions
         return (
             <div className="navigation-container">
-                <div className="top-row">
-                    <button className="north" disabled={!north} onClick={() => onClick(north)}>
-                        <FontAwesomeIcon icon={faArrowUp}/>
-                        <span className="navigation-room-name">{north}</span>
-                    </button>
-                </div>
-                <div className="middle-row">
+                <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>
                         <FontAwesomeIcon icon={faArrowLeft}/>
                         <span className="navigation-room-name">{west}</span>
                     </button>
-                    <button className="east" disabled={!east} onClick={() => onClick(east)}>
-                        <FontAwesomeIcon icon={faArrowRight}/>
-                        <span className="navigation-room-name">{east}</span>
-                    </button>
                 </div>
-                <div className="bottom-row">
+                <div className="column">
+                    <button className="north" disabled={!north} onClick={() => onClick(north)}>
+                        <FontAwesomeIcon icon={faArrowUp}/>
+                        <span className="navigation-room-name">{north}</span>
+                    </button>
+                    <img id="navigation-puck" src="https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"/>
                     <button className="south" disabled={!south} onClick={() => onClick(south)}>
                         <FontAwesomeIcon icon={faArrowDown}/>
                         <span className="navigation-room-name">{south}</span>
+                    </button>
+                </div>
+                <div className="column">
+                    <button className="east" disabled={!east} onClick={() => onClick(east)}>
+                        <FontAwesomeIcon icon={faArrowRight}/>
+                        <span className="navigation-room-name">{east}</span>
                     </button>
                 </div>
             </div>
