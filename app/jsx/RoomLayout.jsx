@@ -20,13 +20,13 @@ export default {
         capacity: 10,
         type: 'jitsi',
         directions: {
-            north: 'Serious Conversation Only',
+            north: 'Serious Conversations Only',
             south: 'Vestibule',
             east: 'Art Gallery',
             west: 'Trashy Bedroom'
         }
     },
-    'Serious Conversation Only': {
+    'Serious Conversations Only': {
         capacity: 4,
         type: 'jitsi',
         directions: {
@@ -181,7 +181,7 @@ export default {
             text: "Are you sure you want to leave!? Why don't you pop into a random room instead?",
             buttons: [
                 {
-                    text: 'Ok',
+                    text: 'Teleport me!!',
                     getNextRoom: roomLayout => {
                         const rooms = Object.keys(roomLayout).filter(
                             room => room !== 'The Great Outdoors' && room !== 'Bye'
@@ -191,7 +191,7 @@ export default {
                     }
                 },
                 {
-                    text: 'I want to leave!',
+                    text: 'I want to leave >:(',
                     getNextRoom: () => 'Bye'
                 }
             ]

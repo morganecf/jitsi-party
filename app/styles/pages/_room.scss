@@ -51,25 +51,24 @@
 	}
 
 	#nav-container {
-		display: flex;
-		flex-flow: column;
-		flex: 1;
-		justify-content: space-around;
-		align-items: center;
 		max-height: 160px;
 
 		.navigation-container {
 			display: flex;
-			flex-direction: column;
 			align-items: center;
-			width: 40%;
 			padding: 10px 0;
 
-
-			.middle-row {
-				width: 100%;
+			.column {
+				flex: 1;
 				display: flex;
-				justify-content: space-between;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			#navigation-puck {
+				max-width: 150px;
+				max-height: 150px;
+				padding: 25px;
 			}
 
 			button:disabled {
