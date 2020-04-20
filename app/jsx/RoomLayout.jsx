@@ -64,11 +64,11 @@ export default {
     'Gallery Room 1': {
         capacity: 4,
         type: 'art',
-        videoHeight: 100,
+        videoHeight: 150,
         art: {
-            title: 'Untitled',
-            artist: 'Unknown',
-            src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png'
+            title: 'Light',
+            artist: 'James Turrell',
+            src: 'https://i.guim.co.uk/img/media/cf62885d3e390035b2ccaeddc7937d9245739ca0/0_0_2048_1536/master/2048.jpg?width=700&quality=85&auto=format&fit=max&s=11e39c32b0b94498d3ee524d1bc9a38e'
         },
         directions: {
             north: 'Gallery Room 2',
@@ -78,7 +78,7 @@ export default {
     'Gallery Room 2': {
         capacity: 4,
         type: 'art',
-        videoHeight: 100,
+        videoHeight: 150,
         art: {
             title: 'Flaming June',
             artist: 'Frederic Lord Leighton',
@@ -92,7 +92,7 @@ export default {
     'Gallery Room 3': {
         capacity: 4,
         type: 'art',
-        videoHeight: 100,
+        videoHeight: 150,
         art: {
             title: 'Untitled',
             artist: 'Francis Bacon',
@@ -106,7 +106,7 @@ export default {
     'Gallery Room 4': {
         capacity: 4,
         type: 'art',
-        videoHeight: 100,
+        videoHeight: 150,
         art: {
             title: 'Untitled',
             artist: 'Man Ray',
@@ -120,7 +120,7 @@ export default {
     'Gallery Room 5': {
         capacity: 4,
         type: 'art',
-        videoHeight: 100,
+        videoHeight: 150,
         art: {
             title: 'Smiling',
             artist: 'Yue Minjun',

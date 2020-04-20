@@ -21,9 +21,9 @@
 		display: flex;
 		flex: 1;
 
-		> iframe {
-			height: 100% !important; // override stupid jitsi script
-		}
+		// > iframe {
+		// 	height: 100% !important; // override stupid jitsi script
+		// }
 	}
 
 	#jitsi-placeholder {
@@ -31,6 +31,23 @@
 		z-index: -1;
 		width: 100%;
 		text-align: center;
+	}
+
+	.adventure {
+		text-align: center;
+	}
+
+	.art-section {
+		text-align: center;
+		padding: 40px;
+
+		img {
+			max-width: 500px;
+			max-height: 500px;
+			width: auto;
+			height: auto;
+			border: 20px solid #fff;
+		}
 	}
 
 	#nav-container {
