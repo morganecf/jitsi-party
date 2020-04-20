@@ -1,7 +1,7 @@
 export default {
     'Vestibule': {
         capacity: 10,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             north: 'Living Room',
             west: 'Guest Book',
@@ -10,7 +10,7 @@ export default {
     },
     'Guest Book': {
         capacity: 1,
-        isJitsi: false,
+        type: null,
         description: 'Add a note to the guest book!',
         directions: {
             east: 'Vestibule'
@@ -18,7 +18,7 @@ export default {
     },
     'Living Room': {
         capacity: 10,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             north: 'Serious Conversation Only',
             south: 'Vestibule',
@@ -28,7 +28,7 @@ export default {
     },
     'Serious Conversation Only': {
         capacity: 4,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             west: 'Bathroom',
             south: 'Living Room',
@@ -37,7 +37,7 @@ export default {
     },
     'Bathroom': {
         capacity: 2,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             east: 'Serious Conversations Only',
             south: 'Trashy Bedroom'
@@ -45,7 +45,7 @@ export default {
     },
     'Trashy Bedroom': {
         capacity: 6,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             north: 'Bathroom',
             east: 'Living Room'
@@ -53,7 +53,7 @@ export default {
     },
     'Art Gallery': {
         capacity: 10,
-        isJitsi: false,
+        type: null,
         description: 'In the gallery spaces up ahead, you will find art created by your fellow Clarendonites :)',
         directions: {
             north: 'Gallery Room 1',
@@ -63,7 +63,7 @@ export default {
     },
     'Gallery Room 1': {
         capacity: 4,
-        isJitsi: true,
+        type: 'art',
         videoHeight: 100,
         art: {
             title: 'Untitled',
@@ -77,7 +77,7 @@ export default {
     },
     'Gallery Room 2': {
         capacity: 4,
-        isJitsi: true,
+        type: 'art',
         videoHeight: 100,
         art: {
             title: 'Flaming June',
@@ -91,7 +91,7 @@ export default {
     },
     'Gallery Room 3': {
         capacity: 4,
-        isJitsi: true,
+        type: 'art',
         videoHeight: 100,
         art: {
             title: 'Untitled',
@@ -105,7 +105,7 @@ export default {
     },
     'Gallery Room 4': {
         capacity: 4,
-        isJitsi: true,
+        type: 'art',
         videoHeight: 100,
         art: {
             title: 'Untitled',
@@ -119,7 +119,7 @@ export default {
     },
     'Gallery Room 5': {
         capacity: 4,
-        isJitsi: true,
+        type: 'art',
         videoHeight: 100,
         art: {
             title: 'Smiling',
@@ -133,14 +133,14 @@ export default {
     },
     'Punishment Corner': {
         capacity: 5,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             south: 'Feelings'
         }
     },
     'Feelings': {
         capacity: 6,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             north: 'Punishment Corner',
             south: 'Kitchen',
@@ -150,7 +150,7 @@ export default {
     },
     'Kitchen': {
         capacity: 7,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             north: 'Feelings',
             east: 'Literally Hell',
@@ -159,7 +159,7 @@ export default {
     },
     'Literally Hell': {
         capacity: 6,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             west: 'Kitchen',
             north: 'Bubble Baths',
@@ -169,10 +169,13 @@ export default {
     },
     'Bubble Baths': {
         capacity: 4,
-        isJitsi: true,
+        type: 'jitsi',
         directions: {
             west: 'Feelings',
             south: 'Literally Hell'
         }
+    },
+    'The Great Outdoors': {
+        type: null
     }
 }
