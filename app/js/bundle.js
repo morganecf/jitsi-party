@@ -117,6 +117,38 @@ class About extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./jsx/Adventure.jsx":
+/*!***************************!*\
+  !*** ./jsx/Adventure.jsx ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RoomLayout.jsx */ "./jsx/RoomLayout.jsx");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (props => {
+  const onClick = props.onClick;
+  const {
+    text,
+    buttons
+  } = props.options;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "adventure"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, text), buttons.map((button, i) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      key: `adventure-button-${i}`,
+      onClick: () => onClick(button.getNextRoom(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_1__["default"]))
+    }, button.text);
+  }));
+});
+
+/***/ }),
+
 /***/ "./jsx/ArtRoom.jsx":
 /*!*************************!*\
   !*** ./jsx/ArtRoom.jsx ***!
@@ -126,35 +158,27 @@ class About extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ArtRoom; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _JitsiVideo_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./JitsiVideo.jsx */ "./jsx/JitsiVideo.jsx");
 
 
-class ArtRoom extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const {
-      src,
-      title,
-      artist
-    } = this.props.art;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "art-room"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_JitsiVideo_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      jitsiData: this.props.jitsiData
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "art-section"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: src
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, title), " by ", artist)));
-  }
-
-}
+/* harmony default export */ __webpack_exports__["default"] = (props => {
+  const {
+    src,
+    title,
+    artist
+  } = props.art;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "art-room"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_JitsiVideo_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    jitsiData: props.jitsiData
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "art-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: src
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, title), " by ", artist)));
+});
 
 /***/ }),
 
@@ -169,38 +193,10 @@ class ArtRoom extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RoomLayout.jsx */ "./jsx/RoomLayout.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reducers.jsx */ "./jsx/reducers.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
-
-
-
-
-
-class Exit extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const rooms = Object.keys(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_1__["default"]);
-    const randomRoom = rooms[Math.floor(Math.random() * rooms.length)];
-    this.props.updateCurrentRoom(randomRoom);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "exit"
-    }, "Are you sure you want to leave!?!? Why don't you pop into a ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
-      to: "/party",
-      activeclassname: "active"
-    }, "random room"), " instead?");
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(state => state, {
-  updateCurrentRoom: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateCurrentRoomActionCreator
-})(Exit));
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Goodbye!");
+});
 
 /***/ }),
 
@@ -416,12 +412,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _reducers_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reducers.jsx */ "./jsx/reducers.jsx");
-/* harmony import */ var _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RoomLayout.jsx */ "./jsx/RoomLayout.jsx");
-/* harmony import */ var _JitsiVideo_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./JitsiVideo.jsx */ "./jsx/JitsiVideo.jsx");
-/* harmony import */ var _ArtRoom_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ArtRoom.jsx */ "./jsx/ArtRoom.jsx");
-/* harmony import */ var _Exit_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Exit.jsx */ "./jsx/Exit.jsx");
-/* harmony import */ var _Navigation_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Navigation.jsx */ "./jsx/Navigation.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reducers.jsx */ "./jsx/reducers.jsx");
+/* harmony import */ var _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./RoomLayout.jsx */ "./jsx/RoomLayout.jsx");
+/* harmony import */ var _JitsiVideo_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./JitsiVideo.jsx */ "./jsx/JitsiVideo.jsx");
+/* harmony import */ var _ArtRoom_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ArtRoom.jsx */ "./jsx/ArtRoom.jsx");
+/* harmony import */ var _Adventure_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Adventure.jsx */ "./jsx/Adventure.jsx");
+/* harmony import */ var _Navigation_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Navigation.jsx */ "./jsx/Navigation.jsx");
+
 
 
 
@@ -436,7 +434,7 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   * A room has the following:
   *   1. Name of room
   *   2. Optional description
-  *   3. Content (video, art, text explanations, whatever)
+  *   3. Content (video, art, text, etc)
   *   4. Navigation component used to move through rooms
   *   5. Optional artifact, i.e. something the user finds or unlocks, like a map
   * Add new rooms to RoomLayout.jsx, where individual rooms are defined. Add new TYPES of rooms
@@ -453,32 +451,36 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     /*
     * There are currently 3 different types of rooms:
     *   1. Regular Jitsi room that just has video
-    *   2. Art room which has a small video panel and one art piece
-    *   3. The Great Outdoors, an exit page that can send you to a random room
-    *   4. Room that just has some text content
+    *   2. Art room which has a small video panel and an image
+    *   3. Text-based adventure rooms where you have to make a decision
+    *   4. Special purpose rooms that exist at a different route
     */
+    const roomData = _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room];
     const jitsiData = {
       displayName: this.props.displayName,
       roomName: this.state.room,
-      height: _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_3__["default"][this.state.room].height
+      height: roomData.height
     };
     return {
-      art: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ArtRoom_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      art: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ArtRoom_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
         jitsiData: jitsiData,
-        art: _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_3__["default"][this.state.room].art
+        art: roomData.art
       }),
-      jitsi: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_JitsiVideo_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      jitsi: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_JitsiVideo_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
         jitsiData: jitsiData
       }),
-      exit: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Exit_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null)
-    }[_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_3__["default"][this.state.room].type];
+      adventure: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Adventure_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        options: roomData.adventureOptions,
+        onClick: this.onSwitchRoom.bind(this)
+      })
+    }[roomData.type];
   }
 
   getRoomDescription() {
-    if (_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_3__["default"][this.state.room].description) {
+    if (_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room].description) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "room-content"
-      }, _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_3__["default"][this.state.room].description);
+      }, _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room].description);
     }
   }
 
@@ -490,6 +492,12 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
+    if (_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room].type === 'redirect') {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+        to: _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room].route
+      });
+    }
+
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "room"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -498,8 +506,8 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "room-header"
     }, this.state.room)), this.getRoomDescription(), this.getRoomType(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "nav-container"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      directions: _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_3__["default"][this.state.room].directions,
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      directions: _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room].directions,
       onClick: this.onSwitchRoom.bind(this)
     })));
   }
@@ -507,7 +515,7 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(state => state, {
-  updateCurrentRoom: _reducers_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].updateCurrentRoomActionCreator
+  updateCurrentRoom: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateCurrentRoomActionCreator
 })(Room));
 
 /***/ }),
@@ -699,7 +707,26 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   'The Great Outdoors': {
-    type: null
+    type: 'adventure',
+    adventureOptions: {
+      text: "Are you sure you want to leave!? Why don't you pop into a random room instead?",
+      buttons: [{
+        text: 'Ok',
+        getNextRoom: roomLayout => {
+          const rooms = Object.keys(roomLayout).filter(room => room !== 'The Great Outdoors' && room !== 'Bye');
+          const randomRoom = rooms[Math.floor(Math.random() * rooms.length)];
+          return randomRoom;
+        }
+      }, {
+        text: 'I want to leave!',
+        getNextRoom: () => 'Bye'
+      }]
+    },
+    directions: {}
+  },
+  'Bye': {
+    type: 'redirect',
+    route: '/bye'
   }
 });
 
@@ -884,6 +911,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _About_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./About.jsx */ "./jsx/About.jsx");
 /* harmony import */ var _Map_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Map.jsx */ "./jsx/Map.jsx");
 /* harmony import */ var _Room_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Room.jsx */ "./jsx/Room.jsx");
+/* harmony import */ var _Exit_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Exit.jsx */ "./jsx/Exit.jsx");
+
 
 
 
@@ -906,6 +935,9 @@ __webpack_require__.r(__webpack_exports__);
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
   path: "/party",
   component: _Room_jsx__WEBPACK_IMPORTED_MODULE_6__["default"]
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  path: "/bye",
+  component: _Exit_jsx__WEBPACK_IMPORTED_MODULE_7__["default"]
 })));
 
 /***/ }),

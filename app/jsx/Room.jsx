@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import reducers from './reducers.jsx'
 import RoomLayout from './RoomLayout.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
-import Exit from './Exit.jsx'
+import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
 
 class Room extends Component {
@@ -12,7 +13,7 @@ class Room extends Component {
     * A room has the following:
     *   1. Name of room
     *   2. Optional description
-    *   3. Content (video, art, text explanations, whatever)
+    *   3. Content (video, art, text, etc)
     *   4. Navigation component used to move through rooms
     *   5. Optional artifact, i.e. something the user finds or unlocks, like a map
     * Add new rooms to RoomLayout.jsx, where individual rooms are defined. Add new TYPES of rooms
@@ -29,20 +30,21 @@ class Room extends Component {
         /*
         * There are currently 3 different types of rooms:
         *   1. Regular Jitsi room that just has video
-        *   2. Art room which has a small video panel and one art piece
-        *   3. The Great Outdoors, an exit page that can send you to a random room
-        *   4. Room that just has some text content
+        *   2. Art room which has a small video panel and an image
+        *   3. Text-based adventure rooms where you have to make a decision
+        *   4. Special purpose rooms that exist at a different route
         */
+       const roomData = RoomLayout[this.state.room]
        const jitsiData = {
            displayName: this.props.displayName,
            roomName: this.state.room,
-           height: RoomLayout[this.state.room].height
+           height: roomData.height
        }
        return {
-           art: <ArtRoom jitsiData={jitsiData} art={RoomLayout[this.state.room].art}></ArtRoom>,
+           art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
            jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
-           exit: <Exit></Exit>
-       }[RoomLayout[this.state.room].type]
+           adventure: <Adventure options={roomData.adventureOptions} onClick={this.onSwitchRoom.bind(this)}></Adventure>
+       }[roomData.type]
     }
 
     getRoomDescription() {
@@ -57,7 +59,10 @@ class Room extends Component {
     }
 
     render() {
-       return (
+        if (RoomLayout[this.state.room].type === 'redirect') {
+            return <Redirect to={RoomLayout[this.state.room].route}/>
+        }
+        return (
             <div className="room">
                 <div className="room-header">
                     <h2 className="room-header">{this.state.room}</h2>
