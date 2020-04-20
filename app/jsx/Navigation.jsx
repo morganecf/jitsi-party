@@ -9,7 +9,7 @@ export default class Navigation extends Component {
 
     render() {
         const onClick = this.props.onClick
-        const { north, south, east, west } = this.props.directions
+        const { north, south, east, west } = this.props.directions || {}
         return (
             <div className="navigation-container">
                 <div className="column">

@@ -14,7 +14,7 @@ class Map extends Component {
     render() {
         return (
             <div className="map">
-                <h1>Marauder's Map</h1>
+                <h1>You've unlocked the party map!</h1>
                 <Link to="/party" activeclassname="active">Back</Link>
             </div>
         )

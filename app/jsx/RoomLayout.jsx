@@ -1,4 +1,8 @@
-export default {
+import _ from 'lodash'
+import adventures from './adventures'
+import { pickRandom } from './utils.js'
+
+const rooms = {
     'Vestibule': {
         capacity: 10,
         type: 'jitsi',
@@ -48,7 +52,8 @@ export default {
         type: 'jitsi',
         directions: {
             north: 'Bathroom',
-            east: 'Living Room'
+            east: 'Living Room',
+            west: 'Uncomfortable Closet'
         }
     },
     'Art Gallery': {
@@ -184,10 +189,9 @@ export default {
                     text: 'Teleport me!!',
                     getNextRoom: roomLayout => {
                         const rooms = Object.keys(roomLayout).filter(
-                            room => room !== 'The Great Outdoors' && room !== 'Bye'
+                            room => room !== 'adventure' && room !== 'redirect'
                         )
-                        const randomRoom = rooms[Math.floor(Math.random() * rooms.length)]
-                        return randomRoom
+                        return pickRandom(rooms)
                     }
                 },
                 {
@@ -195,11 +199,17 @@ export default {
                     getNextRoom: () => 'Bye'
                 }
             ]
-        },
-        directions: {}
+        }
     },
     'Bye': {
         type: 'redirect',
         route: '/bye'
+    },
+    'Map': {
+        type: 'redirect',
+        route: '/map'
     }
 }
+
+adventures.forEach(adventure => _.merge(rooms, adventure))
+export default rooms;
