@@ -38,7 +38,7 @@ class Room extends Component {
        const jitsiData = {
            displayName: this.props.displayName,
            roomName: this.state.room,
-           height: roomData.height
+           height: roomData.videoHeight
        }
        return {
            art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,

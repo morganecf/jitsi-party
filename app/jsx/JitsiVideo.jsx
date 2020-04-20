@@ -32,7 +32,7 @@ export default class JitsiVideo extends Component {
             const domain = 'meet.jit.si'
             const options = {
                 roomName: this.props.jitsiData.roomName,
-                height: this.props.jitsiData.height || 600,
+                height: this.props.jitsiData.height || 500,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
                     // filmStripOnly: true,

@@ -1,5 +1,9 @@
 import React from 'react'
 
 export default () => {
-    return <h1>Goodbye!</h1>
+    return (
+        <div className="exit">
+            <h1>Goodbye!</h1>
+        </div>
+    )
 }
