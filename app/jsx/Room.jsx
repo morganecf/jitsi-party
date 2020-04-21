@@ -69,9 +69,7 @@ class Room extends Component {
                 </div>
                 {this.getRoomDescription()}
                 {this.getRoomType()}
-                <div id="nav-container">
-                    <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
-                </div>
+                <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
             </div>
         )
     }
