@@ -3,7 +3,7 @@
 ## Contributing
 
 ### Installation
-```
+```bash
 # Set up a virtualenv
 virtualenv venv
 source venv/bin/activate
@@ -18,7 +18,7 @@ npm install
 ```
 
 ### Running the app locally 
-```
+```bash
 # Run flask server
 cd app/
 python app.py
