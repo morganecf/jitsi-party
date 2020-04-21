@@ -1,0 +1,13 @@
+.art-room {
+	$video-height: 150px;
+
+	.jitsi-video {
+		position: fixed;
+		width: 100%;
+		height: $video-height;
+	}
+
+	.art-section {
+		margin-top: $video-height;
+	}
+}
