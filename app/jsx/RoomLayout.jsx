@@ -8,14 +8,14 @@ const rooms = {
         type: 'jitsi',
         directions: {
             north: 'Living Room',
-            west: 'Guest Book',
+            west: 'Closet',
             east: 'Kitchen'
         }
     },
-    'Guest Book': {
-        capacity: 1,
-        type: null,
-        description: 'Add a note to the guest book!',
+    'Closet': {
+        capacity: 2,
+        type: 'jitsi',
+        description: 'A cozy closet.',
         directions: {
             east: 'Vestibule'
         }
