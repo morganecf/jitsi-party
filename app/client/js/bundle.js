@@ -746,12 +746,7 @@ const rooms = {
     route: '/map'
   }
 };
-_adventures__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(adventureOptions => {
-  lodash__WEBPACK_IMPORTED_MODULE_0___default.a.merge(rooms, {
-    type: 'adventure',
-    adventureOptions
-  });
-});
+_adventures__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(adventure => lodash__WEBPACK_IMPORTED_MODULE_0___default.a.merge(rooms, adventure));
 /* harmony default export */ __webpack_exports__["default"] = (rooms);
 
 /***/ }),
@@ -851,159 +846,201 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   'Uncomfortable Closet': {
-    text: "It's really uncomfortable in here.",
-    buttons: [{
-      text: 'Stay anyway',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-drugs', 'Uncomfortable Closet-tapioca'])
-    }, {
-      text: 'Leave',
-      getNextRoom: () => 'Trashy Bedroom'
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "It's really uncomfortable in here.",
+      buttons: [{
+        text: 'Stay anyway',
+        getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-drugs', 'Uncomfortable Closet-tapioca'])
+      }, {
+        text: 'Leave',
+        getNextRoom: () => 'Trashy Bedroom'
+      }]
+    }
   },
   'Uncomfortable Closet-drugs': {
-    text: "Might as well have fun in this closet. Which drug do you do?",
-    buttons: [{
-      text: 'Pop some molly',
-      getNextRoom: () => 'Uncomfortable Closet-talk'
-    }, {
-      text: 'Sip your beer',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-ghb', 'Uncomfortable Closet-horny', 'Uncomfortable Closet-talk'])
-    }, {
-      text: 'Sip the whip',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-map', 'Uncomfortable Closet-ramble'])
-    }, {
-      text: 'You are above drugs',
-      getNextRoom: () => 'Uncomfortable Closet-spy'
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "Might as well have fun in this closet. Which drug do you do?",
+      buttons: [{
+        text: 'Pop some molly',
+        getNextRoom: () => 'Uncomfortable Closet-talk'
+      }, {
+        text: 'Sip your beer',
+        getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-ghb', 'Uncomfortable Closet-horny', 'Uncomfortable Closet-talk'])
+      }, {
+        text: 'Sip the whip',
+        getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-map', 'Uncomfortable Closet-ramble'])
+      }, {
+        text: 'You are above drugs',
+        getNextRoom: () => 'Uncomfortable Closet-spy'
+      }]
+    }
   },
   'Uncomfortable Closet-tapioca': {
-    text: "Omg, there's a little piece of tapioca on the ground!",
-    buttons: [{
-      text: 'Eat it!',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-bird', 'Uncomfortable Closet-tapioca-2'])
-    }, {
-      text: "Smell it first",
-      getNextRoom: () => 'Uncomfortable Closet-smell'
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "Omg, there's a little piece of tapioca on the ground!",
+      buttons: [{
+        text: 'Eat it!',
+        getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-bird', 'Uncomfortable Closet-tapioca-2'])
+      }, {
+        text: "Smell it first",
+        getNextRoom: () => 'Uncomfortable Closet-smell'
+      }]
+    }
   },
   'Uncomfortable Closet-smell': {
-    text: "You lean down to smell the tapioca, and notice a faintly shimmering outline on the floor. It's a portal!",
-    buttons: [{
-      text: 'Go through it without hesitation',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Map', 'Uncomfortable Closet-dungeon'])
-    }, {
-      text: 'Grab a friend to share the adventure',
-      getNextRoom: () => 'Vestibule'
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "You lean down to smell the tapioca, and notice a faint rectangular outline on the floor. It's a trapdoor!",
+      buttons: [{
+        text: 'You go through it',
+        getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Map', 'Uncomfortable Closet-dungeon'])
+      }, {
+        text: 'You grab a friend to share the adventure',
+        getNextRoom: () => 'Vestibule'
+      }]
+    }
   },
   'Uncomfortable Closet-tapioca-2': {
-    text: "",
-    buttons: [{
-      text: '',
-      getNextRoom: () => ''
-    }, {
-      text: '',
-      getNextRoom: () => ''
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "",
+      buttons: [{
+        text: '',
+        getNextRoom: () => ''
+      }, {
+        text: '',
+        getNextRoom: () => ''
+      }]
+    }
   },
   'Uncomfortable Closet-bird': {
-    text: "Wow! You just unlocked the superpowers of a BIRD.",
-    buttons: [{
-      text: "I don't believe it",
-      getNextRoom: () => 'Trashy Bedroom'
-    }, {
-      text: "Sweet!",
-      getNextRoom: () => 'Uncomfortable Closet-bird'
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "You just unlocked the superpowers of a BIRD.",
+      buttons: [{
+        text: "I don't believe it",
+        getNextRoom: () => 'Trashy Bedroom'
+      }, {
+        text: "Sweet!",
+        getNextRoom: () => 'Map'
+      }]
+    }
   },
   'Uncomfortable Closet-ghb': {
-    text: "This beer tastes like industrial solvent.",
-    buttons: [{
-      text: "Throw up a little in your mouth but keep drinking",
-      getNextRoom: () => 'Uncomfortable Closet Map'
-    }, {
-      text: "Run to the bathroom",
-      getNextRoom: () => 'Bathroom'
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "This beer tastes like industrial solvent.",
+      buttons: [{
+        text: "Throw up a little in your mouth but keep drinking",
+        getNextRoom: () => 'Uncomfortable Closet Map'
+      }, {
+        text: "Run to the bathroom",
+        getNextRoom: () => 'Bathroom'
+      }]
+    }
   },
   'Uncomfortable Closet-horny': {
-    text: "You slip into an idle and horny reverie about...",
-    buttons: [{
-      text: "#clarendon-gone-wild",
-      getNextRoom: () => ''
-    }, {
-      text: "The surprisingly interesting nature of cement",
-      getNextRoom: () => ''
-    }, {
-      text: "That cake eating scene in Mathilda",
-      getNextRoom: () => ''
-    }, {
-      text: "Maps",
-      getNextRoom: () => 'Map'
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "You slip into an idle and horny reverie about...",
+      buttons: [{
+        text: "#clarendon-gone-wild",
+        getNextRoom: () => ''
+      }, {
+        text: "The surprisingly interesting nature of cement",
+        getNextRoom: () => ''
+      }, {
+        text: "That cake eating scene in Mathilda",
+        getNextRoom: () => ''
+      }, {
+        text: "Maps",
+        getNextRoom: () => 'Map'
+      }]
+    }
   },
   'Uncomfortable Closet-talk': {
-    text: "The urge to talk and perhaps even touch a fellow human is now overwhelming.",
-    buttons: [{
-      text: "Go back to the party",
-      getNextRoom: () => 'Trashy Bedroom'
-    }, {
-      text: "Talk to yourself",
-      getNextRoom: () => ''
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "The urge to talk and perhaps even touch a fellow human is now overwhelming.",
+      buttons: [{
+        text: "Go back to the party",
+        getNextRoom: () => 'Trashy Bedroom'
+      }, {
+        text: "Talk to yourself",
+        getNextRoom: () => ''
+      }]
+    }
   },
   'Uncomfortable Closet-ramble': {
-    text: 'You idly begin to talk to yourself. What do you say?',
-    buttons: [{
-      text: 'You recite the beginning of Moby Dick, which you know by heart.',
-      getNextRoom: () => ''
-    }, {
-      text: 'Haha',
-      getNextRoom: () => ''
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: 'You idly begin to talk to yourself. What do you say?',
+      buttons: [{
+        text: 'You recite the beginning of Moby Dick, which you know by heart.',
+        getNextRoom: () => ''
+      }, {
+        text: 'Haha',
+        getNextRoom: () => ''
+      }]
+    }
   },
   'Uncomfortable Closet-spy': {
-    text: 'To kill time, you peer through the crack between closet door and wall. What are you hoping to see?',
-    buttons: [{
-      text: 'The stars',
-      getNextRoom: () => 'Uncomfortable Closet-stars'
-    }, {
-      text: 'Jackson',
-      getNextRoom: () => ''
-    }, {
-      text: 'Naked girls eating tapioca',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-tapioca-girls', ''])
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: 'To kill time, you peer through the crack between closet door and wall. What are you hoping to see?',
+      buttons: [{
+        text: 'The stars',
+        getNextRoom: () => 'Uncomfortable Closet-stars'
+      }, {
+        text: 'Jackson',
+        getNextRoom: () => ''
+      }, {
+        text: 'Naked girls eating tapioca',
+        getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-tapioca-girls', ''])
+      }]
+    }
   },
   'Uncomfortable Closet-stars': {
-    text: "All you can see is trash, and naked people lying atop it. Ugh. You want fresh, clean stars! You yearn for the great outdoors!",
-    buttons: [{
-      text: 'Go outside',
-      getNextRoom: () => 'The Great Outdoors'
-    }, {
-      text: 'Smash your head against the wall',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-bird', 'Uncomfortable Closet-pain'])
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "All you can see is trash, and naked people lying atop it. Ugh. You want fresh, clean stars! You yearn for the great outdoors!",
+      buttons: [{
+        text: 'Go outside',
+        getNextRoom: () => 'The Great Outdoors'
+      }, {
+        text: 'Smash your head against the wall',
+        getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-bird', 'Uncomfortable Closet-pain'])
+      }]
+    }
   },
   'Uncomfortable Closet-pain': {
-    text: "Pain......",
-    buttons: [{
-      text: 'PAIN',
-      getNextRoom: () => ''
-    }, {
-      text: 'PAIN',
-      getNextRoom: () => ''
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: "Pain......",
+      buttons: [{
+        text: 'PAIN',
+        getNextRoom: () => ''
+      }, {
+        text: 'PAIN',
+        getNextRoom: () => ''
+      }]
+    }
   },
   'Uncomfortable Closet-tapioca-girls': {
-    text: 'Outside the closet you can see three sexy girls eating tapioca from a bowl. They are naked.',
-    buttons: [{
-      text: '',
-      getNextRoom: () => 'Trashy Bedroom'
-    }, {
-      text: '',
-      getNextRoom: () => ''
-    }]
+    type: 'adventure',
+    adventureOptions: {
+      text: 'Outside the closet you can see three sexy girls eating tapioca from a bowl. They are naked.',
+      buttons: [{
+        text: '',
+        getNextRoom: () => 'Trashy Bedroom'
+      }, {
+        text: '',
+        getNextRoom: () => ''
+      }]
+    }
   }
 });
 
@@ -12100,6 +12137,20 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 };
 
 module.exports = invariant;
+
+
+/***/ }),
+
+/***/ "./node_modules/isarray/index.js":
+/*!***************************************!*\
+  !*** ./node_modules/isarray/index.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
 
 
 /***/ }),
@@ -29577,7 +29628,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(/*! isarray */ "./node_modules/path-to-regexp/node_modules/isarray/index.js")
+var isarray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js")
 
 /**
  * Expose `pathToRegexp`.
@@ -30003,20 +30054,6 @@ function pathToRegexp (path, keys, options) {
 
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
-
-
-/***/ }),
-
-/***/ "./node_modules/path-to-regexp/node_modules/isarray/index.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/path-to-regexp/node_modules/isarray/index.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
-};
 
 
 /***/ }),
