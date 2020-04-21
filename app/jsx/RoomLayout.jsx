@@ -211,5 +211,11 @@ const rooms = {
     }
 }
 
-adventures.forEach(adventure => _.merge(rooms, adventure))
+adventures.forEach(adventureOptions => {
+    _.merge(rooms, {
+        type: 'adventure',
+        adventureOptions
+    })
+})
+
 export default rooms;

@@ -313,7 +313,7 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "map"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Marauder's Map"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "You've unlocked the party map!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
       to: "/party",
       activeclassname: "active"
     }, "Back"));
@@ -356,7 +356,7 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       south,
       east,
       west
-    } = this.props.directions;
+    } = this.props.directions || {};
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "navigation-container"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -536,20 +536,27 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _adventures__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./adventures */ "./jsx/adventures/index.js");
+/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils.js */ "./jsx/utils.js");
+
+
+
+const rooms = {
   'Vestibule': {
     capacity: 10,
     type: 'jitsi',
     directions: {
       north: 'Living Room',
-      west: 'Guest Book',
+      west: 'Closet',
       east: 'Kitchen'
     }
   },
-  'Guest Book': {
-    capacity: 1,
-    type: null,
-    description: 'Add a note to the guest book!',
+  'Closet': {
+    capacity: 2,
+    type: 'jitsi',
+    description: 'A cozy closet.',
     directions: {
       east: 'Vestibule'
     }
@@ -586,7 +593,8 @@ __webpack_require__.r(__webpack_exports__);
     type: 'jitsi',
     directions: {
       north: 'Bathroom',
-      east: 'Living Room'
+      east: 'Living Room',
+      west: 'Uncomfortable Closet'
     }
   },
   'Art Gallery': {
@@ -720,22 +728,31 @@ __webpack_require__.r(__webpack_exports__);
       buttons: [{
         text: 'Teleport me!!',
         getNextRoom: roomLayout => {
-          const rooms = Object.keys(roomLayout).filter(room => room !== 'The Great Outdoors' && room !== 'Bye');
-          const randomRoom = rooms[Math.floor(Math.random() * rooms.length)];
-          return randomRoom;
+          const rooms = Object.keys(roomLayout).filter(room => room !== 'adventure' && room !== 'redirect');
+          return Object(_utils_js__WEBPACK_IMPORTED_MODULE_2__["pickRandom"])(rooms);
         }
       }, {
         text: 'I want to leave >:(',
         getNextRoom: () => 'Bye'
       }]
-    },
-    directions: {}
+    }
   },
   'Bye': {
     type: 'redirect',
     route: '/bye'
+  },
+  'Map': {
+    type: 'redirect',
+    route: '/map'
   }
+};
+_adventures__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(adventureOptions => {
+  lodash__WEBPACK_IMPORTED_MODULE_0___default.a.merge(rooms, {
+    type: 'adventure',
+    adventureOptions
+  });
 });
+/* harmony default export */ __webpack_exports__["default"] = (rooms);
 
 /***/ }),
 
@@ -818,6 +835,192 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   updateDisplayName: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateDisplayNameActionCreator,
   updateCurrentRoom: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateCurrentRoomActionCreator
 })(Welcome));
+
+/***/ }),
+
+/***/ "./jsx/adventures/ClosetAdventure.jsx":
+/*!********************************************!*\
+  !*** ./jsx/adventures/ClosetAdventure.jsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils.js */ "./jsx/utils.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  'Uncomfortable Closet': {
+    text: "It's really uncomfortable in here.",
+    buttons: [{
+      text: 'Stay anyway',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-drugs', 'Uncomfortable Closet-tapioca'])
+    }, {
+      text: 'Leave',
+      getNextRoom: () => 'Trashy Bedroom'
+    }]
+  },
+  'Uncomfortable Closet-drugs': {
+    text: "Might as well have fun in this closet. Which drug do you do?",
+    buttons: [{
+      text: 'Pop some molly',
+      getNextRoom: () => 'Uncomfortable Closet-talk'
+    }, {
+      text: 'Sip your beer',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-ghb', 'Uncomfortable Closet-horny', 'Uncomfortable Closet-talk'])
+    }, {
+      text: 'Sip the whip',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-map', 'Uncomfortable Closet-ramble'])
+    }, {
+      text: 'You are above drugs',
+      getNextRoom: () => 'Uncomfortable Closet-spy'
+    }]
+  },
+  'Uncomfortable Closet-tapioca': {
+    text: "Omg, there's a little piece of tapioca on the ground!",
+    buttons: [{
+      text: 'Eat it!',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-bird', 'Uncomfortable Closet-tapioca-2'])
+    }, {
+      text: "Smell it first",
+      getNextRoom: () => 'Uncomfortable Closet-smell'
+    }]
+  },
+  'Uncomfortable Closet-smell': {
+    text: "You lean down to smell the tapioca, and notice a faintly shimmering outline on the floor. It's a portal!",
+    buttons: [{
+      text: 'Go through it without hesitation',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Map', 'Uncomfortable Closet-dungeon'])
+    }, {
+      text: 'Grab a friend to share the adventure',
+      getNextRoom: () => 'Vestibule'
+    }]
+  },
+  'Uncomfortable Closet-tapioca-2': {
+    text: "",
+    buttons: [{
+      text: '',
+      getNextRoom: () => ''
+    }, {
+      text: '',
+      getNextRoom: () => ''
+    }]
+  },
+  'Uncomfortable Closet-bird': {
+    text: "Wow! You just unlocked the superpowers of a BIRD.",
+    buttons: [{
+      text: "I don't believe it",
+      getNextRoom: () => 'Trashy Bedroom'
+    }, {
+      text: "Sweet!",
+      getNextRoom: () => 'Uncomfortable Closet-bird'
+    }]
+  },
+  'Uncomfortable Closet-ghb': {
+    text: "This beer tastes like industrial solvent.",
+    buttons: [{
+      text: "Throw up a little in your mouth but keep drinking",
+      getNextRoom: () => 'Uncomfortable Closet Map'
+    }, {
+      text: "Run to the bathroom",
+      getNextRoom: () => 'Bathroom'
+    }]
+  },
+  'Uncomfortable Closet-horny': {
+    text: "You slip into an idle and horny reverie about...",
+    buttons: [{
+      text: "#clarendon-gone-wild",
+      getNextRoom: () => ''
+    }, {
+      text: "The surprisingly interesting nature of cement",
+      getNextRoom: () => ''
+    }, {
+      text: "That cake eating scene in Mathilda",
+      getNextRoom: () => ''
+    }, {
+      text: "Maps",
+      getNextRoom: () => 'Map'
+    }]
+  },
+  'Uncomfortable Closet-talk': {
+    text: "The urge to talk and perhaps even touch a fellow human is now overwhelming.",
+    buttons: [{
+      text: "Go back to the party",
+      getNextRoom: () => 'Trashy Bedroom'
+    }, {
+      text: "Talk to yourself",
+      getNextRoom: () => ''
+    }]
+  },
+  'Uncomfortable Closet-ramble': {
+    text: 'You idly begin to talk to yourself. What do you say?',
+    buttons: [{
+      text: 'You recite the beginning of Moby Dick, which you know by heart.',
+      getNextRoom: () => ''
+    }, {
+      text: 'Haha',
+      getNextRoom: () => ''
+    }]
+  },
+  'Uncomfortable Closet-spy': {
+    text: 'To kill time, you peer through the crack between closet door and wall. What are you hoping to see?',
+    buttons: [{
+      text: 'The stars',
+      getNextRoom: () => 'Uncomfortable Closet-stars'
+    }, {
+      text: 'Jackson',
+      getNextRoom: () => ''
+    }, {
+      text: 'Naked girls eating tapioca',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-tapioca-girls', ''])
+    }]
+  },
+  'Uncomfortable Closet-stars': {
+    text: "All you can see is trash, and naked people lying atop it. Ugh. You want fresh, clean stars! You yearn for the great outdoors!",
+    buttons: [{
+      text: 'Go outside',
+      getNextRoom: () => 'The Great Outdoors'
+    }, {
+      text: 'Smash your head against the wall',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['Uncomfortable Closet-bird', 'Uncomfortable Closet-pain'])
+    }]
+  },
+  'Uncomfortable Closet-pain': {
+    text: "Pain......",
+    buttons: [{
+      text: 'PAIN',
+      getNextRoom: () => ''
+    }, {
+      text: 'PAIN',
+      getNextRoom: () => ''
+    }]
+  },
+  'Uncomfortable Closet-tapioca-girls': {
+    text: 'Outside the closet you can see three sexy girls eating tapioca from a bowl. They are naked.',
+    buttons: [{
+      text: '',
+      getNextRoom: () => 'Trashy Bedroom'
+    }, {
+      text: '',
+      getNextRoom: () => ''
+    }]
+  }
+});
+
+/***/ }),
+
+/***/ "./jsx/adventures/index.js":
+/*!*********************************!*\
+  !*** ./jsx/adventures/index.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ClosetAdventure_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ClosetAdventure.jsx */ "./jsx/adventures/ClosetAdventure.jsx");
+
+/* harmony default export */ __webpack_exports__["default"] = ([_ClosetAdventure_jsx__WEBPACK_IMPORTED_MODULE_0__["default"]]);
 
 /***/ }),
 
@@ -946,6 +1149,22 @@ __webpack_require__.r(__webpack_exports__);
   path: "/bye",
   component: _Exit_jsx__WEBPACK_IMPORTED_MODULE_7__["default"]
 })));
+
+/***/ }),
+
+/***/ "./jsx/utils.js":
+/*!**********************!*\
+  !*** ./jsx/utils.js ***!
+  \**********************/
+/*! exports provided: pickRandom */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pickRandom", function() { return pickRandom; });
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
 
 /***/ }),
 
@@ -11881,20 +12100,6 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 };
 
 module.exports = invariant;
-
-
-/***/ }),
-
-/***/ "./node_modules/isarray/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/isarray/index.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
-};
 
 
 /***/ }),
@@ -29372,7 +29577,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js")
+var isarray = __webpack_require__(/*! isarray */ "./node_modules/path-to-regexp/node_modules/isarray/index.js")
 
 /**
  * Expose `pathToRegexp`.
@@ -29798,6 +30003,20 @@ function pathToRegexp (path, keys, options) {
 
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/path-to-regexp/node_modules/isarray/index.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/path-to-regexp/node_modules/isarray/index.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
 
 
 /***/ }),
