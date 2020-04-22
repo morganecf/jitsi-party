@@ -9,21 +9,32 @@
 	flex-flow: column;
 
 	.room-header {
-		display: flex;
-		justify-content: center;
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+		text-shadow: 0 0 4px $background-color;
+		padding-left: 1em;
 	}
 
 	.room-content {
-		text-align: center;
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.jitsi-video {
+		display: flex;
+		flex: 1;
 	}
 
 	#jitsi-container {
 		display: flex;
 		flex: 1;
 
-		// > iframe {
-		// 	height: 100% !important; // override stupid jitsi script
-		// }
+		> iframe {
+			height: 100% !important; // override stupid jitsi script
+		}
 	}
 
 	#jitsi-placeholder {
@@ -34,7 +45,11 @@
 	}
 
 	.adventure {
-		text-align: center;
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
 	}
 
 	.art-section {
@@ -50,30 +65,27 @@
 		}
 	}
 
-	#nav-container {
-		max-height: 160px;
+	.navigation-container {
+		display: flex;
+		align-items: center;
+		padding: 10px 0;
 
-		.navigation-container {
+		.column {
+			flex: 1;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
-			padding: 10px 0;
+		}
 
-			.column {
-				flex: 1;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
+		#navigation-puck {
+			max-width: 125px;
+			max-height: 125px;
+			padding: 20px;
+			border-radius: 100%;
+		}
 
-			#navigation-puck {
-				max-width: 150px;
-				max-height: 150px;
-				padding: 25px;
-			}
-
-			button:disabled {
-				opacity: 0;
-			}
+		button:disabled {
+			opacity: 0;
 		}
 	}
 
