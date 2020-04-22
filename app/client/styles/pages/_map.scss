@@ -2,6 +2,14 @@
     text-align: center;
 
     #d3-map {
-       
+        svg {
+            background: #fff;
+
+            .map-room path {
+                stroke: '#000';
+                stroke-width: 2;
+                fill: '#9292b0';
+            }
+        }
     }
 }
