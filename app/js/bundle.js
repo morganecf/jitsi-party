@@ -302,7 +302,8 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
     this.state = {
       columnOpen: false,
-      rowOpen: null
+      rowOpen: null,
+      variant: null
     };
     this.onButtonClick = this.onButtonClick.bind(this);
   } // handleChange() {
@@ -324,8 +325,8 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    let key = 0;
-    const puck_list = [[1, './images/puck1.png'], [2, './images/puck1.png'], [3, './images/puck1.png']];
+    const puck_list = [[0, './images/puck1.png'], [1, './images/puck1.png'], [2, './images/puck1.png']];
+    const variant_lists = [[[0, './images/puck1.png'], [1, './images/puck1.png'], [2, './images/puck1.png']], [[0, './images/puck1.png'], [1, './images/puck1.png'], [2, './images/puck1.png']], [[0, './images/puck1.png'], [1, './images/puck1.png'], [2, './images/puck1.png']]];
     let puck_array;
 
     if (this.state.columnOpen) {
@@ -336,25 +337,21 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         if (this.state.rowOpen === puck[0]) {
           let handleClick = () => this.handleClick(puck[0]);
 
-          let test = {
+          let test_style = {
             display: 'flex',
             flexDirection: 'row'
           };
+          let variant = this.state.rowOpen;
+          let variant_array = variant_lists[this.state.rowOpen].map(puck => {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+              handleClick: handleClick,
+              key: puck[0],
+              image: puck[1]
+            });
+          });
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-            style: test
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
-            handleClick: handleClick,
-            key: puck[0],
-            image: puck[1]
-          }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
-            handleClick: handleClick,
-            key: puck[0],
-            image: puck[1]
-          }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
-            handleClick: handleClick,
-            key: puck[0],
-            image: puck[1]
-          }));
+            style: test_style
+          }, variant_array);
         } else {
           let handleClick = () => this.handleClick(puck[0]);
 
@@ -874,16 +871,19 @@ const PuckBox = props => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    width: '100px',
-    height: '120px',
-    backgroundColor: 'gray',
-    margin: '5px'
+    margin: '5px 5px 0px 0px',
+    backgroundColor: '#E6E6E6',
+    width: '50px',
+    padding: '2px'
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: style,
     onClick: props.handleClick,
     onMouseOver: props.handleTouch
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    style: {
+      maxWidth: '50px'
+    },
     src: props.image
   }));
 };
