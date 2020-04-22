@@ -8,7 +8,7 @@ import Exit from './Exit.jsx'
 
 export default (
     <Router history={createBrowserHistory()}>
-        <Route exact path="/" component={Welcome} />
+        <Route exact path="/" component={Map} />
         <Route path="/map" component={Map}/>
         <Route path="/party" component={Room}/>
         <Route path="/bye" component={Exit}/>
