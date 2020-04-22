@@ -1,18 +1,19 @@
 import React from 'react';
 
 const PuckBox = (props) => {
+
   const style = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    width: '100px',
-    height: '120px',
-    backgroundColor: 'gray',
-    margin: '5px'
+    margin: '5px 5px 0px 0px',
+    backgroundColor: '#E6E6E6',
+    width: '50px',
+    padding: '2px'
   }
         return (
             <div style={style} onClick={props.handleClick} onMouseOver={props.handleTouch}>
-            <img src={props.image} />
+            <img style={{ maxWidth: '50px'}} src={props.image} />
             </div>
         )
 }

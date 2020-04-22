@@ -7,7 +7,8 @@ class PuckSelect extends Component {
         super(props)
         this.state = {
             columnOpen: false,
-            rowOpen: null
+            rowOpen: null,
+            variant: null
         }
         this.onButtonClick = this.onButtonClick.bind(this)
       }
@@ -23,12 +24,15 @@ class PuckSelect extends Component {
 
   render() {
 
-    let key = 0
-
     const puck_list = [
+      [0,'./images/puck1.png'],
       [1,'./images/puck1.png'],
       [2,'./images/puck1.png'],
-      [3,'./images/puck1.png'],
+    ]
+    const variant_lists = [
+      [[0,'./images/puck1.png'],[1,'./images/puck1.png'],[2,'./images/puck1.png']],
+      [[0,'./images/puck1.png'],[1,'./images/puck1.png'],[2,'./images/puck1.png']],
+      [[0,'./images/puck1.png'],[1,'./images/puck1.png'],[2,'./images/puck1.png']],
     ]
     let puck_array
 
@@ -42,28 +46,25 @@ class PuckSelect extends Component {
 
           let handleClick = () => this.handleClick(puck[0])
 
-          let test = {
+          let test_style = {
             display: 'flex',
             flexDirection: 'row'
           }
 
+          let variant = this.state.rowOpen
+          let variant_array = variant_lists[this.state.rowOpen].map((puck) => {
+            return (
+              <PuckBox
+              handleClick={handleClick}
+              key={puck[0]}
+              image={puck[1]}
+              />
+            )
+          })
+
           return (
-            <div style={test}>
-            <PuckBox
-            handleClick={handleClick}
-            key={puck[0]}
-            image={puck[1]}
-            />
-            <PuckBox
-            handleClick={handleClick}
-            key={puck[0]}
-            image={puck[1]}
-            />
-            <PuckBox
-            handleClick={handleClick}
-            key={puck[0]}
-            image={puck[1]}
-            />
+            <div style={test_style}>
+              {variant_array}
             </div>
           )
 
