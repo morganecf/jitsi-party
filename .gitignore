@@ -23,6 +23,7 @@ _mailinglist
 .idea/
 docs/_build/
 .vscode
+venv/
 
 ###### Auto-generated, can clean this up later ######
 

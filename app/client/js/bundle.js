@@ -86,37 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./jsx/About.jsx":
-/*!***********************!*\
-  !*** ./jsx/About.jsx ***!
-  \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return About; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-
-
-class About extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "about"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "About us?!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We are a team that communicates with hearts, and has seen each other naked."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "footer-area"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/",
-      activeclassname: "active"
-    }, "Back")));
-  }
-
-}
-
-/***/ }),
-
 /***/ "./jsx/Adventure.jsx":
 /*!***************************!*\
   !*** ./jsx/Adventure.jsx ***!
@@ -379,10 +348,7 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faArrowUp"]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "navigation-room-name"
-    }, north)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      id: "navigation-puck",
-      src: "https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, north)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "south",
       disabled: !south,
       onClick: () => onClick(south)
@@ -400,7 +366,12 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faArrowRight"]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "navigation-room-name"
-    }, east))));
+    }, east))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "column"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      id: "navigation-puck",
+      src: "https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"
+    })));
   }
 
 }
@@ -744,7 +715,12 @@ const rooms = {
     route: '/map'
   }
 };
-_adventures__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(adventure => lodash__WEBPACK_IMPORTED_MODULE_0___default.a.merge(rooms, adventure));
+_adventures__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(adventureOptions => {
+  lodash__WEBPACK_IMPORTED_MODULE_0___default.a.merge(rooms, {
+    type: 'adventure',
+    adventureOptions
+  });
+});
 /* harmony default export */ __webpack_exports__["default"] = (rooms);
 
 /***/ }),
@@ -816,10 +792,7 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       type: "button",
       onClick: this.handleReady.bind(this),
       value: "Party!"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
-      to: "/about",
-      activeclassname: "active"
-    }, "About"));
+    })));
   }
 
 }
@@ -1153,11 +1126,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var history__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! history */ "./node_modules/history/esm/history.js");
 /* harmony import */ var _Welcome_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Welcome.jsx */ "./jsx/Welcome.jsx");
-/* harmony import */ var _About_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./About.jsx */ "./jsx/About.jsx");
-/* harmony import */ var _Map_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Map.jsx */ "./jsx/Map.jsx");
-/* harmony import */ var _Room_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Room.jsx */ "./jsx/Room.jsx");
-/* harmony import */ var _Exit_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Exit.jsx */ "./jsx/Exit.jsx");
-
+/* harmony import */ var _Map_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Map.jsx */ "./jsx/Map.jsx");
+/* harmony import */ var _Room_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Room.jsx */ "./jsx/Room.jsx");
+/* harmony import */ var _Exit_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Exit.jsx */ "./jsx/Exit.jsx");
 
 
 
@@ -1172,17 +1143,14 @@ __webpack_require__.r(__webpack_exports__);
   path: "/",
   component: _Welcome_jsx__WEBPACK_IMPORTED_MODULE_3__["default"]
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-  path: "/about",
-  component: _About_jsx__WEBPACK_IMPORTED_MODULE_4__["default"]
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
   path: "/map",
-  component: _Map_jsx__WEBPACK_IMPORTED_MODULE_5__["default"]
+  component: _Map_jsx__WEBPACK_IMPORTED_MODULE_4__["default"]
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
   path: "/party",
-  component: _Room_jsx__WEBPACK_IMPORTED_MODULE_6__["default"]
+  component: _Room_jsx__WEBPACK_IMPORTED_MODULE_5__["default"]
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
   path: "/bye",
-  component: _Exit_jsx__WEBPACK_IMPORTED_MODULE_7__["default"]
+  component: _Exit_jsx__WEBPACK_IMPORTED_MODULE_6__["default"]
 })));
 
 /***/ }),
@@ -12135,20 +12103,6 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 };
 
 module.exports = invariant;
-
-
-/***/ }),
-
-/***/ "./node_modules/isarray/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/isarray/index.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
-};
 
 
 /***/ }),
@@ -29626,7 +29580,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js")
+var isarray = __webpack_require__(/*! isarray */ "./node_modules/path-to-regexp/node_modules/isarray/index.js")
 
 /**
  * Expose `pathToRegexp`.
@@ -30052,6 +30006,20 @@ function pathToRegexp (path, keys, options) {
 
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/path-to-regexp/node_modules/isarray/index.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/path-to-regexp/node_modules/isarray/index.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
 
 
 /***/ }),

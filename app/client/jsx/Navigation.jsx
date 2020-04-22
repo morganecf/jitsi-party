@@ -23,7 +23,6 @@ export default class Navigation extends Component {
                         <FontAwesomeIcon icon={faArrowUp}/>
                         <span className="navigation-room-name">{north}</span>
                     </button>
-                    <img id="navigation-puck" src="https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"/>
                     <button className="south" disabled={!south} onClick={() => onClick(south)}>
                         <FontAwesomeIcon icon={faArrowDown}/>
                         <span className="navigation-room-name">{south}</span>
@@ -34,6 +33,9 @@ export default class Navigation extends Component {
                         <FontAwesomeIcon icon={faArrowRight}/>
                         <span className="navigation-room-name">{east}</span>
                     </button>
+                </div>
+                <div className="column">
+                    <img id="navigation-puck" src="https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"/>
                 </div>
             </div>
         )
