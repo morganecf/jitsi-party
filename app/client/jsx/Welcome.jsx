@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
-import { Link, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 class Welcome extends Component { 
     constructor(props) {
@@ -35,7 +35,6 @@ class Welcome extends Component {
                     <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/>
                     <input type="button" onClick={this.handleReady.bind(this)} value="Party!"/>
                 </div>
-                <Link to="/about" activeclassname="active">About</Link>
             </div>
         )
     }
