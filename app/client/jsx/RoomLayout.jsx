@@ -10,6 +10,17 @@ const rooms = {
             north: 'Living Room',
             west: 'Closet',
             east: 'Kitchen'
+        },
+        map: {
+            x: 11,
+            y: 19,
+            width: 10,
+            height: 3,
+            doors: {
+                north: 13,
+                west: 20,
+                east: 20
+            }
         }
     },
     'Closet': {
@@ -18,6 +29,15 @@ const rooms = {
         description: 'A cozy closet.',
         directions: {
             east: 'Vestibule'
+        },
+        map: {
+            x: 10,
+            y: 20,
+            width: 1,
+            height: 2,
+            doors: {
+                east: 20
+            }
         }
     },
     'Living Room': {
@@ -28,6 +48,18 @@ const rooms = {
             south: 'Vestibule',
             east: 'Art Gallery',
             west: 'Trashy Bedroom'
+        },
+        map: {
+            x: 11,
+            y: 14,
+            width: 8,
+            height: 5,
+            doors: {
+                north: 15,
+                west: 15,
+                east: 15,
+                south: 13
+            }
         }
     },
     'Serious Conversations Only': {
@@ -37,6 +69,16 @@ const rooms = {
             west: 'Bathroom',
             south: 'Living Room',
             north: 'The Great Outdoors'
+        },
+        map: {
+            x: 13,
+            y: 10,
+            width: 5,
+            height: 4,
+            doors: {
+                south: 15,
+                west: 12
+            }
         }
     },
     'Bathroom': {
@@ -45,6 +87,16 @@ const rooms = {
         directions: {
             east: 'Serious Conversations Only',
             south: 'Trashy Bedroom'
+        },
+        map: {
+            x: 9,
+            y: 12,
+            width: 4,
+            height: 2,
+            doors: {
+                east: 12,
+                south: 9
+            }
         }
     },
     'Trashy Bedroom': {
@@ -54,6 +106,17 @@ const rooms = {
             north: 'Bathroom',
             east: 'Living Room',
             west: 'Uncomfortable Closet'
+        },
+        map: {
+            x: 6,
+            y: 14,
+            width: 5,
+            height: 3,
+            doors: {
+                north: 9,
+                east: 15,
+                west: 15
+            }
         }
     },
     'Art Gallery': {
@@ -63,7 +126,18 @@ const rooms = {
         directions: {
             north: 'Gallery Room 1',
             west: 'Living Room',
-            east: 'Feelings'
+            east: 'Kitchen'
+        },
+        map: {
+            x: 19,
+            y: 13,
+            width: 4,
+            height: 3,
+            doors: {
+                west: 15,
+                north: 20,
+                east: 15
+            }
         }
     },
     'Gallery Room 1': {
@@ -78,6 +152,16 @@ const rooms = {
         directions: {
             north: 'Gallery Room 2',
             south: 'Art Gallery'
+        },
+        map: {
+            x: 20,
+            y: 11,
+            width: 2,
+            height: 2,
+            doors: {
+                south: 20,
+                north: 20
+            }
         }
     },
     'Gallery Room 2': {
@@ -92,6 +176,16 @@ const rooms = {
         directions: {
             north: 'Gallery Room 3',
             south: 'Gallery Room 1'
+        },
+        map: {
+            x: 20,
+            y: 9,
+            width: 2,
+            height: 2,
+            doors: {
+                south: 20,
+                north: 20
+            }
         }
     },
     'Gallery Room 3': {
@@ -104,8 +198,18 @@ const rooms = {
             src: 'https://www.artnews.com/wp-content/uploads/2018/04/unnamed-12.jpg',
         },
         directions: {
-            north: 'Gallery Room 4',
+            east: 'Gallery Room 4',
             south: 'Gallery Room 2'
+        },
+        map: {
+            x: 20,
+            y: 7,
+            width: 2,
+            height: 2,
+            doors: {
+                south: 20,
+                north: 20
+            }
         }
     },
     'Gallery Room 4': {
@@ -118,8 +222,18 @@ const rooms = {
             src: 'https://d32dm0rphc51dk.cloudfront.net/qFljvNMqmOU4ieEHoKtU0A/large.jpg'
         },
         directions: {
-            north: 'Gallery Room 5',
-            south: 'Gallery Room 3'
+            east: 'Gallery Room 5',
+            west: 'Gallery Room 3'
+        },
+        map: {
+            x: 20,
+            y: 5,
+            width: 2,
+            height: 2,
+            doors: {
+                east: 5,
+                south: 20
+            }
         }
     },
     'Gallery Room 5': {
@@ -132,25 +246,58 @@ const rooms = {
             src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png',
         },
         directions: {
-            north: 'Punishment Corner',
-            south: 'Gallery Room 4'
+            east: 'Gallery Room 6',
+            west: 'Gallery Room 5'
+        },
+        map: {
+            x: 22,
+            y: 5,
+            width: 2,
+            height: 2,
+            doors: {
+                west: 5,
+                east: 5
+            }
         }
     },
-    'Punishment Corner': {
-        capacity: 5,
-        type: 'jitsi',
+    'Gallery Room 6': {
+        capacity: 4,
+        type: 'art',
+        videoHeight: 150,
+        art: {
+            title: 'Smiling',
+            artist: 'Yue Minjun',
+            src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png',
+        },
         directions: {
-            south: 'Feelings'
+            south: 'Feelings',
+            west: 'Gallery Room 5'
+        },
+        map: {
+            x: 24,
+            y: 5,
+            width: 2,
+            height: 2,
+            doors: {
+                west: 5,
+                south: 25
+            }
         }
     },
     'Feelings': {
         capacity: 6,
         type: 'jitsi',
         directions: {
-            north: 'Punishment Corner',
             south: 'Kitchen',
-            west: 'Art Gallery',
-            east: 'Bubble Baths'
+        },
+        map: {
+            x: 24,
+            y: 7,
+            width: 4,
+            height: 4,
+            doors: {
+                south: 25
+            }
         }
     },
     'Kitchen': {
@@ -158,26 +305,65 @@ const rooms = {
         type: 'jitsi',
         directions: {
             north: 'Feelings',
-            east: 'Literally Hell',
-            west: 'Vestibule'
+            east: 'Bubble Baths',
+            south: 'The Great Outdoors'
+        },
+        map: {
+            x: 23,
+            y: 11,
+            width: 5,
+            height: 7,
+            doors: {
+                north: 25,
+                south: 25,
+                east: 17,
+                west: 15
+            }
         }
     },
-    'Literally Hell': {
+    'Game Room': {
         capacity: 6,
         type: 'jitsi',
         directions: {
-            west: 'Kitchen',
-            north: 'Bubble Baths',
-            south: 'The Great Outdoors',
+            north: 'Kitchen',
+            west: 'Vestibule',
             east: 'The Great Outdoors'
+        },
+        map: {
+            x: 21,
+            y: 18,
+            width: 6,
+            height: 3,
+            doors: {
+                north: 25,
+                west: 20
+            }
         }
     },
     'Bubble Baths': {
         capacity: 4,
         type: 'jitsi',
         directions: {
-            west: 'Feelings',
-            south: 'Literally Hell'
+            west: 'Kitchen',
+        },
+        map: {
+            x: 28,
+            y: 16,
+            width: 3,
+            height: 3,
+            doors: {
+                west: 17
+            }
+        }
+    },
+    'Room 314': {
+        capacity: 5,
+        type: 'jitsi',
+        map: {
+            x: 13,
+            y: 2,
+            width: 4,
+            height: 4
         }
     },
     'The Great Outdoors': {
