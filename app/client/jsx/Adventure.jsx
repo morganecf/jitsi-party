@@ -7,13 +7,15 @@ export default props => {
     return (
         <div className="adventure">
             <p>{text}</p>
-            {buttons.map((button, i) => {
-                return (
-                    <button
-                        key={`adventure-button-${i}`}
-                        onClick={() => onClick(button.getNextRoom(RoomLayout))}>{button.text}</button>
-                )
-            })}
+            <div>
+                {buttons.map((button, i) => {
+                    return (
+                        <button
+                            key={`adventure-button-${i}`}
+                            onClick={() => onClick(button.getNextRoom(RoomLayout))}>{button.text}</button>
+                    )
+                })}
+            </div>
         </div>
     )
 }
