@@ -702,7 +702,6 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.state = {
       room: this.props.currentRoom
     };
-    console.log('props:', this.props);
   }
 
   getRoomType() {
