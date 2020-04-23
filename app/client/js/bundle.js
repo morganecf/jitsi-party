@@ -234,8 +234,8 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   connect() {
     try {
-      // const domain = 'jitsi.gbre.org'
-      const domain = 'meet.jit.si';
+      const domain = 'jitsi.gbre.org'; // const domain = 'meet.jit.si'
+
       const options = {
         roomName: this.props.jitsiData.roomName,
         height: this.props.jitsiData.height || 500,

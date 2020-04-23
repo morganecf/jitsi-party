@@ -47,8 +47,8 @@ export default class JitsiVideo extends Component {
 
     connect() {
         try {
-            // const domain = 'jitsi.gbre.org'
-            const domain = 'meet.jit.si'
+            const domain = 'jitsi.gbre.org'
+            // const domain = 'meet.jit.si'
             const options = {
                 roomName: this.props.jitsiData.roomName,
                 height: this.props.jitsiData.height || 500,
