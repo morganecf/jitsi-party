@@ -323,6 +323,44 @@ __webpack_require__.r(__webpack_exports__);
 class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
+    this.bindHotkeys();
+  }
+
+  bindHotkeys() {
+    document.addEventListener("keydown", this.handleKeydown.bind(this));
+  }
+
+  handleKeydown(e) {
+    e = e || window.event;
+    const onClick = this.props.onClick;
+    const {
+      north,
+      south,
+      east,
+      west
+    } = this.props.directions || {};
+
+    switch (e.which || e.keyCode) {
+      case 37:
+        //left
+        west && onClick(west);
+        break;
+
+      case 38:
+        //up
+        north && onClick(north);
+        break;
+
+      case 39:
+        //right
+        east && onClick(east);
+        break;
+
+      case 40:
+        south && onClick(south); //down
+
+        break;
+    }
   }
 
   render() {
@@ -379,6 +417,10 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       id: "navigation-puck",
       src: "https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"
     })));
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener(keydown, this.handleKeydown.bind(this));
   }
 
 }
