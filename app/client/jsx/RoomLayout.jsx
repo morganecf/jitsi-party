@@ -393,8 +393,9 @@ const rooms = {
                 {
                     text: 'Teleport me!!',
                     getNextRoom: roomLayout => {
+                        // Allows you to go to any room plus the map
                         const rooms = Object.keys(roomLayout).filter(
-                            room => roomLayout[room].type !== 'adventure' && roomLayout[room].type !== 'redirect'
+                            room => roomLayout[room].type !== 'adventure' && room !== 'bye'
                         )
                         return pickRandom(rooms)
                     }

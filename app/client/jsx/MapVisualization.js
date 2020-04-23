@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
+const MARKER_URL = 'https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png'
 
 export default class MapVisualization {
     constructor(container, width, height, padding, mouseEvents) {
@@ -76,6 +77,11 @@ export default class MapVisualization {
     }
 
     draw(data) {
+        this.drawMap(data)
+        this.drawMarker(data)
+    }
+
+    drawMap(data) {
         // A 30x30 grid was used to derive the values in RoomLayout.jsx.
         // This makes sure those values are scaled to this view while
         // using the space efficiently
@@ -91,6 +97,7 @@ export default class MapVisualization {
         // Create extra space for doors
         padRooms(data)
 
+        // Room groups
         const room = this.svg
             .selectAll('.map-room')
             .data(data)
@@ -98,6 +105,7 @@ export default class MapVisualization {
             .append('g')
             .attr('class', 'map-room')
 
+        // Draw rooms
         room.append('path')
             .attr('d', d => this.getRoomShape(d.map))
             .on('mouseenter', d => {
@@ -112,10 +120,40 @@ export default class MapVisualization {
             })
             .on('click', d => this.onRoomClick(d.key))
 
+        // Add room number inside each room
         room.append('text')
             .attr('x', d => this.xscale(d.map.x + d.map.width) - 4)
             .attr('y', d => this.yscale(d.map.y + d.map.height) - 6)
             .text((d, i) => i)
+    }
+
+    drawMarker(data) {
+        // Currently the map is hardcoded to always be in this location
+        const bedroom = _.find(data, d => d.key === 'trashyBedroom')
+        const { x, y } = bedroom.map
+        const puckSize = 40
+
+        const defs = this.svg.append('defs').attr('id', 'marker-defs')
+
+        const pattern = defs.append('pattern')
+            .attr('id', 'marker-pattern')
+            .attr('height', 1)
+            .attr('width', 1)
+            .attr('x', '0')
+            .attr('y', '0')
+
+        pattern.append('image')
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('height', puckSize)
+            .attr('width', puckSize)
+            .attr('xlink:href', MARKER_URL)
+
+        this.svg.append("circle")
+            .attr('r', puckSize / 2)
+            .attr('cx', this.xscale(x) + 5)
+            .attr('cy', this.yscale(y) + 30)
+            .attr('fill', 'url(#marker-pattern)')
     }
 }
 
