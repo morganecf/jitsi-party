@@ -1,14 +1,15 @@
+import _ from 'lodash'
 import * as d3 from 'd3';
 
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
 const ROOM_COLOR = '#9292b0'
-const ROOM_HOVER_COLOR = 'red'
-const TRANSITION_DURATION = 400
+const ROOM_HOVER_COLOR = '#b85f5f'
+const TRANSITION_DURATION = 250
 
 export default class MapVisualization {
-    constructor(container, width, height, padding, callback) {
-        this.callback = callback
+    constructor(container, width, height, padding, mouseEvents) {
+        _.assign(this, mouseEvents)
 
         this.svg = d3.select(container)
             .append('svg')
@@ -104,32 +105,37 @@ export default class MapVisualization {
             .attr('d', d => this.getRoomShape(d.map))
             .style('stroke', '#000')
             .style('fill', ROOM_COLOR)
-            .on('mouseenter', mouseenter)
-            .on('mouseleave', mouseleave)
-            .on('click', d => this.callback(d.key))
+            .style('cursor', 'pointer')
+            .on('mouseenter', d => this.enterRoom(d.key))
+            .on('mouseleave', d => this.leaveRoom(d.key))
+            .on('click', d => this.onRoomClick(d.key))
 
         room.append('text')
-            .attr('x', d => this.xscale(d.map.x + d.map.width) - 3)
-            .attr('y', d => this.yscale(d.map.y + d.map.height) - 3)
+            .attr('x', d => this.xscale(d.map.x + d.map.width) - 4)
+            .attr('y', d => this.yscale(d.map.y + d.map.height) - 6)
             .text((d, i) => i)
             .style('text-anchor', 'end')
             .style('font-size', 15)
+            .style('font-family', 'Georgia')
     }
-}
 
-function mouseenter() {
-    d3.select(this)
-        .interrupt()
-        .transition()
-        .duration(TRANSITION_DURATION)
-        .style('fill', ROOM_HOVER_COLOR)
-}
-function mouseleave() {
-    d3.select(this)
-        .interrupt()
-        .transition()
-        .duration(TRANSITION_DURATION)
-        .style('fill', ROOM_COLOR)
+    enterRoom(roomId) {
+        this.onRoomEnter(roomId)
+        d3.select(d3.event.target)
+            .interrupt()
+            .transition()
+            .duration(TRANSITION_DURATION)
+            .style('fill', ROOM_HOVER_COLOR)
+    }
+
+    leaveRoom(roomId) {
+        this.onRoomLeave(roomId)
+        d3.select(d3.event.target)
+            .interrupt()
+            .transition()
+            .duration(TRANSITION_DURATION)
+            .style('fill', ROOM_COLOR)
+    }
 }
 
 function padRooms(data) {

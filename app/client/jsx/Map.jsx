@@ -10,7 +10,8 @@ class Map extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            roomId: null
+            redirect: null,
+            highlighted: null
         }
         this.rooms = Object.keys(RoomLayout)
             .filter(key => _.has(RoomLayout[key], 'map'))
@@ -23,6 +24,7 @@ class Map extends Component {
 
     // TODO add "you are here" puck
     // TODO option to see rooms visited
+    // TODO highlight key item on mouseenter
     // TODO resizable width and height
     // TODO figure out why styles don't work in scss
 
@@ -30,32 +32,45 @@ class Map extends Component {
         const width = document.querySelector('.map').clientWidth / 2;
         const height = 600;
         const padding = 10;
+        const mouseEvents = {
+            onRoomClick: roomId => {
+                this.props.updateCurrentRoom(roomId)
+                this.setState({ redirect: true })
+            },
+            onRoomEnter: roomId => {
+                this.setState({ highlighted: roomId })
+            },
+            onRoomLeave: () => {
+                this.setState({ highlighted: null })
+            }
+        }
+
         const map = new MapVisualization(
             '#d3-map',
             width,
             height,
             padding,
-            // onClick callback function
-            roomId => {
-                this.props.updateCurrentRoom(roomId)
-                this.setState({ roomId })
-            }
+            mouseEvents
         )
         map.draw(this.rooms)
     }
 
     render() {
-        if (this.state.roomId) {
+        if (this.state.redirect) {
             return <Redirect to='/party'/>
         }
         return (
             <div className="map">
-                <h1>You unlocked the party map!</h1>
+                <h1>You unlocked the party map! =O</h1>
+                <p>Teleport into any room by clicking on it.</p>
                 <div className="map-area">
                     <div id="map-key">
                         {this.rooms.map((d, i) => {
+                            const className = d.key === this.state.highlighted ?
+                                'map-key-item highlighted-key-item' :
+                                'map-key-item'
                             return (
-                                <div key={`map-key-${i}`} className="map-key-item">
+                                <div key={d.key} className={className}>
                                     <span className="map-key-item-number">{i}</span>
                                     <span className="map-key-item-name">{d.name}</span>
                                 </div>
@@ -64,7 +79,6 @@ class Map extends Component {
                     </div>
                     <div id="d3-map"></div>
                 </div>
-                <p>Teleport into any room by clicking on it.</p>
             </div>
         )
     }
