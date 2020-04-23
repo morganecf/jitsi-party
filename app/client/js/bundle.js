@@ -323,11 +323,14 @@ __webpack_require__.r(__webpack_exports__);
 class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
-    this.bindHotkeys();
   }
 
-  bindHotkeys() {
+  componentDidMount() {
     document.addEventListener("keydown", this.handleKeydown.bind(this));
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeydown.bind(this));
   }
 
   handleKeydown(e) {
@@ -417,10 +420,6 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       id: "navigation-puck",
       src: "https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"
     })));
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener(keydown, this.handleKeydown.bind(this));
   }
 
 }

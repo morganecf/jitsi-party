@@ -5,11 +5,14 @@ import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight } from '@fortawesome/
 export default class Navigation extends Component { 
     constructor(props) {
         super(props)
-        this.bindHotkeys();
     }
 
-    bindHotkeys() {
+    componentDidMount() {
         document.addEventListener("keydown", this.handleKeydown.bind(this));
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.handleKeydown.bind(this))
     }
 
     handleKeydown(e) {
@@ -68,9 +71,5 @@ export default class Navigation extends Component {
                 </div>
             </div>
         )
-    }
-
-    componentWillUnmount() {
-        document.removeEventListener(keydown, this.handleKeydown.bind(this))
     }
 }
