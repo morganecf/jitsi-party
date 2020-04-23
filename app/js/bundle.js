@@ -294,6 +294,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./puckBox.jsx */ "./jsx/puckBox.jsx");
+/* harmony import */ var _avatars_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./avatars.jsx */ "./jsx/avatars.jsx");
+
 
 
 
@@ -325,15 +327,15 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    //
-    // const puck_list = [
-    //   [0,'./images/puck/dancing/dancing1.png'],
-    //   [1,'./images/puck1.png'],
-    //   [2,'./images/puck1.png'],
-    //   [3,'./images/puck1.png'],
+    // const avatars = [
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',]
     // ]
-    const avatars = [['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png']];
-    let puck_list = avatars.map(function (arr, i) {
+    let puck_list = _avatars_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].map(function (arr, i) {
       return arr[0];
     });
     let puck_array; //
@@ -355,7 +357,7 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
             display: 'flex',
             flexDirection: 'row'
           };
-          let variant_array = avatars[this.state.rowOpen].map((color, id) => {
+          let variant_array = _avatars_jsx__WEBPACK_IMPORTED_MODULE_3__["default"][this.state.rowOpen].map((color, id) => {
             let handleClickColor = () => this.handleClickColor(id); // avatar color variant selection
 
 
@@ -880,6 +882,20 @@ const provider = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.creat
   store: Object(redux__WEBPACK_IMPORTED_MODULE_3__["createStore"])(_reducers_jsx__WEBPACK_IMPORTED_MODULE_5__["default"].reducer)
 }, " ", _routes_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], " ");
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(provider, document.querySelector('.app'));
+
+/***/ }),
+
+/***/ "./jsx/avatars.jsx":
+/*!*************************!*\
+  !*** ./jsx/avatars.jsx ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const avatars = [['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png']];
+/* harmony default export */ __webpack_exports__["default"] = (avatars);
 
 /***/ }),
 

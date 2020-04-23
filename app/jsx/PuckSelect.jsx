@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PuckBox from './puckBox.jsx';
+import avatars from './avatars.jsx'
 
 
 class PuckSelect extends Component {
@@ -19,21 +20,14 @@ class PuckSelect extends Component {
 
   render() {
 
-    //
-    // const puck_list = [
-    //   [0,'./images/puck/dancing/dancing1.png'],
-    //   [1,'./images/puck1.png'],
-    //   [2,'./images/puck1.png'],
-    //   [3,'./images/puck1.png'],
+    // const avatars = [
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',]
     // ]
-    const avatars = [
-      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',]
-    ]
 
     let puck_list = avatars.map(function(arr,i) { return arr[0] })
 
