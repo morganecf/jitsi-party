@@ -19,7 +19,10 @@ git fetch upstream
 git checkout "$TAG"
 
 docker build . --tag "$DOCKER_REPO":"$TAG"
+docker build . --tag "$DOCKER_REPO":latest
+
 docker push "$DOCKER_REPO":"$TAG"
+docker push "$DOCKER_REPO":latest
 
 git checkout "$OLD_BRANCH"
 
