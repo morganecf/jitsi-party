@@ -18,9 +18,9 @@
 
 	.room-content {
 		display: flex;
-		flex: 1;
 		align-items: center;
 		justify-content: center;
+		flex: 1;
 	}
 
 	.jitsi-video {
@@ -28,20 +28,19 @@
 		flex: 1;
 	}
 
+	.jitsi-video + .room-content {
+		flex: 0;
+		padding-top: 1em;
+	}
+
 	#jitsi-container {
+		height: 100%;
 		display: flex;
 		flex: 1;
 
 		> iframe {
 			height: 100% !important; // override stupid jitsi script
 		}
-	}
-
-	#jitsi-placeholder {
-		position: absolute;
-		z-index: -1;
-		width: 100%;
-		text-align: center;
 	}
 
 	.adventure {
