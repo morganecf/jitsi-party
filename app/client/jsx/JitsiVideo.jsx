@@ -20,11 +20,28 @@ export default class JitsiVideo extends Component {
 
     componentDidMount() {
         this.connect()
+        document.addEventListener("keydown", this.handleKeydown.bind(this));
     }
 
     componentWillUnmount() {
+        document.removeEventListener("keydown", this.handleKeydown.bind(this))
         if (this.api) {
             this.api.dispose()
+        }
+    }
+
+    handleKeydown(e) {
+        if (!this.api) { return; }
+        e = e || window.event;
+        switch(e.which || e.keyCode) {
+            case 65:
+                // a
+                this.api.executeCommand('toggleAudio');
+                break;
+            case 86:
+                // v
+                this.api.executeCommand('toggleVideo');
+                break;
         }
     }
 
