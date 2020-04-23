@@ -67,8 +67,8 @@ class Room extends Component {
                 <div className="room-header">
                     <h2 className="room-header">{this.state.room}</h2>
                 </div>
-                {this.getRoomDescription()}
                 {this.getRoomType()}
+                {this.getRoomDescription()}
                 <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
             </div>
         )

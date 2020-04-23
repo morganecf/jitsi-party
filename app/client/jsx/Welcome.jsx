@@ -31,10 +31,9 @@ class Welcome extends Component {
         return (
             <div className="vestibule">
                 <h1>Welcome have fun</h1>
-                <div className="display-name">
-                    <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/>
-                    <input type="button" onClick={this.handleReady.bind(this)} value="Party!"/>
-                </div>
+                <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/>
+                <br />
+                <input type="button" onClick={this.handleReady.bind(this)} value="Party!" disabled={!this.state.displayName} />
             </div>
         )
     }
