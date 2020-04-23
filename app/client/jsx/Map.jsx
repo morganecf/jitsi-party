@@ -24,9 +24,6 @@ class Map extends Component {
 
     // TODO add "you are here" puck
     // TODO option to see rooms visited
-    // TODO highlight key item on mouseenter
-    // TODO resizable width and height
-    // TODO figure out why styles don't work in scss
 
     componentDidMount() {
         const width = document.querySelector('.map').clientWidth / 2;

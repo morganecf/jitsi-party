@@ -3,9 +3,6 @@ import * as d3 from 'd3';
 
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
-const ROOM_COLOR = '#9292b0'
-const ROOM_HOVER_COLOR = '#b85f5f'
-const TRANSITION_DURATION = 250
 
 export default class MapVisualization {
     constructor(container, width, height, padding, mouseEvents) {
@@ -79,7 +76,7 @@ export default class MapVisualization {
     }
 
     draw(data) {
-        // A 30x30 grid was used to derive the values in RoomLayout
+        // A 30x30 grid was used to derive the values in RoomLayout.jsx.
         // This makes sure those values are scaled to this view while
         // using the space efficiently
         this.xscale.domain([
@@ -103,38 +100,22 @@ export default class MapVisualization {
 
         room.append('path')
             .attr('d', d => this.getRoomShape(d.map))
-            .style('stroke', '#000')
-            .style('fill', ROOM_COLOR)
-            .style('cursor', 'pointer')
-            .on('mouseenter', d => this.enterRoom(d.key))
-            .on('mouseleave', d => this.leaveRoom(d.key))
+            .on('mouseenter', d => {
+                this.onRoomEnter(d.key)
+                d3.select(d3.event.target)
+                    .classed('highlighted-room', true)
+            })
+            .on('mouseleave', d => {
+                this.onRoomLeave(d.key)
+                d3.select(d3.event.target)
+                    .classed('highlighted-room', false)
+            })
             .on('click', d => this.onRoomClick(d.key))
 
         room.append('text')
             .attr('x', d => this.xscale(d.map.x + d.map.width) - 4)
             .attr('y', d => this.yscale(d.map.y + d.map.height) - 6)
             .text((d, i) => i)
-            .style('text-anchor', 'end')
-            .style('font-size', 15)
-            .style('font-family', 'Georgia')
-    }
-
-    enterRoom(roomId) {
-        this.onRoomEnter(roomId)
-        d3.select(d3.event.target)
-            .interrupt()
-            .transition()
-            .duration(TRANSITION_DURATION)
-            .style('fill', ROOM_HOVER_COLOR)
-    }
-
-    leaveRoom(roomId) {
-        this.onRoomLeave(roomId)
-        d3.select(d3.event.target)
-            .interrupt()
-            .transition()
-            .duration(TRANSITION_DURATION)
-            .style('fill', ROOM_COLOR)
     }
 }
 
