@@ -15,7 +15,7 @@ function updateDisplayNameAction(state, displayName) {
 }
 
 function updateAvatarAction(state, avatar) {
-    console.log('banana bread')
+    console.log('banona bread')
     return Object.assign({}, state, avatar)
 }
 

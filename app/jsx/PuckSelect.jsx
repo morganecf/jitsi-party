@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PuckBox from './puckBox.jsx';
-import avatars from './avatars.jsx'
+import PuckBox from './PuckBox.jsx';
+import avatars from './Avatars.jsx'
 
 
 class PuckSelect extends Component {
@@ -20,14 +20,6 @@ class PuckSelect extends Component {
 
   render() {
 
-    // const avatars = [
-    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
-    //   ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',]
-    // ]
 
     let puck_list = avatars.map(function(arr,i) { return arr[0] })
 
