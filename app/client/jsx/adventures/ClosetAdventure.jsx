@@ -1,67 +1,68 @@
 import { pickRandom } from '../utils.js'
 
 export default {
-    'Uncomfortable Closet': {
+    uncomfortableCloset: {
+        name: 'Uncomfortable Closet',
         text: "It's really uncomfortable in here.",
         buttons: [
             {
                 text: 'Stay anyway',
-                getNextRoom: () => pickRandom(['Uncomfortable Closet-drugs', 'Uncomfortable Closet-tapioca'])
+                getNextRoom: () => pickRandom(['ucDrugs', 'ucTapioca'])
             },
             {
                 text: 'Leave',
-                getNextRoom: () => 'Trashy Bedroom'
+                getNextRoom: () => 'trashyBedroom'
             }
         ]
     },
-    'Uncomfortable Closet-drugs': {
+    ucDrugs: {
         text: "Might as well have fun in this closet. Which drug do you do?",
         buttons: [
             {
                 text: 'Pop some molly',
-                getNextRoom: () => 'Uncomfortable Closet-talk'
+                getNextRoom: () => 'ucTalk'
             },
             {
                 text: 'Sip your beer',
-                getNextRoom: () => pickRandom(['Uncomfortable Closet-ghb', 'Uncomfortable Closet-horny', 'Uncomfortable Closet-talk'])
+                getNextRoom: () => pickRandom(['ucGHB', 'ucHorny', 'ucTalk'])
             },
             {
                 text: 'Sip the whip',
-                getNextRoom: () => pickRandom(['Uncomfortable Closet-map', 'Uncomfortable Closet-ramble'])
+                getNextRoom: () => pickRandom(['ucMap', 'ucRamble'])
             },
             {
                 text: 'You are above drugs',
-                getNextRoom: () => 'Uncomfortable Closet-spy'
+                getNextRoom: () => 'ucSpy'
             }
         ]
     },
-    'Uncomfortable Closet-tapioca': {
+    ucTapioca: {
         text: "Omg, there's a little piece of tapioca on the ground!",
         buttons: [
             {
                 text: 'Eat it!',
-                getNextRoom: () => pickRandom(['Uncomfortable Closet-bird', 'Uncomfortable Closet-tapioca-2'])
+                getNextRoom: () => pickRandom(['ucBird', 'ucTapioca2'])
             },
             {
                 text: "Smell it first",
-                getNextRoom: () => 'Uncomfortable Closet-smell'
+                getNextRoom: () => 'ucSmell'
             }
         ]
     },
-    'Uncomfortable Closet-smell': {
+    ucSmell: {
         text: "You lean down to smell the tapioca, and notice a faint rectangular outline on the floor. It's a trapdoor!",
         buttons: [
             {
                 text: 'You go through it',
-                getNextRoom: () => pickRandom(['Map', 'Uncomfortable Closet-dungeon'])
+                getNextRoom: () => pickRandom(['map', 'ucDungeon'])
             },
             {
                 text: 'You grab a friend to share the adventure',
-                getNextRoom: () => 'Vestibule'
+                getNextRoom: () => 'vestibule'
             }
         ]
     },
-    'Uncomfortable Closet-tapioca-2': {
+    ucTapioca2: {
         text: "",
         buttons: [
             {
@@ -74,33 +75,33 @@ export default {
             }
         ]
     },
-    'Uncomfortable Closet-bird': {
+    ucBird: {
         text: "You just unlocked the superpowers of a BIRD.",
         buttons: [
             {
                 text: "I don't believe it",
-                getNextRoom: () => 'Trashy Bedroom',
+                getNextRoom: () => 'trashyBedroom',
             },
             {
                 text: "Sweet!",
-                getNextRoom: () => 'Map'
+                getNextRoom: () => 'map'
             }
         ]
     },
-    'Uncomfortable Closet-ghb': {
+    ucGHB: {
         text: "This beer tastes like industrial solvent.",
         buttons: [
             {
                 text: "Throw up a little in your mouth but keep drinking",
-                getNextRoom: () => 'Uncomfortable Closet Map'
+                getNextRoom: () => 'ucMap'
             },
             {
                 text: "Run to the bathroom",
-                getNextRoom: () => 'Bathroom'
+                getNextRoom: () => 'bathroom'
             }
         ]
     },
-    'Uncomfortable Closet-horny': {
+    ucHorny: {
         text: "You slip into an idle and horny reverie about...",
         buttons: [
             {
@@ -117,16 +118,16 @@ export default {
             },
             {
                 text: "Maps",
-                getNextRoom: () => 'Map'
+                getNextRoom: () => 'map'
             },
         ]
     },
-    'Uncomfortable Closet-talk': {
+    ucTalk: {
         text: "The urge to talk and perhaps even touch a fellow human is now overwhelming.",
         buttons: [
             {
                 text: "Go back to the party",
-                getNextRoom: () => 'Trashy Bedroom'
+                getNextRoom: () => 'trashyBedroom'
             },
             {
                 text: "Talk to yourself",
@@ -134,7 +135,7 @@ export default {
             },
         ]
     },
-    'Uncomfortable Closet-ramble': {
+    ucRamble: {
         text: 'You idly begin to talk to yourself. What do you say?',
         buttons: [
             {
@@ -147,12 +148,12 @@ export default {
             }
         ]
     },
-    'Uncomfortable Closet-spy': {
+    ucSpy: {
         text: 'To kill time, you peer through the crack between closet door and wall. What are you hoping to see?',
         buttons: [
             {
                 text: 'The stars',
-                getNextRoom: () => 'Uncomfortable Closet-stars'
+                getNextRoom: () => 'ucStars'
             },
             {
                 text: 'Jackson',
@@ -160,24 +161,24 @@ export default {
             },
             {
                 text: 'Naked girls eating tapioca',
-                getNextRoom: () => pickRandom(['Uncomfortable Closet-tapioca-girls', ''])
+                getNextRoom: () => pickRandom(['ucTapiocaGirls', ''])
             }
         ]
     },
-    'Uncomfortable Closet-stars': {
+    ucStars: {
         text: "All you can see is trash, and naked people lying atop it. Ugh. You want fresh, clean stars! You yearn for the great outdoors!",
         buttons: [
             {
                 text: 'Go outside',
-                getNextRoom: () => 'The Great Outdoors',
+                getNextRoom: () => 'outdoors',
             },
             {
                 text: 'Smash your head against the wall',
-                getNextRoom: () => pickRandom(['Uncomfortable Closet-bird', 'Uncomfortable Closet-pain'])
+                getNextRoom: () => pickRandom(['ucBird', 'ucPain'])
             }
         ]
     },
-    'Uncomfortable Closet-pain': {
+    ucPain: {
         text: "Pain......",
         buttons: [
             {
@@ -190,12 +191,12 @@ export default {
             },
         ]
     },
-    'Uncomfortable Closet-tapioca-girls': {
+    ucTapiocaGirls: {
         text: 'Outside the closet you can see three sexy girls eating tapioca from a bowl. They are naked.',
         buttons: [
             {
                 text: '',
-                getNextRoom: () => 'Trashy Bedroom',
+                getNextRoom: () => 'trashyBedroom',
             },
             {
                 text: '',
