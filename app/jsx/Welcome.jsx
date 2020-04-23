@@ -32,14 +32,13 @@ class Welcome extends Component {
             return <Redirect to={this.state.redirect}/>
         }
         return (
-            <div className="vestibule">
+            <div className="vestibule" style={{ margin: '10px' }}>
                 <h1>Welcome have phun</h1>
                 <div className="display-name">
-                    <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/>
-                    <input type="button" onClick={this.handleReady.bind(this)} value="Party!"/>
-                </div>
+                    <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/></div>
                 <PuckSelect />
-                <Link to="/about" activeclassname="active">About</Link>
+                <input type="button" onClick={this.handleReady.bind(this)} value="Party!"/>
+                <br/><Link to="/about" activeclassname="active">About</Link>
             </div>
         )
     }

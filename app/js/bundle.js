@@ -302,15 +302,10 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
     this.state = {
       columnOpen: false,
-      rowOpen: null,
-      variant: null
+      rowOpen: null
     };
     this.onButtonClick = this.onButtonClick.bind(this);
-  } // handleChange() {
-  //   this.setState({ selected });
-  //   console.log(`Option selected:`, selected)
-  // }
-
+  }
 
   onButtonClick() {
     this.setState({
@@ -322,6 +317,11 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.setState({
       rowOpen: id
     });
+  }
+
+  handleClickColor(id) {
+    let avatar = [this.state.rowOpen, id];
+    console.log(avatar);
   }
 
   render() {
@@ -337,8 +337,6 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         visibility: 'hidden'
       };
       puck_array = puck_list.map(puck => {
-        console.log(puck);
-
         if (this.state.rowOpen === puck[0]) {
           let handleClick = () => this.handleClick(puck[0]);
 
@@ -348,8 +346,10 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           };
           let variant = this.state.rowOpen;
           let variant_array = variant_lists[this.state.rowOpen].map(puck => {
+            let handleClickColor = () => this.handleClickColor(puck[0]);
+
             return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
-              handleClick: handleClick,
+              handleClick: handleClickColor,
               key: puck[0],
               image: puck[1]
             });
@@ -798,7 +798,10 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     }
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "vestibule"
+      className: "vestibule",
+      style: {
+        margin: '10px'
+      }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Welcome have phun"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "display-name"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -807,11 +810,11 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       name: "name",
       minLength: "1",
       onChange: this.handleDisplayNameChange.bind(this)
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_PuckSelect_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
       type: "button",
       onClick: this.handleReady.bind(this),
       value: "Party!"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_PuckSelect_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
       to: "/about",
       activeclassname: "active"
     }, "About"));

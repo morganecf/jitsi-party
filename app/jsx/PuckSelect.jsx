@@ -8,19 +8,16 @@ class PuckSelect extends Component {
         this.state = {
             columnOpen: false,
             rowOpen: null,
-            variant: null
         }
         this.onButtonClick = this.onButtonClick.bind(this)
       }
 
-    // handleChange() {
-    //   this.setState({ selected });
-    //   console.log(`Option selected:`, selected)
-    // }
-
   onButtonClick() { this.setState({ columnOpen: true }) }
-
   handleClick(id) { this.setState({ rowOpen: id }) }
+  handleClickColor(id) {
+    let avatar = [this.state.rowOpen,id]
+    console.log(avatar)
+  }
 
   render() {
 
@@ -44,10 +41,8 @@ class PuckSelect extends Component {
       shown = { visibility: 'hidden' }
 
       puck_array = puck_list.map((puck) => {
-        console.log(puck)
 
         if (this.state.rowOpen===puck[0]) {
-
           let handleClick = () => this.handleClick(puck[0])
 
           let test_style = {
@@ -57,9 +52,10 @@ class PuckSelect extends Component {
 
           let variant = this.state.rowOpen
           let variant_array = variant_lists[this.state.rowOpen].map((puck) => {
+            let handleClickColor = () => this.handleClickColor(puck[0])
             return (
               <PuckBox
-              handleClick={handleClick}
+              handleClick={handleClickColor}
               key={puck[0]}
               image={puck[1]}
               />
