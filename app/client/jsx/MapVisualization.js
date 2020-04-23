@@ -76,12 +76,12 @@ export default class MapVisualization {
         return d3.line().curve(d3.curveCardinal.tension(0.9))(points)
     }
 
-    draw(data) {
-        this.drawMap(data)
+    draw(data, visited) {
+        this.drawMap(data, visited)
         this.drawMarker(data)
     }
 
-    drawMap(data) {
+    drawMap(data, visited) {
         // A 30x30 grid was used to derive the values in RoomLayout.jsx.
         // This makes sure those values are scaled to this view while
         // using the space efficiently
@@ -119,6 +119,7 @@ export default class MapVisualization {
                     .classed('highlighted-room', false)
             })
             .on('click', d => this.onRoomClick(d.key))
+            .classed('visited', d => _.has(visited, d.key))
 
         // Add room number inside each room
         room.append('text')

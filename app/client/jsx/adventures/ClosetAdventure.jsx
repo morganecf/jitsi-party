@@ -7,7 +7,8 @@ export default {
         buttons: [
             {
                 text: 'Stay anyway',
-                getNextRoom: () => pickRandom(['ucDrugs', 'ucTapioca'])
+                // getNextRoom: () => pickRandom(['ucDrugs', 'ucTapioca'])
+                getNextRoom: () => 'map'
             },
             {
                 text: 'Leave',
