@@ -302,7 +302,8 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
     this.state = {
       columnOpen: false,
-      rowOpen: null
+      rowOpen: null,
+      avatar: null
     };
     this.onButtonClick = this.onButtonClick.bind(this);
   }
@@ -317,11 +318,11 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.setState({
       rowOpen: id
     });
-  }
+  } // handleClickColor(id) { this.setState({ avatar: [this.state.rowOpen,id] }) }
+
 
   handleClickColor(id) {
-    let avatar = [this.state.rowOpen, id];
-    console.log(avatar);
+    this.props.handleSelect([this.state.rowOpen, id]);
   }
 
   render() {
@@ -333,12 +334,14 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     };
 
     if (this.state.columnOpen) {
+      //
       shown = {
         visibility: 'hidden'
       };
       puck_array = puck_list.map(puck => {
         if (this.state.rowOpen === puck[0]) {
-          let handleClick = () => this.handleClick(puck[0]);
+          let handleClick = () => this.handleClick(puck[0]); //
+
 
           let test_style = {
             display: 'flex',
@@ -346,7 +349,8 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           };
           let variant = this.state.rowOpen;
           let variant_array = variant_lists[this.state.rowOpen].map(puck => {
-            let handleClickColor = () => this.handleClickColor(puck[0]);
+            let handleClickColor = () => this.handleClickColor(puck[0]); // avatar color variant selection
+
 
             return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
               handleClick: handleClickColor,
@@ -358,7 +362,8 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
             style: test_style
           }, variant_array);
         } else {
-          let handleClick = () => this.handleClick(puck[0]);
+          let handleClick = () => this.handleClick(puck[0]); // avatar style selection
+
 
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
             handleClick: handleClick,
@@ -782,6 +787,13 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     });
   }
 
+  handleAvatarSelect(selection) {
+    this.setState({
+      avatar: selection
+    });
+    console.log(selection);
+  }
+
   handleReady() {
     this.props.updateDisplayName(this.state.displayName);
     this.props.updateCurrentRoom('Vestibule');
@@ -810,7 +822,9 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       name: "name",
       minLength: "1",
       onChange: this.handleDisplayNameChange.bind(this)
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_PuckSelect_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_PuckSelect_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      handleSelect: this.handleAvatarSelect.bind(this)
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
       type: "button",
       onClick: this.handleReady.bind(this),
       value: "Party!"
