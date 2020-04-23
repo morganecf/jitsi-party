@@ -8,7 +8,6 @@ class PuckSelect extends Component {
         this.state = {
             columnOpen: false,
             rowOpen: null,
-            avatar: null
         }
         this.onButtonClick = this.onButtonClick.bind(this)
       }
@@ -20,31 +19,39 @@ class PuckSelect extends Component {
 
   render() {
 
+    //
+    // const puck_list = [
+    //   [0,'./images/puck/dancing/dancing1.png'],
+    //   [1,'./images/puck1.png'],
+    //   [2,'./images/puck1.png'],
+    //   [3,'./images/puck1.png'],
+    // ]
+    const avatars = [
+      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',],
+      ['./images/puck/dancing/dancing1.png','./images/puck/dancing/dancing2.png','./images/puck/dancing/dancing3.png','./images/puck/dancing/dancing4.png',]
+    ]
 
-    const puck_list = [
-      [0,'./images/puck/dancing/dancing1.png'],
-      [1,'./images/puck1.png'],
-      [2,'./images/puck1.png'],
-      [3,'./images/puck1.png'],
-    ]
-    const variant_lists = [
-      [[0,'./images/puck/dancing/dancing1.png'],[1,'./images/puck/dancing/dancing2.png'],[2,'./images/puck/dancing/dancing3.png'],[3,'./images/puck/dancing/dancing4.png'],],
-      [[0,'./images/puck/dancing/dancing1.png'],[1,'./images/puck/dancing/dancing2.png'],[2,'./images/puck/dancing/dancing3.png'],[3,'./images/puck/dancing/dancing4.png'],],
-      [[0,'./images/puck/dancing/dancing1.png'],[1,'./images/puck/dancing/dancing2.png'],[2,'./images/puck/dancing/dancing3.png'],[3,'./images/puck/dancing/dancing4.png'],],
-      [[0,'./images/puck/dancing/dancing1.png'],[1,'./images/puck/dancing/dancing2.png'],[2,'./images/puck/dancing/dancing3.png'],[3,'./images/puck/dancing/dancing4.png'],]
-    ]
+    let puck_list = avatars.map(function(arr,i) { return arr[0] })
+
+
     let puck_array
+
+    //
     let shown = { visibility: 'visible' }
 
     if (this.state.columnOpen) {
-
       //
       shown = { visibility: 'hidden' }
 
-      puck_array = puck_list.map((puck) => {
+      puck_array = puck_list.map((puck,id) => {
 
-        if (this.state.rowOpen===puck[0]) {
-          let handleClick = () => this.handleClick(puck[0])
+        if (this.state.rowOpen===id) {
+
+          // let handleClick = () => this.handleClick(puck_list[id])
 
           //
           let test_style = {
@@ -52,15 +59,15 @@ class PuckSelect extends Component {
             flexDirection: 'row'
           }
 
-          let variant = this.state.rowOpen
-          let variant_array = variant_lists[this.state.rowOpen].map((puck) => {
-            let handleClickColor = () => this.handleClickColor(puck[0])
+          let variant_array = avatars[this.state.rowOpen].map((color,id) => {
+
+            let handleClickColor = () => this.handleClickColor(id)
             // avatar color variant selection
             return (
               <PuckBox
               handleClick={handleClickColor}
-              key={puck[0]}
-              image={puck[1]}
+              key={id}
+              image={color}
               />
             )
           })
@@ -73,13 +80,14 @@ class PuckSelect extends Component {
 
         } else {
 
-          let handleClick = () => this.handleClick(puck[0])
+          let handleClick = () => this.handleClick(id)
+
           // avatar style selection
           return (
             <PuckBox
             handleClick={handleClick}
-            key={puck[0]}
-            image={puck[1]}
+            key={id}
+            image={puck}
             />
           )
 

@@ -15,7 +15,6 @@ class Welcome extends Component {
         }
     }
 
-
     handleDisplayNameChange(event) {
         this.setState({ displayName: event.target.value })
     }

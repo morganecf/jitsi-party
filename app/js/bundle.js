@@ -302,8 +302,7 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
     this.state = {
       columnOpen: false,
-      rowOpen: null,
-      avatar: null
+      rowOpen: null
     };
     this.onButtonClick = this.onButtonClick.bind(this);
   }
@@ -326,9 +325,19 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    const puck_list = [[0, './images/puck/dancing/dancing1.png'], [1, './images/puck1.png'], [2, './images/puck1.png'], [3, './images/puck1.png']];
-    const variant_lists = [[[0, './images/puck/dancing/dancing1.png'], [1, './images/puck/dancing/dancing2.png'], [2, './images/puck/dancing/dancing3.png'], [3, './images/puck/dancing/dancing4.png']], [[0, './images/puck/dancing/dancing1.png'], [1, './images/puck/dancing/dancing2.png'], [2, './images/puck/dancing/dancing3.png'], [3, './images/puck/dancing/dancing4.png']], [[0, './images/puck/dancing/dancing1.png'], [1, './images/puck/dancing/dancing2.png'], [2, './images/puck/dancing/dancing3.png'], [3, './images/puck/dancing/dancing4.png']], [[0, './images/puck/dancing/dancing1.png'], [1, './images/puck/dancing/dancing2.png'], [2, './images/puck/dancing/dancing3.png'], [3, './images/puck/dancing/dancing4.png']]];
-    let puck_array;
+    //
+    // const puck_list = [
+    //   [0,'./images/puck/dancing/dancing1.png'],
+    //   [1,'./images/puck1.png'],
+    //   [2,'./images/puck1.png'],
+    //   [3,'./images/puck1.png'],
+    // ]
+    const avatars = [['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png'], ['./images/puck/dancing/dancing1.png', './images/puck/dancing/dancing2.png', './images/puck/dancing/dancing3.png', './images/puck/dancing/dancing4.png']];
+    let puck_list = avatars.map(function (arr, i) {
+      return arr[0];
+    });
+    let puck_array; //
+
     let shown = {
       visibility: 'visible'
     };
@@ -338,37 +347,35 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       shown = {
         visibility: 'hidden'
       };
-      puck_array = puck_list.map(puck => {
-        if (this.state.rowOpen === puck[0]) {
-          let handleClick = () => this.handleClick(puck[0]); //
-
-
+      puck_array = puck_list.map((puck, id) => {
+        if (this.state.rowOpen === id) {
+          // let handleClick = () => this.handleClick(puck_list[id])
+          //
           let test_style = {
             display: 'flex',
             flexDirection: 'row'
           };
-          let variant = this.state.rowOpen;
-          let variant_array = variant_lists[this.state.rowOpen].map(puck => {
-            let handleClickColor = () => this.handleClickColor(puck[0]); // avatar color variant selection
+          let variant_array = avatars[this.state.rowOpen].map((color, id) => {
+            let handleClickColor = () => this.handleClickColor(id); // avatar color variant selection
 
 
             return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
               handleClick: handleClickColor,
-              key: puck[0],
-              image: puck[1]
+              key: id,
+              image: color
             });
           });
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             style: test_style
           }, variant_array);
         } else {
-          let handleClick = () => this.handleClick(puck[0]); // avatar style selection
+          let handleClick = () => this.handleClick(id); // avatar style selection
 
 
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_puckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
             handleClick: handleClick,
-            key: puck[0],
-            image: puck[1]
+            key: id,
+            image: puck
           });
         }
       });
