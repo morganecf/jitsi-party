@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions'
 
 const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME'
+const UPDATE_AVATAR = 'UPDATE_AVATAR'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 
 const initialState = {
@@ -13,6 +14,11 @@ function updateDisplayNameAction(state, displayName) {
     return Object.assign({}, state, displayName)
 }
 
+function updateAvatarAction(state, avatar) {
+    console.log('banana bread')
+    return Object.assign({}, state, avatar)
+}
+
 function updateCurrentRoomAction(state, currentRoom) {
     return Object.assign({}, state, currentRoom)
 }
@@ -23,6 +29,10 @@ export default {
         type: UPDATE_DISPLAY_NAME,
         displayName
     }),
+    updateAvatarActionCreator: avatar => ({
+        type: UPDATE_AVATAR,
+        avatar
+    }),
     updateCurrentRoomActionCreator: currentRoom => ({
         type: UPDATE_CURRENT_ROOM,
         currentRoom
@@ -30,6 +40,7 @@ export default {
     /* Reducers */
     reducer: handleActions({
         [UPDATE_DISPLAY_NAME]: updateDisplayNameAction,
+        [UPDATE_AVATAR]: updateAvatarAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
     }, initialState)
 }

@@ -26,6 +26,7 @@ class Welcome extends Component {
 
     handleReady() {
         this.props.updateDisplayName(this.state.displayName)
+        this.props.updateAvatar(this.state.avatar)
         this.props.updateCurrentRoom('Vestibule')
         this.setState({ redirect: '/party' })
     }
@@ -51,5 +52,6 @@ export default connect(
     state => state,
     {
         updateDisplayName: reducers.updateDisplayNameActionCreator,
+        updateAvatar: reducers.updateAvatarActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Welcome)
