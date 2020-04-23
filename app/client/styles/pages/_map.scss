@@ -15,10 +15,18 @@
 
     #map-key {
         margin: 0 20px;
+        font-family: Georgia;
+        font-size: 15px;
 
         .map-key-item {
             display: flex;
         }
+
+        .map-key-item.highlighted-key-item {
+            color: #b85f5f;
+            transition: color 0.25s;
+        }
+
         .map-key-item-number {
             margin-right: 10px;
             font-weight: bold;
