@@ -1,7 +1,5 @@
 import * as d3 from 'd3';
 
-// In RoomLayout, the room positions are hardcoded on a 30x30 pixel grid
-const UNIT_RANGE = [0, 30]
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
 
@@ -12,12 +10,8 @@ export default class MapVisualization {
             .attr('width', width + padding)
             .attr('height', height + padding)
 
-        this.xscale = d3.scaleLinear()
-            .domain(UNIT_RANGE)
-            .range([padding, width - padding])
-        this.yscale = d3.scaleLinear()
-            .domain(UNIT_RANGE)
-            .range([padding, height - padding])
+        this.xscale = d3.scaleLinear().range([padding, width - padding])
+        this.yscale = d3.scaleLinear().range([padding, height - padding])
     }
 
     getRoomShape({ x, y, width, height, doors={} }) {
@@ -79,11 +73,18 @@ export default class MapVisualization {
     }
 
     draw(data) {
-        this.drawMap(data)
-        this.drawKey(data)
-    }
+        // A 30x30 grid was used to derive the values in RoomLayout
+        // This makes sure those values are scaled to this view while
+        // using the space efficiently
+        this.xscale.domain([
+            d3.min(data, d => d.map.x),
+            d3.max(data, d => d.map.x + d.map.width)
+        ])
+        this.yscale.domain([
+            d3.min(data, d => d.map.y),
+            d3.max(data, d => d.map.y + d.map.height)
+        ])
 
-    drawMap(data) {
         // Create extra space for doors
         padRooms(data)
 
@@ -105,10 +106,6 @@ export default class MapVisualization {
             .text((d, i) => i)
             .style('text-anchor', 'end')
             .style('font-size', 15)
-    }
-
-    drawKey(data) {
-
     }
 }
 

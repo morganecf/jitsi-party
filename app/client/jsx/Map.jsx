@@ -9,6 +9,7 @@ class Map extends Component {
     constructor(props) {
         super(props)
         this.state = {}
+        this.rooms = _.filter(RoomLayout, d => _.has(d, 'map'))
     }
 
     // TODO add key 
@@ -20,21 +21,27 @@ class Map extends Component {
     // TODO figure out why styles don't work in scss
 
     componentDidMount() {
-        const width = document.querySelector('.map').clientWidth / 2;
+        const width = document.querySelector('#d3-map').clientWidth / 2;
         const height = 600;
         const padding = 20;
-
-        const rooms = _.filter(RoomLayout, d => _.has(d, 'map'))
-
         const map = new MapVisualization('#d3-map', width, height, padding)
-        map.draw(rooms)
+        map.draw(this.rooms)
     }
 
     render() {
         return (
             <div className="map">
                 <h1>You've unlocked the party map!</h1>
-                <div id="d3-map"></div>
+                <div className="map-area">
+                    <div id="map-key">
+                        {this.rooms.map((d, i) => {
+                            return (
+                                <span className="map-key-item">{i}</span>
+                            )
+                        })}
+                    </div>
+                    <div id="d3-map"></div>
+                </div>
                 <p>Teleport into any room by clicking on it.</p>
             </div>
         )

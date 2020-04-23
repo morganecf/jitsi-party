@@ -3,7 +3,8 @@ import adventures from './adventures'
 import { pickRandom } from './utils.js'
 
 const rooms = {
-    'Vestibule': {
+    vestibule: {
+        name: 'Vestibule',
         capacity: 10,
         type: 'jitsi',
         directions: {
@@ -23,7 +24,8 @@ const rooms = {
             }
         }
     },
-    'Closet': {
+    closet: {
+        name: 'Closet',
         capacity: 2,
         type: 'jitsi',
         description: 'A cozy closet.',
@@ -40,7 +42,8 @@ const rooms = {
             }
         }
     },
-    'Living Room': {
+    livingRoom: {
+        name: 'Living Room',
         capacity: 10,
         type: 'jitsi',
         directions: {
@@ -62,7 +65,8 @@ const rooms = {
             }
         }
     },
-    'Serious Conversations Only': {
+    seriousConversation: {
+        name: 'Serious Conversation Only',
         capacity: 4,
         type: 'jitsi',
         directions: {
@@ -81,7 +85,8 @@ const rooms = {
             }
         }
     },
-    'Bathroom': {
+    bathroom: {
+        name: 'bathroom',
         capacity: 2,
         type: 'jitsi',
         directions: {
@@ -99,7 +104,8 @@ const rooms = {
             }
         }
     },
-    'Trashy Bedroom': {
+    trashyBedroom: {
+        name: 'Trashy Bedroom',
         capacity: 6,
         type: 'jitsi',
         directions: {
@@ -119,7 +125,8 @@ const rooms = {
             }
         }
     },
-    'Art Gallery': {
+    artGallery: {
+        name: 'Art Gallery',
         capacity: 10,
         type: null,
         description: 'In the gallery spaces up ahead, you will find art created by your fellow Clarendonites :)',
@@ -140,7 +147,8 @@ const rooms = {
             }
         }
     },
-    'Gallery Room 1': {
+    gallery1: {
+        name: 'Gallery Room 1',
         capacity: 4,
         type: 'art',
         videoHeight: 150,
@@ -164,7 +172,8 @@ const rooms = {
             }
         }
     },
-    'Gallery Room 2': {
+    gallery2: {
+        name: 'Gallery Room 2',
         capacity: 4,
         type: 'art',
         videoHeight: 150,
@@ -188,7 +197,8 @@ const rooms = {
             }
         }
     },
-    'Gallery Room 3': {
+    gallery3: {
+        name: 'Gallery Room 3',
         capacity: 4,
         type: 'art',
         videoHeight: 150,
@@ -212,7 +222,8 @@ const rooms = {
             }
         }
     },
-    'Gallery Room 4': {
+    gallery4: {
+        name: 'Gallery Room 4',
         capacity: 4,
         type: 'art',
         videoHeight: 150,
@@ -236,7 +247,8 @@ const rooms = {
             }
         }
     },
-    'Gallery Room 5': {
+    gallery5: {
+        name: 'Gallery Room 5',
         capacity: 4,
         type: 'art',
         videoHeight: 150,
