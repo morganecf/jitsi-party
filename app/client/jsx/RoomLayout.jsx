@@ -7,6 +7,7 @@ const rooms = {
         name: 'Vestibule',
         capacity: 10,
         type: 'jitsi',
+        description: 'Welcome!',
         directions: {
             north: 'livingRoom',
             west: 'closet',
@@ -69,6 +70,7 @@ const rooms = {
         name: 'Serious Conversation Only',
         capacity: 4,
         type: 'jitsi',
+        description: 'Frivolity will not be tolerated.',
         directions: {
             west: 'bathroom',
             south: 'livingRoom',
@@ -89,6 +91,7 @@ const rooms = {
         name: 'Bathroom',
         capacity: 2,
         type: 'jitsi',
+        description: 'A cozy bathroom.',
         directions: {
             east: 'seriousConversations',
             south: 'trashyBedroom'
@@ -108,6 +111,7 @@ const rooms = {
         name: 'Trashy Bedroom',
         capacity: 6,
         type: 'jitsi',
+        description: "Let's get fucked uppp",
         directions: {
             north: 'bathroom',
             east: 'livingRoom',
@@ -301,6 +305,7 @@ const rooms = {
         name: 'Feelings',
         capacity: 6,
         type: 'jitsi',
+        description: 'Talk about your feelings, I guess.',
         directions: {
             south: 'kitchen',
         },
@@ -318,10 +323,12 @@ const rooms = {
         name: 'Kitchen',
         capacity: 7,
         type: 'jitsi',
+        description: "Let's cook something!",
         directions: {
             north: 'feelings',
             east: 'bubbleBaths',
-            south: 'outdoors'
+            south: 'outdoors',
+            west: 'vestibule'
         },
         map: {
             x: 23,
