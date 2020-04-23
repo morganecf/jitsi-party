@@ -320,7 +320,7 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     this.rooms = Object.keys(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_5__["default"]).filter(key => lodash__WEBPACK_IMPORTED_MODULE_0___default.a.has(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_5__["default"][key], 'map')).map(key => {
       const room = Object.assign({}, _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_5__["default"][key]);
       room.key = key;
-      return room;
+      return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.cloneDeep(room);
     });
     this.visited = this.props.path.reduce((map, room) => {
       map[room] = true;
@@ -800,7 +800,7 @@ const rooms = {
     directions: {
       north: 'livingRoom',
       west: 'closet',
-      east: 'kitchen'
+      east: 'gameRoom'
     },
     map: {
       x: 11,
@@ -1116,8 +1116,8 @@ const rooms = {
     directions: {
       north: 'feelings',
       east: 'bubbleBaths',
-      south: 'outdoors',
-      west: 'vestibule'
+      south: 'gameRoom',
+      west: 'artGallery'
     },
     map: {
       x: 23,
@@ -1132,7 +1132,7 @@ const rooms = {
       }
     }
   },
-  games: {
+  gameRoom: {
     name: 'Game Room',
     capacity: 6,
     type: 'jitsi',
