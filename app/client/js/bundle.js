@@ -201,11 +201,34 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   componentDidMount() {
     this.connect();
+    document.addEventListener("keydown", this.handleKeydown.bind(this));
   }
 
   componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeydown.bind(this));
+
     if (this.api) {
       this.api.dispose();
+    }
+  }
+
+  handleKeydown(e) {
+    if (!this.api) {
+      return;
+    }
+
+    e = e || window.event;
+
+    switch (e.which || e.keyCode) {
+      case 65:
+        // a
+        this.api.executeCommand('toggleAudio');
+        break;
+
+      case 86:
+        // v
+        this.api.executeCommand('toggleVideo');
+        break;
     }
   }
 
@@ -323,6 +346,47 @@ __webpack_require__.r(__webpack_exports__);
 class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeydown.bind(this));
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeydown.bind(this));
+  }
+
+  handleKeydown(e) {
+    e = e || window.event;
+    const onClick = this.props.onClick;
+    const {
+      north,
+      south,
+      east,
+      west
+    } = this.props.directions || {};
+
+    switch (e.which || e.keyCode) {
+      case 37:
+        //left
+        west && onClick(west);
+        break;
+
+      case 38:
+        //up
+        north && onClick(north);
+        break;
+
+      case 39:
+        //right
+        east && onClick(east);
+        break;
+
+      case 40:
+        south && onClick(south); //down
+
+        break;
+    }
   }
 
   render() {
