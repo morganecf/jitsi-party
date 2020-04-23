@@ -24,7 +24,6 @@ class Room extends Component {
         this.state = {
             room: this.props.currentRoom
         }
-        console.log('props:', this.props)
     }
 
     getRoomType() {
