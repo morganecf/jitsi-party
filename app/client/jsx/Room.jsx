@@ -37,7 +37,7 @@ class Room extends Component {
        const roomData = RoomLayout[this.state.room]
        const jitsiData = {
            displayName: this.props.displayName,
-           roomName: this.state.room,
+           roomName: roomData.name,
            height: roomData.videoHeight
        }
        return {
@@ -59,13 +59,14 @@ class Room extends Component {
     }
 
     render() {
+        console.log(this.state.room)
         if (RoomLayout[this.state.room].type === 'redirect') {
             return <Redirect to={RoomLayout[this.state.room].route}/>
         }
         return (
             <div className="room">
                 <div className="room-header">
-                    <h2 className="room-header">{this.state.room}</h2>
+                    <h2 className="room-header">{RoomLayout[this.state.room].name}</h2>
                 </div>
                 {this.getRoomType()}
                 {this.getRoomDescription()}
