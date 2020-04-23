@@ -35,6 +35,18 @@
             margin-right: 10px;
             font-weight: bold;
         }
+
+        .visited-key {
+            margin: 10px 0;
+
+            #visited-block {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background: $room-color;
+                border: 2px solid #000;
+            }
+        }
     }
 
     #d3-map svg .map-room {
@@ -49,11 +61,17 @@
             stroke-width: 2;
             fill: $room-color;
             stroke: #000;
+            opacity: 0.5;
         }
 
         path.highlighted-room {
             fill: $highlight-color;
-            transition: fill $transition-duration;
+            opacity: 1;
+            transition: fill $transition-duration, opacity $transition-duration;
+        }
+
+        path.visited {
+            opacity: 1;
         }
     }
 }

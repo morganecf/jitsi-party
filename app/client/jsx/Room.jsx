@@ -59,7 +59,6 @@ class Room extends Component {
     }
 
     render() {
-        console.log(this.state.room)
         if (RoomLayout[this.state.room].type === 'redirect') {
             return <Redirect to={RoomLayout[this.state.room].route}/>
         }
