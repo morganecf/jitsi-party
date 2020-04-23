@@ -20,6 +20,11 @@ class Welcome extends Component {
         this.setState({ displayName: event.target.value })
     }
 
+    handleAvatarSelect(selection) {
+      this.setState({ avatar: selection })
+      console.log(selection)
+    }
+
     handleReady() {
         this.props.updateDisplayName(this.state.displayName)
         this.props.updateCurrentRoom('Vestibule')
@@ -27,7 +32,6 @@ class Welcome extends Component {
     }
 
     render() {
-
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect}/>
         }
@@ -36,7 +40,7 @@ class Welcome extends Component {
                 <h1>Welcome have phun</h1>
                 <div className="display-name">
                     <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/></div>
-                <PuckSelect />
+                <PuckSelect handleSelect={this.handleAvatarSelect.bind(this)} />
                 <input type="button" onClick={this.handleReady.bind(this)} value="Party!"/>
                 <br/><Link to="/about" activeclassname="active">About</Link>
             </div>
