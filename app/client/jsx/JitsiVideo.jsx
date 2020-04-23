@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 export default class JitsiVideo extends Component {
     constructor(props) {
@@ -66,7 +68,7 @@ export default class JitsiVideo extends Component {
         return (
             <div className="jitsi-video">
                 <div id="jitsi-placeholder">
-                    Loading video...
+                    <FontAwesomeIcon icon={faSpinner} spin/>
                 </div>
                 <div id="jitsi-container"></div>
             </div>

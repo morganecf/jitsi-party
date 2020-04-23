@@ -1,0 +1,15 @@
+.jitsi-video {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+#jitsi-placeholder {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: -1;
+}
