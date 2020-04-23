@@ -7,6 +7,38 @@ export default class Navigation extends Component {
         super(props)
     }
 
+    componentDidMount() {
+        document.addEventListener("keydown", this.handleKeydown.bind(this));
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.handleKeydown.bind(this))
+    }
+
+    handleKeydown(e) {
+        e = e || window.event;
+        const onClick = this.props.onClick;
+        const { north, south, east, west } = this.props.directions || {};
+        switch(e.which || e.keyCode) {
+            case 37:
+                //left
+                west && onClick(west);
+                break;
+            case 38:
+                //up
+                north && onClick(north);
+                break;
+            case 39:
+                //right
+                east && onClick(east);
+                break;
+            case 40:
+                south && onClick(south);
+                //down
+                break;
+        }
+    }
+
     render() {
         const onClick = this.props.onClick
         const { north, south, east, west } = this.props.directions || {}
