@@ -325,12 +325,17 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    const puck_list = [[0, './images/puck1.png'], [1, './images/puck1.png'], [2, './images/puck1.png']];
-    const variant_lists = [[[0, './images/puck1.png'], [1, './images/puck1.png'], [2, './images/puck1.png']], [[0, './images/puck1.png'], [1, './images/puck1.png'], [2, './images/puck1.png']], [[0, './images/puck1.png'], [1, './images/puck1.png'], [2, './images/puck1.png']]];
+    const puck_list = [[0, './images/puck/dancing/dancing1.png'], [1, './images/puck1.png'], [2, './images/puck1.png'], [3, './images/puck1.png']];
+    const variant_lists = [[[0, './images/puck/dancing/dancing1.png'], [1, './images/puck/dancing/dancing2.png'], [2, './images/puck/dancing/dancing3.png'], [3, './images/puck/dancing/dancing4.png']], [[0, './images/puck/dancing/dancing1.png'], [1, './images/puck/dancing/dancing2.png'], [2, './images/puck/dancing/dancing3.png'], [3, './images/puck/dancing/dancing4.png']], [[0, './images/puck/dancing/dancing1.png'], [1, './images/puck/dancing/dancing2.png'], [2, './images/puck/dancing/dancing3.png'], [3, './images/puck/dancing/dancing4.png']], [[0, './images/puck/dancing/dancing1.png'], [1, './images/puck/dancing/dancing2.png'], [2, './images/puck/dancing/dancing3.png'], [3, './images/puck/dancing/dancing4.png']]];
     let puck_array;
+    let shown = {
+      visibility: 'visible'
+    };
 
     if (this.state.columnOpen) {
-      // remember to hide button
+      shown = {
+        visibility: 'hidden'
+      };
       puck_array = puck_list.map(puck => {
         console.log(puck);
 
@@ -365,6 +370,7 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      style: shown,
       type: "button",
       onClick: this.onButtonClick,
       value: "Avatar?"
