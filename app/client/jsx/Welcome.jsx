@@ -20,7 +20,7 @@ class Welcome extends Component {
 
     handleReady() {
         this.props.updateDisplayName(this.state.displayName)
-        this.props.updateCurrentRoom('Vestibule')
+        this.props.updateCurrentRoom('vestibule')
         this.setState({ redirect: '/party' })
     }
 

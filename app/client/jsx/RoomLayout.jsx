@@ -8,9 +8,9 @@ const rooms = {
         capacity: 10,
         type: 'jitsi',
         directions: {
-            north: 'Living Room',
-            west: 'Closet',
-            east: 'Kitchen'
+            north: 'livingRoom',
+            west: 'closet',
+            east: 'kitchen'
         },
         map: {
             x: 11,
@@ -30,7 +30,7 @@ const rooms = {
         type: 'jitsi',
         description: 'A cozy closet.',
         directions: {
-            east: 'Vestibule'
+            east: 'vestibule'
         },
         map: {
             x: 10,
@@ -47,10 +47,10 @@ const rooms = {
         capacity: 10,
         type: 'jitsi',
         directions: {
-            north: 'Serious Conversations Only',
-            south: 'Vestibule',
-            east: 'Art Gallery',
-            west: 'Trashy Bedroom'
+            north: 'seriousConversations',
+            south: 'vestibule',
+            east: 'artGallery',
+            west: 'trashyBedroom'
         },
         map: {
             x: 11,
@@ -65,14 +65,14 @@ const rooms = {
             }
         }
     },
-    seriousConversation: {
+    seriousConversations: {
         name: 'Serious Conversation Only',
         capacity: 4,
         type: 'jitsi',
         directions: {
-            west: 'Bathroom',
-            south: 'Living Room',
-            north: 'The Great Outdoors'
+            west: 'bathroom',
+            south: 'livingRoom',
+            north: 'outdoors'
         },
         map: {
             x: 13,
@@ -86,12 +86,12 @@ const rooms = {
         }
     },
     bathroom: {
-        name: 'bathroom',
+        name: 'Bathroom',
         capacity: 2,
         type: 'jitsi',
         directions: {
-            east: 'Serious Conversations Only',
-            south: 'Trashy Bedroom'
+            east: 'seriousConversations',
+            south: 'trashyBedroom'
         },
         map: {
             x: 9,
@@ -109,9 +109,9 @@ const rooms = {
         capacity: 6,
         type: 'jitsi',
         directions: {
-            north: 'Bathroom',
-            east: 'Living Room',
-            west: 'Uncomfortable Closet'
+            north: 'bathroom',
+            east: 'livingRoom',
+            west: 'uncomfortableCloset'
         },
         map: {
             x: 6,
@@ -131,9 +131,9 @@ const rooms = {
         type: null,
         description: 'In the gallery spaces up ahead, you will find art created by your fellow Clarendonites :)',
         directions: {
-            north: 'Gallery Room 1',
-            west: 'Living Room',
-            east: 'Kitchen'
+            north: 'gallery1',
+            west: 'livingRoom',
+            east: 'kitchen'
         },
         map: {
             x: 19,
@@ -158,8 +158,8 @@ const rooms = {
             src: 'https://i.guim.co.uk/img/media/cf62885d3e390035b2ccaeddc7937d9245739ca0/0_0_2048_1536/master/2048.jpg?width=700&quality=85&auto=format&fit=max&s=11e39c32b0b94498d3ee524d1bc9a38e'
         },
         directions: {
-            north: 'Gallery Room 2',
-            south: 'Art Gallery'
+            north: 'gallery2',
+            south: 'artGallery'
         },
         map: {
             x: 20,
@@ -183,8 +183,8 @@ const rooms = {
             src: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Flaming_June%2C_by_Frederic_Lord_Leighton_%281830-1896%29.jpg'
         },
         directions: {
-            north: 'Gallery Room 3',
-            south: 'Gallery Room 1'
+            north: 'gallery3',
+            south: 'gallery1'
         },
         map: {
             x: 20,
@@ -208,8 +208,8 @@ const rooms = {
             src: 'https://www.artnews.com/wp-content/uploads/2018/04/unnamed-12.jpg',
         },
         directions: {
-            east: 'Gallery Room 4',
-            south: 'Gallery Room 2'
+            east: 'gallery4',
+            south: 'gallery2'
         },
         map: {
             x: 20,
@@ -233,8 +233,8 @@ const rooms = {
             src: 'https://d32dm0rphc51dk.cloudfront.net/qFljvNMqmOU4ieEHoKtU0A/large.jpg'
         },
         directions: {
-            east: 'Gallery Room 5',
-            west: 'Gallery Room 3'
+            east: 'gallery5',
+            west: 'gallery3'
         },
         map: {
             x: 20,
@@ -258,8 +258,8 @@ const rooms = {
             src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png',
         },
         directions: {
-            east: 'Gallery Room 6',
-            west: 'Gallery Room 5'
+            east: 'gallery6',
+            west: 'gallery5'
         },
         map: {
             x: 22,
@@ -272,7 +272,8 @@ const rooms = {
             }
         }
     },
-    'Gallery Room 6': {
+    gallery6: {
+        name: 'Gallery Room 6',
         capacity: 4,
         type: 'art',
         videoHeight: 150,
@@ -282,8 +283,8 @@ const rooms = {
             src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png',
         },
         directions: {
-            south: 'Feelings',
-            west: 'Gallery Room 5'
+            south: 'feelings',
+            west: 'gallery5'
         },
         map: {
             x: 24,
@@ -296,11 +297,12 @@ const rooms = {
             }
         }
     },
-    'Feelings': {
+    feelings: {
+        name: 'Feelings',
         capacity: 6,
         type: 'jitsi',
         directions: {
-            south: 'Kitchen',
+            south: 'kitchen',
         },
         map: {
             x: 24,
@@ -312,13 +314,14 @@ const rooms = {
             }
         }
     },
-    'Kitchen': {
+    kitchen: {
+        name: 'Kitchen',
         capacity: 7,
         type: 'jitsi',
         directions: {
-            north: 'Feelings',
-            east: 'Bubble Baths',
-            south: 'The Great Outdoors'
+            north: 'feelings',
+            east: 'bubbleBaths',
+            south: 'outdoors'
         },
         map: {
             x: 23,
@@ -333,13 +336,14 @@ const rooms = {
             }
         }
     },
-    'Game Room': {
+    games: {
+        name: 'Game Room',
         capacity: 6,
         type: 'jitsi',
         directions: {
-            north: 'Kitchen',
-            west: 'Vestibule',
-            east: 'The Great Outdoors'
+            north: 'kitchen',
+            west: 'vestibule',
+            east: 'outdoors'
         },
         map: {
             x: 21,
@@ -352,11 +356,12 @@ const rooms = {
             }
         }
     },
-    'Bubble Baths': {
+    bubbleBaths: {
+        name: 'Bubble Baths',
         capacity: 4,
         type: 'jitsi',
         directions: {
-            west: 'Kitchen',
+            west: 'kitchen',
         },
         map: {
             x: 28,
@@ -368,7 +373,8 @@ const rooms = {
             }
         }
     },
-    'Room 314': {
+    room314: {
+        name: 'Room 314',
         capacity: 5,
         type: 'jitsi',
         map: {
@@ -378,7 +384,8 @@ const rooms = {
             height: 4
         }
     },
-    'The Great Outdoors': {
+    outdoors: {
+        name: 'The Great Outdoors',
         type: 'adventure',
         adventureOptions: {
             text: "Are you sure you want to leave!? Why don't you pop into a random room instead?",
@@ -387,23 +394,25 @@ const rooms = {
                     text: 'Teleport me!!',
                     getNextRoom: roomLayout => {
                         const rooms = Object.keys(roomLayout).filter(
-                            room => room !== 'adventure' && room !== 'redirect'
+                            room => roomLayout[room].type !== 'adventure' && roomLayout[room].type !== 'redirect'
                         )
                         return pickRandom(rooms)
                     }
                 },
                 {
                     text: 'I want to leave >:(',
-                    getNextRoom: () => 'Bye'
+                    getNextRoom: () => 'bye'
                 }
             ]
         }
     },
-    'Bye': {
+    bye: {
+        name: 'Bye',
         type: 'redirect',
         route: '/bye'
     },
-    'Map': {
+    map: {
+        name: 'Map',
         type: 'redirect',
         route: '/map'
     }
