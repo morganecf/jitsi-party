@@ -13,6 +13,7 @@ class Map extends Component {
             redirect: null,
             highlighted: null
         }
+
         this.rooms = Object.keys(RoomLayout)
             .filter(key => _.has(RoomLayout[key], 'map'))
             .map(key => {
@@ -20,6 +21,11 @@ class Map extends Component {
                 room.key = key
                 return room
             })
+
+        this.visited = this.props.path.reduce((map, room) => {
+            map[room] = true;
+            return map;
+        }, {});
     }
 
     componentDidMount() {
@@ -46,7 +52,7 @@ class Map extends Component {
             padding,
             mouseEvents
         )
-        map.draw(this.rooms)
+        map.draw(this.rooms, this.visited)
     }
 
     render() {
@@ -59,17 +65,23 @@ class Map extends Component {
                 <p>Teleport into any room by clicking on it.</p>
                 <div className="map-area">
                     <div id="map-key">
-                        {this.rooms.map((d, i) => {
-                            const className = d.key === this.state.highlighted ?
-                                'map-key-item highlighted-key-item' :
-                                'map-key-item'
-                            return (
-                                <div key={d.key} className={className}>
-                                    <span className="map-key-item-number">{i}</span>
-                                    <span className="map-key-item-name">{d.name}</span>
-                                </div>
-                            )
-                        })}
+                        <div className="room-key">
+                            {this.rooms.map((d, i) => {
+                                const className = d.key === this.state.highlighted ?
+                                    'map-key-item highlighted-key-item' :
+                                    'map-key-item'
+                                return (
+                                    <div key={d.key} className={className}>
+                                        <span className="map-key-item-number">{i}</span>
+                                        <span className="map-key-item-name">{d.name}</span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <div className="visited-key">
+                            <span id="visited-block" className="map-key-item-number"></span>
+                            <span>Visited</span>
+                        </div>
                     </div>
                     <div id="d3-map"></div>
                 </div>
