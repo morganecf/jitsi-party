@@ -22,7 +22,6 @@ class Map extends Component {
             })
     }
 
-    // TODO add "you are here" puck
     // TODO option to see rooms visited
 
     componentDidMount() {
