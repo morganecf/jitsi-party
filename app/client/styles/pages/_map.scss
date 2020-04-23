@@ -1,4 +1,8 @@
 .map {
+    $room-color: #9292b0;
+    $highlight-color: #b85f5f;
+    $transition-duration: .3s;
+
     padding: 20px;
 
     h1 {
@@ -23,8 +27,8 @@
         }
 
         .map-key-item.highlighted-key-item {
-            color: #b85f5f;
-            transition: color 0.25s;
+            color: $highlight-color;
+            transition: color $transition-duration;
         }
 
         .map-key-item-number {
@@ -33,9 +37,23 @@
         }
     }
 
-    #d3-map svg .map-room path {
-        stroke: '#000';
-        stroke-width: 2;
-        fill: '#9292b0';
+    #d3-map svg .map-room {
+        text {
+            text-anchor: end;
+            font-size: 15px;
+            font-family: 'Georgia'
+        }
+
+        path {
+            cursor: pointer;
+            stroke-width: 2;
+            fill: $room-color;
+            stroke: #000;
+        }
+
+        path.highlighted-room {
+            fill: $highlight-color;
+            transition: fill $transition-duration;
+        }
     }
 }
