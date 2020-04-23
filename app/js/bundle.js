@@ -805,6 +805,7 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 
   handleReady() {
     this.props.updateDisplayName(this.state.displayName);
+    this.props.updateAvatar(this.state.avatar);
     this.props.updateCurrentRoom('Vestibule');
     this.setState({
       redirect: '/party'
@@ -847,6 +848,7 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(state => state, {
   updateDisplayName: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateDisplayNameActionCreator,
+  updateAvatar: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateAvatarActionCreator,
   updateCurrentRoom: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateCurrentRoomActionCreator
 })(Welcome));
 
@@ -950,6 +952,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-actions */ "./node_modules/redux-actions/es/index.js");
 
 const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME';
+const UPDATE_AVATAR = 'UPDATE_AVATAR';
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM';
 const initialState = {
   displayName: '',
@@ -959,6 +962,11 @@ const initialState = {
 
 function updateDisplayNameAction(state, displayName) {
   return Object.assign({}, state, displayName);
+}
+
+function updateAvatarAction(state, avatar) {
+  console.log('banana bread');
+  return Object.assign({}, state, avatar);
 }
 
 function updateCurrentRoomAction(state, currentRoom) {
@@ -971,6 +979,10 @@ function updateCurrentRoomAction(state, currentRoom) {
     type: UPDATE_DISPLAY_NAME,
     displayName
   }),
+  updateAvatarActionCreator: avatar => ({
+    type: UPDATE_AVATAR,
+    avatar
+  }),
   updateCurrentRoomActionCreator: currentRoom => ({
     type: UPDATE_CURRENT_ROOM,
     currentRoom
@@ -979,6 +991,7 @@ function updateCurrentRoomAction(state, currentRoom) {
   /* Reducers */
   reducer: Object(redux_actions__WEBPACK_IMPORTED_MODULE_0__["handleActions"])({
     [UPDATE_DISPLAY_NAME]: updateDisplayNameAction,
+    [UPDATE_AVATAR]: updateAvatarAction,
     [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction
   }, initialState)
 });
