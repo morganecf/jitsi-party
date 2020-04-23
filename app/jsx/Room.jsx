@@ -6,6 +6,7 @@ import Navigation from './Navigation.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import RoomLayout from './RoomLayout.jsx'
+import Avatars from './avatars.jsx'
 
 class Room extends Component {
     constructor(props) {
@@ -47,7 +48,7 @@ class Room extends Component {
                     DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
                     SHOW_WATERMARK_FOR_GUESTS: false,
                     TOOLBAR_BUTTONS: this.toolbarButtons,
-                    
+
                 },
                 configOverwrite: {
                     disableSimulcast: false
@@ -57,7 +58,7 @@ class Room extends Component {
             this.setState({ hasLoaded: true })
             this.api.addEventListener('videoConferenceJoined', () => {
                 this.api.executeCommand('displayName', this.props.displayName)
-                // this.api.executeCommand('avatarUrl', this.props.avatar)
+                this.api.executeCommand('avatarUrl', this.props.avatar)
             })
         } catch (err) {
             console.log('failed:', err)
@@ -123,6 +124,10 @@ class Room extends Component {
                 <div id="jitsi-container"></div>
                 <div id="nav-container">
                     <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
+                    <div>
+                      <div><img src={avatars[this.props.avatar[0]][this.props.avatar[1]]}/></div>
+                      <div>{this.props.displayName}</div>
+                    </div>
                 </div>
                 <Link to="/map" activeclassname="active" id="map-link">Map</Link>
             </div>
@@ -131,7 +136,7 @@ class Room extends Component {
 }
 
 export default connect(
-    state => state, 
+    state => state,
     {
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Room)

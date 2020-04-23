@@ -5,6 +5,7 @@ import reducers from './reducers.jsx'
 import { Link, Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
 
+
 class Welcome extends Component {
     constructor(props) {
         super(props)
@@ -39,6 +40,7 @@ class Welcome extends Component {
             <div className="vestibule" style={{ margin: '10px' }}>
                 <h1>Welcome have phun</h1>
                 <div className="display-name">
+                {this.props.a}
                     <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/></div>
                 <PuckSelect handleSelect={this.handleAvatarSelect.bind(this)} />
                 <input type="button" onClick={this.handleReady.bind(this)} value="Party!"/>
