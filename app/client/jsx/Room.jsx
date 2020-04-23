@@ -24,6 +24,7 @@ class Room extends Component {
         this.state = {
             room: this.props.currentRoom
         }
+        console.log('props:', this.props)
     }
 
     getRoomType() {
@@ -59,7 +60,6 @@ class Room extends Component {
     }
 
     render() {
-        console.log(this.state.room)
         if (RoomLayout[this.state.room].type === 'redirect') {
             return <Redirect to={RoomLayout[this.state.room].route}/>
         }

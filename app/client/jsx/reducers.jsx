@@ -6,7 +6,8 @@ const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const initialState = {
     displayName: '',
     avatar: '',
-    currentRoom: ''
+    currentRoom: '',
+    path: []
 }
 
 function updateDisplayNameAction(state, displayName) {
@@ -14,7 +15,8 @@ function updateDisplayNameAction(state, displayName) {
 }
 
 function updateCurrentRoomAction(state, currentRoom) {
-    return Object.assign({}, state, currentRoom)
+    const path = [...state.path, currentRoom.currentRoom]
+    return Object.assign({}, state, currentRoom, { path })
 }
 
 export default {
