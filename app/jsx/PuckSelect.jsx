@@ -25,20 +25,24 @@ class PuckSelect extends Component {
   render() {
 
     const puck_list = [
-      [0,'./images/puck1.png'],
+      [0,'./images/puck/dancing/dancing1.png'],
       [1,'./images/puck1.png'],
       [2,'./images/puck1.png'],
+      [3,'./images/puck1.png'],
     ]
     const variant_lists = [
-      [[0,'./images/puck1.png'],[1,'./images/puck1.png'],[2,'./images/puck1.png']],
-      [[0,'./images/puck1.png'],[1,'./images/puck1.png'],[2,'./images/puck1.png']],
-      [[0,'./images/puck1.png'],[1,'./images/puck1.png'],[2,'./images/puck1.png']],
+      [[0,'./images/puck/dancing/dancing1.png'],[1,'./images/puck/dancing/dancing2.png'],[2,'./images/puck/dancing/dancing3.png'],[3,'./images/puck/dancing/dancing4.png'],],
+      [[0,'./images/puck/dancing/dancing1.png'],[1,'./images/puck/dancing/dancing2.png'],[2,'./images/puck/dancing/dancing3.png'],[3,'./images/puck/dancing/dancing4.png'],],
+      [[0,'./images/puck/dancing/dancing1.png'],[1,'./images/puck/dancing/dancing2.png'],[2,'./images/puck/dancing/dancing3.png'],[3,'./images/puck/dancing/dancing4.png'],],
+      [[0,'./images/puck/dancing/dancing1.png'],[1,'./images/puck/dancing/dancing2.png'],[2,'./images/puck/dancing/dancing3.png'],[3,'./images/puck/dancing/dancing4.png'],]
     ]
     let puck_array
+    let shown = { visibility: 'visible' }
 
     if (this.state.columnOpen) {
 
-      // remember to hide button
+      shown = { visibility: 'hidden' }
+
       puck_array = puck_list.map((puck) => {
         console.log(puck)
 
@@ -86,7 +90,7 @@ class PuckSelect extends Component {
 
     return(
       <div>
-        <input type="button" onClick={this.onButtonClick} value="Avatar?"/>
+        <input style={shown} type="button" onClick={this.onButtonClick} value="Avatar?"/>
         {puck_array}
       </div>
     )
