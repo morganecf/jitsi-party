@@ -19,7 +19,7 @@ class Map extends Component {
             .map(key => {
                 const room = Object.assign({}, RoomLayout[key])
                 room.key = key
-                return room
+                return _.cloneDeep(room)
             })
 
         this.visited = this.props.path.reduce((map, room) => {

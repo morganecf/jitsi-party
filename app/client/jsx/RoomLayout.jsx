@@ -11,7 +11,7 @@ const rooms = {
         directions: {
             north: 'livingRoom',
             west: 'closet',
-            east: 'kitchen'
+            east: 'gameRoom'
         },
         map: {
             x: 11,
@@ -327,8 +327,8 @@ const rooms = {
         directions: {
             north: 'feelings',
             east: 'bubbleBaths',
-            south: 'outdoors',
-            west: 'vestibule'
+            south: 'gameRoom',
+            west: 'artGallery'
         },
         map: {
             x: 23,
@@ -343,7 +343,7 @@ const rooms = {
             }
         }
     },
-    games: {
+    gameRoom: {
         name: 'Game Room',
         capacity: 6,
         type: 'jitsi',
