@@ -419,10 +419,13 @@ const rooms = {
     }
 }
 
-adventures.forEach(adventureOptions => {
-    _.merge(rooms, {
-        type: 'adventure',
-        adventureOptions
+adventures.forEach(adventure => {
+    Object.keys(adventure).forEach(key => {
+        rooms[key] = {
+            name: adventure[key].name,
+            type: 'adventure',
+            adventureOptions: adventure[key]
+        }
     })
 })
 

@@ -22,8 +22,6 @@ class Map extends Component {
             })
     }
 
-    // TODO option to see rooms visited
-
     componentDidMount() {
         const width = document.querySelector('.map').clientWidth / 2;
         const height = 600;
