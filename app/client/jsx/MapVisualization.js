@@ -2,9 +2,14 @@ import * as d3 from 'd3';
 
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
+const ROOM_COLOR = '#9292b0'
+const ROOM_HOVER_COLOR = 'red'
+const TRANSITION_DURATION = 400
 
 export default class MapVisualization {
-    constructor(container, width, height, padding) {
+    constructor(container, width, height, padding, callback) {
+        this.callback = callback
+
         this.svg = d3.select(container)
             .append('svg')
             .attr('width', width + padding)
@@ -98,7 +103,10 @@ export default class MapVisualization {
         room.append('path')
             .attr('d', d => this.getRoomShape(d.map))
             .style('stroke', '#000')
-            .style('fill', '#9292b0')
+            .style('fill', ROOM_COLOR)
+            .on('mouseenter', mouseenter)
+            .on('mouseleave', mouseleave)
+            .on('click', d => this.callback(d.key))
 
         room.append('text')
             .attr('x', d => this.xscale(d.map.x + d.map.width) - 3)
@@ -107,6 +115,21 @@ export default class MapVisualization {
             .style('text-anchor', 'end')
             .style('font-size', 15)
     }
+}
+
+function mouseenter() {
+    d3.select(this)
+        .interrupt()
+        .transition()
+        .duration(TRANSITION_DURATION)
+        .style('fill', ROOM_HOVER_COLOR)
+}
+function mouseleave() {
+    d3.select(this)
+        .interrupt()
+        .transition()
+        .duration(TRANSITION_DURATION)
+        .style('fill', ROOM_COLOR)
 }
 
 function padRooms(data) {
