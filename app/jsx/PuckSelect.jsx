@@ -47,13 +47,17 @@ class PuckSelect extends Component {
 
           let variant_array = avatars[this.state.rowOpen].map((color,id) => {
 
+            let selected = 'box'
+            if (id===0) { selected = 'box-selected' }
             let handleClickColor = () => this.handleClickColor(id)
+
             // avatar color variant selection
             return (
               <PuckBox
               handleClick={handleClickColor}
               key={id}
               image={color}
+              style={selected}
               />
             )
           })
@@ -74,6 +78,7 @@ class PuckSelect extends Component {
             handleClick={handleClick}
             key={id}
             image={puck}
+            style='box'
             />
           )
 

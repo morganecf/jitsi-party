@@ -6,7 +6,7 @@ import Navigation from './Navigation.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import RoomLayout from './RoomLayout.jsx'
-import Avatars from './avatars.jsx'
+import avatars from './avatars.jsx'
 
 class Room extends Component {
     constructor(props) {
