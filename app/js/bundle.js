@@ -346,7 +346,8 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
     this.state = {
       columnOpen: false,
-      rowOpen: null
+      rowOpen: null,
+      avatar: null
     };
     this.onButtonClick = this.onButtonClick.bind(this);
   }
@@ -361,77 +362,88 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.setState({
       rowOpen: id
     });
-  } // handleClickColor(id) { this.setState({ avatar: [this.state.rowOpen,id] }) }
-
+  }
 
   handleClickColor(id) {
+    this.setState({
+      avatar: id
+    });
     this.props.handleSelect([this.state.rowOpen, id]);
   }
 
   render() {
-    let puck_list = _Avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (arr, i) {
-      return arr[0];
-    });
-    let puck_array; //
-
-    let shown = {
+    //
+    let button_hide = {
       visibility: 'visible'
     };
 
-    if (this.state.columnOpen) {
-      //
-      shown = {
-        visibility: 'hidden'
-      };
-      puck_array = puck_list.map((puck, id) => {
-        if (this.state.rowOpen === id) {
-          // let handleClick = () => this.handleClick(puck_list[id])
-          //
-          let variant_array = _Avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"][this.state.rowOpen].map((color, id) => {
-            let selected = 'box'; // if (id===0) { selected = 'box-selected' }
+    if (this.state.avatar) {
+      console.log(this.state.avatar); //<input style={button_hide} type="button" onClick={this.onButtonClick} value="Reselect?"/>
 
-            let handleClickColor = () => this.handleClickColor(id); // avatar color variant selection
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _Avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"][this.state.rowOpen][this.state.avatar]
+      })));
+    } else {
+      let puck_list = _Avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (arr, i) {
+        return arr[0];
+      });
+      let puck_array;
+
+      if (this.state.columnOpen) {
+        //
+        button_hide = {
+          visibility: 'hidden'
+        };
+        puck_array = puck_list.map((puck, id) => {
+          if (this.state.rowOpen === id) {
+            let variant_array = _Avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"][this.state.rowOpen].map((color, id) => {
+              let selected = 'box'; // if (id===0) { selected = 'box-selected' }
+
+              let handleClickColor = () => this.handleClickColor(id); // avatar color variant selection
+
+
+              return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PuckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                handleClick: handleClickColor,
+                key: id,
+                image: color,
+                style: selected
+              });
+            });
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "inner"
+            }, variant_array);
+          } else {
+            let handleClick = () => this.handleClick(id);
+
+            let image_transparency = 'image';
+
+            if (this.state.rowOpen && this.state.rowOpen !== id) {
+              image_transparency = 'non-selected-image';
+            } // avatar style selection
 
 
             return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PuckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
-              handleClick: handleClickColor,
+              handleClick: handleClick,
               key: id,
-              image: color,
-              style: selected
+              image: puck,
+              style: "box",
+              imageStyle: image_transparency
             });
-          });
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-            className: "inner"
-          }, variant_array);
-        } else {
-          let handleClick = () => this.handleClick(id);
+          }
+        });
+      }
 
-          let image_transparency = 'image';
-
-          if (this.state.rowOpen && this.state.rowOpen !== id) {
-            image_transparency = 'non-selected-image';
-          } // avatar style selection
-
-
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PuckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
-            handleClick: handleClick,
-            key: id,
-            image: puck,
-            style: "box",
-            imageStyle: image_transparency
-          });
-        }
-      });
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        style: button_hide,
+        type: "button",
+        onClick: this.onButtonClick,
+        value: "Avatar?"
+      }), puck_array);
     }
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "outer"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      style: shown,
-      type: "button",
-      onClick: this.onButtonClick,
-      value: "Avatar?"
-    }), puck_array);
   }
 
 }
