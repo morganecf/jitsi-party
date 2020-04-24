@@ -40,15 +40,12 @@ class PuckSelect extends Component {
           // let handleClick = () => this.handleClick(puck_list[id])
 
           //
-          let test_style = {
-            display: 'flex',
-            flexDirection: 'row'
-          }
+
 
           let variant_array = avatars[this.state.rowOpen].map((color,id) => {
 
             let selected = 'box'
-            if (id===0) { selected = 'box-selected' }
+            // if (id===0) { selected = 'box-selected' }
             let handleClickColor = () => this.handleClickColor(id)
 
             // avatar color variant selection
@@ -63,7 +60,7 @@ class PuckSelect extends Component {
           })
 
           return (
-            <div style={test_style}>
+            <div className='inner'>
               {variant_array}
             </div>
           )
@@ -72,6 +69,10 @@ class PuckSelect extends Component {
 
           let handleClick = () => this.handleClick(id)
 
+          let image_transparency = 'image'
+          if (this.state.rowOpen && this.state.rowOpen!==id) {
+            image_transparency = 'non-selected-image'
+          }
           // avatar style selection
           return (
             <PuckBox
@@ -79,6 +80,7 @@ class PuckSelect extends Component {
             key={id}
             image={puck}
             style='box'
+            imageStyle={image_transparency}
             />
           )
 
@@ -88,7 +90,7 @@ class PuckSelect extends Component {
     }
 
     return(
-      <div>
+      <div className='outer'>
         <input style={shown} type="button" onClick={this.onButtonClick} value="Avatar?"/>
         {puck_array}
       </div>

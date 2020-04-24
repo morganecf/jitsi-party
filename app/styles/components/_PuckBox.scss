@@ -2,13 +2,14 @@
 // This file contains all styles related to the PuckBox component.
 // -----------------------------------------------------------------------------
 
+
 .box {
 	text-align: center;
 	width: 52px;
 	height: 80px;
 	margin: 4px 4px 0px 0px;
-	// background-color: #D6D3CD;
 	border: 1px solid rgba(0, 0, 0, 0);
+	transition: height .5s;
 }
 .box-selected {
 	text-align: center;
@@ -22,12 +23,32 @@
 	width: 52px;
 	height: 80px;
 	border: 1px solid #D6D3CD;
-	// background-color: #D6D3CD;
+	transition: border .25s;
 }
+
 .image {
 	text-align: center;
 	min-width: 42px !important;
 	width: 42px !important;
 	margin: 8px 4px 0px 4px;
 	height: auto;
+}
+.non-selected-image {
+	text-align: center;
+	min-width: 42px !important;
+	width: 42px !important;
+	margin: 8px 4px 0px 4px;
+	height: auto;
+	opacity:.25;
+	transition: opacity .25s;
+}
+
+.outer {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.inner {
+	display: flex;
+	flex-direction: row;
 }
