@@ -1042,7 +1042,7 @@ const rooms = {
       src: './js/images/creazione-di-gatto.jpg'
     },
     directions: {
-      east: 'gallery4',
+      north: 'gallery4',
       south: 'gallery2'
     },
     map: {
@@ -1067,8 +1067,8 @@ const rooms = {
       src: './js/images/champagne-lolo.gif'
     },
     directions: {
-      east: 'gallery5',
-      west: 'gallery3'
+      north: 'gallery5',
+      south: 'gallery3'
     },
     map: {
       x: 20,
@@ -1076,7 +1076,7 @@ const rooms = {
       width: 2,
       height: 2,
       doors: {
-        east: 5,
+        north: 20,
         south: 20
       }
     }
@@ -1092,17 +1092,17 @@ const rooms = {
       src: './js/images/prints-by-brett.png'
     },
     directions: {
-      east: 'gallery6',
-      west: 'gallery5'
+      north: 'gallery6',
+      south: 'gallery4'
     },
     map: {
-      x: 22,
-      y: 5,
+      x: 20,
+      y: 3,
       width: 2,
       height: 2,
       doors: {
-        west: 5,
-        east: 5
+        south: 20,
+        east: 3
       }
     }
   },
@@ -1112,22 +1112,97 @@ const rooms = {
     type: 'art',
     videoHeight: 150,
     art: {
+      title: 'Origami',
+      artist: 'Kevin',
+      src: './js/images/origami-kevin.jpg'
+    },
+    directions: {
+      north: 'gallery7',
+      south: 'gallery5'
+    },
+    map: {
+      x: 22,
+      y: 3,
+      width: 2,
+      height: 2,
+      doors: {
+        west: 3,
+        east: 3
+      }
+    }
+  },
+  gallery7: {
+    name: 'Gallery Room 7',
+    capacity: 4,
+    type: 'art',
+    videoHeight: 150,
+    art: {
       title: 'Phoebe',
       artist: 'Sean A',
       src: './js/images/phoebe-by-sean.png'
     },
     directions: {
-      south: 'feelings',
-      west: 'gallery5'
+      south: 'gallery6',
+      north: 'gallery8'
     },
     map: {
       x: 24,
+      y: 3,
+      width: 2,
+      height: 2,
+      doors: {
+        east: 3,
+        west: 3
+      }
+    }
+  },
+  gallery8: {
+    name: 'Gallery Room 8',
+    capacity: 4,
+    type: 'art',
+    videoHeight: 150,
+    art: {
+      title: 'Dildos United & Hitachi Quilt',
+      artist: 'Alex',
+      src: './js/images/alex-art.png'
+    },
+    directions: {
+      south: 'gallery7',
+      north: 'gallery9'
+    },
+    map: {
+      x: 26,
+      y: 3,
+      width: 2,
+      height: 2,
+      doors: {
+        west: 3,
+        south: 27
+      }
+    }
+  },
+  gallery9: {
+    name: 'Gallery Room 9',
+    capacity: 4,
+    type: 'art',
+    videoHeight: 150,
+    art: {
+      title: 'The Squeak of Reason II',
+      artist: 'Morg',
+      src: './js/images/squeak-of-reason.png'
+    },
+    directions: {
+      south: 'gallery8',
+      north: 'feelings'
+    },
+    map: {
+      x: 26,
       y: 5,
       width: 2,
       height: 2,
       doors: {
-        west: 5,
-        south: 25
+        north: 27,
+        south: 27
       }
     }
   },
