@@ -68,7 +68,7 @@ class JitsiVideo extends Component {
                     DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
                     SHOW_WATERMARK_FOR_GUESTS: false,
                     TOOLBAR_BUTTONS: this.toolbarButtons,
-                    
+
                 },
                 configOverwrite: {
                     disableSimulcast: false
@@ -79,7 +79,7 @@ class JitsiVideo extends Component {
             this.api.addEventListener('videoConferenceJoined', () => {
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
-                    // avatarUrl: this.props.jitsiData.avatar,
+                    avatarUrl: this.props.jitsiData.avatar,
                 }
                 // Persist audio/video muted settings
                 if (this.isAudioMuted) {

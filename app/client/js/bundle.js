@@ -162,14 +162,28 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./avatars.jsx */ "./jsx/avatars.jsx");
 
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "exit"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Goodbye!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "data:image/png;base64,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"
-  }));
-});
+
+
+
+class Exit extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "exit"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Goodbye!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"][5][this.props.avatar[1]]
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(state => state, {})(Exit));
 
 /***/ }),
 
@@ -266,8 +280,8 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       this.api = new window.JitsiMeetExternalAPI(domain, options);
       this.api.addEventListener('videoConferenceJoined', () => {
         const commands = {
-          displayName: this.props.jitsiData.displayName // avatarUrl: this.props.jitsiData.avatar,
-
+          displayName: this.props.jitsiData.displayName,
+          avatarUrl: this.props.jitsiData.avatar
         }; // Persist audio/video muted settings
 
         if (this.isAudioMuted) {
@@ -579,14 +593,18 @@ function padRooms(data) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Navigation; });
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
-/* harmony import */ var _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./RoomLayout.jsx */ "./jsx/RoomLayout.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./RoomLayout.jsx */ "./jsx/RoomLayout.jsx");
+/* harmony import */ var _avatars_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./avatars.jsx */ "./jsx/avatars.jsx");
+
+
+
 
 
 
@@ -654,49 +672,222 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       className: "west",
       disabled: !west,
       onClick: () => onClick(west)
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
-      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faArrowLeft"]
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faArrowLeft"]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "navigation-room-name"
-    }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][west], 'name')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_5__["default"][west], 'name')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "column"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       className: "north",
       disabled: !north,
       onClick: () => onClick(north)
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
-      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faArrowUp"]
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faArrowUp"]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "navigation-room-name"
-    }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][north], 'name'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_5__["default"][north], 'name'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       className: "south",
       disabled: !south,
       onClick: () => onClick(south)
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
-      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faArrowDown"]
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faArrowDown"]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "navigation-room-name"
-    }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][south], 'name')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_5__["default"][south], 'name')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "column"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       className: "east",
       disabled: !east,
       onClick: () => onClick(east)
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
-      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faArrowRight"]
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faArrowRight"]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "navigation-room-name"
-    }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][east], 'name')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_5__["default"][east], 'name')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "column column-avatar"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "puck-wrapper"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      className: "avatar",
       id: "navigation-puck",
-      src: "https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"
+      src: _avatars_jsx__WEBPACK_IMPORTED_MODULE_6__["default"][this.props.avatar[0]][this.props.avatar[1]]
     }))));
   }
 
 }
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(state => state, {})(Navigation));
+
+/***/ }),
+
+/***/ "./jsx/PuckBox.jsx":
+/*!*************************!*\
+  !*** ./jsx/PuckBox.jsx ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const PuckBox = props => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "box",
+    onClick: props.handleClick,
+    onMouseOver: props.handleTouch
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.image,
+    className: props.imageStyle
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PuckBox);
+
+/***/ }),
+
+/***/ "./jsx/PuckSelect.jsx":
+/*!****************************!*\
+  !*** ./jsx/PuckSelect.jsx ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _PuckBox_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PuckBox.jsx */ "./jsx/PuckBox.jsx");
+/* harmony import */ var _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./avatars.jsx */ "./jsx/avatars.jsx");
+
+
+
+
+class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      columnOpen: false,
+      rowOpen: null,
+      avatar: null,
+      opacity: this.props.opacity
+    };
+    this.onButtonClick = this.onButtonClick.bind(this);
+  }
+
+  onButtonClick() {
+    this.setState({
+      columnOpen: true
+    });
+  }
+
+  onButtonClickReset() {
+    this.setState({
+      columnOpen: false
+    });
+    this.setState({
+      rowOpen: null
+    });
+    this.setState({
+      avatar: null
+    });
+    this.forceUpdate();
+  }
+
+  handleClick(id) {
+    this.setState({
+      rowOpen: id
+    });
+  }
+
+  handleClickColor(id) {
+    this.setState({
+      avatar: id
+    });
+    this.props.handleSelect([this.state.rowOpen, id]);
+  }
+
+  render() {
+    //reselect button WIP
+    if (this.state.avatar != null) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "fade",
+        type: "button",
+        onClick: this.onButtonClick,
+        value: "Pick your puck"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "spacer"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "image",
+        src: _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"][this.state.rowOpen][this.state.avatar]
+      })));
+    } else {
+      let puck_list = _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (arr, i) {
+        return arr[0];
+      }).slice(0, _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].length - 1);
+      let puck_array;
+      let fade = this.props.opacity;
+
+      if (this.state.columnOpen) {
+        fade = 'fade';
+        puck_array = puck_list.map((puck, id) => {
+          if (this.state.rowOpen === id) {
+            let variant_array = _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"][this.state.rowOpen].map((color, id) => {
+              let selected = 'image'; // if (id===0) { selected = 'box-selected' }
+
+              let handleClickColor = () => this.handleClickColor(id); // avatar color variant selection
+
+
+              return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PuckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                handleClick: handleClickColor,
+                key: `puckbox-${id}`,
+                image: color,
+                imageStyle: selected
+              });
+            });
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "inner"
+            }, variant_array);
+          } else {
+            let handleClick = () => this.handleClick(id);
+
+            let image_transparency = 'image';
+
+            if (this.state.rowOpen != null && this.state.rowOpen !== id) {
+              image_transparency = 'non-selected-image';
+            } // avatar style selection
+
+
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PuckBox_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+              handleClick: handleClick,
+              key: id,
+              image: puck,
+              style: "box",
+              imageStyle: image_transparency
+            });
+          }
+        });
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: fade,
+        type: "button",
+        onClick: this.onButtonClick,
+        value: "Pick your puck"
+      }), puck_array);
+    }
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PuckSelect);
 
 /***/ }),
 
@@ -738,7 +929,7 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   *   4. Navigation component used to move through rooms
   *   5. Optional artifact, i.e. something the user finds or unlocks, like a map
   * Add new rooms to RoomLayout.jsx, where individual rooms are defined. Add new TYPES of rooms
-  * by creating a new component for that room and updating the getRoomType() mapping. 
+  * by creating a new component for that room and updating the getRoomType() mapping.
   */
   constructor(props) {
     super(props);
@@ -758,6 +949,7 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     const roomData = _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room];
     const jitsiData = {
       displayName: this.props.displayName,
+      avatar: this.props.avatar,
       roomName: roomData.name,
       height: roomData.videoHeight
     };
@@ -1399,6 +1591,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reducers.jsx */ "./jsx/reducers.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _PuckSelect_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PuckSelect.jsx */ "./jsx/PuckSelect.jsx");
+
 
 
 
@@ -1421,8 +1615,15 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     });
   }
 
+  handleAvatarSelect(selection) {
+    this.setState({
+      avatar: selection
+    });
+  }
+
   handleReady() {
     this.props.updateDisplayName(this.state.displayName);
+    this.props.updateAvatar(this.state.avatar);
     this.props.updateCurrentRoom('vestibule');
     this.setState({
       redirect: '/party'
@@ -1436,18 +1637,50 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       });
     }
 
+    let text_entry = {
+      padding: '6px 10px',
+      border: '2px solid #D6D3CD',
+      borderRadius: '7px',
+      //   backgroundColor: '#222426',
+      color: '#D6D3CD',
+      outline: 'none',
+      boxShadow: 'none',
+      fontSize: '14px'
+    };
+    let name_opacity = 'form-fade';
+    let avatar_opacity = 'form-fade';
+    let party_opacity = 'form-fade';
+
+    if (this.state.displayName == '') {
+      name_opacity = 'form';
+    }
+
+    if (this.state.displayName) {
+      avatar_opacity = 'form';
+    }
+
+    if (this.state.displayName && this.state.avatar) {
+      party_opacity = 'form-party';
+    }
+
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "vestibule"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Welcome have fun"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      style: text_entry,
+      className: name_opacity,
       type: "text",
-      placeholder: "name",
+      placeholder: "Name",
       name: "name",
       minLength: "1",
       onChange: this.handleDisplayNameChange.bind(this)
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_PuckSelect_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      opacity: avatar_opacity,
+      handleSelect: this.handleAvatarSelect.bind(this)
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      className: party_opacity,
       type: "button",
       onClick: this.handleReady.bind(this),
-      value: "Party!",
+      value: "Party",
       disabled: !this.state.displayName
     }));
   }
@@ -1456,6 +1689,7 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(state => state, {
   updateDisplayName: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateDisplayNameActionCreator,
+  updateAvatar: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateAvatarActionCreator,
   updateCurrentRoom: _reducers_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].updateCurrentRoomActionCreator
 })(Welcome));
 
@@ -1682,6 +1916,19 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(provider, document.query
 
 /***/ }),
 
+/***/ "./jsx/avatars.jsx":
+/*!*************************!*\
+  !*** ./jsx/avatars.jsx ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ([['./js/images/puck/normal/normal1.png', './js/images/puck/normal/normal2.png', './js/images/puck/normal/normal3.png', './js/images/puck/normal/normal4.png'], ['./js/images/puck/book/book1.png', './js/images/puck/book/book2.png', './js/images/puck/book/book3.png', './js/images/puck/book/book4.png'], ['./js/images/puck/whippit/whippit1.png', './js/images/puck/whippit/whippit2.png', './js/images/puck/whippit/whippit3.png', './js/images/puck/whippit/whippit4.png'], ['./js/images/puck/dancing/dancing1.png', './js/images/puck/dancing/dancing2.png', './js/images/puck/dancing/dancing3.png', './js/images/puck/dancing/dancing4.png'], ['./js/images/puck/trippy/trippy1.png', './js/images/puck/trippy/trippy2.png', './js/images/puck/trippy/trippy3.png', './js/images/puck/trippy/trippy4.png'], ['./js/images/puck/thumb/thumb1.png', './js/images/puck/thumb/thumb2.png', './js/images/puck/thumb/thumb3.png', './js/images/puck/thumb/thumb4.png']]);
+
+/***/ }),
+
 /***/ "./jsx/reducers.jsx":
 /*!**************************!*\
   !*** ./jsx/reducers.jsx ***!
@@ -1694,6 +1941,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-actions */ "./node_modules/redux-actions/es/index.js");
 
 const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME';
+const UPDATE_AVATAR = 'UPDATE_AVATAR';
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM';
 const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED';
 const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED';
@@ -1708,6 +1956,10 @@ const initialState = {
 
 function updateDisplayNameAction(state, displayName) {
   return Object.assign({}, state, displayName);
+}
+
+function updateAvatarAction(state, avatar) {
+  return Object.assign({}, state, avatar);
 }
 
 function updateCurrentRoomAction(state, currentRoom) {
@@ -1731,6 +1983,10 @@ function updateVideoMutedAction(state, isVideoMuted) {
     type: UPDATE_DISPLAY_NAME,
     displayName
   }),
+  updateAvatarActionCreator: avatar => ({
+    type: UPDATE_AVATAR,
+    avatar
+  }),
   updateCurrentRoomActionCreator: currentRoom => ({
     type: UPDATE_CURRENT_ROOM,
     currentRoom
@@ -1747,6 +2003,7 @@ function updateVideoMutedAction(state, isVideoMuted) {
   /* Reducers */
   reducer: Object(redux_actions__WEBPACK_IMPORTED_MODULE_0__["handleActions"])({
     [UPDATE_DISPLAY_NAME]: updateDisplayNameAction,
+    [UPDATE_AVATAR]: updateAvatarAction,
     [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
     [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,
     [UPDATE_VIDEO_MUTED]: updateVideoMutedAction
@@ -11497,7 +11754,7 @@ var convertCurry = convert.bind(null, react__WEBPACK_IMPORTED_MODULE_2___default
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0; }\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline; }\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none; }\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none; }\n\n/**\n * Set up a decent box model on the root element\n */\nhtml {\n  box-sizing: border-box; }\n\n/**\n * Make all elements from the DOM inherit from the parent box-sizing\n * Since `*` has a specificity of 0, it does not override the `html` value\n * making all elements inheriting from the root box-sizing value\n * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\n */\n*,\n*::before,\n*::after {\n  box-sizing: inherit; }\n\n/**\n * Basic styles for links\n */\na {\n  color: #e50050;\n  text-decoration: none; }\n  a:hover, a:active, a:focus {\n    color: #d6d3cd;\n    text-decoration: underline; }\n\nbody .container {\n  max-width: 100%;\n  padding-left: 0;\n  padding-right: 0; }\n\n/**\n * Basic typography style for copy text\n */\nbody {\n  color: #d6d3cd;\n  font: normal 125%/1.4 \"Open Sans\", \"Helvetica Neue Light\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif; }\n\n/**\n * Clear inner floats\n */\n.clearfix::after {\n  clear: both;\n  content: '';\n  display: table; }\n\n/**\n * Main content containers\n * 1. Make the container full-width with a maximum width\n * 2. Center it in the viewport\n * 3. Leave some space on the edges, especially valuable on small screens\n */\n.container {\n  max-width: 1180px;\n  /* 1 */\n  margin-left: auto;\n  /* 2 */\n  margin-right: auto;\n  /* 2 */\n  padding-left: 20px;\n  /* 3 */\n  padding-right: 20px;\n  /* 3 */\n  width: 100%;\n  /* 1 */ }\n\n/**\n * Hide text while making it readable for screen readers\n * 1. Needed in WebKit-based browsers because of an implementation bug;\n *    See: https://code.google.com/p/chromium/issues/detail?id=457146\n */\n.hide-text {\n  overflow: hidden;\n  padding: 0;\n  /* 1 */\n  text-indent: 101%;\n  white-space: nowrap; }\n\n/**\n * Hide element while making it readable for screen readers\n * Shamelessly borrowed from HTML5Boilerplate:\n * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133\n */\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\nbutton,\ninput[type=\"button\"] {\n  margin: 5px;\n  padding: 6px 10px;\n  border: 2px solid #d6d3cd;\n  border-radius: 5px;\n  transition: all 0.3s ease;\n  background: none;\n  color: #d6d3cd;\n  font-size: 14px; }\n  button svg,\n  input[type=\"button\"] svg {\n    margin: 0 8px 0 0; }\n  button:hover, button:focus,\n  input[type=\"button\"]:hover,\n  input[type=\"button\"]:focus {\n    color: #181a1b;\n    background: #d6d3cd;\n    cursor: pointer; }\n  button:focus,\n  input[type=\"button\"]:focus {\n    outline: none;\n    box-shadow: 0px 0px 4px inset; }\n  button:disabled,\n  input[type=\"button\"]:disabled {\n    color: #999999 !important;\n    border: 2px solid #999999 !important;\n    background: none !important;\n    cursor: auto; }\n\n.jitsi-video {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  align-items: center; }\n\n#jitsi-placeholder {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  z-index: -1; }\n\n.room {\n  height: 100vh;\n  max-height: 100vh;\n  display: flex;\n  flex-flow: column; }\n  .room .room-header {\n    position: fixed;\n    z-index: 1000;\n    width: 100%;\n    text-shadow: 0 0 4px #181a1b;\n    padding-left: 1em; }\n  .room .room-content {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n    padding: .5em;\n    background-color: #303436; }\n  .room .jitsi-video {\n    display: flex;\n    flex: 1; }\n  .room .jitsi-video + .room-content {\n    flex: 0; }\n  .room #jitsi-container {\n    height: 100%;\n    display: flex;\n    flex: 1; }\n    .room #jitsi-container > iframe {\n      height: 100% !important; }\n  .room .adventure {\n    display: flex;\n    flex: 1;\n    align-items: center;\n    justify-content: center;\n    flex-flow: column; }\n  .room .navigation-container {\n    display: flex;\n    align-items: center;\n    padding: 8px 0; }\n    .room .navigation-container .column {\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n    .room .navigation-container button:disabled {\n      opacity: 0; }\n    .room .navigation-container .column-avatar {\n      height: 100%;\n      position: relative; }\n      .room .navigation-container .column-avatar .puck-wrapper {\n        position: absolute;\n        height: 75%; }\n      .room .navigation-container .column-avatar img {\n        height: 100%;\n        max-height: 125px;\n        border-radius: 100%; }\n  .room #map-link {\n    position: fixed;\n    bottom: 1em;\n    right: 1.2em; }\n\n.art-room {\n  display: flex;\n  flex: 1; }\n  .art-room .jitsi-video {\n    flex: 1; }\n  .art-room .art-section {\n    display: flex;\n    flex: 1;\n    flex-flow: column;\n    align-items: center;\n    justify-content: center;\n    padding: 40px 40px 0 40px;\n    background-color: #303436; }\n    .art-room .art-section img {\n      max-width: 800px;\n      max-height: 500px;\n      width: auto;\n      height: auto;\n      border: 20px solid #fff; }\n\n.vestibule {\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  padding-top: 5em; }\n  .vestibule > div {\n    margin-bottom: 1em; }\n\n.exit {\n  text-align: center; }\n\n.map {\n  padding: 20px; }\n  .map h1 {\n    text-align: center; }\n  .map p {\n    text-align: center; }\n  .map .map-area {\n    display: flex;\n    justify-content: center; }\n  .map #map-key {\n    margin: 0 20px;\n    font-family: Georgia;\n    font-size: 15px; }\n    .map #map-key .map-key-item {\n      display: flex; }\n    .map #map-key .map-key-item.highlighted-key-item {\n      color: #b85f5f;\n      transition: color 0.3s; }\n    .map #map-key .map-key-item-number {\n      margin-right: 10px;\n      font-weight: bold; }\n    .map #map-key .visited-key {\n      margin: 10px 0; }\n      .map #map-key .visited-key #visited-block {\n        display: inline-block;\n        width: 15px;\n        height: 15px;\n        background: #9292b0;\n        border: 2px solid #000; }\n  .map #d3-map svg .map-room text {\n    text-anchor: end;\n    font-size: 15px;\n    font-family: 'Georgia'; }\n  .map #d3-map svg .map-room path {\n    cursor: pointer;\n    stroke-width: 2;\n    fill: #9292b0;\n    stroke: #000;\n    opacity: 0.5; }\n  .map #d3-map svg .map-room path.highlighted-room {\n    fill: #b85f5f;\n    opacity: 1;\n    transition: fill 0.3s, opacity 0.3s; }\n  .map #d3-map svg .map-room path.visited {\n    opacity: 1; }\n\nbody {\n  background: linear-gradient(300deg, #181a1b 10%, #242729 90%);\n  background-attachment: fixed;\n  min-height: 100vh; }\n", ""]);
+exports.push([module.i, "/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0; }\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline; }\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none; }\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none; }\n\n/**\n * Set up a decent box model on the root element\n */\nhtml {\n  box-sizing: border-box; }\n\n/**\n * Make all elements from the DOM inherit from the parent box-sizing\n * Since `*` has a specificity of 0, it does not override the `html` value\n * making all elements inheriting from the root box-sizing value\n * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\n */\n*,\n*::before,\n*::after {\n  box-sizing: inherit; }\n\n/**\n * Basic styles for links\n */\na {\n  color: #e50050;\n  text-decoration: none; }\n  a:hover, a:active, a:focus {\n    color: #d6d3cd;\n    text-decoration: underline; }\n\nbody .container {\n  max-width: 100%;\n  padding-left: 0;\n  padding-right: 0; }\n\n/**\n * Basic typography style for copy text\n */\nbody {\n  color: #d6d3cd;\n  font: normal 125%/1.4 \"Open Sans\", \"Helvetica Neue Light\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif; }\n\n/**\n * Clear inner floats\n */\n.clearfix::after {\n  clear: both;\n  content: '';\n  display: table; }\n\n/**\n * Main content containers\n * 1. Make the container full-width with a maximum width\n * 2. Center it in the viewport\n * 3. Leave some space on the edges, especially valuable on small screens\n */\n.container {\n  max-width: 1180px;\n  /* 1 */\n  margin-left: auto;\n  /* 2 */\n  margin-right: auto;\n  /* 2 */\n  padding-left: 20px;\n  /* 3 */\n  padding-right: 20px;\n  /* 3 */\n  width: 100%;\n  /* 1 */ }\n\n/**\n * Hide text while making it readable for screen readers\n * 1. Needed in WebKit-based browsers because of an implementation bug;\n *    See: https://code.google.com/p/chromium/issues/detail?id=457146\n */\n.hide-text {\n  overflow: hidden;\n  padding: 0;\n  /* 1 */\n  text-indent: 101%;\n  white-space: nowrap; }\n\n/**\n * Hide element while making it readable for screen readers\n * Shamelessly borrowed from HTML5Boilerplate:\n * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133\n */\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\nbutton,\ninput[type=\"button\"] {\n  margin: 5px;\n  padding: 6px 10px;\n  border: 2px solid #d6d3cd;\n  border-radius: 5px;\n  transition: all 0.3s ease;\n  background: none;\n  color: #d6d3cd;\n  font-size: 14px; }\n  button svg,\n  input[type=\"button\"] svg {\n    margin: 0 8px 0 0; }\n  button:hover, button:focus,\n  input[type=\"button\"]:hover,\n  input[type=\"button\"]:focus {\n    color: #181a1b;\n    background: #d6d3cd;\n    cursor: pointer; }\n  button:focus,\n  input[type=\"button\"]:focus {\n    outline: none;\n    box-shadow: 0px 0px 4px inset; }\n  button:disabled,\n  input[type=\"button\"]:disabled {\n    color: #999999 !important;\n    border: 2px solid #999999 !important;\n    background: none !important;\n    cursor: auto; }\n\n.box {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0);\n  transition: height .5s;\n  border-radius: 5px; }\n\n.box-selected {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  background-color: #D6D3CD;\n  border: 1px solid #D6D3CD; }\n\n.box:hover {\n  width: 52px;\n  height: 84px;\n  border: 1px solid #D6D3CD;\n  transition: border .25s; }\n\n.image {\n  text-align: center;\n  min-width: 42px !important;\n  max-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  max-height: 70px !important; }\n\n.non-selected-image {\n  text-align: center;\n  min-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  opacity: .25;\n  transition: opacity .25s;\n  max-height: 70px !important; }\n\n.outer {\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.inner {\n  display: flex;\n  flex-direction: row; }\n\n.fade {\n  opacity: .125;\n  transition: opacity .33s; }\n\n.spacer {\n  height: 12px; }\n\n.form {\n  opacity: 1;\n  text-align: center; }\n\n.form-party {\n  opacity: 1;\n  text-align: center;\n  animation: flash linear .666s infinite; }\n\n.form-fade {\n  opacity: .125;\n  transition: opacity .33s;\n  text-align: center; }\n\n.form-fade:focus {\n  opacity: 1;\n  transition: opacity 1s;\n  text-align: center; }\n\n@-webkit-keyframes flash {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: .33; }\n  100% {\n    opacity: 1; } }\n\n.jitsi-video {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  align-items: center; }\n\n#jitsi-placeholder {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  z-index: -1; }\n\n.room {\n  height: 100vh;\n  max-height: 100vh;\n  display: flex;\n  flex-flow: column; }\n  .room .room-header {\n    position: fixed;\n    z-index: 1000;\n    width: 100%;\n    text-shadow: 0 0 4px #181a1b;\n    padding-left: 1em; }\n  .room .room-content {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n    padding: .5em;\n    background-color: #303436; }\n  .room .jitsi-video {\n    display: flex;\n    flex: 1; }\n  .room .jitsi-video + .room-content {\n    flex: 0; }\n  .room #jitsi-container {\n    height: 100%;\n    display: flex;\n    flex: 1; }\n    .room #jitsi-container > iframe {\n      height: 100% !important; }\n  .room .adventure {\n    display: flex;\n    flex: 1;\n    align-items: center;\n    justify-content: center;\n    flex-flow: column; }\n  .room .navigation-container {\n    display: flex;\n    align-items: center;\n    padding: 8px 0; }\n    .room .navigation-container .column {\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n    .room .navigation-container button:disabled {\n      opacity: 0; }\n    .room .navigation-container .column-avatar {\n      height: 100%;\n      position: relative; }\n      .room .navigation-container .column-avatar .puck-wrapper {\n        position: absolute;\n        height: 75%; }\n      .room .navigation-container .column-avatar img {\n        height: 100%;\n        max-height: 125px; }\n  .room #map-link {\n    position: fixed;\n    bottom: 1em;\n    right: 1.2em; }\n\n.art-room {\n  display: flex;\n  flex: 1; }\n  .art-room .jitsi-video {\n    flex: 1; }\n  .art-room .art-section {\n    display: flex;\n    flex: 1;\n    flex-flow: column;\n    align-items: center;\n    justify-content: center;\n    padding: 40px 40px 0 40px;\n    background-color: #303436; }\n    .art-room .art-section img {\n      max-width: 800px;\n      max-height: 500px;\n      width: auto;\n      height: auto;\n      border: 20px solid #fff; }\n\n.vestibule {\n  display: flex;\n  flex-flow: column;\n  align-items: center; }\n  .vestibule > div {\n    margin-bottom: 1em; }\n\n.exit {\n  text-align: center; }\n\n.map {\n  padding: 20px; }\n  .map h1 {\n    text-align: center; }\n  .map p {\n    text-align: center; }\n  .map .map-area {\n    display: flex;\n    justify-content: center; }\n  .map #map-key {\n    margin: 0 20px;\n    font-family: Georgia;\n    font-size: 15px; }\n    .map #map-key .map-key-item {\n      display: flex; }\n    .map #map-key .map-key-item.highlighted-key-item {\n      color: #b85f5f;\n      transition: color 0.3s; }\n    .map #map-key .map-key-item-number {\n      margin-right: 10px;\n      font-weight: bold; }\n    .map #map-key .visited-key {\n      margin: 10px 0; }\n      .map #map-key .visited-key #visited-block {\n        display: inline-block;\n        width: 15px;\n        height: 15px;\n        background: #9292b0;\n        border: 2px solid #000; }\n  .map #d3-map svg .map-room text {\n    text-anchor: end;\n    font-size: 15px;\n    font-family: 'Georgia'; }\n  .map #d3-map svg .map-room path {\n    cursor: pointer;\n    stroke-width: 2;\n    fill: #9292b0;\n    stroke: #000;\n    opacity: 0.5; }\n  .map #d3-map svg .map-room path.highlighted-room {\n    fill: #b85f5f;\n    opacity: 1;\n    transition: fill 0.3s, opacity 0.3s; }\n  .map #d3-map svg .map-room path.visited {\n    opacity: 1; }\n\nbody {\n  background: linear-gradient(300deg, #181a1b 10%, #242729 90%);\n  background-attachment: fixed;\n  min-height: 100vh; }\n", ""]);
 // Exports
 module.exports = exports;
 

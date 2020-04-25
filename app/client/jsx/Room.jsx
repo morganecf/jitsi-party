@@ -17,7 +17,7 @@ class Room extends Component {
     *   4. Navigation component used to move through rooms
     *   5. Optional artifact, i.e. something the user finds or unlocks, like a map
     * Add new rooms to RoomLayout.jsx, where individual rooms are defined. Add new TYPES of rooms
-    * by creating a new component for that room and updating the getRoomType() mapping. 
+    * by creating a new component for that room and updating the getRoomType() mapping.
     */
     constructor(props) {
         super(props)
@@ -37,6 +37,7 @@ class Room extends Component {
        const roomData = RoomLayout[this.state.room]
        const jitsiData = {
            displayName: this.props.displayName,
+           avatar: this.props.avatar,
            roomName: roomData.name,
            height: roomData.videoHeight
        }

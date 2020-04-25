@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Welcome component.
+// -----------------------------------------------------------------------------
+
+
+.form {
+	opacity: 1;
+	text-align: center;
+}
+.form-party {
+	opacity: 1;
+	text-align: center;
+	animation: flash linear .666s infinite;
+}
+.form-fade {
+	opacity: .125;
+	transition: opacity .33s;
+	text-align: center;
+}
+.form-fade:focus {
+	opacity: 1;
+	transition: opacity 1s;
+	text-align: center;
+}
+
+@-webkit-keyframes flash {
+	0% { opacity: 1; }
+	50% { opacity: .33; }
+	100% { opacity: 1; }
+}
