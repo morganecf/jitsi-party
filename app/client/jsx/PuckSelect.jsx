@@ -9,7 +9,8 @@ class PuckSelect extends Component {
         this.state = {
             columnOpen: false,
             rowOpen: null,
-            avatar: null
+            avatar: null,
+            opacity: this.props.opacity
         }
         this.onButtonClick = this.onButtonClick.bind(this)
       }
@@ -23,29 +24,23 @@ class PuckSelect extends Component {
 
   render() {
 
-    //
-    let button_hide = { visibility: 'visible' }
-
-
     if (this.state.avatar) {
-      //<input style={button_hide} type="button" onClick={this.onButtonClick} value="Reselect?"/>
       return (
         <div className='outer'>
+          <input className='fade' type="button" onClick={this.onButtonClick} value="Repick"/>
+          <div className='spacer'/>
           <div><img src={avatars[this.state.rowOpen][this.state.avatar]}/></div>
         </div>
       )
-
     } else {
-
 
       let puck_list = avatars.map(function(arr,i) { return arr[0] })
       let puck_array
+      let fade = this.props.opacity
       if (this.state.columnOpen) {
-        //
-        button_hide = {
-          visibility: 'hidden',
-          transition: 'visibility .5s'
-       }
+
+        fade = 'fade'
+
         puck_array = puck_list.map((puck,id) => {
 
           if (this.state.rowOpen===id) {
@@ -99,7 +94,7 @@ class PuckSelect extends Component {
 
       return(
         <div className='outer'>
-        <input className={this.props.opacity} style={button_hide} type="button" onClick={this.onButtonClick} value="Pick your puck"/>
+        <input className={fade} type="button" onClick={this.onButtonClick} value="Pick your puck"/>
         {puck_array}
         </div>
       )
