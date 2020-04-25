@@ -171,13 +171,15 @@ __webpack_require__.r(__webpack_exports__);
 class Exit extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
+    console.log(_avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"]);
+    console.log(this.props.avatar);
   }
 
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "exit"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Goodbye!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"][this.props.avatar[0]][this.props.avatar[1]]
+      src: _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"][5][this.props.avatar[1]]
     }));
   }
 
@@ -829,7 +831,7 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     } else {
       let puck_list = _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (arr, i) {
         return arr[0];
-      });
+      }).slice(0, _avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].length - 1);
       let puck_array;
       let fade = this.props.opacity;
 

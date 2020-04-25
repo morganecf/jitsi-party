@@ -5,13 +5,16 @@ import avatars from './avatars.jsx'
 class Exit extends Component {
     constructor(props) {
         super(props)
+
+        console.log(avatars)
+        console.log(this.props.avatar)
     }
 
     render() {
         return (
             <div className="exit">
                 <h1>Goodbye!</h1>
-                <img src={avatars[this.props.avatar[0]][this.props.avatar[1]]}/>
+                <img src={avatars[5][this.props.avatar[1]]}/>
             </div>
         )
     }
