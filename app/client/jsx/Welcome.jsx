@@ -35,14 +35,23 @@ class Welcome extends Component {
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect}/>
         }
+
+        let name_opacity = 'form-fade'
+        let avatar_opacity = 'form-fade'
+        let party_opacity = 'form-fade'
+        if (this.state.displayName=='') { name_opacity = 'form' }
+        if (this.state.displayName) { avatar_opacity = 'form' }
+        if (this.state.avatar) { party_opacity = 'form-party' }
+
         return (
             <div className="vestibule">
                 <h1>Welcome have fun</h1>
-                <input type="text" placeholder="name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/>
-                <PuckSelect handleSelect={this.handleAvatarSelect.bind(this)} />
-                <input type="button" onClick={this.handleReady.bind(this)} value="Party!" disabled={!this.state.displayName} />
+                <input className={name_opacity} type="text" placeholder="Pick your name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/><br/>
+                <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
+                <input className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.displayName} />
             </div>
         )
+
     }
 }
 
