@@ -40,8 +40,8 @@ class PuckSelect extends Component {
         </div>
       )
     } else {
-
-      let puck_list = avatars.map(function(arr,i) { return arr[0] })
+      
+      let puck_list = avatars.map(function(arr,i) { return arr[0] }).slice(0, avatars.length - 1)
       let puck_array
       let fade = this.props.opacity
       if (this.state.columnOpen) {
