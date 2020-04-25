@@ -171,8 +171,6 @@ __webpack_require__.r(__webpack_exports__);
 class Exit extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
-    console.log(_avatars_jsx__WEBPACK_IMPORTED_MODULE_2__["default"]);
-    console.log(this.props.avatar);
   }
 
   render() {
