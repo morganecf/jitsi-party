@@ -378,8 +378,7 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     };
 
     if (this.state.avatar) {
-      console.log(this.state.avatar); //<input style={button_hide} type="button" onClick={this.onButtonClick} value="Reselect?"/>
-
+      //<input style={button_hide} type="button" onClick={this.onButtonClick} value="Reselect?"/>
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "outer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -609,9 +608,9 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
       directions: _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_7__["default"][this.state.room].directions,
       onClick: this.onSwitchRoom.bind(this)
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: _avatars_jsx__WEBPACK_IMPORTED_MODULE_8__["default"][this.props.avatar[0]][this.props.avatar[1]]
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.displayName))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/map",
       activeclassname: "active",
       id: "map-link"
