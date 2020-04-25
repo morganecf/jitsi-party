@@ -21,6 +21,8 @@
 		align-items: center;
 		justify-content: center;
 		flex: 1;
+		padding: .5em;
+		background-color: lighten($background-color, 10%);
 	}
 
 	.jitsi-video {
@@ -30,7 +32,6 @@
 
 	.jitsi-video + .room-content {
 		flex: 0;
-		padding-top: 1em;
 	}
 
 	#jitsi-container {
@@ -54,6 +55,7 @@
 	.art-section {
 		text-align: center;
 		padding: 40px;
+		background-color: lighten($background-color, 10%);
 
 		img {
 			max-width: 800px;
@@ -67,24 +69,35 @@
 	.navigation-container {
 		display: flex;
 		align-items: center;
-		padding: 10px 0;
+		padding: 8px 0;
 
 		.column {
 			flex: 1;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 		}
 
-		#navigation-puck {
-			max-width: 125px;
-			max-height: 125px;
-			padding: 20px;
-			border-radius: 100%;
-		}
 
 		button:disabled {
 			opacity: 0;
+		}
+
+		.column-avatar {
+			height: 100%;
+			position: relative;
+
+			.puck-wrapper {
+				position: absolute;
+				height: 75%;
+			}
+
+			img {
+				height: 100%;
+				max-height: 125px;
+				border-radius: 100%;
+			}
 		}
 	}
 

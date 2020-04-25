@@ -68,8 +68,10 @@ export default class Navigation extends Component {
                         <span className="navigation-room-name">{_.get(RoomLayout[east], 'name')}</span>
                     </button>
                 </div>
-                <div className="column">
-                    <img id="navigation-puck" src="https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"/>
+                <div className="column column-avatar">
+                    <div className="puck-wrapper">
+                        <img id="navigation-puck" src="https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"/>
+                    </div>
                 </div>
             </div>
         )
