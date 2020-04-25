@@ -183,7 +183,7 @@ const rooms = {
         videoHeight: 150,
         art: {
             title: 'Butterfly Girl',
-            artist: 'La Ren',
+            artist: 'LaRen',
             src: './js/images/butterfly-girl-laren.jpg'
         },
         directions: {
@@ -359,7 +359,7 @@ const rooms = {
         art: {
             title: 'The Squeak of Reason II',
             artist: 'Morg',
-            src: './js/images/squeak-of-reason.png',
+            src: './js/images/squeak-of-reason.jpg',
         },
         directions: {
             south: 'gallery8',
