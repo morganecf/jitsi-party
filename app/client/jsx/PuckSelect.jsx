@@ -36,7 +36,7 @@ class PuckSelect extends Component {
         <div className='outer'>
           <input className='fade' type="button" onClick={this.onButtonClick} value="Pick your puck"/>
           <div className='spacer'/>
-          <div><img src={avatars[this.state.rowOpen][this.state.avatar]}/></div>
+          <div><img className='image' src={avatars[this.state.rowOpen][this.state.avatar]}/></div>
         </div>
       )
     } else {
@@ -54,7 +54,7 @@ class PuckSelect extends Component {
 
             let variant_array = avatars[this.state.rowOpen].map((color,id) => {
 
-              let selected = 'box'
+              let selected = 'image'
               // if (id===0) { selected = 'box-selected' }
               let handleClickColor = () => this.handleClickColor(id)
 
@@ -64,7 +64,7 @@ class PuckSelect extends Component {
                 handleClick={handleClickColor}
                 key={id}
                 image={color}
-                style={selected}
+                imageStyle={selected}
                 />
               )
             })
