@@ -16,18 +16,27 @@ class PuckSelect extends Component {
       }
 
   onButtonClick() { this.setState({ columnOpen: true }) }
+  onButtonClickReset() {
+    this.setState({ columnOpen: false })
+    this.setState({ rowOpen: null })
+    this.setState({ avatar: null })
+    this.forceUpdate()
+  }
   handleClick(id) { this.setState({ rowOpen: id }) }
   handleClickColor(id) {
+    console.log(id)
     this.setState({ avatar: id })
     this.props.handleSelect([this.state.rowOpen,id])
   }
 
   render() {
 
-    if (this.state.avatar) {
+    //reselect button WIP
+    if (this.state.avatar!=null) {
+      console.log(this.state.avatar)
       return (
         <div className='outer'>
-          <input className='fade' type="button" onClick={this.onButtonClick} value="Repick"/>
+          <input className='fade' type="button" onClick={this.onButtonClick} value="Pick your puck"/>
           <div className='spacer'/>
           <div><img src={avatars[this.state.rowOpen][this.state.avatar]}/></div>
         </div>
