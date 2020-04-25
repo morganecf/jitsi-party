@@ -5,9 +5,6 @@ import avatars from './avatars.jsx'
 class Exit extends Component {
     constructor(props) {
         super(props)
-
-        console.log(avatars)
-        console.log(this.props.avatar)
     }
 
     render() {
