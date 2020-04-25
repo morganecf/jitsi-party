@@ -24,7 +24,6 @@ class PuckSelect extends Component {
   }
   handleClick(id) { this.setState({ rowOpen: id }) }
   handleClickColor(id) {
-    console.log(id)
     this.setState({ avatar: id })
     this.props.handleSelect([this.state.rowOpen,id])
   }
@@ -33,7 +32,6 @@ class PuckSelect extends Component {
 
     //reselect button WIP
     if (this.state.avatar!=null) {
-      console.log(this.state.avatar)
       return (
         <div className='outer'>
           <input className='fade' type="button" onClick={this.onButtonClick} value="Pick your puck"/>
