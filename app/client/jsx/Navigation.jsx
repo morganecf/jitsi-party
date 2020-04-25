@@ -1,10 +1,12 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import RoomLayout from './RoomLayout.jsx'
+import avatars from './avatars.jsx'
 
-export default class Navigation extends Component { 
+class Navigation extends Component {
     constructor(props) {
         super(props)
     }
@@ -70,10 +72,12 @@ export default class Navigation extends Component {
                 </div>
                 <div className="column column-avatar">
                     <div className="puck-wrapper">
-                        <img id="navigation-puck" src="https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png"/>
+                        <img className='avatar' id="navigation-puck" src={avatars[this.props.avatar[0]][this.props.avatar[1]]}/>
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+export default connect(state => state, {})(Navigation)

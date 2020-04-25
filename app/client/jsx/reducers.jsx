@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions'
 
 const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME'
+const UPDATE_AVATAR = 'UPDATE_AVATAR'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
 const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
@@ -16,6 +17,10 @@ const initialState = {
 
 function updateDisplayNameAction(state, displayName) {
     return Object.assign({}, state, displayName)
+}
+
+function updateAvatarAction(state, avatar) {
+    return Object.assign({}, state, avatar)
 }
 
 function updateCurrentRoomAction(state, currentRoom) {
@@ -37,6 +42,10 @@ export default {
         type: UPDATE_DISPLAY_NAME,
         displayName
     }),
+    updateAvatarActionCreator: avatar => ({
+        type: UPDATE_AVATAR,
+        avatar
+    }),
     updateCurrentRoomActionCreator: currentRoom => ({
         type: UPDATE_CURRENT_ROOM,
         currentRoom
@@ -52,6 +61,7 @@ export default {
     /* Reducers */
     reducer: handleActions({
         [UPDATE_DISPLAY_NAME]: updateDisplayNameAction,
+        [UPDATE_AVATAR]: updateAvatarAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
         [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,
         [UPDATE_VIDEO_MUTED]: updateVideoMutedAction
