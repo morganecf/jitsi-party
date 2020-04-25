@@ -1,13 +1,26 @@
 .art-room {
-	$video-height: 150px;
+	display: flex;
+	flex: 1;
 
 	.jitsi-video {
-		position: fixed;
-		width: 100%;
-		height: $video-height;
+		flex: 1;
 	}
 
 	.art-section {
-		margin-top: $video-height;
+		display: flex;
+		flex: 1;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		padding: 40px 40px 0 40px;
+		background-color: lighten($background-color, 10%);
+
+		img {
+			max-width: 800px;
+			max-height: 500px;
+			width: auto;
+			height: auto;
+			border: 20px solid #fff;
+		}
 	}
 }

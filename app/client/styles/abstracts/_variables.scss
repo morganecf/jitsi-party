@@ -19,6 +19,7 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /// App background color
 /// @type Color
 $background-color: rgb(24, 26, 27) !default;
+$background-color-light: lighten($background-color, 10%);
 
 /// Copy text color
 /// @type Color
