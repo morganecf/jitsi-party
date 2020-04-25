@@ -19,10 +19,7 @@ class Welcome extends Component {
         this.setState({ displayName: event.target.value })
     }
 
-    handleAvatarSelect(selection) {
-      this.setState({ avatar: selection })
-      console.log(selection)
-    }
+    handleAvatarSelect(selection) { this.setState({ avatar: selection }) }
 
     handleReady() {
         this.props.updateDisplayName(this.state.displayName)
@@ -41,7 +38,7 @@ class Welcome extends Component {
         let party_opacity = 'form-fade'
         if (this.state.displayName=='') { name_opacity = 'form' }
         if (this.state.displayName) { avatar_opacity = 'form' }
-        if (this.state.avatar) { party_opacity = 'form-party' }
+        if (this.state.displayName && this.state.avatar) { party_opacity = 'form-party' }
 
         return (
             <div className="vestibule">
