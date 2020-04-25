@@ -71,10 +71,10 @@ class Navigation extends Component {
                         <span className="navigation-room-name">{_.get(RoomLayout[east], 'name')}</span>
                     </button>
                 </div>
-                <div className="column">
-                  <div className='circle'>
-                    <img className='avatar' id="navigation-puck" src={avatars[this.props.avatar[0]][this.props.avatar[1]]}/>
-                  </div>
+                <div className="column column-avatar">
+                    <div className="puck-wrapper">
+                        <img className='avatar' id="navigation-puck" src={avatars[this.props.avatar[0]][this.props.avatar[1]]}/>
+                    </div>
                 </div>
             </div>
         )
