@@ -80,7 +80,7 @@ class PuckSelect extends Component {
             let handleClick = () => this.handleClick(id)
 
             let image_transparency = 'image'
-            if (this.state.rowOpen && this.state.rowOpen!==id) {
+            if (this.state.rowOpen!=null && this.state.rowOpen!==id) {
               image_transparency = 'non-selected-image'
             }
             // avatar style selection
