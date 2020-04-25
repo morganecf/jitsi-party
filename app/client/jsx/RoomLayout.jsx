@@ -429,6 +429,9 @@ const rooms = {
             y: 2,
             width: 4,
             height: 4
+        },
+        directions: {
+            north: 'vestibule'
         }
     },
     outdoors: {
