@@ -26,9 +26,8 @@ class PuckSelect extends Component {
     //
     let button_hide = { visibility: 'visible' }
 
-    if (this.state.avatar) {
-      console.log(this.state.avatar)
 
+    if (this.state.avatar) {
       //<input style={button_hide} type="button" onClick={this.onButtonClick} value="Reselect?"/>
       return (
         <div className='outer'>

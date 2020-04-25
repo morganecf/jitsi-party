@@ -124,10 +124,7 @@ class Room extends Component {
                 <div id="jitsi-container"></div>
                 <div id="nav-container">
                     <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
-                    <div>
                       <div><img src={avatars[this.props.avatar[0]][this.props.avatar[1]]}/></div>
-                      <div>{this.props.displayName}</div>
-                    </div>
                 </div>
                 <Link to="/map" activeclassname="active" id="map-link">Map</Link>
             </div>
