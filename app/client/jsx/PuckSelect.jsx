@@ -42,7 +42,10 @@ class PuckSelect extends Component {
       let puck_array
       if (this.state.columnOpen) {
         //
-        button_hide = { visibility: 'hidden' }
+        button_hide = {
+          visibility: 'hidden',
+          transition: 'visibility .5s'
+       }
         puck_array = puck_list.map((puck,id) => {
 
           if (this.state.rowOpen===id) {
@@ -96,7 +99,7 @@ class PuckSelect extends Component {
 
       return(
         <div className='outer'>
-        <input style={button_hide} type="button" onClick={this.onButtonClick} value="Avatar?"/>
+        <input className={this.props.opacity} style={button_hide} type="button" onClick={this.onButtonClick} value="Pick your puck"/>
         {puck_array}
         </div>
       )
