@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+
+body {
+	background: linear-gradient(300deg, $background-color 10%, lighten($background-color, 5%) 90%);
+	background-attachment: fixed;
+	min-height: 100vh;
+}

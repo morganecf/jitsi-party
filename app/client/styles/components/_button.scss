@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+button,
+input[type="button"] {
+	margin: 5px;
+	padding: 12px;
+	border: 2px solid $text-color;
+	border-radius: 5px;
+	transition: all 0.3s ease; 
+	background: none;
+	color: $text-color;
+	font-size: 17px;
+
+	svg {
+		margin: 0 8px 0 0; 
+	}
+
+	&:hover,
+	&:focus {
+		color: $background-color;
+		background: $text-color;
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 4px inset;
+	}
+
+	&:disabled {
+		color: $mid-grey !important;
+		border: 2px solid $mid-grey !important;
+		background: none !important;
+		cursor: auto;
+	}
+
+}

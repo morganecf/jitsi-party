@@ -1,0 +1,77 @@
+.map {
+    $room-color: #9292b0;
+    $highlight-color: #b85f5f;
+    $transition-duration: .3s;
+
+    padding: 20px;
+
+    h1 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+
+    .map-area {
+        display: flex;
+        justify-content: center;
+    }
+
+    #map-key {
+        margin: 0 20px;
+        font-family: Georgia;
+        font-size: 15px;
+
+        .map-key-item {
+            display: flex;
+        }
+
+        .map-key-item.highlighted-key-item {
+            color: $highlight-color;
+            transition: color $transition-duration;
+        }
+
+        .map-key-item-number {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .visited-key {
+            margin: 10px 0;
+
+            #visited-block {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background: $room-color;
+                border: 2px solid #000;
+            }
+        }
+    }
+
+    #d3-map svg .map-room {
+        text {
+            text-anchor: end;
+            font-size: 15px;
+            font-family: 'Georgia'
+        }
+
+        path {
+            cursor: pointer;
+            stroke-width: 2;
+            fill: $room-color;
+            stroke: #000;
+            opacity: 0.5;
+        }
+
+        path.highlighted-room {
+            fill: $highlight-color;
+            opacity: 1;
+            transition: fill $transition-duration, opacity $transition-duration;
+        }
+
+        path.visited {
+            opacity: 1;
+        }
+    }
+}
