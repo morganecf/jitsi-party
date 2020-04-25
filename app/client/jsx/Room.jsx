@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
 import reducers from './reducers.jsx'
+import { Redirect } from 'react-router-dom'
 import RoomLayout from './RoomLayout.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
