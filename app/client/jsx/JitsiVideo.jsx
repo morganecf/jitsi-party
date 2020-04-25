@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import reducers from './reducers.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
-export default class JitsiVideo extends Component {
+class JitsiVideo extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -16,6 +18,10 @@ export default class JitsiVideo extends Component {
             'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone',
             'e2ee'
         ]
+        // These should not be stored in state for the duration of the Jitsi video,
+        // since any change to state currently triggers a render and reconnect
+        this.isAudioMuted = this.props.isAudioMuted
+        this.isVideoMuted = this.props.isVideoMuted
     }
 
     componentDidMount() {
@@ -28,6 +34,9 @@ export default class JitsiVideo extends Component {
         if (this.api) {
             this.api.dispose()
         }
+        // Persist audio/video muted settings
+        this.props.updateAudioMuted(this.isAudioMuted)
+        this.props.updateVideoMuted(this.isVideoMuted)
     }
 
     handleKeydown(e) {
@@ -65,10 +74,28 @@ export default class JitsiVideo extends Component {
                     disableSimulcast: false
                 }
             }
+
             this.api = new window.JitsiMeetExternalAPI(domain, options)
             this.api.addEventListener('videoConferenceJoined', () => {
-                this.api.executeCommand('displayName', this.props.jitsiData.displayName)
-                this.api.executeCommand('avatarUrl', this.props.jitsiData.avatar)
+                const commands = {
+                    displayName: this.props.jitsiData.displayName,
+                    avatarUrl: this.props.jitsiData.avatar,
+                }
+                // Persist audio/video muted settings
+                if (this.isAudioMuted) {
+                    console.log('adding mute command')
+                    commands.toggleAudio = []
+                }
+                if (this.isVideoMuted) {
+                    commands.toggleVideo = []
+                }
+                this.api.executeCommands(commands)
+                this.api.addEventListener('audioMuteStatusChanged', ({ muted }) => {
+                    this.isAudioMuted = muted
+                })
+                this.api.addEventListener('videoMuteStatusChanged', ({ muted }) => {
+                    this.isVideoMuted = muted
+                })
             })
         } catch (err) {
             console.log('failed:', err)
@@ -92,3 +119,8 @@ export default class JitsiVideo extends Component {
         )
     }
 }
+
+export default connect(state => state, {
+    updateAudioMuted: reducers.updateAudioMutedActionCreator,
+    updateVideoMuted: reducers.updateVideoMutedActionCreator
+})(JitsiVideo)
