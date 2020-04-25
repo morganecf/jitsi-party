@@ -308,6 +308,7 @@ const rooms = {
         description: 'Talk about your feelings, I guess.',
         directions: {
             south: 'kitchen',
+            east: 'boudoir'
         },
         map: {
             x: 24,
@@ -315,7 +316,46 @@ const rooms = {
             width: 4,
             height: 4,
             doors: {
-                south: 25
+                south: 25,
+                east: 10
+            }
+        }
+    },
+    boudoir: {
+        name: 'Boudoir',
+        capacity: 5,
+        type: 'jitsi',
+        description: 'Get dolled up',
+        directions: {
+            west: 'feelings',
+            south: 'bunnyRun',
+        },
+        map: {
+            x: 28,
+            y: 9,
+            width: 2,
+            height: 2,
+            doors: {
+                west: 10,
+                south: 29
+            }
+        }
+    },
+    bunnyRun: {
+        name: 'The Bunny Run',
+        capacity: 10,
+        type: 'jitsi',
+        description: 'The Winston & Winona show',
+        directions: {
+            north: 'boudoir'
+        },
+        map: {
+            x: 28,
+            y: 11,
+            width: 2,
+            height: 1,
+            doors: {
+                north: 29
             }
         }
     },
