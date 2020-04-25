@@ -34,13 +34,14 @@ class Welcome extends Component {
         }
 
         let text_entry = {
-          padding: '10px',
+          padding: '6px 10px',
           border: '2px solid #D6D3CD',
           borderRadius: '7px',
-          backgroundColor: '#222426',
+        //   backgroundColor: '#222426',
           color: '#D6D3CD',
           outline: 'none',
           boxShadow: 'none',
+          fontSize: '14px'
         }
 
         let name_opacity = 'form-fade'
