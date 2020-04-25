@@ -157,9 +157,9 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Light',
-            artist: 'James Turrell',
-            src: 'https://i.guim.co.uk/img/media/cf62885d3e390035b2ccaeddc7937d9245739ca0/0_0_2048_1536/master/2048.jpg?width=700&quality=85&auto=format&fit=max&s=11e39c32b0b94498d3ee524d1bc9a38e'
+            title: 'Bread',
+            artist: 'Jett',
+            src: './js/images/bread-jett.png'
         },
         directions: {
             north: 'gallery2',
@@ -182,9 +182,9 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Flaming June',
-            artist: 'Frederic Lord Leighton',
-            src: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Flaming_June%2C_by_Frederic_Lord_Leighton_%281830-1896%29.jpg'
+            title: 'Butterfly Girl',
+            artist: 'La Ren',
+            src: './js/images/butterfly-girl-laren.jpg'
         },
         directions: {
             north: 'gallery3',
@@ -207,12 +207,12 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Untitled',
-            artist: 'Francis Bacon',
-            src: 'https://www.artnews.com/wp-content/uploads/2018/04/unnamed-12.jpg',
+            title: 'Creazione di DJ',
+            artist: 'Phoebe',
+            src: './js/images/creazione-di-gatto.jpg',
         },
         directions: {
-            east: 'gallery4',
+            north: 'gallery4',
             south: 'gallery2'
         },
         map: {
@@ -232,13 +232,13 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Untitled',
-            artist: 'Man Ray',
-            src: 'https://d32dm0rphc51dk.cloudfront.net/qFljvNMqmOU4ieEHoKtU0A/large.jpg'
+            title: 'Champagne',
+            artist: 'Lolo',
+            src: './js/images/champagne-lolo.gif'
         },
         directions: {
-            east: 'gallery5',
-            west: 'gallery3'
+            north: 'gallery5',
+            south: 'gallery3'
         },
         map: {
             x: 20,
@@ -246,7 +246,7 @@ const rooms = {
             width: 2,
             height: 2,
             doors: {
-                east: 5,
+                north: 20,
                 south: 20
             }
         }
@@ -257,22 +257,22 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Smiling',
-            artist: 'Yue Minjun',
-            src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png',
+            title: 'Prints',
+            artist: 'Brett',
+            src: './js/images/prints-by-brett.png',
         },
         directions: {
-            east: 'gallery6',
-            west: 'gallery5'
+            north: 'gallery6',
+            south: 'gallery4'
         },
         map: {
-            x: 22,
-            y: 5,
+            x: 20,
+            y: 3,
             width: 2,
             height: 2,
             doors: {
-                west: 5,
-                east: 5
+                south: 20,
+                east: 3
             }
         }
     },
@@ -282,22 +282,97 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Smiling',
-            artist: 'Yue Minjun',
-            src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png',
+            title: 'Origami',
+            artist: 'Kevin',
+            src: './js/images/origami-kevin.jpg',
         },
         directions: {
-            south: 'feelings',
-            west: 'gallery5'
+            north: 'gallery7',
+            south: 'gallery5'
+        },
+        map: {
+            x: 22,
+            y: 3,
+            width: 2,
+            height: 2,
+            doors: {
+                west: 3,
+                east: 3
+            }
+        }
+    },
+    gallery7: {
+        name: 'Gallery Room 7',
+        capacity: 4,
+        type: 'art',
+        videoHeight: 150,
+        art: {
+            title: 'Phoebe',
+            artist: 'Sean A',
+            src: './js/images/phoebe-by-sean.png',
+        },
+        directions: {
+            south: 'gallery6',
+            north: 'gallery8'
         },
         map: {
             x: 24,
+            y: 3,
+            width: 2,
+            height: 2,
+            doors: {
+                east: 3,
+                west: 3
+            }
+        }
+    },
+    gallery8: {
+        name: 'Gallery Room 8',
+        capacity: 4,
+        type: 'art',
+        videoHeight: 150,
+        art: {
+            title: 'Dildos United & Hitachi Quilt',
+            artist: 'Alex',
+            src: './js/images/alex-art.png',
+        },
+        directions: {
+            south: 'gallery7',
+            north: 'gallery9'
+        },
+        map: {
+            x: 26,
+            y: 3,
+            width: 2,
+            height: 2,
+            doors: {
+                west: 3,
+                south: 27
+            }
+        }
+    },
+    gallery9: {
+        name: 'Gallery Room 9',
+        capacity: 4,
+        type: 'art',
+        videoHeight: 150,
+        art: {
+            title: 'The Squeak of Reason II',
+            artist: 'Morg',
+            src: './js/images/squeak-of-reason.png',
+        },
+        directions: {
+            south: 'gallery8',
+            north: 'feelings'
+        },
+        map: {
+            x: 26,
             y: 5,
             width: 2,
             height: 2,
             doors: {
-                west: 5,
-                south: 25
+                north: 27,
+                south: 27
             }
         }
     },
@@ -308,6 +383,7 @@ const rooms = {
         description: 'Talk about your feelings, I guess.',
         directions: {
             south: 'kitchen',
+            east: 'boudoir'
         },
         map: {
             x: 24,
@@ -315,7 +391,46 @@ const rooms = {
             width: 4,
             height: 4,
             doors: {
-                south: 25
+                south: 25,
+                east: 10
+            }
+        }
+    },
+    boudoir: {
+        name: 'Boudoir',
+        capacity: 5,
+        type: 'jitsi',
+        description: 'Get dolled up',
+        directions: {
+            west: 'feelings',
+            south: 'bunnyRun',
+        },
+        map: {
+            x: 28,
+            y: 9,
+            width: 2,
+            height: 2,
+            doors: {
+                west: 10,
+                south: 29
+            }
+        }
+    },
+    bunnyRun: {
+        name: 'The Bunny Run',
+        capacity: 10,
+        type: 'jitsi',
+        description: 'The Winston & Winona show',
+        directions: {
+            north: 'boudoir'
+        },
+        map: {
+            x: 28,
+            y: 11,
+            width: 2,
+            height: 1,
+            doors: {
+                north: 29
             }
         }
     },
@@ -389,6 +504,9 @@ const rooms = {
             y: 2,
             width: 4,
             height: 4
+        },
+        directions: {
+            north: 'vestibule'
         }
     },
     outdoors: {
