@@ -157,9 +157,9 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Light',
-            artist: 'James Turrell',
-            src: 'https://i.guim.co.uk/img/media/cf62885d3e390035b2ccaeddc7937d9245739ca0/0_0_2048_1536/master/2048.jpg?width=700&quality=85&auto=format&fit=max&s=11e39c32b0b94498d3ee524d1bc9a38e'
+            title: 'Bread',
+            artist: 'Jett',
+            src: './js/images/bread-jett.png'
         },
         directions: {
             north: 'gallery2',
@@ -182,9 +182,9 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Flaming June',
-            artist: 'Frederic Lord Leighton',
-            src: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Flaming_June%2C_by_Frederic_Lord_Leighton_%281830-1896%29.jpg'
+            title: 'Butterfly Girl',
+            artist: 'La Ren',
+            src: './js/images/butterfly-girl-laren.jpg'
         },
         directions: {
             north: 'gallery3',
@@ -207,9 +207,9 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Untitled',
-            artist: 'Francis Bacon',
-            src: 'https://www.artnews.com/wp-content/uploads/2018/04/unnamed-12.jpg',
+            title: 'Creazione di DJ',
+            artist: 'Phoebe',
+            src: './js/images/creazione-di-gatto.jpg',
         },
         directions: {
             east: 'gallery4',
@@ -232,9 +232,9 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Untitled',
-            artist: 'Man Ray',
-            src: 'https://d32dm0rphc51dk.cloudfront.net/qFljvNMqmOU4ieEHoKtU0A/large.jpg'
+            title: 'Champagne',
+            artist: 'Lolo',
+            src: './js/images/champagne-lolo.gif'
         },
         directions: {
             east: 'gallery5',
@@ -257,9 +257,9 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Smiling',
-            artist: 'Yue Minjun',
-            src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png',
+            title: 'Prints',
+            artist: 'Brett',
+            src: './js/images/prints-by-brett.png',
         },
         directions: {
             east: 'gallery6',
@@ -282,9 +282,9 @@ const rooms = {
         type: 'art',
         videoHeight: 150,
         art: {
-            title: 'Smiling',
-            artist: 'Yue Minjun',
-            src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png',
+            title: 'Phoebe',
+            artist: 'Sean A',
+            src: './js/images/phoebe-by-sean.png',
         },
         directions: {
             south: 'feelings',
