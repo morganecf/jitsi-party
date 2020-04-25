@@ -33,6 +33,16 @@ class Welcome extends Component {
             return <Redirect to={this.state.redirect}/>
         }
 
+        let text_entry = {
+          padding: '10px',
+          border: '2px solid #D6D3CD',
+          borderRadius: '7px',
+          backgroundColor: '#222426',
+          color: '#D6D3CD',
+          outline: 'none',
+          boxShadow: 'none',
+        }
+
         let name_opacity = 'form-fade'
         let avatar_opacity = 'form-fade'
         let party_opacity = 'form-fade'
@@ -43,7 +53,7 @@ class Welcome extends Component {
         return (
             <div className="vestibule">
                 <h1>Welcome have fun</h1>
-                <input className={name_opacity} type="text" placeholder="Pick your name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/><br/>
+                <input style={text_entry} className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/><br/>
                 <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
                 <input className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.displayName} />
             </div>

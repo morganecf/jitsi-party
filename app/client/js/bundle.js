@@ -730,6 +730,19 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
   }
 
+  onButtonClickReset() {
+    this.setState({
+      columnOpen: false
+    });
+    this.setState({
+      rowOpen: null
+    });
+    this.setState({
+      avatar: null
+    });
+    this.forceUpdate();
+  }
+
   handleClick(id) {
     this.setState({
       rowOpen: id
@@ -737,6 +750,7 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   handleClickColor(id) {
+    console.log(id);
     this.setState({
       avatar: id
     });
@@ -744,14 +758,16 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    if (this.state.avatar) {
+    //reselect button WIP
+    if (this.state.avatar != null) {
+      console.log(this.state.avatar);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "outer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "fade",
         type: "button",
         onClick: this.onButtonClick,
-        value: "Repick"
+        value: "Pick your puck"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "spacer"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1450,6 +1466,15 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       });
     }
 
+    let text_entry = {
+      padding: '10px',
+      border: '2px solid #D6D3CD',
+      borderRadius: '7px',
+      backgroundColor: '#222426',
+      color: '#D6D3CD',
+      outline: 'none',
+      boxShadow: 'none'
+    };
     let name_opacity = 'form-fade';
     let avatar_opacity = 'form-fade';
     let party_opacity = 'form-fade';
@@ -1469,9 +1494,10 @@ class Welcome extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "vestibule"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Welcome have fun"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      style: text_entry,
       className: name_opacity,
       type: "text",
-      placeholder: "Pick your name",
+      placeholder: "Name",
       name: "name",
       minLength: "1",
       onChange: this.handleDisplayNameChange.bind(this)
