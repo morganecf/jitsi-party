@@ -804,7 +804,7 @@ class PuckSelect extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
             let image_transparency = 'image';
 
-            if (this.state.rowOpen && this.state.rowOpen !== id) {
+            if (this.state.rowOpen != null && this.state.rowOpen !== id) {
               image_transparency = 'non-selected-image';
             } // avatar style selection
 
