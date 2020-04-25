@@ -182,11 +182,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return JitsiVideo; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _reducers_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reducers.jsx */ "./jsx/reducers.jsx");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+
+
+
 
 
 
@@ -196,7 +200,11 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.state = {
       hasLoaded: false
     };
-    this.toolbarButtons = ['microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen', 'fodeviceselection', 'profile', 'chat', 'recording', 'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand', 'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts', 'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone', 'e2ee'];
+    this.toolbarButtons = ['microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen', 'fodeviceselection', 'profile', 'chat', 'recording', 'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand', 'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts', 'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone', 'e2ee']; // These should not be stored in state for the duration of the Jitsi video,
+    // since any change to state currently triggers a render and reconnect
+
+    this.isAudioMuted = this.props.isAudioMuted;
+    this.isVideoMuted = this.props.isVideoMuted;
   }
 
   componentDidMount() {
@@ -209,7 +217,11 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     if (this.api) {
       this.api.dispose();
-    }
+    } // Persist audio/video muted settings
+
+
+    this.props.updateAudioMuted(this.isAudioMuted);
+    this.props.updateVideoMuted(this.isVideoMuted);
   }
 
   handleKeydown(e) {
@@ -253,8 +265,31 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       };
       this.api = new window.JitsiMeetExternalAPI(domain, options);
       this.api.addEventListener('videoConferenceJoined', () => {
-        this.api.executeCommand('displayName', this.props.jitsiData.displayName);
-        this.api.executeCommand('avatarUrl', this.props.jitsiData.avatar);
+        const commands = {
+          displayName: this.props.jitsiData.displayName,
+          avatarUrl: this.props.jitsiData.avatar
+        }; // Persist audio/video muted settings
+
+        if (this.isAudioMuted) {
+          console.log('adding mute command');
+          commands.toggleAudio = [];
+        }
+
+        if (this.isVideoMuted) {
+          commands.toggleVideo = [];
+        }
+
+        this.api.executeCommands(commands);
+        this.api.addEventListener('audioMuteStatusChanged', ({
+          muted
+        }) => {
+          this.isAudioMuted = muted;
+        });
+        this.api.addEventListener('videoMuteStatusChanged', ({
+          muted
+        }) => {
+          this.isVideoMuted = muted;
+        });
       });
     } catch (err) {
       console.log('failed:', err);
@@ -273,8 +308,8 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "jitsi-video"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "jitsi-placeholder"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
-      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faSpinner"],
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faSpinner"],
       spin: true
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "jitsi-container"
@@ -282,6 +317,11 @@ class JitsiVideo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
 }
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(state => state, {
+  updateAudioMuted: _reducers_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].updateAudioMutedActionCreator,
+  updateVideoMuted: _reducers_jsx__WEBPACK_IMPORTED_MODULE_2__["default"].updateVideoMutedActionCreator
+})(JitsiVideo));
 
 /***/ }),
 
@@ -653,12 +693,14 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "navigation-room-name"
     }, lodash__WEBPACK_IMPORTED_MODULE_0___default.a.get(_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_6__["default"][east], 'name')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "column"
+      className: "column column-avatar"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "puck-wrapper"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
       className: "avatar",
       id: "navigation-puck",
       src: _avatars_jsx__WEBPACK_IMPORTED_MODULE_7__["default"][this.props.avatar[0]][this.props.avatar[1]]
-    })));
+    }))));
   }
 
 }
@@ -916,7 +958,7 @@ class Room extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   getRoomDescription() {
     if (_RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room].description) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "room-content"
       }, _RoomLayout_jsx__WEBPACK_IMPORTED_MODULE_4__["default"][this.state.room].description);
     }
@@ -1127,9 +1169,9 @@ const rooms = {
     type: 'art',
     videoHeight: 150,
     art: {
-      title: 'Light',
-      artist: 'James Turrell',
-      src: 'https://i.guim.co.uk/img/media/cf62885d3e390035b2ccaeddc7937d9245739ca0/0_0_2048_1536/master/2048.jpg?width=700&quality=85&auto=format&fit=max&s=11e39c32b0b94498d3ee524d1bc9a38e'
+      title: 'Bread',
+      artist: 'Jett',
+      src: './js/images/bread-jett.png'
     },
     directions: {
       north: 'gallery2',
@@ -1152,9 +1194,9 @@ const rooms = {
     type: 'art',
     videoHeight: 150,
     art: {
-      title: 'Flaming June',
-      artist: 'Frederic Lord Leighton',
-      src: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Flaming_June%2C_by_Frederic_Lord_Leighton_%281830-1896%29.jpg'
+      title: 'Butterfly Girl',
+      artist: 'La Ren',
+      src: './js/images/butterfly-girl-laren.jpg'
     },
     directions: {
       north: 'gallery3',
@@ -1177,12 +1219,12 @@ const rooms = {
     type: 'art',
     videoHeight: 150,
     art: {
-      title: 'Untitled',
-      artist: 'Francis Bacon',
-      src: 'https://www.artnews.com/wp-content/uploads/2018/04/unnamed-12.jpg'
+      title: 'Creazione di DJ',
+      artist: 'Phoebe',
+      src: './js/images/creazione-di-gatto.jpg'
     },
     directions: {
-      east: 'gallery4',
+      north: 'gallery4',
       south: 'gallery2'
     },
     map: {
@@ -1202,13 +1244,13 @@ const rooms = {
     type: 'art',
     videoHeight: 150,
     art: {
-      title: 'Untitled',
-      artist: 'Man Ray',
-      src: 'https://d32dm0rphc51dk.cloudfront.net/qFljvNMqmOU4ieEHoKtU0A/large.jpg'
+      title: 'Champagne',
+      artist: 'Lolo',
+      src: './js/images/champagne-lolo.gif'
     },
     directions: {
-      east: 'gallery5',
-      west: 'gallery3'
+      north: 'gallery5',
+      south: 'gallery3'
     },
     map: {
       x: 20,
@@ -1216,7 +1258,7 @@ const rooms = {
       width: 2,
       height: 2,
       doors: {
-        east: 5,
+        north: 20,
         south: 20
       }
     }
@@ -1227,22 +1269,22 @@ const rooms = {
     type: 'art',
     videoHeight: 150,
     art: {
-      title: 'Smiling',
-      artist: 'Yue Minjun',
-      src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png'
+      title: 'Prints',
+      artist: 'Brett',
+      src: './js/images/prints-by-brett.png'
     },
     directions: {
-      east: 'gallery6',
-      west: 'gallery5'
+      north: 'gallery6',
+      south: 'gallery4'
     },
     map: {
-      x: 22,
-      y: 5,
+      x: 20,
+      y: 3,
       width: 2,
       height: 2,
       doors: {
-        west: 5,
-        east: 5
+        south: 20,
+        east: 3
       }
     }
   },
@@ -1252,22 +1294,97 @@ const rooms = {
     type: 'art',
     videoHeight: 150,
     art: {
-      title: 'Smiling',
-      artist: 'Yue Minjun',
-      src: 'https://4.bp.blogspot.com/-91KqevLK3mk/WDyVDPEshiI/AAAAAAAAAE8/aFsWvszdXH0WNWPAgODIUMZyhdLJ1HBLwCLcB/s1600/Smiling.png'
+      title: 'Origami',
+      artist: 'Kevin',
+      src: './js/images/origami-kevin.jpg'
     },
     directions: {
-      south: 'feelings',
-      west: 'gallery5'
+      north: 'gallery7',
+      south: 'gallery5'
+    },
+    map: {
+      x: 22,
+      y: 3,
+      width: 2,
+      height: 2,
+      doors: {
+        west: 3,
+        east: 3
+      }
+    }
+  },
+  gallery7: {
+    name: 'Gallery Room 7',
+    capacity: 4,
+    type: 'art',
+    videoHeight: 150,
+    art: {
+      title: 'Phoebe',
+      artist: 'Sean A',
+      src: './js/images/phoebe-by-sean.png'
+    },
+    directions: {
+      south: 'gallery6',
+      north: 'gallery8'
     },
     map: {
       x: 24,
+      y: 3,
+      width: 2,
+      height: 2,
+      doors: {
+        east: 3,
+        west: 3
+      }
+    }
+  },
+  gallery8: {
+    name: 'Gallery Room 8',
+    capacity: 4,
+    type: 'art',
+    videoHeight: 150,
+    art: {
+      title: 'Dildos United & Hitachi Quilt',
+      artist: 'Alex',
+      src: './js/images/alex-art.png'
+    },
+    directions: {
+      south: 'gallery7',
+      north: 'gallery9'
+    },
+    map: {
+      x: 26,
+      y: 3,
+      width: 2,
+      height: 2,
+      doors: {
+        west: 3,
+        south: 27
+      }
+    }
+  },
+  gallery9: {
+    name: 'Gallery Room 9',
+    capacity: 4,
+    type: 'art',
+    videoHeight: 150,
+    art: {
+      title: 'The Squeak of Reason II',
+      artist: 'Morg',
+      src: './js/images/squeak-of-reason.png'
+    },
+    directions: {
+      south: 'gallery8',
+      north: 'feelings'
+    },
+    map: {
+      x: 26,
       y: 5,
       width: 2,
       height: 2,
       doors: {
-        west: 5,
-        south: 25
+        north: 27,
+        south: 27
       }
     }
   },
@@ -1277,7 +1394,8 @@ const rooms = {
     type: 'jitsi',
     description: 'Talk about your feelings, I guess.',
     directions: {
-      south: 'kitchen'
+      south: 'kitchen',
+      east: 'boudoir'
     },
     map: {
       x: 24,
@@ -1285,7 +1403,46 @@ const rooms = {
       width: 4,
       height: 4,
       doors: {
-        south: 25
+        south: 25,
+        east: 10
+      }
+    }
+  },
+  boudoir: {
+    name: 'Boudoir',
+    capacity: 5,
+    type: 'jitsi',
+    description: 'Get dolled up',
+    directions: {
+      west: 'feelings',
+      south: 'bunnyRun'
+    },
+    map: {
+      x: 28,
+      y: 9,
+      width: 2,
+      height: 2,
+      doors: {
+        west: 10,
+        south: 29
+      }
+    }
+  },
+  bunnyRun: {
+    name: 'The Bunny Run',
+    capacity: 10,
+    type: 'jitsi',
+    description: 'The Winston & Winona show',
+    directions: {
+      north: 'boudoir'
+    },
+    map: {
+      x: 28,
+      y: 11,
+      width: 2,
+      height: 1,
+      doors: {
+        north: 29
       }
     }
   },
@@ -1359,6 +1516,9 @@ const rooms = {
       y: 2,
       width: 4,
       height: 4
+    },
+    directions: {
+      north: 'vestibule'
     }
   },
   outdoors: {
@@ -1770,11 +1930,15 @@ __webpack_require__.r(__webpack_exports__);
 const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME';
 const UPDATE_AVATAR = 'UPDATE_AVATAR';
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM';
+const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED';
+const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED';
 const initialState = {
   displayName: '',
   avatar: '',
   currentRoom: '',
-  path: []
+  path: [],
+  isAudioMuted: false,
+  isVideoMuted: false
 };
 
 function updateDisplayNameAction(state, displayName) {
@@ -1792,6 +1956,14 @@ function updateCurrentRoomAction(state, currentRoom) {
   });
 }
 
+function updateAudioMutedAction(state, isAudioMuted) {
+  return Object.assign({}, state, isAudioMuted);
+}
+
+function updateVideoMutedAction(state, isVideoMuted) {
+  return Object.assign({}, state, isVideoMuted);
+}
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   /* Action creators: return actions for reducers */
   updateDisplayNameActionCreator: displayName => ({
@@ -1806,12 +1978,22 @@ function updateCurrentRoomAction(state, currentRoom) {
     type: UPDATE_CURRENT_ROOM,
     currentRoom
   }),
+  updateAudioMutedActionCreator: isAudioMuted => ({
+    type: UPDATE_AUDIO_MUTED,
+    isAudioMuted
+  }),
+  updateVideoMutedActionCreator: isVideoMuted => ({
+    type: UPDATE_VIDEO_MUTED,
+    isVideoMuted
+  }),
 
   /* Reducers */
   reducer: Object(redux_actions__WEBPACK_IMPORTED_MODULE_0__["handleActions"])({
     [UPDATE_DISPLAY_NAME]: updateDisplayNameAction,
     [UPDATE_AVATAR]: updateAvatarAction,
-    [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction
+    [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
+    [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,
+    [UPDATE_VIDEO_MUTED]: updateVideoMutedAction
   }, initialState)
 });
 
@@ -11559,7 +11741,7 @@ var convertCurry = convert.bind(null, react__WEBPACK_IMPORTED_MODULE_2___default
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0; }\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline; }\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none; }\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none; }\n\n/**\n * Set up a decent box model on the root element\n */\nhtml {\n  box-sizing: border-box; }\n\n/**\n * Make all elements from the DOM inherit from the parent box-sizing\n * Since `*` has a specificity of 0, it does not override the `html` value\n * making all elements inheriting from the root box-sizing value\n * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\n */\n*,\n*::before,\n*::after {\n  box-sizing: inherit; }\n\n/**\n * Basic styles for links\n */\na {\n  color: #e50050;\n  text-decoration: none; }\n  a:hover, a:active, a:focus {\n    color: #d6d3cd;\n    text-decoration: underline; }\n\nbody .container {\n  max-width: 100%;\n  padding-left: 0;\n  padding-right: 0; }\n\n/**\n * Basic typography style for copy text\n */\nbody {\n  color: #d6d3cd;\n  font: normal 125%/1.4 \"Open Sans\", \"Helvetica Neue Light\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif; }\n\n/**\n * Clear inner floats\n */\n.clearfix::after {\n  clear: both;\n  content: '';\n  display: table; }\n\n/**\n * Main content containers\n * 1. Make the container full-width with a maximum width\n * 2. Center it in the viewport\n * 3. Leave some space on the edges, especially valuable on small screens\n */\n.container {\n  max-width: 1180px;\n  /* 1 */\n  margin-left: auto;\n  /* 2 */\n  margin-right: auto;\n  /* 2 */\n  padding-left: 20px;\n  /* 3 */\n  padding-right: 20px;\n  /* 3 */\n  width: 100%;\n  /* 1 */ }\n\n/**\n * Hide text while making it readable for screen readers\n * 1. Needed in WebKit-based browsers because of an implementation bug;\n *    See: https://code.google.com/p/chromium/issues/detail?id=457146\n */\n.hide-text {\n  overflow: hidden;\n  padding: 0;\n  /* 1 */\n  text-indent: 101%;\n  white-space: nowrap; }\n\n/**\n * Hide element while making it readable for screen readers\n * Shamelessly borrowed from HTML5Boilerplate:\n * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133\n */\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\nbutton,\ninput[type=\"button\"] {\n  margin: 5px;\n  padding: 12px;\n  border: 2px solid #d6d3cd;\n  border-radius: 5px;\n  transition: all 0.3s ease;\n  background: none;\n  color: #d6d3cd;\n  font-size: 17px; }\n  button svg,\n  input[type=\"button\"] svg {\n    margin: 0 8px 0 0; }\n  button:hover, button:focus,\n  input[type=\"button\"]:hover,\n  input[type=\"button\"]:focus {\n    color: #181a1b;\n    background: #d6d3cd;\n    cursor: pointer; }\n  button:focus,\n  input[type=\"button\"]:focus {\n    outline: none;\n    box-shadow: 0px 0px 4px inset; }\n  button:disabled,\n  input[type=\"button\"]:disabled {\n    color: #999999 !important;\n    border: 2px solid #999999 !important;\n    background: none !important;\n    cursor: auto; }\n\n.box {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0);\n  transition: height .5s; }\n\n.box-selected {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  background-color: #D6D3CD;\n  border: 1px solid #D6D3CD; }\n\n.box:hover {\n  width: 52px;\n  height: 84px;\n  border: 1px solid #D6D3CD;\n  transition: border .25s; }\n\n.image {\n  text-align: center;\n  min-width: 42px !important;\n  max-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  max-height: 70px !important; }\n\n.non-selected-image {\n  text-align: center;\n  min-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  opacity: .25;\n  transition: opacity .25s;\n  max-height: 70px !important; }\n\n.outer {\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.inner {\n  display: flex;\n  flex-direction: row; }\n\n.fade {\n  opacity: .125;\n  transition: opacity .33s; }\n\n.spacer {\n  height: 12px; }\n\n.form {\n  opacity: 1;\n  text-align: center; }\n\n.form-party {\n  opacity: 1;\n  text-align: center;\n  animation: flash linear .666s infinite; }\n\n.form-fade {\n  opacity: .125;\n  transition: opacity .33s;\n  text-align: center; }\n\n.form-fade:focus {\n  opacity: 1;\n  transition: opacity 1s;\n  text-align: center; }\n\n@-webkit-keyframes flash {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: .33; }\n  100% {\n    opacity: 1; } }\n\n.circle {\n  width: 80px;\n  height: 80px;\n  border-radius: 80px;\n  background-color: #D6D3CD;\n  justify-content: center; }\n\n.jitsi-video {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  align-items: center; }\n\n#jitsi-placeholder {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  z-index: -1; }\n\n.room {\n  height: 100vh;\n  max-height: 100vh;\n  display: flex;\n  flex-flow: column; }\n  .room .room-header {\n    position: fixed;\n    z-index: 1000;\n    width: 100%;\n    text-shadow: 0 0 4px #181a1b;\n    padding-left: 1em; }\n  .room .room-content {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex: 1; }\n  .room .jitsi-video {\n    display: flex;\n    flex: 1; }\n  .room .jitsi-video + .room-content {\n    flex: 0;\n    padding-top: 1em; }\n  .room #jitsi-container {\n    height: 100%;\n    display: flex;\n    flex: 1; }\n    .room #jitsi-container > iframe {\n      height: 100% !important; }\n  .room .adventure {\n    display: flex;\n    flex: 1;\n    align-items: center;\n    justify-content: center;\n    flex-flow: column; }\n  .room .art-section {\n    text-align: center;\n    padding: 40px; }\n    .room .art-section img {\n      max-width: 500px;\n      max-height: 500px;\n      width: auto;\n      height: auto;\n      border: 20px solid #fff; }\n  .room .navigation-container {\n    display: flex;\n    align-items: center;\n    padding: 10px 0; }\n    .room .navigation-container .column {\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n      align-items: center; }\n    .room .navigation-container #navigation-puck {\n      max-width: 125px;\n      max-height: 125px;\n      padding: 20px;\n      border-radius: 100%; }\n    .room .navigation-container button:disabled {\n      opacity: 0; }\n  .room #map-link {\n    position: fixed;\n    bottom: 1em;\n    right: 1.2em; }\n\n.art-room .jitsi-video {\n  position: fixed;\n  width: 100%;\n  height: 150px; }\n\n.art-room .art-section {\n  margin-top: 150px; }\n\n.vestibule {\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  padding-top: 5em; }\n  .vestibule > div {\n    margin-bottom: 1em; }\n\n.exit {\n  text-align: center; }\n\n.map {\n  padding: 20px; }\n  .map h1 {\n    text-align: center; }\n  .map p {\n    text-align: center; }\n  .map .map-area {\n    display: flex;\n    justify-content: center; }\n  .map #map-key {\n    margin: 0 20px;\n    font-family: Georgia;\n    font-size: 15px; }\n    .map #map-key .map-key-item {\n      display: flex; }\n    .map #map-key .map-key-item.highlighted-key-item {\n      color: #b85f5f;\n      transition: color 0.3s; }\n    .map #map-key .map-key-item-number {\n      margin-right: 10px;\n      font-weight: bold; }\n    .map #map-key .visited-key {\n      margin: 10px 0; }\n      .map #map-key .visited-key #visited-block {\n        display: inline-block;\n        width: 15px;\n        height: 15px;\n        background: #9292b0;\n        border: 2px solid #000; }\n  .map #d3-map svg .map-room text {\n    text-anchor: end;\n    font-size: 15px;\n    font-family: 'Georgia'; }\n  .map #d3-map svg .map-room path {\n    cursor: pointer;\n    stroke-width: 2;\n    fill: #9292b0;\n    stroke: #000;\n    opacity: 0.5; }\n  .map #d3-map svg .map-room path.highlighted-room {\n    fill: #b85f5f;\n    opacity: 1;\n    transition: fill 0.3s, opacity 0.3s; }\n  .map #d3-map svg .map-room path.visited {\n    opacity: 1; }\n\nbody {\n  background: linear-gradient(300deg, #181a1b 10%, #242729 90%);\n  background-attachment: fixed;\n  min-height: 100vh; }\n", ""]);
+exports.push([module.i, "/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0; }\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline; }\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none; }\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none; }\n\n/**\n * Set up a decent box model on the root element\n */\nhtml {\n  box-sizing: border-box; }\n\n/**\n * Make all elements from the DOM inherit from the parent box-sizing\n * Since `*` has a specificity of 0, it does not override the `html` value\n * making all elements inheriting from the root box-sizing value\n * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\n */\n*,\n*::before,\n*::after {\n  box-sizing: inherit; }\n\n/**\n * Basic styles for links\n */\na {\n  color: #e50050;\n  text-decoration: none; }\n  a:hover, a:active, a:focus {\n    color: #d6d3cd;\n    text-decoration: underline; }\n\nbody .container {\n  max-width: 100%;\n  padding-left: 0;\n  padding-right: 0; }\n\n/**\n * Basic typography style for copy text\n */\nbody {\n  color: #d6d3cd;\n  font: normal 125%/1.4 \"Open Sans\", \"Helvetica Neue Light\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif; }\n\n/**\n * Clear inner floats\n */\n.clearfix::after {\n  clear: both;\n  content: '';\n  display: table; }\n\n/**\n * Main content containers\n * 1. Make the container full-width with a maximum width\n * 2. Center it in the viewport\n * 3. Leave some space on the edges, especially valuable on small screens\n */\n.container {\n  max-width: 1180px;\n  /* 1 */\n  margin-left: auto;\n  /* 2 */\n  margin-right: auto;\n  /* 2 */\n  padding-left: 20px;\n  /* 3 */\n  padding-right: 20px;\n  /* 3 */\n  width: 100%;\n  /* 1 */ }\n\n/**\n * Hide text while making it readable for screen readers\n * 1. Needed in WebKit-based browsers because of an implementation bug;\n *    See: https://code.google.com/p/chromium/issues/detail?id=457146\n */\n.hide-text {\n  overflow: hidden;\n  padding: 0;\n  /* 1 */\n  text-indent: 101%;\n  white-space: nowrap; }\n\n/**\n * Hide element while making it readable for screen readers\n * Shamelessly borrowed from HTML5Boilerplate:\n * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133\n */\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\nbutton,\ninput[type=\"button\"] {\n  margin: 5px;\n  padding: 6px 10px;\n  border: 2px solid #d6d3cd;\n  border-radius: 5px;\n  transition: all 0.3s ease;\n  background: none;\n  color: #d6d3cd;\n  font-size: 14px; }\n  button svg,\n  input[type=\"button\"] svg {\n    margin: 0 8px 0 0; }\n  button:hover, button:focus,\n  input[type=\"button\"]:hover,\n  input[type=\"button\"]:focus {\n    color: #181a1b;\n    background: #d6d3cd;\n    cursor: pointer; }\n  button:focus,\n  input[type=\"button\"]:focus {\n    outline: none;\n    box-shadow: 0px 0px 4px inset; }\n  button:disabled,\n  input[type=\"button\"]:disabled {\n    color: #999999 !important;\n    border: 2px solid #999999 !important;\n    background: none !important;\n    cursor: auto; }\n\n.box {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0);\n  transition: height .5s; }\n\n.box-selected {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  background-color: #D6D3CD;\n  border: 1px solid #D6D3CD; }\n\n.box:hover {\n  width: 52px;\n  height: 84px;\n  border: 1px solid #D6D3CD;\n  transition: border .25s; }\n\n.image {\n  text-align: center;\n  min-width: 42px !important;\n  max-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  max-height: 70px !important; }\n\n.non-selected-image {\n  text-align: center;\n  min-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  opacity: .25;\n  transition: opacity .25s;\n  max-height: 70px !important; }\n\n.outer {\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.inner {\n  display: flex;\n  flex-direction: row; }\n\n.fade {\n  opacity: .125;\n  transition: opacity .33s; }\n\n.spacer {\n  height: 12px; }\n\n.form {\n  opacity: 1;\n  text-align: center; }\n\n.form-party {\n  opacity: 1;\n  text-align: center;\n  animation: flash linear .666s infinite; }\n\n.form-fade {\n  opacity: .125;\n  transition: opacity .33s;\n  text-align: center; }\n\n.form-fade:focus {\n  opacity: 1;\n  transition: opacity 1s;\n  text-align: center; }\n\n@-webkit-keyframes flash {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: .33; }\n  100% {\n    opacity: 1; } }\n\n.circle {\n  width: 80px;\n  height: 80px;\n  border-radius: 80px;\n  background-color: #D6D3CD;\n  justify-content: center; }\n\n.jitsi-video {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  align-items: center; }\n\n#jitsi-placeholder {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  z-index: -1; }\n\n.room {\n  height: 100vh;\n  max-height: 100vh;\n  display: flex;\n  flex-flow: column; }\n  .room .room-header {\n    position: fixed;\n    z-index: 1000;\n    width: 100%;\n    text-shadow: 0 0 4px #181a1b;\n    padding-left: 1em; }\n  .room .room-content {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n    padding: .5em;\n    background-color: #303436; }\n  .room .jitsi-video {\n    display: flex;\n    flex: 1; }\n  .room .jitsi-video + .room-content {\n    flex: 0; }\n  .room #jitsi-container {\n    height: 100%;\n    display: flex;\n    flex: 1; }\n    .room #jitsi-container > iframe {\n      height: 100% !important; }\n  .room .adventure {\n    display: flex;\n    flex: 1;\n    align-items: center;\n    justify-content: center;\n    flex-flow: column; }\n  .room .navigation-container {\n    display: flex;\n    align-items: center;\n    padding: 8px 0; }\n    .room .navigation-container .column {\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n    .room .navigation-container button:disabled {\n      opacity: 0; }\n    .room .navigation-container .column-avatar {\n      height: 100%;\n      position: relative; }\n      .room .navigation-container .column-avatar .puck-wrapper {\n        position: absolute;\n        height: 75%; }\n      .room .navigation-container .column-avatar img {\n        height: 100%;\n        max-height: 125px;\n        border-radius: 100%; }\n  .room #map-link {\n    position: fixed;\n    bottom: 1em;\n    right: 1.2em; }\n\n.art-room {\n  display: flex;\n  flex: 1; }\n  .art-room .jitsi-video {\n    flex: 1; }\n  .art-room .art-section {\n    display: flex;\n    flex: 1;\n    flex-flow: column;\n    align-items: center;\n    justify-content: center;\n    padding: 40px 40px 0 40px;\n    background-color: #303436; }\n    .art-room .art-section img {\n      max-width: 800px;\n      max-height: 500px;\n      width: auto;\n      height: auto;\n      border: 20px solid #fff; }\n\n.vestibule {\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  padding-top: 5em; }\n  .vestibule > div {\n    margin-bottom: 1em; }\n\n.exit {\n  text-align: center; }\n\n.map {\n  padding: 20px; }\n  .map h1 {\n    text-align: center; }\n  .map p {\n    text-align: center; }\n  .map .map-area {\n    display: flex;\n    justify-content: center; }\n  .map #map-key {\n    margin: 0 20px;\n    font-family: Georgia;\n    font-size: 15px; }\n    .map #map-key .map-key-item {\n      display: flex; }\n    .map #map-key .map-key-item.highlighted-key-item {\n      color: #b85f5f;\n      transition: color 0.3s; }\n    .map #map-key .map-key-item-number {\n      margin-right: 10px;\n      font-weight: bold; }\n    .map #map-key .visited-key {\n      margin: 10px 0; }\n      .map #map-key .visited-key #visited-block {\n        display: inline-block;\n        width: 15px;\n        height: 15px;\n        background: #9292b0;\n        border: 2px solid #000; }\n  .map #d3-map svg .map-room text {\n    text-anchor: end;\n    font-size: 15px;\n    font-family: 'Georgia'; }\n  .map #d3-map svg .map-room path {\n    cursor: pointer;\n    stroke-width: 2;\n    fill: #9292b0;\n    stroke: #000;\n    opacity: 0.5; }\n  .map #d3-map svg .map-room path.highlighted-room {\n    fill: #b85f5f;\n    opacity: 1;\n    transition: fill 0.3s, opacity 0.3s; }\n  .map #d3-map svg .map-room path.visited {\n    opacity: 1; }\n\nbody {\n  background: linear-gradient(300deg, #181a1b 10%, #242729 90%);\n  background-attachment: fixed;\n  min-height: 100vh; }\n", ""]);
 // Exports
 module.exports = exports;
 

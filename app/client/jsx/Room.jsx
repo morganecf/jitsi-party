@@ -50,7 +50,11 @@ class Room extends Component {
 
     getRoomDescription() {
         if (RoomLayout[this.state.room].description) {
-            return <p className="room-content">{RoomLayout[this.state.room].description}</p>
+            return (
+                <div className="room-content">
+                    {RoomLayout[this.state.room].description}
+                </div>
+            )
         }
     }
 
