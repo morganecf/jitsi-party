@@ -1,18 +1,30 @@
 # jitsi-party
 
+## Contributing
+
 ### Installation
-```
+```bash
+# Set up a virtualenv
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
 # Make sure you have node/npm installed
 brew install node
 
-# Install local app dependencies
-cd app/
+# Install client dependencies
+cd app/client/
 npm install
 ```
 
 ### Running the app locally 
-```
+```bash
+# Run flask server
 cd app/
+python app.py
+
+# Run webpack
+cd client/
 bash run.sh
 ```
 

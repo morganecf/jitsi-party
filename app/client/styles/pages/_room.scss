@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the room page.
+// -----------------------------------------------------------------------------
+
+.room {
+	height: 100vh;
+	max-height: 100vh;
+	display: flex;
+	flex-flow: column;
+
+	.room-header {
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+		text-shadow: 0 0 4px $background-color;
+		padding-left: 1em;
+	}
+
+	.room-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+	}
+
+	.jitsi-video {
+		display: flex;
+		flex: 1;
+	}
+
+	.jitsi-video + .room-content {
+		flex: 0;
+		padding-top: 1em;
+	}
+
+	#jitsi-container {
+		height: 100%;
+		display: flex;
+		flex: 1;
+
+		> iframe {
+			height: 100% !important; // override stupid jitsi script
+		}
+	}
+
+	.adventure {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+	}
+
+	.art-section {
+		text-align: center;
+		padding: 40px;
+
+		img {
+			max-width: 500px;
+			max-height: 500px;
+			width: auto;
+			height: auto;
+			border: 20px solid #fff;
+		}
+	}
+
+	.navigation-container {
+		display: flex;
+		align-items: center;
+		padding: 10px 0;
+
+		.column {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#navigation-puck {
+			max-width: 125px;
+			max-height: 125px;
+			padding: 20px;
+			border-radius: 100%;
+		}
+
+		button:disabled {
+			opacity: 0;
+		}
+	}
+
+	#map-link {
+		position: fixed;
+		bottom: 1em;
+		right: 1.2em;
+	}
+}
