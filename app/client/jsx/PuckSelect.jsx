@@ -50,8 +50,6 @@ class PuckSelect extends Component {
 
         puck_array = puck_list.map((puck,id) => {
 
-          console.log(id)
-
           if (this.state.rowOpen===id) {
 
             let variant_array = avatars[this.state.rowOpen].map((color,id) => {
@@ -64,7 +62,7 @@ class PuckSelect extends Component {
               return (
                 <PuckBox
                 handleClick={handleClickColor}
-                key={id}
+                key={`puckbox-${id}`}
                 image={color}
                 imageStyle={selected}
                 />

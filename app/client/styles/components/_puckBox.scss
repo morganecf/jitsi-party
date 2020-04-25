@@ -10,6 +10,7 @@
 	margin: 4px 4px 0px 0px;
 	border: 1px solid rgba(0, 0, 0, 0);
 	transition: height .5s;
+	border-radius: 5px;
 }
 .box-selected {
 	text-align: center;
@@ -47,9 +48,9 @@
 }
 
 .outer {
-display: flex;
-flex-direction: column;
-align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .inner {
 	display: flex;
