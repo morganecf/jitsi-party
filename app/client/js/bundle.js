@@ -1712,15 +1712,14 @@ __webpack_require__.r(__webpack_exports__);
     text: "It's really uncomfortable in here.",
     buttons: [{
       text: 'Stay anyway',
-      // getNextRoom: () => pickRandom(['ucDrugs', 'ucTapioca'])
-      getNextRoom: () => 'map'
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucDrugs', 'ucTapioca', 'ucUncomfortable'])
     }, {
       text: 'Leave',
       getNextRoom: () => 'trashyBedroom'
     }]
   },
   ucDrugs: {
-    text: "Might as well have fun in this closet. Which drug do you do?",
+    text: "Might as well have some fun in this closet. Which drug do you do?",
     buttons: [{
       text: 'Pop some molly',
       getNextRoom: () => 'ucTalk'
@@ -1729,24 +1728,30 @@ __webpack_require__.r(__webpack_exports__);
       getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucGHB', 'ucHorny', 'ucTalk'])
     }, {
       text: 'Sip the whip',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucMap', 'ucRamble'])
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['map', 'ucRamble'])
+    }, {
+      text: 'Attend the court of Lady Ketamine',
+      getNextRoom: () => 'ucKetamine'
     }, {
       text: 'You are above drugs',
-      getNextRoom: () => 'ucSpy'
+      getNextRoom: () => 'ucNarc'
+    }, {
+      text: 'You are beyond drugs',
+      getNextRoom: () => 'ucAliens'
     }]
   },
   ucTapioca: {
     text: "Omg, there's a little piece of tapioca on the ground!",
     buttons: [{
       text: 'Eat it!',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucBird', 'ucTapioca2'])
+      getNextRoom: () => 'ucBird'
     }, {
       text: "Smell it first",
       getNextRoom: () => 'ucSmell'
     }]
   },
   ucSmell: {
-    text: "You lean down to smell the tapioca, and notice a faint rectangular outline on the floor. It's a trapdoor!",
+    text: "You lean down to smell the tapioca, and notice a faint rectangular outline on the floor. It's a trap door!",
     buttons: [{
       text: 'You go through it',
       getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['map', 'ucDungeon'])
@@ -1755,31 +1760,50 @@ __webpack_require__.r(__webpack_exports__);
       getNextRoom: () => 'vestibule'
     }]
   },
-  ucTapioca2: {
-    text: "",
-    buttons: [{
-      text: '',
-      getNextRoom: () => ''
-    }, {
-      text: '',
-      getNextRoom: () => ''
-    }]
-  },
   ucBird: {
     text: "You just unlocked the superpowers of a BIRD.",
     buttons: [{
-      text: "I don't believe it",
+      text: "Yeah, okay. Whatever, temporal lobe.",
       getNextRoom: () => 'trashyBedroom'
     }, {
       text: "Sweet!",
       getNextRoom: () => 'map'
     }]
   },
+  ucUncomfortable: {
+    text: "No, like, *really* uncomfortable. It's hot, it's small, the carpet is alarmingly damp. You hear quiet chatter outside, punctuated by the machine exhales of whipit dispensers.",
+    buttons: [{
+      text: 'Turn back now',
+      getNextRoom: () => 'trashyBedroom'
+    }, {
+      text: 'Endure',
+      getNextRoom: () => 'ucFeelings'
+    }]
+  },
+  ucFeelings: {
+    text: 'Now that you think about it, there must be some reason you came to this closet in the first place. How are you *really* feeling?',
+    buttons: [{
+      text: 'Nostalgic',
+      getNextRoom: () => 'ucNostalgic'
+    }, {
+      text: 'Voyeuristic',
+      getNextRoom: () => 'ucSpy'
+    }, {
+      text: 'Terrified',
+      getNextRoom: () => 'ucTerrified'
+    }, {
+      text: 'Horny',
+      getNextRoom: () => 'ucHorny'
+    }, {
+      text: 'Kinda sick',
+      getNextRoom: () => 'bathroom'
+    }]
+  },
   ucGHB: {
     text: "This beer tastes like industrial solvent.",
     buttons: [{
       text: "Throw up a little in your mouth but keep drinking",
-      getNextRoom: () => 'ucMap'
+      getNextRoom: () => 'map'
     }, {
       text: "Run to the bathroom",
       getNextRoom: () => 'bathroom'
@@ -1789,49 +1813,52 @@ __webpack_require__.r(__webpack_exports__);
     text: "You slip into an idle and horny reverie about...",
     buttons: [{
       text: "#clarendon-gone-wild",
-      getNextRoom: () => ''
+      getNextRoom: () => 'ucTalk'
     }, {
-      text: "The surprisingly interesting nature of cement",
-      getNextRoom: () => ''
+      text: "That cake eating scene in Matilda",
+      getNextRoom: () => 'ucTalk'
     }, {
-      text: "That cake eating scene in Mathilda",
-      getNextRoom: () => ''
+      text: "The sweet release of death by freak accident",
+      getNextRoom: () => 'map'
     }, {
       text: "Maps",
       getNextRoom: () => 'map'
     }]
   },
   ucTalk: {
-    text: "The urge to talk and perhaps even touch a fellow human is now overwhelming.",
+    text: "The urge to talk to and perhaps even touch a fellow human is now overwhelming.",
     buttons: [{
       text: "Go back to the party",
       getNextRoom: () => 'trashyBedroom'
     }, {
       text: "Talk to yourself",
-      getNextRoom: () => ''
+      getNextRoom: () => 'ucRamble'
     }]
   },
   ucRamble: {
     text: 'You idly begin to talk to yourself. What do you say?',
     buttons: [{
-      text: 'You recite the beginning of Moby Dick, which you know by heart.',
-      getNextRoom: () => ''
+      text: 'A catalogue of all of your sexual misdeeds, both real and imagined',
+      getNextRoom: () => 'ucFeelings'
     }, {
-      text: 'Haha',
-      getNextRoom: () => ''
+      text: 'lol',
+      getNextRoom: () => 'ucLose'
+    }, {
+      text: '"I realize now that all my life has been confined in a prison of likes and dislikes."',
+      getNextRoom: () => 'map'
     }]
   },
   ucSpy: {
     text: 'To kill time, you peer through the crack between closet door and wall. What are you hoping to see?',
     buttons: [{
-      text: 'The stars',
+      text: 'The wide expanse of night sky',
       getNextRoom: () => 'ucStars'
     }, {
       text: 'Jackson',
-      getNextRoom: () => ''
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucJackson', 'ucTrash'])
     }, {
       text: 'Naked girls eating tapioca',
-      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucTapiocaGirls', ''])
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucTapiocaGirls', 'ucTrash'])
     }]
   },
   ucStars: {
@@ -1844,24 +1871,200 @@ __webpack_require__.r(__webpack_exports__);
       getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucBird', 'ucPain'])
     }]
   },
+  ucTrash: {
+    text: "All you can see is trash, and naked people lying atop it. Ugh. You want beauty! You want depth! You want *surprise!*",
+    buttons: [{
+      text: 'Close your eyes real tight and wish so hard for someone to take you away from all this',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucJackson', 'outdoors'])
+    }, {
+      text: 'Smash your head against the wall',
+      getNextRoom: () => Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__["pickRandom"])(['ucBird', 'ucPain'])
+    }]
+  },
   ucPain: {
     text: "Pain......",
     buttons: [{
       text: 'PAIN',
-      getNextRoom: () => ''
+      getNextRoom: () => 'trashyBedroom'
     }, {
-      text: 'PAIN',
-      getNextRoom: () => ''
+      text: 'PAAAAAAIN',
+      getNextRoom: () => 'ucAliens'
     }]
   },
   ucTapiocaGirls: {
     text: 'Outside the closet you can see three sexy girls eating tapioca from a bowl. They are naked.',
     buttons: [{
-      text: '',
+      text: 'Peace out of this lame-ass closet',
       getNextRoom: () => 'trashyBedroom'
     }, {
-      text: '',
-      getNextRoom: () => ''
+      text: 'Watch them stoically',
+      getNextRoom: () => 'ucFeelings'
+    }]
+  },
+  ucAliens: {
+    text: "Suddenly, you feel a wave of... something... pass through your body. As if Time itself has chosen to condense inside of you and copulate with each of your internal organs. When it passes, you see a small humanoid figure in the shadows before you. Its skin is gray, its nose is absent, and its eyes are great black pools.",
+    buttons: [{
+      text: 'Try to make it happy',
+      getNextRoom: () => 'ucAlienMusic'
+    }, {
+      text: 'Stare at it stoically',
+      getNextRoom: () => 'ucAlienAwkward'
+    }, {
+      text: 'Offer it some drugs',
+      getNextRoom: () => 'ucAlienThanks'
+    }]
+  },
+  ucAlienAwkward: {
+    text: 'The being stares back. The vibe is becoming a little awkward, frankly.',
+    buttons: [{
+      text: 'Try to make it happy',
+      getNextRoom: () => 'ucAlienMusic'
+    }, {
+      text: 'Offer it some drugs',
+      getNextRoom: () => 'ucAlienThanks'
+    }]
+  },
+  ucDungeon: {
+    text: 'You find yourself in a subterranean vault. It smells of blood and worms. The only light you can see is a faint green glow that seems impossibly distant.',
+    buttons: [{
+      text: 'Go toward the light',
+      getNextRoom: () => 'ucKetamine'
+    }, {
+      text: 'Try to find your way back to the closet',
+      getNextRoom: () => 'map'
+    }]
+  },
+  ucNarc: {
+    text: 'You are a deep cover agent, after all. You are only here to gather information. But right now, you need a break. A spy break. How will you spend your spy break?',
+    buttons: [{
+      text: 'Dreaming of tea and crumpets',
+      getNextRoom: () => 'ucLose'
+    }, {
+      text: 'Dreaming of tea and crumpets',
+      getNextRoom: () => 'ucLose'
+    }, {
+      text: 'Dreaming of tea and crumpets',
+      getNextRoom: () => 'ucLose'
+    }, {
+      text: 'Doing drugs',
+      getNextRoom: () => 'ucDrugs'
+    }]
+  },
+  ucKetamine: {
+    text: 'Who is the stranger behind you?',
+    buttons: [{
+      text: 'Just a bunch of blinking lights that appear to be sentient',
+      getNextRoom: () => 'ucAliens'
+    }, {
+      text: 'The smirking specter of Lady Ketamine herself',
+      getNextRoom: () => 'ucLadyK'
+    }, {
+      text: 'Jackson',
+      getNextRoom: () => 'ucJackson'
+    }, {
+      text: 'Social anxiety',
+      getNextRoom: () => 'ucTerrified'
+    }, {
+      text: "It's you. It's always been you.",
+      getNextRoom: () => 'map'
+    }]
+  },
+  ucAlienMusic: {
+    text: 'You have your phone on you. You should play some music. What do you play?',
+    buttons: [{
+      text: 'Metal',
+      getNextRoom: () => 'ucAlienThanks'
+    }, {
+      text: 'Metal',
+      getNextRoom: () => 'ucAlienThanks'
+    }, {
+      text: 'Metal',
+      getNextRoom: () => 'ucAlienThanks'
+    }, {
+      text: 'Black metal',
+      getNextRoom: () => 'ucAlienThanks'
+    }]
+  },
+  ucNostalgic: {
+    text: 'You think back fondly to yesterday, Friday, when you...',
+    buttons: [{
+      text: '...stammeringly told a girl she was sexy, and she flashed you a wicked grin',
+      getNextRoom: () => 'ucHorny'
+    }, {
+      text: '...got spanked a little too hard, honestly',
+      getNextRoom: () => 'ucHorny'
+    }, {
+      text: '...were power-blasted with the multidimensionally unfolding realization that you never really knew what time it was, ever',
+      getNextRoom: () => 'ucKetamine'
+    }, {
+      text: "...made a new friend or something, whatever, I don't know",
+      getNextRoom: () => 'ucFun'
+    }]
+  },
+  ucTerrified: {
+    text: "That's what I thought, my dear. There, there... it's alright now. You're safe here. Safe with me. You'll always be safe, here, in my arms...",
+    buttons: [{
+      text: 'Take me home, sweet Mother...',
+      getNextRoom: () => 'trashyBedroom'
+    }, {
+      text: 'No! I must endure!',
+      getNextRoom: () => 'map'
+    }]
+  },
+  ucAlienThanks: {
+    text: 'The being accepts your offering and nods, as if in thanks. Then it takes your hand, and you feel yourself flying, flying away...',
+    buttons: [{
+      text: 'Up into the sky',
+      getNextRoom: () => 'map'
+    }, {
+      text: 'Down into the earth',
+      getNextRoom: () => 'ucDungeon'
+    }]
+  },
+  ucLadyK: {
+    text: 'She is there, Her skeletal crown glimmering in sourceless moonlight, Her silvery skin deliquescing into nightmare folds, Her breath perfectly synchronized, antiphase, with your own. After all these empty years of waiting, you finally have the chance to tell Her... how do you feel about Her?',
+    buttons: [{
+      text: 'You love her',
+      getNextRoom: () => 'map'
+    }, {
+      text: 'You loathe her',
+      getNextRoom: () => 'ucFun'
+    }]
+  },
+  ucFun: {
+    text: 'What even *is* fun?',
+    buttons: [{
+      text: "I don't know, I don't know, I DON'T KNOW",
+      getNextRoom: () => 'map'
+    }, {
+      text: 'Being confronted with the unknown',
+      getNextRoom: () => 'ucAliens'
+    }, {
+      text: 'Something I can never have',
+      getNextRoom: () => 'ucTerrified'
+    }, {
+      text: "Dancing like no one's watching, living every day like it's your last",
+      getNextRoom: () => 'trashyBedroom'
+    }]
+  },
+  ucJackson: {
+    text: 'Suddenly, everything just feels okay. Your neural tissues are flooded with GABA. Beyond the reach of your volition, a part of you tells yourself, "You got this." This can only mean one thing: Jackson is here.',
+    buttons: [{
+      text: 'Give Jackson a high five',
+      getNextRoom: () => 'map'
+    }, {
+      text: 'Thank Jackson for his service',
+      getNextRoom: () => 'map'
+    }, {
+      text: 'Say nothing. Nod stoically.',
+      getNextRoom: () => 'trashyBedroom'
+    }]
+  },
+  ucLose: {
+    text: "Wrong choice, bucko. That's how you *lose* this game.",
+    buttons: [{
+      text: "No, please, not again, I can't take it any—",
+      getNextRoom: () => 'uncomfortableCloset'
     }]
   }
 });
@@ -11754,7 +11957,7 @@ var convertCurry = convert.bind(null, react__WEBPACK_IMPORTED_MODULE_2___default
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0; }\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline; }\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none; }\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none; }\n\n/**\n * Set up a decent box model on the root element\n */\nhtml {\n  box-sizing: border-box; }\n\n/**\n * Make all elements from the DOM inherit from the parent box-sizing\n * Since `*` has a specificity of 0, it does not override the `html` value\n * making all elements inheriting from the root box-sizing value\n * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\n */\n*,\n*::before,\n*::after {\n  box-sizing: inherit; }\n\n/**\n * Basic styles for links\n */\na {\n  color: #e50050;\n  text-decoration: none; }\n  a:hover, a:active, a:focus {\n    color: #d6d3cd;\n    text-decoration: underline; }\n\nbody .container {\n  max-width: 100%;\n  padding-left: 0;\n  padding-right: 0; }\n\n/**\n * Basic typography style for copy text\n */\nbody {\n  color: #d6d3cd;\n  font: normal 125%/1.4 \"Open Sans\", \"Helvetica Neue Light\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif; }\n\n/**\n * Clear inner floats\n */\n.clearfix::after {\n  clear: both;\n  content: '';\n  display: table; }\n\n/**\n * Main content containers\n * 1. Make the container full-width with a maximum width\n * 2. Center it in the viewport\n * 3. Leave some space on the edges, especially valuable on small screens\n */\n.container {\n  max-width: 1180px;\n  /* 1 */\n  margin-left: auto;\n  /* 2 */\n  margin-right: auto;\n  /* 2 */\n  padding-left: 20px;\n  /* 3 */\n  padding-right: 20px;\n  /* 3 */\n  width: 100%;\n  /* 1 */ }\n\n/**\n * Hide text while making it readable for screen readers\n * 1. Needed in WebKit-based browsers because of an implementation bug;\n *    See: https://code.google.com/p/chromium/issues/detail?id=457146\n */\n.hide-text {\n  overflow: hidden;\n  padding: 0;\n  /* 1 */\n  text-indent: 101%;\n  white-space: nowrap; }\n\n/**\n * Hide element while making it readable for screen readers\n * Shamelessly borrowed from HTML5Boilerplate:\n * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133\n */\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\nbutton,\ninput[type=\"button\"] {\n  margin: 5px;\n  padding: 6px 10px;\n  border: 2px solid #d6d3cd;\n  border-radius: 5px;\n  transition: all 0.3s ease;\n  background: none;\n  color: #d6d3cd;\n  font-size: 14px; }\n  button svg,\n  input[type=\"button\"] svg {\n    margin: 0 8px 0 0; }\n  button:hover, button:focus,\n  input[type=\"button\"]:hover,\n  input[type=\"button\"]:focus {\n    color: #181a1b;\n    background: #d6d3cd;\n    cursor: pointer; }\n  button:focus,\n  input[type=\"button\"]:focus {\n    outline: none;\n    box-shadow: 0px 0px 4px inset; }\n  button:disabled,\n  input[type=\"button\"]:disabled {\n    color: #999999 !important;\n    border: 2px solid #999999 !important;\n    background: none !important;\n    cursor: auto; }\n\n.box {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0);\n  transition: height .5s;\n  border-radius: 5px; }\n\n.box-selected {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  background-color: #D6D3CD;\n  border: 1px solid #D6D3CD; }\n\n.box:hover {\n  width: 52px;\n  height: 84px;\n  border: 1px solid #D6D3CD;\n  transition: border .25s; }\n\n.image {\n  text-align: center;\n  min-width: 42px !important;\n  max-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  max-height: 70px !important; }\n\n.non-selected-image {\n  text-align: center;\n  min-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  opacity: .25;\n  transition: opacity .25s;\n  max-height: 70px !important; }\n\n.outer {\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.inner {\n  display: flex;\n  flex-direction: row; }\n\n.fade {\n  opacity: .125;\n  transition: opacity .33s; }\n\n.spacer {\n  height: 12px; }\n\n.form {\n  opacity: 1;\n  text-align: center; }\n\n.form-party {\n  opacity: 1;\n  text-align: center;\n  animation: flash linear .666s infinite; }\n\n.form-fade {\n  opacity: .125;\n  transition: opacity .33s;\n  text-align: center; }\n\n.form-fade:focus {\n  opacity: 1;\n  transition: opacity 1s;\n  text-align: center; }\n\n@-webkit-keyframes flash {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: .33; }\n  100% {\n    opacity: 1; } }\n\n.jitsi-video {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  align-items: center; }\n\n#jitsi-placeholder {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  z-index: -1; }\n\n.room {\n  height: 100vh;\n  max-height: 100vh;\n  display: flex;\n  flex-flow: column; }\n  .room .room-header {\n    position: fixed;\n    z-index: 1000;\n    width: 100%;\n    text-shadow: 0 0 4px #181a1b;\n    padding-left: 1em; }\n  .room .room-content {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n    padding: .5em;\n    background-color: #303436; }\n  .room .jitsi-video {\n    display: flex;\n    flex: 1; }\n  .room .jitsi-video + .room-content {\n    flex: 0; }\n  .room #jitsi-container {\n    height: 100%;\n    display: flex;\n    flex: 1; }\n    .room #jitsi-container > iframe {\n      height: 100% !important; }\n  .room .adventure {\n    display: flex;\n    flex: 1;\n    align-items: center;\n    justify-content: center;\n    flex-flow: column; }\n  .room .navigation-container {\n    display: flex;\n    align-items: center;\n    padding: 8px 0; }\n    .room .navigation-container .column {\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n    .room .navigation-container button:disabled {\n      opacity: 0; }\n    .room .navigation-container .column-avatar {\n      height: 100%;\n      position: relative; }\n      .room .navigation-container .column-avatar .puck-wrapper {\n        position: absolute;\n        height: 75%; }\n      .room .navigation-container .column-avatar img {\n        height: 100%;\n        max-height: 125px; }\n  .room #map-link {\n    position: fixed;\n    bottom: 1em;\n    right: 1.2em; }\n\n.art-room {\n  display: flex;\n  flex: 1; }\n  .art-room .jitsi-video {\n    flex: 1; }\n  .art-room .art-section {\n    display: flex;\n    flex: 1;\n    flex-flow: column;\n    align-items: center;\n    justify-content: center;\n    padding: 40px 40px 0 40px;\n    background-color: #303436; }\n    .art-room .art-section img {\n      max-width: 800px;\n      max-height: 500px;\n      width: auto;\n      height: auto;\n      border: 20px solid #fff; }\n\n.vestibule {\n  display: flex;\n  flex-flow: column;\n  align-items: center; }\n  .vestibule > div {\n    margin-bottom: 1em; }\n\n.exit {\n  text-align: center; }\n\n.map {\n  padding: 20px; }\n  .map h1 {\n    text-align: center; }\n  .map p {\n    text-align: center; }\n  .map .map-area {\n    display: flex;\n    justify-content: center; }\n  .map #map-key {\n    margin: 0 20px;\n    font-family: Georgia;\n    font-size: 15px; }\n    .map #map-key .map-key-item {\n      display: flex; }\n    .map #map-key .map-key-item.highlighted-key-item {\n      color: #b85f5f;\n      transition: color 0.3s; }\n    .map #map-key .map-key-item-number {\n      margin-right: 10px;\n      font-weight: bold; }\n    .map #map-key .visited-key {\n      margin: 10px 0; }\n      .map #map-key .visited-key #visited-block {\n        display: inline-block;\n        width: 15px;\n        height: 15px;\n        background: #9292b0;\n        border: 2px solid #000; }\n  .map #d3-map svg .map-room text {\n    text-anchor: end;\n    font-size: 15px;\n    font-family: 'Georgia'; }\n  .map #d3-map svg .map-room path {\n    cursor: pointer;\n    stroke-width: 2;\n    fill: #9292b0;\n    stroke: #000;\n    opacity: 0.5; }\n  .map #d3-map svg .map-room path.highlighted-room {\n    fill: #b85f5f;\n    opacity: 1;\n    transition: fill 0.3s, opacity 0.3s; }\n  .map #d3-map svg .map-room path.visited {\n    opacity: 1; }\n\nbody {\n  background: linear-gradient(300deg, #181a1b 10%, #242729 90%);\n  background-attachment: fixed;\n  min-height: 100vh; }\n", ""]);
+exports.push([module.i, "/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0; }\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline; }\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none; }\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none; }\n\n/**\n * Set up a decent box model on the root element\n */\nhtml {\n  box-sizing: border-box; }\n\n/**\n * Make all elements from the DOM inherit from the parent box-sizing\n * Since `*` has a specificity of 0, it does not override the `html` value\n * making all elements inheriting from the root box-sizing value\n * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\n */\n*,\n*::before,\n*::after {\n  box-sizing: inherit; }\n\n/**\n * Basic styles for links\n */\na {\n  color: #e50050;\n  text-decoration: none; }\n  a:hover, a:active, a:focus {\n    color: #d6d3cd;\n    text-decoration: underline; }\n\nbody .container {\n  max-width: 100%;\n  padding-left: 0;\n  padding-right: 0; }\n\n/**\n * Basic typography style for copy text\n */\nbody {\n  color: #d6d3cd;\n  font: normal 125%/1.4 \"Open Sans\", \"Helvetica Neue Light\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif; }\n\n/**\n * Clear inner floats\n */\n.clearfix::after {\n  clear: both;\n  content: '';\n  display: table; }\n\n/**\n * Main content containers\n * 1. Make the container full-width with a maximum width\n * 2. Center it in the viewport\n * 3. Leave some space on the edges, especially valuable on small screens\n */\n.container {\n  max-width: 1180px;\n  /* 1 */\n  margin-left: auto;\n  /* 2 */\n  margin-right: auto;\n  /* 2 */\n  padding-left: 20px;\n  /* 3 */\n  padding-right: 20px;\n  /* 3 */\n  width: 100%;\n  /* 1 */ }\n\n/**\n * Hide text while making it readable for screen readers\n * 1. Needed in WebKit-based browsers because of an implementation bug;\n *    See: https://code.google.com/p/chromium/issues/detail?id=457146\n */\n.hide-text {\n  overflow: hidden;\n  padding: 0;\n  /* 1 */\n  text-indent: 101%;\n  white-space: nowrap; }\n\n/**\n * Hide element while making it readable for screen readers\n * Shamelessly borrowed from HTML5Boilerplate:\n * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133\n */\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\nbutton,\ninput[type=\"button\"] {\n  margin: 5px;\n  padding: 6px 10px;\n  border: 2px solid #d6d3cd;\n  border-radius: 5px;\n  transition: all 0.3s ease;\n  background: none;\n  color: #d6d3cd;\n  font-size: 14px; }\n  button svg,\n  input[type=\"button\"] svg {\n    margin: 0 8px 0 0; }\n  button:hover, button:focus,\n  input[type=\"button\"]:hover,\n  input[type=\"button\"]:focus {\n    color: #181a1b;\n    background: #d6d3cd;\n    cursor: pointer; }\n  button:focus,\n  input[type=\"button\"]:focus {\n    outline: none;\n    box-shadow: 0px 0px 4px inset; }\n  button:disabled,\n  input[type=\"button\"]:disabled {\n    color: #999999 !important;\n    border: 2px solid #999999 !important;\n    background: none !important;\n    cursor: auto; }\n\n.box {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0);\n  transition: height .5s;\n  border-radius: 5px; }\n\n.box-selected {\n  text-align: center;\n  width: 52px;\n  height: 84px;\n  margin: 4px 4px 0px 0px;\n  background-color: #D6D3CD;\n  border: 1px solid #D6D3CD; }\n\n.box:hover {\n  width: 52px;\n  height: 84px;\n  border: 1px solid #D6D3CD;\n  transition: border .25s; }\n\n.image {\n  text-align: center;\n  min-width: 42px !important;\n  max-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  max-height: 70px !important; }\n\n.non-selected-image {\n  text-align: center;\n  min-width: 42px !important;\n  width: 42px !important;\n  margin: 8px 4px 0px 4px;\n  height: auto;\n  opacity: .25;\n  transition: opacity .25s;\n  max-height: 70px !important; }\n\n.outer {\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.inner {\n  display: flex;\n  flex-direction: row; }\n\n.fade {\n  opacity: .125;\n  transition: opacity .33s; }\n\n.spacer {\n  height: 12px; }\n\n.form {\n  opacity: 1;\n  text-align: center; }\n\n.form-party {\n  opacity: 1;\n  text-align: center;\n  animation: flash linear .666s infinite; }\n\n.form-fade {\n  opacity: .125;\n  transition: opacity .33s;\n  text-align: center; }\n\n.form-fade:focus {\n  opacity: 1;\n  transition: opacity 1s;\n  text-align: center; }\n\n@-webkit-keyframes flash {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: .33; }\n  100% {\n    opacity: 1; } }\n\n.jitsi-video {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  align-items: center; }\n\n#jitsi-placeholder {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  z-index: -1; }\n\n.room {\n  height: 100vh;\n  max-height: 100vh;\n  display: flex;\n  flex-flow: column; }\n  .room .room-header {\n    position: fixed;\n    z-index: 1000;\n    width: 100%;\n    text-shadow: 0 0 4px #181a1b;\n    padding-left: 1em; }\n  .room .room-content {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n    padding: .5em;\n    background-color: #303436; }\n  .room .jitsi-video {\n    display: flex;\n    flex: 1; }\n  .room .jitsi-video + .room-content {\n    flex: 0; }\n  .room #jitsi-container {\n    height: 100%;\n    display: flex;\n    flex: 1; }\n    .room #jitsi-container > iframe {\n      height: 100% !important; }\n  .room .adventure {\n    display: flex;\n    flex: 1;\n    align-items: center;\n    justify-content: center;\n    flex-flow: column;\n    padding: 50px; }\n  .room .navigation-container {\n    display: flex;\n    align-items: center;\n    padding: 8px 0; }\n    .room .navigation-container .column {\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n    .room .navigation-container button:disabled {\n      opacity: 0; }\n    .room .navigation-container .column-avatar {\n      height: 100%;\n      position: relative; }\n      .room .navigation-container .column-avatar .puck-wrapper {\n        position: absolute;\n        height: 75%; }\n      .room .navigation-container .column-avatar img {\n        height: 100%;\n        max-height: 125px; }\n  .room #map-link {\n    position: fixed;\n    bottom: 1em;\n    right: 1.2em; }\n\n.art-room {\n  display: flex;\n  flex: 1; }\n  .art-room .jitsi-video {\n    flex: 1; }\n  .art-room .art-section {\n    display: flex;\n    flex: 1;\n    flex-flow: column;\n    align-items: center;\n    justify-content: center;\n    padding: 40px 40px 0 40px;\n    background-color: #303436; }\n    .art-room .art-section img {\n      max-width: 800px;\n      max-height: 500px;\n      width: auto;\n      height: auto;\n      border: 20px solid #fff; }\n\n.vestibule {\n  display: flex;\n  flex-flow: column;\n  align-items: center; }\n  .vestibule > div {\n    margin-bottom: 1em; }\n\n.exit {\n  text-align: center; }\n\n.map {\n  padding: 20px; }\n  .map h1 {\n    text-align: center; }\n  .map p {\n    text-align: center; }\n  .map .map-area {\n    display: flex;\n    justify-content: center; }\n  .map #map-key {\n    margin: 0 20px;\n    font-family: Georgia;\n    font-size: 15px; }\n    .map #map-key .map-key-item {\n      display: flex; }\n    .map #map-key .map-key-item.highlighted-key-item {\n      color: #b85f5f;\n      transition: color 0.3s; }\n    .map #map-key .map-key-item-number {\n      margin-right: 10px;\n      font-weight: bold; }\n    .map #map-key .visited-key {\n      margin: 10px 0; }\n      .map #map-key .visited-key #visited-block {\n        display: inline-block;\n        width: 15px;\n        height: 15px;\n        background: #9292b0;\n        border: 2px solid #000; }\n  .map #d3-map svg .map-room text {\n    text-anchor: end;\n    font-size: 15px;\n    font-family: 'Georgia'; }\n  .map #d3-map svg .map-room path {\n    cursor: pointer;\n    stroke-width: 2;\n    fill: #9292b0;\n    stroke: #000;\n    opacity: 0.5; }\n  .map #d3-map svg .map-room path.highlighted-room {\n    fill: #b85f5f;\n    opacity: 1;\n    transition: fill 0.3s, opacity 0.3s; }\n  .map #d3-map svg .map-room path.visited {\n    opacity: 1; }\n\nbody {\n  background: linear-gradient(300deg, #181a1b 10%, #242729 90%);\n  background-attachment: fixed;\n  min-height: 100vh; }\n", ""]);
 // Exports
 module.exports = exports;
 
