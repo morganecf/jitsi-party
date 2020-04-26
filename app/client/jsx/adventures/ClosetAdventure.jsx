@@ -354,7 +354,7 @@ export default {
                 text: 'Metal',
                 getNextRoom: () => 'ucAlienThanks'
             },
-
+            {
                 text: 'Metal',
                 getNextRoom: () => 'ucAlienThanks'
             },
@@ -380,7 +380,7 @@ export default {
                 getNextRoom: () => 'ucKetamine'
             },
             {
-                text: "...made a new friend or something, whatever, I don't know"
+                text: "...made a new friend or something, whatever, I don't know",
                 getNextRoom: () => 'ucFun'
             }
         ]
