@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom'
 import RoomLayout from './RoomLayout.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
+import IFrameRoom from './IFrameRoom.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
 
@@ -44,7 +45,8 @@ class Room extends Component {
        return {
            art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
            jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
-           adventure: <Adventure options={roomData.adventureOptions} onClick={this.onSwitchRoom.bind(this)}></Adventure>
+           adventure: <Adventure options={roomData.adventureOptions} onClick={this.onSwitchRoom.bind(this)}></Adventure>,
+           iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
        }[roomData.type]
     }
 
