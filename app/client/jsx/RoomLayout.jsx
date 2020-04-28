@@ -70,10 +70,9 @@ const rooms = {
         name: 'Dance Party',
         capacity: 15,
         iframeOptions: {
-            src: 'https://player.twitch.tv/?channel=foodbeast&parent=jitsi.gbre.org',
+            src: 'https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org',
         },
         type: 'iframe',
-        // description: 'It is time to dance',
         directions: {
             west: 'bathroom',
             south: 'livingRoom',
