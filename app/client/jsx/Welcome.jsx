@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Link, Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
+import RoomLayout from './RoomLayout.jsx'
 
 class Welcome extends Component {
     constructor(props) {
@@ -13,6 +14,8 @@ class Welcome extends Component {
             avatar: this.props.avatar,
             redirect: null
         }
+
+        console.log(RoomLayout)
     }
 
     handleDisplayNameChange(event) {
