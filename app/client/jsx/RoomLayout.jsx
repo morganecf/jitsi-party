@@ -5,6 +5,7 @@ import { pickRandom } from './utils.js'
 const rooms = {
     vestibule: {
         name: 'Vestibule',
+        muteRoom: true,
         capacity: 10,
         type: 'jitsi',
         description: 'Welcome!',
