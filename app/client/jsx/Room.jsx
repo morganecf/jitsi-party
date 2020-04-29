@@ -39,7 +39,8 @@ class Room extends Component {
            displayName: this.props.displayName,
            avatar: this.props.avatar,
            roomName: roomData.name,
-           height: roomData.videoHeight
+           height: roomData.videoHeight,
+           muteRoom: roomData.muteRoom,
        }
        return {
            art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
