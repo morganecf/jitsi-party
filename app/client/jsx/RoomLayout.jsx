@@ -5,7 +5,6 @@ import { pickRandom } from './utils.js'
 const rooms = {
     vestibule: {
         name: 'Vestibule',
-        muteRoom: true,
         capacity: 10,
         type: 'jitsi',
         description: 'Welcome!',
@@ -30,7 +29,8 @@ const rooms = {
         name: 'Closet',
         capacity: 2,
         type: 'jitsi',
-        description: 'A cozy closet.',
+        muteRoom: true,
+        description: 'A quiet, cozy closet.',
         directions: {
             east: 'vestibule'
         },
