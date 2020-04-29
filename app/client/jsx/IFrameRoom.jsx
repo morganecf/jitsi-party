@@ -11,7 +11,7 @@ export default props => {
                     src={src}
                     height="100%"
                     width="100%"
-                    frameborder="0px"
+                    frameBorder="0px"
                 >
                 </iframe>
             </div>

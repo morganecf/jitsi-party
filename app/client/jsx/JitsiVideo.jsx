@@ -23,12 +23,6 @@ class JitsiVideo extends Component {
         // since any change to state currently triggers a render and reconnect
         this.isAudioMuted = this.props.isAudioMuted
         this.isVideoMuted = this.props.isVideoMuted
-
-        // If muteRoom=true in room settings, mute Jitsi and remove microphone controls.
-        if (this.props.jitsiData.muteRoom) {
-            _.pull(this.toolbarButtons, 'microphone')
-            this.isAudioMuted = true
-        }
     }
 
     componentDidMount() {
@@ -63,6 +57,12 @@ class JitsiVideo extends Component {
 
     connect() {
         try {
+            // If muteRoom=true in room settings, remove microphone controls.
+            let toolbarButtons = this.toolbarButtons;
+            if (this.props.jitsiData.muteRoom) {
+                toolbarButtons = _.without(this.toolbarButtons, 'microphone')
+            }
+
             const domain = 'jitsi.gbre.org'
             // const domain = 'meet.jit.si'
             const options = {
@@ -73,7 +73,7 @@ class JitsiVideo extends Component {
                     SHOW_JITSI_WATERMARK: false,
                     DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
                     SHOW_WATERMARK_FOR_GUESTS: false,
-                    TOOLBAR_BUTTONS: this.toolbarButtons,
+                    TOOLBAR_BUTTONS: toolbarButtons,
 
                 },
                 configOverwrite: {
@@ -87,9 +87,8 @@ class JitsiVideo extends Component {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl: this.props.jitsiData.avatar,
                 }
-                // Persist audio/video muted settings
-                if (this.isAudioMuted) {
-                    console.log('adding mute command')
+                // Persist audio/video muted settings unless acquired by muteRoom room setting
+                if (this.isAudioMuted || this.props.jitsiData.muteRoom) {
                     commands.toggleAudio = []
                 }
                 if (this.isVideoMuted) {
@@ -97,7 +96,9 @@ class JitsiVideo extends Component {
                 }
                 this.api.executeCommands(commands)
                 this.api.addEventListener('audioMuteStatusChanged', ({ muted }) => {
-                    this.isAudioMuted = muted
+                    if (!this.props.jitsiData.muteRoom) {
+                        this.isAudioMuted = muted
+                    }
                 })
                 this.api.addEventListener('videoMuteStatusChanged', ({ muted }) => {
                     this.isVideoMuted = muted
@@ -115,6 +116,7 @@ class JitsiVideo extends Component {
             this.api.dispose()
             this.connect()
         }
+
         return (
             <div className="jitsi-video">
                 <div id="jitsi-placeholder">
