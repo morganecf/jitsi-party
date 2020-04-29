@@ -1,17 +1,16 @@
 from . import db
 from datetime import datetime
 
-
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
     avatar = db.Column(db.String())
-    last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
+    last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
     online = db.Column(db.Boolean, default=True)
 
     def ping(self):
-        self.last_seen = datetime.utcnow()
+        self.last_seen = datetime.utcnow().timestamp()
         self.online = True
 
     def to_json(self):

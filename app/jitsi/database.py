@@ -1,5 +1,9 @@
 from . import db
+from datetime import datetime
 from .models import User, Room, RoomState, RoomUser
+
+#TODO make timeout a part of config, in seconds
+USER_TIMEOUT = 30
 
 def create_user(username, avatar):
     # TODO change this once Daniel fixes avatars
@@ -29,8 +33,14 @@ def update_user_location(user_id, room):
 
 def refresh_user(user_id):
     user = User.query.filter_by(id=user_id).first()
-    print('refreshing user:', user)
     if user:
         user.ping()
         db.session.add(user)
         db.session.commit()
+
+def update_stale_users():
+    users = User.query.filter(User.last_seen < datetime.utcnow().timestamp() - USER_TIMEOUT).filter(User.online).all()
+    for user in users:
+        user.online = False
+    db.session.add_all(users)
+    db.session.commit()
