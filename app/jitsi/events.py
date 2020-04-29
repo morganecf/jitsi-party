@@ -4,7 +4,7 @@ from flask_socketio import emit
 
 @socketio.on('connect')
 def on_connect():
-    print('client connected')
+    print('Client connected')
 
 @socketio.on('disconnect')
 def on_disconnect():

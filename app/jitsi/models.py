@@ -35,21 +35,23 @@ class Room(db.Model):
         return 'Room {0}'.format(self.name)
 
 
-class RoomUser(db.Model):
-    __tablename__ = 'room_users'
-    id = db.Column(db.Integer, db.ForeignKey('rooms.id'), primary_key=True)
+class UserLocation(db.Model):
+    __tablename__ = 'user_locations'
+    id = db.Column(db.Integer, primary_key=True)
+    room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), index=True)
 
     def __repr__(self):
-        return 'Room {0} has User {1}'.format(self.id, self.user_id)
+        return 'User {0} is in Room {1}'.format(self.user_id, self.room_id)
 
 
-class RoomState(db.Model):
-    __tablename__ = 'room_states'
-    id = db.Column(db.Integer, db.ForeignKey('users.id'), primary_key=True)
+class UserRoomState(db.Model):
+    __tablename__ = 'user_room_states'
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
     discovered = db.Column(db.Boolean)
 
     def __repr__(self):
         visited = 'visited' if self.discovered else 'not visited'
-        return 'User {0} has {1} Room {2}'.format(self.id, visited, self.room_id)
+        return 'User {0} has {1} Room {2}'.format(self.user_id, visited, self.room_id)
