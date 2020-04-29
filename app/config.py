@@ -3,6 +3,8 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
+    # Need to change this
+    SECRET_KEY = 'figure-this-out'
     # To silence deprecation warning
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

@@ -8,6 +8,7 @@ import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
+import Service from './Service.jsx'
 
 class Room extends Component {
     /*
@@ -25,6 +26,10 @@ class Room extends Component {
         this.state = {
             room: this.props.currentRoom
         }
+
+        this.service = new Service()
+        this.service.connectToSocket()
+        this.service.startPinging(this.props.user.userId)
     }
 
     getRoomType() {
@@ -37,8 +42,8 @@ class Room extends Component {
         */
        const roomData = RoomLayout[this.state.room]
        const jitsiData = {
-           displayName: this.props.displayName,
-           avatar: this.props.avatar,
+           displayName: this.props.user.displayName,
+           avatar: this.props.user.avatar,
            roomName: roomData.name,
            muteRoom: roomData.muteRoom,
        }
@@ -63,10 +68,12 @@ class Room extends Component {
     onSwitchRoom(room) {
         this.setState({ room })
         this.props.updateCurrentRoom(room)
+        this.service.enterRoom(this.props.user.userId, room)
     }
 
     render() {
         if (RoomLayout[this.state.room].type === 'redirect') {
+            this.service.enterRoom(this.props.user.userId, this.state.room)
             return <Redirect to={RoomLayout[this.state.room].route}/>
         }
         return (

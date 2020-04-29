@@ -1,2 +1,2 @@
-export FLASK_APP=flasky.py
+export FLASK_APP=manager.py
 export FLASK_CONFIG=production
