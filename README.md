@@ -1,5 +1,7 @@
 # jitsi-party
 
+A virtual party space.
+
 ## Contributing
 
 ### Installation
@@ -19,16 +21,42 @@ npm install
 
 ### Running the app locally 
 ```bash
-# Run flask server
 cd app/
-python app.py
+
+# Export env variables. Use setup_prod.sh for prod
+source setup.sh
+
+# Create db
+flask create-db
+
+# Run flask app
+flask run
 
 # Run webpack
 cd client/
 bash run.sh
 ```
 
-The app should now be running on localhost:3000
+The app should now be running on localhost:5000.
+
+### Querying DB
+Using sqlite directly
+```bash
+sqlite3
+```
+```sqlite
+.open db.sqlite
+.tables
+select * from rooms;
+```
+
+Using flask shell
+```bash
+flask shell
+```
+```python
+Room.query.all()
+```
 
 ### Jitsi API documentation
 https://github.com/jitsi/jitsi-meet/blob/master/doc/api.md
