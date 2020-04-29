@@ -7,8 +7,6 @@ main = Blueprint('main', __name__)
 
 @main.before_app_first_request
 def before_first_request():
-    print('starting thread')
-
     '''Start a background thread that marks stale users as offline'''
     def find_offline_users(app):
         with app.app_context():

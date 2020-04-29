@@ -1,6 +1,6 @@
 from . import db
 from datetime import datetime
-from .models import User, Room, RoomState, RoomUser
+from .models import User, Room, UserRoomState, UserLocation
 
 #TODO make timeout a part of config, in seconds
 USER_TIMEOUT = 30
@@ -17,17 +17,17 @@ def update_user_location(user_id, room):
     room = Room.query.filter_by(name=room).first()
 
     # Delete previous room user was in
-    room_user = RoomUser.query.filter_by(user_id=user_id).first()
-    if room_user:
-        db.session.delete(room_user)
+    user_location = UserLocation.query.filter_by(user_id=user_id).first()
+    if user_location:
+        db.session.delete(user_location)
 
     # Add user to current room
-    room_user = RoomUser(id=room.id, user_id=user_id)
-    db.session.add(room_user)
+    user_location = UserLocation(room_id=room.id, user_id=user_id)
+    db.session.add(user_location)
 
     # Make room discovered by user
-    room_state = RoomState(id=user_id, room_id=room.id, discovered=True)
-    db.session.add(room_state)
+    user_room_state = UserRoomState(user_id=user_id, room_id=room.id, discovered=True)
+    db.session.add(user_room_state)
 
     db.session.commit()
 
