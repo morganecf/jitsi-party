@@ -48,7 +48,7 @@ const rooms = {
         capacity: 10,
         type: 'jitsi',
         directions: {
-            north: 'seriousConversations',
+            north: 'danceParty',
             south: 'vestibule',
             east: 'artGallery',
             west: 'trashyBedroom'
@@ -66,11 +66,13 @@ const rooms = {
             }
         }
     },
-    seriousConversations: {
-        name: 'Serious Conversation Only',
-        capacity: 4,
-        type: 'jitsi',
-        description: 'Frivolity will not be tolerated.',
+    danceParty: {
+        name: 'Dance Party',
+        capacity: 15,
+        iframeOptions: {
+            src: 'https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org',
+        },
+        type: 'iframe',
         directions: {
             west: 'bathroom',
             south: 'livingRoom',
@@ -93,7 +95,7 @@ const rooms = {
         type: 'jitsi',
         description: 'A cozy bathroom.',
         directions: {
-            east: 'seriousConversations',
+            east: 'danceParty',
             south: 'trashyBedroom'
         },
         map: {
@@ -461,7 +463,10 @@ const rooms = {
     gameRoom: {
         name: 'Game Room',
         capacity: 6,
-        type: 'jitsi',
+        type: 'iframe',
+        iframeOptions: {
+            src: "http://threesjs.com/",
+        },
         directions: {
             north: 'kitchen',
             west: 'vestibule',
