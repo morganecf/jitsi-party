@@ -156,7 +156,6 @@ const rooms = {
         name: 'Gallery Room 1',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'Bread',
             artist: 'Jett',
@@ -181,7 +180,6 @@ const rooms = {
         name: 'Gallery Room 2',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'Butterfly Girl',
             artist: 'LaRen',
@@ -206,7 +204,6 @@ const rooms = {
         name: 'Gallery Room 3',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'Creazione di DJ',
             artist: 'Phoebe',
@@ -231,7 +228,6 @@ const rooms = {
         name: 'Gallery Room 4',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'Champagne',
             artist: 'Lolo',
@@ -256,7 +252,6 @@ const rooms = {
         name: 'Gallery Room 5',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'Prints',
             artist: 'Brett',
@@ -281,7 +276,6 @@ const rooms = {
         name: 'Gallery Room 6',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'Origami',
             artist: 'Kevin',
@@ -306,7 +300,6 @@ const rooms = {
         name: 'Gallery Room 7',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'Phoebe',
             artist: 'Sean A',
@@ -331,7 +324,6 @@ const rooms = {
         name: 'Gallery Room 8',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'Dildos United & Hitachi Quilt',
             artist: 'Alex',
@@ -356,7 +348,6 @@ const rooms = {
         name: 'Gallery Room 9',
         capacity: 4,
         type: 'art',
-        videoHeight: 150,
         art: {
             title: 'The Squeak of Reason II',
             artist: 'Morg',
