@@ -463,7 +463,10 @@ const rooms = {
     gameRoom: {
         name: 'Game Room',
         capacity: 6,
-        type: 'jitsi',
+        type: 'iframe',
+        iframeOptions: {
+            src: "http://threesjs.com/",
+        },
         directions: {
             north: 'kitchen',
             west: 'vestibule',
