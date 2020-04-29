@@ -69,11 +69,12 @@ const rooms = {
     },
     danceParty: {
         name: 'Dance Party',
-        capacity: 15,
+        capacity: 20,
         iframeOptions: {
             src: 'https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org',
         },
         type: 'iframe',
+        muteRoom: true,
         directions: {
             west: 'bathroom',
             south: 'livingRoom',
