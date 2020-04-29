@@ -37,10 +37,3 @@ def refresh_user(user_id):
         user.ping()
         db.session.add(user)
         db.session.commit()
-
-def update_stale_users():
-    users = User.query.filter(User.last_seen < datetime.utcnow().timestamp() - USER_TIMEOUT).filter(User.online).all()
-    for user in users:
-        user.online = False
-    db.session.add_all(users)
-    db.session.commit()

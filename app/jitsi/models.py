@@ -7,7 +7,6 @@ class User(db.Model):
     username = db.Column(db.String(100))
     avatar = db.Column(db.String())
     last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
-    online = db.Column(db.Boolean, default=True)
 
     def ping(self):
         self.last_seen = datetime.utcnow().timestamp()
