@@ -72,7 +72,7 @@ class Navigation extends Component {
                 </div>
                 <div className="column column-avatar">
                     <div className="puck-wrapper">
-                        <img className='avatar' id="navigation-puck" src={avatars[this.props.avatar[0]][this.props.avatar[1]]}/>
+                        <img className='avatar' id="navigation-puck" src={avatars[this.props.user.avatar[0]][this.props.user.avatar[1]]}/>
                     </div>
                 </div>
             </div>

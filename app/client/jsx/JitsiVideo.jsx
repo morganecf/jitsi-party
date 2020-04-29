@@ -88,8 +88,13 @@ class JitsiVideo extends Component {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl: this.props.jitsiData.avatar,
                 }
+<<<<<<< HEAD
                 // Persist audio/video muted settings unless acquired by muteRoom room setting
                 if (this.isAudioMuted || this.props.jitsiData.muteRoom) {
+=======
+                // Persist audio/video muted settings
+                if (this.isAudioMuted) {
+>>>>>>> Add socket.io
                     commands.toggleAudio = []
                 }
                 if (this.isVideoMuted) {

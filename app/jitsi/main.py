@@ -1,3 +1,4 @@
+from functools import wraps
 from flask import Flask, send_from_directory, redirect, url_for, Blueprint, current_app
 
 main = Blueprint('main', __name__)
