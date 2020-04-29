@@ -6,9 +6,6 @@ import Service from './Service.jsx'
 class Exit extends Component {
     constructor(props) {
         super(props)
-
-        this.service = new Service()
-        this.service.disconnect()
     }
 
     render() {

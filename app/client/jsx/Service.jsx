@@ -27,12 +27,6 @@ export default class Service {
         }
     }
 
-    disconnect() {
-        if (this.socket) {
-            this.socket.emit('disconnect')
-        }
-    }
-
     enterRoom(userId, room) {
         if (this.socket) {
             this.socket.emit('enter-room', { user_id: userId, room })
