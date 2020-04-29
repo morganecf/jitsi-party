@@ -18,10 +18,17 @@ class JitsiVideo extends Component {
             'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone',
             'e2ee'
         ]
+
         // These should not be stored in state for the duration of the Jitsi video,
         // since any change to state currently triggers a render and reconnect
         this.isAudioMuted = this.props.isAudioMuted
         this.isVideoMuted = this.props.isVideoMuted
+
+        // If muteRoom=true in room settings, mute Jitsi and remove microphone controls.
+        if (this.props.jitsiData.muteRoom) {
+            _.pull(this.toolbarButtons, 'microphone')
+            this.isAudioMuted = true
+        }
     }
 
     componentDidMount() {
@@ -60,7 +67,6 @@ class JitsiVideo extends Component {
             // const domain = 'meet.jit.si'
             const options = {
                 roomName: this.props.jitsiData.roomName,
-                height: this.props.jitsiData.height || 500,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
                     // filmStripOnly: true,
