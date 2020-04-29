@@ -57,11 +57,10 @@ class JitsiVideo extends Component {
 
     connect() {
         try {
-            // If muteRoom=true in room settings, mute Jitsi and remove microphone controls.
+            // If muteRoom=true in room settings, remove microphone controls.
             let toolbarButtons = this.toolbarButtons;
             if (this.props.jitsiData.muteRoom) {
                 toolbarButtons = _.without(this.toolbarButtons, 'microphone')
-                this.isAudioMuted = true
             }
 
             const domain = 'jitsi.gbre.org'
@@ -75,7 +74,6 @@ class JitsiVideo extends Component {
                     DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
                     SHOW_WATERMARK_FOR_GUESTS: false,
                     TOOLBAR_BUTTONS: toolbarButtons,
-                    DEFAULT_BACKGROUND: 'transparent',
 
                 },
                 configOverwrite: {
@@ -89,9 +87,8 @@ class JitsiVideo extends Component {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl: this.props.jitsiData.avatar,
                 }
-                // Persist audio/video muted settings
-                if (this.isAudioMuted) {
-                    console.log('adding mute command')
+                // Persist audio/video muted settings unless acquired by muteRoom room setting
+                if (this.isAudioMuted || this.props.jitsiData.muteRoom) {
                     commands.toggleAudio = []
                 }
                 if (this.isVideoMuted) {
@@ -99,7 +96,9 @@ class JitsiVideo extends Component {
                 }
                 this.api.executeCommands(commands)
                 this.api.addEventListener('audioMuteStatusChanged', ({ muted }) => {
-                    this.isAudioMuted = muted
+                    if (!this.props.jitsiData.muteRoom) {
+                        this.isAudioMuted = muted
+                    }
                 })
                 this.api.addEventListener('videoMuteStatusChanged', ({ muted }) => {
                     this.isVideoMuted = muted
