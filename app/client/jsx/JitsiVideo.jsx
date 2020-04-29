@@ -27,7 +27,7 @@ class JitsiVideo extends Component {
         // If this is a muteRoom, mute and remove microphone controls.
         if (this.props.jitsiData.muteRoom) {
             _.pull(this.toolbarButtons, 'microphone')
-            this.isAudioMuted = true;
+            this.isAudioMuted = true
         }
     }
 
