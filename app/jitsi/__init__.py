@@ -20,13 +20,10 @@ def create_app(config_name):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
-    from jitsi import main, api
-
-    # Serves static files
-    app.register_blueprint(main.main)
+    from jitsi import main
 
     # Endpoints 
-    app.register_blueprint(api.api)
+    app.register_blueprint(main.main)
 
     # Enable cross-origin requests
     CORS(app)
