@@ -23,12 +23,6 @@ class JitsiVideo extends Component {
         // since any change to state currently triggers a render and reconnect
         this.isAudioMuted = this.props.isAudioMuted
         this.isVideoMuted = this.props.isVideoMuted
-
-        // If muteRoom=true in room settings, mute Jitsi and remove microphone controls.
-        if (this.props.jitsiData.muteRoom) {
-            _.pull(this.toolbarButtons, 'microphone')
-            this.isAudioMuted = true
-        }
     }
 
     componentDidMount() {
@@ -63,6 +57,13 @@ class JitsiVideo extends Component {
 
     connect() {
         try {
+            // If muteRoom=true in room settings, mute Jitsi and remove microphone controls.
+            let toolbarButtons = this.toolbarButtons;
+            if (this.props.jitsiData.muteRoom) {
+                toolbarButtons = _.without(this.toolbarButtons, 'microphone')
+                this.isAudioMuted = true
+            }
+
             const domain = 'jitsi.gbre.org'
             // const domain = 'meet.jit.si'
             const options = {
@@ -73,7 +74,8 @@ class JitsiVideo extends Component {
                     SHOW_JITSI_WATERMARK: false,
                     DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
                     SHOW_WATERMARK_FOR_GUESTS: false,
-                    TOOLBAR_BUTTONS: this.toolbarButtons,
+                    TOOLBAR_BUTTONS: toolbarButtons,
+                    DEFAULT_BACKGROUND: 'transparent',
 
                 },
                 configOverwrite: {
@@ -115,6 +117,7 @@ class JitsiVideo extends Component {
             this.api.dispose()
             this.connect()
         }
+
         return (
             <div className="jitsi-video">
                 <div id="jitsi-placeholder">
