@@ -39,11 +39,14 @@ input[type="button"] {
 }
 
 // necessary ugliness to wrangle inherited :disabled effects
-.form-fade-party,
-.form-fade-party:hover {
-	opacity: .5;
+.form-fade-party {
+	opacity: .25;
 	transition: opacity .33s;
 	text-align: center;
+}
+.form-fade-party:hover {
+	opacity: 0;
+	transition: opacity .05s;
 }
 .form-fade {
 	opacity: .5;
