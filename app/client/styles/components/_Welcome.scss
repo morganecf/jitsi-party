@@ -1,8 +1,6 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the Welcome component.
 // -----------------------------------------------------------------------------
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
-
 
 .splash {
 	width: 100%;
@@ -11,11 +9,13 @@
 	position: absolute;
 }
 .serif {
-	font-family: Alegreya;
+	font-family: $serif;
 }
 h1 {
-	margin: -2px 0px 22px 0px;
+	margin: -20px 0px 30px 0px;
 	-webkit-text-stroke: 1.25px #1B1E1F;
+	font-weight: 800;
+	font-size: 2.25em;
 }
 
 button,
@@ -50,7 +50,7 @@ input[type="button"] {
 	text-align: center;
 }
 .form-fade {
-	opacity: .33;
+	opacity: .5;
 	transition: opacity .33s;
 	text-align: center;
 }
