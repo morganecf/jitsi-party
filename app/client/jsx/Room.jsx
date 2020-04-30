@@ -9,6 +9,7 @@ import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
 import { Api, Socket } from './FlaskInterface.jsx'
+import { Beforeunload } from 'react-beforeunload';
 
 class Room extends Component {
     /*
@@ -33,7 +34,9 @@ class Room extends Component {
         this.socket = new Socket()
         this.socket.startPinging(this.props.user.userId)
 
-        // Refresh list of users each time a user enters or leaves
+        // Refresh list of users each time a user enters or leaves, or each time a user
+        // disconnects (i.e. if client crashes). Disconnect events will lag behind other
+        // events since they rely on the flask-socketio's heartbeat system.
         const onSocketEvent = room => {
             if (room === this.state.room) {
                 this.fetchUsersForRoom(room)
@@ -41,10 +44,11 @@ class Room extends Component {
         }
         this.socket.on('user-left-room', onSocketEvent.bind(this))
         this.socket.on('user-entered-room', onSocketEvent.bind(this))
+        this.socket.on('user-disconnected', this.fetchUsersForRoom.bind(this))
     }
 
     async fetchUsersForRoom(room) {
-        const { success, users } = await this.api.getUsers(room)
+        const { success, users } = await this.api.getUsers(room || this.state.room)
         if (success) {
             this.setState({ users })
         }
@@ -107,6 +111,11 @@ class Room extends Component {
         this.socket.enterRoom(this.props.user.userId, this.state.room)
     }
 
+    handleBeforeUnload() {
+        // Update server if user closes tab or refreshes
+        this.socket.leaveRoom(this.props.user.userId, this.state.room)
+    }
+
     render() {
         const room = this.props.rooms[this.state.room]
 
@@ -127,6 +136,7 @@ class Room extends Component {
                 {content}
                 {this.getRoomDescription()}
                 <Navigation directions={room.directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
+                <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
             </div>
         )
     }
