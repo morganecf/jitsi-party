@@ -36,11 +36,12 @@ class Welcome extends Component {
         let text_entry = {
           padding: '6px 10px',
           border: '2px solid #D6D3CD',
+          backgroundColor: '#D6D3CD',
           borderRadius: '7px',
           color: '#1B1E1F',
           outline: 'none',
           boxShadow: 'none',
-          fontSize: '18px'
+          fontSize: '20px'
         }
 
         let name_opacity = 'form-fade'
