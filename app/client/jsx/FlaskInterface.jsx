@@ -13,6 +13,10 @@ export class Socket {
         })
     }
 
+    on(eventName, callback) {
+        this.socket.on(eventName, callback)
+    }
+
     startPinging(userId) {
         this.socket.emit('ping-user', { user_id: userId })
         this.refreshTimer = window.setInterval(() => {
@@ -22,6 +26,10 @@ export class Socket {
 
     enterRoom(userId, room) {
         this.socket.emit('enter-room', { user_id: userId, room })
+    }
+
+    leaveRoom(userId, room) {
+        this.socket.emit('leave-room', { user_id: userId, room })
     }
 }
 

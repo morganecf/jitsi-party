@@ -32,10 +32,26 @@ class Room extends Component {
         this.api = new Api()
         this.socket = new Socket()
         this.socket.startPinging(this.props.user.userId)
+
+        // Refresh list of users each time a user enters or leaves
+        const onSocketEvent = room => {
+            if (room === this.state.room) {
+                this.fetchUsersForRoom(room)
+            }
+        }
+        this.socket.on('user-left-room', onSocketEvent.bind(this))
+        this.socket.on('user-entered-room', onSocketEvent.bind(this))
+    }
+
+    async fetchUsersForRoom(room) {
+        const { success, users } = await this.api.getUsers(room)
+        if (success) {
+            this.setState({ users })
+        }
     }
 
     componentDidMount() {
-        this.onSwitchRoom(this.state.room)
+        this.fetchUsersForRoom(this.state.room)
     }
 
     getRoomContent() {
@@ -76,16 +92,17 @@ class Room extends Component {
         this.props.updateCurrentRoom(room)
     }
 
-    async onSwitchRoom(room) {
+    onSwitchRoom(room) {
+        // Leave current room
+        this.socket.leaveRoom(this.props.user.userId, this.state.room)
+        // Go to new room, but don't open the door
         this.setState({ room, entered: false })
         this.props.updateCurrentRoom(room)
-        const response = await this.api.getUsers(room)
-        if (response.success) {
-            this.setState({ users: response.users })
-        }
+        this.fetchUsersForRoom(room)
     }
 
     onEnterRoom() {
+        // Open the door
         this.setState({ entered: true })
         this.socket.enterRoom(this.props.user.userId, this.state.room)
     }
