@@ -16,6 +16,10 @@ body {
 .serif {
 	font-family: Alegreya;
 }
+h1 {
+	margin: -2px 0px 22px 0px;
+	-webkit-text-stroke: 1.25px #1B1E1F;
+}
 .form {
 	opacity: 1;
 	text-align: center;
@@ -25,8 +29,9 @@ body {
 	text-align: center;
 	animation: flash linear .666s infinite;
 }
+
 .form-fade {
-	opacity: .25;
+	opacity: .4;
 	transition: opacity .33s;
 	text-align: center;
 }

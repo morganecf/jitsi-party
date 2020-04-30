@@ -33,13 +33,10 @@ class Welcome extends Component {
             return <Redirect to={this.state.redirect}/>
         }
 
-// to dos here are simple:
-// refactor styles and change up imagery.
         let text_entry = {
           padding: '6px 10px',
           border: '2px solid #D6D3CD',
           borderRadius: '7px',
-        //   backgroundColor: '#222426',
           color: '#D6D3CD',
           outline: 'none',
           boxShadow: 'none',
@@ -55,9 +52,9 @@ class Welcome extends Component {
 
         return (
             <div className="vestibule">
-                <br/><br/>
-                <h1>Welcome to Cabin Fever</h1>
+                <br/>
                 <div className='serif'>You've met with a terrible fate, haven't you?</div>
+                <h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>
                 <img className='splash' src='./js/images/party.png'/>
                 <input style={text_entry} autoComplete="off" className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/><br/>
                 <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
