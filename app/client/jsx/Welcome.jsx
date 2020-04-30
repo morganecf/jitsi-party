@@ -55,7 +55,9 @@ class Welcome extends Component {
 
         return (
             <div className="vestibule">
+                <br/><br/>
                 <h1>Welcome have fun</h1>
+                <img className='splash' src='./js/images/party.png'/>
                 <input style={text_entry} autoComplete="off" className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/><br/>
                 <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
                 <input className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.displayName} />
