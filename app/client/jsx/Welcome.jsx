@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
-import { Api } from './FlaskInterface.jsx'
+import { HttpApi } from './WebAPI.jsx'
 
 class Welcome extends Component {
     constructor(props) {
@@ -14,11 +14,11 @@ class Welcome extends Component {
             avatar: null,
             redirect: null
         }
-        this.api = new Api()
+        this.http = new HttpApi()
     }
 
     async componentDidMount() {
-        const { success, rooms } = await this.api.getRooms()
+        const { success, rooms } = await this.http.getRooms()
         if (success) {
             this.props.addRooms(rooms)
         }
@@ -33,7 +33,7 @@ class Welcome extends Component {
     }
 
     async handleReady() {
-        const response = await this.api.join(this.state.displayName, this.state.avatar)
+        const response = await this.http.join(this.state.displayName, this.state.avatar)
         if (response.success) {
             const { displayName, avatar } = this.state
             this.props.updateUser({

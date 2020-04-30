@@ -8,7 +8,7 @@ import IFrameRoom from './IFrameRoom.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
-import { Api, Socket } from './FlaskInterface.jsx'
+import { HttpAPI, WebSocketAPI } from './WebAPI.jsx'
 import { Beforeunload } from 'react-beforeunload';
 
 class Room extends Component {
@@ -30,8 +30,8 @@ class Room extends Component {
             users: []
         }
 
-        this.api = new Api()
-        this.socket = new Socket()
+        this.http = new HttpAPI()
+        this.socket = new WebSocketAPI()
         this.socket.startPinging(this.props.user.userId)
 
         // Refresh list of users each time a user enters or leaves, or each time a user
@@ -48,7 +48,7 @@ class Room extends Component {
     }
 
     async fetchUsersForRoom(room) {
-        const { success, users } = await this.api.getUsers(room || this.state.room)
+        const { success, users } = await this.http.getUsers(room || this.state.room)
         if (success) {
             this.setState({ users })
         }

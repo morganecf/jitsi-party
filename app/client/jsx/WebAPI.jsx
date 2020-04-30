@@ -6,7 +6,7 @@ const url = 'http://127.0.0.1:5000'
 const PING_INTERVAL_MS = 10000
 
 
-export class Socket {
+export class WebSocketApi {
     constructor() {
         this.socket = io(url, {
             transport: ['websocket']
@@ -34,7 +34,7 @@ export class Socket {
 }
 
 
-export class Api {
+export class HttpApi {
     async join(username, avatar) {
         /* Creates a new user */
         try {
