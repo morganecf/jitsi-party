@@ -37,7 +37,7 @@ class Welcome extends Component {
           padding: '6px 10px',
           border: '2px solid #D6D3CD',
           borderRadius: '7px',
-          color: '#D6D3CD',
+          color: '#1B1E1F',
           outline: 'none',
           boxShadow: 'none',
           fontSize: '14px'

@@ -7,6 +7,19 @@
 body {
 	background-color: black;
 }
+button,
+input,
+button:disabled,
+button[disabled],
+input[type="button"] {
+	background-color: #D6D3CD !important;
+	color: #1B1E1F !important;
+}
+.form-fade:disabled {
+	background-color: #D6D3CD !important;
+	border: 2px solid #D6D3CD !important;
+	color: #1B1E1F !important;
+}
 .splash {
 	width: 100%;
 	height: 100%;
@@ -29,20 +42,20 @@ h1 {
 	text-align: center;
 	animation: flash linear .666s infinite;
 }
-
 .form-fade {
-	opacity: .4;
+	opacity: .33;
 	transition: opacity .33s;
 	text-align: center;
 }
-.form-fade:focus {
+.form-fade:focus,
+.form-fade:hover {
 	opacity: 1;
-	transition: opacity 1s;
+	transition: opacity .666s;
 	text-align: center;
 }
 
 @-webkit-keyframes flash {
 	0% { opacity: 1; }
-	50% { opacity: .33; }
+	50% { opacity: .5; }
 	100% { opacity: 1; }
 }
