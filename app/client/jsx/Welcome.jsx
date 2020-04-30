@@ -40,7 +40,7 @@ class Welcome extends Component {
           color: '#1B1E1F',
           outline: 'none',
           boxShadow: 'none',
-          fontSize: '14px'
+          fontSize: '18px'
         }
 
         let name_opacity = 'form-fade'
