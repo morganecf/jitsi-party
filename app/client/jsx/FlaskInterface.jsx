@@ -3,8 +3,8 @@ import io from 'socket.io-client'
 import { createAdventureActions } from './utils.js'
 
 const url = 'http://127.0.0.1:5000'
-
 const PING_INTERVAL_MS = 10000
+
 
 export class Socket {
     constructor() {
@@ -33,8 +33,10 @@ export class Socket {
     }
 }
 
+
 export class Api {
     async join(username, avatar) {
+        /* Creates a new user */
         try {
             const request = `${url}/join`
             const response = await axios.post(request, {
@@ -49,6 +51,7 @@ export class Api {
     }
 
     async getUsers(room=null) {
+        /* Only gets active users for the given room, or all active users */
         try {
             const params = room ? `/${room}` : ''
             const request = `${url}/users${params}`
@@ -60,6 +63,7 @@ export class Api {
     }
 
     async getRooms() {
+        /* Fetches room definition, including adventure rooms */
         try {
             const request = `${url}/rooms`
             const response = await axios.get(request)

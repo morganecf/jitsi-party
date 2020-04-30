@@ -2,6 +2,10 @@ from . import socketio, db
 from flask_socketio import emit
 from .models import User
 
+@socketio.on('disconnect')
+def on_disconnect():
+    emit('user-disconnected', broadcast=True)
+
 @socketio.on('ping-user')
 def on_ping(message):
     user = User.query.filter_by(id=message['user_id']).first()
