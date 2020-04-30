@@ -53,6 +53,14 @@
 		padding: 50px;
 	}
 
+	.door {
+		height: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.navigation-container {
 		display: flex;
 		align-items: center;

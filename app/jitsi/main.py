@@ -1,4 +1,4 @@
-from .database import create_user
+from .database import create_user, get_all_active_users, get_active_users_for_room
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
 
 main = Blueprint('main', __name__)
@@ -8,6 +8,14 @@ def join():
     params = request.get_json()['params']
     user = create_user(**params)
     return jsonify(user.to_json())
+
+@main.route('/users/<room>')
+def get_users(room):
+    return jsonify(list(get_active_users_for_room(room)))
+
+@main.route('/users')
+def get_all_users():
+    return jsonify(list(get_all_active_users()))
 
 @main.route('/', defaults={'path': ''})
 @main.route('/<path:path>')
