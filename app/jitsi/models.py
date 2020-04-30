@@ -29,18 +29,22 @@ class User(db.Model, SerializerMixin):
         db.session.add(user)
         db.session.commit()
         return user
-    
-    @staticmethod
-    def update_location(user_id, room_name):
-        room = Room.query.filter_by(name=room_name).first()
 
-        # Delete previous room user was in
-        user_location = UserLocation.query.filter_by(user_id=user_id).first()
+    @staticmethod
+    def leave_room(user_id, room_name):
+        room = Room.query.filter_by(name=room_name).first()
+        user_location = UserLocation.query.filter_by(user_id=user_id, room_id=room.id).first()
         if user_location:
             db.session.delete(user_location)
+            db.session.commit()
+        return room
 
-        # Add user to current room
-        user_location = UserLocation(room_id=room.id, user_id=user_id)
+    @staticmethod
+    def enter_room(user_id, room_name):
+        room = Room.query.filter_by(name=room_name).first()
+
+        # Update location
+        user_location = UserLocation(user_id=user_id, room_id=room.id)
         db.session.add(user_location)
 
         # Make room discovered by user
@@ -48,6 +52,7 @@ class User(db.Model, SerializerMixin):
         db.session.add(user_room_state)
 
         db.session.commit()
+        return room
 
     @staticmethod
     def get_active_users():
