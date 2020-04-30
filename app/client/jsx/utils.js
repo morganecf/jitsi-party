@@ -2,6 +2,13 @@ function pickRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
 }
 
+function teleport() {
+    const leafRooms = Object.keys(this.rooms).filter(
+        room => this.rooms[room].type !== 'adventure' && room !== 'bye'
+    )
+    return pickRandom(leafRooms)
+}
+
 export function createAdventureActions(room, rooms) {
     /*
     * Each node of an adventure has one or more buttons. Clicking on a button always
@@ -17,10 +24,7 @@ export function createAdventureActions(room, rooms) {
    room.buttons.forEach(button => {
        if (typeof button.nextRoom === 'string') {
             if (button.nextRoom === '*') {
-                button.getNextRoom = () => {
-                    const leafRooms = rooms.filter(r => r.type !== 'adventure')
-                    return pickRandom(leafRooms)
-                }
+                button.getNextRoom = teleport.bind({ rooms })
             } else {
                 button.getNextRoom = () => button.nextRoom
             }

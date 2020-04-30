@@ -58,7 +58,7 @@ export class Api {
             const rooms = response.data
             Object.values(rooms).forEach(room => {
                 if (room.type === 'adventure') {
-                    createAdventureActions(room)
+                    createAdventureActions(room, rooms)
                 }
             })
             return { success: true, rooms }
