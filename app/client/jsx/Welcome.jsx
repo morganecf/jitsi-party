@@ -33,6 +33,8 @@ class Welcome extends Component {
             return <Redirect to={this.state.redirect}/>
         }
 
+// to dos here are simple:
+// refactor styles and change up imagery.
         let text_entry = {
           padding: '6px 10px',
           border: '2px solid #D6D3CD',
