@@ -1,7 +1,12 @@
 from . import db
 from datetime import datetime
+from sqlalchemy_serializer import SerializerMixin
+from sqlalchemy.ext.hybrid import hybrid_property
 
-class User(db.Model):
+#TODO make timeout a part of config, in seconds
+USER_TIMEOUT = 30
+
+class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
@@ -10,20 +15,24 @@ class User(db.Model):
 
     def ping(self):
         self.last_seen = datetime.utcnow().timestamp()
-        self.online = True
+
+    @hybrid_property
+    def is_active(self):
+         return self.last_seen > datetime.utcnow().timestamp() - USER_TIMEOUT
 
     def to_json(self):
         return {
             'userId': self.id,
             'username': self.username,
-            'avatar': self.avatar
+            'avatar': self.avatar,
+            'lastSeen': self.last_seen
         }
 
     def __repr__(self):
         return 'User {0}'.format(self.username)
 
 
-class Room(db.Model):
+class Room(db.Model, SerializerMixin):
     __tablename__ = 'rooms'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True, index=True)
@@ -34,7 +43,7 @@ class Room(db.Model):
         return 'Room {0}'.format(self.name)
 
 
-class UserLocation(db.Model):
+class UserLocation(db.Model, SerializerMixin):
     __tablename__ = 'user_locations'
     id = db.Column(db.Integer, primary_key=True)
     room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
@@ -44,7 +53,7 @@ class UserLocation(db.Model):
         return 'User {0} is in Room {1}'.format(self.user_id, self.room_id)
 
 
-class UserRoomState(db.Model):
+class UserRoomState(db.Model, SerializerMixin):
     __tablename__ = 'user_room_states'
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))

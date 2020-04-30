@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import avatars from './avatars.jsx'
-import Service from './Service.jsx'
 
 class Exit extends Component {
     constructor(props) {

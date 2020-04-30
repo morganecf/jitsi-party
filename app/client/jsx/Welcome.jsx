@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
-import Service from './Service.jsx'
+import { Api } from './FlaskInterface.jsx'
 
 class Welcome extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Welcome extends Component {
             avatar: null,
             redirect: null
         }
-        this.service = new Service()
+        this.api = new Api()
     }
 
     handleDisplayNameChange(event) {
@@ -26,7 +26,7 @@ class Welcome extends Component {
     }
 
     async handleReady() {
-        const response = await this.service.join(this.state.displayName, this.state.avatar)
+        const response = await this.api.join(this.state.displayName, this.state.avatar)
         if (response.success) {
             const { displayName, avatar } = this.state
             this.props.updateUser({

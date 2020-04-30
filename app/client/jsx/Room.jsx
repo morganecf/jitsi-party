@@ -6,9 +6,10 @@ import RoomLayout from './RoomLayout.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
+import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
-import Service from './Service.jsx'
+import { Api, Socket } from './FlaskInterface.jsx'
 
 class Room extends Component {
     /*
@@ -24,12 +25,18 @@ class Room extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            room: this.props.currentRoom
+            room: this.props.currentRoom,
+            entered: false,
+            users: []
         }
 
-        this.service = new Service()
-        this.service.connectToSocket()
-        this.service.startPinging(this.props.user.userId)
+        this.api = new Api()
+        this.socket = new Socket()
+        this.socket.startPinging(this.props.user.userId)
+    }
+
+    componentDidMount() {
+        this.onSwitchRoom(this.state.room)
     }
 
     getRoomType() {
@@ -65,23 +72,38 @@ class Room extends Component {
         }
     }
 
-    onSwitchRoom(room) {
-        this.setState({ room })
+    async onSwitchRoom(room) {
+        this.setState({ room, entered: false })
         this.props.updateCurrentRoom(room)
-        this.service.enterRoom(this.props.user.userId, room)
+
+        const response = await this.api.getUsers(room)
+        if (response.success) {
+            this.setState({ users: response.users })
+        }
+    }
+
+    onEnterRoom() {
+        this.setState({ entered: true })
+        this.socket.enterRoom(this.props.user.userId, this.state.room)
     }
 
     render() {
         if (RoomLayout[this.state.room].type === 'redirect') {
-            this.service.enterRoom(this.props.user.userId, this.state.room)
+            this.socket.enterRoom(this.props.user.userId, this.state.room)
             return <Redirect to={RoomLayout[this.state.room].route}/>
         }
+
+        const roomName = RoomLayout[this.state.room].name
+        const content = this.state.entered ?
+            this.getRoomType() :
+            <Door room={roomName} users={this.state.users} onClick={this.onEnterRoom.bind(this)}></Door>
+
         return (
             <div className="room">
                 <div className="room-header">
                     <h2 className="room-header">{RoomLayout[this.state.room].name}</h2>
                 </div>
-                {this.getRoomType()}
+                {content}
                 {this.getRoomDescription()}
                 <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
             </div>
