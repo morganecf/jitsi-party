@@ -2,7 +2,15 @@
 // This file contains all styles related to the Welcome component.
 // -----------------------------------------------------------------------------
 
-
+body {
+	background-color: black;
+}
+.splash {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	position: absolute;
+}
 .form {
 	opacity: 1;
 	text-align: center;
@@ -13,7 +21,7 @@
 	animation: flash linear .666s infinite;
 }
 .form-fade {
-	opacity: .125;
+	opacity: .25;
 	transition: opacity .33s;
 	text-align: center;
 }
