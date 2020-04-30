@@ -7,6 +7,7 @@ class Config:
     SECRET_KEY = 'figure-this-out'
     # To silence deprecation warning
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    BASE_DIR = basedir
 
     @staticmethod
     def init_app(app):

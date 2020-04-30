@@ -3,10 +3,9 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
 from flask_cors import CORS
-from config import config
+from config import config, basedir
 
-parentdir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-staticdir = os.path.join(parentdir, 'client/js')
+staticdir = os.path.join(basedir, 'client/js')
 
 db = SQLAlchemy()
 socketio = SocketIO()

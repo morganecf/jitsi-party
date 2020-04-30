@@ -17,6 +17,13 @@ class Welcome extends Component {
         this.api = new Api()
     }
 
+    async componentDidMount() {
+        const { success, rooms } = await this.api.getRooms()
+        if (success) {
+            this.props.addRooms(rooms)
+        }
+    }
+
     handleDisplayNameChange(event) {
         this.setState({ displayName: event.target.value })
     }
@@ -77,6 +84,7 @@ class Welcome extends Component {
 export default connect(
     state => state,
     {
+        addRooms: reducers.addRoomsActionCreator,
         updateUser: reducers.updateUserActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Welcome)
