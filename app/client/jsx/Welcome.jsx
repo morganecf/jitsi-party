@@ -45,7 +45,7 @@ class Welcome extends Component {
 
         let name_opacity = 'form-fade'
         let avatar_opacity = 'form-fade'
-        let party_opacity = 'form-fade'
+        let party_opacity = 'form-fade-party'
         if (this.state.displayName=='') { name_opacity = 'form' }
         if (this.state.displayName) { avatar_opacity = 'form' }
         if (this.state.displayName && this.state.avatar) { party_opacity = 'form-party' }
@@ -58,7 +58,7 @@ class Welcome extends Component {
                 <img className='splash' src='./js/images/party.png'/>
                 <input style={text_entry} autoComplete="off" className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/><br/>
                 <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
-                <input className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.displayName} />
+                <input id='button' className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.displayName} />
             </div>
         )
 
