@@ -1,16 +1,22 @@
 import { handleActions } from 'redux-actions'
 
+const ADD_ROOMS = 'ADD_ROOMS'
 const UPDATE_USER = 'UPDATE_USER'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
 const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
 
 const initialState = {
+    rooms: {},
     user: {},
     currentRoom: '',
     path: [],
     isAudioMuted: false,
     isVideoMuted: false
+}
+
+function addRoomsAction(state, rooms) {
+    return Object.assign({}, state, rooms)
 }
 
 function updateUserAction(state, user) {
@@ -32,6 +38,10 @@ function updateVideoMutedAction(state, isVideoMuted) {
 
 export default {
     /* Action creators: return actions for reducers */
+    addRoomsActionCreator: rooms => ({
+        type: ADD_ROOMS,
+        rooms
+    }),
     updateUserActionCreator: user => ({
         type: UPDATE_USER,
         user
@@ -50,6 +60,7 @@ export default {
     }),
     /* Reducers */
     reducer: handleActions({
+        [ADD_ROOMS]: addRoomsAction,
         [UPDATE_USER]: updateUserAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
         [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,

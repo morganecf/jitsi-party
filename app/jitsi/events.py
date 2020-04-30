@@ -1,11 +1,15 @@
-from . import socketio
-from .database import update_user_location, refresh_user
+from . import socketio, db
 from flask_socketio import emit
+from .models import User
 
 @socketio.on('ping-user')
 def on_ping(message):
-    refresh_user(message['user_id'])
+    '''Update a user's last_seen column with the current timestamp'''
+    user = User.query.filter_by(id=message['user_id']).first()
+    if user:
+        user.ping()
 
 @socketio.on('enter-room')
 def on_enter_room(message):
-    update_user_location(**message)
+    '''Update a user's location and the room's status for that user'''
+    User.update_location(message['user_id'], message['room'])

@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
-import RoomLayout from './RoomLayout.jsx'
 import MapVisualization from './MapVisualization.js'
 
 class Map extends Component { 
@@ -14,10 +13,10 @@ class Map extends Component {
             highlighted: null
         }
 
-        this.rooms = Object.keys(RoomLayout)
-            .filter(key => _.has(RoomLayout[key], 'map'))
+        this.rooms = Object.keys(this.props.rooms)
+            .filter(key => _.has(this.props.rooms[key], 'map'))
             .map(key => {
-                const room = Object.assign({}, RoomLayout[key])
+                const room = Object.assign({}, this.props.rooms[key])
                 room.key = key
                 return _.cloneDeep(room)
             })

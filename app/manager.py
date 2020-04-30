@@ -34,6 +34,6 @@ def create_db():
     rooms = json.load(open('rooms.json'))
 
     # Create rooms and insert
-    db_rooms = [Room(name=room_name, room_type=room['type'], capacity=room.get('capacity')) for room_name, room in rooms.items()]
+    db_rooms = [Room(name=room_name, room_type=room['type']) for room_name, room in rooms.items()]
     db.session.add_all(db_rooms)
     db.session.commit()

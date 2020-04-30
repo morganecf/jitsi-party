@@ -82,7 +82,7 @@ export default class MapVisualization {
     }
 
     drawMap(data, visited) {
-        // A 30x30 grid was used to derive the values in RoomLayout.jsx.
+        // A 30x30 grid was used to derive the values in rooms.json.
         // This makes sure those values are scaled to this view while
         // using the space efficiently
         this.xscale.domain([

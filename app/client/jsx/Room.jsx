@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
-import RoomLayout from './RoomLayout.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
@@ -19,7 +18,7 @@ class Room extends Component {
     *   3. Content (video, art, text, etc)
     *   4. Navigation component used to move through rooms
     *   5. Optional artifact, i.e. something the user finds or unlocks, like a map
-    * Add new rooms to RoomLayout.jsx, where individual rooms are defined. Add new TYPES of rooms
+    * Add new rooms to rooms.json, where individual rooms are defined. Add new TYPES of rooms
     * by creating a new component for that room and updating the getRoomType() mapping.
     */
     constructor(props) {
@@ -39,7 +38,7 @@ class Room extends Component {
         this.onSwitchRoom(this.state.room)
     }
 
-    getRoomType() {
+    getRoomContent() {
         /*
         * There are currently 3 different types of rooms:
         *   1. Regular Jitsi room that just has video
@@ -47,7 +46,7 @@ class Room extends Component {
         *   3. Text-based adventure rooms where you have to make a decision
         *   4. Special purpose rooms that exist at a different route
         */
-       const roomData = RoomLayout[this.state.room]
+       const roomData = this.props.rooms[this.state.room]
        const jitsiData = {
            displayName: this.props.user.displayName,
            avatar: this.props.user.avatar,
@@ -57,25 +56,29 @@ class Room extends Component {
        return {
            art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
            jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
-           adventure: <Adventure options={roomData.adventureOptions} onClick={this.onSwitchRoom.bind(this)}></Adventure>,
            iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
+           adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>
        }[roomData.type]
     }
 
     getRoomDescription() {
-        if (RoomLayout[this.state.room].description) {
+        if (this.props.rooms[this.state.room].description) {
             return (
                 <div className="room-content">
-                    {RoomLayout[this.state.room].description}
+                    {this.props.rooms[this.state.room].description}
                 </div>
             )
         }
     }
 
+    onAdventureClick(room) {
+        this.setState({ room, entered: false })
+        this.props.updateCurrentRoom(room)
+    }
+
     async onSwitchRoom(room) {
         this.setState({ room, entered: false })
         this.props.updateCurrentRoom(room)
-
         const response = await this.api.getUsers(room)
         if (response.success) {
             this.setState({ users: response.users })
@@ -88,24 +91,25 @@ class Room extends Component {
     }
 
     render() {
-        if (RoomLayout[this.state.room].type === 'redirect') {
+        const room = this.props.rooms[this.state.room]
+
+        if (room.type === 'redirect') {
             this.socket.enterRoom(this.props.user.userId, this.state.room)
-            return <Redirect to={RoomLayout[this.state.room].route}/>
+            return <Redirect to={room.route}/>
         }
 
-        const roomName = RoomLayout[this.state.room].name
-        const content = this.state.entered ?
-            this.getRoomType() :
-            <Door room={roomName} users={this.state.users} onClick={this.onEnterRoom.bind(this)}></Door>
+        const content = this.state.entered || room.type === 'adventure' ?
+            this.getRoomContent() :
+            <Door room={room.name} users={this.state.users} onClick={this.onEnterRoom.bind(this)}></Door>
 
         return (
             <div className="room">
                 <div className="room-header">
-                    <h2 className="room-header">{RoomLayout[this.state.room].name}</h2>
+                    <h2 className="room-header">{room.name}</h2>
                 </div>
                 {content}
                 {this.getRoomDescription()}
-                <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
+                <Navigation directions={room.directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
             </div>
         )
     }
