@@ -1,6 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the Welcome component.
+
 // -----------------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
 
 body {
 	background-color: black;
@@ -10,6 +12,9 @@ body {
 	height: 100%;
 	z-index: -1;
 	position: absolute;
+}
+.serif {
+	font-family: Alegreya;
 }
 .form {
 	opacity: 1;
