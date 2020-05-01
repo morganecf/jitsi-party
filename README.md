@@ -41,20 +41,16 @@ The app should now be running on localhost:5000.
 
 ### Querying DB
 Using sqlite directly
-```bash
-sqlite3
 ```
-```sqlite
+sqlite3
 .open db.sqlite
 .tables
 select * from rooms;
 ```
 
 Using flask shell
-```bash
-flask shell
 ```
-```python
+flask shell
 Room.query.all()
 ```
 
