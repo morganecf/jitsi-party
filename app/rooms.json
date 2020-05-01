@@ -24,7 +24,8 @@
         "name": "Closet",
         "type": "jitsi",
         "capacity": 3,
-        "description": "A cozy closet.",
+        "muteRoom": true,
+        "description": "A quiet, cozy closet. Shhh.",
         "directions": {
             "east": "vestibule"
         },
@@ -42,7 +43,7 @@
         "name": "Living Room",
         "type": "jitsi",
         "directions": {
-            "north": "seriousConversations",
+            "north": "danceParty",
             "south": "vestibule",
             "east": "artGallery",
             "west": "trashyBedroom"
@@ -60,10 +61,14 @@
             }
         }
     },
-    "seriousConversations": {
-        "name": "Serious Conversation Only",
-        "type": "jitsi",
-        "description": "Frivolity will not be tolerated.",
+    "danceParty": {
+        "name": "Dance Party!",
+        "type": "iframe",
+        "description": "Dance until you die!",
+        "muteRoom": true,
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org"
+        },
         "directions": {
             "west": "bathroom",
             "south": "livingRoom",
@@ -85,7 +90,7 @@
         "type": "jitsi",
         "description": "A cozy bathroom.",
         "directions": {
-            "east": "seriousConversations",
+            "east": "danceParty",
             "south": "trashyBedroom"
         },
         "map": {
@@ -147,7 +152,7 @@
         "art": {
             "title": "Bread",
             "artist": "Jett",
-            "src": "./js/images/bread-jett.png"
+            "src": "./js/images/art/bread-jett.png"
         },
         "directions": {
             "north": "gallery2",
@@ -170,7 +175,7 @@
         "art": {
             "title": "Butterfly Girl",
             "artist": "LaRen",
-            "src": "./js/images/butterfly-girl-laren.jpg"
+            "src": "./js/images/art/butterfly-girl-laren.jpg"
         },
         "directions": {
             "north": "gallery3",
@@ -193,7 +198,7 @@
         "art": {
             "title": "Creazione di DJ",
             "artist": "Phoebe",
-            "src": "./js/images/creazione-di-gatto.jpg"
+            "src": "./js/images/art/creazione-di-gatto.jpg"
         },
         "directions": {
             "north": "gallery4",
@@ -216,7 +221,7 @@
         "art": {
             "title": "Champagne",
             "artist": "Lolo",
-            "src": "./js/images/champagne-lolo.gif"
+            "src": "./js/images/art/champagne-lolo.gif"
         },
         "directions": {
             "north": "gallery5",
@@ -239,7 +244,7 @@
         "art": {
             "title": "Prints",
             "artist": "Brett",
-            "src": "./js/images/prints-by-brett.png"
+            "src": "./js/images/art/prints-by-brett.png"
         },
         "directions": {
             "north": "gallery6",
@@ -262,7 +267,7 @@
         "art": {
             "title": "Origami",
             "artist": "Kevin",
-            "src": "./js/images/origami-kevin.jpg"
+            "src": "./js/images/art/origami-kevin.jpg"
         },
         "directions": {
             "north": "gallery7",
@@ -285,7 +290,7 @@
         "art": {
             "title": "Phoebe",
             "artist": "Sean A",
-            "src": "./js/images/phoebe-by-sean.png"
+            "src": "./js/images/art/phoebe-by-sean.png"
         },
         "directions": {
             "south": "gallery6",
@@ -308,7 +313,7 @@
         "art": {
             "title": "Dildos United & Hitachi Quilt",
             "artist": "Alex",
-            "src": "./js/images/alex-art.png"
+            "src": "./js/images/art/alex-art.png"
         },
         "directions": {
             "south": "gallery7",
@@ -331,7 +336,7 @@
         "art": {
             "title": "The Squeak of Reason II",
             "artist": "Morg",
-            "src": "./js/images/squeak-of-reason.jpg"
+            "src": "./js/images/art/squeak-of-reason.jpg"
         },
         "directions": {
             "south": "gallery8",

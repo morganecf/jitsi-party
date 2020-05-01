@@ -18,6 +18,14 @@ OLD_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 git fetch upstream
 git checkout "$TAG"
 
+pushd app/client
+
+npm install
+node_modules/.bin/webpack
+rm -rf node_modules
+
+popd
+
 docker build . --tag "$DOCKER_REPO":"$TAG"
 docker build . --tag "$DOCKER_REPO":latest
 
