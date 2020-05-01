@@ -1,0 +1,20 @@
+/* document.querySelector('#jitsi-container').style.backgroundColor = "red"
+$('iframe').setAttribute('allowtransparent', 'true')
+$('iframe').contentWindow.document.body.querySelector('.videocontainer').style.backgroundColor = "transparent"
+$('iframe').contentWindow.document.body.querySelector('#largeVideoContainer').style.background = "transparent"
+$('iframe').contentWindow.document.body.querySelector('#largeVideoContainer').style.backgroundColor = "transparent"
+$('iframe').contentWindow.document.body.querySelector('.tile-view').style.backgroundColor = "transparent"
+$('iframe').contentWindow.document.body.querySelector('.tOoji').style.backgroundColor = "transparent"
+$('iframe').contentWindow.document.body.style.backgroundColor = "transparent" */
+
+body {
+    background-color: transparent !important;
+}
+
+body #largeVideoContainer.videoContainer {
+    background-color: transparent !important;
+}
+
+.tOoji {
+    background-color: transparent !important;
+}

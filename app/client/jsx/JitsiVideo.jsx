@@ -84,6 +84,7 @@ class JitsiVideo extends Component {
 
             this.api = new window.JitsiMeetExternalAPI(domain, options)
             this.api.addEventListener('videoConferenceJoined', () => {
+                document.querySelector('iframe').setAttribute('allowtransparent', 'true')
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl: this.props.jitsiData.avatar,

@@ -10,5 +10,19 @@
         </div>
         <script src='js/external_api.js'></script>
         <script type="text/javascript" src="js/bundle.js"></script>
+        <script>
+            function addCss(fileName) {
+
+                var iframeDocument = document.querySelector('iframe').contentWindow.document
+                var head = iframeDocument.head;
+                var link = iframeDocument.createElement("link");
+
+                link.type = "text/css";
+                link.rel = "stylesheet";
+                link.href = fileName;
+
+                head.appendChild(link);
+            }
+        </script>
     </body>
 </html>
