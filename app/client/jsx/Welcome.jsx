@@ -14,11 +14,11 @@ class Welcome extends Component {
             avatar: null,
             redirect: null
         }
-        this.http = new HttpApi()
+        this.httpApi = new HttpApi()
     }
 
     async componentDidMount() {
-        const { success, rooms } = await this.http.getRooms()
+        const { success, rooms } = await this.httpApi.getRooms()
         if (success) {
             this.props.addRooms(rooms)
         }
@@ -33,7 +33,7 @@ class Welcome extends Component {
     }
 
     async handleReady() {
-        const response = await this.http.join(this.state.displayName, this.state.avatar)
+        const response = await this.httpApi.join(this.state.displayName, this.state.avatar)
         if (response.success) {
             const { displayName, avatar } = this.state
             this.props.updateUser({

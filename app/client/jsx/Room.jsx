@@ -30,9 +30,9 @@ class Room extends Component {
             users: []
         }
 
-        this.http = new HttpApi()
-        this.socket = new WebSocketApi()
-        this.socket.startPinging(this.props.user.userId)
+        this.httpApi = new HttpApi()
+        this.socketApi = new WebSocketApi()
+        this.socketApi.startPinging(this.props.user.userId)
 
         // Refresh list of users each time a user enters or leaves, or each time a user
         // disconnects (i.e. if client crashes). Disconnect events will lag behind other
@@ -42,13 +42,13 @@ class Room extends Component {
                 this.fetchUsersForRoom(room)
             }
         }
-        this.socket.on('user-left-room', onSocketEvent.bind(this))
-        this.socket.on('user-entered-room', onSocketEvent.bind(this))
-        this.socket.on('user-disconnected', this.fetchUsersForRoom.bind(this))
+        this.socketApi.on('user-left-room', onSocketEvent.bind(this))
+        this.socketApi.on('user-entered-room', onSocketEvent.bind(this))
+        this.socketApi.on('user-disconnected', this.fetchUsersForRoom.bind(this))
     }
 
     async fetchUsersForRoom(room) {
-        const { success, users } = await this.http.getUsers(room || this.state.room)
+        const { success, users } = await this.httpApi.getUsers(room || this.state.room)
         if (success) {
             this.setState({ users })
         }
@@ -98,7 +98,7 @@ class Room extends Component {
 
     onSwitchRoom(room) {
         // Leave current room
-        this.socket.leaveRoom(this.props.user.userId, this.state.room)
+        this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
         // Go to new room, but don't open the door
         this.setState({ room, entered: false })
         this.props.updateCurrentRoom(room)
@@ -108,19 +108,19 @@ class Room extends Component {
     onEnterRoom() {
         // Open the door
         this.setState({ entered: true })
-        this.socket.enterRoom(this.props.user.userId, this.state.room)
+        this.socketApi.enterRoom(this.props.user.userId, this.state.room)
     }
 
     handleBeforeUnload() {
         // Update server if user closes tab or refreshes
-        this.socket.leaveRoom(this.props.user.userId, this.state.room)
+        this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
     }
 
     render() {
         const room = this.props.rooms[this.state.room]
 
         if (room.type === 'redirect') {
-            this.socket.enterRoom(this.props.user.userId, this.state.room)
+            this.socketApi.enterRoom(this.props.user.userId, this.state.room)
             return <Redirect to={room.route}/>
         }
 
