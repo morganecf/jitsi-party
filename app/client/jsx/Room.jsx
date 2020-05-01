@@ -103,6 +103,15 @@ class Room extends Component {
         this.setState({ room, entered: false })
         this.props.updateCurrentRoom(room)
         this.fetchUsersForRoom(room)
+
+        // reset door anim
+        const door = document.getElementById('door')
+        if (door) {
+            door.style.webkitAnimation = "none";
+            setTimeout(() => { door.style.webkitAnimation = "" })
+        }
+        
+
     }
 
     onEnterRoom() {
