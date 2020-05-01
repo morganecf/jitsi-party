@@ -1,51 +1,51 @@
-export default
-[
-  ['./js/images/puck/normal/normal1.png','./js/images/puck/normal/normal2.png','./js/images/puck/normal/normal3.png','./js/images/puck/normal/normal4.png',],
-  ['./js/images/puck/book/book1.png','./js/images/puck/book/book2.png','./js/images/puck/book/book3.png','./js/images/puck/book/book4.png',],
-  ['./js/images/puck/whippit/whippit1.png','./js/images/puck/whippit/whippit2.png','./js/images/puck/whippit/whippit3.png','./js/images/puck/whippit/whippit4.png',],
-  ['./js/images/puck/dancing/dancing1.png','./js/images/puck/dancing/dancing2.png','./js/images/puck/dancing/dancing3.png','./js/images/puck/dancing/dancing4.png',],
-  ['./js/images/puck/trippy/trippy1.png','./js/images/puck/trippy/trippy2.png','./js/images/puck/trippy/trippy3.png','./js/images/puck/trippy/trippy4.png',],
-  ['./js/images/puck/thumb/thumb1.png','./js/images/puck/thumb/thumb2.png','./js/images/puck/thumb/thumb3.png','./js/images/puck/thumb/thumb4.png',]
-]
+// export default
+// [
+//   ['./js/images/puck/normal/normal1.png','./js/images/puck/normal/normal2.png','./js/images/puck/normal/normal3.png','./js/images/puck/normal/normal4.png',],
+//   ['./js/images/puck/book/book1.png','./js/images/puck/book/book2.png','./js/images/puck/book/book3.png','./js/images/puck/book/book4.png',],
+//   ['./js/images/puck/whippit/whippit1.png','./js/images/puck/whippit/whippit2.png','./js/images/puck/whippit/whippit3.png','./js/images/puck/whippit/whippit4.png',],
+//   ['./js/images/puck/dancing/dancing1.png','./js/images/puck/dancing/dancing2.png','./js/images/puck/dancing/dancing3.png','./js/images/puck/dancing/dancing4.png',],
+//   ['./js/images/puck/trippy/trippy1.png','./js/images/puck/trippy/trippy2.png','./js/images/puck/trippy/trippy3.png','./js/images/puck/trippy/trippy4.png',],
+//   ['./js/images/puck/thumb/thumb1.png','./js/images/puck/thumb/thumb2.png','./js/images/puck/thumb/thumb3.png','./js/images/puck/thumb/thumb4.png',]
+// ]
+//
+// const relativePath = './js/images/puck/'
+// const hostedPath = 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/'
 
-const relativePath = './js/images/puck/'
-const hostedPath = 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/'
-
-const avatars = {
+export const avatars = {
   normal: {
-    purple: { name: 'normal-purple.png' },
-    blue: { name: 'normal-blue.png' },
-    red: { name: 'normal-red.png' },
-    orange: { name: 'normal-orange.png' },
+    purple: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/normal-purple.png' },
+    blue: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/normal-blue.png' },
+    red: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/normal-red.png' },
+    orange: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/normal-orange.png' },
   },
   book: {
-    purple: { name: 'book-purple.png' },
-    blue: { name: 'book-blue.png' },
-    red: { name: 'book-red.png' },
-    orange: { name: 'book-orange.png' },
+    purple: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/book-purple.png' },
+    blue: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/book-blue.png' },
+    red: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/book-red.png' },
+    orange: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/book-orange.png' },
   },
   whippit: {
-    purple: { name: 'whippit-purple.png' },
-    blue: { name: 'whippit-blue.png' },
-    red: { name: 'whippit-red.png' },
-    orange: { name: 'whippit-orange.png' },
+    purple: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/whippit-purple.png' },
+    blue: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/whippit-blue.png' },
+    red: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/whippit-red.png' },
+    orange: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/whippit-orange.png' },
   },
   dancing: {
-    purple: { name: 'dancing-purple.png' },
-    blue: { name: 'dancing-blue.png' },
-    red: { name: 'dancing-red.png' },
-    orange: { name: 'dancing-orange.png' },
+    purple: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/dancing-purple.png' },
+    blue: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/dancing-blue.png' },
+    red: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/dancing-red.png' },
+    orange: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/dancing-orange.png' },
   },
   trippy: {
-    purple: { name: 'trippy-purple.png' },
-    blue: { name: 'trippy-blue.png' },
-    red: { name: 'trippy-red.png' },
-    orange: { name: 'trippy-orange.png' },
+    purple: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/trippy-purple.png' },
+    blue: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/trippy-blue.png' },
+    red: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/trippy-red.png' },
+    orange: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/trippy-orange.png' },
   },
   thumb: {
-    purple: { name: 'thumb-purple.png' },
-    blue: { name: 'thumb-blue.png' },
-    red: { name: 'thumb-red.png' },
-    orange: { name: 'thumb-orange.png' },
+    purple: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-purple.png' },
+    blue: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-blue.png' },
+    red: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-red.png' },
+    orange: { path: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-orange.png' },
   },
 }
