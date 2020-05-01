@@ -32,16 +32,18 @@ class PuckSelect extends Component {
 
     if (this.state.avatar===null) { // checks whether selection not yet complete
 
-      // puck list generated from 0th colorway of each design
-      console.log(Avatars)
-      // let puck_list = Object.keys(avatars).forEach(function(key) { return key.purple })
-      let all_avatar_designs_array
+      // puck list generated from purple of each design
+      let puckList = []
+      Object.keys(Avatars).forEach(function(key) { puckList.push(Avatars[key].purple.path) })
+      // Object.keys(Avatars).forEach(function(key) { console.log( Avatars[key].purple.path ) })
+      console.log( puckList )
+      let allAvatarDesigns
       let fade = this.props.opacity
 
       if (this.state.columnOpen) { // checks whether selection begun by clicking button, opening column
 
         fade = 'fade'
-        all_avatar_designs_array = puck_list.map((puck,id) => {
+        allAvatarDesigns = puckList.map((puck,id) => {
 
           if (this.state.rowOpen!==id) { // checks each item in column for whether selected
 
@@ -62,7 +64,7 @@ class PuckSelect extends Component {
 
           } else { // selected design
 
-            let colorway_variants_array = avatars[this.state.rowOpen].map((color,id) => {
+            let allColorwayVariants = avatars[this.state.rowOpen].map((color,id) => {
               let selected = 'image'
               let handleClick = () => this.handleClickColor(id)
               return ( // returns all colorways for selected design
@@ -76,7 +78,7 @@ class PuckSelect extends Component {
             })
             return ( // colorways row in place of selected column item
               <div className='inner'>
-              {colorway_variants_array}
+              {allColorwayVariants}
               </div>
             )
 
@@ -87,7 +89,7 @@ class PuckSelect extends Component {
       return ( // column of singleton nonselected items with at most one of them swapped out for colorway variants row
         <div className='outer'>
         <input className={fade} type="button" onClick={this.onButtonClick} value="Pick your puck"/>
-        {all_avatar_designs_array}
+        {allAvatarDesigns}
         </div>
       )
 
