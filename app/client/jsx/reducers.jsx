@@ -1,7 +1,9 @@
 import { handleActions } from 'redux-actions'
+import { WebSocketApi } from './WebAPI.jsx'
 
 const ADD_ROOMS = 'ADD_ROOMS'
 const UPDATE_USER = 'UPDATE_USER'
+const CONNECT_SOCKET = 'CONNECT_SOCKET'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
 const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
@@ -10,7 +12,8 @@ const initialState = {
     rooms: {},
     user: {},
     currentRoom: '',
-    path: [],
+    visited: {},
+    socketApi: null,
     isAudioMuted: false,
     isVideoMuted: false
 }
@@ -24,9 +27,16 @@ function updateUserAction(state, user) {
     return Object.assign({}, state, user)
 }
 
+function connectSocketAction(state) {
+    const socketApi = new WebSocketApi()
+    return Object.assign({}, state, { socketApi })
+}
+
 function updateCurrentRoomAction(state, currentRoom) {
-    const path = [...state.path, currentRoom.currentRoom]
-    return Object.assign({}, state, currentRoom, { path })
+    const { room, entered } = currentRoom.currentRoom
+    const visited = Object.assign({}, state.visited)
+    visited[room] = entered
+    return Object.assign({}, state, currentRoom, { visited })
 }
 
 function updateAudioMutedAction(state, isAudioMuted) {
@@ -47,6 +57,9 @@ export default {
         type: UPDATE_USER,
         user
     }),
+    connectSocketActionCreator: () => ({
+        type: CONNECT_SOCKET
+    }),
     updateCurrentRoomActionCreator: currentRoom => ({
         type: UPDATE_CURRENT_ROOM,
         currentRoom
@@ -63,6 +76,7 @@ export default {
     reducer: handleActions({
         [ADD_ROOMS]: addRoomsAction,
         [UPDATE_USER]: updateUserAction,
+        [CONNECT_SOCKET]: connectSocketAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
         [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,
         [UPDATE_VIDEO_MUTED]: updateVideoMutedAction

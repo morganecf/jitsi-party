@@ -17,6 +17,10 @@ def get_users(room):
 
 @main.route('/users')
 def get_all_users():
+    # NOTE uncomment this to test map with mock data
+    # basedir = current_app.config.get('BASE_DIR')
+    # users = json.load(open(os.path.join(basedir, 'mock_map_data.json')))['data']
+    # return jsonify(users)
     return jsonify(list(User.get_active_users()))
 
 @main.route('/rooms')

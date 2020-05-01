@@ -1,0 +1,59 @@
+{
+    "data": [
+        {
+            "username": "morg",
+            "avatar": "./js/images/puck/book-orange.png",
+            "room": "vestibule"
+        },
+        {
+            "username": "daniel",
+            "avatar": "./js/images/puck/trippy-purple.png",
+            "room": "vestibule"
+        },
+        {
+            "username": "seanm",
+            "avatar": "./js/images/puck/book-blue.png",
+            "room": "vestibule"
+        },
+        {
+            "username": "seana",
+            "avatar": "./js/images/puck/normal-orange.png",
+            "room": "vestibule"
+        },
+        {
+            "username": "andrew",
+            "avatar": "./js/images/puck/whippit-red.png",
+            "room": "vestibule"
+        },
+        {
+            "username": "phoebe",
+            "avatar": "./js/images/puck/book-red.png",
+            "room": "bathroom"
+        },
+        {
+            "username": "jett",
+            "avatar": "./js/images/puck/dancing-purple.png",
+            "room": "kitchen"
+        },
+        {
+            "username": "matt",
+            "avatar": "./js/images/puck/normal-blue.png",
+            "room": null
+        },
+        {
+            "username": "thao",
+            "avatar": "./js/images/puck/trippy-orange.png",
+            "room": null
+        },
+        {
+            "username": "david",
+            "avatar": "./js/images/puck/whippit-red.png",
+            "room": null
+        },
+        {
+            "username": "alice",
+            "avatar": "./js/images/puck/whippit-purple.png",
+            "room": null
+        }
+    ]
+}
