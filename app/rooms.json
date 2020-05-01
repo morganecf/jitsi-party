@@ -24,7 +24,8 @@
         "name": "Closet",
         "type": "jitsi",
         "capacity": 3,
-        "description": "A cozy closet.",
+        "muteRoom": true,
+        "description": "A quiet, cozy closet. Shhh.",
         "directions": {
             "east": "vestibule"
         },
@@ -42,7 +43,7 @@
         "name": "Living Room",
         "type": "jitsi",
         "directions": {
-            "north": "seriousConversations",
+            "north": "danceParty",
             "south": "vestibule",
             "east": "artGallery",
             "west": "trashyBedroom"
@@ -60,10 +61,14 @@
             }
         }
     },
-    "seriousConversations": {
-        "name": "Serious Conversation Only",
-        "type": "jitsi",
-        "description": "Frivolity will not be tolerated.",
+    "danceParty": {
+        "name": "Dance Party!",
+        "type": "iframe",
+        "description": "Dance until you die!",
+        "muteRoom": true,
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org"
+        },
         "directions": {
             "west": "bathroom",
             "south": "livingRoom",
@@ -85,7 +90,7 @@
         "type": "jitsi",
         "description": "A cozy bathroom.",
         "directions": {
-            "east": "seriousConversations",
+            "east": "danceParty",
             "south": "trashyBedroom"
         },
         "map": {
