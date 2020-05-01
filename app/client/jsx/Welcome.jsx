@@ -66,9 +66,9 @@ class Welcome extends Component {
         let avatar_opacity = 'form-fade'
         let party_opacity = 'form-fade-party'
         if (this.state.displayName=='') { name_opacity = 'form' }
-        if (this.state.displayName) { avatar_opacity = 'form' }
+        if (this.state.displayName) { avatar_opacity = 'form' } 
         if (this.state.displayName && this.state.avatar) { party_opacity = 'form-party' }
-
+            
         return (
             <div className="vestibule">
                 <br/>

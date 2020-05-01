@@ -17,12 +17,16 @@
 	}
 
 	.room-content {
-		display: flex;
+		display: none;
 		align-items: center;
 		justify-content: center;
 		flex: 1;
 		padding: .5em;
 		background-color: lighten($background-color, 10%);
+	}
+
+	&.entered .room-content {
+		display: flex;
 	}
 
 	.jitsi-video {
@@ -53,12 +57,112 @@
 		padding: 50px;
 	}
 
-	.door {
+	.door-wrapper {
 		height: 100%;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
+		transform-style: preserve-3d;
+		perspective: 2000px;
+
+		.door-background,
+		.door {
+			position: absolute;
+			top: auto;
+			left: auto;
+			right: auto;
+			bottom: auto;
+			width: 100%;
+			max-width: 360px;
+			height: 85%;
+			max-height: 800px;
+		}
+
+		.door-background {
+			box-shadow: 2px 2px 4px black;
+		}
+
+		.door-target {
+			position: absolute;
+			top: auto;
+			left: auto;
+			right: auto;
+			bottom: auto;
+			padding: 3em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 35%;
+			max-width: 400px;
+			height: 80%;
+			max-height: 900px;
+		}
+
+		.door-target:hover + .door,
+		.door.open {
+			-webkit-transform: rotateY(-80deg);
+		}
+
+		.door-background {
+			background: black;
+			z-index: -1;
+		}
+
+		.door {
+			z-index: 100;
+			background: gray;
+			transition: all .75s;
+			-webkit-transform: rotateY(0deg);
+			-webkit-transform-origin: 0% 50%;
+			overflow: visible;
+			display: flex;
+			pointer-events: none;
+
+
+			.knob {
+				position: absolute;
+				top: 55%;
+				left: 85%;
+				height: 25px;
+				width: 25px;
+				border-radius: 100%;
+				background: gold;
+			}
+
+			.spacer {
+				display: flex;
+				height: 100%;
+				flex: 0.7;
+			}
+
+			.panel-column {
+				height: 100%;
+				display: flex;
+				flex: 1;
+				flex-flow: column;
+				justify-content: space-between;
+				padding: 50px 0;
+			}
+
+			.panel {
+				width: 100%;
+				height: 35%;
+				background: darken(gray, 5%);
+				box-shadow: 0px 0px 4px darken(gray, 10%) inset;
+
+				&.top-panel {
+					height: 15%;
+				}
+			}
+		}
+
+		button {
+			z-index: 1;
+			margin: 1em;
+		}
 	}
 
 	.navigation-container {
