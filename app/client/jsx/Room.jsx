@@ -128,8 +128,10 @@ class Room extends Component {
             this.getRoomContent() :
             <Door room={room.name} users={this.state.users} onClick={this.onEnterRoom.bind(this)}></Door>
 
+        const roomClass = this.state.entered ? "room entered" : "room"
+
         return (
-            <div className="room">
+            <div className={roomClass}>
                 <div className="room-header">
                     <h2 className="room-header">{room.name}</h2>
                 </div>
