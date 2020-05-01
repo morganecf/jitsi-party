@@ -21,17 +21,17 @@ class User(db.Model, SerializerMixin):
         db.session.add(self)
         db.session.commit()
 
-    @staticmethod
-    def create(username, avatar):
+    @classmethod
+    def create(cls, username, avatar):
         # TODO change this once Daniel fixes avatars
         avatar = '-'.join(map(str, avatar))
-        user = User(username=username, avatar=avatar)
+        user = cls(username=username, avatar=avatar)
         db.session.add(user)
         db.session.commit()
         return user
 
-    @staticmethod
-    def leave_room(user_id, room_name):
+    @classmethod
+    def leave_room(cls, user_id, room_name):
         room = Room.query.filter_by(name=room_name).first()
         user_location = UserLocation.query.filter_by(user_id=user_id, room_id=room.id).first()
         if user_location:
@@ -39,8 +39,8 @@ class User(db.Model, SerializerMixin):
             db.session.commit()
         return room
 
-    @staticmethod
-    def enter_room(user_id, room_name):
+    @classmethod
+    def enter_room(cls, user_id, room_name):
         room = Room.query.filter_by(name=room_name).first()
 
         # Update location
@@ -54,9 +54,9 @@ class User(db.Model, SerializerMixin):
         db.session.commit()
         return room
 
-    @staticmethod
-    def get_active_users():
-        users = User.query.filter(User.is_active).all()
+    @classmethod
+    def get_active_users(cls):
+        users = cls.query.filter(cls.is_active).all()
         for user in users:
             user_dict = user.to_dict()
             location = UserLocation.query.filter_by(user_id=user.id).first()
@@ -65,13 +65,13 @@ class User(db.Model, SerializerMixin):
                 user_dict['room'] = room.name if room else None
             yield user_dict
     
-    @staticmethod
-    def get_active_users_for_room(room_name):
+    @classmethod
+    def get_active_users_for_room(cls, room_name):
         room = Room.query.filter_by(name=room_name).first()
         if room:
             locations = UserLocation.query.filter_by(room_id=room.id).all()
             for location in locations:
-                user = User.query.filter_by(id=location.user_id).first()
+                user = cls.query.filter_by(id=location.user_id).first()
                 if user.is_active:
                     yield user.to_dict()
 
