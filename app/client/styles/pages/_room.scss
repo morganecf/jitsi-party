@@ -14,25 +14,19 @@
 		width: 100%;
 		text-shadow: 0 0 4px $background-color;
 		padding-left: 1em;
-		display: none;
-	}
-
-	&.entered .room-header {
-		display: initial;
 	}
 
 	.room-content {
-		display: flex;
+		display: none;
 		align-items: center;
 		justify-content: center;
 		flex: 1;
 		padding: .5em;
 		background-color: lighten($background-color, 10%);
-		display: none;
 	}
 
 	&.entered .room-content {
-		display: initial;
+		display: flex;
 	}
 
 	.jitsi-video {
@@ -84,8 +78,6 @@
 			max-width: 360px;
 			height: 85%;
 			max-height: 800px;
-			overflow: visible;
-			pointer-events: none;
 		}
 
 		.door-background {
@@ -98,6 +90,11 @@
 			left: auto;
 			right: auto;
 			bottom: auto;
+			padding: 3em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			width: 35%;
 			max-width: 400px;
 			height: 80%;
@@ -122,6 +119,7 @@
 			-webkit-transform-origin: 0% 50%;
 			overflow: visible;
 			display: flex;
+			pointer-events: none;
 
 
 			.knob {
@@ -163,7 +161,7 @@
 
 		button {
 			z-index: 1;
-			margin-bottom: 1em;
+			margin: 1em;
 		}
 	}
 

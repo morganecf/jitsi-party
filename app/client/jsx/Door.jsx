@@ -42,8 +42,11 @@ class Door extends Component {
 
         return (
             <div className="door-wrapper">
-                <div className="door-background"> </div>
-                <div onClick={this.handleDoorClick.bind(this)} className="door-target"></div>
+                <div className="door-background"></div>
+                <div onClick={this.handleDoorClick.bind(this)} className="door-target">
+                    {users}
+                    <button onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} onClick={this.props.onClick.bind(this)}>Enter {this.props.room}</button>
+                </div>
                 <div className={doorClass}>
                     <div className="knob"></div>
                     <div className="spacer"></div>
@@ -60,8 +63,6 @@ class Door extends Component {
                     </div>
                     <div className="spacer"></div>
                 </div>
-                <button onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} onClick={this.props.onClick.bind(this)}>Enter {this.props.room}</button>
-                {users}
             </div>
         )
     }
