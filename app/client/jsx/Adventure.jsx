@@ -1,5 +1,4 @@
 import React from 'react'
-import RoomLayout from './RoomLayout.jsx'
 
 export default props => {
     const onClick = props.onClick
@@ -12,7 +11,7 @@ export default props => {
                     return (
                         <button
                             key={`adventure-button-${i}`}
-                            onClick={() => onClick(button.getNextRoom(RoomLayout))}>{button.text}</button>
+                            onClick={() => onClick(button.getNextRoom())}>{button.text}</button>
                     )
                 })}
             </div>

@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
-import RoomLayout from './RoomLayout.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
+import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
+import { HttpApi, WebSocketApi } from './WebAPI.jsx'
+import { Beforeunload } from 'react-beforeunload';
 
 class Room extends Component {
     /*
@@ -17,17 +19,46 @@ class Room extends Component {
     *   3. Content (video, art, text, etc)
     *   4. Navigation component used to move through rooms
     *   5. Optional artifact, i.e. something the user finds or unlocks, like a map
-    * Add new rooms to RoomLayout.jsx, where individual rooms are defined. Add new TYPES of rooms
+    * Add new rooms to rooms.json, where individual rooms are defined. Add new TYPES of rooms
     * by creating a new component for that room and updating the getRoomType() mapping.
     */
     constructor(props) {
         super(props)
         this.state = {
-            room: this.props.currentRoom
+            room: this.props.currentRoom,
+            entered: false,
+            users: []
+        }
+
+        this.httpApi = new HttpApi()
+        this.socketApi = new WebSocketApi()
+        this.socketApi.startPinging(this.props.user.userId)
+
+        // Refresh list of users each time a user enters or leaves, or each time a user
+        // disconnects (i.e. if client crashes). Disconnect events will lag behind other
+        // events since they rely on the flask-socketio's heartbeat system.
+        const onSocketEvent = room => {
+            if (room === this.state.room) {
+                this.fetchUsersForRoom(room)
+            }
+        }
+        this.socketApi.on('user-left-room', onSocketEvent.bind(this))
+        this.socketApi.on('user-entered-room', onSocketEvent.bind(this))
+        this.socketApi.on('user-disconnected', this.fetchUsersForRoom.bind(this))
+    }
+
+    async fetchUsersForRoom(room) {
+        const { success, users } = await this.httpApi.getUsers(room || this.state.room)
+        if (success) {
+            this.setState({ users })
         }
     }
 
-    getRoomType() {
+    componentDidMount() {
+        this.fetchUsersForRoom(this.state.room)
+    }
+
+    getRoomContent() {
         /*
         * There are currently 3 different types of rooms:
         *   1. Regular Jitsi room that just has video
@@ -35,48 +66,77 @@ class Room extends Component {
         *   3. Text-based adventure rooms where you have to make a decision
         *   4. Special purpose rooms that exist at a different route
         */
-       const roomData = RoomLayout[this.state.room]
+       const roomData = this.props.rooms[this.state.room]
        const jitsiData = {
-           displayName: this.props.displayName,
-           avatar: this.props.avatar,
+           displayName: this.props.user.displayName,
+           avatar: this.props.user.avatar,
            roomName: roomData.name,
            muteRoom: roomData.muteRoom,
        }
        return {
            art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
            jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
-           adventure: <Adventure options={roomData.adventureOptions} onClick={this.onSwitchRoom.bind(this)}></Adventure>,
            iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
+           adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>
        }[roomData.type]
     }
 
     getRoomDescription() {
-        if (RoomLayout[this.state.room].description) {
+        if (this.props.rooms[this.state.room].description) {
             return (
                 <div className="room-content">
-                    {RoomLayout[this.state.room].description}
+                    {this.props.rooms[this.state.room].description}
                 </div>
             )
         }
     }
 
-    onSwitchRoom(room) {
-        this.setState({ room })
+    onAdventureClick(room) {
+        this.setState({ room, entered: false })
         this.props.updateCurrentRoom(room)
     }
 
+    onSwitchRoom(room) {
+        // Leave current room
+        this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
+        // Go to new room, but don't open the door
+        this.setState({ room, entered: false })
+        this.props.updateCurrentRoom(room)
+        this.fetchUsersForRoom(room)
+    }
+
+    onEnterRoom() {
+        // Open the door
+        this.setState({ entered: true })
+        this.socketApi.enterRoom(this.props.user.userId, this.state.room)
+    }
+
+    handleBeforeUnload() {
+        // Update server if user closes tab or refreshes
+        this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
+    }
+
     render() {
-        if (RoomLayout[this.state.room].type === 'redirect') {
-            return <Redirect to={RoomLayout[this.state.room].route}/>
+        const room = this.props.rooms[this.state.room]
+
+        if (room.type === 'redirect') {
+            this.socketApi.enterRoom(this.props.user.userId, this.state.room)
+            return <Redirect to={room.route}/>
         }
+
+        const content = this.state.entered || room.type === 'adventure' ?
+            this.getRoomContent() :
+            <Door room={room.name} users={this.state.users} onClick={this.onEnterRoom.bind(this)}></Door>
+
         return (
             <div className="room">
                 <div className="room-header">
-                    <h2 className="room-header">{RoomLayout[this.state.room].name}</h2>
+                    <h2 className="room-header">{room.name}</h2>
                 </div>
-                {this.getRoomType()}
+                {content}
                 {this.getRoomDescription()}
-                <Navigation directions={RoomLayout[this.state.room].directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
+                <Navigation directions={room.directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
+                <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
             </div>
         )
     }

@@ -1,26 +1,26 @@
 import { handleActions } from 'redux-actions'
 
-const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME'
-const UPDATE_AVATAR = 'UPDATE_AVATAR'
+const ADD_ROOMS = 'ADD_ROOMS'
+const UPDATE_USER = 'UPDATE_USER'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
 const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
 
 const initialState = {
-    displayName: '',
-    avatar: '',
+    rooms: {},
+    user: {},
     currentRoom: '',
     path: [],
     isAudioMuted: false,
     isVideoMuted: false
 }
 
-function updateDisplayNameAction(state, displayName) {
-    return Object.assign({}, state, displayName)
+function addRoomsAction(state, rooms) {
+    return Object.assign({}, state, rooms)
 }
 
-function updateAvatarAction(state, avatar) {
-    return Object.assign({}, state, avatar)
+function updateUserAction(state, user) {
+    return Object.assign({}, state, user)
 }
 
 function updateCurrentRoomAction(state, currentRoom) {
@@ -38,13 +38,13 @@ function updateVideoMutedAction(state, isVideoMuted) {
 
 export default {
     /* Action creators: return actions for reducers */
-    updateDisplayNameActionCreator: displayName => ({
-        type: UPDATE_DISPLAY_NAME,
-        displayName
+    addRoomsActionCreator: rooms => ({
+        type: ADD_ROOMS,
+        rooms
     }),
-    updateAvatarActionCreator: avatar => ({
-        type: UPDATE_AVATAR,
-        avatar
+    updateUserActionCreator: user => ({
+        type: UPDATE_USER,
+        user
     }),
     updateCurrentRoomActionCreator: currentRoom => ({
         type: UPDATE_CURRENT_ROOM,
@@ -60,8 +60,8 @@ export default {
     }),
     /* Reducers */
     reducer: handleActions({
-        [UPDATE_DISPLAY_NAME]: updateDisplayNameAction,
-        [UPDATE_AVATAR]: updateAvatarAction,
+        [ADD_ROOMS]: addRoomsAction,
+        [UPDATE_USER]: updateUserAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
         [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,
         [UPDATE_VIDEO_MUTED]: updateVideoMutedAction

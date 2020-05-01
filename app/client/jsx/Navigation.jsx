@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import RoomLayout from './RoomLayout.jsx'
 import avatars from './avatars.jsx'
 
 class Navigation extends Component {
@@ -51,28 +50,28 @@ class Navigation extends Component {
                 <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>
                         <FontAwesomeIcon icon={faArrowLeft}/>
-                        <span className="navigation-room-name">{_.get(RoomLayout[west], 'name')}</span>
+                        <span className="navigation-room-name">{_.get(this.props.rooms[west], 'name')}</span>
                     </button>
                 </div>
                 <div className="column">
                     <button className="north" disabled={!north} onClick={() => onClick(north)}>
                         <FontAwesomeIcon icon={faArrowUp}/>
-                        <span className="navigation-room-name">{_.get(RoomLayout[north], 'name')}</span>
+                        <span className="navigation-room-name">{_.get(this.props.rooms[north], 'name')}</span>
                     </button>
                     <button className="south" disabled={!south} onClick={() => onClick(south)}>
                         <FontAwesomeIcon icon={faArrowDown}/>
-                        <span className="navigation-room-name">{_.get(RoomLayout[south], 'name')}</span>
+                        <span className="navigation-room-name">{_.get(this.props.rooms[south], 'name')}</span>
                     </button>
                 </div>
                 <div className="column">
                     <button className="east" disabled={!east} onClick={() => onClick(east)}>
                         <FontAwesomeIcon icon={faArrowRight}/>
-                        <span className="navigation-room-name">{_.get(RoomLayout[east], 'name')}</span>
+                        <span className="navigation-room-name">{_.get(this.props.rooms[east], 'name')}</span>
                     </button>
                 </div>
                 <div className="column column-avatar">
                     <div className="puck-wrapper">
-                        <img className='avatar' id="navigation-puck" src={avatars[this.props.avatar[0]][this.props.avatar[1]]}/>
+                        <img className='avatar' id="navigation-puck" src={avatars[this.props.user.avatar[0]][this.props.user.avatar[1]]}/>
                     </div>
                 </div>
             </div>

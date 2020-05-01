@@ -2,16 +2,25 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
-import { Link, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
+import { HttpApi } from './WebAPI.jsx'
 
 class Welcome extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            displayName: this.props.displayName,
-            avatar: this.props.avatar,
+            displayName: null,
+            avatar: null,
             redirect: null
+        }
+        this.httpApi = new HttpApi()
+    }
+
+    async componentDidMount() {
+        const { success, rooms } = await this.httpApi.getRooms()
+        if (success) {
+            this.props.addRooms(rooms)
         }
     }
 
@@ -19,13 +28,22 @@ class Welcome extends Component {
         this.setState({ displayName: event.target.value })
     }
 
-    handleAvatarSelect(selection) { this.setState({ avatar: selection }) }
+    handleAvatarSelect(selection) {
+        this.setState({ avatar: selection })
+    }
 
-    handleReady() {
-        this.props.updateDisplayName(this.state.displayName)
-        this.props.updateAvatar(this.state.avatar)
-        this.props.updateCurrentRoom('vestibule')
-        this.setState({ redirect: '/party' })
+    async handleReady() {
+        const response = await this.httpApi.join(this.state.displayName, this.state.avatar)
+        if (response.success) {
+            const { displayName, avatar } = this.state
+            this.props.updateUser({
+                displayName,
+                avatar,
+                userId: response.userId
+            })
+            this.props.updateCurrentRoom('vestibule')
+            this.setState({ redirect: '/party' })
+        }
     }
 
     render() {
@@ -66,7 +84,7 @@ class Welcome extends Component {
 export default connect(
     state => state,
     {
-        updateDisplayName: reducers.updateDisplayNameActionCreator,
-        updateAvatar: reducers.updateAvatarActionCreator,
+        addRooms: reducers.addRoomsActionCreator,
+        updateUser: reducers.updateUserActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Welcome)
