@@ -57,7 +57,7 @@ Room.query.all()
 ```
 
 ### Running the app locally in production mode
-We use multiple workers in production, so we need a message queue to coordinate websocket broadcasting. We use SocketIO for websockets and RabbitMQ as our message queue.
+We use multiple workers in production, so we've added an experimental message queue that only gets activated in production mode. This is a tentative plan for Celery; don't worry about this for now. 
 ```bash
 # Install kombu (this also comes installed as part of your dev env)
 source venv/bin/activate
