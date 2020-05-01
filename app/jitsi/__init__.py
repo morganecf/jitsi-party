@@ -31,6 +31,7 @@ def create_app(config_name):
     db.init_app(app)
 
     # SocketIO
-    socketio.init_app(app, cors_allowed_origins='*')
+    queue = config[config_name].MESSAGE_QUEUE
+    socketio.init_app(app, cors_allowed_origins='*', message_queue=queue)
 
     return app
