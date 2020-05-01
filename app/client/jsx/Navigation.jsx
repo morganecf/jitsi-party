@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import avatars from './avatars.jsx'
+import { Avatars } from './avatars.jsx'
 
 class Navigation extends Component {
     constructor(props) {
@@ -71,7 +71,7 @@ class Navigation extends Component {
                 </div>
                 <div className="column column-avatar">
                     <div className="puck-wrapper">
-                        <img className='avatar' id="navigation-puck" src={avatars[this.props.user.avatar[0]][this.props.user.avatar[1]]}/>
+                      <img src={Avatars[this.props.user.avatar[0]][this.props.user.avatar[1]]}/>
                     </div>
                 </div>
             </div>
