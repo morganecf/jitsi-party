@@ -3,12 +3,13 @@ import * as d3 from 'd3';
 
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
-const MARKER_URL = 'https://fcbk.su/_data/stickers/ninja_bear/ninja_bear_09.png'
+const MAX_ROOM_CAPACITY = 20
 
 export default class MapVisualization {
     constructor(container, width, height, padding, mouseEvents) {
         _.assign(this, mouseEvents)
 
+        // Svg container for map
         this.svg = d3.select(container)
             .append('svg')
             .attr('width', width + padding)
@@ -16,6 +17,7 @@ export default class MapVisualization {
 
         this.xscale = d3.scaleLinear().range([padding, width - padding])
         this.yscale = d3.scaleLinear().range([padding, height - padding])
+        this.colorScale = d3.scaleSequential(d3.interpolatePuRd).domain([0, MAX_ROOM_CAPACITY])
     }
 
     getRoomShape({ x, y, width, height, doors={} }) {
@@ -77,11 +79,6 @@ export default class MapVisualization {
     }
 
     draw(data, visited) {
-        this.drawMap(data, visited)
-        this.drawMarker(data)
-    }
-
-    drawMap(data, visited) {
         // A 30x30 grid was used to derive the values in rooms.json.
         // This makes sure those values are scaled to this view while
         // using the space efficiently
@@ -108,6 +105,7 @@ export default class MapVisualization {
         // Draw rooms
         room.append('path')
             .attr('d', d => this.getRoomShape(d.map))
+            .attr('fill', d => this.colorScale(d.users.length + 1))
             .on('mouseenter', d => {
                 this.onRoomEnter(d.key)
                 d3.select(d3.event.target)
@@ -119,42 +117,7 @@ export default class MapVisualization {
                     .classed('highlighted-room', false)
             })
             .on('click', d => this.onRoomClick(d.key))
-            .classed('visited', d => _.has(visited, d.key))
-
-        // Add room number inside each room
-        room.append('text')
-            .attr('x', d => this.xscale(d.map.x + d.map.width) - 4)
-            .attr('y', d => this.yscale(d.map.y + d.map.height) - 6)
-            .text((d, i) => i)
-    }
-
-    drawMarker(data) {
-        // Currently the map is hardcoded to always be in this location
-        const bedroom = _.find(data, d => d.key === 'trashyBedroom')
-        const { x, y } = bedroom.map
-        const puckSize = 40
-
-        const defs = this.svg.append('defs').attr('id', 'marker-defs')
-
-        const pattern = defs.append('pattern')
-            .attr('id', 'marker-pattern')
-            .attr('height', 1)
-            .attr('width', 1)
-            .attr('x', '0')
-            .attr('y', '0')
-
-        pattern.append('image')
-            .attr('x', 0)
-            .attr('y', 0)
-            .attr('height', puckSize)
-            .attr('width', puckSize)
-            .attr('xlink:href', MARKER_URL)
-
-        this.svg.append("circle")
-            .attr('r', puckSize / 2)
-            .attr('cx', this.xscale(x) + 5)
-            .attr('cy', this.yscale(y) + 30)
-            .attr('fill', 'url(#marker-pattern)')
+            // .classed('unvisited', d => !visited[d.key])
     }
 }
 
