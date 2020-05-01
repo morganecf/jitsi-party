@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PuckBox from './PuckBox.jsx';
-import avatars from './avatars.jsx'
+import { Avatars } from './avatars.jsx'
 
 
 class PuckSelect extends Component {
@@ -8,7 +8,7 @@ class PuckSelect extends Component {
         super(props)
         this.state = {
             columnOpen: false,
-            rowOpen: null, 
+            rowOpen: null,
             avatar: null,
             opacity: this.props.opacity
         }
@@ -33,7 +33,8 @@ class PuckSelect extends Component {
     if (this.state.avatar===null) { // checks whether selection not yet complete
 
       // puck list generated from 0th colorway of each design
-      let puck_list = avatars.map(function(arr,i) { return arr[0] }).slice(0, avatars.length - 1)
+      console.log(Avatars)
+      // let puck_list = Object.keys(avatars).forEach(function(key) { return key.purple })
       let all_avatar_designs_array
       let fade = this.props.opacity
 
