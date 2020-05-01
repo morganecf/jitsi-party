@@ -29,7 +29,6 @@ class Welcome extends Component {
     }
 
     handleAvatarSelect(selection) {
-        console.log(selection)
         this.setState({ avatar: selection })
     }
 
