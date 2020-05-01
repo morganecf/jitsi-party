@@ -54,27 +54,30 @@ class Welcome extends Component {
         let text_entry = {
           padding: '6px 10px',
           border: '2px solid #D6D3CD',
+          backgroundColor: '#D6D3CD',
           borderRadius: '7px',
-        //   backgroundColor: '#222426',
-          color: '#D6D3CD',
+          color: '#1B1E1F',
           outline: 'none',
           boxShadow: 'none',
-          fontSize: '14px'
+          fontSize: '20px'
         }
 
         let name_opacity = 'form-fade'
         let avatar_opacity = 'form-fade'
-        let party_opacity = 'form-fade'
+        let party_opacity = 'form-fade-party'
         if (this.state.displayName=='') { name_opacity = 'form' }
         if (this.state.displayName) { avatar_opacity = 'form' }
         if (this.state.displayName && this.state.avatar) { party_opacity = 'form-party' }
 
         return (
             <div className="vestibule">
-                <h1>Welcome have fun</h1>
+                <br/>
+                <div className='serif'>You've met with a terrible fate, haven't you?</div>
+                <h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>
+                <img className='splash' src='./js/images/party.png'/>
                 <input style={text_entry} autoComplete="off" className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/><br/>
                 <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
-                <input className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.displayName} />
+                <input id='button' className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.displayName} />
             </div>
         )
 

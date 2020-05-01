@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
 .map {
     $room-color: #9292b0;
     $highlight-color: #b85f5f;
@@ -19,7 +21,7 @@
 
     #map-key {
         margin: 0 20px;
-        font-family: Georgia;
+        font-family: Alegreya;
         font-size: 15px;
 
         .map-key-item {
