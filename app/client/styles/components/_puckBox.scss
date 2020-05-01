@@ -6,45 +6,49 @@
 .box {
 	text-align: center;
 	width: 52px;
-	height: 84px;
-	margin: 4px 4px 0px 0px;
+	height: 74px;
+	margin: 6px 4px 0px 0px;
 	border: 1px solid rgba(0, 0, 0, 0);
 	transition: height .5s;
 	border-radius: 5px;
-}
-.box-selected {
-	text-align: center;
-	width: 52px;
-	height: 84px;
-	margin: 4px 4px 0px 0px;
-	background-color: #D6D3CD;
-	border: 1px solid #D6D3CD;
+	background: radial-gradient(rgba(27, 30, 31, 1) 0%, rgba(27, 30, 31, .8) 55%, rgba(27, 30, 31, .5) 67%, rgba(27, 30, 31, 0) 95%, rgba(27, 30, 31, 0) 100%);
 }
 .box:hover {
 	width: 52px;
-	height: 84px;
+	height: 74px;
 	border: 1px solid #D6D3CD;
+	background-color: rgba(27, 30, 31, .6);
 	transition: border .25s;
 }
 
 .image {
 	text-align: center;
-	min-width: 42px !important;
-	max-width: 42px !important;
-	width: 42px !important;
-	margin: 8px 4px 0px 4px;
+	min-width: 38px !important;
+	max-width: 38px !important;
+	width: 38px !important;
+	margin: 4px 4px 0px 4px;
 	height: auto;
 	max-height: 70px !important;
 }
 .non-selected-image {
 	text-align: center;
-	min-width: 42px !important;
-	width: 42px !important;
-	margin: 8px 4px 0px 4px;
+	min-width: 38px !important;
+	width: 38px !important;
+	margin: 4px 4px 0px 4px;
 	height: auto;
 	opacity:.25;
 	transition: opacity .25s;
 	max-height: 70px !important;
+}
+.non-selected-box {
+	text-align: center;
+	width: 52px;
+	height: 74px;
+	margin: 6px 4px 0px 0px;
+	border: 1px solid rgba(0, 0, 0, 0);
+	transition: height .5s;
+	border-radius: 5px;
+	// background-color: rgba(27, 30, 31, .125);
 }
 
 .outer {

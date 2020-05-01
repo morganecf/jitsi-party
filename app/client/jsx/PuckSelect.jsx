@@ -8,7 +8,7 @@ class PuckSelect extends Component {
         super(props)
         this.state = {
             columnOpen: false,
-            rowOpen: null,
+            rowOpen: null, 
             avatar: null,
             opacity: this.props.opacity
         }
@@ -16,13 +16,13 @@ class PuckSelect extends Component {
       }
 
   onButtonClick() { this.setState({ columnOpen: true }) }
-  onButtonClickReset() {
+  onButtonClickReset() { // to fix
     this.setState({ columnOpen: false })
     this.setState({ rowOpen: null })
     this.setState({ avatar: null })
-    this.forceUpdate()
+    // this.forceUpdate()
   }
-  handleClick(id) { this.setState({ rowOpen: id }) }
+  handleClickDesign(id) { this.setState({ rowOpen: id }) }
   handleClickColor(id) {
     this.setState({ avatar: id })
     this.props.handleSelect([this.state.rowOpen,id])
@@ -30,61 +30,26 @@ class PuckSelect extends Component {
 
   render() {
 
-    //reselect button WIP
-    if (this.state.avatar!=null) {
-      return (
-        <div className='outer'>
-          <input className='fade' type="button" onClick={this.onButtonClick} value="Pick your puck"/>
-          <div className='spacer'/>
-          <div><img className='image' src={avatars[this.state.rowOpen][this.state.avatar]}/></div>
-        </div>
-      )
-    } else {
+    if (this.state.avatar===null) { // checks whether selection not yet complete
 
+      // puck list generated from 0th colorway of each design
       let puck_list = avatars.map(function(arr,i) { return arr[0] }).slice(0, avatars.length - 1)
-      let puck_array
+      let all_avatar_designs_array
       let fade = this.props.opacity
-      if (this.state.columnOpen) {
+
+      if (this.state.columnOpen) { // checks whether selection begun by clicking button, opening column
 
         fade = 'fade'
+        all_avatar_designs_array = puck_list.map((puck,id) => {
 
-        puck_array = puck_list.map((puck,id) => {
+          if (this.state.rowOpen!==id) { // checks each item in column for whether selected
 
-          if (this.state.rowOpen===id) {
-
-            let variant_array = avatars[this.state.rowOpen].map((color,id) => {
-
-              let selected = 'image'
-              // if (id===0) { selected = 'box-selected' }
-              let handleClickColor = () => this.handleClickColor(id)
-
-              // avatar color variant selection
-              return (
-                <PuckBox
-                handleClick={handleClickColor}
-                key={`puckbox-${id}`}
-                image={color}
-                imageStyle={selected}
-                />
-              )
-            })
-
-            return (
-              <div className='inner'>
-              {variant_array}
-              </div>
-            )
-
-          } else {
-
-            let handleClick = () => this.handleClick(id)
-
+            let handleClick = () => this.handleClickDesign(id)
             let image_transparency = 'image'
             if (this.state.rowOpen!=null && this.state.rowOpen!==id) {
               image_transparency = 'non-selected-image'
             }
-            // avatar style selection
-            return (
+            return ( // returns single instance of each nonselected design
               <PuckBox
               handleClick={handleClick}
               key={id}
@@ -94,21 +59,48 @@ class PuckSelect extends Component {
               />
             )
 
-          }
+          } else { // selected design
 
+            let colorway_variants_array = avatars[this.state.rowOpen].map((color,id) => {
+              let selected = 'image'
+              let handleClick = () => this.handleClickColor(id)
+              return ( // returns all colorways for selected design
+                <PuckBox
+                handleClick={handleClick}
+                key={`puckbox-${id}`}
+                image={color}
+                imageStyle={selected}
+                />
+              )
+            })
+            return ( // colorways row in place of selected column item
+              <div className='inner'>
+              {colorway_variants_array}
+              </div>
+            )
+
+          }
         })
       }
 
-      return(
+      return ( // column of singleton nonselected items with at most one of them swapped out for colorway variants row
         <div className='outer'>
         <input className={fade} type="button" onClick={this.onButtonClick} value="Pick your puck"/>
-        {puck_array}
+        {all_avatar_designs_array}
         </div>
       )
 
+    } else {
+
+      return ( // when avatar state isn't null, collapse all and display choice
+        <div className='outer'>
+          <input className='fade' type="button" onClick={this.onButtonClick} value="Pick your puck"/>
+          <div className='spacer'/>
+          <div><img className='image' src={avatars[this.state.rowOpen][this.state.avatar]}/></div>
+        </div>
+      ) // reselection WIP
+
     }
-
-
 
   }
 }
