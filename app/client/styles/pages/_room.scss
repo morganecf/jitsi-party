@@ -101,11 +101,6 @@
 			max-height: 900px;
 		}
 
-		.door-target:hover + .door,
-		.door.open {
-			-webkit-transform: rotateY(-80deg);
-		}
-
 		.door-background {
 			background: black;
 			z-index: -1;
@@ -114,13 +109,16 @@
 		.door {
 			z-index: 100;
 			background: gray;
-			transition: all .75s;
-			-webkit-transform: rotateY(0deg);
 			-webkit-transform-origin: 0% 50%;
+			-moz-transform-origin: 0% 50%;
 			overflow: visible;
 			display: flex;
 			pointer-events: none;
-
+			animation: door-open 1s;
+			-webkit-animation: door-open 1s;
+			-moz-animation: door-open 1s;
+			animation-fill-mode: forwards;  
+			-moz-animation-fill-mode: forwards;
 
 			.knob {
 				position: absolute;
@@ -205,4 +203,32 @@
 		bottom: 1em;
 		right: 1.2em;
 	}
+}
+
+@-webkit-keyframes door-open {
+  0% {
+  	-webkit-transform: rotateY(0deg);
+  }
+
+  45% {
+  	-moz-transform: rotateY(0deg);
+  }
+
+  100% {
+  	-webkit-transform: rotateY(-80deg);
+  }
+}
+
+@-moz-keyframes door-open {
+  0% {
+  	-moz-transform: rotateY(0deg);
+  }
+
+  45% {
+  	-moz-transform: rotateY(0deg);
+  }
+
+  100% {
+  	-moz-transform: rotateY(-80deg);
+  }
 }
