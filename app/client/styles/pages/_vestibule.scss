@@ -2,9 +2,24 @@
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	// padding-top: 5em;
 
 	> div {
 		margin-bottom: 1em;
+		text-align: center;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	input[type="text"] {
+          padding: 6px 10px;
+          border: 2px solid #D6D3CD;
+          border-radius: 7px;
+          background: white;
+          outline: none;
+          box-shadow: none;
+          font-size: 14px;
+          text-align: center;
 	}
 }
