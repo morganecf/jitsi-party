@@ -446,7 +446,6 @@
     },
     "map": {
         "name": "Map",
-        "type": "redirect",
-        "route": "/map"
+        "type": "map"
     }
 }
