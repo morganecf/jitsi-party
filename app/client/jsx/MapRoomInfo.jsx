@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatars } from './avatars.jsx'
+import UserList from './UserList.jsx'
 
 export default props => {
     if (!props.room) {
@@ -30,17 +30,7 @@ export default props => {
         userContent = (
             <div>
                 <div className="room-info-content">{numPeople}</div>
-                <div className="user-list">
-                    {props.users.map(user => {
-                        const [ type, color ] = user.avatar.split('-')
-                        return (
-                            <div key={user.username} className="room-user">
-                                <img src={Avatars[type][color]}></img>
-                                <div>{user.username}</div>
-                            </div>
-                        )
-                    })}
-                </div>
+                <UserList users={props.users}></UserList>
             </div>
         )
     } else {
