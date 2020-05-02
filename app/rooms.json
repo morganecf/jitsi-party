@@ -62,7 +62,8 @@
                 "east": 15,
                 "south": 16
             }
-        }
+        },
+        "doorTint": "#FF5938"
     },
     "danceParty": {
         "name": "Velvet",
@@ -95,7 +96,8 @@
                 "west": 12,
                 "north": 15
             }
-        }
+        },
+        "doorTint": "#E8BE3C"
     },
     "clubPolo": {
         "name": "Club Polo",
@@ -120,7 +122,8 @@
             "doors": {
                 "south": 15
             }
-        }
+        },
+        "doorTint": "#9EFF7A"
     },
     "bathroom": {
         "name": "Bathroom",
@@ -139,7 +142,8 @@
                 "east": 12,
                 "south": 9
             }
-        }
+        },
+        "doorTint": "white"
     },
     "trashyBedroom": {
         "name": "Clarendon Gone Wild",
@@ -177,12 +181,13 @@
             "doors": {
                 "east": 15
             }
-        }
+        },
+        "doorTint": "black"
     },
     "artGallery": {
         "name": "Art Gallery",
         "type": "content",
-        "description": "In the gallery spaces up ahead, you will find art created by your fellow Clarendonites :)",
+        "description": "In the gallery spaces up ahead, you will find art created by your fellow Clarendonians :)",
         "directions": {
             "north": "gallery1",
             "west": "livingRoom",
@@ -363,7 +368,8 @@
             "doors": {
                 "west": 13
             }
-        }
+        },
+        "doorTint": "#64E0E8"
     },
     "kitchen": {
         "name": "Kitchen",
@@ -385,7 +391,8 @@
                 "east": 13,
                 "west": 15
             }
-        }
+        },
+        "doorTint": "green"
     },
     "gameRoom": {
         "name": "Game Room",
@@ -406,7 +413,8 @@
                 "west": 20,
                 "east": 19
             }
-        }
+        },
+        "doorTint": "orange"
     },
     "bubbleBaths": {
         "name": "Bubble Baths",
@@ -423,7 +431,8 @@
             "doors": {
                 "west": 19
             }
-        }
+        },
+        "doorTint": "#946EFF"
     },
     "room314": {
         "name": "Room 314",
@@ -437,7 +446,8 @@
         },
         "directions": {
             "north": "vestibule"
-        }
+        },
+        "doorTint": "black"
     },
     "bye": {
         "name": "Bye",
