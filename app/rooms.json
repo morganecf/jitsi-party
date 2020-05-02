@@ -284,30 +284,6 @@
         },
         "map": {
             "x": 24,
-<<<<<<< HEAD
-=======
-            "y": 7,
-            "width": 4,
-            "height": 4,
-            "doors": {
-                "south": 25,
-                "east": 10
-            }
-        }
-    },
-    "boudoir": {
-        "name": "Boudoir",
-        "backgroundImage": "js/images/rooms/boudoir.jpg",
-        "capacity": 4,
-        "type": "jitsi",
-        "description": "Get dolled up",
-        "directions": {
-            "west": "feelings",
-            "south": "bunnyRun"
-        },
-        "map": {
-            "x": 28,
->>>>>>> Add backgrounds
             "y": 9,
             "width": 2,
             "height": 2,
