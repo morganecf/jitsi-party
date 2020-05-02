@@ -156,6 +156,10 @@ style.appendChild(document.createTextNode(css));
         }
     }
 
+    shouldComponentUpdate(nextProps) {
+        return this.props.jitsiData.roomName != nextProps.jitsiData.roomName
+    }
+
     render() {
         // TODO it feels a bit weird having to reconnect on each render. Will this slow
         // things down?
