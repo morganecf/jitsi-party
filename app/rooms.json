@@ -107,6 +107,7 @@
             "Live deep house & tech house set from DJ Depolo (10 PM - 3 AM)"
         ],
         "muteRoom": true,
+        "backgroundImage": "js/images/rooms/clubpolo.jpg",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org"
         },
