@@ -34,7 +34,7 @@
 		flex: 1;
 	}
 
-	.jitsi-video + .room-content {
+	.jitsi-video + .room-content, .iframe-room + .room-content {
 		flex: 0;
 	}
 
