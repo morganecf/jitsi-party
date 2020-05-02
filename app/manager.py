@@ -1,6 +1,6 @@
 import os
 import json
-from jitsi import create_app, db
+from jitsi import create_app, db, run_prod
 from jitsi.models import Room, User
 
 # Create the application context 
@@ -15,6 +15,10 @@ def make_shell_context():
     Used to conveniently access db/models in the flask shell'''
     return dict(db=db, Room=Room, User=User)
 
+
+@app.cli.command('run-prod')
+def run_prod_cmd():
+    run_prod(app)
 
 @app.cli.command('create-db')
 def create_db():

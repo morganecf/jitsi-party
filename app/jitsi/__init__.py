@@ -8,7 +8,7 @@ from config import config, basedir
 staticdir = os.path.join(basedir, 'client/js')
 
 db = SQLAlchemy()
-socketio = SocketIO()
+socketio = SocketIO(async_mode="eventlet")
 
 # Register socket events with SocketIO instance
 from . import events
@@ -35,3 +35,6 @@ def create_app(config_name):
     socketio.init_app(app, cors_allowed_origins='*', message_queue=queue)
 
     return app
+
+def run_prod(app):
+    socketio.run(app, host='0.0.0.0', port=80)
