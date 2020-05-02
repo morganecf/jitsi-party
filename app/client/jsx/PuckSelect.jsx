@@ -14,16 +14,20 @@ class PuckSelect extends Component {
             opacity: this.props.opacity
         }
         this.onButtonClick = this.onButtonClick.bind(this)
+        this.onButtonClickReset = this.onButtonClickReset.bind(this)
         this.handleClickDesign = this.handleClickDesign.bind(this)
         this.handleClickColor = this.handleClickColor.bind(this)
       }
 
   onButtonClick() {
     this.setState({ columnOpen: true }) }
-  onButtonClickReset() { // to fix
+
+  onButtonClickReset() {
     this.setState({ columnOpen: false })
     this.setState({ rowOpen: null })
-    this.setState({ avatar: null })
+    this.setState({ avatarDesign: '' })
+    this.setState({ avatarColorway: '' })
+    this.setState({ columnOpen: true })
   }
   handleClickDesign(key, index) {
     this.setState({ avatarDesign: key, rowOpen: index }) }
@@ -64,7 +68,7 @@ class PuckSelect extends Component {
           } else { // selected design
             allColorwayVariants = Object.keys(Avatars[key]).map((variantKey, colorIndex) => {
               let selected = 'image'
-              let handleClick = () => this.handleClickColor(variantKey, colorIndex) 
+              let handleClick = () => this.handleClickColor(variantKey, colorIndex)
               return ( // returns all colorways for selected design
                 <PuckBox
                 handleClick={handleClick}
@@ -91,7 +95,7 @@ class PuckSelect extends Component {
     } else {
       return ( // when avatar state isn't null, collapse all and display choice
         <div className='outer'>
-          <input className='fade' type="button" onClick={this.onButtonClick} value="Pick your puck"/>
+          <input className='fade' type="button" onClick={this.onButtonClickReset} value="Pick your puck"/>
           <div className='spacer'/>
           <div><img className='image' src={Avatars[this.state.avatarDesign][this.state.avatarColorway]}/></div>
         </div>
