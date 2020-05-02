@@ -43,7 +43,7 @@ class JitsiVideo extends Component {
     handleKeydown(e) {
         if (!this.api) { return; }
         e = e || window.event;
-        switch(e.which || e.keyCode) {
+        switch (e.which || e.keyCode) {
             case 65:
                 // a
                 this.api.executeCommand('toggleAudio');
@@ -52,6 +52,51 @@ class JitsiVideo extends Component {
                 // v
                 this.api.executeCommand('toggleVideo');
                 break;
+        }
+    }
+
+    makeJitsiTransparent() {
+        const iframe = document.querySelector('#jitsi-container iframe')
+        iframe.setAttribute('allowtransparency', 'true')
+        try {
+            const iframeDocument = iframe.contentWindow.document
+            const css = `
+                body {
+                    background-color: transparent !important;
+                }
+                body #largeVideoContainer.videoContainer {
+                    background-color: transparent !important;
+                }
+                .tOoji {
+                    background-color: transparent !important;
+                }
+            `
+            const style = iframeDocument.createElement('style')
+            iframeDocument.head.appendChild(style);
+            style.type = 'text/css';
+            style.appendChild(iframeDocument.createTextNode(css));
+        } catch (err) {
+            console.log("%c******************************************************", 'background: #222; color: #bada55')
+            console.log("Can't make Jitsi transparent! Must be running locally.")
+            console.log("To test the background, inspect the document inside the iframe and paste this code into the console:")
+            console.log(`
+const css = \`
+body {
+    background-color: transparent !important;
+}
+body #largeVideoContainer.videoContainer {
+    background-color: transparent !important;
+}
+.tOoji {
+    background-color: transparent !important;
+}
+\`
+const style = document.createElement('style')
+document.head.appendChild(style);
+style.type = 'text/css';
+style.appendChild(document.createTextNode(css));
+            `)
+            console.log("%c******************************************************", 'background: #222; color: #bada55')
         }
     }
 
@@ -65,7 +110,7 @@ class JitsiVideo extends Component {
 
             const domain = 'party.gbre.org/jitsi/'
             // const domain = 'jitsi.gbre.org'
-            // const domain = 'meet.jit.si'
+            // const domain = 'meet.jit.si';
             const options = {
                 roomName: this.props.jitsiData.roomName,
                 parentNode: document.getElementById('jitsi-container'),
@@ -84,6 +129,7 @@ class JitsiVideo extends Component {
 
             this.api = new window.JitsiMeetExternalAPI(domain, options)
             this.api.addEventListener('videoConferenceJoined', () => {
+                this.makeJitsiTransparent()
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl: this.props.jitsiData.avatar,
@@ -121,7 +167,7 @@ class JitsiVideo extends Component {
         return (
             <div className="jitsi-video">
                 <div id="jitsi-placeholder">
-                    <FontAwesomeIcon icon={faSpinner} spin/>
+                    <FontAwesomeIcon icon={faSpinner} spin />
                 </div>
                 <div id="jitsi-container"></div>
             </div>
