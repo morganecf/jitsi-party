@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Avatars } from './avatars.jsx'
+import { SpecialAvatars } from './avatars.jsx'
 
 class Exit extends Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class Exit extends Component {
         return (
             <div className="exit">
                 <h1>Goodbye!</h1>
-                <img src={Avatars.thumb[this.props.user.avatar[1]]}/>
+                <img src={SpecialAvatars.thumb[this.props.user.avatar[1]]}/>
             </div>
         )
     }
