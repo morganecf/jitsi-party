@@ -98,11 +98,11 @@
         }
     },
     "clubPolo": {
-        "name": "Dance Party!",
+        "name": "Club Polo",
         "type": "iframe",
-        "description": "Live set from DJ Depolo streaming all night",
+        "description": "Live deep house & tech house set from DJ Depolo (10 PM - 3 AM)",
         "announcements": [
-            "Come listen to DJ Depolo spin all night"
+            "Live deep house & tech house set from DJ Depolo (10 PM - 3 AM)"
         ],
         "muteRoom": true,
         "iframeOptions": {
