@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -8,6 +9,8 @@ import { Avatars } from './avatars.jsx'
 class Navigation extends Component {
     constructor(props) {
         super(props)
+
+        this.socketApi = this.props.socketApi
     }
 
     componentDidMount() {
@@ -42,11 +45,22 @@ class Navigation extends Component {
         }
     }
 
+    getMapLink() {
+        if (this.props.showMap) {
+            return (
+                <div className="column">
+                    <Link to="/map">Map</Link>
+                </div>
+            )
+        }
+    }
+
     render() {
         const onClick = this.props.onClick
         const { north, south, east, west } = this.props.directions || {}
         return (
             <div className="navigation-container">
+                {this.getMapLink()}
                 <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>
                         <FontAwesomeIcon icon={faArrowLeft}/>

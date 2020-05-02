@@ -1,54 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
 
 .map {
-    $room-color: #9292b0;
-    $highlight-color: #b85f5f;
+    $unvisited-color: #D6D3CD;
     $transition-duration: .3s;
 
-    padding: 20px;
-
-    h1 {
-        text-align: center;
-    }
     p {
         text-align: center;
     }
 
-    .map-area {
+    .map-header {
         display: flex;
-        justify-content: center;
-    }
+        justify-content: space-between;
+        background: #303436;
+        padding: 10px 20px;
+        color: #d6d3cd;
 
-    #map-key {
-        margin: 0 20px;
-        font-family: Alegreya;
-        font-size: 15px;
-
-        .map-key-item {
+        .map-stats {
             display: flex;
-        }
 
-        .map-key-item.highlighted-key-item {
-            color: $highlight-color;
-            transition: color $transition-duration;
-        }
+            .map-stat-column {
+                margin-right: 25px;
 
-        .map-key-item-number {
-            margin-right: 10px;
-            font-weight: bold;
-        }
-
-        .visited-key {
-            margin: 10px 0;
-
-            #visited-block {
-                display: inline-block;
-                width: 15px;
-                height: 15px;
-                background: $room-color;
-                border: 2px solid #000;
+                .map-stat-emoji {
+                    font-size: large;
+                    margin-right: 5px;
+                }
             }
         }
+    }
+
+    #map-info {
+        width: 100%;
+
+        .room-info {
+            border: 1px solid grey;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 20px;
+
+            .room-name {
+                text-align: center;
+                font-size: larger;
+                font-weight: bold;
+            }
+
+            .room-info-content {
+                font-size: smaller;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .user-list {
+                margin-top: 10px;
+            }
+
+            .room-user {
+                display: flex;
+                font-size: smaller;
+                justify-content: center;
+
+                img {
+                    max-height: 40px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .map-area {
+        display: flex;
+        padding: 40px;
     }
 
     #d3-map svg .map-room {
@@ -61,19 +82,19 @@
         path {
             cursor: pointer;
             stroke-width: 2;
-            fill: $room-color;
             stroke: #000;
-            opacity: 0.5;
+            fill-opacity: 0.6;
         }
 
-        path.highlighted-room {
-            fill: $highlight-color;
-            opacity: 1;
-            transition: fill $transition-duration, opacity $transition-duration;
+        path.highlighted-room, path.unvisited.highlighted-room {
+            fill-opacity: 1;
+            stroke: #f2f1f1;
+            transition: fill-opacity $transition-duration, stroke $transition-duration;
         }
 
-        path.visited {
-            opacity: 1;
+        path.unvisited {
+            fill: $unvisited-color;
+            fill-opacity: 0.5;
         }
     }
 }
