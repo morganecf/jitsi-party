@@ -8,6 +8,7 @@ const rooms = {
         capacity: 10,
         type: 'jitsi',
         description: 'Welcome!',
+        backgroundImage: "js/images/rooms/vestibule.jpg",
         directions: {
             north: 'livingRoom',
             west: 'closet',

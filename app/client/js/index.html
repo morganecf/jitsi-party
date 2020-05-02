@@ -1,28 +1,17 @@
 <!doctype html>
 <html>
-    <head>
-        <!-- <link rel="stylesheet" type="text/css" href="js/styles.css"> -->
-    </head>
-    <body>
-        <title>Jitsi Party</title>
-        <div class="container">
-            <div class="app"></div>
-        </div>
-        <script src='js/external_api.js'></script>
-        <script type="text/javascript" src="js/bundle.js"></script>
-        <script>
-            function addCss(fileName) {
 
-                var iframeDocument = document.querySelector('iframe').contentWindow.document
-                var head = iframeDocument.head;
-                var link = iframeDocument.createElement("link");
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="js/styles.css"> -->
+</head>
 
-                link.type = "text/css";
-                link.rel = "stylesheet";
-                link.href = fileName;
+<body>
+    <title>Jitsi Party</title>
+    <div class="container">
+        <div class="app"></div>
+    </div>
+    <script src='js/external_api.js'></script>
+    <script type="text/javascript" src="js/bundle.js"></script>
+</body>
 
-                head.appendChild(link);
-            }
-        </script>
-    </body>
 </html>
