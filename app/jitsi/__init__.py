@@ -8,20 +8,23 @@ from config import config, basedir
 staticdir = os.path.join(basedir, 'client/js')
 
 db = SQLAlchemy()
-socketio = SocketIO(async_mode="eventlet")
+socketio = SocketIO()
 
 # Register socket events with SocketIO instance
-from . import events
+from . import events  # noqa
 
-# Factory function that returns the created application instance
+
 def create_app(config_name):
+    '''
+    Factory function that returns the created application instance
+    '''
     app = Flask(__name__, static_folder=staticdir)
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
     from jitsi import main
 
-    # Endpoints 
+    # Endpoints
     app.register_blueprint(main.main)
 
     # Enable cross-origin requests
@@ -36,5 +39,7 @@ def create_app(config_name):
 
     return app
 
-def run_prod(app):
-    socketio.run(app, host='0.0.0.0', port=80)
+
+def run_eventlet(app):
+    socketio.init_app(app, async_mode="eventlet")
+    socketio.run(app, host='0.0.0.0', port=os.getenv('FLASK_RUN_PORT'))

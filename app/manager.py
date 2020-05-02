@@ -1,12 +1,13 @@
 import os
 import json
-from jitsi import create_app, db, run_prod
+from jitsi import create_app, db, run_eventlet
 from jitsi.models import Room, User
 
-# Create the application context 
-app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 
+# Create the application context
+app = create_app(os.getenv('FLASK_ENV') or 'default')
 # The following are custom flask commands
+
 
 @app.shell_context_processor
 def make_shell_context():
@@ -16,9 +17,10 @@ def make_shell_context():
     return dict(db=db, Room=Room, User=User)
 
 
-@app.cli.command('run-prod')
-def run_prod_cmd():
-    run_prod(app)
+@app.cli.command('run-eventlet')
+def run_eventlet_cmd():
+    run_eventlet(app)
+
 
 @app.cli.command('create-db')
 def create_db():
@@ -38,6 +40,7 @@ def create_db():
     rooms = json.load(open('rooms.json'))
 
     # Create rooms and insert
-    db_rooms = [Room(name=room_name, room_type=room['type']) for room_name, room in rooms.items()]
+    db_rooms = [Room(name=room_name, room_type=room['type'])
+                for room_name, room in rooms.items()]
     db.session.add_all(db_rooms)
     db.session.commit()
