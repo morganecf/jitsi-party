@@ -187,9 +187,9 @@
         "name": "Gallery Room 1",
         "type": "art",
         "art": {
-            "title": "Bread",
-            "artist": "Jett",
-            "src": "./js/images/art/bread-jett.png"
+            "title": "Pothos",
+            "artist": "Ramona",
+            "src": "./js/images/art/pothos-ramona.jpg"
         },
         "directions": {
             "north": "gallery2",
@@ -210,9 +210,9 @@
         "name": "Gallery Room 2",
         "type": "art",
         "art": {
-            "title": "Butterfly Girl",
-            "artist": "LaRen",
-            "src": "./js/images/art/butterfly-girl-laren.jpg"
+            "title": "Heart Dress",
+            "artist": "Julia",
+            "src": "./js/images/art/heart-dress-julia.jpg"
         },
         "directions": {
             "north": "gallery3",
@@ -233,9 +233,9 @@
         "name": "Gallery Room 3",
         "type": "art",
         "art": {
-            "title": "Creazione di DJ",
-            "artist": "Phoebe",
-            "src": "./js/images/art/creazione-di-gatto.jpg"
+            "title": "Void",
+            "artist": "Alice",
+            "src": "./js/images/art/void-alice.jpg"
         },
         "directions": {
             "north": "gallery4",
@@ -256,9 +256,9 @@
         "name": "Gallery Room 4",
         "type": "art",
         "art": {
-            "title": "Origami",
+            "title": "Origami Fish",
             "artist": "Kevin",
-            "src": "./js/images/art/origami-kevin.jpg"
+            "src": "./js/images/art/dollar-fish-kevin.jpg"
         },
         "directions": {
             "north": "gallery5",
@@ -279,9 +279,9 @@
         "name": "Gallery Room 5",
         "type": "art",
         "art": {
-            "title": "Phoebe",
-            "artist": "Sean A",
-            "src": "./js/images/art/phoebe-by-sean.png"
+            "title": "TBD",
+            "artist": "TBD",
+            "src": ""
         },
         "directions": {
             "south": "gallery4",
@@ -302,9 +302,9 @@
         "name": "Gallery Room 6",
         "type": "art",
         "art": {
-            "title": "Dildos United & Hitachi Quilt",
-            "artist": "Alex",
-            "src": "./js/images/art/alex-art.png"
+            "title": "Orbital",
+            "artist": "Ramona",
+            "src": "./js/images/art/orbital-ramona.jpg"
         },
         "directions": {
             "south": "gallery5",
