@@ -83,7 +83,7 @@
         "directions": {
             "west": "bathroom",
             "south": "livingRoom",
-            "north": "clubPolo"
+            "north": "velvet"
         },
         "map": {
             "x": 13,
@@ -97,12 +97,12 @@
             }
         }
     },
-    "clubPolo": {
-        "name": "Club Polo",
+    "velvet": {
+        "name": "Velvet",
         "type": "iframe",
-        "description": "DJ set",
+        "description": "Live set from DJ Depolo streaming all night",
         "announcements": [
-            "DJ Depolo will be playing from x-y tonight"
+            "Come listen to DJ Depolo spin all night"
         ],
         "muteRoom": true,
         "iframeOptions": {
