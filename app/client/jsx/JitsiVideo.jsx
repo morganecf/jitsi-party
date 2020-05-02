@@ -100,6 +100,11 @@ style.appendChild(document.createTextNode(css));
         }
     }
 
+    hideSpinner() {
+        const placeholder = document.getElementById('jitsi-placeholder')
+        placeholder.style.display = "none";
+    }
+
     connect() {
         try {
             // If muteRoom=true in room settings, remove microphone controls.
@@ -130,6 +135,7 @@ style.appendChild(document.createTextNode(css));
             this.api = new window.JitsiMeetExternalAPI(domain, options)
             this.api.addEventListener('videoConferenceJoined', () => {
                 this.makeJitsiTransparent()
+                this.hideSpinner()
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl: this.props.jitsiData.avatar,
