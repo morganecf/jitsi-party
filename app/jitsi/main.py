@@ -36,6 +36,8 @@ def get_rooms():
                 'text': adventure_node['text'],
                 'buttons': adventure_node['buttons']
             }
+            if adventure_node.get('map'):
+                rooms[node_name]['map'] = adventure_node['map']
     return jsonify(rooms)
 
 @main.route('/', defaults={'path': ''})

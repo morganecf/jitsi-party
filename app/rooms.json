@@ -10,12 +10,12 @@
             "east": "gameRoom"
         },
         "map": {
-            "x": 11,
+            "x": 16,
             "y": 19,
-            "width": 10,
+            "width": 5,
             "height": 3,
             "doors": {
-                "north": 13,
+                "north": 16,
                 "west": 20,
                 "east": 20
             }
@@ -32,7 +32,7 @@
             "east": "vestibule"
         },
         "map": {
-            "x": 10,
+            "x": 15,
             "y": 20,
             "width": 1,
             "height": 2,
@@ -60,7 +60,7 @@
                 "north": 15,
                 "west": 15,
                 "east": 15,
-                "south": 13
+                "south": 16
             }
         }
     },
@@ -69,28 +69,56 @@
         "type": "iframe",
         "description": "Dance until you die!",
         "announcements": [
-            "9:30 PM - 11:00 PM: Drone & Ambient",
-            "11:00 PM - 1:00 AM: Progressive House & Disco House",
-            "1:00 AM - end: Chillout Cinema"
+            "9:30 - 10:00: Live Drone (tentative by Dewb)",
+            "10:00 - 11:00: Live Electronic Improv from Uncle Thumpy",
+            "11:00 - 12:00: Progressive House by dEviant",
+            "12:00 - 1:00: Tech House by DJ841",
+            "1:00 - LATE: Placebo Picture Show (eclectic music videos)"
         ],
         "muteRoom": true,
         "backgroundImage": "js/images/rooms/danceparty.jpg",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org"
+            "src": "https://player.twitch.tv/?channel=theplacebopictureshow&parent=jitsi.gbre.org"
         },
         "directions": {
             "west": "bathroom",
             "south": "livingRoom",
-            "north": "outdoors"
+            "north": "clubPolo"
         },
         "map": {
             "x": 13,
-            "y": 8,
+            "y": 9,
             "width": 5,
-            "height": 6,
+            "height": 5,
             "doors": {
                 "south": 15,
-                "west": 12
+                "west": 12,
+                "north": 15
+            }
+        }
+    },
+    "clubPolo": {
+        "name": "Club Polo",
+        "type": "iframe",
+        "description": "DJ set",
+        "announcements": [
+            "DJ Depolo will be playing from x-y tonight"
+        ],
+        "muteRoom": true,
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org"
+        },
+        "directions": {
+            "south": "danceParty",
+            "north": "outdoors"
+        },
+        "map": {
+            "x": 14,
+            "y": 5,
+            "width": 4,
+            "height": 4,
+            "doors": {
+                "south": 15
             }
         }
     },
@@ -123,9 +151,9 @@
             "west": "uncomfortableCloset"
         },
         "map": {
-            "x": 6,
+            "x": 8,
             "y": 14,
-            "width": 5,
+            "width": 3,
             "height": 3,
             "doors": {
                 "north": 9,
@@ -384,7 +412,7 @@
         "capacity": 5,
         "type": "jitsi",
         "map": {
-            "x": 13,
+            "x": 7,
             "y": 2,
             "width": 4,
             "height": 4
