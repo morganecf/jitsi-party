@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { Avatars } from './avatars.jsx'
 
 class JitsiVideo extends Component {
     constructor(props) {
@@ -136,9 +137,11 @@ style.appendChild(document.createTextNode(css));
             window.api.addEventListener('videoConferenceJoined', () => {
                 this.makeJitsiTransparent()
                 this.hideSpinner()
+                const [ avatarType, avatarColor ] = this.props.jitsiData.avatar
+                const avatarUrl = Avatars[avatarType][avatarColor]
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
-                    avatarUrl: this.props.jitsiData.avatar,
+                    avatarUrl,
                 }
                 // Persist audio/video muted settings unless acquired by muteRoom room setting
                 if (this.isAudioMuted || this.props.jitsiData.muteRoom) {
