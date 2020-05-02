@@ -30,7 +30,7 @@ export default props => {
         userContent = (
             <div>
                 <div className="room-info-content">{numPeople}</div>
-                <UserList users={props.users}></UserList>
+                <UserList users={props.users} room={props.room}></UserList>
             </div>
         )
     } else {

@@ -10,14 +10,20 @@ export default props => {
         users = users.slice(0, MAX_DISPLAYED_USERS)
         more = <div>...and more! Join them :)</div>
     }
+
+    const isPrivate = _.has(props.room, 'capacity')
+
     return (
         <div className="user-list">
             {users.map(user => {
                 const [ type, color ] = user.avatar.split('-')
+                const imgClass = isPrivate ? 'private' : ''
+                const username = isPrivate ? 'anonymous' : user.username
+
                 return (
                     <div key={user.username} className="room-user">
-                        <img src={Avatars[type][color]}></img>
-                        <div>{user.username}</div>
+                        <img className={imgClass} src={Avatars[type][color]}></img>
+                        <div>{username}</div>
                     </div>
                 )
             })}
