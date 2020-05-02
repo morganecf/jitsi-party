@@ -2,6 +2,14 @@
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+$serif: 'Alegreya';
 
-$serif:  'Alegreya', 'Georgia';
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/fonts/Alegreya/Alegreya-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Darker_Grotesque';
+  src: url('/fonts/Darker_Grotesque/DarkerGrotesque-Regular.ttf');
+}
