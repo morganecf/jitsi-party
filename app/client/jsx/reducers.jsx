@@ -20,6 +20,7 @@ function addRoomsAction(state, rooms) {
 }
 
 function updateUserAction(state, user) {
+  console.log(state, ' ', user)
     return Object.assign({}, state, user)
 }
 
