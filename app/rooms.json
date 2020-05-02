@@ -65,9 +65,9 @@
         }
     },
     "danceParty": {
-        "name": "Dance Party!",
+        "name": "Velvet",
         "type": "iframe",
-        "description": "Dance until you die!",
+        "description": "Dance until you die!!",
         "announcements": [
             "9:30 - 10:00: Live Drone (tentative by Dewb)",
             "10:00 - 11:00: Live Electronic Improv from Uncle Thumpy",
@@ -83,7 +83,7 @@
         "directions": {
             "west": "bathroom",
             "south": "livingRoom",
-            "north": "velvet"
+            "north": "clubPolo"
         },
         "map": {
             "x": 13,
@@ -97,8 +97,8 @@
             }
         }
     },
-    "velvet": {
-        "name": "Velvet",
+    "clubPolo": {
+        "name": "Dance Party!",
         "type": "iframe",
         "description": "Live set from DJ Depolo streaming all night",
         "announcements": [
@@ -446,6 +446,7 @@
     },
     "map": {
         "name": "Map",
-        "type": "map"
+        "type": "redirect",
+        "route": "/map"
     }
 }
