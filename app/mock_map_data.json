@@ -38,17 +38,17 @@
         {
             "username": "matt",
             "avatar": "normal-blue",
-            "room": null
+            "room": "danceParty"
         },
         {
             "username": "thao",
             "avatar": "trippy-orange",
-            "room": null
+            "room": "danceParty"
         },
         {
             "username": "david",
             "avatar": "whippit-red",
-            "room": null
+            "room": "bubbleBaths"
         },
         {
             "username": "alice",
