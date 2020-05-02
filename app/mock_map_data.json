@@ -54,6 +54,16 @@
             "username": "alice",
             "avatar": "whippit-purple",
             "room": null
+        },
+        {
+            "username": "morg",
+            "avatar": "dancing-purple",
+            "room": "closet"
+        },
+        {
+            "username": "daniel",
+            "avatar": "whippit-blue",
+            "room": "closet"
         }
     ]
 }
