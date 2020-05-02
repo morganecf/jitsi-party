@@ -38,11 +38,17 @@ class Room extends Component {
             iframe: true
         }
 
+        // Rooms that don't have doors are automatically "entered"
         const { room, entered } = this.props.currentRoom
-        this.state = { room, entered, users: [] }
+        const { type } = this.props.rooms[this.props.currentRoom.room]
+
+        this.state = {
+            room,
+            entered: this.roomTypesWithDoors[type] ? entered : true,
+            users: []
+        }
 
         this.httpApi = new HttpApi()
-
         this.socketApi = this.props.socketApi
         this.socketApi.startPinging(this.props.user.userId)
 
@@ -104,8 +110,8 @@ class Room extends Component {
     }
 
     onAdventureClick(room) {
-        this.setState({ room, entered: false })
-        this.props.updateCurrentRoom({ room, entered: false })
+        this.setState({ room, entered: true })
+        this.props.updateCurrentRoom({ room, entered: true })
     }
 
     onSwitchRoom(room) {
@@ -149,7 +155,7 @@ class Room extends Component {
             return <Redirect to={room.route}/>
         }
 
-        const content = this.state.entered || this.roomTypesWithDoors[room.type] ?
+        const content = this.state.entered ?
             this.getRoomContent() :
             <Door room={room.name} users={this.state.users} onClick={this.onEnterRoom.bind(this)}></Door>
 
