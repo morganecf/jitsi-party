@@ -2,16 +2,27 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 const PuckBox = (props) => {
-  let box_style = 'box'
-  if (props.imageStyle=='non-selected-image') { box_style = 'non-selected-box'}
-  return (
-    <div>
-      <Fade top>
-        <div className={box_style} onClick={props.handleClick} onMouseOver={props.handleTouch}>
+  let boxStyle = 'box'
+  if (props.imageStyle=='non-selected-image') { boxStyle = 'non-selected-box'}
+
+  if (boxStyle == 'box') { // Fade doesn't take props so we get this ugliness
+    return (
+      <div>
+        <Fade top>
+          <div className={boxStyle} onClick={props.handleClick} onMouseOver={props.handleTouch}>
+            <img src={props.image} className={props.imageStyle} />
+          </div>
+        </Fade>
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        <div className={boxStyle} onClick={props.handleClick} onMouseOver={props.handleTouch}>
           <img src={props.image} className={props.imageStyle} />
         </div>
-      </Fade>
-    </div>
-  )
+      </div>
+    )
+  }
 }
 export default PuckBox;
