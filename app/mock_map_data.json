@@ -1,0 +1,59 @@
+{
+    "data": [
+        {
+            "username": "morg",
+            "avatar": "book-orange",
+            "room": "vestibule"
+        },
+        {
+            "username": "daniel",
+            "avatar": "trippy-purple",
+            "room": "vestibule"
+        },
+        {
+            "username": "seanm",
+            "avatar": "book-blue",
+            "room": "vestibule"
+        },
+        {
+            "username": "seana",
+            "avatar": "normal-orange",
+            "room": "vestibule"
+        },
+        {
+            "username": "andrew",
+            "avatar": "whippit-red",
+            "room": "vestibule"
+        },
+        {
+            "username": "phoebe",
+            "avatar": "book-red",
+            "room": "bathroom"
+        },
+        {
+            "username": "jett",
+            "avatar": "dancing-purple",
+            "room": "kitchen"
+        },
+        {
+            "username": "matt",
+            "avatar": "normal-blue",
+            "room": null
+        },
+        {
+            "username": "thao",
+            "avatar": "trippy-orange",
+            "room": null
+        },
+        {
+            "username": "david",
+            "avatar": "whippit-red",
+            "room": null
+        },
+        {
+            "username": "alice",
+            "avatar": "whippit-purple",
+            "room": null
+        }
+    ]
+}

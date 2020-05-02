@@ -8,7 +8,7 @@ import IFrameRoom from './IFrameRoom.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
-import { HttpApi, WebSocketApi } from './WebAPI.jsx'
+import { HttpApi } from './WebAPI.jsx'
 import { Beforeunload } from 'react-beforeunload';
 
 class Room extends Component {
@@ -24,14 +24,20 @@ class Room extends Component {
     */
     constructor(props) {
         super(props)
-        this.state = {
-            room: this.props.currentRoom,
-            entered: false,
-            users: []
+
+        // These are the room types for which we show the map button
+        this.roomTypesWithMap = {
+            jitsi: true,
+            iframe: true,
+            art: true
         }
 
+        const { room, entered } = this.props.currentRoom
+        this.state = { room, entered, users: [] }
+
         this.httpApi = new HttpApi()
-        this.socketApi = new WebSocketApi()
+
+        this.socketApi = this.props.socketApi
         this.socketApi.startPinging(this.props.user.userId)
 
         // Refresh list of users each time a user enters or leaves, or each time a user
@@ -93,7 +99,7 @@ class Room extends Component {
 
     onAdventureClick(room) {
         this.setState({ room, entered: false })
-        this.props.updateCurrentRoom(room)
+        this.props.updateCurrentRoom({ room, entered: false })
     }
 
     onSwitchRoom(room) {
@@ -101,7 +107,7 @@ class Room extends Component {
         this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
         // Go to new room, but don't open the door
         this.setState({ room, entered: false })
-        this.props.updateCurrentRoom(room)
+        this.props.updateCurrentRoom({ room, entered: false })
         this.fetchUsersForRoom(room)
 
         // reset door anim
@@ -110,13 +116,15 @@ class Room extends Component {
             door.style.webkitAnimation = "none";
             setTimeout(() => { door.style.webkitAnimation = "" })
         }
-        
-
     }
 
     onEnterRoom() {
         // Open the door
         this.setState({ entered: true })
+        this.props.updateCurrentRoom({
+            room: this.state.room,
+            entered: true 
+        })
         this.socketApi.enterRoom(this.props.user.userId, this.state.room)
     }
 
@@ -146,7 +154,11 @@ class Room extends Component {
                 </div>
                 {content}
                 {this.getRoomDescription()}
-                <Navigation directions={room.directions} onClick={this.onSwitchRoom.bind(this)}></Navigation>
+                <Navigation
+                    directions={room.directions}
+                    onClick={this.onSwitchRoom.bind(this)}
+                    showMap={_.has(this.roomTypesWithMap, room.type)}>
+                </Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
             </div>
         )

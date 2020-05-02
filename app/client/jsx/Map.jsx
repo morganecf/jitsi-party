@@ -4,40 +4,73 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
 import MapVisualization from './MapVisualization.js'
+import MapRoomInfo from './MapRoomInfo.jsx'
+import { HttpApi } from './WebAPI.jsx'
 
 class Map extends Component { 
     constructor(props) {
         super(props)
+
         this.state = {
             redirect: null,
-            highlighted: null
+            highlighted: null,
+            users: []
         }
 
+        this.httpApi = new HttpApi()
+
+        this.props.socketApi.startPinging(this.props.user.userId)
+
+        this.props.socketApi.on('user-left-room', this.fetchUsers.bind(this))
+        this.props.socketApi.on('user-entered-room', this.fetchUsers.bind(this))
+        this.props.socketApi.on('user-disconnected', this.fetchUsers.bind(this))
+
+        // Tell server the user has left room they were in before map
+        this.props.socketApi.leaveRoom(
+            this.props.user.userId,
+            this.props.currentRoom.room
+        )
+    }
+
+    async fetchUsers() {
+        const { success, users } = await this.httpApi.getUsers()
+        if (success) {
+            const usersByRoom = _.reduce(users, (result, user) => {
+                (result[user.room] || (result[user.room] = [])).push(user)
+                return result
+              }, {});
+
+            this.setState({
+                users,
+                usersByRoom
+            })
+        }
+    }
+
+    async componentDidMount() {
+        await this.fetchUsers()
+
+        // Format room definition into array where each entry is a room
+        // with users
         this.rooms = Object.keys(this.props.rooms)
             .filter(key => _.has(this.props.rooms[key], 'map'))
             .map(key => {
                 const room = Object.assign({}, this.props.rooms[key])
                 room.key = key
+                room.users = this.state.usersByRoom[key] || []
                 return _.cloneDeep(room)
             })
 
-        this.visited = this.props.path.reduce((map, room) => {
-            map[room] = true;
-            return map;
-        }, {});
-    }
-
-    componentDidMount() {
-        const width = document.querySelector('.map').clientWidth / 2;
+        const width = document.querySelector('.map').clientWidth / 1.5;
         const height = 600;
         const padding = 10;
         const mouseEvents = {
-            onRoomClick: roomId => {
-                this.props.updateCurrentRoom(roomId)
+            onRoomClick: room => {
+                this.props.updateCurrentRoom({ room, entered: false })
                 this.setState({ redirect: true })
             },
-            onRoomEnter: roomId => {
-                this.setState({ highlighted: roomId })
+            onRoomEnter: room => {
+                this.setState({ highlighted: room })
             },
             onRoomLeave: () => {
                 this.setState({ highlighted: null })
@@ -51,38 +84,59 @@ class Map extends Component {
             padding,
             mouseEvents
         )
-        map.draw(this.rooms, this.visited)
+        map.draw(this.rooms, this.props.visited)
+    }
+
+    getGlobalStats() {
+        const numInHallways = this.state.users.filter(user => !user.room).length
+        const numInBathrooms = this.state.users.filter(
+            user => user.room && user.room.endsWith('bathroom')
+        ).length
+        const numInRooms = this.state.users.filter(user => user.room).length - numInBathrooms
+
+        return (
+            <div className="map-stats">
+                <div className="map-stat-column">
+                    <span className="map-stat-emoji">🏚️</span>
+                    {this.state.users.length} in house
+                </div>
+                <div className="map-stat-column">
+                    <span className="map-stat-emoji">🎊</span>
+                    {numInRooms} partying
+                </div>
+                <div className="map-stat-column">
+                    <span className="map-stat-emoji">🚻</span>
+                    {numInBathrooms} taking bathroom break
+                </div>
+                <div className="map-stat-column">
+                    <span className="map-stat-emoji">🌓</span>
+                    {numInHallways} roaming
+                </div>
+            </div>
+        )
     }
 
     render() {
         if (this.state.redirect) {
             return <Redirect to='/party'/>
         }
+
+        const roomId = this.state.highlighted
+        const room = (this.props.rooms || {})[roomId]
+        // TODO not lock unvisited rooms for now; this can be a future feature
+        const isVisited = true;
+        // const isVisited = this.props.visited && this.props.visited[roomId]
+        const users = this.state.usersByRoom && this.state.usersByRoom[roomId] || []
+
         return (
             <div className="map">
-                <h1>You unlocked the party map! =O</h1>
-                <p>Teleport into any room by clicking on it.</p>
+                <div className="map-header">
+                    {this.getGlobalStats()}
+                    <div>Hover over rooms to see who's where!</div>
+                </div>
                 <div className="map-area">
-                    <div id="map-key">
-                        <div className="room-key">
-                            {this.rooms.map((d, i) => {
-                                const className = d.key === this.state.highlighted ?
-                                    'map-key-item highlighted-key-item' :
-                                    'map-key-item'
-                                return (
-                                    <div key={d.key} className={className}>
-                                        <span className="map-key-item-number">{i}</span>
-                                        <span className="map-key-item-name">{d.name}</span>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        <div className="visited-key">
-                            <span id="visited-block" className="map-key-item-number"></span>
-                            <span>Visited</span>
-                        </div>
-                    </div>
                     <div id="d3-map"></div>
+                    <MapRoomInfo room={room} isVisited={isVisited} users={users}></MapRoomInfo>
                 </div>
             </div>
         )

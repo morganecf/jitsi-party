@@ -15,6 +15,7 @@ class Welcome extends Component {
             redirect: null
         }
         this.httpApi = new HttpApi()
+        this.props.connectToSocket()
     }
 
     async componentDidMount() {
@@ -41,7 +42,10 @@ class Welcome extends Component {
                 avatar,
                 userId: response.userId
             })
-            this.props.updateCurrentRoom('vestibule')
+            this.props.updateCurrentRoom({
+                room: 'vestibule',
+                entered: false
+            })
             this.setState({ redirect: '/party' })
         }
     }
@@ -89,5 +93,6 @@ export default connect(
     {
         addRooms: reducers.addRoomsActionCreator,
         updateUser: reducers.updateUserActionCreator,
+        connectToSocket: reducers.connectSocketActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Welcome)
