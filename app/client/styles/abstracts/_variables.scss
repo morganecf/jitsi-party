@@ -2,7 +2,12 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+@font-face {
+  font-family: 'Darker_Grotesque';
+  src: url('/js/fonts/Darker_Grotesque/DarkerGrotesque-Regular.ttf'), format('ttf');
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;800&display=swap');
 
 /// Regular font family
 /// @type List
