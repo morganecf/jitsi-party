@@ -456,7 +456,8 @@
                 "west": 19
             }
         },
-        "doorTint": "#946EFF"
+        "doorTint": "#946EFF",
+        "backgroundImage": "js/images/rooms/baths.png"
     },
     "room314": {
         "name": "Room 314",
