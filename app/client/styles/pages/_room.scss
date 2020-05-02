@@ -7,6 +7,8 @@
 	max-height: 100vh;
 	display: flex;
 	flex-flow: column;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	.room-header {
 		position: fixed;
@@ -42,7 +44,6 @@
 		height: 100%;
 		display: flex;
 		flex: 1;
-
 		> iframe {
 			height: 100% !important; // override stupid jitsi script
 		}
@@ -167,6 +168,7 @@
 		display: flex;
 		align-items: center;
 		padding: 8px 0;
+		background-color: #191b1c;
 
 		.column {
 			flex: 1;

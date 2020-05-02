@@ -76,6 +76,10 @@ class Room extends Component {
         this.fetchUsersForRoom(this.state.room)
     }
 
+    getRoomData() {
+        return this.props.rooms[this.state.room]
+    }
+
     getRoomContent() {
         /*
         * There are currently 3 different types of rooms:
@@ -84,19 +88,19 @@ class Room extends Component {
         *   3. Text-based adventure rooms where you have to make a decision
         *   4. Special purpose rooms that exist at a different route
         */
-       const roomData = this.props.rooms[this.state.room]
-       const jitsiData = {
-           displayName: this.props.user.displayName,
-           avatar: this.props.user.avatar,
-           roomName: roomData.name,
-           muteRoom: roomData.muteRoom,
-       }
-       return {
-           art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
-           jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
-           iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
-           adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>
-       }[roomData.type]
+        const roomData = this.getRoomData()
+        const jitsiData = {
+            displayName: this.props.user.displayName,
+            avatar: this.props.user.avatar,
+            roomName: roomData.name,
+            muteRoom: roomData.muteRoom,
+        }
+        return {
+            art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
+            jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
+            iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
+            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>
+        }[roomData.type]
     }
 
     getRoomDescription() {
@@ -109,6 +113,19 @@ class Room extends Component {
         }
     }
 
+    setBackground() {
+        const roomData = this.getRoomData()
+        if (roomData.backgroundImage) {
+            document.querySelector('.room').style.backgroundImage = `url(${roomData.backgroundImage})`
+        } else {
+            this.clearBackground()
+        }
+    }
+
+    clearBackground() {
+        document.querySelector('.room').style.backgroundImage = ""
+    }
+
     onAdventureClick(room) {
         this.setState({ room, entered: true })
         this.props.updateCurrentRoom({ room, entered: true })
@@ -116,6 +133,7 @@ class Room extends Component {
 
     onSwitchRoom(room) {
         // Leave current room
+        this.clearBackground()
         this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
 
         // Go to new room, but don't open the door for rooms that have doors
@@ -134,6 +152,7 @@ class Room extends Component {
 
     onEnterRoom() {
         // Open the door
+        this.setBackground()
         this.setState({ entered: true })
         this.props.updateCurrentRoom({
             room: this.state.room,
@@ -152,7 +171,7 @@ class Room extends Component {
 
         if (room.type === 'redirect') {
             this.socketApi.enterRoom(this.props.user.userId, this.state.room)
-            return <Redirect to={room.route}/>
+            return <Redirect to={room.route} />
         }
 
         const content = this.state.entered ?
