@@ -133,7 +133,8 @@
         "description": "A cozy bathroom.",
         "directions": {
             "east": "danceParty",
-            "south": "trashyBedroom"
+            "south": "trashyBedroom",
+            "north": "boudoir"
         },
         "map": {
             "x": 9,
@@ -142,10 +143,30 @@
             "height": 2,
             "doors": {
                 "east": 12,
-                "south": 9
+                "south": 9,
+                "north": 10
             }
         },
         "doorTint": "white"
+    },
+    "boudoir": {
+        "name": "Le Boudoir",
+        "type": "jitsi",
+        "capacity": 3,
+        "description": "The lighting in here is spectacular: diagonistically useful, but still forgiving",
+        "directions": {
+            "south": "bathroom"
+        },
+        "map": {
+            "x": 10,
+            "y": 10,
+            "width": 2,
+            "height": 2,
+            "doors": {
+                "south": 10
+            }
+        },
+        "doorTint": "red"
     },
     "trashyBedroom": {
         "name": "Clarendon Gone Wild",
@@ -366,7 +387,7 @@
             "x": 28,
             "y": 12,
             "width": 2,
-            "height": 2,
+            "height": 3,
             "doors": {
                 "west": 13
             }
