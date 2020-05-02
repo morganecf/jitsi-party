@@ -3,7 +3,6 @@ import * as d3 from 'd3';
 
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
-const MAX_ROOM_CAPACITY = 20
 
 export default class MapVisualization {
     constructor(container, width, height, padding, mouseEvents) {
@@ -17,7 +16,7 @@ export default class MapVisualization {
 
         this.xscale = d3.scaleLinear().range([padding, width - padding])
         this.yscale = d3.scaleLinear().range([padding, height - padding])
-        this.colorScale = d3.scaleSequential(d3.interpolatePuRd).domain([0, MAX_ROOM_CAPACITY])
+        this.colorScale = d3.scaleSequential(d3.interpolatePuRd)
     }
 
     getRoomShape({ x, y, width, height, doors={} }) {
@@ -91,6 +90,9 @@ export default class MapVisualization {
             d3.max(data, d => d.map.y + d.map.height)
         ])
 
+        const numUsers = _.sumBy(data, d => d.users.length)
+        this.colorScale.domain([0, Math.max(5, numUsers)])
+
         // Create extra space for doors
         padRooms(data)
 
@@ -117,6 +119,7 @@ export default class MapVisualization {
                     .classed('highlighted-room', false)
             })
             .on('click', d => this.onRoomClick(d.key))
+            .classed('empty', d => !d.users.length)
             // .classed('unvisited', d => !visited[d.key])
     }
 }

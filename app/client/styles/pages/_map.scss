@@ -93,13 +93,17 @@
             cursor: pointer;
             stroke-width: 2;
             stroke: #000;
-            fill-opacity: 0.6;
+            fill-opacity: 0.7;
         }
 
-        path.highlighted-room, path.unvisited.highlighted-room {
+        path.highlighted-room, path.unvisited.highlighted-room, path.empty.highlighted-room {
             fill-opacity: 1;
             stroke: #f2f1f1;
             transition: fill-opacity $transition-duration, stroke $transition-duration;
+        }
+
+        path.empty {
+            fill-opacity: 0.2;
         }
 
         path.unvisited {
