@@ -56,32 +56,11 @@ flask shell
 Room.query.all()
 ```
 
-### Running the app locally in production mode
-We use multiple workers in production, so we've added an experimental message queue that only gets activated in production mode. This is a tentative plan for Celery; don't worry about this for now.
-```bash
-# Install kombu (this also comes installed as part of your dev env)
-source venv/bin/activate
-pip install kombu
-# or
-pip install -r requirements.txt
-
-# Install rabbitmq
-brew install rabbitmq
-
-# If not in path, add it
-export PATH=$PATH:/usr/local/opt/rabbitmq/sbin
-
-# Start server
-rabbitmq-server
-
-# Run the app in production mode
-cd add/
-source setup_prod.sh
-flask run
-
-# To shut down the rabbitmq server
-rabbitmqctl shutdown
+### Running with eventlet
 ```
+flask run-eventlet
+```
+
 
 ### Jitsi API documentation
 API doc:

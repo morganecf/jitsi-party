@@ -6,7 +6,7 @@ SCRIPT_DIR=$(dirname "$SCRIPT")
 
 pushd "$SCRIPT_DIR"
 
-DOCKER_REPO="localhost:5000/gbre/jitsi-party"
+DOCKER_REPO="docker.gbre.org/jitsi-party"
 
 QUERY='{ repository(owner: \"morganecf\", name: \"jitsi-party\") { releases(last: 1, orderBy: {field: CREATED_AT, direction: ASC}) {edges { node { tagName }}}}}'
 

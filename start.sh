@@ -1,6 +1,9 @@
 #! /bin/bash
 
-source setup_prod.sh
-flask create-db
-FLASK_DEBUG=1 PYTHONUNBUFFERED=1 flask run-prod
+export FLASK_APP="manager.py"
+export FLASK_ENV=production
+export FLASK_DEBUG=1
+export PYTHONUNBUFFERED=1
+export FLASK_RUN_PORT=80
+flask run-eventlet
 
