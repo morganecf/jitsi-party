@@ -17,9 +17,9 @@
         }
     },
     "closetAdventure": {
-        "uncomfortableCloset": {
-            "name": "Uncomfortable Closet",
-            "text": "It's really uncomfortable in here.",
+        "artCloset": {
+            "name": "A Small Coat Closet",
+            "text": "There are so many coats in here.",
             "buttons": [
                 {
                     "text": "Stay anyway",
@@ -31,7 +31,7 @@
                 },
                 {
                     "text": "Leave",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 }
             ],
             "map": {
@@ -114,7 +114,7 @@
             "buttons": [
                 {
                     "text": "Yeah, okay. Whatever, temporal lobe.",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 },
                 {
                     "text": "Sweet!",
@@ -127,7 +127,7 @@
             "buttons": [
                 {
                     "text": "Turn back now",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 },
                 {
                     "text": "Endure",
@@ -199,7 +199,7 @@
             "buttons": [
                 {
                     "text": "Go back to the party",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 },
                 {
                     "text": "Talk to yourself",
@@ -287,7 +287,7 @@
             "buttons": [
                 {
                     "text": "PAIN",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 },
                 {
                     "text": "PAAAAAAIN",
@@ -300,7 +300,7 @@
             "buttons": [
                 {
                     "text": "Peace out of this lame-ass closet",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 },
                 {
                     "text": "Watch them stoically",
@@ -444,7 +444,7 @@
             "buttons": [
                 {
                     "text": "Take me home, sweet Mother...",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 },
                 {
                     "text": "No! I must endure!",
@@ -495,7 +495,7 @@
                 },
                 {
                     "text": "Dancing like no one's watching, living every day like it's your last",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 }
             ]
         },
@@ -512,7 +512,7 @@
                 },
                 {
                     "text": "Say nothing. Nod stoically.",
-                    "nextRoom": "trashyBedroom"
+                    "nextRoom": "artGallery"
                 }
             ]
         },
