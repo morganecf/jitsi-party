@@ -24,7 +24,7 @@
     "closet": {
         "name": "Closet",
         "type": "jitsi",
-        "capacity": 3,
+        "capacity": 2,
         "muteRoom": true,
         "backgroundImage": "js/images/rooms/closet.jpg",
         "description": "A quiet, cozy closet. Shhh.",
@@ -128,6 +128,7 @@
     "bathroom": {
         "name": "Bathroom",
         "type": "jitsi",
+        "capacity": 3,
         "description": "A cozy bathroom.",
         "directions": {
             "east": "danceParty",
@@ -169,6 +170,7 @@
     "punishmentCloset": {
         "name": "Punishment Closet",
         "type": "jitsi",
+        "capacity": 2,
         "description": "It's really punishing in here.",
         "directions": {
             "east": "trashyBedroom"
@@ -346,7 +348,6 @@
     },
     "bunnyRun": {
         "name": "The Bunny Run",
-        "capacity": 4,
         "type": "iframe",
         "description": "The Winston & Winona show",
         "announcements": [
@@ -418,7 +419,6 @@
     },
     "bubbleBaths": {
         "name": "Bubble Baths",
-        "capacity": 4,
         "type": "jitsi",
         "directions": {
             "west": "gameRoom"
@@ -436,7 +436,6 @@
     },
     "room314": {
         "name": "Room 314",
-        "capacity": 5,
         "type": "jitsi",
         "map": {
             "x": 7,
