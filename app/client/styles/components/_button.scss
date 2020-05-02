@@ -32,7 +32,6 @@ input[type="button"] {
 	&:disabled {
 		color: $mid-grey !important;
 		border: 2px solid $mid-grey !important;
-		background: none !important;
 		cursor: auto;
 	}
 

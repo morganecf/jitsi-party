@@ -19,6 +19,8 @@ class Door extends Component {
             ) :
             <div>No one is in this room :(</div>
 
+        const tintStyle = this.props.tintColor ? { background: this.props.tintColor } : {}
+
         return (
             <div className="door-wrapper">
                 <div className="door-background"></div>
@@ -27,6 +29,7 @@ class Door extends Component {
                     <button onClick={this.props.onClick.bind(this)}>Enter {this.props.room}</button>
                 </div>
                 <div id="door" className="door">
+                    <div className="tint" style={tintStyle}></div>
                     <div className="knob"></div>
                     <div className="spacer"></div>
                     <div className="panel-column">
