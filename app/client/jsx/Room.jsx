@@ -133,6 +133,7 @@ class Room extends Component {
 
     onSwitchRoom(room) {
         // Leave current room
+        window.api.dispose()
         this.clearBackground()
         this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
 
@@ -156,7 +157,7 @@ class Room extends Component {
         this.setState({ entered: true })
         this.props.updateCurrentRoom({
             room: this.state.room,
-            entered: true 
+            entered: true
         })
         this.socketApi.enterRoom(this.props.user.userId, this.state.room)
     }

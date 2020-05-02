@@ -7,7 +7,7 @@ import MapVisualization from './MapVisualization.js'
 import MapRoomInfo from './MapRoomInfo.jsx'
 import { HttpApi } from './WebAPI.jsx'
 
-class Map extends Component { 
+class Map extends Component {
     constructor(props) {
         super(props)
 
@@ -30,6 +30,7 @@ class Map extends Component {
             this.props.user.userId,
             this.props.currentRoom.room
         )
+        window.api.dispose()
     }
 
     async fetchUsers() {
@@ -38,7 +39,7 @@ class Map extends Component {
             const usersByRoom = _.reduce(users, (result, user) => {
                 (result[user.room] || (result[user.room] = [])).push(user)
                 return result
-              }, {});
+            }, {});
 
             this.setState({
                 users,
@@ -118,7 +119,7 @@ class Map extends Component {
 
     render() {
         if (this.state.redirect) {
-            return <Redirect to='/party'/>
+            return <Redirect to='/party' />
         }
 
         const roomId = this.state.highlighted
