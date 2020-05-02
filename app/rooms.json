@@ -66,9 +66,9 @@
         "doorTint": "#FF5938"
     },
     "danceParty": {
-        "name": "Dance Party!",
+        "name": "Velvet",
         "type": "iframe",
-        "description": "Dance until you die!",
+        "description": "Dance until you die!!",
         "announcements": [
             "9:30 - 10:00: Live Drone (tentative by Dewb)",
             "10:00 - 11:00: Live Electronic Improv from Uncle Thumpy",
@@ -102,9 +102,9 @@
     "clubPolo": {
         "name": "Club Polo",
         "type": "iframe",
-        "description": "DJ set",
+        "description": "Live deep house & tech house set from DJ Depolo (10 PM - 3 AM)",
         "announcements": [
-            "DJ Depolo will be playing from x-y tonight"
+            "Live deep house & tech house set from DJ Depolo (10 PM - 3 AM)"
         ],
         "muteRoom": true,
         "iframeOptions": {

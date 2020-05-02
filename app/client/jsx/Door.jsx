@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UserList from './UserList.jsx';
 
 class Door extends Component {
     constructor(props) {
@@ -12,10 +13,8 @@ class Door extends Component {
         const users = this.props.users.length ?
             (
                 <div className="user-list">
-                    <div>{userStr} Join them :)</div>
-                    {this.props.users.map(user => (
-                        <div className="user-list-item">{user.username}</div>
-                    ))}
+                    <div>{userStr}</div>
+                    <UserList users={this.props.users} truncate={true}></UserList>
                 </div>
             ) :
             <div>No one is in this room :(</div>
