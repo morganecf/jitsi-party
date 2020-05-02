@@ -438,7 +438,8 @@
                 "east": 19
             }
         },
-        "doorTint": "orange"
+        "doorTint": "orange",
+        "backgroundImage": "js/images/rooms/gameroom.jpg"
     },
     "bubbleBaths": {
         "name": "Bubble Baths",
