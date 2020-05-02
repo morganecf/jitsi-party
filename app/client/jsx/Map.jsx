@@ -7,7 +7,7 @@ import MapVisualization from './MapVisualization.js'
 import MapRoomInfo from './MapRoomInfo.jsx'
 import { HttpApi } from './WebAPI.jsx'
 
-class Map extends Component { 
+class Map extends Component {
     constructor(props) {
         super(props)
 
@@ -132,7 +132,7 @@ class Map extends Component {
             <div className="map">
                 <div className="map-header">
                     {this.getGlobalStats()}
-                    <div>Hover over rooms to see who's where!</div>
+                    <div className="map-header-tagline">Hover over rooms to see who's where!</div>
                 </div>
                 <div className="map-area">
                     <div id="d3-map"></div>
