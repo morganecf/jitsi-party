@@ -297,9 +297,9 @@
         "name": "Gallery Room 5",
         "type": "art",
         "art": {
-            "title": "TBD",
-            "artist": "TBD",
-            "src": ""
+            "title": "Night Bloom",
+            "artist": "LaRen",
+            "src": "./js/images/art/night-bloom-laren.jpg"
         },
         "directions": {
             "south": "gallery4",
