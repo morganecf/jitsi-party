@@ -29,7 +29,13 @@ class Room extends Component {
         this.roomTypesWithMap = {
             jitsi: true,
             iframe: true,
-            art: true
+            content: true
+        }
+
+        // These are the room types which require doors
+        this.roomTypesWithDoors = {
+            jitsi: true,
+            iframe: true
         }
 
         const { room, entered } = this.props.currentRoom
@@ -105,9 +111,11 @@ class Room extends Component {
     onSwitchRoom(room) {
         // Leave current room
         this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
-        // Go to new room, but don't open the door
-        this.setState({ room, entered: false })
-        this.props.updateCurrentRoom({ room, entered: false })
+
+        // Go to new room, but don't open the door for rooms that have doors
+        const entered = !this.roomTypesWithDoors[this.props.rooms[room].type]
+        this.setState({ room, entered })
+        this.props.updateCurrentRoom({ room, entered })
         this.fetchUsersForRoom(room)
 
         // reset door anim
@@ -141,7 +149,7 @@ class Room extends Component {
             return <Redirect to={room.route}/>
         }
 
-        const content = this.state.entered || room.type === 'adventure' ?
+        const content = this.state.entered || this.roomTypesWithDoors[room.type] ?
             this.getRoomContent() :
             <Door room={room.name} users={this.state.users} onClick={this.onEnterRoom.bind(this)}></Door>
 

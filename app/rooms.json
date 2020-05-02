@@ -127,7 +127,7 @@
     },
     "artGallery": {
         "name": "Art Gallery",
-        "type": null,
+        "type": "content",
         "description": "In the gallery spaces up ahead, you will find art created by your fellow Clarendonites :)",
         "directions": {
             "north": "gallery1",
