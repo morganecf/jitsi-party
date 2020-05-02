@@ -24,7 +24,8 @@
         "react-beforeunload": "^2.2.0",
         "react-reveal": "^1.2.2",
         "sass": "^1.26.3",
-        "socket.io": "^2.3.0"
+        "socket.io": "^2.3.0",
+        "url-loader": "^4.1.0"
     },
     "devDependencies": {
         "@babel/core": "7.8.4",
