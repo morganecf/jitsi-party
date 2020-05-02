@@ -5,7 +5,7 @@ class Door extends Component {
     constructor(props) {
         super(props);
     }
-
+    
     render() {
         const userStr = this.props.users.length > 1 ?
             `${this.props.users.length} people are in this room!` :
@@ -26,7 +26,7 @@ class Door extends Component {
                 <div className="door-background"></div>
                 <div className="door-target">
                     {users}
-                    <button onClick={this.props.onClick.bind(this)}>Enter {this.props.room}</button>
+                    <button onClick={this.props.onClick.bind(this)}>Enter {this.props.room.name}</button>
                 </div>
                 <div id="door" className="door">
                     <div className="tint" style={tintStyle}></div>
@@ -49,4 +49,5 @@ class Door extends Component {
         )
     }
 }
+
 export default Door;
