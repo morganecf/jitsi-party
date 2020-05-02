@@ -76,6 +76,7 @@ class JitsiVideo extends Component {
             style.type = 'text/css';
             style.appendChild(iframeDocument.createTextNode(css));
         } catch (err) {
+            console.log("%c******************************************************", 'background: #222; color: #bada55')
             console.log("Can't make Jitsi transparent! Must be running locally.")
             console.log("To test the background, inspect the document inside the iframe and paste this code into the console:")
             console.log(`
@@ -95,6 +96,7 @@ document.head.appendChild(style);
 style.type = 'text/css';
 style.appendChild(document.createTextNode(css));
             `)
+            console.log("%c******************************************************", 'background: #222; color: #bada55')
         }
     }
 
