@@ -193,7 +193,7 @@ class Room extends Component {
 
         const content = this.state.entered ?
             this.getRoomContent() :
-            <Door room={room.name} users={this.state.users} tintColor={room.doorTint} onClick={this.onEnterRoom.bind(this)}></Door>
+            <Door room={room} users={this.state.users} tintColor={room.doorTint} onClick={this.onEnterRoom.bind(this)}></Door>
 
         const roomClass = this.state.entered ? "room entered" : "room"
 
