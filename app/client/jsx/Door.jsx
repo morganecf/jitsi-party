@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 
 class Door extends Component {
-
     constructor(props) {
         super(props);
     }
 
     render() {
         const userStr = this.props.users.length > 1 ?
-            `${props.users.length} people are in this room!` :
+            `${this.props.users.length} people are in this room!` :
             '1 person is in this room!'
         const users = this.props.users.length ?
             (
