@@ -38,6 +38,11 @@
             margin: 20px;
             padding: 20px;
 
+            hr {
+                opacity: 0.5;
+                margin: 20px 0;
+            }
+
             .room-name {
                 text-align: center;
                 font-size: larger;
@@ -48,6 +53,11 @@
                 font-size: smaller;
                 text-align: center;
                 line-height: 1;
+            }
+
+            .map-room-announcements ul {
+                margin: 0;
+                font-size: medium;
             }
 
             .user-list {

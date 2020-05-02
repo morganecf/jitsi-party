@@ -12,6 +12,7 @@ export default props => {
             <div id="map-info">
                 <div className="room-info">
                     <div className="room-name">{props.room.name}</div>
+                    <hr></hr>
                     <div className="room-info-content">
                         You have not unlocked this room yet. Click on it to teleport!
                     </div>
@@ -50,11 +51,27 @@ export default props => {
         )
     }
 
+    // Show announcements if any exist
+    let announcements
+    if (props.room.announcements) {
+        announcements = (
+            <div className="map-room-announcements">
+                <hr></hr>
+                <ul>
+                    {props.room.announcements.map((announcement, i) => (
+                        <li key={`announcement-${i}`}>{announcement}</li>
+                    ))}
+                </ul>
+            </div>
+        )
+    }
+
     return (
         <div id="map-info">
             <div className="room-info">
                 <div className="room-name">{props.room.name}</div>
                 {userContent}
+                {announcements}
             </div>
         </div>
     )
