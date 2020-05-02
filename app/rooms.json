@@ -394,7 +394,8 @@
                 "west": 15
             }
         },
-        "doorTint": "green"
+        "doorTint": "green",
+        "backgroundImage": "js/images/rooms/kitchen.png"
     },
     "gameRoom": {
         "name": "Game Room",
