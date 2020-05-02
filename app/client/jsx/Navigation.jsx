@@ -47,13 +47,19 @@ class Navigation extends Component {
     render() {
         const onClick = this.props.onClick
         const { north, south, east, west } = this.props.directions || {}
+        const mapButtonClass = this.props.showMapTooltip ? "map-button animated" : "map-button"
         return (
             <div className="navigation-container">
                 <div className="column">
-                    <button className="map-button" disabled={false} onClick={() => onClick('map')}>
-                        <FontAwesomeIcon icon={faMap}/>
-                        <span className="navigation-room-name">Map</span>
-                    </button>
+                    {this.props.showMap &&
+                        <button className={mapButtonClass} disabled={false} onClick={() => onClick('map')}>
+                            <FontAwesomeIcon icon={faMap}/>
+                            <span className="navigation-room-name">Map</span>
+                        </button>
+                    }
+                    {this.props.showMapTooltip &&
+                        <div className="map-tooltip">you have unlocked the party map!</div>
+                    }
                 </div>
                 <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>
