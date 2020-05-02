@@ -33,7 +33,6 @@ class PuckSelect extends Component {
   }
 
   render() {
-
     if (this.state.avatarColorway === '') { // checks whether selection not yet complete
 
       // puck list generated from purple of each design

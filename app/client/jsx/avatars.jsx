@@ -1,4 +1,4 @@
-const avatars = {
+export const Avatars = {
   normal: {
     purple: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/normal-purple.png',
     blue: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/normal-blue.png',
@@ -28,12 +28,14 @@ const avatars = {
     blue: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/trippy-blue.png',
     red: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/trippy-red.png',
     orange: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/trippy-orange.png'
-  },
+  }
+}
+
+export const SpecialAvatars = {
   thumb: {
     purple: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-purple.png',
     blue: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-blue.png',
     red: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-red.png',
     orange: 'https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-orange.png'
-  },
+  }
 }
-export { avatars as Avatars }
