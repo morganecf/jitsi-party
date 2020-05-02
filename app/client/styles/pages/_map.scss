@@ -15,6 +15,12 @@
         padding: 10px 20px;
         color: #d6d3cd;
 
+        .map-header-tagline {
+          font-family: $serif;
+          font-size: .75em;
+          margin-top: 5px;
+        }
+
         .map-stats {
             display: flex;
 
@@ -36,7 +42,8 @@
             border: 1px solid grey;
             border-radius: 5px;
             margin: 20px;
-            padding: 20px;
+            padding: 20px 8px 30px 8px;
+
 
             .room-name {
                 text-align: center;
@@ -48,6 +55,9 @@
                 font-size: smaller;
                 text-align: center;
                 line-height: 1;
+                font-family: $serif;
+                font-size: .7em;
+                margin-top: 10px;
             }
 
             .user-list {

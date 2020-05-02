@@ -51,10 +51,11 @@ class PuckSelect extends Component {
             if (this.state.rowOpen !== null && this.state.rowOpen !== index) {
               image_transparency = 'non-selected-image'
             }
+
             return ( // returns single instance of each nonselected design
               <PuckBox
               handleClick={handleClick}
-              key={index}
+              key={key}
               image={Avatars[key].purple}
               style='box'
               imageStyle={image_transparency}
@@ -63,11 +64,11 @@ class PuckSelect extends Component {
           } else { // selected design
             allColorwayVariants = Object.keys(Avatars[key]).map((variantKey, colorIndex) => {
               let selected = 'image'
-              let handleClick = () => this.handleClickColor(variantKey, colorIndex)
+              let handleClick = () => this.handleClickColor(variantKey, colorIndex) 
               return ( // returns all colorways for selected design
                 <PuckBox
                 handleClick={handleClick}
-                key={colorIndex}
+                key={variantKey}
                 image={Avatars[key][variantKey]}
                 imageStyle={selected}
                 />
