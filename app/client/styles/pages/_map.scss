@@ -36,7 +36,7 @@
     }
 
     #map-info {
-        width: 100%;
+        flex: 1;
 
         .room-info {
             border: 1px solid grey;
@@ -88,6 +88,7 @@
     }
 
     .map-area {
+        flex: 1;
         display: flex;
         padding: 40px;
     }
