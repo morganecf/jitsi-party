@@ -2,7 +2,6 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
-import { Redirect } from 'react-router-dom'
 import MapVisualization from './MapVisualization.js'
 import MapRoomInfo from './MapRoomInfo.jsx'
 import { HttpApi } from './WebAPI.jsx'
@@ -12,24 +11,15 @@ class Map extends Component {
         super(props)
 
         this.state = {
-            redirect: null,
             highlighted: null,
             users: []
         }
 
         this.httpApi = new HttpApi()
 
-        this.props.socketApi.startPinging(this.props.user.userId)
-
         this.props.socketApi.on('user-left-room', this.fetchUsers.bind(this))
         this.props.socketApi.on('user-entered-room', this.fetchUsers.bind(this))
         this.props.socketApi.on('user-disconnected', this.fetchUsers.bind(this))
-
-        // Tell server the user has left room they were in before map
-        this.props.socketApi.leaveRoom(
-            this.props.user.userId,
-            this.props.currentRoom.room
-        )
     }
 
     async fetchUsers() {
@@ -65,10 +55,7 @@ class Map extends Component {
         const height = 600;
         const padding = 10;
         const mouseEvents = {
-            onRoomClick: room => {
-                this.props.updateCurrentRoom({ room, entered: false })
-                this.setState({ redirect: true })
-            },
+            onRoomClick: this.props.onRoomClick,
             onRoomEnter: room => {
                 this.setState({ highlighted: room })
             },
@@ -117,10 +104,6 @@ class Map extends Component {
     }
 
     render() {
-        if (this.state.redirect) {
-            return <Redirect to='/party'/>
-        }
-
         const roomId = this.state.highlighted
         const room = (this.props.rooms || {})[roomId]
         // TODO not lock unvisited rooms for now; this can be a future feature

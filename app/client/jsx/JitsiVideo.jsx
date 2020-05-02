@@ -32,8 +32,8 @@ class JitsiVideo extends Component {
 
     componentWillUnmount() {
         document.removeEventListener("keydown", this.handleKeydown.bind(this))
-        if (this.api) {
-            this.api.dispose()
+        if (window.api) {
+            window.api.dispose()
         }
         // Persist audio/video muted settings
         this.props.updateAudioMuted(this.isAudioMuted)
@@ -41,16 +41,16 @@ class JitsiVideo extends Component {
     }
 
     handleKeydown(e) {
-        if (!this.api) { return; }
+        if (!window.api) { return; }
         e = e || window.event;
         switch (e.which || e.keyCode) {
             case 65:
                 // a
-                this.api.executeCommand('toggleAudio');
+                window.api.executeCommand('toggleAudio');
                 break;
             case 86:
                 // v
-                this.api.executeCommand('toggleVideo');
+                window.api.executeCommand('toggleVideo');
                 break;
         }
     }
@@ -127,8 +127,8 @@ style.appendChild(document.createTextNode(css));
                 }
             }
 
-            this.api = new window.JitsiMeetExternalAPI(domain, options)
-            this.api.addEventListener('videoConferenceJoined', () => {
+            window.api = new window.JitsiMeetExternalAPI(domain, options)
+            window.api.addEventListener('videoConferenceJoined', () => {
                 this.makeJitsiTransparent()
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
@@ -141,13 +141,13 @@ style.appendChild(document.createTextNode(css));
                 if (this.isVideoMuted) {
                     commands.toggleVideo = []
                 }
-                this.api.executeCommands(commands)
-                this.api.addEventListener('audioMuteStatusChanged', ({ muted }) => {
+                window.api.executeCommands(commands)
+                window.api.addEventListener('audioMuteStatusChanged', ({ muted }) => {
                     if (!this.props.jitsiData.muteRoom) {
                         this.isAudioMuted = muted
                     }
                 })
-                this.api.addEventListener('videoMuteStatusChanged', ({ muted }) => {
+                window.api.addEventListener('videoMuteStatusChanged', ({ muted }) => {
                     this.isVideoMuted = muted
                 })
             })
@@ -163,8 +163,9 @@ style.appendChild(document.createTextNode(css));
     render() {
         // TODO it feels a bit weird having to reconnect on each render. Will this slow
         // things down?
-        if (this.api) {
-            this.api.dispose()
+        if (window.api) {
+            window.api.executeCommand('hangup')
+            window.api.dispose()
             this.connect()
         }
 
