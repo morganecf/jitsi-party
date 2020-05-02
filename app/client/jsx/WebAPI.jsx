@@ -5,7 +5,7 @@ import { createAdventureActions } from './utils.js'
 // TODO this should go into a config / use process.env
 const hostname = window && window.location && window.location.hostname
 const production = 'https://party.gbre.org/'
-const development = 'http://127.0.0.1:5000'
+const development = 'http://127.0.0.1:3000'
 const url = hostname === 'party.gbre.org' ? production : development
 
 const PING_INTERVAL_MS = 10000
@@ -54,7 +54,7 @@ export class HttpApi {
             return { success: false }
         }
     }
-    
+
     async getRooms() {
         /* Fetches room definition, including adventure rooms */
         try {
