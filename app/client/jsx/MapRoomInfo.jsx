@@ -1,4 +1,5 @@
 import React from 'react'
+import { Avatars } from './avatars.jsx'
 
 export default props => {
     if (!props.room) {
@@ -29,12 +30,15 @@ export default props => {
             <div>
                 <div className="room-info-content">{numPeople}</div>
                 <div className="user-list">
-                    {props.users.map(user => (
-                        <div className="room-user">
-                            <img src={user.avatar}></img>
-                            <div>{user.username}</div>
-                        </div>
-                    ))}
+                    {props.users.map(user => {
+                        const [ type, color ] = user.avatar.split('-')
+                        return (
+                            <div key={user.username} className="room-user">
+                                <img src={Avatars[type][color]}></img>
+                                <div>{user.username}</div>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         )

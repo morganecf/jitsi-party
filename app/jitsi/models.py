@@ -23,7 +23,6 @@ class User(db.Model, SerializerMixin):
 
     @classmethod
     def create(cls, username, avatar):
-        # TODO change this once Daniel fixes avatars
         avatar = '-'.join(map(str, avatar))
         user = cls(username=username, avatar=avatar)
         db.session.add(user)
