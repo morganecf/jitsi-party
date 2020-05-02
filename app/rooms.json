@@ -142,13 +142,13 @@
         }
     },
     "trashyBedroom": {
-        "name": "Trashy Bedroom",
+        "name": "Clarendon Gone Wild",
         "type": "jitsi",
-        "description": "Let's get fucked uppp",
+        "description": "Sexual debauchery encouraged & expected",
         "directions": {
             "north": "bathroom",
             "east": "livingRoom",
-            "west": "uncomfortableCloset"
+            "west": "punishmentCloset"
         },
         "map": {
             "x": 8,
@@ -162,6 +162,23 @@
             }
         }
     },
+    "punishmentCloset": {
+        "name": "Punishment Closet",
+        "type": "jitsi",
+        "description": "It's really punishing in here.",
+        "directions": {
+            "east": "trashyBedroom"
+        },
+        "map": {
+            "x": 7,
+            "y": 15,
+            "width": 1,
+            "height": 2,
+            "doors": {
+                "east": 15
+            }
+        }
+    },
     "artGallery": {
         "name": "Art Gallery",
         "type": "content",
@@ -169,7 +186,8 @@
         "directions": {
             "north": "gallery1",
             "west": "livingRoom",
-            "east": "kitchen"
+            "east": "kitchen",
+            "south": "artCloset"
         },
         "map": {
             "x": 19,

@@ -31,7 +31,7 @@ def get_rooms():
     for adventure in adventures.values():
         for node_name, adventure_node in adventure.items():
             rooms[node_name] = {
-                'name': adventure_node.get('name', node_name),
+                'name': adventure_node.get('name', ''),
                 'type': 'adventure',
                 'text': adventure_node['text'],
                 'buttons': adventure_node['buttons']
