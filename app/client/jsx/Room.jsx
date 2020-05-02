@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
+import Map from './Map.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
@@ -123,7 +124,9 @@ class Room extends Component {
     }
 
     clearBackground() {
-        document.querySelector('.room').style.backgroundImage = ""
+        if (document.querySelector('.room')) {
+            document.querySelector('.room').style.backgroundImage = ""
+        }
     }
 
     onAdventureClick(room) {
@@ -131,7 +134,7 @@ class Room extends Component {
         this.props.updateCurrentRoom({ room, entered: true })
     }
 
-    onSwitchRoom(room) {
+    updateRoom(room) {
         // Leave current room
         this.clearBackground()
         this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
@@ -147,6 +150,16 @@ class Room extends Component {
         if (door) {
             door.style.webkitAnimation = "none";
             setTimeout(() => { door.style.webkitAnimation = "" })
+        }
+    }
+
+    onSwitchRoom(room) {
+        if (window.api) {
+            window.api.executeCommand('hangup')
+            window.api = null
+            setTimeout(this.updateRoom.bind(this, room), 500)
+        } else {
+            this.updateRoom(room)
         }
     }
 
@@ -172,6 +185,10 @@ class Room extends Component {
         if (room.type === 'redirect') {
             this.socketApi.enterRoom(this.props.user.userId, this.state.room)
             return <Redirect to={room.route} />
+        }
+
+        if (room.type === 'map') {
+            return <Map onRoomClick={this.onSwitchRoom.bind(this)}></Map>
         }
 
         const content = this.state.entered ?
