@@ -210,8 +210,17 @@
 			img {
 				height: 100%;
 				max-height: 125px;
-				// border-radius: 100%;
 			}
+		}
+		
+		.map-tooltip {
+			text-align: center;
+			font-size: 12px;
+			margin-bottom: -16px;
+		}
+
+		.map-button.animated {
+			animation: flash linear .666s infinite;
 		}
 	}
 
