@@ -461,6 +461,7 @@
         "backgroundImage": "js/images/rooms/baths.png"
     },
     "room314": {
+        "backgroundImage": "js/images/rooms/314.png",
         "name": "Room 314",
         "type": "jitsi",
         "map": {
