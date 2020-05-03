@@ -34,11 +34,10 @@ export default props => {
             </div>
         )
     } else {
-        userContent = (
-            <div className="room-info-content">
-                No one is in this room yet. Click on it to teleport!
-            </div>
-        )
+        const str = props.room.name === 'Room 314' ?
+            'Oh, so you want to access Room 314? Try finding an adventure first.' :
+            'No one is in this room yet. Click on it to teleport!'
+        userContent = <div className="room-info-content"> {str}</div>
     }
 
     // Show announcements if any exist
