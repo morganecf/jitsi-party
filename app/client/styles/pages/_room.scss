@@ -56,6 +56,11 @@
 		justify-content: center;
 		flex-flow: column;
 		padding: 50px;
+
+		p {
+			text-align: center;
+			padding: 0 50px;
+		}
 	}
 
 	.door-wrapper {

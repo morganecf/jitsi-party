@@ -55,7 +55,11 @@ class Map extends Component {
         const height = 600;
         const padding = 10;
         const mouseEvents = {
-            onRoomClick: this.props.onRoomClick,
+            onRoomClick: room => {
+                if (room !== 'room314') {
+                    this.props.onRoomClick(room)
+                }
+            },
             onRoomEnter: room => {
                 this.setState({ highlighted: room })
             },
