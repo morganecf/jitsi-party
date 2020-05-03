@@ -349,9 +349,9 @@
         "name": "Gallery Room 6",
         "type": "art",
         "art": {
-            "title": "Orbital",
-            "artist": "Ramona",
-            "src": "./js/images/art/orbital-ramona.jpg"
+            "title": "Tycho",
+            "artist": "Mihai",
+            "src": "./js/images/art/tycho.jpg"
         },
         "directions": {
             "south": "gallery5",
