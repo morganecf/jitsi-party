@@ -4,6 +4,15 @@ import * as d3 from 'd3';
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
 
+// Transition time for colors in heat map
+const ROOM_TRANSITION_DURATION = 500
+
+// If the # of users on the map is less than this number, the heat map
+// colors will scale between 0 and this number. This prevents colors
+// from being misleadingly bright when there are very few users in a
+// room
+const DEFAULT_MIN_USERS_FOR_COLOR_SCALE = 5
+
 export default class MapVisualization {
     constructor(container, width, height, padding, mouseEvents) {
         _.assign(this, mouseEvents)
@@ -77,37 +86,33 @@ export default class MapVisualization {
         return d3.line().curve(d3.curveCardinal.tension(0.9))(points)
     }
 
-    draw(data, visited) {
+    draw(rooms, visited) {
         // A 30x30 grid was used to derive the values in rooms.json.
         // This makes sure those values are scaled to this view while
         // using the space efficiently
         this.xscale.domain([
-            d3.min(data, d => d.map.x),
-            d3.max(data, d => d.map.x + d.map.width)
+            d3.min(rooms, d => d.map.x),
+            d3.max(rooms, d => d.map.x + d.map.width)
         ])
         this.yscale.domain([
-            d3.min(data, d => d.map.y),
-            d3.max(data, d => d.map.y + d.map.height)
+            d3.min(rooms, d => d.map.y),
+            d3.max(rooms, d => d.map.y + d.map.height)
         ])
 
-        const numUsers = _.sumBy(data, d => d.users.length)
-        this.colorScale.domain([0, Math.max(5, numUsers)])
-
         // Create extra space for doors
-        padRooms(data)
+        padRooms(rooms)
 
         // Room groups
-        const room = this.svg
+        const groups = this.svg
             .selectAll('.map-room')
-            .data(data)
+            .data(rooms)
             .enter()
             .append('g')
             .attr('class', 'map-room')
 
         // Draw rooms
-        room.append('path')
+        this.rooms = groups.append('path')
             .attr('d', d => this.getRoomShape(d.map))
-            .attr('fill', d => this.colorScale(d.users.length + 1))
             .on('mouseenter', d => {
                 this.onRoomEnter(d.key)
                 d3.select(d3.event.target)
@@ -119,8 +124,22 @@ export default class MapVisualization {
                     .classed('highlighted-room', false)
             })
             .on('click', d => this.onRoomClick(d.key))
-            .classed('empty', d => !d.users.length)
             // .classed('unvisited', d => !visited[d.key])
+    }
+
+    update(users) {
+        const numUsers = _.sumBy(Object.values(users), d => d.length)
+        this.colorScale.domain([
+            0,
+            Math.max(DEFAULT_MIN_USERS_FOR_COLOR_SCALE, numUsers)
+        ])
+
+        this.rooms
+            .transition()
+            .duration(ROOM_TRANSITION_DURATION)
+            .attr('fill', room => this.colorScale((users[room.key] || []).length + 1))
+
+        this.rooms.classed('empty', room => !users[room.key])
     }
 }
 

@@ -29,12 +29,12 @@ export class WebSocketApi {
         }, PING_INTERVAL_MS)
     }
 
-    enterRoom(userId, room) {
-        this.socket.emit('enter-room', { user_id: userId, room })
+    enterRoom(user, room) {
+        this.socket.emit('enter-room', { user, room })
     }
 
-    leaveRoom(userId, room) {
-        this.socket.emit('leave-room', { user_id: userId, room })
+    leaveRoom(user, room) {
+        this.socket.emit('leave-room', { user, room })
     }
 }
 
@@ -55,11 +55,10 @@ export class HttpApi {
         }
     }
 
-    async getUsers(room=null) {
-        /* Only gets active users for the given room, or all active users */
+    async getUsers() {
+        /* Fetches list of active users, mapped to room */
         try {
-            const params = room ? `/${room}` : ''
-            const request = `${url}/users${params}`
+            const request = `${url}/users`
             const response = await axios.get(request)
             return { success: true, users: response.data }
         } catch (err) {

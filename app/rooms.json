@@ -479,9 +479,5 @@
         "name": "Bye",
         "type": "redirect",
         "route": "/bye"
-    },
-    "map": {
-        "name": "Map",
-        "type": "map"
     }
 }

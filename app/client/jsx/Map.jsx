@@ -4,51 +4,23 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import MapVisualization from './MapVisualization.js'
 import MapRoomInfo from './MapRoomInfo.jsx'
-import { HttpApi } from './WebAPI.jsx'
 
 class Map extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
             highlighted: null,
             users: []
         }
-
-        this.httpApi = new HttpApi()
-
-        this.props.socketApi.on('user-left-room', this.fetchUsers.bind(this))
-        this.props.socketApi.on('user-entered-room', this.fetchUsers.bind(this))
-        this.props.socketApi.on('user-disconnected', this.fetchUsers.bind(this))
     }
 
-    async fetchUsers() {
-        const { success, users } = await this.httpApi.getUsers()
-        if (success) {
-            const usersByRoom = _.reduce(users, (result, user) => {
-                (result[user.room] || (result[user.room] = [])).push(user)
-                return result
-              }, {});
-
-            this.setState({
-                users,
-                usersByRoom
-            })
-        }
-    }
-
-    async componentDidMount() {
-        await this.fetchUsers()
-
-        // Format room definition into array where each entry is a room
-        // with users
+    componentDidMount() {
         this.rooms = Object.keys(this.props.rooms)
             .filter(key => _.has(this.props.rooms[key], 'map'))
             .map(key => {
-                const room = Object.assign({}, this.props.rooms[key])
+                const room = _.cloneDeep(this.props.rooms[key])
                 room.key = key
-                room.users = this.state.usersByRoom[key] || []
-                return _.cloneDeep(room)
+                return room
             })
 
         const width = document.querySelector('.map').clientWidth / 1.5;
@@ -68,28 +40,34 @@ class Map extends Component {
             }
         }
 
-        const map = new MapVisualization(
+        this.map = new MapVisualization(
             '#d3-map',
             width,
             height,
             padding,
             mouseEvents
         )
-        map.draw(this.rooms, this.props.visited)
+        this.map.draw(this.rooms)
     }
 
     getGlobalStats() {
-        const numInHallways = this.state.users.filter(user => !user.room).length
-        const numInBathrooms = this.state.users.filter(
-            user => user.room && user.room.endsWith('bathroom')
-        ).length
-        const numInRooms = this.state.users.filter(user => user.room).length - numInBathrooms
+        const users = this.props.users
+        
+        const numInHouse = _.sumBy(Object.keys(users), room => users[room].length)
+        const numInHallways = (users.hallway || []).length
+        const numInBathrooms = _.sumBy(
+            Object.keys(users).filter(
+                room => room.endsWith('bathroom')
+            ),
+            room => users[room].length
+        )
+        const numInRooms = numInHouse - numInHallways - numInBathrooms
 
         return (
             <div className="map-stats">
                 <div className="map-stat-column">
                     <span className="map-stat-emoji">🏚️</span>
-                    {this.state.users.length} in house
+                    {numInHouse} in house
                 </div>
                 <div className="map-stat-column">
                     <span className="map-stat-emoji">🎊</span>
@@ -108,12 +86,16 @@ class Map extends Component {
     }
 
     render() {
+        if (this.map) {
+            this.map.update(this.props.users)
+        }
+        
         const roomId = this.state.highlighted
         const room = (this.props.rooms || {})[roomId]
         // TODO not lock unvisited rooms for now; this can be a future feature
         const isVisited = true;
         // const isVisited = this.props.visited && this.props.visited[roomId]
-        const users = this.state.usersByRoom && this.state.usersByRoom[roomId] || []
+        const currentRoomUsers = this.props.users[roomId] || []
 
         return (
             <div className="map">
@@ -123,7 +105,7 @@ class Map extends Component {
                 </div>
                 <div className="map-area">
                     <div id="d3-map"></div>
-                    <MapRoomInfo room={room} isVisited={isVisited} users={users}></MapRoomInfo>
+                    <MapRoomInfo room={room} isVisited={isVisited} users={currentRoomUsers}></MapRoomInfo>
                 </div>
             </div>
         )

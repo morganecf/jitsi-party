@@ -11,21 +11,13 @@ def join():
     user = User.create(**params)
     return jsonify(user.to_json())
 
-@main.route('/users/<room>')
-def get_users(room):
-    # NOTE uncomment this to test with mock data
-    # basedir = current_app.config.get('BASE_DIR')
-    # users = json.load(open(os.path.join(basedir, 'mock_map_data.json')))['data']
-    # return jsonify(list(filter(lambda user: user['room'] == room, users)))
-    return jsonify(list(User.get_active_users_for_room(room)))
-
 @main.route('/users')
-def get_all_users():
+def get_users():
     # NOTE uncomment this to test map with mock data
     # basedir = current_app.config.get('BASE_DIR')
     # users = json.load(open(os.path.join(basedir, 'mock_map_data.json')))['data']
     # return jsonify(users)
-    return jsonify(list(User.get_active_users()))
+    return jsonify(User.get_active_users_by_room())
 
 @main.route('/rooms')
 def get_rooms():
