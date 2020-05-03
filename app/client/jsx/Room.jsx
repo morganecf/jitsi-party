@@ -9,7 +9,6 @@ import Map from './Map.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
-import { HttpApi } from './WebAPI.jsx'
 import { Beforeunload } from 'react-beforeunload';
 
 class Room extends Component {
@@ -49,32 +48,13 @@ class Room extends Component {
             users: []
         }
 
-        this.httpApi = new HttpApi()
         this.socketApi = this.props.socketApi
         this.socketApi.startPinging(this.props.user.userId)
+        this.socketApi.on('user-left-room', this.props.updateUsers.bind(this))
+        this.socketApi.on('user-entered-room', this.props.updateUsers.bind(this))
 
-        // Refresh list of users each time a user enters or leaves, or each time a user
-        // disconnects (i.e. if client crashes). Disconnect events will lag behind other
-        // events since they rely on the flask-socketio's heartbeat system.
-        const onSocketEvent = room => {
-            if (room === this.state.room) {
-                this.fetchUsersForRoom(room)
-            }
-        }
-        this.socketApi.on('user-left-room', onSocketEvent.bind(this))
-        this.socketApi.on('user-entered-room', onSocketEvent.bind(this))
-        this.socketApi.on('user-disconnected', this.fetchUsersForRoom.bind(this))
-    }
-
-    async fetchUsersForRoom(room) {
-        const { success, users } = await this.httpApi.getUsers(room || this.state.room)
-        if (success) {
-            this.setState({ users })
-        }
-    }
-
-    componentDidMount() {
-        this.fetchUsersForRoom(this.state.room)
+        // TODO figure this one out - send their current location from server
+        // this.socketApi.on('user-disconnected', this.fetchUsersForRoom.bind(this))
     }
 
     getRoomData() {
@@ -143,7 +123,6 @@ class Room extends Component {
         const entered = !this.roomTypesWithDoors[this.props.rooms[room].type]
         this.setState({ room, entered })
         this.props.updateCurrentRoom({ room, entered })
-        this.fetchUsersForRoom(room)
 
         // reset door anim
         const door = document.getElementById('door')
@@ -171,19 +150,19 @@ class Room extends Component {
             room: this.state.room,
             entered: true 
         })
-        this.socketApi.enterRoom(this.props.user.userId, this.state.room)
+        this.socketApi.enterRoom(this.props.user, this.state.room)
     }
 
     handleBeforeUnload() {
         // Update server if user closes tab or refreshes
-        this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
+        this.socketApi.leaveRoom(this.props.user, this.state.room)
     }
 
     render() {
         const room = this.props.rooms[this.state.room]
 
         if (room.type === 'redirect') {
-            this.socketApi.enterRoom(this.props.user.userId, this.state.room)
+            this.socketApi.enterRoom(this.props.user, this.state.room)
             return <Redirect to={room.route} />
         }
 
@@ -223,5 +202,6 @@ class Room extends Component {
 }
 
 export default connect(state => state, {
+    updateUsers: reducers.updateUsersActionCreator,
     updateCurrentRoom: reducers.updateCurrentRoomActionCreator
 })(Room)

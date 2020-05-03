@@ -2,16 +2,30 @@ import { handleActions } from 'redux-actions'
 import { WebSocketApi } from './WebAPI.jsx'
 
 const ADD_ROOMS = 'ADD_ROOMS'
+const ADD_USERS = 'ADD_USERS'
 const UPDATE_USER = 'UPDATE_USER'
+const UPDATE_USERS = 'UPDATE_USERS'
 const CONNECT_SOCKET = 'CONNECT_SOCKET'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
 const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
 
+/*
+* This is the global state.
+*   user: userId, username, avatar type/color
+*   rooms: roomId->room definition mapping
+*   users: roomId->userlist mapping, gets updated by websockets
+*   currentRoom: room, entered
+*   visited: map of which rooms user has visited
+*   socketApi: unique client connection to the websocket
+*   isAudioMuted: whether or not the user currently has audio muted
+*   isVideoMuted: whether or not the user currently has video muted
+*/
 const initialState = {
-    rooms: {},
     user: {},
-    currentRoom: '',
+    rooms: {},
+    users: {},
+    currentRoom: {},
     visited: {},
     socketApi: null,
     isAudioMuted: false,
@@ -22,9 +36,21 @@ function addRoomsAction(state, rooms) {
     return Object.assign({}, state, rooms)
 }
 
+function addUsersAction(state, users) {
+    return Object.assign({}, state, users)
+}
+
 function updateUserAction(state, user) {
-  console.log(state, ' ', user)
     return Object.assign({}, state, user)
+}
+
+function updateUsersAction(state, message) {
+    const { room, user } = message.message
+    const userList = [
+        ...state[room],
+        user
+    ]
+    return Object.assign({}, state, { [room]: userList })
 }
 
 function connectSocketAction(state) {
@@ -53,9 +79,17 @@ export default {
         type: ADD_ROOMS,
         rooms
     }),
+    addUsersActionCreator: users => ({
+        type: ADD_USERS,
+        users
+    }),
     updateUserActionCreator: user => ({
         type: UPDATE_USER,
         user
+    }),
+    updateUsersActionCreator: message => ({
+        type: UPDATE_USERS,
+        message
     }),
     connectSocketActionCreator: () => ({
         type: CONNECT_SOCKET
@@ -75,7 +109,9 @@ export default {
     /* Reducers */
     reducer: handleActions({
         [ADD_ROOMS]: addRoomsAction,
+        [ADD_USERS]: addUsersAction,
         [UPDATE_USER]: updateUserAction,
+        [UPDATE_USERS]: updateUsersAction,
         [CONNECT_SOCKET]: connectSocketAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
         [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,

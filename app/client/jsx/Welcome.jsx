@@ -15,14 +15,26 @@ class Welcome extends Component {
             redirect: null
         }
         this.httpApi = new HttpApi()
-        this.props.connectToSocket()
     }
 
-    async componentDidMount() {
+    async fetchRooms() {
         const { success, rooms } = await this.httpApi.getRooms()
         if (success) {
             this.props.addRooms(rooms)
         }
+    }
+
+    async fetchUsers() {
+        const { success, users } = await this.httpApi.getUsers()
+        if (success) {
+            this.props.addUsers(users)
+        }
+    }
+
+    componentDidMount() {
+        this.fetchRooms()
+        this.fetchUsers()
+        this.props.connectToSocket()
     }
 
     handleDisplayNameChange(event) {
@@ -34,7 +46,6 @@ class Welcome extends Component {
     }
 
     async handleReady() {
-        console.log(this.state)
         const response = await this.httpApi.join(this.state.displayName, this.state.avatar)
         if (response.success) {
             const { displayName, avatar } = this.state
@@ -93,6 +104,7 @@ export default connect(
     state => state,
     {
         addRooms: reducers.addRoomsActionCreator,
+        addUsers: reducers.addUsersActionCreator,
         updateUser: reducers.updateUserActionCreator,
         connectToSocket: reducers.connectSocketActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator

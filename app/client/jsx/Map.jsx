@@ -4,42 +4,17 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import MapVisualization from './MapVisualization.js'
 import MapRoomInfo from './MapRoomInfo.jsx'
-import { HttpApi } from './WebAPI.jsx'
 
 class Map extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
             highlighted: null,
             users: []
         }
-
-        this.httpApi = new HttpApi()
-
-        this.props.socketApi.on('user-left-room', this.fetchUsers.bind(this))
-        this.props.socketApi.on('user-entered-room', this.fetchUsers.bind(this))
-        this.props.socketApi.on('user-disconnected', this.fetchUsers.bind(this))
     }
 
-    async fetchUsers() {
-        const { success, users } = await this.httpApi.getUsers()
-        if (success) {
-            const usersByRoom = _.reduce(users, (result, user) => {
-                (result[user.room] || (result[user.room] = [])).push(user)
-                return result
-              }, {});
-
-            this.setState({
-                users,
-                usersByRoom
-            })
-        }
-    }
-
-    async componentDidMount() {
-        await this.fetchUsers()
-
+    componentDidMount() {
         // Format room definition into array where each entry is a room
         // with users
         this.rooms = Object.keys(this.props.rooms)

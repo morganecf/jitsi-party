@@ -1,5 +1,6 @@
 from . import db
 from datetime import datetime
+from collections import defaultdict
 from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.hybrid import hybrid_property
 
@@ -36,7 +37,6 @@ class User(db.Model, SerializerMixin):
         if user_location:
             db.session.delete(user_location)
             db.session.commit()
-        return room
 
     @classmethod
     def enter_room(cls, user_id, room_name):
@@ -51,10 +51,10 @@ class User(db.Model, SerializerMixin):
         db.session.add(user_room_state)
 
         db.session.commit()
-        return room
 
     @classmethod
     def get_active_users(cls):
+        '''Return list of all active users'''
         users = cls.query.filter(cls.is_active).all()
         for user in users:
             user_dict = user.to_dict()
@@ -65,14 +65,15 @@ class User(db.Model, SerializerMixin):
             yield user_dict
     
     @classmethod
-    def get_active_users_for_room(cls, room_name):
-        room = Room.query.filter_by(name=room_name).first()
-        if room:
-            locations = UserLocation.query.filter_by(room_id=room.id).all()
-            for location in locations:
-                user = cls.query.filter_by(id=location.user_id).first()
-                if user.is_active:
-                    yield user.to_dict()
+    def get_active_users_by_room(cls):
+        '''Return room:user_list mapping for all active users'''
+        user_lists = defaultdict(list)
+        user_locations = UserLocation.query.all()
+        for location in user_locations:
+            room = Room.query.filter_by(id=location.room_id).first()
+            user = cls.query.filter_by(id=location.user_id).first()
+            user_lists[room.name].append(user.to_dict())
+        return user_lists
 
     def to_json(self):
         return {
