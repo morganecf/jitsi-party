@@ -1,5 +1,6 @@
 from . import db
 from datetime import datetime
+from collections import defaultdict
 from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.hybrid import hybrid_property
 
@@ -21,9 +22,16 @@ class User(db.Model, SerializerMixin):
         db.session.add(self)
         db.session.commit()
 
+    def get_avatar(self):
+        species, color = self.avatar.split('-')
+        return {
+            'type': species,
+            'color': color
+        }
+
     @classmethod
     def create(cls, username, avatar):
-        avatar = '-'.join(map(str, avatar))
+        avatar = '{0}-{1}'.format(avatar['type'], avatar['color'])
         user = cls(username=username, avatar=avatar)
         db.session.add(user)
         db.session.commit()
@@ -36,7 +44,6 @@ class User(db.Model, SerializerMixin):
         if user_location:
             db.session.delete(user_location)
             db.session.commit()
-        return room
 
     @classmethod
     def enter_room(cls, user_id, room_name):
@@ -51,28 +58,26 @@ class User(db.Model, SerializerMixin):
         db.session.add(user_room_state)
 
         db.session.commit()
-        return room
-
+    
     @classmethod
-    def get_active_users(cls):
+    def get_active_users_by_room(cls):
+        '''Return room:user_list mapping for all active users'''
         users = cls.query.filter(cls.is_active).all()
+        user_lists = defaultdict(list)
         for user in users:
             user_dict = user.to_dict()
             location = UserLocation.query.filter_by(user_id=user.id).first()
             if location:
-                room = Room.query.filter_by(id=location.room_id).first()
-                user_dict['room'] = room.name if room else None
-            yield user_dict
-    
-    @classmethod
-    def get_active_users_for_room(cls, room_name):
-        room = Room.query.filter_by(name=room_name).first()
-        if room:
-            locations = UserLocation.query.filter_by(room_id=room.id).all()
-            for location in locations:
-                user = cls.query.filter_by(id=location.user_id).first()
-                if user.is_active:
-                    yield user.to_dict()
+                room = Room.query.filter_by(id=location.room_id).first().name
+                user_lists[room].append(user_dict)
+            else:
+                user_lists['hallway'].append(user_dict)
+        return user_lists
+
+    def to_dict(self):
+        user_dict = super().to_dict()
+        user_dict['avatar'] = self.get_avatar()
+        return user_dict
 
     def to_json(self):
         return {

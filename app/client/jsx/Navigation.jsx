@@ -51,8 +51,8 @@ class Navigation extends Component {
         return (
             <div className="navigation-container">
                 <div className="column">
-                    {this.props.showMap &&
-                        <button className={mapButtonClass} disabled={false} onClick={() => onClick('map')}>
+                    {this.props.showMapButton &&
+                        <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
                             <FontAwesomeIcon icon={faMap}/>
                             <span className="navigation-room-name">Map</span>
                         </button>
@@ -85,7 +85,7 @@ class Navigation extends Component {
                 </div>
                 <div className="column column-avatar">
                     <div className="puck-wrapper">
-                      <img src={Avatars[this.props.user.avatar[0]][this.props.user.avatar[1]]}/>
+                      <img src={Avatars[this.props.user.avatar.type][this.props.user.avatar.color]}/>
                     </div>
                 </div>
             </div>
