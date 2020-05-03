@@ -19,7 +19,7 @@ cd app/client/
 npm install
 ```
 
-### Running the app locally 
+### Running the app locally
 ```bash
 # Make sure your virtual env is activated
 source venv/bin/activate
@@ -57,7 +57,7 @@ Room.query.all()
 ```
 
 ### Running the app locally in production mode
-We use multiple workers in production, so we've added an experimental message queue that only gets activated in production mode. This is a tentative plan for Celery; don't worry about this for now. 
+We use multiple workers in production, so we've added an experimental message queue that only gets activated in production mode. This is a tentative plan for Celery; don't worry about this for now.
 ```bash
 # Install kombu (this also comes installed as part of your dev env)
 source venv/bin/activate
@@ -84,10 +84,20 @@ rabbitmqctl shutdown
 ```
 
 ### Jitsi API documentation
+API doc:
 https://github.com/jitsi/jitsi-meet/blob/master/doc/api.md
 
+Definition of JitsiMeetExternalAPI():
+https://github.com/jitsi/jitsi-meet/blob/master/modules/API/external/external_api.js
+
+Config options:
+https://github.com/jitsi/jitsi-meet/blob/master/config.js
+
+Interface config options:
+https://github.com/jitsi/jitsi-meet/blob/master/interface_config.js
+
 ### A slightly irritating note
-It seems like the Jitsi Meet library isn't intended to be consumed the way you'd use a regular JS library in a modern app, i.e., it seems you can't import it. We have to use a script tag to get it working, and then access the global variable: 
+It seems like the Jitsi Meet library isn't intended to be consumed the way you'd use a regular JS library in a modern app, i.e., it seems you can't import it. We have to use a script tag to get it working, and then access the global variable:
 ```html
 <body>
   ...
