@@ -197,6 +197,11 @@ class Room extends Component {
 
         const roomClass = this.state.entered ? "room entered" : "room"
 
+        const mapUnlockThreshold = 3
+        const visitedRooms = Object.values(this.props.visited).filter(x => x).length
+        const isMapUnlocked = _.has(this.roomTypesWithMap, room.type) && (visitedRooms >= mapUnlockThreshold)
+        const showMapTooltip = isMapUnlocked && visitedRooms == mapUnlockThreshold
+
         return (
             <div className={roomClass}>
                 <div className="room-header">
@@ -207,7 +212,9 @@ class Room extends Component {
                 <Navigation
                     directions={room.directions}
                     onClick={this.onSwitchRoom.bind(this)}
-                    showMap={_.has(this.roomTypesWithMap, room.type)}>
+                    showMap={isMapUnlocked}
+                    showMapTooltip={showMapTooltip}
+                    >
                 </Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
             </div>
