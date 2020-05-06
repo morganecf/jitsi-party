@@ -33,7 +33,10 @@ class PuckSelect extends Component {
     this.setState({ avatarDesign: key, rowOpen: index }) }
   handleClickColor(variantKey) {
     this.setState({ avatarColorway: variantKey })
-    this.props.handleSelect([this.state.avatarDesign, variantKey])
+    this.props.handleSelect({
+      type: this.state.avatarDesign,
+      color: variantKey
+    })
   }
 
   render() {

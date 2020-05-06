@@ -22,9 +22,16 @@ class User(db.Model, SerializerMixin):
         db.session.add(self)
         db.session.commit()
 
+    def get_avatar(self):
+        species, color = self.avatar.split('-')
+        return {
+            'type': species,
+            'color': color
+        }
+
     @classmethod
     def create(cls, username, avatar):
-        avatar = '-'.join(map(str, avatar))
+        avatar = '{0}-{1}'.format(avatar['type'], avatar['color'])
         user = cls(username=username, avatar=avatar)
         db.session.add(user)
         db.session.commit()
@@ -74,6 +81,11 @@ class User(db.Model, SerializerMixin):
             user = cls.query.filter_by(id=location.user_id).first()
             user_lists[room.name].append(user.to_dict())
         return user_lists
+
+    def to_dict(self):
+        user_dict = super().to_dict()
+        user_dict['avatar'] = self.get_avatar()
+        return user_dict
 
     def to_json(self):
         return {
