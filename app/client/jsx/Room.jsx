@@ -10,6 +10,7 @@ import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
 import { Beforeunload } from 'react-beforeunload';
+import { HttpApi } from './WebAPI.jsx'
 
 class Room extends Component {
     /*
@@ -45,16 +46,37 @@ class Room extends Component {
         this.state = {
             room,
             entered: this.roomTypesWithDoors[type] ? entered : true,
-            users: []
         }
+
+        this.httpApi = new HttpApi()
 
         this.socketApi = this.props.socketApi
         this.socketApi.startPinging(this.props.user.userId)
-        this.socketApi.on('user-left-room', this.props.updateUsers.bind(this))
-        this.socketApi.on('user-entered-room', this.props.updateUsers.bind(this))
+        this.socketApi.on(
+            'user-left-room',
+            ({ user, room }) => this.props.updateUsers({ user, room, action: 'leave' })
+        )
+        this.socketApi.on(
+            'user-entered-room',
+            ({ user, room }) => this.props.updateUsers({ user, room, action: 'enter' })
+        )
 
-        // TODO figure this one out - send their current location from server
-        // this.socketApi.on('user-disconnected', this.fetchUsersForRoom.bind(this))
+        // TODO - backend needs to send user if possible
+        // this.socketApi.on(
+        //     'user-disconnected',
+        //     ({ user }) => this.props.updateUsers({ user, action: 'exit' })
+        // )
+    }
+
+    async fetchUsers() {
+        const { success, users } = await this.httpApi.getUsers()
+        if (success) {
+            this.props.addUsers(users)
+        }
+    }
+
+    componentDidMount() {
+        this.fetchUsers()
     }
 
     getRoomData() {
@@ -71,7 +93,7 @@ class Room extends Component {
         */
         const roomData = this.getRoomData()
         const jitsiData = {
-            displayName: this.props.user.displayName,
+            displayName: this.props.user.username,
             avatar: this.props.user.avatar,
             roomName: roomData.name,
             muteRoom: roomData.muteRoom,
@@ -117,7 +139,7 @@ class Room extends Component {
     updateRoom(room) {
         // Leave current room
         this.clearBackground()
-        this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
+        this.socketApi.leaveRoom(this.props.user, this.state.room)
 
         // Go to new room, but don't open the door for rooms that have doors
         const entered = !this.roomTypesWithDoors[this.props.rooms[room].type]
@@ -170,9 +192,10 @@ class Room extends Component {
             return <Map onRoomClick={this.onSwitchRoom.bind(this)}></Map>
         }
 
+        const userList = this.props.users[this.state.room] || []
         const content = this.state.entered ?
             this.getRoomContent() :
-            <Door room={room} users={this.state.users} tintColor={room.doorTint} onClick={this.onEnterRoom.bind(this)}></Door>
+            <Door room={room} users={userList} tintColor={room.doorTint} onClick={this.onEnterRoom.bind(this)}></Door>
 
         const roomClass = this.state.entered ? "room entered" : "room"
 
@@ -202,6 +225,7 @@ class Room extends Component {
 }
 
 export default connect(state => state, {
+    addUsers: reducers.addUsersActionCreator,
     updateUsers: reducers.updateUsersActionCreator,
     updateCurrentRoom: reducers.updateCurrentRoomActionCreator
 })(Room)

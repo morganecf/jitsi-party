@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import { handleActions } from 'redux-actions'
 import { WebSocketApi } from './WebAPI.jsx'
 
@@ -44,13 +45,44 @@ function updateUserAction(state, user) {
     return Object.assign({}, state, user)
 }
 
+function addUserToRoom(state, user, room) {
+    return Object.assign(
+        {},
+        state.users,
+        {
+            [room]: [
+                ...(state.users[room] || []),
+                user
+            ]
+        }
+    )
+}
+
+function deleteUserFromRoom(state, user, room) {
+    const userList = state.users[room] || []
+    _.remove(userList, user)
+    return Object.assign(
+        {},
+        state.users,
+        {
+            [room]: userList
+        }
+    )
+}
+
+function deleteUser(state, user) {
+    // TODO
+    return state
+}
+
 function updateUsersAction(state, message) {
-    const { room, user } = message.message
-    const userList = [
-        ...state[room],
-        user
-    ]
-    return Object.assign({}, state, { [room]: userList })
+    const { room, user, action } = message.message
+    const users = {
+        enter: addUserToRoom,
+        leave: deleteUserFromRoom,
+        exit: deleteUser
+    }[action](state, user, room)
+    return Object.assign({}, state, { users })
 }
 
 function connectSocketAction(state) {

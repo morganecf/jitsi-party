@@ -14,20 +14,18 @@ def on_ping(message):
 
 @socketio.on('leave-room')
 def on_leave_room(message):
-    user, room = message
-    User.leave_room(user['userId'], room)
+    User.leave_room(message['user']['userId'], message['room'])
     message = {
-        'user': user,
-        'room': room
+        'user': message['user'],
+        'room': message['room']
     }
     emit('user-left-room', message, broadcast=True)
 
 @socketio.on('enter-room')
 def on_enter_room(message):
-    user, room = message
-    User.enter_room(user['userId'], room)
+    User.enter_room(message['user']['userId'], message['room'])
     message = {
-        'user': user,
-        'room': room
+        'user': message['user'],
+        'room': message['room']
     }
     emit('user-entered-room', message, broadcast=True)
