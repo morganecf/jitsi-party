@@ -96,7 +96,7 @@ class Map extends Component {
                     {numInRooms} partying
                 </div>
                 <div className="map-stat-column">
-                    <span className="map-stat-emoji">🚻</span>
+                    <span className="map-stat-emoji">🚽</span>
                     {numInBathrooms} taking bathroom break
                 </div>
                 <div className="map-stat-column">
