@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
+import { Beforeunload } from 'react-beforeunload';
+import Modal from 'react-modal';
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
@@ -9,7 +11,6 @@ import Map from './Map.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
-import { Beforeunload } from 'react-beforeunload';
 import { HttpApi } from './WebAPI.jsx'
 
 class Room extends Component {
@@ -46,6 +47,7 @@ class Room extends Component {
         this.state = {
             room,
             entered: this.roomTypesWithDoors[type] ? entered : true,
+            showMap: false
         }
 
         this.httpApi = new HttpApi()
@@ -180,16 +182,20 @@ class Room extends Component {
         this.socketApi.leaveRoom(this.props.user, this.state.room)
     }
 
+    handleOpenMap() {
+        this.setState({ showMap: true })
+    }
+
+    handleCloseMap() {
+        this.setState({ showMap: false })
+    }
+
     render() {
         const room = this.props.rooms[this.state.room]
 
         if (room.type === 'redirect') {
             this.socketApi.enterRoom(this.props.user, this.state.room)
             return <Redirect to={room.route} />
-        }
-
-        if (room.type === 'map') {
-            return <Map onRoomClick={this.onSwitchRoom.bind(this)}></Map>
         }
 
         const userList = this.props.users[this.state.room] || []
@@ -204,6 +210,9 @@ class Room extends Component {
         const isMapUnlocked = _.has(this.roomTypesWithMap, room.type) && (visitedRooms >= mapUnlockThreshold)
         const showMapTooltip = isMapUnlocked && visitedRooms == mapUnlockThreshold
 
+        // Allows modal to have access to react components and state
+        Modal.setAppElement('.app')
+
         return (
             <div className={roomClass}>
                 <div className="room-header">
@@ -214,11 +223,17 @@ class Room extends Component {
                 <Navigation
                     directions={room.directions}
                     onClick={this.onSwitchRoom.bind(this)}
-                    showMap={isMapUnlocked}
+                    // showMapButton={isMapUnlocked}
+                    showMapButton={true}
                     showMapTooltip={showMapTooltip}
-                    >
-                </Navigation>
+                    handleOpenMap={this.handleOpenMap.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
+                <Modal
+                    isOpen={this.state.showMap}
+                    onAfterOpen={this.handleOpenMap.bind(this)}
+                    onRequestClose={this.handleCloseMap.bind(this)}>
+                        <Map onRoomClick={this.onSwitchRoom.bind(this)}></Map>
+                </Modal>
             </div>
         )
     }

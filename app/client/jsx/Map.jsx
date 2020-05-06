@@ -22,7 +22,7 @@ class Map extends Component {
             .map(key => {
                 const room = Object.assign({}, this.props.rooms[key])
                 room.key = key
-                room.users = this.state.usersByRoom[key] || []
+                room.users = this.state.users[key] || []
                 return _.cloneDeep(room)
             })
 
@@ -88,7 +88,7 @@ class Map extends Component {
         // TODO not lock unvisited rooms for now; this can be a future feature
         const isVisited = true;
         // const isVisited = this.props.visited && this.props.visited[roomId]
-        const users = this.state.usersByRoom && this.state.usersByRoom[roomId] || []
+        const users = this.props.users[roomId] || []
 
         return (
             <div className="map">
