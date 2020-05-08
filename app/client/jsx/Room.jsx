@@ -54,26 +54,13 @@ class Room extends Component {
 
         this.socketApi = this.props.socketApi
         this.socketApi.startPinging(this.props.user.userId)
-        this.socketApi.on(
-            'user-left-room',
-            ({ user, room }) => this.props.updateUsers({ user, room, action: 'leave' })
-        )
-        this.socketApi.on(
-            'user-entered-room',
-            ({ user, room }) => this.props.updateUsers({ user, room, action: 'enter' })
-        )
-
-        // TODO - backend needs to send user if possible
-        // this.socketApi.on(
-        //     'user-disconnected',
-        //     ({ user }) => this.props.updateUsers({ user, action: 'exit' })
-        // )
+        this.socketApi.on('user-event', this.props.updateUsers.bind(this))
     }
 
     async fetchUsers() {
         const { success, users } = await this.httpApi.getUsers()
         if (success) {
-            this.props.addUsers(users)
+            this.props.updateUsers(users)
         }
     }
 
@@ -240,7 +227,6 @@ class Room extends Component {
 }
 
 export default connect(state => state, {
-    addUsers: reducers.addUsersActionCreator,
     updateUsers: reducers.updateUsersActionCreator,
     updateCurrentRoom: reducers.updateCurrentRoomActionCreator
 })(Room)

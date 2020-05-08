@@ -3,7 +3,6 @@ import { handleActions } from 'redux-actions'
 import { WebSocketApi } from './WebAPI.jsx'
 
 const ADD_ROOMS = 'ADD_ROOMS'
-const ADD_USERS = 'ADD_USERS'
 const UPDATE_USER = 'UPDATE_USER'
 const UPDATE_USERS = 'UPDATE_USERS'
 const CONNECT_SOCKET = 'CONNECT_SOCKET'
@@ -37,52 +36,12 @@ function addRoomsAction(state, rooms) {
     return Object.assign({}, state, rooms)
 }
 
-function addUsersAction(state, users) {
+function updateUsersAction(state, users) {
     return Object.assign({}, state, users)
 }
 
 function updateUserAction(state, user) {
     return Object.assign({}, state, user)
-}
-
-function addUserToRoom(state, user, room) {
-    return Object.assign(
-        {},
-        state.users,
-        {
-            [room]: [
-                ...(state.users[room] || []),
-                user
-            ]
-        }
-    )
-}
-
-function deleteUserFromRoom(state, user, room) {
-    const userList = state.users[room] || []
-    _.remove(userList, user)
-    return Object.assign(
-        {},
-        state.users,
-        {
-            [room]: userList
-        }
-    )
-}
-
-function deleteUser(state, user) {
-    // TODO
-    return state
-}
-
-function updateUsersAction(state, message) {
-    const { room, user, action } = message.message
-    const users = {
-        enter: addUserToRoom,
-        leave: deleteUserFromRoom,
-        exit: deleteUser
-    }[action](state, user, room)
-    return Object.assign({}, state, { users })
 }
 
 function connectSocketAction(state) {
@@ -111,17 +70,13 @@ export default {
         type: ADD_ROOMS,
         rooms
     }),
-    addUsersActionCreator: users => ({
-        type: ADD_USERS,
-        users
-    }),
     updateUserActionCreator: user => ({
         type: UPDATE_USER,
         user
     }),
-    updateUsersActionCreator: message => ({
+    updateUsersActionCreator: users => ({
         type: UPDATE_USERS,
-        message
+        users
     }),
     connectSocketActionCreator: () => ({
         type: CONNECT_SOCKET
@@ -141,7 +96,6 @@ export default {
     /* Reducers */
     reducer: handleActions({
         [ADD_ROOMS]: addRoomsAction,
-        [ADD_USERS]: addUsersAction,
         [UPDATE_USER]: updateUserAction,
         [UPDATE_USERS]: updateUsersAction,
         [CONNECT_SOCKET]: connectSocketAction,
