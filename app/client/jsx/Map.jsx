@@ -22,7 +22,7 @@ class Map extends Component {
             .map(key => {
                 const room = Object.assign({}, this.props.rooms[key])
                 room.key = key
-                room.users = this.state.users[key] || []
+                room.users = this.props.users[key] || []
                 return _.cloneDeep(room)
             })
 
@@ -54,17 +54,23 @@ class Map extends Component {
     }
 
     getGlobalStats() {
-        const numInHallways = this.state.users.filter(user => !user.room).length
-        const numInBathrooms = this.state.users.filter(
-            user => user.room && user.room.endsWith('bathroom')
-        ).length
-        const numInRooms = this.state.users.filter(user => user.room).length - numInBathrooms
+        const users = this.props.users
+        
+        const numInHouse = _.sumBy(Object.keys(users), room => users[room].length)
+        const numInHallways = (users.hallway || []).length
+        const numInBathrooms = _.sumBy(
+            Object.keys(users).filter(
+                room => room.endsWith('bathroom')
+            ),
+            room => users[room].length
+        )
+        const numInRooms = numInHouse - numInHallways - numInBathrooms
 
         return (
             <div className="map-stats">
                 <div className="map-stat-column">
                     <span className="map-stat-emoji">🏚️</span>
-                    {this.state.users.length} in house
+                    {numInHouse} in house
                 </div>
                 <div className="map-stat-column">
                     <span className="map-stat-emoji">🎊</span>
@@ -88,7 +94,7 @@ class Map extends Component {
         // TODO not lock unvisited rooms for now; this can be a future feature
         const isVisited = true;
         // const isVisited = this.props.visited && this.props.visited[roomId]
-        const users = this.props.users[roomId] || []
+        const currentRoomUsers = this.props.users[roomId] || []
 
         return (
             <div className="map">
@@ -98,7 +104,7 @@ class Map extends Component {
                 </div>
                 <div className="map-area">
                     <div id="d3-map"></div>
-                    <MapRoomInfo room={room} isVisited={isVisited} users={users}></MapRoomInfo>
+                    <MapRoomInfo room={room} isVisited={isVisited} users={currentRoomUsers}></MapRoomInfo>
                 </div>
             </div>
         )

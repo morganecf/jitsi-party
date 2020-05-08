@@ -58,28 +58,20 @@ class User(db.Model, SerializerMixin):
         db.session.add(user_room_state)
 
         db.session.commit()
-
-    @classmethod
-    def get_active_users(cls):
-        '''Return list of all active users'''
-        users = cls.query.filter(cls.is_active).all()
-        for user in users:
-            user_dict = user.to_dict()
-            location = UserLocation.query.filter_by(user_id=user.id).first()
-            if location:
-                room = Room.query.filter_by(id=location.room_id).first()
-                user_dict['room'] = room.name if room else None
-            yield user_dict
     
     @classmethod
     def get_active_users_by_room(cls):
         '''Return room:user_list mapping for all active users'''
+        users = cls.query.filter(cls.is_active).all()
         user_lists = defaultdict(list)
-        user_locations = UserLocation.query.all()
-        for location in user_locations:
-            room = Room.query.filter_by(id=location.room_id).first()
-            user = cls.query.filter_by(id=location.user_id).first()
-            user_lists[room.name].append(user.to_dict())
+        for user in users:
+            user_dict = user.to_dict()
+            location = UserLocation.query.filter_by(user_id=user.id).first()
+            if location:
+                room = Room.query.filter_by(id=location.room_id).first().name
+                user_lists[room].append(user_dict)
+            else:
+                user_lists['hallway'].append(user_dict)
         return user_lists
 
     def to_dict(self):
