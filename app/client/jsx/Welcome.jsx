@@ -5,17 +5,29 @@ import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
 import { HttpApi } from './WebAPI.jsx'
+import LocalStorage from './LocalStorage.jsx'
 
 class Welcome extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            displayName: null,
-            avatar: null,
-            redirect: null
-        }
         this.httpApi = new HttpApi()
         this.props.connectToSocket()
+
+        let user = LocalStorage.get("USER")
+        if (user) {
+            this.state = {
+                displayName: user.displayName,
+                avatar: user.avatar,
+                redirect: "/party"
+            }
+            this.handleUserSelected(user)
+        } else {
+            this.state = {
+                displayName: null,
+                avatar: null,
+                redirect: null
+            }
+        }
     }
 
     async componentDidMount() {
@@ -34,21 +46,26 @@ class Welcome extends Component {
     }
 
     async handleReady() {
-        console.log(this.state)
         const response = await this.httpApi.join(this.state.displayName, this.state.avatar)
         if (response.success) {
             const { displayName, avatar } = this.state
-            this.props.updateUser({
+            const user = {
                 displayName,
                 avatar,
                 userId: response.userId
-            })
-            this.props.updateCurrentRoom({
-                room: 'vestibule',
-                entered: false
-            })
-            this.setState({ redirect: '/party' })
+            }
+            this.handleUserSelected(user)
+            this.setState({redirect: '/party'})
         }
+    }
+
+    handleUserSelected(user) {
+        LocalStorage.set("USER", user)
+        this.props.updateUser(user)
+        this.props.updateCurrentRoom({
+            room: 'vestibule',
+            entered: false
+        })
     }
 
     render() {

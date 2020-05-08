@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight, faMap } from '@fortawesome/free-solid-svg-icons'
 import { Avatars } from './avatars.jsx'
+import { LocalStorage } from './LocalStorage.jsx'
 
 class Navigation extends Component {
     constructor(props) {
