@@ -299,9 +299,9 @@
         "name": "Gallery Room 4",
         "type": "art",
         "art": {
-            "title": "Orbital",
-            "artist": "Ramona",
-            "src": "./js/images/art/orbital-ramona.jpg"
+            "title": "Night Bloom",
+            "artist": "LaRen",
+            "src": "./js/images/art/night-bloom-laren.jpg"
         },
         "directions": {
             "north": "gallery5",
@@ -322,9 +322,9 @@
         "name": "Gallery Room 5",
         "type": "art",
         "art": {
-            "title": "Night Bloom",
-            "artist": "LaRen",
-            "src": "./js/images/art/night-bloom-laren.jpg"
+            "title": "Orbital",
+            "artist": "Ramona",
+            "src": "./js/images/art/orbital-ramona.jpg"
         },
         "directions": {
             "south": "gallery4",
@@ -345,9 +345,9 @@
         "name": "Gallery Room 6",
         "type": "art",
         "art": {
-            "title": "Tycho",
-            "artist": "Mihai",
-            "src": "./js/images/art/tycho.jpg"
+            "title": "Perspectives: 1",
+            "artist": "LaRen",
+            "src": "./js/images/art/perspectives-1-laren.jpg"
         },
         "directions": {
             "south": "gallery5",
