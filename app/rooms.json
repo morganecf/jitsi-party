@@ -98,7 +98,7 @@
     "clubPolo": {
         "name": "Club Polo",
         "type": "iframe",
-        "description": "Live deep house & tech house set from DJ Depolo (10 PM - 3 AM)",
+        "description": "🎷 Live deep house & tech house set from DJ Depolo (10 PM - 3 AM) 🎷",
         "announcements": [
             "Live deep house & tech house set from DJ Depolo (10 PM - 3 AM)"
         ],
@@ -367,9 +367,10 @@
     "bunnyRun": {
         "name": "The Bunny Run",
         "type": "iframe",
-        "description": "The Winston & Winona show",
+        "description": "🐰 TIPS FOR TREATS: Donate at least $1 to Goddess: The American Stripper to feed Winston & Winona! https://bit.ly/2Wmxn4J 🐰",
         "announcements": [
-            "Come watch bunnies!!"
+            "🐰Come watch bunnies!!🐰",
+            "Donate to The Goddess project on Indiegogo to feed the kids a treat 💖"
         ],
         "muteRoom": true,
         "iframeOptions": {
