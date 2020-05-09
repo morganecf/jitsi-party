@@ -77,37 +77,33 @@ export default class MapVisualization {
         return d3.line().curve(d3.curveCardinal.tension(0.9))(points)
     }
 
-    draw(data, visited) {
+    draw(rooms, visited) {
         // A 30x30 grid was used to derive the values in rooms.json.
         // This makes sure those values are scaled to this view while
         // using the space efficiently
         this.xscale.domain([
-            d3.min(data, d => d.map.x),
-            d3.max(data, d => d.map.x + d.map.width)
+            d3.min(rooms, d => d.map.x),
+            d3.max(rooms, d => d.map.x + d.map.width)
         ])
         this.yscale.domain([
-            d3.min(data, d => d.map.y),
-            d3.max(data, d => d.map.y + d.map.height)
+            d3.min(rooms, d => d.map.y),
+            d3.max(rooms, d => d.map.y + d.map.height)
         ])
 
-        const numUsers = _.sumBy(data, d => d.users.length)
-        this.colorScale.domain([0, Math.max(5, numUsers)])
-
         // Create extra space for doors
-        padRooms(data)
+        padRooms(rooms)
 
         // Room groups
-        const room = this.svg
+        const groups = this.svg
             .selectAll('.map-room')
-            .data(data)
+            .data(rooms)
             .enter()
             .append('g')
             .attr('class', 'map-room')
 
         // Draw rooms
-        room.append('path')
+        this.rooms = groups.append('path')
             .attr('d', d => this.getRoomShape(d.map))
-            .attr('fill', d => this.colorScale(d.users.length + 1))
             .on('mouseenter', d => {
                 this.onRoomEnter(d.key)
                 d3.select(d3.event.target)
@@ -119,8 +115,19 @@ export default class MapVisualization {
                     .classed('highlighted-room', false)
             })
             .on('click', d => this.onRoomClick(d.key))
-            .classed('empty', d => !d.users.length)
             // .classed('unvisited', d => !visited[d.key])
+    }
+
+    update(users) {
+        const numUsers = _.sumBy(Object.values(users), d => d.length)
+        this.colorScale.domain([0, Math.max(5, numUsers)])
+
+        this.rooms
+            .transition()
+            .duration(1000)
+            .attr('fill', room => this.colorScale((users[room.key] || []).length + 1))
+            
+        this.rooms.classed('empty', room => !users[room.key])
     }
 }
 

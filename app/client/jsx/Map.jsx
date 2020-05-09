@@ -15,15 +15,12 @@ class Map extends Component {
     }
 
     componentDidMount() {
-        // Format room definition into array where each entry is a room
-        // with users
         this.rooms = Object.keys(this.props.rooms)
             .filter(key => _.has(this.props.rooms[key], 'map'))
             .map(key => {
-                const room = Object.assign({}, this.props.rooms[key])
+                const room = _.cloneDeep(this.props.rooms[key])
                 room.key = key
-                room.users = this.props.users[key] || []
-                return _.cloneDeep(room)
+                return room
             })
 
         const width = document.querySelector('.map').clientWidth / 1.5;
@@ -43,14 +40,14 @@ class Map extends Component {
             }
         }
 
-        const map = new MapVisualization(
+        this.map = new MapVisualization(
             '#d3-map',
             width,
             height,
             padding,
             mouseEvents
         )
-        map.draw(this.rooms, this.props.visited)
+        this.map.draw(this.rooms)
     }
 
     getGlobalStats() {
@@ -89,6 +86,10 @@ class Map extends Component {
     }
 
     render() {
+        if (this.map) {
+            this.map.update(this.props.users)
+        }
+        
         const roomId = this.state.highlighted
         const room = (this.props.rooms || {})[roomId]
         // TODO not lock unvisited rooms for now; this can be a future feature
