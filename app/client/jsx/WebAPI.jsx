@@ -54,18 +54,7 @@ export class HttpApi {
             return { success: false }
         }
     }
-
-    async getUsers() {
-        /* Fetches list of active users, mapped to room */
-        try {
-            const request = `${url}/users`
-            const response = await axios.get(request)
-            return { success: true, users: response.data }
-        } catch (err) {
-            return { success: false }
-        }
-    }
-
+    
     async getRooms() {
         /* Fetches room definition, including adventure rooms */
         try {
