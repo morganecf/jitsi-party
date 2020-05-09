@@ -22,7 +22,21 @@ class Welcome extends Component {
         const { success, rooms } = await this.httpApi.getRooms()
         if (success) {
             this.props.addRooms(rooms)
+            this.loadAssets(rooms)
         }
+    }
+
+    loadAssets(rooms) {
+        _.forEach(rooms, room => {
+            if (room.backgroundImage) {
+                const img = new Image()
+                img.src = room.backgroundImage
+            }
+            if (room.art && room.art.src) {
+                const img = new Image()
+                img.src = room.art.src
+            }
+        })
     }
 
     handleDisplayNameChange(event) {
