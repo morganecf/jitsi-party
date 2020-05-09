@@ -25,7 +25,6 @@
         "name": "Closet",
         "type": "jitsi",
         "capacity": 2,
-        "muteRoom": true,
         "backgroundImage": "js/images/rooms/closet.jpg",
         "description": "A quiet, cozy closet. Shhh.",
         "directions": {
@@ -70,7 +69,8 @@
         "type": "iframe",
         "description": "Dance until you die!!",
         "announcements": [
-            "David will be DJing from 11PM EST to 1AM EST!"
+            "David is DJing from 11PM EST to 1AM EST! 🍭",
+            "Watch the lovely & talented Marianne pole dance for part of it 💖"
         ],
         "muteRoom": true,
         "backgroundImage": "js/images/rooms/danceparty.jpg",
