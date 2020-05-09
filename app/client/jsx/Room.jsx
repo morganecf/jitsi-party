@@ -211,8 +211,7 @@ class Room extends Component {
                 <Navigation
                     directions={room.directions}
                     onClick={this.onSwitchRoom.bind(this)}
-                    // showMapButton={isMapUnlocked}
-                    showMapButton={true}
+                    showMapButton={isMapUnlocked}
                     showMapTooltip={showMapTooltip}
                     handleOpenMap={this.handleOpenMap.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
