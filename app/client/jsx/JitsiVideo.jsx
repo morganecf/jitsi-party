@@ -137,8 +137,8 @@ style.appendChild(document.createTextNode(css));
             window.api.addEventListener('videoConferenceJoined', () => {
                 this.makeJitsiTransparent()
                 this.hideSpinner()
-                const [ avatarType, avatarColor ] = this.props.jitsiData.avatar
-                const avatarUrl = Avatars[avatarType][avatarColor]
+                const { type, color } = this.props.jitsiData.avatar
+                const avatarUrl = Avatars[type][color]
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl,
