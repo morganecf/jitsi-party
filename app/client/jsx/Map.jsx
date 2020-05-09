@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import MapVisualization from './MapVisualization.js'
 import MapRoomInfo from './MapRoomInfo.jsx'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 class Map extends Component {
     constructor(props) {
@@ -23,13 +25,14 @@ class Map extends Component {
                 return room
             })
 
-        const width = document.querySelector('.map').clientWidth / 1.5;
-        const height = 600;
+        const width = document.querySelector('.map').clientWidth / 1.5
+        const height = document.querySelector('.map').clientHeight / 1.25
         const padding = 10;
         const mouseEvents = {
             onRoomClick: room => {
                 if (room !== 'room314') {
                     this.props.onRoomClick(room)
+                    this.props.handleCloseMap()
                 }
             },
             onRoomEnter: room => {
@@ -102,6 +105,9 @@ class Map extends Component {
                 <div className="map-header">
                     {this.getGlobalStats()}
                     <div className="map-header-tagline">Hover over rooms to see who's where!</div>
+                    <button className="map-close-button" onClick={this.props.handleCloseMap}>
+                        <FontAwesomeIcon icon={faTimes}/>
+                    </button>
                 </div>
                 <div className="map-area">
                     <div id="d3-map"></div>
