@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
+import { Beforeunload } from 'react-beforeunload';
+import Modal from 'react-modal';
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
@@ -9,8 +11,7 @@ import Map from './Map.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
-import { HttpApi } from './WebAPI.jsx'
-import { Beforeunload } from 'react-beforeunload';
+import { HttpApi, WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
 
 class Room extends Component {
@@ -49,6 +50,10 @@ class Room extends Component {
         }
 
         this.httpApi = new HttpApi()
+
+        this.socketApi = new WebSocketApi()
+        this.socketApi.startPinging(this.props.user.userId)
+        this.socketApi.on('user-event', this.props.updateUsers.bind(this))
     }
 
     async fetchUsersForRoom(room) {
@@ -67,32 +72,18 @@ class Room extends Component {
             }
         }
 
-        // Rooms that don't have doors are automatically "entered"
-        const { room, entered } = this.props.currentRoom
-        const { type } = this.props.rooms[this.props.currentRoom.room]
+        this.fetchUsers()
+    }
 
-        this.setState({
-            room,
-            entered: this.roomTypesWithDoors[type] ? entered : true,
-            users: []
-        })
-
-        this.socketApi = this.props.socketApi
-        this.socketApi.startPinging(this.props.user.userId)
-
-        // Refresh list of users each time a user enters or leaves, or each time a user
-        // disconnects (i.e. if client crashes). Disconnect events will lag behind other
-        // events since they rely on the flask-socketio's heartbeat system.
-        const onSocketEvent = room => {
-            if (room === this.state.room) {
-                this.fetchUsersForRoom(room)
-            }
+    async fetchUsers() {
+        const { success, users } = await this.httpApi.getUsers()
+        if (success) {
+            this.props.updateUsers(users)
         }
-        this.socketApi.on('user-left-room', onSocketEvent.bind(this))
-        this.socketApi.on('user-entered-room', onSocketEvent.bind(this))
-        this.socketApi.on('user-disconnected', this.fetchUsersForRoom.bind(this))
+    }
 
-        this.fetchUsersForRoom(this.state.room)
+    componentDidMount() {
+        this.fetchUsers()
     }
 
     getRoomData() {
@@ -109,7 +100,7 @@ class Room extends Component {
         */
         const roomData = this.getRoomData()
         const jitsiData = {
-            displayName: this.props.user.displayName,
+            displayName: this.props.user.username,
             avatar: this.props.user.avatar,
             roomName: roomData.name,
             muteRoom: roomData.muteRoom,
@@ -155,13 +146,12 @@ class Room extends Component {
     updateRoom(room) {
         // Leave current room
         this.clearBackground()
-        this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
+        this.socketApi.leaveRoom(this.props.user, this.state.room)
 
         // Go to new room, but don't open the door for rooms that have doors
         const entered = !this.roomTypesWithDoors[this.props.rooms[room].type]
         this.setState({ room, entered })
         this.props.updateCurrentRoom({ room, entered })
-        this.fetchUsersForRoom(room)
 
         // reset door anim
         const door = document.getElementById('door')
@@ -178,7 +168,9 @@ class Room extends Component {
             setTimeout(this.updateRoom.bind(this, room), 500)
         } else {
             this.updateRoom(room)
+            document.activeElement.blur()
         }
+        this.setState({ showMap: false })
     }
 
     onEnterRoom() {
@@ -189,12 +181,20 @@ class Room extends Component {
             room: this.state.room,
             entered: true 
         })
-        this.socketApi.enterRoom(this.props.user.userId, this.state.room)
+        this.socketApi.enterRoom(this.props.user, this.state.room)
     }
 
     handleBeforeUnload() {
         // Update server if user closes tab or refreshes
-        this.socketApi.leaveRoom(this.props.user.userId, this.state.room)
+        this.socketApi.leaveRoom(this.props.user, this.state.room)
+    }
+
+    handleOpenMap() {
+        this.setState({ showMap: true })
+    }
+
+    handleCloseMap() {
+        this.setState({ showMap: false })
     }
 
     computeMapState(room) {
@@ -221,20 +221,20 @@ class Room extends Component {
         const room = this.props.rooms[this.state.room]
 
         if (room.type === 'redirect') {
-            this.socketApi.enterRoom(this.props.user.userId, this.state.room)
+            this.socketApi.enterRoom(this.props.user, this.state.room)
             return <Redirect to={room.route} />
         }
 
-        if (room.type === 'map') {
-            return <Map onRoomClick={this.onSwitchRoom.bind(this)}></Map>
-        }
-
+        const userList = this.props.users[this.state.room] || []
         const content = this.state.entered ?
             this.getRoomContent() :
-            <Door room={room} users={this.state.users} tintColor={room.doorTint} onClick={this.onEnterRoom.bind(this)}></Door>
+            <Door room={room} users={userList} tintColor={room.doorTint} onClick={this.onEnterRoom.bind(this)}></Door>
 
         const roomClass = this.state.entered ? "room entered" : "room"
         const mapState = this.computeMapState(room)
+
+        // Allows modal to have access to react components and state
+        Modal.setAppElement('.app')
 
         return (
             <div className={roomClass}>
@@ -246,11 +246,16 @@ class Room extends Component {
                 <Navigation
                     directions={room.directions}
                     onClick={this.onSwitchRoom.bind(this)}
-                    showMap={mapState.mapVisible}
+                    showMapButton={mapState.mapVisible}
                     showMapTooltip={mapState.showMapTooltip}
-                    >
-                </Navigation>
+                    handleOpenMap={this.handleOpenMap.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
+                <Modal
+                    isOpen={this.state.showMap}
+                    onAfterOpen={this.handleOpenMap.bind(this)}
+                    onRequestClose={this.handleCloseMap.bind(this)}>
+                        <Map onRoomClick={this.onSwitchRoom.bind(this)}></Map>
+                </Modal>
             </div>
         )
     }
@@ -258,5 +263,6 @@ class Room extends Component {
 
 export default connect(state => state, {
     addRooms: reducers.addRoomsActionCreator,
+    updateUsers: reducers.updateUsersActionCreator,
     updateCurrentRoom: reducers.updateCurrentRoomActionCreator
 })(Room)

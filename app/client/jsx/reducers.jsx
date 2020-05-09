@@ -1,19 +1,29 @@
+import _ from 'lodash'
 import { handleActions } from 'redux-actions'
-import { WebSocketApi } from './WebAPI.jsx'
 
 const ADD_ROOMS = 'ADD_ROOMS'
 const UPDATE_USER = 'UPDATE_USER'
-const CONNECT_SOCKET = 'CONNECT_SOCKET'
+const UPDATE_USERS = 'UPDATE_USERS'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
 const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
 
+/*
+* This is the global state.
+*   user: userId, username, avatar type/color
+*   rooms: roomId->room definition mapping
+*   users: roomId->userlist mapping, gets updated by websockets
+*   currentRoom: room, entered
+*   visited: map of which rooms user has visited
+*   isAudioMuted: whether or not the user currently has audio muted
+*   isVideoMuted: whether or not the user currently has video muted
+*/
 const initialState = {
-    rooms: {},
     user: {},
-    currentRoom: '',
+    rooms: {},
+    users: {},
+    currentRoom: {},
     visited: {},
-    socketApi: null,
     isAudioMuted: false,
     isVideoMuted: false
 }
@@ -22,13 +32,12 @@ function addRoomsAction(state, rooms) {
     return Object.assign({}, state, rooms)
 }
 
-function updateUserAction(state, user) {
-    return Object.assign({}, state, user)
+function updateUsersAction(state, users) {
+    return Object.assign({}, state, users)
 }
 
-function connectSocketAction(state) {
-    const socketApi = new WebSocketApi()
-    return Object.assign({}, state, { socketApi })
+function updateUserAction(state, user) {
+    return Object.assign({}, state, user)
 }
 
 function updateCurrentRoomAction(state, currentRoom) {
@@ -56,8 +65,9 @@ export default {
         type: UPDATE_USER,
         user
     }),
-    connectSocketActionCreator: () => ({
-        type: CONNECT_SOCKET
+    updateUsersActionCreator: users => ({
+        type: UPDATE_USERS,
+        users
     }),
     updateCurrentRoomActionCreator: currentRoom => ({
         type: UPDATE_CURRENT_ROOM,
@@ -75,7 +85,7 @@ export default {
     reducer: handleActions({
         [ADD_ROOMS]: addRoomsAction,
         [UPDATE_USER]: updateUserAction,
-        [CONNECT_SOCKET]: connectSocketAction,
+        [UPDATE_USERS]: updateUsersAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
         [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,
         [UPDATE_VIDEO_MUTED]: updateVideoMutedAction

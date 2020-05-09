@@ -11,7 +11,7 @@ class Exit extends Component {
         return (
             <div className="exit">
                 <h1>Goodbye!</h1>
-                <img src={SpecialAvatars.thumb[this.props.user.avatar[1]]}/>
+                <img src={SpecialAvatars.thumb[this.props.user.avatar.color]}/>
             </div>
         )
     }

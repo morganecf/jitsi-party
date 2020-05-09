@@ -9,3 +9,11 @@ body {
 	background-attachment: fixed;
 	min-height: 100vh;
 }
+
+.ReactModal__Content {
+	border: none !important;
+	background: $background-color !important;
+}
+.ReactModal__Overlay {
+	background: lighten($background-color, 20%) !important;
+}

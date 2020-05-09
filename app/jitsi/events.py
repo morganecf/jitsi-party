@@ -2,9 +2,17 @@ from . import socketio, db
 from flask_socketio import emit
 from .models import User
 
+def broadcast_state():
+    users = User.get_active_users_by_room()
+    emit('user-event', users, broadcast=True)
+
 @socketio.on('disconnect')
 def on_disconnect():
-    emit('user-disconnected', broadcast=True)
+    broadcast_state()
+
+@socketio.on('connect')
+def on_connect():
+    broadcast_state()
 
 @socketio.on('ping-user')
 def on_ping(message):
@@ -14,10 +22,10 @@ def on_ping(message):
 
 @socketio.on('leave-room')
 def on_leave_room(message):
-    old_room = User.leave_room(message['user_id'], message['room'])
-    emit('user-left-room', old_room.name, broadcast=True)
+    User.leave_room(message['user']['userId'], message['room'])
+    broadcast_state()
 
 @socketio.on('enter-room')
 def on_enter_room(message):
-    new_room = User.enter_room(message['user_id'], message['room'])
-    emit('user-entered-room', new_room.name, broadcast=True)
+    User.enter_room(message['user']['userId'], message['room'])
+    broadcast_state()
