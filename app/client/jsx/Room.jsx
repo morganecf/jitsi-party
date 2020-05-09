@@ -71,7 +71,7 @@ class Room extends Component {
         const jitsiData = {
             displayName: this.props.user.username,
             avatar: this.props.user.avatar,
-            roomName: roomData.name,
+            roomName: this.state.room,
             muteRoom: roomData.muteRoom,
         }
         return {
