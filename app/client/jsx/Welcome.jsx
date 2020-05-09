@@ -10,35 +10,53 @@ import LocalStorage from './LocalStorage.jsx'
 class Welcome extends Component {
     constructor(props) {
         super(props)
+        
         this.httpApi = new HttpApi()
-        this.props.connectToSocket()
 
         let user = LocalStorage.get("USER")
         if (user) {
             this.state = {
-                displayName: user.displayName,
+                username: user.username,
                 avatar: user.avatar,
                 redirect: "/party"
             }
             this.handleUserSelected(user)
         } else {
             this.state = {
-                displayName: null,
+                username: null,
                 avatar: null,
                 redirect: null
             }
         }
     }
 
-    async componentDidMount() {
+    async fetchRooms() {
         const { success, rooms } = await this.httpApi.getRooms()
         if (success) {
             this.props.addRooms(rooms)
+            this.loadAssets(rooms)
         }
     }
 
-    handleDisplayNameChange(event) {
-        this.setState({ displayName: event.target.value })
+    loadAssets(rooms) {
+        _.forEach(rooms, room => {
+            if (room.backgroundImage) {
+                const img = new Image()
+                img.src = room.backgroundImage
+            }
+            if (room.art && room.art.src) {
+                const img = new Image()
+                img.src = room.art.src
+            }
+        })
+    }
+
+    componentDidMount() {
+        this.fetchRooms()
+    }
+
+    handleUsernameChange(event) {
+        this.setState({ username: event.target.value })
     }
 
     handleAvatarSelect(selection) {
@@ -46,14 +64,15 @@ class Welcome extends Component {
     }
 
     async handleReady() {
-        const response = await this.httpApi.join(this.state.displayName, this.state.avatar)
+        const response = await this.httpApi.join(this.state.username, this.state.avatar)
         if (response.success) {
-            const { displayName, avatar } = this.state
+            const { username, avatar } = this.state
             const user = {
-                displayName,
+                username,
                 avatar,
                 userId: response.userId
             }
+            this.props.updateUser(user)
             this.handleUserSelected(user)
             this.setState({redirect: '/party'})
         }
@@ -87,9 +106,9 @@ class Welcome extends Component {
         let name_opacity = 'form-fade'
         let avatar_opacity = 'form-fade'
         let party_opacity = 'form-fade-party'
-        if (this.state.displayName === null) { name_opacity = 'form' }
-        if (this.state.displayName) { avatar_opacity = 'form' }
-        if (this.state.displayName && this.state.avatar) { party_opacity = 'form-party' }
+        if (this.state.username === null) { name_opacity = 'form' }
+        if (this.state.username) { avatar_opacity = 'form' }
+        if (this.state.username && this.state.avatar) { party_opacity = 'form-party' }
 
         return (
             <div className="vestibule">
@@ -97,9 +116,9 @@ class Welcome extends Component {
                 <div className='serif'>You've met with a terrible fate, haven't you?</div>
                 <h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>
                 <img className='splash' src='./js/images/cabinfeverhighres.png'/>
-                <input style={text_entry} autoComplete="off" className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleDisplayNameChange.bind(this)}/><br/>
+                <input style={text_entry} autoComplete="off" className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleUsernameChange.bind(this)}/><br/>
                 <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
-                <input id='button' className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.displayName||!this.state.avatar} />
+                <input id='button' className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.username||!this.state.avatar} />
             </div>
         )
 
@@ -111,6 +130,5 @@ export default connect(
     {
         addRooms: reducers.addRoomsActionCreator,
         updateUser: reducers.updateUserActionCreator,
-        connectToSocket: reducers.connectSocketActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Welcome)

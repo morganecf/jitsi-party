@@ -16,7 +16,7 @@ export default props => {
     return (
         <div className="user-list">
             {users.map(user => {
-                const [ type, color ] = user.avatar.split('-')
+                const { type, color } = user.avatar
                 const imgClass = isPrivate ? 'private' : ''
                 const username = isPrivate ? 'anonymous' : user.username
 
