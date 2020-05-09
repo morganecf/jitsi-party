@@ -372,7 +372,6 @@
             "🐰Come watch bunnies!! 🐰",
             "Donate to The Goddess project on Indiegogo to feed the kids a treat 💖"
         ],
-        "muteRoom": true,
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=bunheroes&parent=jitsi.gbre.org"
         },
