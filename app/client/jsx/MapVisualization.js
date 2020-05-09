@@ -4,6 +4,15 @@ import * as d3 from 'd3';
 const DOOR_SIZE = 0.8
 const DOOR_GAP = 0.3
 
+// Transition time for colors in heat map
+const ROOM_TRANSITION_DURATION = 500
+
+// If the # of users on the map is less than this number, the heat map
+// colors will scale between 0 and this number. This prevents colors
+// from being misleadingly bright when there are very few users in a
+// room
+const DEFAULT_MIN_USERS_FOR_COLOR_SCALE = 5
+
 export default class MapVisualization {
     constructor(container, width, height, padding, mouseEvents) {
         _.assign(this, mouseEvents)
@@ -120,13 +129,16 @@ export default class MapVisualization {
 
     update(users) {
         const numUsers = _.sumBy(Object.values(users), d => d.length)
-        this.colorScale.domain([0, Math.max(5, numUsers)])
+        this.colorScale.domain([
+            0,
+            Math.max(DEFAULT_MIN_USERS_FOR_COLOR_SCALE, numUsers)
+        ])
 
         this.rooms
             .transition()
-            .duration(1000)
+            .duration(ROOM_TRANSITION_DURATION)
             .attr('fill', room => this.colorScale((users[room.key] || []).length + 1))
-            
+
         this.rooms.classed('empty', room => !users[room.key])
     }
 }
