@@ -26,7 +26,6 @@ class Welcome extends Component {
 
     componentDidMount() {
         this.fetchRooms()
-        this.props.connectToSocket()
     }
 
     handleUsernameChange(event) {
@@ -97,6 +96,5 @@ export default connect(
     {
         addRooms: reducers.addRoomsActionCreator,
         updateUser: reducers.updateUserActionCreator,
-        connectToSocket: reducers.connectSocketActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Welcome)

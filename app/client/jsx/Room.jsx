@@ -11,7 +11,7 @@ import Map from './Map.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
-import { HttpApi } from './WebAPI.jsx'
+import { HttpApi, WebSocketApi } from './WebAPI.jsx'
 
 class Room extends Component {
     /*
@@ -52,7 +52,7 @@ class Room extends Component {
 
         this.httpApi = new HttpApi()
 
-        this.socketApi = this.props.socketApi
+        this.socketApi = new WebSocketApi()
         this.socketApi.startPinging(this.props.user.userId)
         this.socketApi.on('user-event', this.props.updateUsers.bind(this))
     }
