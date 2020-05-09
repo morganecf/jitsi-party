@@ -181,8 +181,8 @@ class Room extends Component {
 
     render() {
         if (Object.keys(this.props.rooms).length === 0) {
-            // room config not loaded yet, just drop a placeholder
-            return <div></div>
+            // room config not loaded yet
+            return null
         }
 
         LocalStorage.touch("USER") // keep session alive
