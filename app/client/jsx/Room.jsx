@@ -151,6 +151,7 @@ class Room extends Component {
         } else {
             this.updateRoom(room)
         }
+        this.setState({ showMap: false })
     }
 
     onEnterRoom() {
