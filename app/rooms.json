@@ -66,20 +66,16 @@
         "doorTint": "#FF5938"
     },
     "danceParty": {
-        "name": "Velvet",
+        "name": "Dave's Rave Cave",
         "type": "iframe",
         "description": "Dance until you die!!",
         "announcements": [
-            "9:30 - 10:00: Live Drone (tentative by Dewb)",
-            "10:00 - 11:00: Live Electronic Improv from Uncle Thumpy",
-            "11:00 - 12:00: Progressive House by dEviant",
-            "12:00 - 1:00: Tech House by DJ841",
-            "1:00 - LATE: Placebo Picture Show (eclectic music videos)"
+            "David will be DJing from 11 PM to 1 AM!"
         ],
         "muteRoom": true,
         "backgroundImage": "js/images/rooms/danceparty.jpg",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=theplacebopictureshow&parent=jitsi.gbre.org"
+            "src": "https://player.twitch.tv/?channel=david_codes&parent=jitsi.gbre.org"
         },
         "directions": {
             "west": "bathroom",
@@ -234,9 +230,9 @@
         "name": "Gallery Room 1",
         "type": "art",
         "art": {
-            "title": "Pothos",
-            "artist": "Ramona",
-            "src": "./js/images/art/pothos-ramona.jpg"
+            "title": "Scale",
+            "artist": "F r e d",
+            "src": "./js/images/art/scale-fred.jpg"
         },
         "directions": {
             "north": "gallery2",
@@ -257,9 +253,9 @@
         "name": "Gallery Room 2",
         "type": "art",
         "art": {
-            "title": "Heart Dress",
-            "artist": "Julia",
-            "src": "./js/images/art/heart-dress-julia.jpg"
+            "title": "Soon You Will Be Eaten [WIP]",
+            "artist": "Daniel",
+            "src": "./js/images/art/daniel-moloch.png"
         },
         "directions": {
             "north": "gallery3",
@@ -280,9 +276,9 @@
         "name": "Gallery Room 3",
         "type": "art",
         "art": {
-            "title": "Void",
-            "artist": "Alice",
-            "src": "./js/images/art/void-alice.jpg"
+            "title": "Lamp",
+            "artist": "Goldie",
+            "src": "./js/images/art/lamp-goldie.jpg"
         },
         "directions": {
             "north": "gallery4",
@@ -303,9 +299,9 @@
         "name": "Gallery Room 4",
         "type": "art",
         "art": {
-            "title": "Origami Fish",
-            "artist": "Kevin",
-            "src": "./js/images/art/dollar-fish-kevin.jpg"
+            "title": "Orbital",
+            "artist": "Ramona",
+            "src": "./js/images/art/orbital-ramona.jpg"
         },
         "directions": {
             "north": "gallery5",
@@ -373,8 +369,7 @@
         "type": "iframe",
         "description": "The Winston & Winona show",
         "announcements": [
-            "At 11:59 PM EDT, Mr. and Mrs. Winston and Winona Crider will be celebrating their wedding and all are welcome to share in their happiness.",
-            "The couple are not registered at any retail store as they have all they need. However, they suggest donations to the House Rabbit Network of North Billerica, the place where they first shared cilantro, for those interested to help support rabbits without homes or the love that they share."
+            "Come watch bunnies!!"
         ],
         "muteRoom": true,
         "iframeOptions": {
