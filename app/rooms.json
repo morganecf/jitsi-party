@@ -70,7 +70,7 @@
         "type": "iframe",
         "description": "Dance until you die!!",
         "announcements": [
-            "David will be DJing from 11 PM to 1 AM!"
+            "David will be DJing from 11PM EST to 1AM EST!"
         ],
         "muteRoom": true,
         "backgroundImage": "js/images/rooms/danceparty.jpg",
@@ -98,9 +98,9 @@
     "clubPolo": {
         "name": "Club Polo",
         "type": "iframe",
-        "description": "🎷 Live deep house & tech house set from DJ Depolo (10 PM - 3 AM) 🎷",
+        "description": "🎷 Live deep house & tech house set from DJ Depolo 🎷",
         "announcements": [
-            "Live deep house & tech house set from DJ Depolo (10 PM - 3 AM)"
+            "Live deep house & tech house set from DJ Depolo for...most of the night?"
         ],
         "muteRoom": true,
         "backgroundImage": "js/images/rooms/clubpolo.jpg",
@@ -369,7 +369,7 @@
         "type": "iframe",
         "description": "🐰 TIPS FOR TREATS: Donate at least $1 to Goddess: The American Stripper to feed Winston & Winona! https://bit.ly/2Wmxn4J 🐰",
         "announcements": [
-            "🐰Come watch bunnies!!🐰",
+            "🐰Come watch bunnies!! 🐰",
             "Donate to The Goddess project on Indiegogo to feed the kids a treat 💖"
         ],
         "muteRoom": true,
