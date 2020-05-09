@@ -15,5 +15,5 @@ body {
 	background: $background-color !important;
 }
 .ReactModal__Overlay {
-	background: lighten($background-color, 20%) !important;
+	background: rgba(255, 255, 255, 0.25) !important;
 }

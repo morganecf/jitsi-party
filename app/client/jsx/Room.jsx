@@ -138,7 +138,6 @@ class Room extends Component {
         } else {
             this.updateRoom(room)
         }
-        this.setState({ showMap: false })
     }
 
     onEnterRoom() {
@@ -206,7 +205,7 @@ class Room extends Component {
                     isOpen={this.state.showMap}
                     onAfterOpen={this.handleOpenMap.bind(this)}
                     onRequestClose={this.handleCloseMap.bind(this)}>
-                        <Map onRoomClick={this.onSwitchRoom.bind(this)}></Map>
+                        <Map onRoomClick={this.onSwitchRoom.bind(this)} handleCloseMap={this.handleCloseMap.bind(this)}></Map>
                 </Modal>
             </div>
         )

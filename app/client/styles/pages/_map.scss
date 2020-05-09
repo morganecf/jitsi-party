@@ -3,6 +3,7 @@
 .map {
     $unvisited-color: #D6D3CD;
     $transition-duration: .3s;
+    height: 100%;
 
     p {
         text-align: center;
@@ -31,6 +32,15 @@
                     font-size: large;
                     margin-right: 5px;
                 }
+            }
+        }
+
+        .map-close-button {
+            padding: 1px 7px;
+            margin: 0;
+
+            svg {
+                margin: 0;
             }
         }
     }
@@ -93,17 +103,12 @@
             cursor: pointer;
             stroke-width: 2;
             stroke: #000;
-            fill-opacity: 0.7;
         }
 
         path.highlighted-room, path.unvisited.highlighted-room, path.empty.highlighted-room {
             fill-opacity: 1;
             stroke: #f2f1f1;
             transition: fill-opacity $transition-duration, stroke $transition-duration;
-        }
-
-        path.empty {
-            fill-opacity: 0.2;
         }
 
         path.unvisited {

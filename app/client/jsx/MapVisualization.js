@@ -7,6 +7,9 @@ const DOOR_GAP = 0.3
 // Transition time for colors in heat map
 const ROOM_TRANSITION_DURATION = 500
 
+const ROOM_OPACITY = 0.7
+const EMPTY_ROOM_OPACITY = 0.2
+
 // If the # of users on the map is less than this number, the heat map
 // colors will scale between 0 and this number. This prevents colors
 // from being misleadingly bright when there are very few users in a
@@ -113,6 +116,7 @@ export default class MapVisualization {
         // Draw rooms
         this.rooms = groups.append('path')
             .attr('d', d => this.getRoomShape(d.map))
+            .attr('fill-opacity', EMPTY_ROOM_OPACITY)
             .on('mouseenter', d => {
                 this.onRoomEnter(d.key)
                 d3.select(d3.event.target)
@@ -135,11 +139,11 @@ export default class MapVisualization {
         ])
 
         this.rooms
+            .interrupt()
             .transition()
             .duration(ROOM_TRANSITION_DURATION)
             .attr('fill', room => this.colorScale((users[room.key] || []).length + 1))
-
-        this.rooms.classed('empty', room => !users[room.key])
+            .attr('fill-opacity', room => users[room.key] ? ROOM_OPACITY : EMPTY_ROOM_OPACITY)
     }
 }
 
