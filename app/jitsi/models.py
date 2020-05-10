@@ -13,6 +13,9 @@ class User(db.Model, SerializerMixin):
     avatar = db.Column(db.String())
     last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
 
+    room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
+    room = relationship('Room', backpopulates='users')
+
     @hybrid_property
     def is_active(self):
          return self.last_seen > datetime.utcnow().timestamp() - USER_TIMEOUT
@@ -38,27 +41,23 @@ class User(db.Model, SerializerMixin):
         return user
 
     @classmethod
-    def leave_room(cls, user_id, room_name):
-        room = Room.query.filter_by(name=room_name).first()
-        user_location = UserLocation.query.filter_by(user_id=user_id, room_id=room.id).first()
-        if user_location:
-            db.session.delete(user_location)
-            db.session.commit()
+    def leave_room(cls, user_id):
+        user = User.query.filter_by(id=user_id).first()
+        user.room = None
+        db.session.commit()
 
     @classmethod
     def enter_room(cls, user_id, room_name):
         room = Room.query.filter_by(name=room_name).first()
-
-        # Update location
-        user_location = UserLocation(user_id=user_id, room_id=room.id)
-        db.session.add(user_location)
+        user = User.query.filter_by(id=user_id).first()
+        user.room = room
 
         # Make room discovered by user
-        user_room_state = UserRoomState(user_id=user_id, room_id=room.id, discovered=True)
-        db.session.add(user_room_state)
+        user_room_state = UserRoomState.find_or_create(user_id=user_id, room_id=room.id)
+        user_room_state.discovered = True
 
         db.session.commit()
-    
+
     @classmethod
     def get_active_users_by_room(cls):
         '''Return room:user_list mapping for all active users'''
@@ -66,10 +65,8 @@ class User(db.Model, SerializerMixin):
         user_lists = defaultdict(list)
         for user in users:
             user_dict = user.to_dict()
-            location = UserLocation.query.filter_by(user_id=user.id).first()
-            if location:
-                room = Room.query.filter_by(id=location.room_id).first().name
-                user_lists[room].append(user_dict)
+            if user.room:
+                user_lists[user.room.name].append(user_dict)
             else:
                 user_lists['hallway'].append(user_dict)
         return user_lists
@@ -97,18 +94,10 @@ class Room(db.Model, SerializerMixin):
     name = db.Column(db.String(100), unique=True, index=True)
     room_type = db.Column(db.String(50))
 
+    users = relationship('User', backpopulates='room')
+
     def __repr__(self):
         return 'Room {0}'.format(self.name)
-
-
-class UserLocation(db.Model, SerializerMixin):
-    __tablename__ = 'user_locations'
-    id = db.Column(db.Integer, primary_key=True)
-    room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), index=True)
-
-    def __repr__(self):
-        return 'User {0} is in Room {1}'.format(self.user_id, self.room_id)
 
 
 class UserRoomState(db.Model, SerializerMixin):
@@ -117,6 +106,15 @@ class UserRoomState(db.Model, SerializerMixin):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
     discovered = db.Column(db.Boolean)
+
+    @classmethod
+    def find_or_create(cls, user_id, room_id):
+        user_room_state = cls.query.filter_by(user_id=user_id, room_id=room_id).one_or_none()
+        if not user_room_state:
+            user_room_state = cls(user_id=user_id, room_id=room_id)
+            session.add(user_room_state)
+            session.commit()
+        return user_room_state
 
     def __repr__(self):
         visited = 'visited' if self.discovered else 'not visited'

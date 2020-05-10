@@ -27,7 +27,7 @@ def on_ping(message):
 
 @socketio.on('leave-room')
 def on_leave_room(message):
-    User.leave_room(message['user']['userId'], message['room'])
+    User.leave_room(message['user']['userId'])
     broadcast_state()
 
 
