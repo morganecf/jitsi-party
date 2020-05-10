@@ -1,6 +1,7 @@
 from . import db
 from datetime import datetime
 from collections import defaultdict
+from sqlalchemy import UniqueConstraint
 from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.hybrid import hybrid_property
 
@@ -102,6 +103,10 @@ class Room(db.Model, SerializerMixin):
 
 class UserRoomState(db.Model, SerializerMixin):
     __tablename__ = 'user_room_states'
+    __table_args__ = (
+        UniqueConstraint('user_id', 'room_id', name='_unique_user_room'),
+    )
+
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
