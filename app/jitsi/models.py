@@ -13,7 +13,7 @@ class User(db.Model, SerializerMixin):
     avatar = db.Column(db.String())
     last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
 
-    room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
+    room_id = db.Column(db.Integer, db.ForeignKey('room.id'))
     room = relationship('Room', backpopulates='users')
 
     @hybrid_property
