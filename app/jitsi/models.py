@@ -21,7 +21,7 @@ class User(db.Model, SerializerMixin):
     last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
 
     room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
-    room = relationship('Room', back_populates='users')
+    room = relationship('Room')
 
     @hybrid_property
     def is_active(self):
@@ -104,8 +104,6 @@ class Room(db.Model, SerializerMixin):
     name = db.Column(db.String(100), unique=True, index=True)
     room_type = db.Column(db.String(50))
 
-    users = relationship('User', back_populates='room')
-
     def __repr__(self):
         return 'Room {0}'.format(self.name)
 
@@ -126,8 +124,8 @@ class UserRoomState(db.Model, SerializerMixin):
         user_room_state = cls.query.filter_by(user_id=user_id, room_id=room_id).one_or_none()
         if not user_room_state:
             user_room_state = cls(user_id=user_id, room_id=room_id)
-            session.add(user_room_state)
-            session.commit()
+            db.session.add(user_room_state)
+            db.session.commit()
         return user_room_state
 
     def __repr__(self):
