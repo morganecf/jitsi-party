@@ -1,11 +1,16 @@
+import logging
+
 from . import db
-from datetime import datetime
 from collections import defaultdict
+from datetime import datetime
 from sqlalchemy import UniqueConstraint
 from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.hybrid import hybrid_property
 
+
 USER_TIMEOUT = 30
+logger = logging.getLogger(__name__)
+
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
@@ -42,8 +47,11 @@ class User(db.Model, SerializerMixin):
         return user
 
     @classmethod
-    def leave_room(cls, user_id):
+    def leave_room(cls, user_id, room_name):
         user = User.query.filter_by(id=user_id).first()
+        if user.room.name != room_name:
+            logger.warning(f"User {user.id} ({user.username}) tried to leave room {room_name} but was in room {room.name}"))
+            return
         user.room = None
         db.session.commit()
 
