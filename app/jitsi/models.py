@@ -50,9 +50,15 @@ class User(db.Model, SerializerMixin):
     @classmethod
     def leave_room(cls, user_id, room_name):
         user = User.query.filter_by(id=user_id).first()
+
+        if not user.room:
+            # Navigated from one hallway to another.
+            return
+
         if user.room.name != room_name:
             logger.warning(f"User {user.id} ({user.username}) tried to leave room {room_name} but was in room {room.name}")
             return
+
         user.room = None
         db.session.commit()
 
