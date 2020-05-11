@@ -4,8 +4,9 @@ from . import db
 from collections import defaultdict
 from datetime import datetime
 from sqlalchemy import UniqueConstraint
-from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.hybrid import hybrid_property
+from sqlalchemy.orm import relationship
+from sqlalchemy_serializer import SerializerMixin
 
 
 USER_TIMEOUT = 30
@@ -19,8 +20,8 @@ class User(db.Model, SerializerMixin):
     avatar = db.Column(db.String())
     last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
 
-    room_id = db.Column(db.Integer, db.ForeignKey('room.id'))
-    room = relationship('Room', backpopulates='users')
+    room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
+    room = relationship('Room', back_populates='users')
 
     @hybrid_property
     def is_active(self):
@@ -50,7 +51,7 @@ class User(db.Model, SerializerMixin):
     def leave_room(cls, user_id, room_name):
         user = User.query.filter_by(id=user_id).first()
         if user.room.name != room_name:
-            logger.warning(f"User {user.id} ({user.username}) tried to leave room {room_name} but was in room {room.name}"))
+            logger.warning(f"User {user.id} ({user.username}) tried to leave room {room_name} but was in room {room.name}")
             return
         user.room = None
         db.session.commit()
@@ -103,7 +104,7 @@ class Room(db.Model, SerializerMixin):
     name = db.Column(db.String(100), unique=True, index=True)
     room_type = db.Column(db.String(50))
 
-    users = relationship('User', backpopulates='room')
+    users = relationship('User', back_populates='room')
 
     def __repr__(self):
         return 'Room {0}'.format(self.name)
