@@ -11,6 +11,7 @@ class User(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
     avatar = db.Column(db.String())
+    ip = db.Column(db.String()) #can also make String(15) as I think thats the upperbound for Ips
     last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
 
     @hybrid_property
@@ -30,9 +31,9 @@ class User(db.Model, SerializerMixin):
         }
 
     @classmethod
-    def create(cls, username, avatar):
+    def create(cls, username, avatar, ip):
         avatar = '{0}-{1}'.format(avatar['type'], avatar['color'])
-        user = cls(username=username, avatar=avatar)
+        user = cls(username=username, avatar=avatar, ip=ip)
         db.session.add(user)
         db.session.commit()
         return user
