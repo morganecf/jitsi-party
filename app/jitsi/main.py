@@ -8,7 +8,7 @@ main = Blueprint('main', __name__)
 @main.route('/join', methods=['GET', 'POST'])
 def join():
     params = request.get_json()['params']
-    params['ip'] = computeIp()
+    params['ip'] = compute_ip()
     user = User.create(**params)
     return jsonify(user.to_json())
 
@@ -37,7 +37,7 @@ def serve(path):
     return send_from_directory(current_app.static_folder, 'index.html')
 
 
-def computeIp():
+def compute_ip():
     headers_list = request.headers.getlist("X-Forwarded-For")
     # using the 0th index of headers_list is dangerous for stuff explained here: http://esd.io/blog/flask-apps-heroku-real-ip-spoofing.html 
     # TODO find a way to make this ALWAYS get client IP
