@@ -3,7 +3,7 @@ import io from 'socket.io-client'
 import { createAdventureActions } from './utils.js'
 import Config from './Config.jsx'
 
-const url = Config.get('baseUrl')
+const url = Config.baseUrl
 const PING_INTERVAL_MS = 10000
 
 export class WebSocketApi {

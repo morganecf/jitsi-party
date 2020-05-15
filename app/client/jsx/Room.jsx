@@ -30,6 +30,8 @@ class Room extends Component {
         super(props)
 
         const { room, entered } = this.props.currentRoom
+
+        this.useLocalSessions = Config.useLocalSessions || false
         
         // These are the room types for which we show the map button
         this.roomTypesWithMap = {
@@ -167,7 +169,7 @@ class Room extends Component {
 
     computeMapState(room) {
         const mapAlreadyUnlocked = LocalStorage.get("MAP_UNLOCKED")
-        const mapUnlockThreshold = parseInt(Config.get('mapUnlockThreshold')) || 3
+        const mapUnlockThreshold = parseInt(Config.mapUnlockThreshold) || 3
         const visitedRooms = Object.values(this.props.visited).filter(x => x).length
         const isMapUnlocked =
             Config.debug ||
@@ -187,7 +189,8 @@ class Room extends Component {
             return null
         }
 
-        LocalStorage.touch("USER") // keep session alive
+        this.useLocalSessions && LocalStorage.touch("USER") // keep session alive
+
         const room = this.props.rooms[this.state.room]
 
         if (room.type === 'redirect') {

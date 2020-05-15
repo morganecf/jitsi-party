@@ -2,6 +2,7 @@
 	"baseUrl": "http://localhost:5000",
 	"debug": true,
 	"mapUnlockThreshold": 3,
+	"useLocalSessions": true,
  	"rooms": {
 		"vestibule": {
 			"name": "Vestibule",

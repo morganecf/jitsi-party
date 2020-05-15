@@ -6,6 +6,7 @@ import { Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
 import { HttpApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
+import Config from './Config.jsx'
 
 class Welcome extends Component {
     constructor(props) {
@@ -13,7 +14,9 @@ class Welcome extends Component {
         
         this.httpApi = new HttpApi()
 
-        let user = LocalStorage.get("USER")
+        this.useLocalSessions = Config.useLocalSessions || false
+
+        const user = this.useLocalSessions ? LocalStorage.get("USER") : null
         if (user) {
             this.state = {
                 username: user.username,
@@ -79,7 +82,7 @@ class Welcome extends Component {
     }
 
     handleUserSelected(user) {
-        LocalStorage.set("USER", user)
+        this.useLocalSessions && LocalStorage.set("USER", user)
         this.props.updateUser(user)
         this.props.updateCurrentRoom({
             room: 'vestibule',
