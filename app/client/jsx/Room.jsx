@@ -13,6 +13,7 @@ import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
+import Config from './Config.jsx'
 
 class Room extends Component {
     /*
@@ -166,9 +167,11 @@ class Room extends Component {
 
     computeMapState(room) {
         const mapAlreadyUnlocked = LocalStorage.get("MAP_UNLOCKED")
-        const mapUnlockThreshold = 3
+        const mapUnlockThreshold = parseInt(Config.get('mapUnlockThreshold')) || 3
         const visitedRooms = Object.values(this.props.visited).filter(x => x).length
-        const isMapUnlocked = mapAlreadyUnlocked ||
+        const isMapUnlocked =
+            Config.debug ||
+            mapAlreadyUnlocked ||
             (_.has(this.roomTypesWithMap, room.type) && (visitedRooms >= mapUnlockThreshold))
         const showMapTooltip = !mapAlreadyUnlocked && isMapUnlocked
         LocalStorage.set("MAP_UNLOCKED", isMapUnlocked)
