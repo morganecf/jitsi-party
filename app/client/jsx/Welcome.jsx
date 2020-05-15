@@ -5,16 +5,29 @@ import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
 import { HttpApi } from './WebAPI.jsx'
+import LocalStorage from './LocalStorage.jsx'
 
 class Welcome extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            username: null,
-            avatar: null,
-            redirect: null
-        }
+        
         this.httpApi = new HttpApi()
+
+        let user = LocalStorage.get("USER")
+        if (user) {
+            this.state = {
+                username: user.username,
+                avatar: user.avatar,
+                redirect: "/party"
+            }
+            this.handleUserSelected(user)
+        } else {
+            this.state = {
+                username: null,
+                avatar: null,
+                redirect: null
+            }
+        }
     }
 
     async fetchRooms() {
@@ -54,17 +67,24 @@ class Welcome extends Component {
         const response = await this.httpApi.join(this.state.username, this.state.avatar)
         if (response.success) {
             const { username, avatar } = this.state
-            this.props.updateUser({
+            const user = {
                 username,
                 avatar,
                 userId: response.userId
-            })
-            this.props.updateCurrentRoom({
-                room: 'vestibule',
-                entered: false
-            })
-            this.setState({ redirect: '/party' })
+            }
+            this.props.updateUser(user)
+            this.handleUserSelected(user)
+            this.setState({redirect: '/party'})
         }
+    }
+
+    handleUserSelected(user) {
+        LocalStorage.set("USER", user)
+        this.props.updateUser(user)
+        this.props.updateCurrentRoom({
+            room: 'vestibule',
+            entered: false
+        })
     }
 
     render() {
