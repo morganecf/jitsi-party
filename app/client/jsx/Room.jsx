@@ -12,6 +12,7 @@ import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
+import LocalStorage from './LocalStorage.jsx'
 
 class Room extends Component {
     /*
@@ -27,6 +28,8 @@ class Room extends Component {
     constructor(props) {
         super(props)
 
+        const { room, entered } = this.props.currentRoom
+        
         // These are the room types for which we show the map button
         this.roomTypesWithMap = {
             jitsi: true,
@@ -40,14 +43,10 @@ class Room extends Component {
             iframe: true
         }
 
-        // Rooms that don't have doors are automatically "entered"
-        const { room, entered } = this.props.currentRoom
-        const { type } = this.props.rooms[this.props.currentRoom.room]
-
         this.state = {
             room,
-            entered: this.roomTypesWithDoors[type] ? entered : true,
-            showMap: false
+            entered: false,
+            users: []
         }
 
         this.socketApi = new WebSocketApi()
@@ -137,6 +136,7 @@ class Room extends Component {
             setTimeout(this.updateRoom.bind(this, room), 500)
         } else {
             this.updateRoom(room)
+            document.activeElement.blur()
         }
     }
 
@@ -164,7 +164,27 @@ class Room extends Component {
         this.setState({ showMap: false })
     }
 
+    computeMapState(room) {
+        const mapAlreadyUnlocked = LocalStorage.get("MAP_UNLOCKED")
+        const mapUnlockThreshold = 3
+        const visitedRooms = Object.values(this.props.visited).filter(x => x).length
+        const isMapUnlocked = mapAlreadyUnlocked ||
+            (_.has(this.roomTypesWithMap, room.type) && (visitedRooms >= mapUnlockThreshold))
+        const showMapTooltip = !mapAlreadyUnlocked && isMapUnlocked
+        LocalStorage.set("MAP_UNLOCKED", isMapUnlocked)
+        return {
+            mapVisible: isMapUnlocked,
+            showMapTooltip: showMapTooltip
+        }
+    }
+
     render() {
+        if (Object.keys(this.props.rooms).length === 0) {
+            // room config not loaded yet
+            return null
+        }
+
+        LocalStorage.touch("USER") // keep session alive
         const room = this.props.rooms[this.state.room]
 
         if (room.type === 'redirect') {
@@ -178,11 +198,7 @@ class Room extends Component {
             <Door room={room} users={userList} tintColor={room.doorTint} onClick={this.onEnterRoom.bind(this)}></Door>
 
         const roomClass = this.state.entered ? "room entered" : "room"
-
-        const mapUnlockThreshold = 3
-        const visitedRooms = Object.values(this.props.visited).filter(x => x).length
-        const isMapUnlocked = _.has(this.roomTypesWithMap, room.type) && (visitedRooms >= mapUnlockThreshold)
-        const showMapTooltip = isMapUnlocked && visitedRooms == mapUnlockThreshold
+        const mapState = this.computeMapState(room)
 
         // Allows modal to have access to react components and state
         Modal.setAppElement('.app')
@@ -197,8 +213,8 @@ class Room extends Component {
                 <Navigation
                     directions={room.directions}
                     onClick={this.onSwitchRoom.bind(this)}
-                    showMapButton={isMapUnlocked}
-                    showMapTooltip={showMapTooltip}
+                    showMapButton={mapState.mapVisible}
+                    showMapTooltip={mapState.showMapTooltip}
                     handleOpenMap={this.handleOpenMap.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
                 <Modal
@@ -213,6 +229,7 @@ class Room extends Component {
 }
 
 export default connect(state => state, {
+    addRooms: reducers.addRoomsActionCreator,
     updateUsers: reducers.updateUsersActionCreator,
     updateCurrentRoom: reducers.updateCurrentRoomActionCreator
 })(Room)
