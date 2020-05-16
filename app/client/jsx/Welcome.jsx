@@ -11,7 +11,7 @@ import Config from './Config.jsx'
 class Welcome extends Component {
     constructor(props) {
         super(props)
-        
+
         this.httpApi = new HttpApi()
 
         this.useLocalSessions = Config.useLocalSessions
@@ -120,12 +120,14 @@ class Welcome extends Component {
           fontSize: '20px'
         }
 
-        let nameOpacity = 'form-fade'
         let avatarOpacity = 'form-fade'
+        let nameOpacity = 'form-fade'
         let partyOpacity = 'form-fade-party'
-        if (this.state.username === null) { nameOpacity = 'form' }
-        if (this.state.username) { avatarOpacity = 'form' }
-        if (this.state.username && this.state.avatar) { partyOpacity = 'form-party' }
+        if (this.state.username) {
+          avatarOpacity = 'form'
+          if (this.state.username === null) { nameOpacity = 'form' }
+          if (this.state.avatar) { partyOpacity = 'form-party' }
+        }
 
         const config = Config.welcomePage
         const bgStyle = {
