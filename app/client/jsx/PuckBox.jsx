@@ -7,9 +7,9 @@ const PuckBox = (props) => {
 
   if (boxStyle == 'box') { // Fade doesn't take props so we get this ugliness
     return (
-      <div key={props.index}>
+      <div key={"outside-container" + props.index}>
         <Fade top>
-          <div key={"div2" + props.index} className={boxStyle} onClick={props.handleClick} onMouseOver={props.handleTouch}>
+          <div key={"inside-container" + props.index} className={boxStyle} onClick={props.handleClick} onMouseOver={props.handleTouch}>
             <img key={props.index} src={props.image} className={props.imageStyle} />
           </div>
         </Fade>
@@ -17,8 +17,8 @@ const PuckBox = (props) => {
     )
   } else {
     return (
-      <div key={"div3" + props.index}>
-        <div key={"div4" + props.index} className={boxStyle} onClick={props.handleClick} onMouseOver={props.handleTouch}>
+      <div key={"outside-container" + props.index}>
+        <div key={"inside-container" + props.index} className={boxStyle} onClick={props.handleClick} onMouseOver={props.handleTouch}>
           <img key={props.index} src={props.image} className={props.imageStyle} />
         </div>
       </div>
