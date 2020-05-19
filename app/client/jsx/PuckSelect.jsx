@@ -62,7 +62,6 @@ class PuckSelect extends Component {
             return ( // returns single instance of each nonselected design
               <PuckBox
               handleClick={handleClick}
-              index={index}
               key={key}
               image={Avatars[key].purple}
               style='box'
@@ -76,7 +75,6 @@ class PuckSelect extends Component {
               return ( // returns all colorways for selected design
                 <PuckBox
                 handleClick={handleClick}
-                index={colorIndex}
                 key={variantKey}
                 image={Avatars[key][variantKey]}
                 imageStyle={selected}
