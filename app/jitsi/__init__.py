@@ -5,6 +5,7 @@ from flask_socketio import SocketIO
 from flask_cors import CORS
 from config import config, basedir
 
+
 staticdir = os.path.join(basedir, 'client/js')
 
 db = SQLAlchemy()
@@ -19,8 +20,9 @@ def create_app(config_name):
     Factory function that returns the created application instance
     '''
     app = Flask(__name__, static_folder=staticdir)
-    app.config.from_object(config[config_name])
-    config[config_name].init_app(app)
+    app_config = config[config_name]()
+    app.config.from_object(app_config)
+    app_config.init_app(app)
 
     from jitsi import main
 
@@ -34,7 +36,7 @@ def create_app(config_name):
     db.init_app(app)
 
     # SocketIO
-    queue = config[config_name].MESSAGE_QUEUE
+    queue = app_config.MESSAGE_QUEUE
     socketio.init_app(app, cors_allowed_origins='*', message_queue=queue)
 
     return app

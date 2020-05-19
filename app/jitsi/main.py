@@ -14,9 +14,8 @@ def join():
 @main.route('/rooms')
 def get_rooms():
     basedir = current_app.config.get('BASE_DIR')
-    config = json.load(open(os.path.join(basedir, 'config.json')))
-    rooms = config['rooms']
-    adventures = json.load(open(os.path.join(basedir, 'adventures.json')))
+    rooms = current_app.config['ROOMS']
+    adventures = current_app.config['ADVENTURES']
     for adventure in adventures.values():
         for node_name, adventure_node in adventure.items():
             rooms[node_name] = {

@@ -1,4 +1,5 @@
 import os
+import json
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -10,20 +11,40 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BASE_DIR = basedir
     MESSAGE_QUEUE = None
+    CONFIG_PATHS = [os.path.join(basedir, 'config', file) for file in ['base.json', 'rooms.json', 'adventures.json']]
 
     @staticmethod
     def init_app(app):
         pass
 
+    def __init__(self):
+        self.merged_cfg = Config.make_merged_cfg(self.CONFIG_PATHS)
+
+    @staticmethod
+    def make_merged_cfg(paths):
+        return {k: v for path in paths for k, v in json.load(open(path)).items()}
+
+    # has to be all caps for flask to allow access
+    @property
+    def ROOMS(self):
+        return self.merged_cfg['rooms']
+
+    @property
+    def ADVENTURES(self):
+        return self.merged_cfg['adventures']
+    
+
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
+    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(basedir, 'config', 'development.json')]
 
 
 class ProductionConfig(Config):
     # These URIs are the same for now. If we ever introduce tests we'll want to have
     # a test config that has its own db that doesn't interfere with these.
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://waa:woo@jitsi-party-db:5432/jitsi'
+    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(basedir, 'config', 'production.json')]
 
 
 config = {

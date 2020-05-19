@@ -1,0 +1,6 @@
+{
+	"baseUrl": "http://localhost:3000",
+	"debug": true,
+	"mapUnlockThreshold": 3,
+	"useLocalSessions": true
+}
