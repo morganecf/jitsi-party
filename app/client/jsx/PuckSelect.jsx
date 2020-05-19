@@ -61,6 +61,7 @@ class PuckSelect extends Component {
 
             return ( // returns single instance of each nonselected design
               <PuckBox
+              index={"single" + index}
               handleClick={handleClick}
               key={key}
               image={Avatars[key].purple}
@@ -74,6 +75,7 @@ class PuckSelect extends Component {
               let handleClick = () => this.handleClickColor(variantKey, colorIndex)
               return ( // returns all colorways for selected design
                 <PuckBox
+                index={"all" + colorIndex}
                 handleClick={handleClick}
                 key={variantKey}
                 image={Avatars[key][variantKey]}
@@ -82,7 +84,7 @@ class PuckSelect extends Component {
               )
             })
             return ( // colorways row in place of selected column item
-              <div className='inner'>
+              <div key="rando" className='inner'>
               {allColorwayVariants}
               </div>
             )
