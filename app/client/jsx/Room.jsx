@@ -13,6 +13,7 @@ import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
+import Config from './Config.jsx'
 
 class Room extends Component {
     /*
@@ -29,6 +30,8 @@ class Room extends Component {
         super(props)
 
         const { room, entered } = this.props.currentRoom
+
+        this.useLocalSessions = Config.useLocalSessions || false
         
         // These are the room types for which we show the map button
         this.roomTypesWithMap = {
@@ -166,9 +169,11 @@ class Room extends Component {
 
     computeMapState(room) {
         const mapAlreadyUnlocked = LocalStorage.get("MAP_UNLOCKED")
-        const mapUnlockThreshold = 3
+        const mapUnlockThreshold = parseInt(Config.mapUnlockThreshold)
         const visitedRooms = Object.values(this.props.visited).filter(x => x).length
-        const isMapUnlocked = mapAlreadyUnlocked ||
+        const isMapUnlocked =
+            Config.debug ||
+            mapAlreadyUnlocked ||
             (_.has(this.roomTypesWithMap, room.type) && (visitedRooms >= mapUnlockThreshold))
         const showMapTooltip = !mapAlreadyUnlocked && isMapUnlocked
         LocalStorage.set("MAP_UNLOCKED", isMapUnlocked)
@@ -184,7 +189,8 @@ class Room extends Component {
             return null
         }
 
-        LocalStorage.touch("USER") // keep session alive
+        this.useLocalSessions && LocalStorage.touch("USER") // keep session alive
+
         const room = this.props.rooms[this.state.room]
 
         if (room.type === 'redirect') {
