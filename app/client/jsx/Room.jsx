@@ -169,7 +169,7 @@ class Room extends Component {
 
     computeMapState(room) {
         const mapAlreadyUnlocked = LocalStorage.get("MAP_UNLOCKED")
-        const mapUnlockThreshold = parseInt(Config.mapUnlockThreshold) || 3
+        const mapUnlockThreshold = parseInt(Config.mapUnlockThreshold)
         const visitedRooms = Object.values(this.props.visited).filter(x => x).length
         const isMapUnlocked =
             Config.debug ||
