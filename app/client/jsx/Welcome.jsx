@@ -27,6 +27,7 @@ class Welcome extends Component {
             console.log(user.avatar)
             this.handleUserSelected(user)
         } else {
+            // TODO: pick random default avatar
             const avatar = this.avatarSelectionEnabled ? null :
                 {
                     type: "normal",
