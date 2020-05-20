@@ -14,7 +14,8 @@ class Welcome extends Component {
         
         this.httpApi = new HttpApi()
 
-        this.useLocalSessions = Config.useLocalSessions || false
+        this.useLocalSessions = Config.useLocalSessions
+        this.avatarSelectionEnabled = Config.welcomePage.avatarSelectionEnabled
 
         const user = this.useLocalSessions ? LocalStorage.get("USER") : null
         if (user) {
@@ -23,11 +24,18 @@ class Welcome extends Component {
                 avatar: user.avatar,
                 redirect: "/party"
             }
+            console.log(user.avatar)
             this.handleUserSelected(user)
         } else {
+            const avatar = this.avatarSelectionEnabled ? null :
+                {
+                    type: "normal",
+                    color: "red"
+                }
+
             this.state = {
                 username: null,
-                avatar: null,
+                avatar: avatar,
                 redirect: null
             }
         }
@@ -113,15 +121,42 @@ class Welcome extends Component {
         if (this.state.username) { avatar_opacity = 'form' }
         if (this.state.username && this.state.avatar) { party_opacity = 'form-party' }
 
+        const config = Config.welcomePage
+        const bgStyle = {
+            backgroundColor: config.backgroundColor
+        }
+
+        const splash = config.backgroundImagePath
+            ? <img className="splash" src={config.backgroundImagePath}/>
+            : <div className="splash" style={bgStyle}></div>
+
+        const avatarSelect = this.avatarSelectionEnabled
+            ? <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
+            : null
+
         return (
             <div className="vestibule">
-                <br/>
-                <div className='serif'>You've met with a terrible fate, haven't you?</div>
-                <h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>
-                <img className='splash' src='./js/images/cabinfeverhighres.png'/>
-                <input style={text_entry} autoComplete="off" className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleUsernameChange.bind(this)}/><br/>
-                <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
-                <input id='button' className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.username||!this.state.avatar} />
+                <div className="header" dangerouslySetInnerHTML={{ __html: config.headerHtml }} />
+                {splash}
+                <input
+                    style={text_entry}
+                    autoComplete="off"
+                    className={name_opacity}
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    minLength="1"
+                    onChange={this.handleUsernameChange.bind(this)}
+                />
+                {avatarSelect}
+                <input
+                    id='button'
+                    className={party_opacity}
+                    type="button"
+                    onClick={this.handleReady.bind(this)}
+                    value={config.enterSpaceButtonText}
+                    disabled={!this.state.username||!this.state.avatar}
+                />
             </div>
         )
 

@@ -1,10 +1,32 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the Welcome component.
 // -----------------------------------------------------------------------------
-// 
-// body {
-// 	background-image: url('https://party.gbre.org/js/images/cabinfeverhighres.png');
-// }
+.vestibule {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+
+	.header {
+		margin-bottom: 1em;
+		text-align: center;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	input[type="text"] {
+          padding: 6px 10px;
+          border: 2px solid #D6D3CD;
+          border-radius: 7px;
+          background: white;
+          outline: none;
+          box-shadow: none;
+          font-size: 14px;
+          text-align: center;
+          margin-bottom: 1em;
+	}
+}
 
 .splash {
 	position: absolute;

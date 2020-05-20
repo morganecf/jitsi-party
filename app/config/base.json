@@ -2,5 +2,12 @@
 	"baseUrl": "http://localhost:3000",
 	"debug": true,
 	"mapUnlockThreshold": 3,
-	"useLocalSessions": true
+	"useLocalSessions": true,
+	"welcomePage": {
+		"avatarSelectionEnabled": true,
+		"backgroundImagePath": "./js/images/cabinfeverhighres.png",
+		"backgroundColor": "black",
+		"enterSpaceButtonText": "Party!",
+		"headerHtml": "<br/><p class='serif'>You've met with a terrible fate, haven't you?</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>"
+	}
 }
