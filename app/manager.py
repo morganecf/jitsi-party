@@ -37,7 +37,7 @@ def create_db():
     db.create_all()
 
     # Load room definition
-    rooms = json.load(open('rooms.json'))
+    rooms = json.load(open('config.json'))['rooms']
 
     # Create rooms and insert
     db_rooms = [Room(name=room_name, room_type=room['type'])
