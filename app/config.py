@@ -2,7 +2,19 @@ import os
 import json
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+configdir = os.path.join(basedir, 'config')
+overridedir = os.path.join(configdir, 'overrides')
 
+def get_json_dict(path):
+    try:
+        with open(path) as file:
+            return json.load(file)
+    except:
+        return dict()
+
+def make_merged_cfg(paths):
+    print(paths)
+    return {k: v for path in paths for k, v in get_json_dict(path).items()}
 
 class Config:
     # Need to change this
@@ -11,18 +23,16 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BASE_DIR = basedir
     MESSAGE_QUEUE = None
-    CONFIG_PATHS = [os.path.join(basedir, 'config', file) for file in ['base.json', 'rooms.json', 'adventures.json']]
+    CONFIG_PATHS = [os.path.join(configdir, file) for file in ['base.json', 'rooms.json', 'adventures.json']]
+    OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in ['config.json', 'rooms.json']]
+
 
     @staticmethod
     def init_app(app):
         pass
 
     def __init__(self):
-        self.merged_cfg = Config.make_merged_cfg(self.CONFIG_PATHS)
-
-    @staticmethod
-    def make_merged_cfg(paths):
-        return {k: v for path in paths for k, v in json.load(open(path)).items()}
+        self.merged_cfg = make_merged_cfg(self.CONFIG_PATHS)
 
     # has to be all caps for flask to allow access
     @property
@@ -34,17 +44,16 @@ class Config:
         return self.merged_cfg['adventures']
     
 
-
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
-    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(basedir, 'config', 'development.json')]
+    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(configdir, 'development.json')] + Config.OVERRIDE_PATHS
 
 
 class ProductionConfig(Config):
     # These URIs are the same for now. If we ever introduce tests we'll want to have
     # a test config that has its own db that doesn't interfere with these.
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://waa:woo@jitsi-party-db:5432/jitsi'
-    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(basedir, 'config', 'production.json')]
+    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(configdir, 'production.json')] + Config.OVERRIDE_PATHS
 
 
 config = {

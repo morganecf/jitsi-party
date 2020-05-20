@@ -41,6 +41,15 @@ bash run.sh
 
 The app should now be running on localhost:5000.
 
+### Configuration
+
+App configuration is done with a collection of JSON files in app/config.
+`base.conf` is the root configuration, and is merged with/superceded by the values in `development.json` and `production.json` when in those respective environments.
+`rooms.json` contains the room layout that is loaded into the database and used by all connected clients.
+
+To use a custom configuration, add a `config.json` and/or `rooms.json` to `app/config/overrides/`.
+`app/config/overrides/config.json` will be merged with/supercede the default configs, while `app/config/overrides/rooms.json` will completely replace the default rooms.
+
 ### Querying the DB
 Using sqlite directly
 ```
