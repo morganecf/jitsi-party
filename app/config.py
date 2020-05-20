@@ -13,7 +13,6 @@ def get_json_dict(path):
         return dict()
 
 def make_merged_cfg(paths):
-    print(paths)
     return {k: v for path in paths for k, v in get_json_dict(path).items()}
 
 class Config:
@@ -34,14 +33,17 @@ class Config:
     def __init__(self):
         self.merged_cfg = make_merged_cfg(self.CONFIG_PATHS)
 
-    # has to be all caps for flask to allow access
+    # have to be all caps for flask to allow access
     @property
     def ROOMS(self):
         return self.merged_cfg['rooms']
 
     @property
     def ADVENTURES(self):
-        return self.merged_cfg['adventures']
+        try:
+            return self.merged_cfg['adventures']
+        except:
+            return dict()
     
 
 class DevelopmentConfig(Config):
