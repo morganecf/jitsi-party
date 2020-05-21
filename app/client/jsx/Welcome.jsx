@@ -14,7 +14,8 @@ class Welcome extends Component {
         
         this.httpApi = new HttpApi()
 
-        this.useLocalSessions = Config.useLocalSessions || false
+        this.useLocalSessions = Config.useLocalSessions
+        this.avatarSelectionEnabled = Config.welcomePage.avatarSelectionEnabled
 
         const user = this.useLocalSessions ? LocalStorage.get("USER") : null
         if (user) {
@@ -25,9 +26,16 @@ class Welcome extends Component {
             }
             this.handleUserSelected(user)
         } else {
+            // TODO: pick random default avatar
+            const avatar = this.avatarSelectionEnabled ? null :
+                {
+                    type: "normal",
+                    color: "red"
+                }
+
             this.state = {
                 username: null,
-                avatar: null,
+                avatar,
                 redirect: null
             }
         }
@@ -95,7 +103,7 @@ class Welcome extends Component {
             return <Redirect to={this.state.redirect}/>
         }
 
-        let text_entry = {
+        let textEntry = {
           padding: '6px 10px',
           border: '2px solid #D6D3CD',
           backgroundColor: '#D6D3CD',
@@ -106,22 +114,49 @@ class Welcome extends Component {
           fontSize: '20px'
         }
 
-        let name_opacity = 'form-fade'
-        let avatar_opacity = 'form-fade'
-        let party_opacity = 'form-fade-party'
-        if (this.state.username === null) { name_opacity = 'form' }
-        if (this.state.username) { avatar_opacity = 'form' }
-        if (this.state.username && this.state.avatar) { party_opacity = 'form-party' }
+        let nameOpacity = 'form-fade'
+        let avatarOpacity = 'form-fade'
+        let partyOpacity = 'form-fade-party'
+        if (this.state.username === null) { nameOpacity = 'form' }
+        if (this.state.username) { avatarOpacity = 'form' }
+        if (this.state.username && this.state.avatar) { partyOpacity = 'form-party' }
+
+        const config = Config.welcomePage
+        const bgStyle = {
+            backgroundColor: config.backgroundColor
+        }
+
+        const splash = config.backgroundImagePath
+            ? <img className="splash" src={config.backgroundImagePath}/>
+            : <div className="splash" style={bgStyle}></div>
+
+        const avatarSelect = this.avatarSelectionEnabled
+            ? <PuckSelect opacity={avatarOpacity} handleSelect={this.handleAvatarSelect.bind(this)} />
+            : null
 
         return (
             <div className="vestibule">
-                <br/>
-                <div className='serif'>You've met with a terrible fate, haven't you?</div>
-                <h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>
-                <img className='splash' src='./js/images/cabinfeverhighres.png'/>
-                <input style={text_entry} autoComplete="off" className={name_opacity} type="text" placeholder="Name" name="name" minLength="1" onChange={this.handleUsernameChange.bind(this)}/><br/>
-                <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
-                <input id='button' className={party_opacity} type="button" onClick={this.handleReady.bind(this)} value="Party" disabled={!this.state.username||!this.state.avatar} />
+                <div className="header" dangerouslySetInnerHTML={{ __html: config.headerHtml }} />
+                {splash}
+                <input
+                    style={textEntry}
+                    autoComplete="off"
+                    className={nameOpacity}
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    minLength="1"
+                    onChange={this.handleUsernameChange.bind(this)}
+                />
+                {avatarSelect}
+                <input
+                    id='button'
+                    className={partyOpacity}
+                    type="button"
+                    onClick={this.handleReady.bind(this)}
+                    value={config.enterSpaceButtonText}
+                    disabled={!this.state.username||!this.state.avatar}
+                />
             </div>
         )
 
