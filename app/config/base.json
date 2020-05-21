@@ -43,11 +43,6 @@
 	  }
 	},
 	"specialAvatars": {
-	  "thumb": {
-	    "purple": "https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-purple.png",
-	    "blue": "https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-blue.png",
-	    "red": "https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-red.png",
-	    "orange": "https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-orange.png"
-	  }
+	  "goodbye":  "https://raw.githubusercontent.com/morganecf/jitsi-party/master/app/client/js/images/puck/thumb-blue.png"
 	}
 }
