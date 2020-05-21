@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatars } from './avatars.jsx'
+import Config from './Config.jsx'
 
 const MAX_DISPLAYED_USERS = 8
 
@@ -22,7 +22,7 @@ export default props => {
 
                 return (
                     <div key={user.username} className="room-user">
-                        <img className={imgClass} src={Avatars[type][color]}></img>
+                        <img className={imgClass} src={Config.avatars[type][color]}></img>
                         <div>{username}</div>
                     </div>
                 )
