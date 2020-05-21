@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import { Avatars } from './avatars.jsx'
+import Config from './Config.jsx'
 
 class JitsiVideo extends Component {
     constructor(props) {
@@ -138,7 +138,7 @@ style.appendChild(document.createTextNode(css));
                 this.makeJitsiTransparent()
                 this.hideSpinner()
                 const { type, color } = this.props.jitsiData.avatar
-                const avatarUrl = Avatars[type][color]
+                const avatarUrl = config.avatars[type][color]
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl,
