@@ -82,7 +82,7 @@ class PuckSelect extends Component {
               )
             })
             return ( // colorways row in place of selected column item
-              <div className='inner'>
+              <div key="big-container" className='inner'>
               {allColorwayVariants}
               </div>
             )
