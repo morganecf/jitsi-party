@@ -24,7 +24,6 @@ class Welcome extends Component {
                 avatar: user.avatar,
                 redirect: "/party"
             }
-            console.log(user.avatar)
             this.handleUserSelected(user)
         } else {
             // TODO: pick random default avatar
@@ -36,7 +35,7 @@ class Welcome extends Component {
 
             this.state = {
                 username: null,
-                avatar: avatar,
+                avatar,
                 redirect: null
             }
         }
@@ -104,7 +103,7 @@ class Welcome extends Component {
             return <Redirect to={this.state.redirect}/>
         }
 
-        let text_entry = {
+        let textEntry = {
           padding: '6px 10px',
           border: '2px solid #D6D3CD',
           backgroundColor: '#D6D3CD',
@@ -115,12 +114,12 @@ class Welcome extends Component {
           fontSize: '20px'
         }
 
-        let name_opacity = 'form-fade'
-        let avatar_opacity = 'form-fade'
-        let party_opacity = 'form-fade-party'
-        if (this.state.username === null) { name_opacity = 'form' }
-        if (this.state.username) { avatar_opacity = 'form' }
-        if (this.state.username && this.state.avatar) { party_opacity = 'form-party' }
+        let nameOpacity = 'form-fade'
+        let avatarOpacity = 'form-fade'
+        let partyOpacity = 'form-fade-party'
+        if (this.state.username === null) { nameOpacity = 'form' }
+        if (this.state.username) { avatarOpacity = 'form' }
+        if (this.state.username && this.state.avatar) { partyOpacity = 'form-party' }
 
         const config = Config.welcomePage
         const bgStyle = {
@@ -132,7 +131,7 @@ class Welcome extends Component {
             : <div className="splash" style={bgStyle}></div>
 
         const avatarSelect = this.avatarSelectionEnabled
-            ? <PuckSelect opacity={avatar_opacity} handleSelect={this.handleAvatarSelect.bind(this)} />
+            ? <PuckSelect opacity={avatarOpacity} handleSelect={this.handleAvatarSelect.bind(this)} />
             : null
 
         return (
@@ -140,9 +139,9 @@ class Welcome extends Component {
                 <div className="header" dangerouslySetInnerHTML={{ __html: config.headerHtml }} />
                 {splash}
                 <input
-                    style={text_entry}
+                    style={textEntry}
                     autoComplete="off"
-                    className={name_opacity}
+                    className={nameOpacity}
                     type="text"
                     placeholder="Name"
                     name="name"
@@ -152,7 +151,7 @@ class Welcome extends Component {
                 {avatarSelect}
                 <input
                     id='button'
-                    className={party_opacity}
+                    className={partyOpacity}
                     type="button"
                     onClick={this.handleReady.bind(this)}
                     value={config.enterSpaceButtonText}
