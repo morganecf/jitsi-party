@@ -63,7 +63,7 @@ class PuckSelect extends Component {
               <PuckBox
               handleClick={handleClick}
               key={key}
-              image={avatars[key].purple}
+              image={avatars[key][Object.keys(avatars[key])[0]]}
               style='box'
               imageStyle={image_transparency}
               />
@@ -91,14 +91,14 @@ class PuckSelect extends Component {
       }
       return ( // column of singleton nonselected items with at most one of them swapped out for colorway variants row
         <div className='outer'>
-        <input className={fade} type="button" onClick={this.onButtonClick} value="Pick your puck"/>
+        <input className={fade} type="button" onClick={this.onButtonClick} value={Config.welcomePage.avatarSelectionText}/>
         {allAvatarDesigns}
         </div>
       )
     } else {
       return ( // when avatar state isn't null, collapse all and display choice
         <div className='outer'>
-          <input className='fade' type="button" onClick={this.onButtonClickReset} value="Pick your puck"/>
+          <input className='fade' type="button" onClick={this.onButtonClickReset} value={Config.welcomePage.avatarSelectionText}/>
           <div className='spacer'/>
           <div><img className='image' src={avatars[this.state.avatarDesign][this.state.avatarColorway]}/></div>
         </div>
