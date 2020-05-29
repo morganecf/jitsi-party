@@ -4,6 +4,7 @@ import Config from './Config.jsx';
 
 class Exit extends Component {
   render() {
+    localStorage.clear() // log user out
     // Support either a single "goodbye" avatar or a map of color -> image
     const goodbyeImgUrl =
             (Config.specialAvatars && Config.specialAvatars.goodbye) ?
