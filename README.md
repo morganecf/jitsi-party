@@ -70,6 +70,11 @@ Room.query.all()
 flask run-eventlet
 ```
 
+### Linting JS/JSX files
+```
+eslint --fix <your-jsx-file>
+```
+
 
 ### Jitsi API documentation
 API doc:
