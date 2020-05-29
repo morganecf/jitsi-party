@@ -17,4 +17,4 @@ const hostname = window && window.location && window.location.hostname
 const developmentMode = hostname && hostname.includes('localhost')
 const config = Object.assign(baseConfig, !developmentMode ? prodConfig : devConfig)
 
-export default Object.assign(config, overrideConfig)
+export default {...config, overrideConfig}

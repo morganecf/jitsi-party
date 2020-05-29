@@ -1,20 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-export default props => {
-    const onClick = props.onClick
-    const { text, buttons } = props.options
-    return (
-        <div className="adventure">
-            <p>{text}</p>
-            <div>
-                {buttons.map((button, i) => {
-                    return (
-                        <button
-                            key={`adventure-button-${i}`}
-                            onClick={() => onClick(button.getNextRoom())}>{button.text}</button>
-                    )
-                })}
-            </div>
-        </div>
-    )
-}
+const Adventure = ({onClick, options, ...props}) => {
+  const {text, buttons} = options;
+  return (
+    <div className="adventure">
+      <p>{text}</p>
+      <div>
+        {buttons.map((button, i) => {
+          const {text} = button;
+          return (
+            <button
+              key={`adventure-button-${i}`}
+              onClick={() => onClick(button.getNextRoom())}>{text}</button>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Adventure;
+
