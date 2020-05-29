@@ -2,7 +2,11 @@ import os
 import json
 from jitsi import create_app, db, run_eventlet
 from jitsi.models import Room, User
+from config import make_merged_cfg
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+configdir = os.path.join(basedir, 'config')
+overridedir = os.path.join(configdir, 'overrides')
 
 # Create the application context
 app = create_app(os.getenv('FLASK_ENV') or 'default')
@@ -37,10 +41,11 @@ def create_db():
     db.create_all()
 
     # Load room definition
-    rooms = json.load(open('config.json'))['rooms']
+    roomConfigs = [os.path.join(folder, 'rooms.json') for folder in [configdir, overridedir]]
+    roomConfig = make_merged_cfg(roomConfigs)['rooms']
 
     # Create rooms and insert
     db_rooms = [Room(name=room_name, room_type=room['type'])
-                for room_name, room in rooms.items()]
+                for room_name, room in roomConfig.items()]
     db.session.add_all(db_rooms)
     db.session.commit()
