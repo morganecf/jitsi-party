@@ -66,6 +66,7 @@ Room.query.all()
 ```
 
 ### Running with eventlet
+If you want websockets to actually work:
 ```
 flask run-eventlet
 ```
