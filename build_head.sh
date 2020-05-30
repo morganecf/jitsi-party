@@ -18,7 +18,7 @@ rm -rf node_modules
 
 popd
 
-docker build . --tag "$DOCKER_REPO":latest
+docker build app/ --tag "$DOCKER_REPO":latest
 docker push "$DOCKER_REPO":latest
 
 popd

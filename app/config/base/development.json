@@ -1,8 +1,8 @@
 {
     "debug": true,
     "mapUnlockThreshold": 3,
-    "useLocalSessions": true,
-    "noJitsiServerSSL": true,
-    "overrideJitsiServerUrlWithWindowHost": false,
-    "numProxies": 0
+    "useLocalSessions": false,
+    "noJitsiServerSSL": false,
+    "overrideJitsiServerUrlWithWindowHost": true,
+    "numProxies": 1
 }
