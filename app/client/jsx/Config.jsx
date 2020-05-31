@@ -13,8 +13,10 @@ try {
 // live config is built by adding the rooms config and one of dev or prod config to base config
 // values in prodConfig override values in baseConfig when not running locally
 
-const hostname = window && window.location && window.location.hostname
-const developmentMode = hostname && hostname.includes('localhost')
+const href = window && window.location && window.location.href
+const developmentMode = href && href.includes('localhost')
 const config = Object.assign(baseConfig, !developmentMode ? prodConfig : devConfig)
+
+config.baseUrl = href
 
 export default Object.assign(config, overrideConfig)
