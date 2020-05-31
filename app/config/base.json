@@ -36,18 +36,7 @@
 				"text": "{0} roaming",
 				"emoji": "🌓"
 			},
-			"additionalStats": [
-				{
-					"text": "{0} doing activity",
-					"match": ".*Room",
-					"emoji": "🎯"
-				},
-				{
-					"text": "{0} in closet",
-					"match": ["closet"],
-					"emoji": "🗝"
-				}
-			]
+			"additionalStats": []
 		}
 	}
 }

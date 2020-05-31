@@ -83,7 +83,6 @@ class Map extends Component {
             emoji: config[key].emoji
         }))
 
-        // TODO: g flag?
         config.additionalStats.forEach(({ text, match, emoji }) => {
             const rooms = _.isArray(match) ?
                 _.intersection(Object.keys(users), match) :
