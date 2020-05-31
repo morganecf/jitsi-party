@@ -49,5 +49,14 @@
 	    "red": "./js/images/puck/thumb-red.png",
 	    "orange": "./js/images/puck/thumb-orange.png"
 	  }
+	},
+	"map": {
+		"additionalStats": [
+			{
+				"text": "{0} taking bathroom break",
+				"match": ["bathroom"],
+				"emoji": "🛁"
+			}
+		]
 	}
 }

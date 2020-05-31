@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import MapVisualization from './MapVisualization.js'
 import MapRoomInfo from './MapRoomInfo.jsx'
+import Config from './Config.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -55,35 +56,53 @@ class Map extends Component {
 
     getGlobalStats() {
         const users = this.props.users
-        
+
         const numInHouse = _.sumBy(Object.keys(users), room => users[room].length)
         const numInHallways = (users.hallway || []).length
-        const numInBathrooms = _.sumBy(
-            Object.keys(users).filter(
-                room => room.endsWith('bathroom')
-            ),
-            room => users[room].length
-        )
-        const numInRooms = numInHouse - numInHallways - numInBathrooms
+        const numInRooms = numInHouse - numInHallways
+
+        const { stats: config } = Config.map
+
+        const mapStats = [
+            {
+                key: 'numberInHouse',
+                count: numInHouse
+            },
+            {
+                key: 'numberInRooms',
+                count: numInRooms
+            },
+            {
+                key: 'numberInHallways',
+                count: numInHallways
+            }
+        ]
+        .filter(({ key }) => config[key].display)
+        .map(({ key, count }) => ({
+            text: config[key].text.replace('{0}', count),
+            emoji: config[key].emoji
+        }))
+
+        // TODO: g flag?
+        config.additionalStats.forEach(({ text, match, emoji }) => {
+            const rooms = _.isArray(match) ?
+                _.intersection(Object.keys(users), match) :
+                Object.keys(users).filter(room => new RegExp(match).test(room))
+            const count = _.sumBy(rooms, room => users[room].length)
+            mapStats.push({
+                text: text.replace('{0}', count),
+                emoji
+            })
+        })
 
         return (
             <div className="map-stats">
-                <div className="map-stat-column">
-                    <span className="map-stat-emoji">🏚️</span>
-                    {numInHouse} in house
-                </div>
-                <div className="map-stat-column">
-                    <span className="map-stat-emoji">🎊</span>
-                    {numInRooms} partying
-                </div>
-                <div className="map-stat-column">
-                    <span className="map-stat-emoji">🚽</span>
-                    {numInBathrooms} taking bathroom break
-                </div>
-                <div className="map-stat-column">
-                    <span className="map-stat-emoji">🌓</span>
-                    {numInHallways} roaming
-                </div>
+                {mapStats.map(({ text, emoji}, index) => (
+                    <div key={`stat-${index}`} className="map-stat-column">
+                        <span className="map-stat-emoji">{emoji}</span>
+                        {text}
+                    </div>
+                ))}
             </div>
         )
     }

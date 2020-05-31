@@ -18,5 +18,36 @@
 	  }
 	},
 	"specialAvatars": {
+	},
+	"map": {
+		"stats": {
+			"numberInHouse": {
+				"display": true,
+				"text": "{0} in house",
+				"emoji": "🏚️"
+			},
+			"numberInRooms": {
+				"display": true,
+				"text": "{0} in rooms",
+				"emoji": "🚪"
+			},
+			"numberInHallways": {
+				"display": true,
+				"text": "{0} roaming",
+				"emoji": "🌓"
+			},
+			"additionalStats": [
+				{
+					"text": "{0} doing activity",
+					"match": ".*Room",
+					"emoji": "🎯"
+				},
+				{
+					"text": "{0} in closet",
+					"match": ["closet"],
+					"emoji": "🗝"
+				}
+			]
+		}
 	}
 }
