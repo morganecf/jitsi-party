@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight, faMap } from '@fortawesome/free-solid-svg-icons'
 import Config from './Config.jsx'
+import AudioPlayer from './AudioPlayer.jsx';
 
 class Navigation extends Component {
     constructor(props) {
@@ -48,6 +49,9 @@ class Navigation extends Component {
         const onClick = this.props.onClick
         const { north, south, east, west } = this.props.directions || {}
         const mapButtonClass = this.props.showMapTooltip ? "map-button animated" : "map-button"
+        const room = this.props.currentRoom.room
+        const audio = this.props.rooms[room].audio
+
         return (
             <div className="navigation-container">
                 <div className="column">
@@ -60,6 +64,9 @@ class Navigation extends Component {
                     {this.props.showMapTooltip &&
                         <div className="map-tooltip">you have unlocked the party map!</div>
                     }
+                </div>
+                <div className="column">
+                    {audio && <AudioPlayer src={audio.path} autoPlay={audio.autoPlay}></AudioPlayer>}
                 </div>
                 <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>

@@ -9,7 +9,7 @@
         "test": "echo 'not yet implemented'",
         "build": "./node_modules/.bin/webpack -w"
     },
-    "author": "Andrew+Sean+Matt+Daniel+Morg",
+    "author": "Clarendon Friends",
     "license": "MIT",
     "babel": {
         "presets": [
