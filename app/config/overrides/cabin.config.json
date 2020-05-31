@@ -51,12 +51,19 @@
 	  }
 	},
 	"map": {
-		"additionalStats": [
-			{
-				"text": "{0} taking bathroom break",
-				"match": ["bathroom"],
-				"emoji": "🛁"
-			}
-		]
+		"stats": {
+			"numberInRooms": {
+				"display": true,
+				"text": "{0} partying",
+				"emoji": "🎉"
+			},
+			"additionalStats": [
+				{
+					"text": "{0} taking bathroom break",
+					"match": ["bathroom"],
+					"emoji": "🛁"
+				}
+			]
+		}
 	}
 }
