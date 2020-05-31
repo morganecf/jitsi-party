@@ -66,7 +66,9 @@ class Navigation extends Component {
                     }
                 </div>
                 <div className="column">
-                    {audio && <AudioPlayer src={audio.path} autoPlay={audio.autoPlay}></AudioPlayer>}
+                    {audio &&
+                        <AudioPlayer src={audio.path} autoPlay={audio.autoPlay} hide={audio.hideControls}></AudioPlayer>
+                    }
                 </div>
                 <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>
