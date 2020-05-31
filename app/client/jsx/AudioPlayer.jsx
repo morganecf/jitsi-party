@@ -5,7 +5,7 @@ import { faMusic } from '@fortawesome/free-solid-svg-icons'
 /*
 TODO
 -- save state (if pause don't replay) 
--- ability to hide
+-- button styling
 */
 
 export default class AudioPlayer extends Component {
@@ -58,8 +58,9 @@ export default class AudioPlayer extends Component {
     }
 
     render() {
+        const buttonClassname = this.props.hide ? 'audio-button hidden' : 'audio-button'
         return (
-            <button onClick={this.toggle.bind(this)}>
+            <button onClick={this.toggle.bind(this)} className={buttonClassname}>
                 <FontAwesomeIcon icon={faMusic}></FontAwesomeIcon>
             </button>
         )
