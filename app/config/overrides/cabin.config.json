@@ -52,6 +52,16 @@
 	},
 	"map": {
 		"stats": {
+			"numberInHouse": {
+				"display": true,
+				"text": "{0} in cabin",
+				"emoji": "🏚️"
+			},
+			"numberInHallways": {
+				"display": true,
+				"text": "{0} roaming",
+				"emoji": "🌓"
+			},
 			"numberInRooms": {
 				"display": true,
 				"text": "{0} partying",
