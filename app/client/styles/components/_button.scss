@@ -5,7 +5,7 @@
 button,
 input[type="button"] {
 	margin: 5px;
-	padding: 6px 10px;
+	padding: 8px 10px;
 	border: 2px solid $text-color;
 	border-radius: 5px;
 	transition: all 0.3s ease;
@@ -18,14 +18,18 @@ input[type="button"] {
 	}
 
 	&:hover,
-	&:focus {
+	&.focused {
 		color: $background-color;
 		background: $text-color;
 		cursor: pointer;
 	}
 
-	&:focus {
+	&:focus,
+	&.focused {
 		outline: none;
+	}
+
+	&.focused {
 		box-shadow: 0px 0px 4px inset;
 	}
 
