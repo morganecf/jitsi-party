@@ -13,19 +13,21 @@ def join():
 
 @main.route('/rooms')
 def get_rooms():
-    basedir = current_app.config.get('BASE_DIR')
     rooms = current_app.config['ROOMS']
     adventures = current_app.config['ADVENTURES']
     for adventure in adventures.values():
+        config = adventure.get('config', {})
         for node_name, adventure_node in adventure.items():
-            rooms[node_name] = {
-                'name': adventure_node.get('name', ''),
-                'type': 'adventure',
-                'text': adventure_node['text'],
-                'buttons': adventure_node['buttons']
-            }
-            if adventure_node.get('map'):
-                rooms[node_name]['map'] = adventure_node['map']
+            if node_name != 'config':
+                rooms[node_name] = {
+                    'name': adventure_node.get('name', ''),
+                    'type': 'adventure',
+                    'text': adventure_node['text'],
+                    'buttons': adventure_node['buttons'],
+                    'audio': config.get('audio')
+                }
+                if adventure_node.get('map'):
+                    rooms[node_name]['map'] = adventure_node['map']
     return jsonify(rooms)
 
 @main.route('/', defaults={'path': ''})

@@ -2,11 +2,6 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMusic } from '@fortawesome/free-solid-svg-icons'
 
-/*
-TODO 
--- test with adventures
-*/
-
 export default class AudioPlayer extends Component {
     constructor(props) {
         super(props)
@@ -57,9 +52,11 @@ export default class AudioPlayer extends Component {
         this.cleanup()
     }
 
-    componentWillReceiveProps() {
-        this.cleanup()
-        this.start()
+    componentWillReceiveProps(props) {
+        if (props.src !== this.props.src) {
+            this.cleanup()
+            this.start()
+        }
     }
 
     render() {

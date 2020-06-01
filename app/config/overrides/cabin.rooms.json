@@ -5,11 +5,6 @@
 			"type": "jitsi",
 			"description": "Welcome!",
 			"backgroundImage": "js/images/rooms/vestibule.jpg",
-			"audio": {
-				"path": "js/audio/harry-potter-theme.mp3",
-				"autoPlay": true,
-				"hideControls": false
-			},
 			"directions": {
 				"north": "livingRoom",
 				"west": "closet",

@@ -57,9 +57,7 @@ function updateJitsiVideoMutedAction(state, isVideoMuted) {
 }
 
 function updateRoomAudioAction(state, { currentRoom, autoPlay }) {
-    console.log(currentRoom, autoPlay)
     const nextState = _.cloneDeep(state)
-    console.log(nextState)
     nextState.rooms[currentRoom].audio.autoPlay = autoPlay
     return nextState
 }
