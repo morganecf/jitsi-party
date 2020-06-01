@@ -1,0 +1,46 @@
+CREATE A PARTY:
+
+Leader selects x users from UI (x defined in config)
+Send POST request to server (invitation, usernames/userids)
+    Alternatively, use websockets?
+Server sends socket update to each user_id in list 
+On websocket event, each client shows popup: <x has invited you to follow them> or <x has invited you to join their party>
+    If yes
+        If already following, nothing happens: <sorry, you cannot follow more than one leader at a time>
+        else
+            update react state with leader=leader_id
+            on each user-event, find where leader_id is and go there (update state)
+    If no
+        nothing happens
+
+FOLLOW A LEADER:
+
+Select one leader from the UI
+Socket update to server --> socket update to leader: <x wants to follow you around>
+    If deny
+        Socket update to server --> socket update to follower: <x has denied your request to follow them>
+    If accept
+        Socket update to server --> socket update to follower: <x has accepted your request to follow them>
+        update react state with leader=leader_id
+        on each user-event, find where leader_id is and go there 
+
+
+CREATING AD HOC ROOMS:
+
+Same as "Creating a party" except when match is made, spins up a new special purpose room without any navigation buttons
+Can still navigation away using map
+If map is hidden can use button to "go back" to party (last room you were in or vestibule)
+
+
+Leaving the party (leaving the leader/follower relationship)
+- Should this be an explicit button? Meaning we could disable navigation buttons and just let leader "take over"
+- Or should navigation buttons be enabled?
+
+TST version:
+
+Additional notes:
+- Ability to do this should be restricted, i.e. should only show up if you get a badge
+- Party size should be configurable and restricted for our purposes
+- Ad hoc room size should be restricted to 2 people for cabin parties to avoid cliques (configurable option)
+- What happens if leader tries to go somewhere inaccessible? Like if room is at capacity
+- What happens if leader tries to go somewhere that doesn't have video? ex art gallery
