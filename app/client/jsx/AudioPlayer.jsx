@@ -4,7 +4,6 @@ import { faMusic } from '@fortawesome/free-solid-svg-icons'
 
 /*
 TODO 
--- button styling
 -- test with adventures
 */
 
@@ -64,7 +63,16 @@ export default class AudioPlayer extends Component {
     }
 
     render() {
-        const buttonClassname = this.props.hide ? 'audio-button hidden' : 'audio-button'
+        const buttonClasses = [
+            'audio-button'
+        ]
+        if (!this.state.paused) {
+            buttonClasses.push('focused')
+        }
+        if (this.props.hide) {
+            buttonClasses.push('hidden')
+        }
+        const buttonClassname = buttonClasses.join(' ')
         return (
             <button onClick={this.toggle.bind(this)} className={buttonClassname}>
                 <FontAwesomeIcon icon={faMusic}></FontAwesomeIcon>

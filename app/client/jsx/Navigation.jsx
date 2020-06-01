@@ -59,26 +59,28 @@ class Navigation extends Component {
 
         return (
             <div className="navigation-container">
-                <div className="column">
-                    {this.props.showMapButton &&
-                        <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
-                            <FontAwesomeIcon icon={faMap}/>
-                            <span className="navigation-room-name">Map</span>
-                        </button>
-                    }
-                    {this.props.showMapTooltip &&
-                        <div className="map-tooltip">you have unlocked the party map!</div>
-                    }
-                </div>
-                <div className="column">
-                    {audio &&
-                        <AudioPlayer
-                            src={audio.path}
-                            autoPlay={audio.autoPlay}
-                            hide={audio.hideControls}
-                            onChange={this.handleAudioChanged.bind(this)}>
-                        </AudioPlayer>
-                    }
+                <div className="column settings-container">
+                    <div className="map-button-container">
+                        {this.props.showMapButton &&
+                            <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
+                                <FontAwesomeIcon icon={faMap}/>
+                                {/* <span className="navigation-room-name">Map</span> */}
+                            </button>
+                        }
+                        {this.props.showMapTooltip &&
+                            <div className="map-tooltip">you have unlocked the party map!</div>
+                        }
+                    </div>
+                    <div className="audio-button-container">
+                        {audio &&
+                            <AudioPlayer
+                                src={audio.path}
+                                autoPlay={audio.autoPlay}
+                                hide={audio.hideControls}
+                                onChange={this.handleAudioChanged.bind(this)}>
+                            </AudioPlayer>
+                        }
+                    </div>
                 </div>
                 <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>
