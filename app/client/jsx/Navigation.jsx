@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight, faMap } from '@fortawesome/free-solid-svg-icons'
 import Config from './Config.jsx'
 import AudioPlayer from './AudioPlayer.jsx';
+import reducers from './reducers.jsx'
 
 class Navigation extends Component {
     constructor(props) {
@@ -45,6 +46,10 @@ class Navigation extends Component {
         }
     }
 
+    handleAudioChanged({ autoPlay }) {
+        this.props.updateRoomAudio(this.props.currentRoom.room, autoPlay)
+    }
+
     render() {
         const onClick = this.props.onClick
         const { north, south, east, west } = this.props.directions || {}
@@ -67,7 +72,12 @@ class Navigation extends Component {
                 </div>
                 <div className="column">
                     {audio &&
-                        <AudioPlayer src={audio.path} autoPlay={audio.autoPlay} hide={audio.hideControls}></AudioPlayer>
+                        <AudioPlayer
+                            src={audio.path}
+                            autoPlay={audio.autoPlay}
+                            hide={audio.hideControls}
+                            onChange={this.handleAudioChanged.bind(this)}>
+                        </AudioPlayer>
                     }
                 </div>
                 <div className="column">
@@ -102,4 +112,6 @@ class Navigation extends Component {
     }
 }
 
-export default connect(state => state, {})(Navigation)
+export default connect(state => state, {
+    updateRoomAudio: reducers.updateRoomAudioActionCreator
+})(Navigation)
