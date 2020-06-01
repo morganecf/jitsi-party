@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMusic } from '@fortawesome/free-solid-svg-icons'
 
 /*
-TODO
--- save state (if pause don't replay) 
+TODO 
 -- button styling
+-- test with adventures
 */
 
 export default class AudioPlayer extends Component {
@@ -25,9 +25,13 @@ export default class AudioPlayer extends Component {
         })
     }
 
-    play() {
-        this.audio.play()
-        this.setState({ paused: false })
+    async play() {
+        try {
+            await this.audio.play()
+            this.setState({ paused: false })
+        } catch (err) {
+            console.log('User was not interacting with document during play start')
+        }
     }
 
     pause() {
@@ -38,8 +42,10 @@ export default class AudioPlayer extends Component {
     toggle() {
         if (this.state.paused) {
             this.play()
+            this.props.onChange({ autoPlay: true })
         } else {
             this.pause()
+            this.props.onChange({ autoPlay: false })
         }
     }
 

@@ -37,8 +37,8 @@ class JitsiVideo extends Component {
             window.api.dispose()
         }
         // Persist audio/video muted settings
-        this.props.updateAudioMuted(this.isAudioMuted)
-        this.props.updateVideoMuted(this.isVideoMuted)
+        this.props.updateJitsiAudioMuted(this.isAudioMuted)
+        this.props.updateJitsiVideoMuted(this.isVideoMuted)
     }
 
     handleKeydown(e) {
@@ -190,6 +190,6 @@ style.appendChild(document.createTextNode(css));
 }
 
 export default connect(state => state, {
-    updateAudioMuted: reducers.updateAudioMutedActionCreator,
-    updateVideoMuted: reducers.updateVideoMutedActionCreator
+    updateJitsiAudioMuted: reducers.updateJitsiAudioMutedActionCreator,
+    updateJitsiVideoMuted: reducers.updateJitsiVideoMutedActionCreator
 })(JitsiVideo)
