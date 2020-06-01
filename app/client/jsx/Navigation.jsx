@@ -64,7 +64,6 @@ class Navigation extends Component {
                         {this.props.showMapButton &&
                             <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
                                 <FontAwesomeIcon icon={faMap}/>
-                                {/* <span className="navigation-room-name">Map</span> */}
                             </button>
                         }
                         {this.props.showMapTooltip &&
