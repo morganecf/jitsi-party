@@ -23,8 +23,13 @@ class Config:
     BASE_DIR = basedir
     MESSAGE_QUEUE = 'amqp://localhost:5672'
     # MESSAGE_QUEUE = None
-    CONFIG_PATHS = [os.path.join(configdir, file) for file in ['base.json', 'rooms.json', 'adventures.json']]
-    OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in ['config.json', 'rooms.json']]
+    CONFIG_PATHS = [os.path.join(configdir, file) for file in [
+        'base.json',
+        'rooms.json',
+        'adventures.json',
+        'events.json'
+    ]]
+    OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in ['config.json', 'rooms.json', 'events.json']]
 
     @staticmethod
     def init_app(app):
@@ -42,6 +47,13 @@ class Config:
     def ADVENTURES(self):
         try:
             return self.merged_cfg['adventures']
+        except:
+            return dict()
+
+    @property
+    def EVENTS(self):
+        try:
+            return self.merged_cfg['events']
         except:
             return dict()
     

@@ -1,6 +1,7 @@
 import os
 import json
 from .models import User
+from datetime import datetime
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
 
 main = Blueprint('main', __name__)
@@ -11,8 +12,8 @@ def join():
     user = User.create(**params)
     return jsonify(user.to_json())
 
-@main.route('/rooms')
-def get_rooms():
+@main.route('/config')
+def get_config():
     rooms = current_app.config['ROOMS']
     adventures = current_app.config['ADVENTURES']
     for adventure in adventures.values():
@@ -28,7 +29,15 @@ def get_rooms():
                 }
                 if adventure_node.get('map'):
                     rooms[node_name]['map'] = adventure_node['map']
-    return jsonify(rooms)
+    events = sorted(
+        current_app.config['EVENTS'],
+        key=lambda event: datetime.fromisoformat(event['start'])
+    )
+    config = {
+        'rooms': rooms,
+        'events': events
+    }
+    return jsonify(config)
 
 @main.route('/', defaults={'path': ''})
 @main.route('/<path:path>')

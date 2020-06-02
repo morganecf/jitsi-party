@@ -8,6 +8,7 @@ import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
 import Map from './Map.jsx'
+import EventList from './EventList.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
@@ -167,6 +168,14 @@ class Room extends Component {
         this.setState({ showMap: false })
     }
 
+    handleOpenEvents() {
+        this.setState({ showEvents: true })
+    }
+
+    handleCloseEvents() {
+        this.setState({ showEvents: false })
+    }
+
     computeMapState(room) {
         const mapAlreadyUnlocked = LocalStorage.get("MAP_UNLOCKED")
         const mapUnlockThreshold = parseInt(Config.mapUnlockThreshold)
@@ -221,13 +230,21 @@ class Room extends Component {
                     onClick={this.onSwitchRoom.bind(this)}
                     showMapButton={mapState.mapVisible}
                     showMapTooltip={mapState.showMapTooltip}
-                    handleOpenMap={this.handleOpenMap.bind(this)}></Navigation>
+                    handleOpenMap={this.handleOpenMap.bind(this)}
+                    handleOpenEvents={this.handleOpenEvents.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
                 <Modal
                     isOpen={this.state.showMap}
                     onAfterOpen={this.handleOpenMap.bind(this)}
                     onRequestClose={this.handleCloseMap.bind(this)}>
                         <Map onRoomClick={this.onSwitchRoom.bind(this)} handleCloseMap={this.handleCloseMap.bind(this)}></Map>
+                </Modal>
+                <Modal
+                    isOpen={this.state.showEvents}
+                    onAfterOpen={this.handleOpenEvents.bind(this)}
+                    onRequestClose={this.handleCloseEvents.bind(this)}
+                    className="event-modal">
+                        <EventList rooms={this.props.rooms} events={this.props.events}></EventList>
                 </Modal>
             </div>
         )
