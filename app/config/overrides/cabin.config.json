@@ -54,24 +54,20 @@
 		"stats": {
 			"numberInHouse": {
 				"display": true,
-				"text": "{0} in cabin",
-				"emoji": "🏚️"
+				"text": "🏚️ {count} in cabin"
 			},
 			"numberInHallways": {
 				"display": true,
-				"text": "{0} roaming",
-				"emoji": "🌓"
+				"text": "🌓 {count} roaming"
 			},
 			"numberInRooms": {
 				"display": true,
-				"text": "{0} partying",
-				"emoji": "🎉"
+				"text": "🎉 {count} partying"
 			},
 			"additionalStats": [
 				{
-					"text": "{0} taking bathroom break",
-					"match": ["bathroom"],
-					"emoji": "🛁"
+					"text": "🛁 {0} taking bathroom break",
+					"match": ["bathroom"]
 				}
 			]
 		}

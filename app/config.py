@@ -22,6 +22,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BASE_DIR = basedir
     MESSAGE_QUEUE = 'amqp://localhost:5672'
+    # MESSAGE_QUEUE = None
     CONFIG_PATHS = [os.path.join(configdir, file) for file in ['base.json', 'rooms.json', 'adventures.json']]
     OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in ['config.json', 'rooms.json']]
 

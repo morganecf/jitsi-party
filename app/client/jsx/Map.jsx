@@ -78,27 +78,22 @@ class Map extends Component {
             }
         ]
         .filter(({ key }) => config[key].display)
-        .map(({ key, count }) => ({
-            text: config[key].text.replace('{0}', count),
-            emoji: config[key].emoji
-        }))
+        .map(({ key, count }) => (
+            config[key].text.replace('{count}', count)
+        ))
 
-        config.additionalStats.forEach(({ text, match, emoji }) => {
+        config.additionalStats.forEach(({ text, match }) => {
             const rooms = _.isArray(match) ?
                 _.intersection(Object.keys(users), match) :
                 Object.keys(users).filter(room => new RegExp(match).test(room))
             const count = _.sumBy(rooms, room => users[room].length)
-            mapStats.push({
-                text: text.replace('{0}', count),
-                emoji
-            })
+            mapStats.push(text.replace('{count}', count))
         })
 
         return (
             <div className="map-stats">
-                {mapStats.map(({ text, emoji}, index) => (
+                {mapStats.map((text, index) => (
                     <div key={`stat-${index}`} className="map-stat-column">
-                        <span className="map-stat-emoji">{emoji}</span>
                         {text}
                     </div>
                 ))}

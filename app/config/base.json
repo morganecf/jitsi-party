@@ -23,18 +23,15 @@
 		"stats": {
 			"numberInHouse": {
 				"display": true,
-				"text": "{0} in house",
-				"emoji": "🏚️"
+				"text": "🏚️ {count} in house"
 			},
 			"numberInRooms": {
 				"display": true,
-				"text": "{0} in rooms",
-				"emoji": "🚪"
+				"text": "🚪 {count} in rooms"
 			},
 			"numberInHallways": {
 				"display": true,
-				"text": "{0} roaming",
-				"emoji": "🌓"
+				"text": "🌓 {count} roaming"
 			},
 			"additionalStats": []
 		}
