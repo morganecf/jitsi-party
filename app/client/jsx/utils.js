@@ -33,3 +33,34 @@ export function createAdventureActions(room, rooms) {
        }
     })
 }
+
+const transparentJitsiCss = `
+    body {
+        background-color: transparent !important;
+    }
+    body #largeVideoContainer.videoContainer {
+        background-color: transparent !important;
+    }
+    .tOoji {
+        background-color: transparent !important;
+    }
+    `
+
+const transparentJitsiJs = `
+    const style = document.createElement('style')
+    document.head.appendChild(style);
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode(css));
+`
+
+export const transparentJitsi = {
+    css: transparentJitsiCss,
+    printInstructions: () => {
+        const instructions = `const css = \`${transparentJitsiCss}\`\n${transparentJitsiJs}`
+        console.log("%c******************************************************", 'background: #222; color: #bada55')
+        console.log("Can't make Jitsi transparent! Must be running locally.")
+        console.log("To test the background, inspect the document inside the iframe and paste this code into the console:")
+        console.log(instructions)
+        console.log("%c******************************************************", 'background: #222; color: #bada55')
+    }
+}
