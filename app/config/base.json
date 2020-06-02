@@ -18,5 +18,22 @@
 	  }
 	},
 	"specialAvatars": {
+	},
+	"map": {
+		"stats": {
+			"numberInHouse": {
+				"display": true,
+				"text": "🏚️ {count} in house"
+			},
+			"numberInRooms": {
+				"display": true,
+				"text": "🚪 {count} in rooms"
+			},
+			"numberInHallways": {
+				"display": true,
+				"text": "🌓 {count} roaming"
+			},
+			"additionalStats": []
+		}
 	}
 }

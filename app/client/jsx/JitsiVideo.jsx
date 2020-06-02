@@ -138,7 +138,7 @@ style.appendChild(document.createTextNode(css));
                 this.makeJitsiTransparent()
                 this.hideSpinner()
                 const { type, color } = this.props.jitsiData.avatar
-                const avatarUrl = config.avatars[type][color]
+                const avatarUrl = Config.avatars[type][color]
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl,
