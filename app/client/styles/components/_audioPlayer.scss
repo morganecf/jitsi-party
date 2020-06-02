@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the AudioPlayer component.
+// -----------------------------------------------------------------------------
+
+.audio-button {
+    border-radius: 100%;
+    padding: 7px 10px;
+
+    &.hidden {
+        display: none;
+    }
+
+    svg {
+        margin: 0 2px 0 0;
+    }
+}

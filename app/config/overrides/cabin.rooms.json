@@ -28,6 +28,11 @@
 			"capacity": 2,
 			"backgroundImage": "js/images/rooms/closet.jpg",
 			"description": "A quiet, cozy closet. Shhh.",
+			"audio": {
+				"path": "js/audio/placebo-room.mp3",
+				"autoPlay": true,
+				"hideControls": false
+			},
 			"directions": {
 				"east": "vestibule"
 			},

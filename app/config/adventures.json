@@ -18,6 +18,13 @@
             }
         },
         "closetAdventure": {
+            "config": {
+                "audio": {
+                    "path": "js/audio/harry-potter-theme.mp3",
+                    "autoPlay": true,
+                    "hideControls": true
+                }
+            },
             "artCloset": {
                 "name": "A Small Coat Closet",
                 "text": "There are so many coats in here.",
@@ -34,16 +41,7 @@
                         "text": "Leave",
                         "nextRoom": "artGallery"
                     }
-                ],
-                "room314": {
-                    "x": 7,
-                    "y": 15,
-                    "width": 1,
-                    "height": 2,
-                    "doors": {
-                        "east": 15
-                    }
-                }
+                ]
             },
             "ucDrugs": {
                 "text": "Might as well have some fun in this closet. Which drug do you do?",
