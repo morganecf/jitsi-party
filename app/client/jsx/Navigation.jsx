@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight, faMap } from '@fortawesome/free-solid-svg-icons'
 import Config from './Config.jsx'
+import AudioPlayer from './AudioPlayer.jsx';
+import reducers from './reducers.jsx'
 
 class Navigation extends Component {
     constructor(props) {
@@ -44,22 +46,40 @@ class Navigation extends Component {
         }
     }
 
+    handleAudioChanged({ autoPlay }) {
+        this.props.updateRoomAudio(this.props.currentRoom.room, autoPlay)
+    }
+
     render() {
         const onClick = this.props.onClick
         const { north, south, east, west } = this.props.directions || {}
         const mapButtonClass = this.props.showMapTooltip ? "map-button animated" : "map-button"
+        const room = this.props.currentRoom.room
+        const audio = this.props.rooms[room].audio
+
         return (
             <div className="navigation-container">
-                <div className="column">
-                    {this.props.showMapButton &&
-                        <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
-                            <FontAwesomeIcon icon={faMap}/>
-                            <span className="navigation-room-name">Map</span>
-                        </button>
-                    }
-                    {this.props.showMapTooltip &&
-                        <div className="map-tooltip">you have unlocked the party map!</div>
-                    }
+                <div className="column settings-container">
+                    <div className="map-button-container">
+                        {this.props.showMapButton &&
+                            <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
+                                <FontAwesomeIcon icon={faMap}/>
+                            </button>
+                        }
+                        {this.props.showMapTooltip &&
+                            <div className="map-tooltip">you have unlocked the party map!</div>
+                        }
+                    </div>
+                    <div className="audio-button-container">
+                        {audio &&
+                            <AudioPlayer
+                                src={audio.path}
+                                autoPlay={audio.autoPlay}
+                                hide={audio.hideControls}
+                                onChange={this.handleAudioChanged.bind(this)}>
+                            </AudioPlayer>
+                        }
+                    </div>
                 </div>
                 <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>
@@ -93,4 +113,6 @@ class Navigation extends Component {
     }
 }
 
-export default connect(state => state, {})(Navigation)
+export default connect(state => state, {
+    updateRoomAudio: reducers.updateRoomAudioActionCreator
+})(Navigation)

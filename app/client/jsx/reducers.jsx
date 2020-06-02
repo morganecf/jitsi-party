@@ -5,8 +5,9 @@ const ADD_ROOMS = 'ADD_ROOMS'
 const UPDATE_USER = 'UPDATE_USER'
 const UPDATE_USERS = 'UPDATE_USERS'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
-const UPDATE_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
-const UPDATE_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
+const UPDATE_JITSI_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
+const UPDATE_JITSI_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
+const UPDATE_ROOM_AUDIO = 'UPDATE_ROOM_AUDIO'
 
 /*
 * This is the global state.
@@ -47,12 +48,18 @@ function updateCurrentRoomAction(state, currentRoom) {
     return Object.assign({}, state, currentRoom, { visited })
 }
 
-function updateAudioMutedAction(state, isAudioMuted) {
+function updateJitsiAudioMutedAction(state, isAudioMuted) {
     return Object.assign({}, state, isAudioMuted)
 }
 
-function updateVideoMutedAction(state, isVideoMuted) {
+function updateJitsiVideoMutedAction(state, isVideoMuted) {
     return Object.assign({}, state, isVideoMuted)
+}
+
+function updateRoomAudioAction(state, { currentRoom, autoPlay }) {
+    const nextState = _.cloneDeep(state)
+    nextState.rooms[currentRoom].audio.autoPlay = autoPlay
+    return nextState
 }
 
 export default {
@@ -73,13 +80,18 @@ export default {
         type: UPDATE_CURRENT_ROOM,
         currentRoom
     }),
-    updateAudioMutedActionCreator: isAudioMuted => ({
-        type: UPDATE_AUDIO_MUTED,
+    updateJitsiAudioMutedActionCreator: isAudioMuted => ({
+        type: UPDATE_JITSI_AUDIO_MUTED,
         isAudioMuted
     }),
-    updateVideoMutedActionCreator: isVideoMuted => ({
-        type: UPDATE_VIDEO_MUTED,
+    updateJitsiVideoMutedActionCreator: isVideoMuted => ({
+        type: UPDATE_JITSI_VIDEO_MUTED,
         isVideoMuted
+    }),
+    updateRoomAudioActionCreator: (currentRoom, autoPlay) => ({
+        type: UPDATE_ROOM_AUDIO,
+        currentRoom,
+        autoPlay
     }),
     /* Reducers */
     reducer: handleActions({
@@ -87,7 +99,8 @@ export default {
         [UPDATE_USER]: updateUserAction,
         [UPDATE_USERS]: updateUsersAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
-        [UPDATE_AUDIO_MUTED]: updateAudioMutedAction,
-        [UPDATE_VIDEO_MUTED]: updateVideoMutedAction
+        [UPDATE_JITSI_AUDIO_MUTED]: updateJitsiAudioMutedAction,
+        [UPDATE_JITSI_VIDEO_MUTED]: updateJitsiVideoMutedAction,
+        [UPDATE_ROOM_AUDIO]: updateRoomAudioAction
     }, initialState)
 }
