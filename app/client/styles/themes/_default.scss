@@ -3,17 +3,18 @@
 // default one.
 // -----------------------------------------------------------------------------
 
-
-body {
-	background: linear-gradient(300deg, $background-color 10%, lighten($background-color, 5%) 90%);
-	background-attachment: fixed;
-	min-height: 100vh;
-}
-
-.ReactModal__Content {
-	border: none !important;
-	background: $background-color !important;
-}
-.ReactModal__Overlay {
-	background: rgba(255, 255, 255, 0.25) !important;
-}
+$nav-background-color: color("dark-surface");
+$background-color: color("grey-900");
+$room-content-background-color: color("grey-800");
+$text-color: color("grey-100");
+$brand-color: color("purple-500");
+$disabled-text-color: color("grey-700");
+$disabled-background-color: color("grey-500");
+$map-unvisited-color: $background-color;
+$map-room-stroke-color: color("teal-900"); //black
+$map-highlight-stroke: color("blue-grey-50");
+$modal-overlay-color: rgba(255, 255, 255, 0.25);
+$opaque-button-background-color: color("grey-400");
+$opaque-button-text-color: color("dark-surface");
+$opaque-button-border-color: color("grey-400");
+$art-image-border-color: color("grey-50"); //white

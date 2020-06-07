@@ -4,7 +4,7 @@
 	"useLocalSessions": true,
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
-		"backgroundColor": "black",
+		"backgroundColor": "#121212",
 		"enterSpaceButtonText": "Start",
 		"avatarSelectionText": "Select your Avatar",
 		"headerHtml": "<br><h1>Welcome</h1>"

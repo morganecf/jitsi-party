@@ -4,27 +4,33 @@
 @import
   'abstracts/variables',
   'abstracts/functions',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/palette';
 
 // 2. Vendors
 @import
   'vendors/normalize';
 
-// 3. Base stuff
+// 3. Themes
+@import
+  'themes/default';
+
+// 4. Base stuff
 @import
   'base/base',
   'base/fonts',
   'base/typography',
   'base/helpers';
 
-// 4. Layout-related sections
+// 5. Layout-related sections
 @import
   'layout/header',
   'layout/footer';
 
-// 5. Components
+// 6. Components
 @import
   'components/button',
+  'components/modal',
   'components/puckBox',
   'components/PuckSelect',
   'components/Welcome',
@@ -33,7 +39,7 @@
   'components/userList',
   'components/audioPlayer';
 
-// 6. Page-specific styles
+// 7. Page-specific styles
 @import
   'pages/room',
   'pages/artRoom',
@@ -41,6 +47,4 @@
   'pages/exit',
   'pages/map';
 
-// 7. Themes
-@import
-  'themes/default';
+

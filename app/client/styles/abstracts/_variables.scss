@@ -19,37 +19,6 @@ $text-font-stack: 'Darker Grotesque', 'Helvetica Neue Light', 'Helvetica Neue', 
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-
-
-/// App background color
-/// @type Color
-$background-color: rgb(24, 26, 27) !default;
-$background-color-light: lighten($background-color, 10%);
-
-/// Copy text color
-/// @type Color
-$text-color: rgb(214, 211, 205) !default;
-
-/// Main brand color
-/// @type Color
-$brand-color: rgb(229, 0, 80) !default;
-
-/// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
-
-/// Medium grey
-/// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
-
-/// Dark grey
-/// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
-
-
-
-
-
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
@@ -66,14 +35,3 @@ $breakpoints: (
   'medium': 768px,
   'large': 1024px,
 ) !default;
-
-
-
-
-
-
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'http://party.gbre.org/';
-$base-url: '/assets/' !default;

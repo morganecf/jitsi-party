@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
 
 .map {
-    $unvisited-color: #D6D3CD;
     $transition-duration: .3s;
     height: 100%;
 
@@ -12,9 +11,9 @@
     .map-header {
         display: flex;
         justify-content: space-between;
-        background: #303436;
+        background: $nav-background-color;
         padding: 10px 20px;
-        color: #d6d3cd;
+        color: $text-color;
 
         .map-header-tagline {
           font-family: $serif;
@@ -97,17 +96,17 @@
         path {
             cursor: pointer;
             stroke-width: 2;
-            stroke: #000;
+            stroke: $map-room-stroke-color;
         }
 
         path.highlighted-room, path.unvisited.highlighted-room, path.empty.highlighted-room {
             fill-opacity: 1;
-            stroke: #f2f1f1;
+            stroke: $map-highlight-stroke;
             transition: fill-opacity $transition-duration, stroke $transition-duration;
         }
 
         path.unvisited {
-            fill: $unvisited-color;
+            fill: $map-unvisited-color;
             fill-opacity: 0.5;
         }
     }
