@@ -35,7 +35,7 @@ export default class LocalStorage {
         const now = new Date()
         if (now.getTime() > item.expiry) {
             delete state[key]
-            localStorage.setItem(topLevelKey, state)
+            localStorage.setItem(topLevelKey, JSON.stringify(state))
             return null
         }
 
