@@ -11,7 +11,7 @@
     .map-header {
         display: flex;
         justify-content: space-between;
-        background: $nav-background-color;
+        background: $background-color-dark;
         padding: 10px 20px;
         color: $text-color;
 
@@ -96,7 +96,7 @@
         path {
             cursor: pointer;
             stroke-width: 2;
-            stroke: $map-room-stroke-color;
+            stroke: #000;
         }
 
         path.highlighted-room, path.unvisited.highlighted-room, path.empty.highlighted-room {
