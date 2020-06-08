@@ -241,7 +241,6 @@ class Room extends Component {
                 </Modal>
                 <Modal
                     isOpen={this.state.showEvents}
-                    onAfterOpen={this.handleOpenEvents.bind(this)}
                     onRequestClose={this.handleCloseEvents.bind(this)}
                     className="event-modal">
                         <EventList rooms={this.props.rooms} events={this.props.events}></EventList>

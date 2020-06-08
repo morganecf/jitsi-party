@@ -1,14 +1,11 @@
 import React from 'react'
 import moment from 'moment'
+import { formatDate, formatTime } from './utils.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faCompass } from '@fortawesome/free-solid-svg-icons'
 
 function formatEventTime(event) {
-    // moment converts UTC dates to local time on all browsers so it's safer
-    // to use than the native Date constructor or Date.parse
-    const start = moment(event.start)
-    const end = moment(event.end)
-    return `${start.format('dddd, MMMM Do h:mm A')}  —  ${end.format('h:mm A')}`
+    return `${formatDate(event.start)}  —  ${formatTime(event.end)}`
 }
 
 const EventGroup = props => {

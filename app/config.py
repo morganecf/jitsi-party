@@ -45,18 +45,12 @@ class Config:
 
     @property
     def ADVENTURES(self):
-        try:
-            return self.merged_cfg['adventures']
-        except:
-            return dict()
+        return self.merged_cfg.get('adventures', {})
 
     @property
     def EVENTS(self):
-        try:
-            return self.merged_cfg['events']
-        except:
-            return dict()
-    
+        return self.merged_cfg.get('events', {})
+
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
