@@ -4,17 +4,35 @@
             "name": "Fun",
             "description": "Fun. How do you have it? A lecture.",
             "room": "livingRoom",
-            "start": "2020-06-06T13:00:00-04:00",
-            "end": "2020-06-06T14:00:00-04:00",
-            "image": "js/images/events/fun.png"
+            "start": "2020-06-10T20:59:00-04:00",
+            "end": "2020-06-10T21:00:00-04:00",
+            "image": "js/images/events/fun.png",
+            "notifications": [
+                {
+                    "text": "A lecture on fun is starting in 5 minutes!",
+                    "time": "2020-06-10T20:55:00-04:00",
+                    "image": "js/images/puck/whippit-orange.png"
+                },
+                {
+                    "text": "Come to the living room for a lecture on how to have fun!",
+                    "time": "2020-06-10T20:59:00-04:00",
+                    "image": "js/images/puck/whippit-orange.png"
+                }
+            ]
         },
         {
             "name": "Chill Dance Party",
             "description": "Ambient beats for late-night freaks",
             "room": "livingRoom",
-            "start": "2020-06-07T01:00:00-04:00",
-            "end": "2020-06-07T03:00:00-04:00",
-            "image": "js/images/events/late-night.jpg"
+            "start": "2020-06-10T20:57:00-04:00",
+            "end": "2020-06-10T21:00:00-04:00",
+            "image": "js/images/events/late-night.jpg",
+            "audioNotifications": [
+                {
+                    "src": "js/audio/chill-dance-party-announcement.wav",
+                    "time": "2020-06-10T20:57:00-04:00"
+                }
+            ]
         },
         {
             "name": "Bush Baby Appreciation",

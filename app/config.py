@@ -5,6 +5,13 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 configdir = os.path.join(basedir, 'config')
 overridedir = os.path.join(configdir, 'overrides')
 
+override_files = [
+    'config.json',
+    'rooms.json',
+    'events.json',
+    'notifications.json'
+]
+
 def get_json_dict(path):
     try:
         with open(path) as file:
@@ -23,13 +30,10 @@ class Config:
     BASE_DIR = basedir
     # MESSAGE_QUEUE = 'amqp://localhost:5672'
     MESSAGE_QUEUE = None
-    CONFIG_PATHS = [os.path.join(configdir, file) for file in [
-        'base.json',
-        'rooms.json',
-        'adventures.json',
-        'events.json'
+    CONFIG_PATHS = [os.path.join(configdir, file) for file in override_files + [
+        'base.json', 'adventures.json'
     ]]
-    OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in ['config.json', 'rooms.json', 'events.json']]
+    OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in override_files]
 
     @staticmethod
     def init_app(app):
@@ -50,6 +54,10 @@ class Config:
     @property
     def EVENTS(self):
         return self.merged_cfg.get('events', {})
+
+    @property
+    def NOTIFICATIONS(self):
+        return self.merged_cfg.get('notifications', {})
 
 
 class DevelopmentConfig(Config):

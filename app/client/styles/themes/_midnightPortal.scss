@@ -1,0 +1,17 @@
+body.midnight {
+    background: #660a0a;
+    animation: transition-background 10s infinite;
+}
+
+@keyframes transition-background {
+    0% {
+        background: #660a0a;
+    }
+    50% {
+        background: rgb(11, 11, 63);
+    }
+    100% {
+        background: #660a0a;
+    }
+}
+

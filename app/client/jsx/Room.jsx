@@ -15,22 +15,13 @@ import Navigation from './Navigation.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
 import Config from './Config.jsx'
+import { NotificationContext } from './Notifications.jsx'
 
 class Room extends Component {
-    /*
-    * A room has the following:
-    *   1. Name of room
-    *   2. Optional description
-    *   3. Content (video, art, text, etc)
-    *   4. Navigation component used to move through rooms
-    *   5. Optional artifact, i.e. something the user finds or unlocks, like a map
-    * Add new rooms to rooms.json, where individual rooms are defined. Add new TYPES of rooms
-    * by creating a new component for that room and updating the getRoomType() mapping.
-    */
+    static contextType = NotificationContext
+
     constructor(props) {
         super(props)
-
-        const { room, entered } = this.props.currentRoom
 
         this.useLocalSessions = Config.useLocalSessions || false
 
@@ -48,7 +39,7 @@ class Room extends Component {
         }
 
         this.state = {
-            room,
+            room: this.props.currentRoom.room,
             entered: false,
             users: []
         }
@@ -192,11 +183,27 @@ class Room extends Component {
         }
     }
 
+    scheduleNotifications() {
+        if (this.scheduledNotifications) {
+            return
+        }
+        if (!_.isEmpty(this.props.notifications)) {
+            [
+                ...this.props.notifications.toast,
+                ...this.props.notifications.audio,
+                ...this.props.notifications.modal
+            ].forEach(notification => this.context.schedule(notification))
+        }
+        this.scheduledNotifications = true
+    }
+
     render() {
         if (Object.keys(this.props.rooms).length === 0) {
             // room config not loaded yet
             return null
         }
+
+        this.scheduleNotifications()
 
         this.useLocalSessions && LocalStorage.touch("USER") // keep session alive
 

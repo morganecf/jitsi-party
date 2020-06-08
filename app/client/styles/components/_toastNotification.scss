@@ -1,0 +1,53 @@
+.toast-notifications {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    // TODO these should go in base theme
+    $toast-background: #4a274a;
+    $toast-image-background: #00000099;
+
+    .toast-notification {
+        margin: 20px;
+        display: flex;
+        background: $toast-background;
+
+        // Animation
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        animation: slide-in 0.3s forwards;
+        -webkit-animation: slide-in 0.3s forwards;
+
+        @keyframes slide-in {
+            100% { transform: translateY(0%); }
+        }
+    
+        .toast-image {
+            padding: 20px;
+            background: $toast-image-background;
+    
+            img {
+                max-width: 50px;
+            }
+        }
+    
+        .toast-text {
+            align-self: center;
+            max-width: 300px;
+            line-height: 1;
+            padding: 20px;
+            margin-right: 60px;
+        }
+    
+        button {
+            margin: 0;
+            border: 0;
+            border-radius: 0;
+            padding: 30px;
+    
+            svg {
+                margin: 0;
+            }
+        }
+    }    
+}

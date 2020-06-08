@@ -16,6 +16,7 @@ def join():
 def get_config():
     rooms = current_app.config['ROOMS']
     adventures = current_app.config['ADVENTURES']
+    # Merge adventures into rooms
     for adventure in adventures.values():
         config = adventure.get('config', {})
         for node_name, adventure_node in adventure.items():
@@ -29,13 +30,25 @@ def get_config():
                 }
                 if adventure_node.get('map'):
                     rooms[node_name]['map'] = adventure_node['map']
+    # Sort events by start time
     events = sorted(
         current_app.config['EVENTS'],
         key=lambda event: datetime.fromisoformat(event['start'])
     )
+    # Merge any existing event notifications into notifications
+    notifications = current_app.config['NOTIFICATIONS']
+    notifications['toast'] = notifications.get('toast', [])
+    notifications['audio'] = notifications.get('audio', [])
+    notifications['modal'] = notifications.get('modal', [])
+    for event in events:
+        if event.get('notifications'):
+            notifications['toast'].extend(event['notifications'])
+        elif event.get('audioNotifications'):
+            notifications['audio'].extend(event['audioNotifications'])
     config = {
         'rooms': rooms,
-        'events': events
+        'events': events,
+        'notifications': notifications
     }
     return jsonify(config)
 
