@@ -1,5 +1,6 @@
 import React from 'react'
 import UserList from './UserList.jsx'
+import { formatTime } from './utils.js'
 
 export default props => {
     if (!props.room) {
@@ -42,13 +43,15 @@ export default props => {
 
     // Show announcements if any exist
     let announcements
-    if (props.room.announcements) {
+    if (props.events && props.events.length > 0) {
         announcements = (
             <div className="map-room-announcements">
                 <hr></hr>
                 <ul>
-                    {props.room.announcements.map((announcement, i) => (
-                        <li key={`announcement-${i}`}>{announcement}</li>
+                    {props.events.map((event, i) => (
+                        <li key={`announcement-${i}`}>
+                            {`${event.name} @ ${formatTime(event.start)}`}
+                        </li>
                     ))}
                 </ul>
             </div>

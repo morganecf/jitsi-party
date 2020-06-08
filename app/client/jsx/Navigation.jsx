@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight, faMap } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight, faMap, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import Config from './Config.jsx'
 import AudioPlayer from './AudioPlayer.jsx';
 import reducers from './reducers.jsx'
@@ -56,6 +56,7 @@ class Navigation extends Component {
         const mapButtonClass = this.props.showMapTooltip ? "map-button animated" : "map-button"
         const room = this.props.currentRoom.room
         const audio = this.props.rooms[room].audio
+        const events = this.props.events
 
         return (
             <div className="navigation-container">
@@ -78,6 +79,13 @@ class Navigation extends Component {
                                 hide={audio.hideControls}
                                 onChange={this.handleAudioChanged.bind(this)}>
                             </AudioPlayer>
+                        }
+                    </div>
+                    <div className="events-button-container">
+                        {events && events.length > 0 &&
+                            <button className="events-button" onClick={this.props.handleOpenEvents.bind(this)}>
+                                <FontAwesomeIcon icon={faCalendar}/>
+                            </button>
                         }
                     </div>
                 </div>
