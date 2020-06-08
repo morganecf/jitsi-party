@@ -74,10 +74,6 @@
 			"name": "Dave's Rave Cave",
 			"type": "iframe",
 			"description": "Dance until you die!!",
-			"announcements": [
-				"David is DJing from 11PM EDT to 1AM EDT! 🍭",
-				"Watch the lovely & talented Marianne pole dance for part of it 💖"
-			],
 			"muteRoom": true,
 			"backgroundImage": "js/images/rooms/fvn_stvff_keep_it_pushin.jpg",
 			"iframeOptions": {
@@ -105,9 +101,6 @@
 			"name": "Club Polo",
 			"type": "iframe",
 			"description": "🎷 Live deep house & tech house set from DJ Depolo 🎷",
-			"announcements": [
-				"Live deep house & tech house set from DJ Depolo for...most of the night?"
-			],
 			"muteRoom": true,
 			"backgroundImage": "js/images/rooms/clubpolo.jpg",
 			"iframeOptions": {
@@ -374,10 +367,6 @@
 			"name": "The Bunny Run",
 			"type": "iframe",
 			"description": "🐰 TIPS FOR TREATS: Donate at least $1 to Goddess: The American Stripper to feed Winston & Winona! https://bit.ly/2Wmxn4J 🐰",
-			"announcements": [
-				"🐰Come watch bunnies!! 🐰",
-				"Donate to The Goddess project on Indiegogo to feed the kids a treat 💖"
-			],
 			"iframeOptions": {
 				"src": "https://player.twitch.tv/?channel=bunheroes&parent=jitsi.gbre.org"
 			},

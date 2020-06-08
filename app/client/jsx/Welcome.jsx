@@ -41,15 +41,25 @@ class Welcome extends Component {
         }
     }
 
-    async fetchRooms() {
-        const { success, rooms } = await this.httpApi.getRooms()
+    componentDidMount() {
+        this.fetchConfig()
+    }
+
+    async fetchConfig() {
+        const { success, config } = await this.httpApi.getConfig()
         if (success) {
-            this.props.addRooms(rooms)
-            this.loadAssets(rooms)
+            this.props.addConfig(config)
+            this.loadAssets(config)
         }
     }
 
-    loadAssets(rooms) {
+    loadAssets({ rooms, events }) {
+        _.forEach(events, event => {
+            if (event.image) {
+                const img = new Image()
+                img.src = event.image
+            }
+        })
         _.forEach(rooms, room => {
             if (room.backgroundImage) {
                 const img = new Image()
@@ -60,10 +70,6 @@ class Welcome extends Component {
                 img.src = room.art.src
             }
         })
-    }
-
-    componentDidMount() {
-        this.fetchRooms()
     }
 
     handleUsernameChange(event) {
@@ -166,7 +172,7 @@ class Welcome extends Component {
 export default connect(
     state => state,
     {
-        addRooms: reducers.addRoomsActionCreator,
+        addConfig: reducers.addConfigActionCreator,
         updateUser: reducers.updateUserActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Welcome)

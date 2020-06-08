@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import { handleActions } from 'redux-actions'
 
-const ADD_ROOMS = 'ADD_ROOMS'
+const ADD_CONFIG = 'ADD_CONFIG'
 const UPDATE_USER = 'UPDATE_USER'
 const UPDATE_USERS = 'UPDATE_USERS'
 const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
@@ -13,6 +13,7 @@ const UPDATE_ROOM_AUDIO = 'UPDATE_ROOM_AUDIO'
 * This is the global state.
 *   user: userId, username, avatar type/color
 *   rooms: roomId->room definition mapping
+*   events: list of events
 *   users: roomId->userlist mapping, gets updated by websockets
 *   currentRoom: room, entered
 *   visited: map of which rooms user has visited
@@ -22,6 +23,7 @@ const UPDATE_ROOM_AUDIO = 'UPDATE_ROOM_AUDIO'
 const initialState = {
     user: {},
     rooms: {},
+    events: {},
     users: {},
     currentRoom: {},
     visited: {},
@@ -29,8 +31,9 @@ const initialState = {
     isVideoMuted: false
 }
 
-function addRoomsAction(state, rooms) {
-    return Object.assign({}, state, rooms)
+function addConfigAction(state, config) {
+    const { rooms, events } = config.config
+    return Object.assign({}, state, { rooms, events })
 }
 
 function updateUsersAction(state, users) {
@@ -64,9 +67,9 @@ function updateRoomAudioAction(state, { currentRoom, autoPlay }) {
 
 export default {
     /* Action creators: return actions for reducers */
-    addRoomsActionCreator: rooms => ({
-        type: ADD_ROOMS,
-        rooms
+    addConfigActionCreator: config => ({
+        type: ADD_CONFIG,
+        config
     }),
     updateUserActionCreator: user => ({
         type: UPDATE_USER,
@@ -95,7 +98,7 @@ export default {
     }),
     /* Reducers */
     reducer: handleActions({
-        [ADD_ROOMS]: addRoomsAction,
+        [ADD_CONFIG]: addConfigAction,
         [UPDATE_USER]: updateUserAction,
         [UPDATE_USERS]: updateUsersAction,
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,

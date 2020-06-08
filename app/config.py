@@ -23,8 +23,13 @@ class Config:
     BASE_DIR = basedir
     MESSAGE_QUEUE = 'amqp://localhost:5672'
     # MESSAGE_QUEUE = None
-    CONFIG_PATHS = [os.path.join(configdir, file) for file in ['base.json', 'rooms.json', 'adventures.json']]
-    OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in ['config.json', 'rooms.json']]
+    CONFIG_PATHS = [os.path.join(configdir, file) for file in [
+        'base.json',
+        'rooms.json',
+        'adventures.json',
+        'events.json'
+    ]]
+    OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in ['config.json', 'rooms.json', 'events.json']]
 
     @staticmethod
     def init_app(app):
@@ -40,11 +45,12 @@ class Config:
 
     @property
     def ADVENTURES(self):
-        try:
-            return self.merged_cfg['adventures']
-        except:
-            return dict()
-    
+        return self.merged_cfg.get('adventures', {})
+
+    @property
+    def EVENTS(self):
+        return self.merged_cfg.get('events', {})
+
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')

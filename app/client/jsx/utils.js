@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 function pickRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
 }
@@ -63,4 +65,14 @@ export const transparentJitsi = {
         console.log(instructions)
         console.log("%c******************************************************", 'background: #222; color: #bada55')
     }
+}
+
+// moment converts UTC dates to local time on all browsers so it's safer
+// to use than the native Date constructor or Date.parse
+export function formatDate(date) {
+    return moment(date).format('dddd, MMMM Do h:mm A')
+}
+
+export function formatTime(date) {
+    return moment(date).format('h:mm A')
 }
