@@ -15,4 +15,5 @@ flask run-eventlet &
 cd client/
 bash run.sh &
 
-sudo cp ~/jitsi-party/landing/running.html /var/www/html/index.html
+cd ~/jitsi-party/landing
+bash update-landing.sh running.html

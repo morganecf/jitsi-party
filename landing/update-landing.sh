@@ -1,0 +1,1 @@
+sudo cp $1 /var/www/html/index.html

@@ -22,4 +22,5 @@ sudo apt-get install certbot
 sudo apt-get install apache2
 
 # Set the landing page
-cp ~/jitsi-party/landing/down.html /var/www/html/index.html
+cd ~/jitsi-party/landing
+bash update-landing.sh down.html
