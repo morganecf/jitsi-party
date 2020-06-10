@@ -105,19 +105,9 @@ class Welcome extends Component {
     }
 
     render() {
+      console.log('foo')
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect}/>
-        }
-
-        let textEntry = {
-          padding: '6px 10px',
-          border: '2px solid #D6D3CD',
-          backgroundColor: '#D6D3CD',
-          borderRadius: '7px',
-          color: '#1B1E1F',
-          outline: 'none',
-          boxShadow: 'none',
-          fontSize: '20px'
         }
 
         let avatarOpacity = 'form-fade'
@@ -147,9 +137,8 @@ class Welcome extends Component {
                 <div className="header" dangerouslySetInnerHTML={{ __html: config.headerHtml }} />
                 {splash}
                 <input
-                    style={textEntry}
                     autoComplete="off"
-                    className={nameOpacity}
+                    className={`text-entry ${nameOpacity}`}
                     type="text"
                     placeholder="Name"
                     name="name"
