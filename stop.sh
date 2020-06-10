@@ -1,6 +1,8 @@
 # Swap the landing page
-cp ~/jitsi-party/landing/down.html /var/www/html/index.html
+sudo cp ~/jitsi-party/landing/down.html /var/www/html/index.html
 
 # Shut down flask
+kill $PID_FLASK
 
 # Shut down run.sh
+kill $PID_RUN

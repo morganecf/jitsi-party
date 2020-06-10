@@ -11,8 +11,10 @@ cd app/
 source setup.sh
 flask create-db
 flask run-eventlet &
+export PID_FLASK=$!
 
 cd client/
 bash run.sh &
+export PID_RUN=$!
 
-cp ~/jitsi-party/landing/running.html /var/www/html/index.html
+sudo cp ~/jitsi-party/landing/running.html /var/www/html/index.html
