@@ -14,3 +14,5 @@ flask run-eventlet &
 
 cd client/
 bash run.sh &
+
+cp ~/jitsi-party/landing/running.html /var/www/html/index.html

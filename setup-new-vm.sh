@@ -10,3 +10,16 @@ sudo apt-get install -y nodejs
 
 # For checking on DNS config (not necessary)
 # sudo apt-get install dnsutils
+
+# For setting up SSL cert
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install certbot
+
+# For installing Apache
+# Will start automatically once installed
+sudo apt-get install apache2
+
+# Set the landing page
+cp ~/jitsi-party/landing/down.html /var/www/html/index.html
