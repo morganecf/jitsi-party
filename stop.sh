@@ -2,9 +2,7 @@
 sudo cp ~/jitsi-party/landing/down.html /var/www/html/index.html
 
 # Shut down flask
-kill $(cat ~/tmp/FLASK_PID)
+pkill "flask"
 
 # Shut down run.sh
-kill $(cat ~/tmp/RUN_PID)
-
-rm -r ~/tmp
+pkill "run.sh"
