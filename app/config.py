@@ -21,8 +21,8 @@ class Config:
     # To silence deprecation warning
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BASE_DIR = basedir
-    MESSAGE_QUEUE = 'amqp://localhost:5672'
-    # MESSAGE_QUEUE = None
+    # MESSAGE_QUEUE = 'amqp://localhost:5672'
+    MESSAGE_QUEUE = None
     CONFIG_PATHS = [os.path.join(configdir, file) for file in [
         'base.json',
         'rooms.json',
