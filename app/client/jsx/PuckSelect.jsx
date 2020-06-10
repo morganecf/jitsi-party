@@ -13,6 +13,7 @@ class PuckSelect extends Component {
       opacity: this.props.opacity
     }
     this.state = this.initialState
+    this.handleButtonClick = this.handleButtonClick.bind(this)
   }
 
   handleButtonClick () { this.setState({ columnOpen: true }) }
@@ -35,6 +36,7 @@ class PuckSelect extends Component {
   }
 
   render () {
+    console.log(this.state.columnOpen)
     const avatars = Config.avatars
     if (this.state.avatarColorway === '') { // checks whether selection not yet complete
       let allAvatarDesigns = []

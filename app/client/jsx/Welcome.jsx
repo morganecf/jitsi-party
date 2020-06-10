@@ -105,7 +105,6 @@ class Welcome extends Component {
     }
 
     render() {
-      console.log('foo')
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect}/>
         }
