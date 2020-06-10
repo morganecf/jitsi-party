@@ -33,7 +33,7 @@ class Room extends Component {
         const { room, entered } = this.props.currentRoom
 
         this.useLocalSessions = Config.useLocalSessions || false
-        
+
         // These are the room types for which we show the map button
         this.roomTypesWithMap = {
             jitsi: true,
@@ -150,7 +150,7 @@ class Room extends Component {
         this.setState({ entered: true })
         this.props.updateCurrentRoom({
             room: this.state.room,
-            entered: true 
+            entered: true
         })
         this.socketApi.enterRoom(this.props.user, this.state.room)
     }
