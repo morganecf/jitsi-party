@@ -36,7 +36,6 @@ class PuckSelect extends Component {
   }
 
   render () {
-    console.log(this.state.columnOpen)
     const avatars = Config.avatars
     if (this.state.avatarColorway === '') { // checks whether selection not yet complete
       let allAvatarDesigns = []
