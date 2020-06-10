@@ -84,14 +84,14 @@ class JitsiVideo extends Component {
                 toolbarButtons = _.without(this.toolbarButtons, 'microphone')
             }
 
-            const domain = 'party.gbre.org/jitsi/'
-            // const domain = 'meet.jit.si';
+            // const domain = 'party.gbre.org/jitsi/'
+            const domain = 'meet.jit.si';
             const options = {
                 roomName: this.props.jitsiData.roomName,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
                     // filmStripOnly: true,
-                    SHOW_JITSI_WATERMARK: false,
+                    SHOW_JITSI_WATERMARK: true,
                     DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
                     SHOW_WATERMARK_FOR_GUESTS: false,
                     TOOLBAR_BUTTONS: toolbarButtons,
