@@ -1,0 +1,528 @@
+{
+    "adventures": {
+        "outdoorsAdventure": {
+            "outdoors": {
+                "name": "The Great Outdoors",
+                "type": "adventure",
+                "text": "Are you sure you want to leave!? Why don't you pop into a random room instead?",
+                "buttons": [
+                    {
+                        "text": "Teleport me!!",
+                        "nextRoom": "*"
+                    },
+                    {
+                        "text": "I want to leave >:(",
+                        "nextRoom": "bye"
+                    }
+                ]
+            }
+        },
+        "closetAdventure": {
+            "config": {
+                "audio": {
+                    "path": "js/audio/harry-potter-theme.mp3",
+                    "autoPlay": true,
+                    "hideControls": true
+                }
+            },
+            "artCloset": {
+                "name": "A Small Coat Closet",
+                "text": "There are so many coats in here.",
+                "buttons": [
+                    {
+                        "text": "Stay anyway",
+                        "nextRoom": [
+                            "ucDrugs",
+                            "ucTapioca",
+                            "ucUncomfortable"
+                        ]
+                    },
+                    {
+                        "text": "Leave",
+                        "nextRoom": "artGallery"
+                    }
+                ]
+            },
+            "ucDrugs": {
+                "text": "Might as well have some fun in this closet. Which drug do you do?",
+                "buttons": [
+                    {
+                        "text": "Pop some molly",
+                        "nextRoom": "ucTalk"
+                    },
+                    {
+                        "text": "Sip your beer",
+                        "nextRoom": [
+                            "ucGHB",
+                            "ucTalk",
+                            "ucSpy"
+                        ]
+                    },
+                    {
+                        "text": "Sip the whip",
+                        "nextRoom": [
+                            "room314",
+                            "ucRamble"
+                        ]
+                    },
+                    {
+                        "text": "Attend the court of Lady Ketamine",
+                        "nextRoom": "ucKetamine"
+                    },
+                    {
+                        "text": "You are above drugs",
+                        "nextRoom": "ucNarc"
+                    },
+                    {
+                        "text": "You are beyond drugs",
+                        "nextRoom": "ucAliens"
+                    }
+                ]
+            },
+            "ucTapioca": {
+                "text": "Huh, someone else is in here too. A sleeping form.",
+                "buttons": [
+                    {
+                        "text": "Prod the sleeping form awake",
+                        "nextRoom": "ucSmell"
+                    },
+                    {
+                        "text": "Do nothing",
+                        "nextRoom": "ucSmell"
+                    }
+                ]
+            },
+            "ucSmell": {
+                "text": "The sleeping form stirs and turns to face you. This person looks oddly familiar...wait...oh my god...wait...really?? OH GOD. That IS your face, isn't it?",
+                "buttons": [
+                    {
+                        "text": "You are upset. There can only be one you!",
+                        "nextRoom": "vestibule"
+                    },
+                    {
+                        "text": "You are glad. Redundancy is valuable.",
+                        "nextRoom": "ucBird"
+                    }
+                ]
+            },
+            "ucBird": {
+                "text": "What do you want to do with the other you?",
+                "buttons": [
+                    {
+                        "text": "Sex",
+                        "nextRoom": "trashyBedroom"
+                    },
+                    {
+                        "text": "Ask them about their life",
+                        "nextRoom": "ucQuestion"
+                    }
+                ]
+            },
+            "ucQuestion": {
+                "text": "'Where have you been all my life?' You ask.",
+                "buttons": [
+                    {
+                        "text": "'Come with me,' they respond. 'I'll show you.'",
+                        "nextRoom": "room314"
+                    }
+                ]
+            },
+            "ucUncomfortable": {
+                "text": "It's hot, it's small, the carpet is alarmingly damp. You hear specious chatter outside, people talking about art.",
+                "buttons": [
+                    {
+                        "text": "Turn back now",
+                        "nextRoom": "artGallery"
+                    },
+                    {
+                        "text": "Endure",
+                        "nextRoom": "ucFeelings"
+                    }
+                ]
+            },
+            "ucFeelings": {
+                "text": "If only it were real Cabin Weekend, and not this fake-ass, virtual Cabin Weekend. Thinking about CW makes you feel...",
+                "buttons": [
+                    {
+                        "text": "Nostalgic",
+                        "nextRoom": "ucNostalgic"
+                    },
+                    {
+                        "text": "Horny",
+                        "nextRoom": "trashyBedroom"
+                    },
+                    {
+                        "text": "Terrified",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Lit",
+                        "nextRoom": "trashyBedroom"
+                    }
+                ]
+            },
+            "ucGHB": {
+                "text": "This uh, doesn't taste like beer. It kinda tastes like...bleach?",
+                "buttons": [
+                    {
+                        "text": "Keep drinking. Scientists know nothing.",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Run to the bathroom",
+                        "nextRoom": "bathroom"
+                    }
+                ]
+            },
+            "ucTalk": {
+                "text": "The urge to talk to and perhaps even touch a fellow human is now overwhelming.",
+                "buttons": [
+                    {
+                        "text": "Go back to the party",
+                        "nextRoom": "artGallery"
+                    },
+                    {
+                        "text": "Talk to yourself",
+                        "nextRoom": "ucRamble"
+                    }
+                ]
+            },
+            "ucRamble": {
+                "text": "You idly begin to talk to yourself. What do you say?",
+                "buttons": [
+                    {
+                        "text": "A catalogue of all of your sexual misdeeds, both real and imagined",
+                        "nextRoom": "ucFeelings"
+                    },
+                    {
+                        "text": "Beep beep beep. Beep? Beeeeep!",
+                        "nextRoom": "ucLose"
+                    },
+                    {
+                        "text": "\"I realize now that all my life has been confined in a prison of likes and dislikes.\"",
+                        "nextRoom": "room314"
+                    }
+                ]
+            },
+            "ucSpy": {
+                "text": "To kill time, you peer through the crack between closet door and wall. What are you hoping to see?",
+                "buttons": [
+                    {
+                        "text": "The wide expanse of night sky",
+                        "nextRoom": "ucStars"
+                    },
+                    {
+                        "text": "Jackson",
+                        "nextRoom": [
+                            "ucJackson",
+                            "ucTrash"
+                        ]
+                    },
+                    {
+                        "text": "Thao!",
+                        "nextRoom": [
+                            "ucTapiocaGirls",
+                            "ucTrash"
+                        ]
+                    }
+                ]
+            },
+            "ucStars": {
+                "text": "All you can see is trash, and naked people lying atop it. Sigh. You want fresh, clean stars! You yearn for the great outdoors!",
+                "buttons": [
+                    {
+                        "text": "Go outside",
+                        "nextRoom": "outdoors"
+                    },
+                    {
+                        "text": "Smash your head against the wall",
+                        "nextRoom": [
+                            "ucBird",
+                            "ucPain"
+                        ]
+                    }
+                ]
+            },
+            "ucTrash": {
+                "text": "All you can see is trash, and naked people lying atop it. Sigh. You want beauty! Depth! *Surprise!*",
+                "buttons": [
+                    {
+                        "text": "Close your eyes and pray",
+                        "nextRoom": [
+                            "ucJackson",
+                            "outdoors"
+                        ]
+                    },
+                    {
+                        "text": "Smash your head against the wall",
+                        "nextRoom": [
+                            "ucBird",
+                            "ucPain"
+                        ]
+                    }
+                ]
+            },
+            "ucPain": {
+                "text": "Pain......",
+                "buttons": [
+                    {
+                        "text": "PAIN",
+                        "nextRoom": "artGallery"
+                    },
+                    {
+                        "text": "PAAAAAAIN",
+                        "nextRoom": "ucAliens"
+                    }
+                ]
+            },
+            "ucTapiocaGirls": {
+                "text": "Outside the closet you see Thao doing an odd little dance.",
+                "buttons": [
+                    {
+                        "text": "Join her",
+                        "nextRoom": "artGallery"
+                    },
+                    {
+                        "text": "Watch her and take notes",
+                        "nextRoom": "ucThao"
+                    }
+                ]
+            },
+            "ucThao": {
+                "text": "The more you look at Thao, the more you realize there's something a little unsettling about her dance. It no longer feels like a dance, but rather an invocation of something dark and terrible.",
+                "buttons": [
+                    {
+                        "text": "Let it happen",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Barge out of the closet, screaming THIS ENDS NOW",
+                        "nextRoom": "ucLose"
+                    }
+                ]
+            },
+            "ucAliens": {
+                "text": "Suddenly, you feel a wave of...something...pass through your body. As if Time itself has chosen to condense inside of you and copulate with each of your internal organs. When it passes, you see a small humanoid figure in the shadows before you. Its skin is gray, its nose is absent, and its eyes are great black pools.",
+                "buttons": [
+                    {
+                        "text": "Try to make it happy",
+                        "nextRoom": "ucAlienMusic"
+                    },
+                    {
+                        "text": "Stare at it stoically",
+                        "nextRoom": "ucAlienAwkward"
+                    },
+                    {
+                        "text": "Offer it some drugs",
+                        "nextRoom": "ucAlienThanks"
+                    }
+                ]
+            },
+            "ucAlienAwkward": {
+                "text": "The being stares back. The vibe is becoming a little awkward, frankly.",
+                "buttons": [
+                    {
+                        "text": "Try to make it happy",
+                        "nextRoom": "ucAlienMusic"
+                    },
+                    {
+                        "text": "Offer it some drugs",
+                        "nextRoom": "ucAlienThanks"
+                    }
+                ]
+            },
+            "ucDungeon": {
+                "text": "You find yourself in a subterranean vault. It smells of blood and worms. The only light you can see is a faint green glow that seems impossibly distant.",
+                "buttons": [
+                    {
+                        "text": "Go toward the light",
+                        "nextRoom": "ucKetamine"
+                    },
+                    {
+                        "text": "Try to find your way back to the closet",
+                        "nextRoom": "room314"
+                    }
+                ]
+            },
+            "ucNarc": {
+                "text": "You are a deep cover agent, after all. You are only here to gather information. But right now, you need a break. A spy break. How will you spend your spy break?",
+                "buttons": [
+                    {
+                        "text": "Dreaming of tea and crumpets",
+                        "nextRoom": "ucLose"
+                    },
+                    {
+                        "text": "Plotting how to foil these degenerates",
+                        "nextRoom": "ucLose"
+                    },
+                    {
+                        "text": "Doing drugs",
+                        "nextRoom": "ucDrugs"
+                    }
+                ]
+            },
+            "ucKetamine": {
+                "text": "The visuals appear, as visuals will. What do you see?",
+                "buttons": [
+                    {
+                        "text": "Soft, blinking lights",
+                        "nextRoom": "ucAliens"
+                    },
+                    {
+                        "text": "Social anxiety",
+                        "nextRoom": "ucTerrified"
+                    },
+                    {
+                        "text": "Lady Ketamine herself, smirking",
+                        "nextRoom": "ucLadyK"
+                    },
+                    {
+                        "text": "Jackson, always Jackson",
+                        "nextRoom": "ucJackson"
+                    },
+                    {
+                        "text": "A red curtain",
+                        "nextRoom": "room314"
+                    }
+                ]
+            },
+            "ucAlienMusic": {
+                "text": "You have your phone on you. You should play some music. What do you play?",
+                "buttons": [
+                    {
+                        "text": "Metal",
+                        "nextRoom": "ucAlienThanks"
+                    },
+                    {
+                        "text": "The History of Rome",
+                        "nextRoom": "ucHistoryRome"
+                    },
+                    {
+                        "text": "Black metal",
+                        "nextRoom": "ucAlienThanks"
+                    }
+                ]
+            },
+            "ucHistoryRome": {
+                "text": "Mike Duncan's soothing, graven voice washes over you, and you...",
+                "buttons": [
+                    {
+                        "text": "Fall asleep",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Learn a lot about Rome",
+                        "nextRoom": "vestibule"
+                    }
+                ]
+            },
+            "ucNostalgic": {
+                "text": "You think back fondly to last CW, when you...",
+                "buttons": [
+                    {
+                        "text": "Flogged someone for the first time",
+                        "nextRoom": "trashyBedroom"
+                    },
+                    {
+                        "text": "Forgot to eat all weekend",
+                        "nextRoom": "kitchen"
+                    },
+                    {
+                        "text": "Literally became evil",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Had a lot of darned fun!",
+                        "nextRoom": "ucFun"
+                    }
+                ]
+            },
+            "ucTerrified": {
+                "text": "That's what I thought, my dear. There, there... it's alright now. You're safe here. Safe with me. You'll always be safe, here, in my arms...",
+                "buttons": [
+                    {
+                        "text": "Take me home, sweet Mother...",
+                        "nextRoom": "artGallery"
+                    },
+                    {
+                        "text": "No! I must endure!",
+                        "nextRoom": "room314"
+                    }
+                ]
+            },
+            "ucAlienThanks": {
+                "text": "The being accepts your offering and nods, as if in thanks. Then it takes your hand, and you feel yourself flying, flying away...",
+                "buttons": [
+                    {
+                        "text": "Up into the sky",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Down into the earth",
+                        "nextRoom": "ucDungeon"
+                    }
+                ]
+            },
+            "ucLadyK": {
+                "text": "She is there, Her skeletal crown glimmering in sourceless moonlight, Her silvery skin deliquescing into nightmare folds, Her breath perfectly synchronized, antiphase, with your own. After all these empty years of waiting, you finally have the chance to tell Her... how do you feel about Her?",
+                "buttons": [
+                    {
+                        "text": "You love her",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "You loathe her",
+                        "nextRoom": "room314"
+                    }
+                ]
+            },
+            "ucFun": {
+                "text": "What even *is* fun?",
+                "buttons": [
+                    {
+                        "text": "I don't know, I don't know, I DON'T KNOW",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Being confronted with the unknown",
+                        "nextRoom": "ucAliens"
+                    },
+                    {
+                        "text": "Something I can never have",
+                        "nextRoom": "ucTerrified"
+                    },
+                    {
+                        "text": "Dancing like no one's watching, living every day like it's your last",
+                        "nextRoom": "ucLose"
+                    }
+                ]
+            },
+            "ucJackson": {
+                "text": "Suddenly, everything just feels okay. Your neural tissues are flooded with GABA. Beyond the reach of your volition, a part of you tells yourself, \"You got this.\" This can only mean one thing: Jackson is here.",
+                "buttons": [
+                    {
+                        "text": "Give Jackson a high five",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Thank Jackson for his service",
+                        "nextRoom": "room314"
+                    },
+                    {
+                        "text": "Say nothing. Nod stoically.",
+                        "nextRoom": "artGallery"
+                    }
+                ]
+            },
+            "ucLose": {
+                "text": "Wrong choice, bucko. That's how you *lose* this game.",
+                "buttons": [
+                    {
+                        "text": "No, please, not again, I can't take it any—",
+                        "nextRoom": "artCloset"
+                    }
+                ]
+            }
+        }
+    }
+}
