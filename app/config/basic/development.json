@@ -1,0 +1,5 @@
+{
+	"debug": true,
+	"mapUnlockThreshold": 3,
+	"useLocalSessions": true
+}
