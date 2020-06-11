@@ -10,7 +10,7 @@ source venv/bin/activate
 cd app/
 source setup.sh
 flask create-db
-flask run-eventlet &
+sudo flask run-eventlet &
 
 cd client/
 bash run.sh &
