@@ -1,6 +1,6 @@
 {
  	"rooms": {
-		"entry": {
+		"vestibule": {
 			"name": "Foyer",
 			"type": "jitsi",
 			"description": "Welcome!",
@@ -29,7 +29,7 @@
 			"backgroundImage": "js/images/rooms/closet.jpg",
 			"description": "A quiet, cozy closet. Shhh.",
 			"directions": {
-				"east": "entry"
+				"east": "vestibule"
 			},
 			"map": {
 				"x": 15,
@@ -46,7 +46,7 @@
 			"type": "jitsi",
 			"backgroundImage": "js/images/rooms/kitchen.png",
 			"directions": {
-				"south": "entry",
+				"south": "vestibule",
 				"west": "bathroom",
 				"north": "yard",
 				"east": "gallery"
@@ -69,7 +69,7 @@
 			"name": "Game Room",
 			"type": "jitsi",
 			"directions": {
-				"west": "entry",
+				"west": "vestibule",
 				"north": "gallery"
 			},
 			"map": {
