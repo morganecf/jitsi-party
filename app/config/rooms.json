@@ -79,7 +79,7 @@
 				"height": 3,
 				"doors": {
 					"north": 25,
-					"west": 20,
+					"west": 20
 				}
 			},
 			"doorTint": "orange",
@@ -99,7 +99,7 @@
 				"width": 1,
 				"height": 1,
 				"doors": {
-					"east": 15,
+					"east": 15
 				}
 			},
 			"doorTint": "orange",
@@ -162,7 +162,7 @@
 				"width": 5,
 				"height": 5,
 				"doors": {
-					"south": 15,
+					"south": 15
 				}
 			},
 			"doorTint": "blue",
