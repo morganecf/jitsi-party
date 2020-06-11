@@ -78,7 +78,8 @@
 				"width": 6,
 				"height": 3,
 				"doors": {
-					"north": 25,
+					"north": 22,
+					"north": 26,
 					"west": 20
 				}
 			},
