@@ -53,4 +53,4 @@ def create_app(config_name):
 
 def run_eventlet(app):
     socketio.init_app(app, async_mode="eventlet")
-    socketio.run(app, host='0.0.0.0', port=os.getenv('FLASK_RUN_PORT'))
+    socketio.run(app, host='0.0.0.0', port=os.getenv('FLASK_RUN_PORT'), ssl_context=('/etc/letsencrypt/live/party.mcswiggen.me/fullchain.pem','/etc/letsencrypt/live/party.mcswiggen.me/privkey.pem'))
