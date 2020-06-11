@@ -141,7 +141,7 @@
 				"width": 4,
 				"height": 4,
 				"doors": {
-					"west": 16,
+					"west": 16
 				}
 			},
 			"doorTint": "blue",
