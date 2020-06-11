@@ -4,7 +4,7 @@
 			"name": "Foyer",
 			"type": "jitsi",
 			"description": "Welcome!",
-			"backgroundImage": "js/images/rooms/vestibule.jpg", // TODO
+			"backgroundImage": "js/images/rooms/vestibule.jpg",
 			"directions": {
 				"north": "kitchen",
 				"west": "closet",
@@ -44,7 +44,7 @@
 		"kitchen": {
 			"name": "Kitchen",
 			"type": "jitsi",
-			"backgroundImage": "js/images/rooms/livingroom.jpg", // TODO
+			"backgroundImage": "js/images/rooms/kitchen.png",
 			"directions": {
 				"south": "entry",
 				"west": "bathroom",
@@ -83,7 +83,7 @@
 				}
 			},
 			"doorTint": "orange",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
+			"backgroundImage": "js/images/rooms/livingroom.jpg"
 		},
 		"bathroom": {
 			"name": "Bathroom",
@@ -103,17 +103,16 @@
 				}
 			},
 			"doorTint": "orange",
-			"backgroundImage": "js/images/rooms/gameroom.jpg" // TODO
+			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		},
 		"gallery": {
 			"name": "Art Gallery",
-			"type": "jitsi", // TODO
-			"description": "A quiet bathroom.", // TODO
+			"type": "jitsi",
+			"description": "A quiet bathroom.",
 			"directions": {
 				"west": "kitchen",
 				"east": "lounge",
-				"south": "gameRoom",
-				// TODO: galleryrooms north
+				"south": "gameRoom"
 			},
 			"map": {
 				"x": 21,
@@ -123,21 +122,19 @@
 				"doors": {
 					"west": 15,
 					"east": 16,
-					"south": 22,
-					// TODO: galleryrooms north
+					"south": 22
 				}
 			},
 			"doorTint": "blue",
-			"backgroundImage": "js/images/rooms/gameroom.jpg" // TODO
+			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		},
 		"lounge": {
 			"name": "Lounge",
-			"type": "jitsi", // TODO
+			"type": "jitsi",
 			"description": "A quite back room to relax with peaceful music.",
 			"directions": {
 				"west": "gallery",
-				"south": "gameRoom",
-				// TODO: galleryrooms north
+				"south": "gameRoom"
 			},
 			"map": {
 				"x": 24,
@@ -146,12 +143,11 @@
 				"height": 4,
 				"doors": {
 					"west": 16,
-					"south": 26,
-					// TODO: galleryrooms north
+					"south": 26
 				}
 			},
-			"doorTint": "blue", // TODO
-			"backgroundImage": "js/images/rooms/gameroom.jpg" // TODO
+			"doorTint": "blue",
+			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		},
 		"yard": {
 			"name": "Backyard",
@@ -169,8 +165,8 @@
 					"south": 15,
 				}
 			},
-			"doorTint": "blue", // TODO
-			"backgroundImage": "js/images/rooms/gameroom.jpg" // TODO
+			"doorTint": "blue",
+			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		}
 	}
 }
