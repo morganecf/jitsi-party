@@ -6,7 +6,6 @@
 			"description": "Welcome!",
 			"backgroundImage": "js/images/rooms/vestibule.jpg",
 			"directions": {
-				"north": "kitchen",
 				"west": "closet",
 				"east": "gameRoom"
 			},
@@ -16,7 +15,6 @@
 				"width": 5,
 				"height": 3,
 				"doors": {
-					"north": 16,
 					"west": 20,
 					"east": 20
 				}
@@ -41,36 +39,11 @@
 				}
 			}
 		},
-		"kitchen": {
-			"name": "Kitchen",
-			"type": "jitsi",
-			"backgroundImage": "js/images/rooms/kitchen.png",
-			"directions": {
-				"south": "vestibule",
-				"west": "bathroom",
-				"north": "yard",
-				"east": "gallery"
-			},
-			"map": {
-				"x": 14,
-				"y": 14,
-				"width": 7,
-				"height": 5,
-				"doors": {
-					"north": 15,
-					"west": 15,
-					"east": 17,
-					"south": 16
-				}
-			},
-			"doorTint": "#FF5938"
-		},
 		"gameRoom": {
 			"name": "Game Room",
 			"type": "jitsi",
 			"directions": {
-				"west": "vestibule",
-				"north": "gallery"
+				"west": "vestibule"
 			},
 			"map": {
 				"x": 21,
@@ -78,93 +51,11 @@
 				"width": 6,
 				"height": 3,
 				"doors": {
-					"north": 22,
 					"west": 20
 				}
 			},
 			"doorTint": "orange",
 			"backgroundImage": "js/images/rooms/livingroom.jpg"
-		},
-		"bathroom": {
-			"name": "Bathroom",
-			"type": "jitsi",
-			"capacity": 1,
-			"description": "A quiet bathroom.",
-			"directions": {
-				"east": "kitchen"
-			},
-			"map": {
-				"x": 13,
-				"y": 15,
-				"width": 1,
-				"height": 1,
-				"doors": {
-					"east": 15
-				}
-			},
-			"doorTint": "orange",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
-		},
-		"gallery": {
-			"name": "Art Gallery",
-			"type": "jitsi",
-			"description": "A quiet bathroom.",
-			"directions": {
-				"west": "kitchen",
-				"east": "lounge",
-				"south": "gameRoom"
-			},
-			"map": {
-				"x": 21,
-				"y": 15,
-				"width": 4,
-				"height": 4,
-				"doors": {
-					"west": 17,
-					"east": 16,
-					"south": 22
-				}
-			},
-			"doorTint": "blue",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
-		},
-		"lounge": {
-			"name": "Lounge",
-			"type": "jitsi",
-			"description": "A quiet back room to relax with peaceful music.",
-			"directions": {
-				"west": "gallery"
-			},
-			"map": {
-				"x": 25,
-				"y": 15,
-				"width": 4,
-				"height": 4,
-				"doors": {
-					"west": 16
-				}
-			},
-			"doorTint": "blue",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
-		},
-		"yard": {
-			"name": "Backyard",
-			"type": "jitsi",
-			"description": "Enjoy backyard performances from your fellow partygoers -- or start your own!",
-			"directions": {
-				"south": "kitchen"
-			},
-			"map": {
-				"x": 15,
-				"y": 9,
-				"width": 5,
-				"height": 5,
-				"doors": {
-					"south": 15
-				}
-			},
-			"doorTint": "blue",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		}
 	}
 }
