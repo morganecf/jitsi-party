@@ -41,9 +41,12 @@
 		},
 		"gameRoom": {
 			"name": "Game Room",
-			"type": "jitsi",
+			"type": "iframe",
 			"directions": {
 				"west": "vestibule"
+			},
+			"iframeOptions": {
+				"src": "https://www.horsepaste.com/nutritional-london"
 			},
 			"map": {
 				"x": 21,
