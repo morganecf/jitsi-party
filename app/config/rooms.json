@@ -91,7 +91,7 @@
 			"capacity": 1,
 			"description": "A quiet bathroom.",
 			"directions": {
-				"east": "kitchen",
+				"east": "kitchen"
 			},
 			"map": {
 				"x": 13,
@@ -154,7 +154,7 @@
 			"type": "jitsi",
 			"description": "Enjoy backyard performances from your fellow partygoers -- or start your own!",
 			"directions": {
-				"south": "kitchen",
+				"south": "kitchen"
 			},
 			"map": {
 				"x": 15,
