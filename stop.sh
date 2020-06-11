@@ -1,6 +1,6 @@
 # Swap the landing page
 cd ~/jitsi-party/landing
-bash update-landing.sh down.html
+bash update-landing.sh down
 
 # Shut down flask
 pkill -x "flask"

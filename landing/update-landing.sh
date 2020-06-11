@@ -1,1 +1,2 @@
-sudo cp $1 /var/www/html/index.html
+sudo rm /var/www/html/*
+sudo cp -r $1 /var/www/html

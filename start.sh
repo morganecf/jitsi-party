@@ -16,4 +16,4 @@ cd client/
 bash run.sh &
 
 cd ~/jitsi-party/landing
-bash update-landing.sh running.html
+bash update-landing.sh up

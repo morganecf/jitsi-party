@@ -23,4 +23,4 @@ sudo apt-get install apache2
 
 # Set the landing page
 cd ~/jitsi-party/landing
-bash update-landing.sh down.html
+bash update-landing.sh down
