@@ -9,6 +9,9 @@ def get_json_dict(path):
     try:
         with open(path) as file:
             return json.load(file)
+    except ValueError as err:
+        print(err)
+        return dict()
     except:
         return dict()
 
