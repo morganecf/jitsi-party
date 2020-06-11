@@ -3,7 +3,7 @@ cd ~/jitsi-party/landing
 bash update-landing.sh down
 
 # Shut down flask
-pkill -x "flask"
+sudo pkill -x "flask"
 
 # Shut down `bash run.sh`
 pkill -x "bash"
