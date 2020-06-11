@@ -59,7 +59,7 @@
 				"doors": {
 					"north": 15,
 					"west": 15,
-					"east": 15,
+					"east": 17,
 					"south": 16
 				}
 			},
@@ -79,7 +79,6 @@
 				"height": 3,
 				"doors": {
 					"north": 22,
-					"north": 26,
 					"west": 20
 				}
 			},
@@ -118,10 +117,10 @@
 			"map": {
 				"x": 21,
 				"y": 15,
-				"width": 3,
+				"width": 4,
 				"height": 4,
 				"doors": {
-					"west": 15,
+					"west": 17,
 					"east": 16,
 					"south": 22
 				}
@@ -132,19 +131,17 @@
 		"lounge": {
 			"name": "Lounge",
 			"type": "jitsi",
-			"description": "A quite back room to relax with peaceful music.",
+			"description": "A quiet back room to relax with peaceful music.",
 			"directions": {
-				"west": "gallery",
-				"south": "gameRoom"
+				"west": "gallery"
 			},
 			"map": {
-				"x": 24,
+				"x": 25,
 				"y": 15,
-				"width": 3,
+				"width": 4,
 				"height": 4,
 				"doors": {
 					"west": 16,
-					"south": 26
 				}
 			},
 			"doorTint": "blue",
