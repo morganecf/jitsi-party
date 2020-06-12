@@ -15,7 +15,7 @@ const UPDATE_ROOM_AUDIO = 'UPDATE_ROOM_AUDIO'
 *   rooms: roomId->room definition mapping
 *   events: list of events
 *   users: roomId->userlist mapping, gets updated by websockets
-*   notifications: toast, audio, and modal-based notifications
+*   actions: list of pre-scheduled user events
 *   currentRoom: room, entered
 *   visited: map of which rooms user has visited
 *   isAudioMuted: whether or not the user currently has audio muted

@@ -75,9 +75,6 @@ export function execute(room, action) {
 
 export function schedule(room, action) {
     const timeout = computeTimeout(action)
-    if (action.triggerNoise) {
-        console.log('schedule:', action, timeout)
-    }
     if (_.isNumber(timeout)) {
         return setTimeout(() => execute(room, action), timeout)
     }

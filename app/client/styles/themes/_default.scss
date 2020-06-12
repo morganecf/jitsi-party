@@ -13,6 +13,15 @@ body {
 .ReactModal__Content {
 	border: none !important;
 	background: $background-color !important;
+	position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
 }
 .ReactModal__Overlay {
 	background: rgba(255, 255, 255, 0.25) !important;

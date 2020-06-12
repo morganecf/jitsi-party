@@ -1,0 +1,49 @@
+{
+    "actions": [
+        {
+            "type": "NOTIFICATION",
+            "time": "2020-06-10T20:44:00-04:00",
+            "notification": {
+                "src": "js/audio/random-announcement.mp3"
+            }
+        },
+        {
+            "type": "NOTIFICATION",
+            "secondsAfterJoin": 3,
+            "notification": {
+                "text": "Hello there! Welcome to the party.",
+                "image": "js/images/puck/book-orange.png"
+            }
+        },
+        {
+            "type": "OPEN_MODAL",
+            "time": "2020-06-10T23:59:00-04:00",
+            "triggerNoise": 350,
+            "component": "MidnightPortal"
+        },
+        {
+            "type": "CHANGE_THEME",
+            "time": "2020-06-10T23:59:00-04:00",
+            "triggerAfterTime": true,
+            "className": "midnight"
+        },
+        {
+            "type": "NOTIFICATION",
+            "secondsAfterJoin": 7,
+            "notification": {
+                "text": "Warning: you will shortly be teleported to the kitchen",
+                "image": "js/images/puck/book-blue.png"
+            }
+        },
+        {
+            "type": "CHANGE_ROOM",
+            "secondsAfterJoin": 10,
+            "nextRoom": "kitchen",
+            "enter": true
+        },
+        {
+            "type": "SHUFFLE_ROOM",
+            "secondsAfterJoin": 20
+        }
+    ]
+}

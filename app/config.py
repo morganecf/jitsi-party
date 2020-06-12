@@ -9,7 +9,7 @@ override_files = [
     'config.json',
     'rooms.json',
     'events.json',
-    'notifications.json'
+    'actions.json'
 ]
 
 def get_json_dict(path):
@@ -53,11 +53,11 @@ class Config:
 
     @property
     def EVENTS(self):
-        return self.merged_cfg.get('events', {})
+        return self.merged_cfg.get('events', [])
 
     @property
-    def NOTIFICATIONS(self):
-        return self.merged_cfg.get('notifications', {})
+    def ACTIONS(self):
+        return self.merged_cfg.get('actions', [])
 
 
 class DevelopmentConfig(Config):

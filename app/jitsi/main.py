@@ -35,20 +35,19 @@ def get_config():
         current_app.config['EVENTS'],
         key=lambda event: datetime.fromisoformat(event['start'])
     )
-    # Merge any existing event notifications into notifications
-    notifications = current_app.config['NOTIFICATIONS']
-    notifications['toast'] = notifications.get('toast', [])
-    notifications['audio'] = notifications.get('audio', [])
-    notifications['modal'] = notifications.get('modal', [])
+    # Merge any existing event notifications into actions
+    actions = current_app.config['ACTIONS']
     for event in events:
         if event.get('notifications'):
-            notifications['toast'].extend(event['notifications'])
-        elif event.get('audioNotifications'):
-            notifications['audio'].extend(event['audioNotifications'])
+            actions.extend(map(lambda notification: {
+                'type': 'NOTIFICATION',
+                'time': notification['time'],
+                'notification': notification
+            }, event['notifications']))
     config = {
         'rooms': rooms,
         'events': events,
-        'notifications': notifications
+        'actions': actions
     }
     return jsonify(config)
 
