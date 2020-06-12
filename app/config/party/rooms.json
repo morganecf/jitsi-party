@@ -147,7 +147,7 @@
 					"west": 16
 				}
 			},
-			"doorTint": "blue",
+			"doorTint": "green",
 			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		},
 		"mcsw-yard": {
@@ -166,7 +166,7 @@
 					"south": 15
 				}
 			},
-			"doorTint": "blue",
+			"doorTint": "red",
 			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		}
 	}
