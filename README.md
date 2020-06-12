@@ -99,29 +99,3 @@ It seems like the Jitsi Meet library isn't intended to be consumed the way you'd
 // To use inside a React component
 const JitsiAPI = window.JitsiMeetExternalAPI
 ```
-
-### Documentation for Kacy
-1. Open power shell: `cmd` in windows file explorer and open
-2. Navitate to jitsi directory in Desktop: `cd C:\Users\KacyCrider\Desktop\jitsi` 
-3. Activate the virtual environment: `venv\Scripts\activate.bat`
-
-To update code (make sure steps 1-3 have been run):
-```
-# from the Desktop\jitsi folder
-cd jitsi-party
-git pull
-```
-
-To update Python depencencies (ask Morg or someone if you need to do this and make sure steps 1-3 have been run)
-```
-# from the Desktop\jitsi folder
-cd jitsi-party
-pip install -r requirements.txt
-```
-
-To update Javascript depencencies (ask Morg or someone if you need to do this and make sure steps 1-3 have been run)
-```
-# from the Desktop\jitsi folder
-cd jitsi-party\app\client
-npm install
-```

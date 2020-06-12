@@ -1,0 +1,59 @@
+.events-view {
+    padding: 30px;
+
+    .event-list {
+        .event-item {
+            display: flex;
+            justify-content: space-between;
+            background: #303436;
+            margin: 10px 0;
+            border-radius: 5px;
+    
+            .event-info {
+                padding: 10px;
+                width: 70%;
+    
+                .event-description {
+                    font-size: smaller;
+                    line-height: 1;
+                    opacity: 0.85;
+                }
+                .event-coordinates {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: medium;
+                    margin-top: 10px;
+    
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+    
+            .event-image {
+                max-width: 100px;
+    
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .events-now .event-item .event-time {
+        animation: flash linear .8s infinite;       
+    }
+}
+
+.ReactModal__Content.event-modal {
+    position: absolute;
+    width: 50%;
+    max-height: 85%;
+    left: 25%;
+    top: 40px;
+    border-radius: 5px;
+    outline: none;
+    overflow-y: auto;
+}

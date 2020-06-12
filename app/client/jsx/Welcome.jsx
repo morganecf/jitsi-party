@@ -11,7 +11,7 @@ import Config from './Config.jsx'
 class Welcome extends Component {
     constructor(props) {
         super(props)
-        
+
         this.httpApi = new HttpApi()
 
         this.useLocalSessions = Config.useLocalSessions
@@ -41,15 +41,25 @@ class Welcome extends Component {
         }
     }
 
-    async fetchRooms() {
-        const { success, rooms } = await this.httpApi.getRooms()
+    componentDidMount() {
+        this.fetchConfig()
+    }
+
+    async fetchConfig() {
+        const { success, config } = await this.httpApi.getConfig()
         if (success) {
-            this.props.addRooms(rooms)
-            this.loadAssets(rooms)
+            this.props.addConfig(config)
+            this.loadAssets(config)
         }
     }
 
-    loadAssets(rooms) {
+    loadAssets({ rooms, events }) {
+        _.forEach(events, event => {
+            if (event.image) {
+                const img = new Image()
+                img.src = event.image
+            }
+        })
         _.forEach(rooms, room => {
             if (room.backgroundImage) {
                 const img = new Image()
@@ -60,10 +70,6 @@ class Welcome extends Component {
                 img.src = room.art.src
             }
         })
-    }
-
-    componentDidMount() {
-        this.fetchRooms()
     }
 
     handleUsernameChange(event) {
@@ -103,23 +109,14 @@ class Welcome extends Component {
             return <Redirect to={this.state.redirect}/>
         }
 
-        let textEntry = {
-          padding: '6px 10px',
-          border: '2px solid #D6D3CD',
-          backgroundColor: '#D6D3CD',
-          borderRadius: '7px',
-          color: '#1B1E1F',
-          outline: 'none',
-          boxShadow: 'none',
-          fontSize: '20px'
-        }
-
-        let nameOpacity = 'form-fade'
         let avatarOpacity = 'form-fade'
+        let nameOpacity = 'form-fade'
         let partyOpacity = 'form-fade-party'
-        if (this.state.username === null) { nameOpacity = 'form' }
-        if (this.state.username) { avatarOpacity = 'form' }
-        if (this.state.username && this.state.avatar) { partyOpacity = 'form-party' }
+        if (this.state.username) {
+          avatarOpacity = 'form'
+          if (this.state.username === null) { nameOpacity = 'form' }
+          if (this.state.avatar) { partyOpacity = 'form-party' }
+        }
 
         const config = Config.welcomePage
         const splash = config.backgroundImagePath
@@ -135,9 +132,8 @@ class Welcome extends Component {
                 <div className="header" dangerouslySetInnerHTML={{ __html: config.headerHtml }} />
                 {splash}
                 <input
-                    style={textEntry}
                     autoComplete="off"
-                    className={nameOpacity}
+                    className={`text-entry ${nameOpacity}`}
                     type="text"
                     placeholder="Name"
                     name="name"
@@ -147,7 +143,7 @@ class Welcome extends Component {
                 {avatarSelect}
                 <input
                     id='button'
-                    className={partyOpacity}
+                    className={partyOpacity + ' opaque'}
                     type="button"
                     onClick={this.handleReady.bind(this)}
                     value={config.enterSpaceButtonText}
@@ -162,7 +158,7 @@ class Welcome extends Component {
 export default connect(
     state => state,
     {
-        addRooms: reducers.addRoomsActionCreator,
+        addConfig: reducers.addConfigActionCreator,
         updateUser: reducers.updateUserActionCreator,
         updateCurrentRoom: reducers.updateCurrentRoomActionCreator
      })(Welcome)

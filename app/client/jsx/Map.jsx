@@ -112,6 +112,7 @@ class Map extends Component {
         const isVisited = true;
         // const isVisited = this.props.visited && this.props.visited[roomId]
         const currentRoomUsers = this.props.users[roomId] || []
+        const eventsForRoom = this.props.events.filter(event => event.room === roomId)
 
         return (
             <div className="map">
@@ -124,7 +125,12 @@ class Map extends Component {
                 </div>
                 <div className="map-area">
                     <div id="d3-map"></div>
-                    <MapRoomInfo room={room} isVisited={isVisited} users={currentRoomUsers}></MapRoomInfo>
+                    <MapRoomInfo
+                        room={room}
+                        events={eventsForRoom}
+                        users={currentRoomUsers}
+                        isVisited={isVisited}>
+                    </MapRoomInfo>
                 </div>
             </div>
         )

@@ -50,18 +50,18 @@ export class HttpApi {
         }
     }
 
-    async getRooms() {
-        /* Fetches room definition, including adventure rooms */
+    async getConfig() {
+        /* Fetches rooms, adventures, and events */
         try {
-            const request = `${url}/rooms`
+            const request = `${url}/config`
             const response = await axios.get(request)
-            const rooms = response.data
+            const { rooms, events } = response.data
             Object.values(rooms).forEach(room => {
                 if (room.type === 'adventure') {
                     createAdventureActions(room, rooms)
                 }
             })
-            return { success: true, rooms }
+            return { success: true, config: { rooms, events } }
         } catch (err) {
             console.log('err:', err)
             return { success: false }

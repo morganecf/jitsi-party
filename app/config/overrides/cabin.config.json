@@ -65,7 +65,7 @@
 			},
 			"additionalStats": [
 				{
-					"text": "🛁 {0} taking bathroom break",
+					"text": "🛁 {count} taking bathroom break",
 					"match": ["bathroom"]
 				}
 			]
