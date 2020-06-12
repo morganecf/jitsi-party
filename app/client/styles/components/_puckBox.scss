@@ -16,7 +16,7 @@
 .box:hover {
 	width: 52px;
 	height: 70px;
-	border: 1px solid #D6D3CD;
+	border: 1px solid $text-color;
 	background-color: rgba(27, 30, 31, .6);
 	transition: border .25s;
 }

@@ -119,13 +119,9 @@ class Welcome extends Component {
         }
 
         const config = Config.welcomePage
-        const bgStyle = {
-            backgroundColor: config.backgroundColor
-        }
-
         const splash = config.backgroundImagePath
             ? <img className="splash" src={config.backgroundImagePath}/>
-            : <div className="splash" style={bgStyle}></div>
+            : null
 
         const avatarSelect = this.avatarSelectionEnabled
             ? <PuckSelect opacity={avatarOpacity} handleSelect={this.handleAvatarSelect.bind(this)} />
@@ -147,7 +143,7 @@ class Welcome extends Component {
                 {avatarSelect}
                 <input
                     id='button'
-                    className={partyOpacity}
+                    className={partyOpacity + ' opaque'}
                     type="button"
                     onClick={this.handleReady.bind(this)}
                     value={config.enterSpaceButtonText}

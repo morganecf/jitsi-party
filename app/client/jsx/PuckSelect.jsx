@@ -82,14 +82,14 @@ class PuckSelect extends Component {
       }
       return (
         <div className='outer'>
-          <input className={fade} type='button' onClick={this.handleButtonClick} value={Config.welcomePage.avatarSelectionText} />
+          <input className={fade + ' opaque'} type='button' onClick={this.handleButtonClick} value={Config.welcomePage.avatarSelectionText} />
           {allAvatarDesigns}
         </div>
       )
     } else {
       return (
         <div className='outer'>
-          <input className='fade' type='button' onClick={this.handleButtonClickReset} value={Config.welcomePage.avatarSelectionText} />
+          <input className='fade opaque' type='button' onClick={this.handleButtonClickReset} value={Config.welcomePage.avatarSelectionText} />
           <div className='spacer' />
           <div><img className='image' src={avatars[this.state.avatarDesign][this.state.avatarColorway]} /></div>
         </div>
