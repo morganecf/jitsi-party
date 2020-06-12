@@ -1,0 +1,8 @@
+.ReactModal__Content {
+	border: none !important;
+	background: $background-color !important;
+}
+.ReactModal__Overlay {
+	z-index: 10;
+	background: $modal-overlay-color !important;
+}

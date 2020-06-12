@@ -17,7 +17,7 @@
 
     input[type="text"] {
         padding: 6px 10px;
-        border: 2px solid #D6D3CD;
+        border: 2px solid $opaque-button-background-color;
         border-radius: 7px;
         background: white;
         outline: none;
@@ -39,14 +39,9 @@
 }
 h1 {
     margin: -24px 0px 18px 0px;
-    -webkit-text-stroke: 1.25px #1B1E1F;
+    -webkit-text-stroke: 1.25px $opaque-button-border-color;
     font-weight: 800;
     font-size: 2.25em;
-}
-
-input[type="button"] {
-    background-color: #D6D3CD;
-    color: #1B1E1F;
 }
 
 .text-entry {
@@ -98,7 +93,7 @@ input[type="button"] {
 .form-fade:disabled,
 #button:disabled,
 #button:hover {
-    background-color: #D6D3CD !important;
-    border: 2px solid #D6D3CD !important;
-    color: #1B1E1F !important;
+    background-color: $disabled-background-color !important;
+    border: 2px solid $disabled-background-color !important;
+    color: $disabled-text-color !important;
 }

@@ -12,7 +12,7 @@
 
 	.room-header {
 		position: fixed;
-		z-index: 1000;
+		z-index: 1;
 		width: 100%;
 		text-shadow: 0 0 4px $background-color;
 		padding-left: 1em;
@@ -24,7 +24,7 @@
 		justify-content: center;
 		flex: 1;
 		padding: .5em;
-		background-color: lighten($background-color, 10%);
+		background-color: $room-content-background-color;
 	}
 
 	&.entered .room-content {
