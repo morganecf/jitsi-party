@@ -1,14 +1,14 @@
 {
  	"rooms": {
-		"vestibule": {
+		"mcsw-vestibule": {
 			"name": "Foyer",
 			"type": "jitsi",
 			"description": "Welcome!",
-			"backgroundImage": "js/images/rooms/vestibule.jpg",
+			"backgroundImage": "js/images/rooms/foyer.jpg",
 			"directions": {
-				"north": "kitchen",
-				"west": "closet",
-				"east": "gameRoom"
+				"north": "mcsw-kitchen",
+				"west": "mcsw-closet",
+				"east": "mcsw-gameRoom"
 			},
 			"map": {
 				"x": 16,
@@ -22,14 +22,14 @@
 				}
 			}
 		},
-		"closet": {
+		"mcsw-closet": {
 			"name": "Closet",
 			"type": "jitsi",
 			"capacity": 2,
 			"backgroundImage": "js/images/rooms/closet.jpg",
 			"description": "A quiet, cozy closet. Shhh.",
 			"directions": {
-				"east": "vestibule"
+				"east": "mcsw-vestibule"
 			},
 			"map": {
 				"x": 15,
@@ -41,15 +41,15 @@
 				}
 			}
 		},
-		"kitchen": {
+		"mcsw-kitchen": {
 			"name": "Kitchen",
 			"type": "jitsi",
 			"backgroundImage": "js/images/rooms/kitchen.png",
 			"directions": {
-				"south": "vestibule",
-				"west": "bathroom",
-				"north": "yard",
-				"east": "gallery"
+				"south": "mcsw-vestibule",
+				"west": "mcsw-bathroom",
+				"north": "mcsw-yard",
+				"east": "mcsw-gallery"
 			},
 			"map": {
 				"x": 14,
@@ -65,12 +65,12 @@
 			},
 			"doorTint": "#FF5938"
 		},
-		"gameRoom": {
+		"mcsw-gameRoom": {
 			"name": "Game Room",
 			"type": "jitsi",
 			"directions": {
-				"west": "vestibule",
-				"north": "gallery"
+				"west": "mcsw-vestibule",
+				"north": "mcsw-gallery"
 			},
 			"map": {
 				"x": 21,
@@ -85,13 +85,13 @@
 			"doorTint": "orange",
 			"backgroundImage": "js/images/rooms/livingroom.jpg"
 		},
-		"bathroom": {
+		"mcsw-bathroom": {
 			"name": "Bathroom",
 			"type": "jitsi",
 			"capacity": 1,
 			"description": "A quiet bathroom.",
 			"directions": {
-				"east": "kitchen"
+				"east": "mcsw-kitchen"
 			},
 			"map": {
 				"x": 13,
@@ -103,16 +103,16 @@
 				}
 			},
 			"doorTint": "orange",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
+			"backgroundImage": "js/images/rooms/bathroom.jpg"
 		},
-		"gallery": {
+		"mcsw-gallery": {
 			"name": "Art Gallery",
 			"type": "jitsi",
 			"description": "A quiet bathroom.",
 			"directions": {
-				"west": "kitchen",
-				"east": "lounge",
-				"south": "gameRoom"
+				"west": "mcsw-kitchen",
+				"east": "mcsw-lounge",
+				"south": "mcsw-gameRoom"
 			},
 			"map": {
 				"x": 21,
@@ -128,12 +128,15 @@
 			"doorTint": "blue",
 			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		},
-		"lounge": {
+		"mcsw-lounge": {
 			"name": "Lounge",
-			"type": "jitsi",
+			"type": "iframe",
 			"description": "A quiet back room to relax with peaceful music.",
 			"directions": {
-				"west": "gallery"
+				"west": "mcsw-gallery"
+			},
+			"iframeOptions": {
+				"src": "https://www.youtube.com/watch?v=y7e-GC6oGhg"
 			},
 			"map": {
 				"x": 25,
@@ -147,12 +150,12 @@
 			"doorTint": "blue",
 			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		},
-		"yard": {
+		"mcsw-yard": {
 			"name": "Backyard",
 			"type": "jitsi",
 			"description": "Enjoy backyard performances from your fellow partygoers -- or start your own!",
 			"directions": {
-				"south": "kitchen"
+				"south": "mcsw-kitchen"
 			},
 			"map": {
 				"x": 15,
