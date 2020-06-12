@@ -126,7 +126,7 @@
 				}
 			},
 			"doorTint": "blue",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
+			"backgroundImage": "js/images/rooms/gallery.jpg"
 		},
 		"mcsw-lounge": {
 			"name": "Lounge",
@@ -148,7 +148,7 @@
 				}
 			},
 			"doorTint": "green",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
+			"backgroundImage": "js/images/rooms/lounge.jpg"
 		},
 		"mcsw-yard": {
 			"name": "Backyard",
@@ -167,7 +167,7 @@
 				}
 			},
 			"doorTint": "red",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
+			"backgroundImage": "js/images/rooms/yard.jpg"
 		}
 	}
 }
