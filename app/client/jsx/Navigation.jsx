@@ -57,13 +57,16 @@ class Navigation extends Component {
         const room = this.props.currentRoom.room
         const audio = this.props.rooms[room].audio
         const events = this.props.events
+        
+        const handleClickMap = () => this.props.handleOpenModal('map')
+        const handleClickEvents = () => this.props.handleOpenModal('events')
 
         return (
             <div className="navigation-container">
                 <div className="column settings-container">
                     <div className="map-button-container">
                         {this.props.showMapButton &&
-                            <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
+                            <button className={mapButtonClass} disabled={false} onClick={handleClickMap}>
                                 <FontAwesomeIcon icon={faMap}/>
                             </button>
                         }
@@ -83,7 +86,7 @@ class Navigation extends Component {
                     </div>
                     <div className="events-button-container">
                         {events && events.length > 0 &&
-                            <button className="events-button" onClick={this.props.handleOpenEvents.bind(this)}>
+                            <button className="events-button" onClick={handleClickEvents}>
                                 <FontAwesomeIcon icon={faCalendar}/>
                             </button>
                         }

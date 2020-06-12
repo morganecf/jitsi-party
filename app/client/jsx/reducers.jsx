@@ -24,9 +24,9 @@ const UPDATE_ROOM_AUDIO = 'UPDATE_ROOM_AUDIO'
 const initialState = {
     user: {},
     rooms: {},
-    events: {},
     users: {},
-    notifications: {},
+    events: [],
+    actions: [],
     currentRoom: {},
     visited: {},
     isAudioMuted: false,
@@ -34,8 +34,8 @@ const initialState = {
 }
 
 function addConfigAction(state, config) {
-    const { rooms, events, notifications } = config.config
-    return Object.assign({}, state, { rooms, events, notifications })
+    const { rooms, events, actions } = config.config
+    return Object.assign({}, state, { rooms, events, actions })
 }
 
 function updateUsersAction(state, users) {

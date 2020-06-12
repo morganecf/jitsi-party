@@ -1,6 +1,6 @@
 import React from 'react'
 import UserList from './UserList.jsx'
-import { formatTime } from './utils.js'
+import { formatEventFromNow } from './utils.js'
 
 export default props => {
     if (!props.room) {
@@ -50,7 +50,7 @@ export default props => {
                 <ul>
                     {props.events.map((event, i) => (
                         <li key={`announcement-${i}`}>
-                            {`${event.name} @ ${formatTime(event.start)}`}
+                            {formatEventFromNow(event)}
                         </li>
                     ))}
                 </ul>

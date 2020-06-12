@@ -6,25 +6,20 @@ import React, {
     useEffect
 } from 'react'
 import { createPortal } from 'react-dom'
-import Modal from 'react-modal';
-import moment from 'moment'
 import AudioPlayer from './AudioPlayer.jsx';
-import CustomComponents from './CustomComponents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
-const TRIGGER_DELAY = 10000
+
 const DISAPPEAR_TIMEOUT = 8000
 
 
 /*
 * Global context that keeps track of notifications and exposes functions to append
-* a notification to the DOM or schedule one for later. These are the initial values
-* of the context state.
+* a notification to the DOM. These are the initial values of the context state.
 */
 export const NotificationContext = createContext({
-    add: () => {},
-    schedule: () => {}
+    add: () => {}
 })
 
 
@@ -32,8 +27,8 @@ export const NotificationContext = createContext({
 * Custom hook allowing any functional component to use the notification context API
 */
 export function useNotifications() {
-    const { add, schedule } = useContext(NotificationContext)
-    return { add, schedule }
+    const { add } = useContext(NotificationContext)
+    return { add }
 }
 
 
@@ -108,62 +103,26 @@ function Notifications({ dismiss, notifications }) {
 export function NotificationProvider({ children }) {
     const [ notifications, setNotifications ] = useState([])
     const [ idCounter, setIdCounter ] = useState(0)
-    const [ modalComponent, setModalComponent ] = useState(null)
 
     const add = notification => {
-        if (notification.component) {
-            setModalComponent(notification.component)
-        } else {
-            setIdCounter(idCounter + 1)
-            setNotifications([...notifications, { id: idCounter, notification }])
-        }
+        setIdCounter(idCounter + 1)
+        setNotifications([...notifications, { id: idCounter, notification }])
     }
 
-    const schedule = notification => {
-        const notificationTime = moment(notification.time).unix()
-        const now = moment(moment.now()).unix()
-        let timeout = (notificationTime - now) * 1000
-        // Will trigger immediately if notification specifies triggerAfterTime=true
-        // and it's later than when the notification is supposed to trigger
-        if (timeout < 0) {
-            if (notification.triggerAfterTime) {
-                timeout = TRIGGER_DELAY
-            } else {
-                return
-            }
-        }
-        return setTimeout(() => add(notification), timeout)
-    }
-
-    const dismissNotification = id => (
+    const dismiss = id => (
         setNotifications(notifications.filter(notif => notif.id !== id))
     )
 
-    const dismissModal = () => setModalComponent(null)
-
     // New context values. These are memoized so that the provider value only changes if
     // arguments change, preventing superfluous renders.
-    const context = useMemo(() => ({ add, schedule }), [notifications, modalComponent])
-
-    const getModalComponent = () => {
-        if (modalComponent) {
-            const Component = CustomComponents[modalComponent]
-            return <Component handleDismiss={dismissModal} />
-        }
-    }
+    const context = useMemo(() => ({ add }), [notifications])
 
     return (
         <NotificationContext.Provider value={context}>
             <Notifications
-                dismiss={dismissNotification}
+                dismiss={dismiss}
                 notifications={notifications}>
             </Notifications>
-            <Modal
-                isOpen={!!modalComponent}
-                onRequestClose={dismissModal}
-                className="notification-modal">
-                    {getModalComponent()}
-            </Modal>
             {children}
         </NotificationContext.Provider>
     )

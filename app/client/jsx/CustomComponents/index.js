@@ -1,5 +1,5 @@
-import PortalTest from './PortalTest.jsx'
+import MidnightPortal from './MidnightPortal.jsx'
 
 export default {
-    PortalTest
+    MidnightPortal
 }

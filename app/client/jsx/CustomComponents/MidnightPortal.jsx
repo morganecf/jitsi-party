@@ -1,14 +1,27 @@
 import React, { useState } from 'react'
+import { execute } from '../actions.js'
 
-export default ({ handleDismiss }) => {
+export default ({ room }) => {
     const [ loading, setLoading ] = useState(false)
 
     const handleEnter = () => {
         setLoading(true)
         setTimeout(() => {
-            document.body.className += ' midnight'
+            execute(room, {
+                type: 'CHANGE_THEME',
+                className: 'midnight'
+            })
+            execute(room, {
+                type: 'CHANGE_ROOM',
+                nextRoom: 'livingRoom',
+                entered: true
+            })
             handleDismiss()
         }, 3000)
+    }
+
+    const handleDismiss = () => {
+        room.handleModalChange(null)
     }
 
     const style = {
@@ -31,8 +44,8 @@ export default ({ handleDismiss }) => {
             return <div>Going through the portal...</div>
         }
         return (
-            <div className="midight-portal-inner" style={innerStyle}>
-                ENTER THE PORTAL!
+            <div className="midnight-portal-inner" style={innerStyle}>
+                This is a portal. Do you wish to enter it?
                 <button onClick={handleEnter}>Yes</button>
                 <button onClick={handleDismiss}>No</button>
             </div>

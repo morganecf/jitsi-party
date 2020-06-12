@@ -4,17 +4,17 @@ import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
 import { Beforeunload } from 'react-beforeunload';
 import Modal from 'react-modal';
+import ModalFactory from './ModalFactory.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
-import Map from './Map.jsx'
-import EventList from './EventList.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
 import Config from './Config.jsx'
+import { schedule } from './actions.js'
 import { NotificationContext } from './Notifications.jsx'
 
 class Room extends Component {
@@ -151,20 +151,8 @@ class Room extends Component {
         this.socketApi.leaveRoom(this.props.user, this.state.room)
     }
 
-    handleOpenMap() {
-        this.setState({ showMap: true })
-    }
-
-    handleCloseMap() {
-        this.setState({ showMap: false })
-    }
-
-    handleOpenEvents() {
-        this.setState({ showEvents: true })
-    }
-
-    handleCloseEvents() {
-        this.setState({ showEvents: false })
+    handleModalChange(modal) {
+        this.setState({ modal })
     }
 
     computeMapState(room) {
@@ -183,27 +171,21 @@ class Room extends Component {
         }
     }
 
-    scheduleNotifications() {
-        if (this.scheduledNotifications) {
+    scheduleActions() {
+        if (this.actionsAreScheduled) {
             return
         }
-        if (!_.isEmpty(this.props.notifications)) {
-            [
-                ...this.props.notifications.toast,
-                ...this.props.notifications.audio,
-                ...this.props.notifications.modal
-            ].forEach(notification => this.context.schedule(notification))
-        }
-        this.scheduledNotifications = true
+        this.props.actions.forEach(action => schedule(this, action))
+        this.actionsAreScheduled = true
     }
 
     render() {
         if (Object.keys(this.props.rooms).length === 0) {
             // room config not loaded yet
             return null
+        } else {
+            this.scheduleActions()
         }
-
-        this.scheduleNotifications()
 
         this.useLocalSessions && LocalStorage.touch("USER") // keep session alive
 
@@ -237,20 +219,14 @@ class Room extends Component {
                     onClick={this.onSwitchRoom.bind(this)}
                     showMapButton={mapState.mapVisible}
                     showMapTooltip={mapState.showMapTooltip}
-                    handleOpenMap={this.handleOpenMap.bind(this)}
-                    handleOpenEvents={this.handleOpenEvents.bind(this)}></Navigation>
+                    handleOpenModal={this.handleModalChange.bind(this)}>
+                </Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
                 <Modal
-                    isOpen={this.state.showMap}
-                    onAfterOpen={this.handleOpenMap.bind(this)}
-                    onRequestClose={this.handleCloseMap.bind(this)}>
-                        <Map onRoomClick={this.onSwitchRoom.bind(this)} handleCloseMap={this.handleCloseMap.bind(this)}></Map>
-                </Modal>
-                <Modal
-                    isOpen={this.state.showEvents}
-                    onRequestClose={this.handleCloseEvents.bind(this)}
-                    className="event-modal">
-                        <EventList rooms={this.props.rooms} events={this.props.events}></EventList>
+                    isOpen={!!this.state.modal}
+                    onRequestClose={() => this.handleModalChange(null)}
+                    className={`${this.state.modal}-modal`}>
+                        <ModalFactory room={this} modal={this.state.modal} />
                 </Modal>
             </div>
         )

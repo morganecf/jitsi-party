@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-function pickRandom(arr) {
+export function pickRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
 }
 
@@ -75,4 +75,17 @@ export function formatDate(date) {
 
 export function formatTime(date) {
     return moment(date).format('h:mm A')
+}
+
+export function formatEventFromNow(event) {
+    const start = moment(event.start)
+    const end = moment(event.end)
+    const now = moment(moment.now())
+    if (now > end) {
+        return `${event.name} ended ${end.fromNow()}`
+    }
+    if (now > start) {
+        return `${event.name} started ${start.fromNow()}`
+    }
+    return `${event.name} is starting ${start.fromNow()}`
 }

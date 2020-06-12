@@ -55,13 +55,13 @@ export class HttpApi {
         try {
             const request = `${url}/config`
             const response = await axios.get(request)
-            const { rooms, events, notifications } = response.data
+            const { rooms, events, actions } = response.data
             Object.values(rooms).forEach(room => {
                 if (room.type === 'adventure') {
                     createAdventureActions(room, rooms)
                 }
             })
-            return { success: true, config: { rooms, events, notifications } }
+            return { success: true, config: { rooms, events, actions } }
         } catch (err) {
             console.log('err:', err)
             return { success: false }
