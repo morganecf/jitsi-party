@@ -139,7 +139,7 @@
 				"west": "mcsw-gallery"
 			},
 			"iframeOptions": {
-				"src": "https://www.youtube.com/watch?v=y7e-GC6oGhg"
+				"src": "https://www.youtube.com/embed/y7e-GC6oGhg?controls=0"
 			},
 			"map": {
 				"x": 25,
