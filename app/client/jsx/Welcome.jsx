@@ -99,7 +99,7 @@ class Welcome extends Component {
         this.useLocalSessions && LocalStorage.set("USER", user)
         this.props.updateUser(user)
         this.props.updateCurrentRoom({
-            room: 'vestibule',
+            room: 'mcsw-vestibule',
             entered: false
         })
     }

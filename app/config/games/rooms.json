@@ -1,13 +1,13 @@
 {
  	"rooms": {
-		"vestibule": {
+		"mcsw-vestibule": {
 			"name": "Foyer",
 			"type": "jitsi",
 			"description": "Welcome!",
 			"backgroundImage": "js/images/rooms/vestibule.jpg",
 			"directions": {
-				"west": "closet",
-				"east": "gameRoom"
+				"west": "mcsw-closet",
+				"east": "mcsw-gameRoom"
 			},
 			"map": {
 				"x": 16,
@@ -20,14 +20,14 @@
 				}
 			}
 		},
-		"closet": {
+		"mcsw-closet": {
 			"name": "Closet",
 			"type": "jitsi",
 			"capacity": 2,
 			"backgroundImage": "js/images/rooms/closet.jpg",
 			"description": "A quiet, cozy closet. Shhh.",
 			"directions": {
-				"east": "vestibule"
+				"east": "mcsw-vestibule"
 			},
 			"map": {
 				"x": 15,
@@ -39,11 +39,11 @@
 				}
 			}
 		},
-		"gameRoom": {
+		"mcsw-gameRoom": {
 			"name": "Game Room",
 			"type": "iframe",
 			"directions": {
-				"west": "vestibule"
+				"west": "mcsw-vestibule"
 			},
 			"iframeOptions": {
 				"src": "https://www.horsepaste.com/nutritional-london"
