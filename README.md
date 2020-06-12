@@ -39,7 +39,7 @@ cd client/
 bash run.sh
 ```
 
-The app should now be running on localhost:5000.
+The app should now be running on localhost:3000.
 
 ### Configuration
 

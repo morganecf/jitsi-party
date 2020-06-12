@@ -5,7 +5,6 @@
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
 		"backgroundImagePath": "./js/images/cabinfeverhighres.png",
-		"backgroundColor": "black",
 		"enterSpaceButtonText": "Party!",
 		"avatarSelectionText": "Pick your puck",
 		"headerHtml": "<br/><p class='serif'>You've met with a terrible fate, haven't you?</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>"

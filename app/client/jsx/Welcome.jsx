@@ -122,13 +122,9 @@ class Welcome extends Component {
         if (this.state.username && this.state.avatar) { partyOpacity = 'form-party' }
 
         const config = Config.welcomePage
-        const bgStyle = {
-            backgroundColor: config.backgroundColor
-        }
-
         const splash = config.backgroundImagePath
             ? <img className="splash" src={config.backgroundImagePath}/>
-            : <div className="splash" style={bgStyle}></div>
+            : null
 
         const avatarSelect = this.avatarSelectionEnabled
             ? <PuckSelect opacity={avatarOpacity} handleSelect={this.handleAvatarSelect.bind(this)} />
