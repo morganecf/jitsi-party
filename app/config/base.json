@@ -2,6 +2,7 @@
 	"debug": true,
 	"mapUnlockThreshold": 3,
 	"useLocalSessions": true,
+	"startRoom": "vestibule",
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
 		"enterSpaceButtonText": "Start",

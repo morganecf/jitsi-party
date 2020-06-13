@@ -1,11 +1,11 @@
 import React from 'react'
 import moment from 'moment'
-import { formatDate, formatTime } from './utils.js'
+import { formatTime } from './utils.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faCompass } from '@fortawesome/free-solid-svg-icons'
 
 function formatEventTime(event) {
-    return `${formatDate(event.start)}  —  ${formatTime(event.end)}`
+    return `${formatTime(event.start)}  —  ${formatTime(event.end)}`
 }
 
 const EventGroup = props => {

@@ -1,0 +1,85 @@
+// 26.1 %#241f20 Black
+// 22.5 %#005aab Blue
+// 22.1 %#eb1d25 Red
+// 22.0 %#f3bd1b Yellow
+// 4.1 %#7c716b Grey
+// #f5ccc5Pink
+// 21.6 %#d50902Red
+// 19.1 %#1c6bb0Blue
+// 17.8 %#a7240eRed
+// 8.5 %#4b0202Brown
+
+
+$black: #241f20;
+$brown: #4b0202;
+// $blue: #1c6bb0;
+$blue: #005aaba6;
+$bright-blue: #005aab;
+// $red: #eb1d25;
+$red: #a7240e;
+$yellow: #f3bd1b;
+$grey: #7c716b;
+$pink: #f5ccc5;
+
+$accent-color: #eb1d25;
+
+$background-color: $black;
+$background-color-dark: $red;
+$door-background: $red;
+
+$room-content-background-color: $blue;
+$text-color: $pink;
+$link-color: $bright-blue;
+
+$disabled-text-color: color("grey-700");
+$disabled-background-color: color("grey-500");
+
+$map-room-fill: $blue;
+$map-unvisited-color: $background-color;
+$map-room-stroke-color: $black;
+$map-highlight-stroke: $black;
+$map-highlight-fill: $yellow;
+
+$events-header-color: $black;
+$events-header-background-color: $yellow;
+
+$poke-color: $pink;
+$poke-background-color: $black;
+
+$button-background-color: $yellow;
+$button-border-color: $yellow;
+$button-text-color: $black;
+$button-border-radius: 2px;
+
+$opaque-button-background-color: $bright-blue;
+$opaque-button-text-color: white;
+$opaque-button-border-color: $bright-blue;
+
+$focused-button-background-color: $bright-blue;
+$focused-button-text-color: #fff;
+$focused-button-border-color: $bright-blue;
+
+$name-input-border-color: white;
+$name-input-background-color: white;
+
+$modal-overlay-color: rgba(129, 62, 62, 0.25);
+
+$art-image-border-color: color("grey-50"); //white
+
+.bauhaus {
+    color: black;
+
+    p {
+        font-weight: bold;
+    }
+
+    h1 {
+        width: 100%;
+        background: $yellow;
+    }
+}
+
+.room .door-wrapper .door-background {
+    background: none !important;
+    border: 4px solid $red !important;
+}

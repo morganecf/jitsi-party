@@ -91,12 +91,14 @@
             cursor: pointer;
             stroke-width: 2;
             stroke: $map-room-stroke-color;
+            fill: $map-room-fill;
         }
 
         path.highlighted-room, path.unvisited.highlighted-room, path.empty.highlighted-room {
             fill-opacity: 1;
             stroke: $map-highlight-stroke;
-            transition: fill-opacity $transition-duration, stroke $transition-duration;
+            fill: $map-highlight-fill;
+            transition: fill-opacity $transition-duration, stroke $transition-duration, fill $transition-duration;
         }
 
         path.unvisited {

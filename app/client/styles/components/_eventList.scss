@@ -1,6 +1,12 @@
 .events-view {
     padding: 30px;
 
+    .events-header {
+        padding: 5px;
+        color: $events-header-color;
+        background: $events-header-background-color;
+    }
+
     .event-list {
         .event-item {
             display: flex;

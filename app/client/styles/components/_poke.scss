@@ -1,6 +1,7 @@
 .poke {
     position: absolute;
-    background: $background-color-dark;
+    color: $poke-color;
+    background: $poke-background-color;
     box-shadow: 2px 2px 4px black;
 }
 
@@ -32,6 +33,8 @@
         border: none;
         padding: 0;
         margin: 0 0 0 40px;
+        background: none;
+        color: $link-color;
 
         svg {
             padding: 0;
