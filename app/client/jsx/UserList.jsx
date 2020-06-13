@@ -1,4 +1,5 @@
 import React from 'react'
+import User from './User.jsx'
 
 const MAX_DISPLAYED_USERS = 8
 
