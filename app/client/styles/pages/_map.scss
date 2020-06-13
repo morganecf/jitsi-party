@@ -15,12 +15,6 @@
         padding: 10px 20px;
         color: $text-color;
 
-        .map-header-tagline {
-          font-family: $serif;
-          font-size: .75em;
-          margin-top: 5px;
-        }
-
         .map-stats {
             display: flex;
 
@@ -96,7 +90,7 @@
         path {
             cursor: pointer;
             stroke-width: 2;
-            stroke: #000;
+            stroke: $map-room-stroke-color;
         }
 
         path.highlighted-room, path.unvisited.highlighted-room, path.empty.highlighted-room {

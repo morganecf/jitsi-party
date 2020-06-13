@@ -19,8 +19,9 @@ input[type="button"] {
 
 	&:hover,
 	&.focused {
-		color: $background-color;
-		background: $text-color;
+		color: $focused-button-text-color;
+		background: $focused-button-background-color;
+		border: 2px solid $focused-button-border-color;
 		cursor: pointer;
 	}
 
@@ -44,5 +45,4 @@ input[type="button"] {
 	    color: $opaque-button-text-color;
 	    border-color: $opaque-button-background-color;
 	}
-
 }

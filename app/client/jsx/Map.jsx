@@ -118,7 +118,6 @@ class Map extends Component {
             <div className="map">
                 <div className="map-header">
                     {this.getGlobalStats()}
-                    <div className="map-header-tagline">Hover over rooms to see who's where!</div>
                     <button className="map-close-button" onClick={this.props.handleCloseMap}>
                         <FontAwesomeIcon icon={faTimes}/>
                     </button>

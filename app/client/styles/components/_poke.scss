@@ -28,7 +28,7 @@
 
         &:hover {
             background: none;
-            color: yellow;
+            color: $accent-color;
         }
     }
 }
@@ -42,10 +42,7 @@
     display: flex;
 
     .poke-icon {
+        color: $accent-color;
         margin: 5px 15px 0 5px;
-    }
-    
-    .poke-notification {
-        margin: 0 5px;
     }
 }

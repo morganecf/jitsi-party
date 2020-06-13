@@ -3,24 +3,58 @@
 // default one.
 // -----------------------------------------------------------------------------
 
-$background-color: color("grey-900");
-$background-color-dark: color("dark-surface");
+// $background-color: color("grey-900");
+// $background-color-dark: color("dark-surface");
 
-$room-content-background-color: color("grey-800");
-$text-color: color("grey-100");
-$link-color: color("purple-500");
+// $room-content-background-color: color("grey-800");
+// $text-color: color("grey-100");
+// $link-color: color("purple-500");
+
+// $disabled-text-color: color("grey-700");
+// $disabled-background-color: color("grey-500");
+
+// $map-unvisited-color: $background-color;
+// $map-room-stroke-color: color("teal-900"); //black
+// $map-highlight-stroke: color("blue-grey-50");
+
+// $opaque-button-background-color: color("grey-400");
+// $opaque-button-text-color: color("dark-surface");
+// $opaque-button-border-color: color("grey-400");
+
+// $modal-overlay-color: rgba(255, 255, 255, 0.25);
+
+// $art-image-border-color: color("grey-50"); //white
+// $art-image-border-color: color("grey-50"); //white
+
+
+$colors: #373D48,#303641,#5294E2,#FFFFFF,#4A5664,#FFFFFF,#5294E2,#5294E2;
+
+$neutral: #c3bab3;
+$accent-color: #ff7511;
+$light-blue: #5294E2;
+
+$background-color:#1b2733;
+$background-color-dark: darken(#1b2733, 2%);
+
+$room-content-background-color: #373D48;
+$text-color: $neutral;
+$link-color: $light-blue;
 
 $disabled-text-color: color("grey-700");
 $disabled-background-color: color("grey-500");
 
 $map-unvisited-color: $background-color;
-$map-room-stroke-color: color("teal-900"); //black
-$map-highlight-stroke: color("blue-grey-50");
+$map-room-stroke-color: #657a91;
+$map-highlight-stroke: #657a91;
 
-$opaque-button-background-color: color("grey-400");
-$opaque-button-text-color: color("dark-surface");
-$opaque-button-border-color: color("grey-400");
+$opaque-button-background-color: $light-blue;
+$opaque-button-text-color: white;
+$opaque-button-border-color: $light-blue;
 
-$modal-overlay-color: rgba(255, 255, 255, 0.25);
+$focused-button-background-color: $light-blue;
+$focused-button-text-color: #fff;
+$focused-button-border-color: $light-blue;
+
+$modal-overlay-color: rgba(129, 62, 62, 0.25);
 
 $art-image-border-color: color("grey-50"); //white

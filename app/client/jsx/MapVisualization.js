@@ -8,13 +8,14 @@ const DOOR_GAP = 0.3
 const ROOM_TRANSITION_DURATION = 500
 
 const ROOM_OPACITY = 0.7
-const EMPTY_ROOM_OPACITY = 0.2
+const EMPTY_ROOM_OPACITY = 0.5
 
 // If the # of users on the map is less than this number, the heat map
 // colors will scale between 0 and this number. This prevents colors
 // from being misleadingly bright when there are very few users in a
 // room
 const DEFAULT_MIN_USERS_FOR_COLOR_SCALE = 5
+
 
 export default class MapVisualization {
     constructor(container, width, height, padding, mouseEvents) {
@@ -28,7 +29,7 @@ export default class MapVisualization {
 
         this.xscale = d3.scaleLinear().range([padding, width - padding])
         this.yscale = d3.scaleLinear().range([padding, height - padding])
-        this.colorScale = d3.scaleSequential(d3.interpolatePuRd)
+        this.colorScale = d3.scaleSequential(d3.interpolateCividis)
     }
 
     getRoomShape({ x, y, width, height, doors={} }) {

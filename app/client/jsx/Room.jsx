@@ -196,7 +196,6 @@ class Room extends Component {
     }
 
     handlePoke(fromUser) {
-        console.log(fromUser)
         this.setState({ poker: fromUser })
         setTimeout(() => {
             this.setState({ poker: null })
