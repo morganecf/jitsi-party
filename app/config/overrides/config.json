@@ -1,6 +1,6 @@
 {
 	"debug": true,
-	"mapUnlockThreshold": 3,
+	"mapUnlockThreshold": 0,
 	"useLocalSessions": true,
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
@@ -77,6 +77,7 @@
 		"fromText": "{user} has zapped you!",
 		"toText": "Zapped!",
 		"unlockText": "You have unlocked the ability to zap",
-		"selfPoke": "Stop zapping yourself..."
+		"selfPoke": "Ouch",
+		"unlockAfterMinutes": 0.2
 	}
 }

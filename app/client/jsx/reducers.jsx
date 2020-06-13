@@ -12,7 +12,7 @@ const UNLOCK_POKING = 'UNLOCK_POKING'
 
 /*
 * This is the global state.
-*   user: userId, username, avatar type/color
+*   user: id, username, avatar type/color
 *   rooms: roomId->room definition mapping
 *   events: list of events
 *   users: roomId->userlist mapping, gets updated by websockets

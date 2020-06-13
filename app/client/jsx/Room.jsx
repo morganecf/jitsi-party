@@ -53,12 +53,11 @@ class Room extends Component {
         }
 
         this.socketApi = new WebSocketApi()
-        this.socketApi.startPinging(this.props.user.userId)
+        this.socketApi.startPinging(this.props.user.id)
         this.socketApi.on('user-event', this.props.updateUsers.bind(this))
-        this.socketApi.on(`poke-${this.props.user.userId}`, this.handlePoke.bind(this))
-
-        // TEMP
-        this.props.unlockPoking()
+        this.socketApi.on(`poke-${this.props.user.id}`, this.handlePoke.bind(this))
+        
+        this.computePokeUnlockedState()
     }
 
     getRoomData() {
@@ -195,10 +194,24 @@ class Room extends Component {
         }
     }
 
-    handlePoke(fromUser) {
-        this.setState({ poker: fromUser })
+    computePokeUnlockedState() {
+        if (Config.poke) {
+            if (this.useLocalSessions && LocalStorage.get('POKE_UNLOCKED')) {
+                this.props.unlockPoking()
+            } else {
+                const timeout = parseFloat(Config.poke.unlockAfterMinutes) * 60 * 1000
+                setTimeout(() => {
+                    this.props.unlockPoking()
+                    LocalStorage.set('POKE_UNLOCKED', true)
+                }, timeout)
+            }
+        }
+    }
+
+    handlePoke(pokeData) {
+        this.setState({ pokeData })
         setTimeout(() => {
-            this.setState({ poker: null })
+            this.setState({ pokeData: null })
         }, 5000)
     }
 
@@ -255,7 +268,7 @@ class Room extends Component {
                     className="event-modal">
                         <EventList rooms={this.props.rooms} events={this.props.events}></EventList>
                 </Modal>
-                {!!this.state.poker && <PokeNotification user={this.state.poker} />}
+                {!!this.state.pokeData && <PokeNotification {...this.state.pokeData} />}
             </div>
         )
     }

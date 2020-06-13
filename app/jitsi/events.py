@@ -20,23 +20,23 @@ def on_connect():
 
 @socketio.on('ping-user')
 def on_ping(message):
-    user = User.query.filter_by(id=message['user_id']).first()
+    user = User.query.filter_by(id=message['id']).first()
     if user:
         user.ping()
 
 
 @socketio.on('leave-room')
 def on_leave_room(message):
-    User.leave_room(message['user']['userId'], message['room'])
+    User.leave_room(message['user']['id'], message['room'])
     broadcast_state()
 
 
 @socketio.on('enter-room')
 def on_enter_room(message):
-    User.enter_room(message['user']['userId'], message['room'])
+    User.enter_room(message['user']['id'], message['room'])
     broadcast_state()
 
 
 @socketio.on('poke')
 def poke(message):
-    emit('poke-{0}'.format(message['to']['id']), message['from'], broadcast=True)
+    emit('poke-{0}'.format(message['to']['id']), message, broadcast=True)

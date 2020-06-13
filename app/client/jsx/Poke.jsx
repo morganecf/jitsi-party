@@ -22,7 +22,7 @@ export const PokeOptions = ({ users, handlePoke }) => {
 
     return (
         <div className="poke poke-options">
-            <div>{Config.poke.text}</div>
+            <div className="poke-header">{Config.poke.text}</div>
             {
                 users.map(user => (
                     <User key={user.username} user={user}>
@@ -36,15 +36,16 @@ export const PokeOptions = ({ users, handlePoke }) => {
     )
 }
 
-export const PokeNotification = ({ user }) => {
+export const PokeNotification = ({ to, from }) => {
+    const text = to.id === from.id ?
+        Config.poke.selfPoke :
+        Config.poke.fromText.replace('{user}', from.username)
     return createPortal(
         <div className="poke poke-notification">
             <div className="poke-icon">
                 <FontAwesomeIcon icon={Config.poke.fontAwesomeIcon} />
             </div>
-            <div className="poke-notification-text">
-                {Config.poke.fromText.replace('{user}', user.username)}
-            </div>
+            <div className="poke-notification-text">{text}</div>
         </div>,
         document.body
     )
