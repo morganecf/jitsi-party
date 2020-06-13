@@ -1,6 +1,8 @@
 {
 	"debug": true,
 	"mapUnlockThreshold": 3,
+	"jitsiServerUrl": "meet.jit.si",
+	"noJitsiServerSSL": false,
 	"useLocalSessions": true,
 	"welcomePage": {
 		"avatarSelectionEnabled": true,

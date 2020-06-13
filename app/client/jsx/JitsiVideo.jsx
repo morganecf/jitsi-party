@@ -90,7 +90,7 @@ class JitsiVideo extends Component {
             }
 
             const options = {
-                noSSL: true,
+                noSSL: Config.noJitsiServerSSL,
                 roomName: this.props.jitsiData.roomName,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
