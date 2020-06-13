@@ -360,11 +360,11 @@
         "gallery": {
             "name": "Art Corner",
             "type": "art",
-            "description": "In case you missed it last time, here's a collection of submissions from previous parties.",
+            "description": "In case you missed it last time, here's a selection of submissions from previous parties.",
             "art": {
-				"title": "Clarendon Works",
-				"artist": "LIST OF NAMES",
-				"src": "./js/images/art/scale-fred.jpg"
+				"title": "From left to right:",
+				"artist": "Daniel, Alex, Mihai, LaRen, Ramona",
+				"src": "./js/images/art/clarendon-retro.png"
 			},
             "directions": {
                 "west": "library",
