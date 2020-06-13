@@ -86,7 +86,7 @@ class JitsiVideo extends Component {
 
             let domain = Config.jitsiServerUrl
             if (Config.overrideJitsiServerUrlWithWindowHost) {
-                domain = `${window.location.host}/jitsi/`
+                domain = `${window.location.host}/jitsi`
             }
 
             const options = {
