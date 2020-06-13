@@ -18,9 +18,9 @@ export class WebSocketApi {
     }
 
     startPinging(userId) {
-        this.socket.emit('ping-user', { user_id: userId })
+        this.socket.emit('ping-user', { id: userId })
         this.refreshTimer = window.setInterval(() => {
-            this.socket.emit('ping-user', { user_id: userId })
+            this.socket.emit('ping-user', { id: userId })
         }, PING_INTERVAL_MS)
     }
 
@@ -30,6 +30,10 @@ export class WebSocketApi {
 
     leaveRoom(user, room) {
         this.socket.emit('leave-room', { user, room })
+    }
+
+    poke(msg) {
+        this.socket.emit('poke', msg)
     }
 }
 
@@ -42,8 +46,8 @@ export class HttpApi {
             const response = await axios.post(request, {
                 params: { username, avatar }
             })
-            const { userId } = response.data
-            return { success: true, userId }
+            const { id } = response.data
+            return { success: true, id }
         } catch (err) {
             console.log(err)
             return { success: false }

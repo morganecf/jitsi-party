@@ -76,3 +76,16 @@ export function formatDate(date) {
 export function formatTime(date) {
     return moment(date).format('h:mm A')
 }
+
+export function formatEventFromNow(event) {
+    const start = moment(event.start)
+    const end = moment(event.end)
+    const now = moment(moment.now())
+    if (now > end) {
+        return `ended ${end.fromNow()}`
+    }
+    if (now > start) {
+        return `started ${start.fromNow()}`
+    }
+    return `is starting ${start.fromNow()}`
+}
