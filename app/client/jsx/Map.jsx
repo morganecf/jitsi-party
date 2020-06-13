@@ -103,7 +103,9 @@ class Map extends Component {
 
     render() {
         if (this.map) {
-            this.map.update(this.props.users)
+            this.map.update(
+                _.pickBy(this.props.users,  (val, key) => key !== 'hallway')
+            )
         }
         
         const roomId = this.state.highlighted

@@ -89,43 +89,45 @@ class Navigation extends Component {
 
         return (
             <div className="navigation-container">
-                <div className="column settings-container">
-                    <div className="map-button-container">
-                        {this.props.showMapButton &&
-                            <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
-                                <FontAwesomeIcon icon={faMap}/>
-                            </button>
-                        }
-                        {this.props.showMapTooltip &&
-                            <div className="map-tooltip">you have unlocked the party map!</div>
-                        }
+                {!this.props.hideSettings &&
+                    <div className="column settings-container">
+                        <div className="map-button-container">
+                            {this.props.showMapButton &&
+                                <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
+                                    <FontAwesomeIcon icon={faMap}/>
+                                </button>
+                            }
+                            {this.props.showMapTooltip &&
+                                <div className="map-tooltip">you have unlocked the party map!</div>
+                            }
+                        </div>
+                        <div className="events-button-container">
+                            {events && events.length > 0 &&
+                                <button className="events-button" onClick={this.props.handleOpenEvents.bind(this)}>
+                                    <FontAwesomeIcon icon={faCalendar}/>
+                                </button>
+                            }
+                        </div>
+                        <div className="poke-button-container">
+                            {Config.poke && this.props.isPokingUnlocked &&
+                                <button className={pokeButtonClass} onClick={this.handleClickPokeButton.bind(this)}>
+                                    <FontAwesomeIcon icon={Config.poke.fontAwesomeIcon} />
+                                </button>
+                            }
+                            {this.state.showPokeOptions && <PokeOptions users={users} handlePoke={this.handlePoke.bind(this)} />}
+                        </div>
+                        <div className="audio-button-container">
+                            {audio &&
+                                <AudioPlayer
+                                    src={audio.path}
+                                    autoPlay={audio.autoPlay}
+                                    hide={audio.hideControls}
+                                    onChange={this.handleAudioChanged.bind(this)}>
+                                </AudioPlayer>
+                            }
+                        </div>
                     </div>
-                    <div className="events-button-container">
-                        {events && events.length > 0 &&
-                            <button className="events-button" onClick={this.props.handleOpenEvents.bind(this)}>
-                                <FontAwesomeIcon icon={faCalendar}/>
-                            </button>
-                        }
-                    </div>
-                    <div className="poke-button-container">
-                        {Config.poke && this.props.isPokingUnlocked &&
-                            <button className={pokeButtonClass} onClick={this.handleClickPokeButton.bind(this)}>
-                                <FontAwesomeIcon icon={Config.poke.fontAwesomeIcon} />
-                            </button>
-                        }
-                        {this.state.showPokeOptions && <PokeOptions users={users} handlePoke={this.handlePoke.bind(this)} />}
-                    </div>
-                    <div className="audio-button-container">
-                        {audio &&
-                            <AudioPlayer
-                                src={audio.path}
-                                autoPlay={audio.autoPlay}
-                                hide={audio.hideControls}
-                                onChange={this.handleAudioChanged.bind(this)}>
-                            </AudioPlayer>
-                        }
-                    </div>
-                </div>
+                }
                 <div className="column">
                     <button className="west" disabled={!west} onClick={() => onClick(west)}>
                         <FontAwesomeIcon icon={faArrowLeft}/>

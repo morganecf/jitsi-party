@@ -2,6 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import UserList from './UserList.jsx';
 
+
 const CapacitySticker = ({ capacity }) => {
     if (!capacity) {
         return null

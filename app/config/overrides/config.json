@@ -1,7 +1,7 @@
 {
 	"debug": true,
 	"mapUnlockThreshold": 0,
-	"useLocalSessions": true,
+	"useLocalSessions": false,
 	"startRoom": "vestibule",
 	"welcomePage": {
 		"avatarSelectionEnabled": true,

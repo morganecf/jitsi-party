@@ -8,7 +8,7 @@ const DOOR_GAP = 0.3
 const ROOM_TRANSITION_DURATION = 500
 
 const ROOM_OPACITY = 0.8
-const EMPTY_ROOM_OPACITY = 0.5
+const EMPTY_ROOM_OPACITY = 0.4
 
 // If the # of users on the map is less than this number, the heat map
 // colors will scale between 0 and this number. This prevents colors
@@ -121,7 +121,7 @@ export default class MapVisualization {
         // Draw rooms
         this.rooms = groups.append('path')
             .attr('d', d => this.getRoomShape(d.map))
-            .attr('fill-opacity', EMPTY_ROOM_OPACITY)
+            // .attr('fill-opacity', EMPTY_ROOM_OPACITY)
             .on('mouseenter', d => {
                 this.onRoomEnter(d.key)
                 d3.select(d3.event.target)
@@ -138,13 +138,15 @@ export default class MapVisualization {
 
     update(users) {
         const numUsers = _.sumBy(Object.values(users), d => d.length)
-        const numOnMap = (users.hallway || []).length - numUsers
+        const maxUsersInRoom = (_.maxBy(Object.values(users), u => u.length) || []).length
 
         this.colorScale.domain([
             0,
             Math.max(DEFAULT_MIN_USERS_FOR_COLOR_SCALE, numUsers)
         ])
-        this.opacityScale.domain([0, numOnMap])
+        this.opacityScale.domain([0, maxUsersInRoom])
+
+        console.log('max users in room:', numUsers, maxUsersInRoom)
 
         this.rooms
             .interrupt()
@@ -152,7 +154,7 @@ export default class MapVisualization {
             .duration(ROOM_TRANSITION_DURATION)
             // .attr('fill', room => this.colorScale((users[room.key] || []).length + 1))
             // .attr('fill-opacity', room => users[room.key] ? ROOM_OPACITY : EMPTY_ROOM_OPACITY)
-            .attr('fill-opacity', room => numOnMap ? this.opacityScale((users[room.key] || []).length) : 1)
+            .attr('fill-opacity', room => numUsers ? this.opacityScale((users[room.key] || []).length) : 1)
     }
 }
 

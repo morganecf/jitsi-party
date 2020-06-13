@@ -114,7 +114,7 @@ class Room extends Component {
 
     onAdventureClick(room) {
         this.setState({ room, entered: true })
-        this.props.updateCurrentRoom({ room, entered: true })
+        this.socketApi.enterRoom(this.props.user, room)
     }
 
     updateRoom(room) {
@@ -253,6 +253,7 @@ class Room extends Component {
                     onClick={this.onSwitchRoom.bind(this)}
                     showMapButton={mapState.mapVisible}
                     showMapTooltip={mapState.showMapTooltip}
+                    hideSettings={room.type === 'adventure'}
                     handleOpenMap={this.handleOpenMap.bind(this)}
                     handleOpenEvents={this.handleOpenEvents.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />

@@ -20,7 +20,8 @@
                    "west": 20,
                    "east": 20
                }
-           }
+           },
+           "doorTint": "#f5ccc5"
        },
        "closet": {
            "name": "Closet",
@@ -39,12 +40,12 @@
                "doors": {
                    "east": 20
                }
-           }
+           },
+           "doorTint": "f3bd1b"
        },
        "livingRoom": {
            "name": "Living Room",
            "type": "jitsi",
-           "capacity": 20,
            "backgroundImage": "js/images/rooms/livingroom.jpg",
            "directions": {
                "north": "danceParty",
@@ -179,12 +180,12 @@
                    "west": 15,
                    "south": 9
                }
-           }
+           },
+           "doorTint": "black"
        },
        "bubbleBaths": {
             "name": "Bubble Baths",
             "type": "jitsi",
-            "capacity": 10,
             "description": "Let's make a human soup!",
             "directions": {
                 "north": "trashyBedroom"
@@ -263,13 +264,12 @@
                     "east": 15
                 }
             },
-            "doorTint": "#64E0E8",
+            "doorTint": "#4b0202",
             "backgroundImage": "js/images/rooms/bunnywedding.jpg"
         },
        "kitchen": {
            "name": "Kitchen",
            "type": "jitsi",
-           "capacity": 20,
            "description": "The joy, joy, joy of eating someone new!",
            "directions": {
                "west": "kitchen",
@@ -310,8 +310,7 @@
                     "north": 21
                 }
             },
-            "doorTint": "grey",
-            "backgroundImage": ""
+            "doorTint": "grey"
        },
         "mapRoom": {
             "name": "Map Room",
@@ -333,8 +332,7 @@
                     "east": 7
                 }
             },
-            "doorTint": "blue",
-            "backgroundImage": ""
+            "doorTint": "blue"
         },
         "library": {
             "name": "Library",
@@ -357,8 +355,7 @@
                     "east": 7
                 }
             },
-            "doorTint": "purple",
-            "backgroundImage": ""
+            "doorTint": "a7240e"
         },
         "readingRoom": {
             "name": "Reading Room",
@@ -419,7 +416,7 @@
                     "south": 28
                 }
             },
-            "doorTint": "purple",
+            "doorTint": "blue",
             "backgroundImage": ""
         },
         "cloister": {
@@ -441,13 +438,12 @@
                     "south": 28
                 }
             },
-            "doorTint": "purple",
+            "doorTint": "#4b0202",
             "backgroundImage": ""
         },
        "gameRoom": {
            "name": "Game Room",
            "type": "jitsi",
-           "capacity": 15,
            "description": "Ask Dan S if you want to play poker.",
            "directions": {
                "north": "kitchen",
