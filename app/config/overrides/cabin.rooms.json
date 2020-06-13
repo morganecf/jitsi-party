@@ -166,6 +166,7 @@
 		"trashyBedroom": {
 			"name": "Clarendon Gone Wild",
 			"type": "jitsi",
+			"backgroundImage": "js/images/rooms/gonewild.jpg",
 			"description": "Sexual debauchery encouraged & expected",
 			"directions": {
 				"north": "bathroom",
