@@ -343,7 +343,7 @@
             },
             "directions": {
                 "west": "mapRoom",
-                "east": "readingRoom"
+                "east": "gallery"
             },
             "map": {
                 "x": 23,
@@ -355,25 +355,20 @@
                     "east": 7
                 }
             },
-            "doorTint": "a7240e"
+            "doorTint": "#a7240e"
         },
-        "readingRoom": {
-            "name": "Reading Room",
+        "gallery": {
+            "name": "Art Corner",
             "type": "art",
-            "description": "Settle in and listen to some stories!",
-            "audio": {
-                "path": "js/audio/alien-room.mp3",
-                "autoPlay": true,
-                "hideControls": false
-            },
+            "description": "In case you missed it last time, here's a collection of submissions from previous parties.",
             "art": {
-				"title": "Scale",
-				"artist": "F r e d",
+				"title": "Clarendon Works",
+				"artist": "LIST OF NAMES",
 				"src": "./js/images/art/scale-fred.jpg"
 			},
             "directions": {
                 "west": "library",
-                "south": "hypnosisRoom"
+                "south": "cloister"
             },
             "map": {
                 "x": 27,
@@ -388,51 +383,20 @@
             "doorTint": "purple",
             "backgroundImage": ""
         },
-        "hypnosisRoom": {
-            "name": "Hypnosis Room",
-            "type": "art",
-            "art": {
-				"title": "Scale",
-				"artist": "F r e d",
-				"src": "./js/images/art/scale-fred.jpg"
-			},
-            "audio": {
-                "path": "js/audio/alien-room.mp3",
-                "autoPlay": true,
-                "hideControls": false
-            },
-            "description": "Relax, close your eyes, and turn your sound on.",
-            "directions": {
-                "north": "readingRoom",
-                "south": "cloister"
-            },
-            "map": {
-                "x": 27,
-                "y": 8,
-                "width": 2,
-                "height": 2,
-                "doors": {
-                    "north": 28,
-                    "south": 28
-                }
-            },
-            "doorTint": "blue",
-            "backgroundImage": ""
-        },
         "cloister": {
             "name": "A Humble Cloister",
             "type": "jitsi",
             "capacity": 2,
             "description": "A secluded transit for two people",
             "directions": {
-                "north": "hypnosisRoom",
+                "north": "gallery",
                 "south": "bunnyRun"
             },
             "map": {
                 "x": 28,
-                "y": 10,
+                "y": 8,
                 "width": 0.8,
-                "height": 4,
+                "height": 6,
                 "doors": {
                     "north": 28,
                     "south": 28
