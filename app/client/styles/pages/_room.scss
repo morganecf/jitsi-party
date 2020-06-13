@@ -112,6 +112,18 @@
 			z-index: -1;
 		}
 
+		.capacity-sticker {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			font-size: small;
+			padding: 5px 8px;
+			margin-right: 40px;
+			color: $text-color;
+			background: lighten($background-color, 5%);
+			border: 1px solid $background-color;
+		}
+
 		.door {
 			z-index: 100;
 			background: gray;
