@@ -11,6 +11,7 @@ import Map from './Map.jsx'
 import EventList from './EventList.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
+import Guestbook from './Guestbook.jsx'
 import Navigation from './Navigation.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
@@ -55,7 +56,10 @@ class Room extends Component {
 
         this.socketApi = new WebSocketApi()
         this.socketApi.startPinging(this.props.user.userId)
-        this.socketApi.on('user-event', this.props.updateUsers.bind(this))
+        this.socketApi.on('user-event', ({ users, guestbook }) => {
+            this.props.updateUsers(users)
+            this.props.updateGuestbook(guestbook)
+        })
     }
 
     getRoomData() {
@@ -64,11 +68,12 @@ class Room extends Component {
 
     getRoomContent() {
         /*
-        * There are currently 3 different types of rooms:
+        * There are currently 5 different types of rooms:
         *   1. Regular Jitsi room that just has video
         *   2. Art room which has a small video panel and an image
-        *   3. Text-based adventure rooms where you have to make a decision
-        *   4. Special purpose rooms that exist at a different route
+        *   3. iFrame rooms which embed an iframe such as a twitch stream
+        *   4. Text-based adventure rooms where you have to make a decision
+        *   5. // TODO CUSTOM OR Guestbook ??
         */
         const roomData = this.getRoomData()
         const jitsiData = {
@@ -81,7 +86,8 @@ class Room extends Component {
             art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
             jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
             iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
-            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>
+            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
+            guestbook: <Guestbook folder={roomData.folder}></Guestbook>
         }[roomData.type]
     }
 
@@ -253,5 +259,6 @@ class Room extends Component {
 export default connect(state => state, {
     addRooms: reducers.addRoomsActionCreator,
     updateUsers: reducers.updateUsersActionCreator,
+    updateGuestbook: reducers.updateGuestbookActionCreator,
     updateCurrentRoom: reducers.updateCurrentRoomActionCreator
 })(Room)

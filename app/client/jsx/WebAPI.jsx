@@ -67,4 +67,19 @@ export class HttpApi {
             return { success: false }
         }
     }
+
+    async uploadPhoto(formData) {
+        try {
+            const request = `${url}/uploadphoto`
+            await axios.post(request, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+            return { success: true }
+        } catch (err) {
+            console.log('err:', err)
+            return { success: false }
+        }
+    }
 }

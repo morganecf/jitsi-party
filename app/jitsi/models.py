@@ -137,3 +137,30 @@ class UserRoomState(db.Model, SerializerMixin):
     def __repr__(self):
         visited = 'visited' if self.discovered else 'not visited'
         return 'User {0} has {1} Room {2}'.format(self.user_id, visited, self.room_id)
+
+
+class GuestbookEntry(db.Model, SerializerMixin):
+    __tablename__ = 'guestbook'
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    url = db.Column(db.String())
+    note = db.Column(db.Text())
+    folder = db.Column(db.String())
+
+    @classmethod
+    def create(cls, user_id, folder, note, url):
+        entry = cls(user_id=user_id, folder=folder, url=url, note=note)
+        db.session.add(entry)
+        db.session.commit()
+        return entry
+
+    @classmethod
+    def get_entries(cls):
+        return [entry.to_dict() for entry in cls.query.all()]
+
+    @classmethod
+    def get_entries_by_folder(cls):
+        return cls.query.group_by(cls.folder).all()
+
+    def __repr__(self):
+        return self.url

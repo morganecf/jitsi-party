@@ -19,6 +19,7 @@
 	},
 	"specialAvatars": {
 	},
+	"s3Bucket": "jitsi-party",
 	"map": {
 		"stats": {
 			"numberInHouse": {

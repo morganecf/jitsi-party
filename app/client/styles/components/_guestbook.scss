@@ -1,0 +1,18 @@
+.guestbook {
+    height: 100%;
+    padding: 50px;
+}
+
+.guestbook-signature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .react-html5-camera-photo>img, .react-html5-camera-photo>video, .note {
+        width: 50%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}

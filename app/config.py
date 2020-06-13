@@ -51,6 +51,10 @@ class Config:
     def EVENTS(self):
         return self.merged_cfg.get('events', {})
 
+    @property
+    def S3_BUCKET(self):
+        return self.merged_cfg.get('s3Bucket')
+
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')

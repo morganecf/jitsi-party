@@ -8,17 +8,20 @@ const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const UPDATE_JITSI_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
 const UPDATE_JITSI_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
 const UPDATE_ROOM_AUDIO = 'UPDATE_ROOM_AUDIO'
+const SIGN_GUESTBOOK = 'SIGN_GUESTBOOK'
+const UPDATE_GUESTBOOK = 'UPDATE_GUESTBOOK'
 
 /*
 * This is the global state.
 *   user: userId, username, avatar type/color
-*   rooms: roomId->room definition mapping
-*   events: list of events
+*   rooms: roomId->room definition mapping; mirrors rooms.json
+*   events: list of events; mirrors events.json
 *   users: roomId->userlist mapping, gets updated by websockets
-*   currentRoom: room, entered
-*   visited: map of which rooms user has visited
+*   currentRoom: { room, entered }
+*   visited: which rooms user has visited
 *   isAudioMuted: whether or not the user currently has audio muted
 *   isVideoMuted: whether or not the user currently has video muted
+*   guestbooks: settings related to guestbooks
 */
 const initialState = {
     user: {},
@@ -28,7 +31,8 @@ const initialState = {
     currentRoom: {},
     visited: {},
     isAudioMuted: false,
-    isVideoMuted: false
+    isVideoMuted: false,
+    guestbooks: {}
 }
 
 function addConfigAction(state, config) {
@@ -65,6 +69,20 @@ function updateRoomAudioAction(state, { currentRoom, autoPlay }) {
     return nextState
 }
 
+function updateGuestbookAction(state, guestbooks) {
+    return Object.assign({}, state, guestbooks)
+}
+
+function signGuestbookAction(state, folder) {
+    return Object.assign({}, state, {
+        guestbook: {
+            [folder]: {
+                isGuestbookSigned: true
+            }
+        }
+    })
+}
+
 export default {
     /* Action creators: return actions for reducers */
     addConfigActionCreator: config => ({
@@ -96,6 +114,15 @@ export default {
         currentRoom,
         autoPlay
     }),
+    updateGuestbookActionCreator: (folder, entries) => ({
+        type: UPDATE_GUESTBOOK,
+        folder,
+        entries
+    }),
+    signGuestbookActionCreator: folder => ({
+        type: SIGN_GUESTOOK,
+        folder
+    }),
     /* Reducers */
     reducer: handleActions({
         [ADD_CONFIG]: addConfigAction,
@@ -104,6 +131,8 @@ export default {
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
         [UPDATE_JITSI_AUDIO_MUTED]: updateJitsiAudioMutedAction,
         [UPDATE_JITSI_VIDEO_MUTED]: updateJitsiVideoMutedAction,
-        [UPDATE_ROOM_AUDIO]: updateRoomAudioAction
+        [UPDATE_ROOM_AUDIO]: updateRoomAudioAction,
+        [UPDATE_GUESTBOOK]: updateGuestbookAction,
+        [SIGN_GUESTBOOK]: signGuestbookAction
     }, initialState)
 }

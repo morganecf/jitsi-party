@@ -1,11 +1,16 @@
 from . import socketio, db
 from flask_socketio import emit
-from .models import User
+from .models import User, GuestbookEntry
 
 
 def broadcast_state():
     users = User.get_active_users_by_room()
-    emit('user-event', users, broadcast=True)
+    guestbooks = GuestbookEntry.get_entries_by_folder()
+    state = {
+        'users': users,
+        'guestbooks': guestbooks
+    }
+    emit('user-event', state, broadcast=True)
 
 
 @socketio.on('disconnect')

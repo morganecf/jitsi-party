@@ -2,6 +2,7 @@
 	"debug": true,
 	"mapUnlockThreshold": 3,
 	"useLocalSessions": true,
+	"s3Bucket": "jitsi-party",
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
 		"backgroundImagePath": "./js/images/cabinfeverhighres.png",

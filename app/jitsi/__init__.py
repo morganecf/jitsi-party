@@ -1,5 +1,8 @@
 import os
 import eventlet
+
+eventlet.monkey_patch(socket=False)
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
@@ -44,6 +47,5 @@ def create_app(config_name):
 
 
 def run_eventlet(app):
-    eventlet.monkey_patch()
     socketio.init_app(app, async_mode="eventlet")
     socketio.run(app, host='0.0.0.0', port=os.getenv('FLASK_RUN_PORT'))

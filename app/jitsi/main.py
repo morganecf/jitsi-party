@@ -1,16 +1,20 @@
 import os
 import json
-from .models import User
+from .s3 import Bucket
+from .events import broadcast_state
+from .models import User, GuestbookEntry
 from datetime import datetime
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
 
 main = Blueprint('main', __name__)
+
 
 @main.route('/join', methods=['GET', 'POST'])
 def join():
     params = request.get_json()['params']
     user = User.create(**params)
     return jsonify(user.to_json())
+
 
 @main.route('/config')
 def get_config():
@@ -38,6 +42,24 @@ def get_config():
         'events': events
     }
     return jsonify(config)
+
+
+@main.route('/uploadphoto', methods=['POST'])
+def upload_photo():
+    photo = request.files.get('photo')
+    folder = request.form.get('folder')
+    note = request.form.get('note')
+    user_id = request.form.get('userId')
+    name = photo.filename
+    # Upload image to s3 bucket folder
+    bucket = Bucket(current_app.config['S3_BUCKET'])
+    response = bucket.upload_photo(photo.read(), name, folder)
+    # Save bucket URL to db
+    if response.get('url'):
+        GuestbookEntry.create(user_id, folder, note, response['url'])
+        broadcast_state()
+    return jsonify(response)
+
 
 @main.route('/', defaults={'path': ''})
 @main.route('/<path:path>')

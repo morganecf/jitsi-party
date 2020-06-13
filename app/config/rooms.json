@@ -54,8 +54,6 @@
 				"width": 8,
 				"height": 5,
 				"doors": {
-					"north": 15,
-					"west": 15,
 					"east": 15,
 					"south": 16
 				}
@@ -66,7 +64,8 @@
 			"name": "Game Room",
 			"type": "jitsi",
 			"directions": {
-				"west": "vestibule"
+				"west": "vestibule",
+				"north": "guestBook"
 			},
 			"map": {
 				"x": 21,
@@ -75,12 +74,30 @@
 				"height": 3,
 				"doors": {
 					"north": 25,
-					"west": 20,
-					"east": 19
+					"west": 20
 				}
 			},
 			"doorTint": "orange",
 			"backgroundImage": "js/images/rooms/gameroom.jpg"
+		},
+		"guestBook": {
+			"name": "Guest Book",
+			"type": "guestbook",
+			"folder": "guestbook",
+			"description": "To view the guestbook, you must sign the guestbook.",
+			"directions": {
+				"south": "gameRoom"
+			},
+			"map": {
+				"x": 24,
+				"y": 16,
+				"width": 2,
+				"height": 2,
+				"doors": {
+					"south": 25
+				}
+			},
+			"doorTint": "blue"
 		}
 	}
 }
