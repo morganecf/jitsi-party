@@ -51,7 +51,7 @@ export default props => {
                 <ul>
                     {props.events.map((event, i) => (
                         <li key={`announcement-${i}`}>
-                            {formatEventFromNow(event)}
+                            <b>{event.name}</b> {formatEventFromNow(event)}
                         </li>
                     ))}
                 </ul>

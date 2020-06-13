@@ -82,10 +82,10 @@ export function formatEventFromNow(event) {
     const end = moment(event.end)
     const now = moment(moment.now())
     if (now > end) {
-        return `${event.name} ended ${end.fromNow()}`
+        return `ended ${end.fromNow()}`
     }
     if (now > start) {
-        return `${event.name} started ${start.fromNow()}`
+        return `started ${start.fromNow()}`
     }
-    return `${event.name} is starting ${start.fromNow()}`
+    return `is starting ${start.fromNow()}`
 }
