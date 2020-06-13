@@ -27,6 +27,7 @@ $background-color: $black;
 $background-color-dark: $red;
 $door-background: $red;
 $room-content-background-color: $blue;
+$modal-background-color: white;
 
 $text-color: $pink;
 $link-color: $bright-blue;
@@ -89,4 +90,12 @@ $art-image-border-color: color("grey-50"); //white
         background: white;
         opacity: 0.5;
     }
+}
+
+#map-info .room-info {
+    color: $black !important;
+}
+
+.events-view .event-list .event-item {
+    background: $bright-blue !important;
 }

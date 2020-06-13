@@ -12,42 +12,42 @@
 	},
 	"avatars": {
 	  "normal": {
-	    "purple": "./js/images/puck/normal-purple.png",
-	    "blue": "./js/images/puck/normal-blue.png",
-	    "red": "./js/images/puck/normal-red.png",
-	    "orange": "./js/images/puck/normal-orange.png"
+		"blue": "./js/images/bauhausPuck/normal-blue.png",
+		"pink": "./js/images/bauhausPuck/normal-pink.png",
+	    "black": "./js/images/bauhausPuck/normal-black.png",
+	    "yellow": "./js/images/bauhausPuck/normal-yellow.png"
 	  },
 	  "book": {
-	    "purple": "./js/images/puck/book-purple.png",
-	    "blue": "./js/images/puck/book-blue.png",
-	    "red": "./js/images/puck/book-red.png",
-	    "orange": "./js/images/puck/book-orange.png"
+		"blue": "./js/images/bauhausPuck/book-blue.png",
+		"pink": "./js/images/bauhausPuck/book-pink.png",
+	    "black": "./js/images/bauhausPuck/book-black.png",
+	    "yellow": "./js/images/bauhausPuck/book-yellow.png"
 	  },
 	  "whippit": {
-	    "purple": "./js/images/puck/whippit-purple.png",
-	    "blue": "./js/images/puck/whippit-blue.png",
-	    "red": "./js/images/puck/whippit-red.png",
-	    "orange": "./js/images/puck/whippit-orange.png"
+		"blue": "./js/images/bauhausPuck/whippit-blue.png",
+		"pink": "./js/images/bauhausPuck/whippit-pink.png",
+	    "black": "./js/images/bauhausPuck/whippit-black.png",
+	    "yellow": "./js/images/bauhausPuck/whippit-yellow.png"
 	  },
 	  "dancing": {
-	    "purple": "./js/images/puck/dancing-purple.png",
-	    "blue": "./js/images/puck/dancing-blue.png",
-	    "red": "./js/images/puck/dancing-red.png",
-	    "orange": "./js/images/puck/dancing-orange.png"
+		"blue": "./js/images/bauhausPuck/dancing-blue.png",
+		"pink": "./js/images/bauhausPuck/dancing-pink.png",
+	    "black": "./js/images/bauhausPuck/dancing-black.png",
+	    "yellow": "./js/images/bauhausPuck/dancing-yellow.png"
 	  },
 	  "trippy": {
-	    "purple": "./js/images/puck/trippy-purple.png",
-	    "blue": "./js/images/puck/trippy-blue.png",
-	    "red": "./js/images/puck/trippy-red.png",
-	    "orange": "./js/images/puck/trippy-orange.png"
+		"blue": "./js/images/bauhausPuck/trippy-blue.png",
+		"pink": "./js/images/bauhausPuck/trippy-pink.png",
+	    "black": "./js/images/bauhausPuck/trippy-black.png",
+	    "yellow": "./js/images/bauhausPuck/trippy-yellow.png"
 	  }
 	},
 	"specialAvatars": {
 	  "goodbye": {
-	    "purple": "./js/images/puck/thumb-purple.png",
-	    "blue": "./js/images/puck/thumb-blue.png",
-	    "red": "./js/images/puck/thumb-red.png",
-	    "orange": "./js/images/puck/thumb-orange.png"
+		"pink": "./js/images/bauhausPuck/thumb-pink.png",
+	    "black": "./js/images/bauhausPuck/thumb-black.png",
+	    "blue": "./js/images/bauhausPuck/thumb-blue.png",
+	    "yellow": "./js/images/bauhausPuck/thumb-yellow.png"
 	  }
 	},
 	"map": {
@@ -80,6 +80,6 @@
 		"toText": "Zapped!",
 		"unlockText": "You have unlocked the ability to zap",
 		"selfPoke": "Ouch",
-		"unlockAfterMinutes": 0.2
+		"unlockAfterMinutes": 20
 	}
 }

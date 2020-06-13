@@ -339,7 +339,7 @@
             "type": "iframe",
             "muteRoom": true,
             "iframeOptions": {
-                "src": ""
+                "src": "https://player.twitch.tv/?channel=unmemorious&parent=jitsi.gbre.org"
             },
             "directions": {
                 "west": "mapRoom",
