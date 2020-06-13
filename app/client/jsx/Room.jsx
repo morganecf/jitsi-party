@@ -12,6 +12,7 @@ import EventList from './EventList.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
+import { PokeNotification } from './Poke.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
 import Config from './Config.jsx'
@@ -30,8 +31,6 @@ class Room extends Component {
     constructor(props) {
         super(props)
 
-        const { room, entered } = this.props.currentRoom
-
         this.useLocalSessions = Config.useLocalSessions || false
 
         // These are the room types for which we show the map button
@@ -48,7 +47,7 @@ class Room extends Component {
         }
 
         this.state = {
-            room,
+            room: this.props.currentRoom.room,
             entered: false,
             users: []
         }
@@ -56,6 +55,10 @@ class Room extends Component {
         this.socketApi = new WebSocketApi()
         this.socketApi.startPinging(this.props.user.userId)
         this.socketApi.on('user-event', this.props.updateUsers.bind(this))
+        this.socketApi.on(`poke-${this.props.user.userId}`, this.handlePoke.bind(this))
+
+        // TEMP
+        this.props.unlockPoking()
     }
 
     getRoomData() {
@@ -192,6 +195,14 @@ class Room extends Component {
         }
     }
 
+    handlePoke(fromUser) {
+        console.log(fromUser)
+        this.setState({ poker: fromUser })
+        setTimeout(() => {
+            this.setState({ poker: null })
+        }, 5000)
+    }
+
     render() {
         if (Object.keys(this.props.rooms).length === 0) {
             // room config not loaded yet
@@ -245,13 +256,14 @@ class Room extends Component {
                     className="event-modal">
                         <EventList rooms={this.props.rooms} events={this.props.events}></EventList>
                 </Modal>
+                {!!this.state.poker && <PokeNotification user={this.state.poker} />}
             </div>
         )
     }
 }
 
 export default connect(state => state, {
-    addRooms: reducers.addRoomsActionCreator,
     updateUsers: reducers.updateUsersActionCreator,
-    updateCurrentRoom: reducers.updateCurrentRoomActionCreator
+    updateCurrentRoom: reducers.updateCurrentRoomActionCreator,
+    unlockPoking: reducers.unlockPokingActionCreator 
 })(Room)

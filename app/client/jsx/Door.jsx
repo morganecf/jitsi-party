@@ -11,11 +11,12 @@ class Door extends Component {
         const userStr = this.props.users.length > 1 ?
             `${this.props.users.length} people are in this room!` :
             '1 person is in this room!'
+        const isPrivate = _.has(this.props.room, 'capacity')
         const users = this.props.users.length ?
-        (
+            (
                 <div className="user-list">
                     <div>{userStr}</div>
-                    <UserList users={this.props.users} truncate={true} room={this.props.room}></UserList>
+                    <UserList users={this.props.users} truncate={true} anonymize={isPrivate}></UserList>
                 </div>
             ) :
             <div>No one is in this room :(</div>

@@ -35,3 +35,8 @@ def on_leave_room(message):
 def on_enter_room(message):
     User.enter_room(message['user']['userId'], message['room'])
     broadcast_state()
+
+
+@socketio.on('poke')
+def poke(message):
+    emit('poke-{0}'.format(message['to']['id']), message['from'], broadcast=True)

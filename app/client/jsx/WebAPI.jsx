@@ -31,6 +31,10 @@ export class WebSocketApi {
     leaveRoom(user, room) {
         this.socket.emit('leave-room', { user, room })
     }
+
+    poke(msg) {
+        this.socket.emit('poke', msg)
+    }
 }
 
 

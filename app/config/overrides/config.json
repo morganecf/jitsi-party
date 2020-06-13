@@ -70,5 +70,13 @@
 				}
 			]
 		}
+	},
+	"poke": {
+		"text": "Zap someone",
+		"fontAwesomeIcon": "bolt",
+		"fromText": "{user} has zapped you!",
+		"toText": "Zapped!",
+		"unlockText": "You have unlocked the ability to zap",
+		"selfPoke": "Stop zapping yourself..."
 	}
 }

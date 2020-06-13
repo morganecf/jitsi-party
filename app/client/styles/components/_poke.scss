@@ -1,0 +1,51 @@
+.poke {
+    position: absolute;
+    background: $background-color-dark;
+    box-shadow: 2px 2px 4px black;
+}
+
+.poke-options {
+    bottom: 85px;
+    padding: 15px;
+
+    .room-user {
+        margin-top: 5px;
+
+        img {
+            max-height: 30px;
+        }
+    }
+
+    .poke-user-button {
+        border: none;
+        padding: 0;
+        margin: 0 0 0 40px;
+
+        svg {
+            padding: 0;
+            margin: 0;
+        }
+
+        &:hover {
+            background: none;
+            color: yellow;
+        }
+    }
+}
+
+.poke-notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+
+    .poke-icon {
+        margin: 5px 15px 0 5px;
+    }
+    
+    .poke-notification {
+        margin: 0 5px;
+    }
+}
