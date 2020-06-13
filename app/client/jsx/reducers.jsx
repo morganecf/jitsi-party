@@ -8,10 +8,11 @@ const UPDATE_CURRENT_ROOM = 'UPDATE_CURRENT_ROOM'
 const UPDATE_JITSI_AUDIO_MUTED = 'UPDATE_AUDIO_MUTED'
 const UPDATE_JITSI_VIDEO_MUTED = 'UPDATE_VIDEO_MUTED'
 const UPDATE_ROOM_AUDIO = 'UPDATE_ROOM_AUDIO'
+const UNLOCK_POKING = 'UNLOCK_POKING'
 
 /*
 * This is the global state.
-*   user: userId, username, avatar type/color
+*   user: id, username, avatar type/color
 *   rooms: roomId->room definition mapping
 *   events: list of events
 *   users: roomId->userlist mapping, gets updated by websockets
@@ -28,7 +29,8 @@ const initialState = {
     currentRoom: {},
     visited: {},
     isAudioMuted: false,
-    isVideoMuted: false
+    isVideoMuted: false,
+    isPokingUnlocked: false
 }
 
 function addConfigAction(state, config) {
@@ -65,6 +67,10 @@ function updateRoomAudioAction(state, { currentRoom, autoPlay }) {
     return nextState
 }
 
+function unlockPokingAction(state) {
+    return Object.assign({}, state, { isPokingUnlocked: true })
+}
+
 export default {
     /* Action creators: return actions for reducers */
     addConfigActionCreator: config => ({
@@ -96,6 +102,9 @@ export default {
         currentRoom,
         autoPlay
     }),
+    unlockPokingActionCreator: () => ({
+        type: UNLOCK_POKING
+    }),
     /* Reducers */
     reducer: handleActions({
         [ADD_CONFIG]: addConfigAction,
@@ -104,6 +113,7 @@ export default {
         [UPDATE_CURRENT_ROOM]: updateCurrentRoomAction,
         [UPDATE_JITSI_AUDIO_MUTED]: updateJitsiAudioMutedAction,
         [UPDATE_JITSI_VIDEO_MUTED]: updateJitsiVideoMutedAction,
-        [UPDATE_ROOM_AUDIO]: updateRoomAudioAction
+        [UPDATE_ROOM_AUDIO]: updateRoomAudioAction,
+        [UNLOCK_POKING]: unlockPokingAction
     }, initialState)
 }

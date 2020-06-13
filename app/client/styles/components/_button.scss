@@ -6,11 +6,11 @@ button,
 input[type="button"] {
 	margin: 5px;
 	padding: 8px 10px;
-	border-radius: 5px;
+	border-radius: $button-border-radius;
 	transition: all 0.3s ease;
-	background: none;
-	color: $text-color;
-	border: 2px solid $text-color;
+	background: $button-background-color;
+	color: $button-text-color;
+	border: 2px solid $button-border-color;
 	font-size: 20px;
 
 	svg {
@@ -19,8 +19,9 @@ input[type="button"] {
 
 	&:hover,
 	&.focused {
-		color: $background-color;
-		background: $text-color;
+		color: $focused-button-text-color;
+		background: $focused-button-background-color;
+		border: 2px solid $focused-button-border-color;
 		cursor: pointer;
 	}
 
@@ -44,5 +45,4 @@ input[type="button"] {
 	    color: $opaque-button-text-color;
 	    border-color: $opaque-button-background-color;
 	}
-
 }

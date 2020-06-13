@@ -87,7 +87,7 @@ class Welcome extends Component {
             const user = {
                 username,
                 avatar,
-                userId: response.userId
+                id: response.id
             }
             this.props.updateUser(user)
             this.handleUserSelected(user)

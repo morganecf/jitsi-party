@@ -13,7 +13,9 @@
 
 // 3. Themes
 @import
-  'themes/default';
+  // 'themes/default',
+  // 'themes/june13';
+  'themes/bauhaus';
 
 // 4. Base stuff
 @import
@@ -38,7 +40,8 @@
   'components/jitsiVideo',
   'components/userList',
   'components/audioPlayer',
-  'components/eventList';
+  'components/eventList',
+  'components/poke';
 
 // 7. Page-specific styles
 @import

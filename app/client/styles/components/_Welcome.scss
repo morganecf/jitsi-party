@@ -5,10 +5,12 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    width: 100%;
 
     .header {
         margin-bottom: 1em;
         text-align: center;
+        width: 100%;
     }
 
     h1 {
@@ -34,20 +36,11 @@
     height: 100%;
     z-index: -1;
 }
-.serif {
-    font-family: $serif;
-}
-h1 {
-    margin: -24px 0px 18px 0px;
-    -webkit-text-stroke: 1.25px $opaque-button-border-color;
-    font-weight: 800;
-    font-size: 2.25em;
-}
 
 .text-entry {
   	padding: 6px 10px !important;
-    border: 2px solid #D6D3CD !important;
-    background-color: #D6D3CD !important;
+    border: 2px solid $name-input-border-color !important;
+    background-color: $name-input-background-color !important;
     border-radius: 7px !important;
     color: #1B1E1F !important;
     outline: none !important;

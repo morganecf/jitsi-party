@@ -1,0 +1,72 @@
+.poke {
+    position: absolute;
+    color: $poke-color;
+    background: $poke-background-color;
+    box-shadow: 2px 2px 4px black;
+}
+
+.poke-button {
+    animation: flash linear .666s 2;
+}
+
+.poke-options {
+    bottom: 85px;
+    padding: 10px 15px;
+    max-height: 80%;
+    overflow-y: auto;
+
+    .poke-header {
+        font-size: smaller;
+        margin-bottom: 10px;
+    }
+
+    .room-user {
+        margin-top: 5px;
+        justify-content: space-between;
+
+        img {
+            max-height: 30px;
+        }
+    }
+
+    .poke-user-button {
+        border: none;
+        padding: 0;
+        margin: 0 0 0 40px;
+        background: none;
+        color: $link-color;
+
+        svg {
+            padding: 0;
+            margin: 0;
+        }
+
+        &:hover {
+            background: none;
+            color: $accent-color;
+        }
+    }
+}
+
+.poke-notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    animation: slide-in 0.3s forwards;
+    -webkit-animation: slide-in 0.3s forwards;
+
+    @keyframes slide-in {
+        100% { transform: translateY(0%); }
+    }
+
+    .poke-icon {
+        color: $accent-color;
+        margin: 5px 15px 0 5px;
+    }
+}

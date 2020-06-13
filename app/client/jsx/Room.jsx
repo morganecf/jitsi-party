@@ -12,6 +12,7 @@ import EventList from './EventList.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
+import { PokeNotification } from './Poke.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
 import Config from './Config.jsx'
@@ -30,8 +31,6 @@ class Room extends Component {
     constructor(props) {
         super(props)
 
-        const { room, entered } = this.props.currentRoom
-
         this.useLocalSessions = Config.useLocalSessions || false
 
         // These are the room types for which we show the map button
@@ -48,14 +47,17 @@ class Room extends Component {
         }
 
         this.state = {
-            room,
+            room: this.props.currentRoom.room,
             entered: false,
             users: []
         }
 
         this.socketApi = new WebSocketApi()
-        this.socketApi.startPinging(this.props.user.userId)
+        this.socketApi.startPinging(this.props.user.id)
         this.socketApi.on('user-event', this.props.updateUsers.bind(this))
+        this.socketApi.on(`poke-${this.props.user.id}`, this.handlePoke.bind(this))
+        
+        this.computePokeUnlockedState()
     }
 
     getRoomData() {
@@ -112,7 +114,7 @@ class Room extends Component {
 
     onAdventureClick(room) {
         this.setState({ room, entered: true })
-        this.props.updateCurrentRoom({ room, entered: true })
+        this.socketApi.enterRoom(this.props.user, room)
     }
 
     updateRoom(room) {
@@ -192,6 +194,27 @@ class Room extends Component {
         }
     }
 
+    computePokeUnlockedState() {
+        if (Config.poke) {
+            if (this.useLocalSessions && LocalStorage.get('POKE_UNLOCKED')) {
+                this.props.unlockPoking()
+            } else {
+                const timeout = parseFloat(Config.poke.unlockAfterMinutes) * 60 * 1000
+                setTimeout(() => {
+                    this.props.unlockPoking()
+                    LocalStorage.set('POKE_UNLOCKED', true)
+                }, timeout)
+            }
+        }
+    }
+
+    handlePoke(pokeData) {
+        this.setState({ pokeData })
+        setTimeout(() => {
+            this.setState({ pokeData: null })
+        }, 5000)
+    }
+
     render() {
         if (Object.keys(this.props.rooms).length === 0) {
             // room config not loaded yet
@@ -230,6 +253,7 @@ class Room extends Component {
                     onClick={this.onSwitchRoom.bind(this)}
                     showMapButton={mapState.mapVisible}
                     showMapTooltip={mapState.showMapTooltip}
+                    hideSettings={room.type === 'adventure'}
                     handleOpenMap={this.handleOpenMap.bind(this)}
                     handleOpenEvents={this.handleOpenEvents.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
@@ -245,13 +269,14 @@ class Room extends Component {
                     className="event-modal">
                         <EventList rooms={this.props.rooms} events={this.props.events}></EventList>
                 </Modal>
+                {!!this.state.pokeData && <PokeNotification {...this.state.pokeData} />}
             </div>
         )
     }
 }
 
 export default connect(state => state, {
-    addRooms: reducers.addRoomsActionCreator,
     updateUsers: reducers.updateUsersActionCreator,
-    updateCurrentRoom: reducers.updateCurrentRoomActionCreator
+    updateCurrentRoom: reducers.updateCurrentRoomActionCreator,
+    unlockPoking: reducers.unlockPokingActionCreator 
 })(Room)

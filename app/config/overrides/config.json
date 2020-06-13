@@ -1,13 +1,14 @@
 {
 	"debug": true,
-	"mapUnlockThreshold": 3,
-	"useLocalSessions": true,
+	"mapUnlockThreshold": 0,
+	"useLocalSessions": false,
+	"startRoom": "vestibule",
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
-		"backgroundImagePath": "./js/images/cabinfeverhighres.png",
+		"backgroundImagePath": "./js/images/bauhaus_darker.jpg",
 		"enterSpaceButtonText": "Party!",
 		"avatarSelectionText": "Pick your puck",
-		"headerHtml": "<br/><p class='serif'>You've met with a terrible fate, haven't you?</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>"
+		"headerHtml": "<br/><div class='bauhaus'><p>This is indeed a disturbing universe.</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>"
 	},
 	"avatars": {
 	  "normal": {
@@ -69,6 +70,16 @@
 					"match": ["bathroom"]
 				}
 			]
-		}
+		},
+		"scaleBy": "opacity"
+	},
+	"poke": {
+		"text": "Zap someone",
+		"fontAwesomeIcon": "bolt",
+		"fromText": "{user} has zapped you!",
+		"toText": "Zapped!",
+		"unlockText": "You have unlocked the ability to zap",
+		"selfPoke": "Ouch",
+		"unlockAfterMinutes": 0.2
 	}
 }
