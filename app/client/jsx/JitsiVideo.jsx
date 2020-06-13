@@ -84,9 +84,11 @@ class JitsiVideo extends Component {
                 toolbarButtons = _.without(this.toolbarButtons, 'microphone')
             }
 
-            const domain = 'party.gbre.org/jitsi/'
+            // const domain = 'party.gbre.org/jitsi/'
             // const domain = 'meet.jit.si';
+            const domain = `${window.location.host}/jitsi/`
             const options = {
+                noSSL: true,
                 roomName: this.props.jitsiData.roomName,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
