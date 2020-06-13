@@ -84,9 +84,9 @@ class JitsiVideo extends Component {
                 toolbarButtons = _.without(this.toolbarButtons, 'microphone')
             }
 
-            let domain = `${window.location.host}/jitsi/`
-            if (Config.jitsiServerUrl) {
-                domain = Config.jitsiServerUrl
+            let domain = Config.jitsiServerUrl
+            if (Config.overrideJitsiServerUrlWithWindowHost) {
+                domain = `${window.location.host}/jitsi/`
             }
 
             const options = {

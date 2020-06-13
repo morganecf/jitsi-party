@@ -2,6 +2,7 @@
 	"debug": true,
 	"mapUnlockThreshold": 3,
 	"jitsiServerUrl": "meet.jit.si",
+	"overrideJitsiServerUrlWithWindowHost": false,
 	"noJitsiServerSSL": false,
 	"useLocalSessions": true,
 	"welcomePage": {
