@@ -78,7 +78,10 @@ class Navigation extends Component {
     render() {
         const onClick = this.props.onClick
         const { north, south, east, west } = this.props.directions || {}
-        const mapButtonClass = this.props.showMapTooltip ? "map-button animated" : "map-button"
+        
+        const mapButtonClass = this.props.showMapTooltip ? 'map-button animated' : 'map-button'
+        const pokeButtonClass = this.state.showPokeOptions ? 'poke-button focused' : 'poke-button'
+
         const room = this.props.currentRoom.room
         const audio = this.props.rooms[room].audio
         const events = this.props.events
@@ -106,7 +109,7 @@ class Navigation extends Component {
                     </div>
                     <div className="poke-button-container">
                         {Config.poke && this.props.isPokingUnlocked &&
-                            <button className="poke-button" onClick={this.handleClickPokeButton.bind(this)}>
+                            <button className={pokeButtonClass} onClick={this.handleClickPokeButton.bind(this)}>
                                 <FontAwesomeIcon icon={Config.poke.fontAwesomeIcon} />
                             </button>
                         }
