@@ -1,3 +1,4 @@
 {
-	"debug": false
+	"debug": false,
+	"jitsiServerUrl": "party.gbre.org/jitsi/"
 }
