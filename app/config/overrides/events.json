@@ -5,7 +5,7 @@
             "description": "We'll start with sunny house and downbeat, then see if things change",
             "room": "livingRoom",
             "start": "2020-06-13T20:30:00-04:00",
-            "end": "2020-06-14T12:00:00-04:00",
+            "end": "2020-06-14T00:03:00-04:00",
             "image": "js/images/events/midnight-sun.png"
         },
         {
@@ -34,10 +34,10 @@
         },
         {
             "name": "Invisible Cities",
-            "description": "Jett reads from Invisible Cities",
+            "description": "Jett reads",
             "room": "library",
-            "start": "2020-06-13T21:00:00-04:00",
-            "end": "2020-06-13T22:00:00-04:00",
+            "start": "2020-06-13T22:00:00-04:00",
+            "end": "2020-06-13T23:00:00-04:00",
             "image": "js/images/events/invisible-cities-2.png"
         }
     ]
