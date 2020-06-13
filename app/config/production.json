@@ -1,5 +1,5 @@
 {
 	"debug": false,
 	"noJitsiServerSSL": false,
-	"overrideJitsiServerUrlWithWindowHost": false
+	"overrideJitsiServerUrlWithWindowHost": true
 }
