@@ -20,7 +20,17 @@
         display: flex;
         flex-direction: row;
         justify-content: start;
+
+        button {
+            width: 47px;
+            height: 47px;
+
+            svg {
+                margin: 0;
+            }
+        }
     }
+
 
     button:disabled {
         opacity: 0;
