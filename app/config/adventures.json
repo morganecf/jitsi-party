@@ -1,3 +1,54 @@
 {
-	"adventures": {}
+	"adventures": {
+		"outdoorsAdventure": {
+			"outdoors": {
+				"name": "The Street",
+				"type": "adventure",
+				"text": "You can see the subway station down the block. But are you sure you want to go home already? Why don't you pop into a random room instead?",
+				"buttons": [
+					{
+						"text": "I take it back. Teleport me!!",
+                        "nextRoom": "*"
+                    },
+                    {
+                        "text": "Let me get on that damn train >:(",
+                        "nextRoom": "bye"
+                    }
+                ]
+			}
+		},
+		"basementAdventure": {
+			"basementDoor": {
+				"name": "A Creepy-looking Basement",
+				"text": "Are you sure you should be going down here?",
+				"buttons": [
+					{
+						"text": "On second thought, maybe not.",
+						"nextRoom": "mcsw-lounge"
+					},
+					{
+						"text": "Don't tell me what to do",
+						"nextRoom": "basementStaircase"
+					}
+				]
+			},
+			"basementStaircase": {
+				"text": "A dusty staircase leads downward into darkness. The light from upstairs barely penetrates into the gloom. As you put your foot on the first step, it creaks loudly under you.",
+				"buttons": [
+					{
+						"text": "Walk down",
+						"nextRoom": [
+							"basementWorkshop",
+							"basementAbyss",
+							"basementPantry"
+						]
+					},
+					{
+						"text": "Go back upstairs",
+						"nextRoom": "mcsw-lounge"
+					}
+				]
+			}
+		}
+	}
 }
