@@ -48,7 +48,59 @@
 						"nextRoom": "mcsw-lounge"
 					}
 				]
-			}
+			},
+			"basementWorkshop": {
+				"text": "Stumbling through the dark (why didn't you turn on a light?), you walk face-first into a table saw. Looking around you, you can barely make out tools on the walls. You must be in an old workshop...",
+				"buttons": [
+					{
+						"text": "Power tools in the dark? What could go wrong!",
+						"nextRoom": [
+							"basementInjury",
+							"basementWoodenDuck"
+						]
+					},
+					{
+						"text": "This is a bad idea, I should go back upstairs.",
+						"nextRoom": [
+							"basementLost",
+							"mcsw-lounge"
+						]
+					},
+					{
+						"text": "Wait a minute, what was that sound?",
+						"nextRoom": "basementSound"
+					}
+				]
+			},
+			"basementAbyss": {
+				"text": "You walk blindly, following the wall with your hand, until suddenly there is no more wall. You feel around you desperately -- but everything seems to have disappeared. It's pitch black, like you're in an abyss.",
+				"buttons": [
+					{
+						"text": "Scream for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					},
+					{
+						"text": "Close your eyes and think happy thoughts.",
+						"nextRoom": "mcsw-puppies"
+					}
+				]
+			},
+			"basementPantry": {
+				"text": "Stumbling through the dark (why didn't you turn on a light?), you step on a mousetrap. OW! Wait a minute -- you're in the pantry! Boxes of food surround you. You are feeling kinda hungry...",
+				"buttons": [
+					{
+						"text": "Gorge on the food.",
+						"nextRoom": "basementAsleep"
+					},
+					{
+						"text": "Don't be rude. There's food upstairs, anyway.",
+						"nextRoom": "mcsw-kitchen"
+					}
+				] 
+			},
 		}
 	}
 }
