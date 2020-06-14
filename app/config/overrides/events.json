@@ -1,16 +1,16 @@
 {
     "events": [
         {
-            "name": "Sun at Midnight",
-            "description": "We'll start with sunny house and downbeat, then see if things change",
+            "name": "DJ Set: Sun at Midnight",
+            "description": "We'll start with some sunny house and downbeat, then see if things change",
             "room": "livingRoom",
             "start": "2020-06-13T20:30:00-04:00",
             "end": "2020-06-14T00:03:00-04:00",
             "image": "js/images/events/midnight-sun.png"
         },
         {
-            "name": "Dave's Rave Cave",
-            "description": "Dark EDM bangers, Marianne dancing",
+            "name": "DJ Set: Dave's Rave Cave",
+            "description": "Dark EDM bangers, Marianne dancing, everyone frothing at the lips",
             "room": "danceParty",
             "start": "2020-06-13T23:00:00-04:00",
             "end": "2020-06-14T01:00:00-04:00",
@@ -34,7 +34,7 @@
         },
         {
             "name": "Invisible Cities",
-            "description": "Jett reads",
+            "description": "Jett reads. Jett reads? Jett reads, wow!",
             "room": "library",
             "start": "2020-06-13T22:00:00-04:00",
             "end": "2020-06-13T23:00:00-04:00",
