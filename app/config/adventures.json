@@ -72,35 +72,6 @@
 					}
 				]
 			},
-			"basementAbyss": {
-				"text": "You walk blindly, following the wall with your hand, until suddenly there is no more wall. You feel around you desperately -- but everything seems to have disappeared. It's pitch black, like you're in an abyss.",
-				"buttons": [
-					{
-						"text": "Scream for help!",
-						"nextRoom": [
-							"basementHelp",
-							"basementSound"
-						]
-					},
-					{
-						"text": "Close your eyes and think happy thoughts.",
-						"nextRoom": "mcsw-puppies"
-					}
-				]
-			},
-			"basementPantry": {
-				"text": "Stumbling through the dark (why didn't you turn on a light?), you step on a mousetrap. OW! Wait a minute -- you're in the pantry! Boxes of food surround you. You are feeling kinda hungry...",
-				"buttons": [
-					{
-						"text": "Gorge on the food.",
-						"nextRoom": "basementAsleep"
-					},
-					{
-						"text": "Don't be rude. There's food upstairs, anyway.",
-						"nextRoom": "mcsw-kitchen"
-					}
-				]
-			},
 			"basementWoodenDuck": {
 				"text": "You actually managed to carve a little wooden duck figurine! Impressive.",
 				"buttons": [
@@ -142,45 +113,7 @@
 					}
 				]
 			},
-			"basementSound": {
-				"text": "You hear a shuffling of feet. Has someone come to help you get out of here? As the sound gets closer, you think you can start to make out a face...",
-				"buttons": [
-					{
-						"text": "Peer into the darkness",
-						"nextRoom": "basementStranger"
-					}
-				]
-			},
-            "basementHelp": {
-				"text": "You feel a hand on your shoulder and spin around -- but it's just your friend. \"What are you doing down here? Come back upstairs to the party!\"",
-				"buttons": [
-					{
-						"text": "Follow your friend",
-						"nextRoom": "mcsw-lounge"
-					}
-				]
-			},
-            "basementAsleep": {
-				"text": "You eat until you can't eat, and then, content, you fall asleep. Time passes -- minutes? Hours? Days? You slowly come back to consciousness, and remember where you are. As you open your eyes, you notice...",
-				"buttons": [
-					{
-						"text": "A noise",
-						"nextRoom": "basementSound"
-					},
-					{
-						"text": "A bright light",
-						"nextRoom": "basementLight"
-					},
-					{
-						"text": "A feeling like someone's staring at you...",
-						"nextRoom": [
-							"basementMom",
-							"basementLin"
-						]
-					}
-				]
-			},
-            "basementStillLost": {
+			"basementStillLost": {
 				"text": "You wander around some more, but can't seem to find your way anywhere.",
 				"buttons": [
 					{
@@ -200,7 +133,41 @@
 					}
 				]
 			},
-            "basementStranger": {
+			"basementAbyss": {
+				"text": "You walk blindly, following the wall with your hand, until suddenly there is no more wall. You feel around you desperately -- but everything seems to have disappeared. It's pitch black, like you're in an abyss.",
+				"buttons": [
+					{
+						"text": "Scream for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					},
+					{
+						"text": "Close your eyes and think happy thoughts.",
+						"nextRoom": "mcsw-puppies"
+					}
+				]
+			},
+			"basementHelp": {
+				"text": "You feel a hand on your shoulder and spin around -- but it's just your friend. \"What are you doing down here? Come back upstairs to the party!\"",
+				"buttons": [
+					{
+						"text": "Follow your friend",
+						"nextRoom": "mcsw-lounge"
+					}
+				]
+			},
+			"basementSound": {
+				"text": "You hear a shuffling of feet. Has someone come to help you get out of here? As the sound gets closer, you think you can start to make out a face...",
+				"buttons": [
+					{
+						"text": "Peer into the darkness",
+						"nextRoom": "basementStranger"
+					}
+				]
+			},
+			"basementStranger": {
 				"text": "This person looks oddly familiar...",
 				"buttons": [
 					{
@@ -217,7 +184,7 @@
 					}
 				]
 			},
-            "basementMom": {
+			"basementMom": {
 				"text": "It's your mom! Who invited her? She looks at your disapprovingly. \"Honey, you really shouldn't be hiding down in the basement on your own. Go have fun with your friends!\"",
 				"buttons": [
 					{
@@ -226,7 +193,16 @@
 					}
 				]
 			},
-            "basementLin": {
+			"basementMirror": {
+				"text": "Nevermind, that's not your clone -- you're just looking in the mirror. Wait a minute, this isn't the basement -- you've just been in the bathroom with the lights off this whole time!",
+				"buttons": [
+					{
+						"text": "Oh. You should probably go easier on the drugs.",
+						"nextRoom": "mcsw-bathroom"
+					}
+				]
+			},
+			"basementLin": {
 				"text": "It's 3-time-Tony-award-winning, Broadway-musical-composing, How-I-Met-Your-Mother-cameoing Lin Manuel Miranda! How are you going to impress him?",
 				"buttons": [
 					{
@@ -239,14 +215,65 @@
 					}
 				]
 			},
-            "basementLight": {
-				"text": "Oh, it's your friend, come downstairs to grab more snacks for the party. Well, this is awkward... On the plus side, it's much easier to get around this basement with the lights on!",
+			"basementPerformance": {
+				"text": "Lin Manuel Miranda isn't impressed. Actually, he doesn't seem to react much at all. Wait -- that's not Lin, you've just been rapping at a mannequin. Man, you're really losing it. Oh well. Maybe real people would appreciate your talents better.",
 				"buttons": [
 					{
-					    "text": "Avoid eye contact and go back upstairs",
-					    "nextRoom": "mcsw-lounge"
-                    }
+						"text": "Go perform in the back yard",
+						"nextRoom": "mcsw-yard"
+					}
 				]
+			},
+			"basementHipster": {
+				"text": "Lin Manuel Miranda nods politely, but he's clearly not that interested in this conversation. \"Hey, you should check the art gallery, there's some cool pieces there that you might like\", he says, as he turns and starts walking away. \"Fuckin hipster\", you hear him mumble under his breath. Ouch.",
+				"buttons": [
+					{
+						"text": "Well, maybe you should go look at the art.",
+						"nextRoom": "mcsw-gallery"
+					}
+				]
+			},
+			"basementPantry": {
+				"text": "Stumbling through the dark (why didn't you turn on a light?), you step on a mousetrap. OW! Wait a minute -- you're in the pantry! Boxes of food surround you. You are feeling kinda hungry...",
+				"buttons": [
+					{
+						"text": "Gorge on the food.",
+						"nextRoom": "basementAsleep"
+					},
+					{
+						"text": "Don't be rude. There's food upstairs, anyway.",
+						"nextRoom": "mcsw-kitchen"
+					}
+				] 
+			},
+			"basementAsleep": {
+				"text": "You eat until you can't eat, and then, content, you fall asleep. Time passes -- minutes? Hours? Days? You slowly come back to consciousness, and remember where you are. As you open your eyes, you notice...",
+				"buttons": [
+					{
+						"text": "A noise",
+						"nextRoom": "basementSound"
+					},
+					{
+						"text": "A bright light",
+						"nextRoom": "basementLight"
+					},
+					{
+						"text": "A feeling like someone's staring at you...",
+						"nextRoom": [
+							"basementMom",
+							"basementLin"
+						]
+					}
+				]
+			},
+			"basementLight": {
+				"text": "Oh, it's your friend, come downstairs to grab more snacks for the party. Well, this is awkward... On the plus side, it's much easier to get around this basement with the lights on!",
+				"buttons": [
+                    {
+                        "text": "Avoid eye contact and go back upstairs",
+                        "nextRoom": "mcsw-lounge"
+                    }
+                ]
 			}
 		}
 	}
