@@ -20,7 +20,7 @@
         "courtyardAdventure": {
             "config": {
                 "audio": {
-                    "path": "",
+                    "path": "https://jitsi-party.s3.amazonaws.com/ghostoflove.mp3",
                     "autoPlay": true,
                     "hideControls": true
                 }
