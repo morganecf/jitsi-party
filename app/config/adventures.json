@@ -150,6 +150,35 @@
 						"nextRoom": "basementStranger"
 					}
 				]
+			},
+            "basementHelp": {
+				"text": "You feel a hand on your shoulder and spin around -- but it's just your friend. \"What are you doing down here? Come back upstairs to the party!\"",
+				"buttons": [
+					{
+						"text": "Follow your friend",
+						"nextRoom": "mcsw-lounge"
+					}
+				]
+			},
+            "basementAsleep": {
+				"text": "You eat until you can't eat, and then, content, you fall asleep. Time passes -- minutes? Hours? Days? You slowly come back to consciousness, and remember where you are. As you open your eyes, you notice...",
+				"buttons": [
+					{
+						"text": "A noise",
+						"nextRoom": "basementSound"
+					},
+					{
+						"text": "A bright light",
+						"nextRoom": "basementLight"
+					},
+					{
+						"text": "A feeling like someone's staring at you...",
+						"nextRoom": [
+							"basementMom",
+							"basementLin"
+						]
+					}
+				]
 			}
 		}
 	}
