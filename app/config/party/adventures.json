@@ -268,10 +268,12 @@
 			},
 			"basementLight": {
 				"text": "Oh, it's your friend, come downstairs to grab more snacks for the party. Well, this is awkward... On the plus side, it's much easier to get around this basement with the lights on!",
-				"buttons": {
-					"text": "Avoid eye contact and go back upstairs",
-					"nextRoom": "mcsw-lounge"
-				}
+				"buttons": [
+                    {
+                        "text": "Avoid eye contact and go back upstairs",
+                        "nextRoom": "mcsw-lounge"
+                    }
+                ]
 			}
 		}
 	}
