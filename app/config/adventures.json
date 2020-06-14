@@ -99,8 +99,58 @@
 						"text": "Don't be rude. There's food upstairs, anyway.",
 						"nextRoom": "mcsw-kitchen"
 					}
-				] 
+				]
 			},
+			"basementWoodenDuck": {
+				"text": "You actually managed to carve a little wooden duck figurine! Impressive.",
+				"buttons": [
+					{
+						"text": "You should go show this off upstairs.",
+						"nextRoom": "mcsw-vestibule"
+					}
+				]
+			},
+			"basementInjury": {
+				"text": "Shit! You cut your finger. On second thought, maybe power tools in the dark was a bad idea.",
+				"buttons": [
+					{
+						"text": "Maybe the bathroom upstairs has a first-aid kit.",
+						"nextRoom": [
+							"mcsw-bathroom",
+							"basementLost"
+						]
+					}
+				]
+			},
+			"basementLost": {
+				"text": "Oh no! You seem to have lost your way in the dark.",
+				"buttons": [
+					{
+						"text": "Keep wandering",
+						"nextRoom": [
+							"mcsw-lounge",
+							"basementStillLost",
+							"basementAbyss"
+						]
+					},
+					{
+						"text": "Cry for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					}
+				]
+			},
+			"basementSound": {
+				"text": "You hear a shuffling of feet. Has someone come to help you get out of here? As the sound gets closer, you think you can start to make out a face...",
+				"buttons": [
+					{
+						"text": "Peer into the darkness",
+						"nextRoom": "basementStranger"
+					}
+				]
+			}
 		}
 	}
 }
