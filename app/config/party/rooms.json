@@ -171,6 +171,11 @@
 			},
 			"doorTint": "red",
 			"backgroundImage": "js/images/rooms/yard.jpg"
+		},
+		"bye": {
+			"name": "Bye",
+			"type": "redirect",
+			"route": "/bye"
 		}
 	}
 }

@@ -1,3 +1,19 @@
 {
-	"adventures": {}
+	"adventures": {
+		"outdoors": {
+			"name": "The Street",
+			"type": "adventure",
+			"text": "You can see the subway station down the block. But are you sure you want to go home already? Why don't you pop into a random room instead?",
+			"buttons": [
+                    {
+                        "text": "I take it back. Teleport me!!",
+                        "nextRoom": "*"
+                    },
+                    {
+                        "text": "Let me get on that damn train >:(",
+                        "nextRoom": "bye"
+                    }
+                ]
+		}
+	}
 }
