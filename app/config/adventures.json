@@ -17,6 +17,47 @@
                 ]
             }
         },
+        "courtyardAdventure": {
+            "config": {
+                "audio": {
+                    "path": "",
+                    "autoPlay": true,
+                    "hideControls": true
+                }
+            },
+            "courtyard1": {
+                "name": "A strange door",
+                "text": "There's a door you've never noticed before off the side of this hallway. You heard a slow, grinding, mournful melody on the other side.",
+                "buttons": [
+                    {
+                        "text": "Go through it",
+                        "nextRoom": "courtyard2"
+                    },
+                    {
+                        "text": "Keep walking",
+                        "nextRoom": "cloister"
+                    }
+                ]
+            },
+            "courtyard2": {
+                "name": "Behind the door",
+                "text": "",
+                "buttons": [
+                    {
+                        "text": "",
+                        "nextRoom": ""
+                    },
+                    {
+                        "text": "",
+                        "nextRoom": ""
+                    },
+                    {
+                        "text": "",
+                        "nextRoom": ""
+                    }
+                ]
+            }
+        },
         "closetAdventure": {
             "config": {
                 "audio": {
