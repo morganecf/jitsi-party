@@ -56,7 +56,7 @@
 						"text": "Power tools in the dark? What could go wrong!",
 						"nextRoom": [
 							"basementInjury",
-							"basementWoodenDuck" // TODO
+							"basementWoodenDuck"
 						]
 					},
 					{
@@ -101,7 +101,7 @@
 						"nextRoom": [
 							"mcsw-lounge",
 							"basementStillLost",
-							"basementAbyss",
+							"basementAbyss"
 						]
 					},
 					{
@@ -121,7 +121,7 @@
 						"nextRoom": [
 							"mcsw-lounge",
 							"basementStillLost",
-							"basementAbyss",
+							"basementAbyss"
 						]
 					},
 					{
@@ -145,7 +145,7 @@
 					},
 					{
 						"text": "Close your eyes and think happy thoughts.",
-						"nextRoom": "mcsw-puppies" // TODO
+						"nextRoom": "mcsw-puppies"
 					}
 				]
 			},
