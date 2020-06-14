@@ -73,7 +73,7 @@
            "muteRoom": true,
            "backgroundImage": "js/images/rooms/fvn_stvff_keep_it_pushin.jpg",
            "iframeOptions": {
-               "src": "https://player.twitch.tv/?channel=david_codes&parent=jitsi.gbre.org"
+               "src": "https://player.twitch.tv/?channel=david_codes&parent=cabinweekend.party"
            },
            "directions": {
                "west": "bathroom",
@@ -99,7 +99,7 @@
            "description": "@kadam is DJing all night!",
            "muteRoom": true,
            "iframeOptions": {
-               "src": "https://player.twitch.tv/?channel=kadaminimal&parent=jitsi.gbre.org"
+               "src": "https://player.twitch.tv/?channel=kadaminimal&parent=cabinweekend.party"
            },
            "directions": {
                "south": "danceParty",
@@ -226,7 +226,7 @@
            "type": "iframe",
            "description": "🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰",
            "iframeOptions": {
-               "src": "https://player.twitch.tv/?channel=bunheroes&parent=jitsi.gbre.org"
+               "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
            },
            "directions": {
                "west": "passageway",
@@ -316,7 +316,7 @@
             "name": "Map Room",
             "type": "iframe",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=emilymap&parent=jitsi.gbre.org"
+                "src": "https://player.twitch.tv/?channel=emilymap&parent=cabinweekend.party"
             },
             "directions": {
                 "south": "corridor",
@@ -339,7 +339,7 @@
             "type": "iframe",
             "muteRoom": true,
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=unmemorious&parent=jitsi.gbre.org"
+                "src": "https://player.twitch.tv/?channel=unmemorious&parent=cabinweekend.party"
             },
             "directions": {
                 "west": "mapRoom",
