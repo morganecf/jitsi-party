@@ -4,7 +4,7 @@
            "name": "Vestibule",
            "type": "jitsi",
            "description": "Welcome!",
-           "backgroundImage": "js/images/rooms/vestibule.jpg",
+           "backgroundImage": "js/images/rooms/vestibule.png",
            "directions": {
                "north": "livingRoom",
                "west": "closet",
@@ -27,7 +27,7 @@
            "name": "Closet",
            "type": "jitsi",
            "capacity": 2,
-           "backgroundImage": "js/images/rooms/closet.jpg",
+           "backgroundImage": "js/images/rooms/closet.png",
            "description": "A quiet, cozy closet for two. Shhh.",
            "directions": {
                "east": "vestibule"
@@ -200,7 +200,7 @@
                 }
             },
             "doorTint": "#946EFF",
-            "backgroundImage": "js/images/rooms/baths.png"
+            "backgroundImage": "js/images/rooms/baths.jpg"
         },
        "punishmentCloset": {
            "name": "Punishment Closet",
@@ -290,7 +290,7 @@
                }
            },
            "doorTint": "green",
-           "backgroundImage": "js/images/rooms/kitchen.png"
+           "backgroundImage": "js/images/rooms/kitchen.jpg"
        },
        "corridor": {
             "name": "Haunted Corridor",
