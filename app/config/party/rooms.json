@@ -135,9 +135,10 @@
 		"mcsw-lounge": {
 			"name": "Lounge",
 			"type": "iframe",
-			"description": "A quiet back room to relax with peaceful music.",
+			"description": "A quiet room to relax with peaceful music. At the back of the room, a heavy-looking door looms menacingly.",
 			"directions": {
-				"west": "mcsw-gallery"
+				"west": "mcsw-gallery",
+				"east": "basementDoor"
 			},
 			"iframeOptions": {
 				"src": "https://www.youtube.com/embed/y7e-GC6oGhg?controls=0"
@@ -159,7 +160,8 @@
 			"type": "jitsi",
 			"description": "Enjoy backyard performances from your fellow partygoers -- or start your own!",
 			"directions": {
-				"south": "mcsw-kitchen"
+				"south": "mcsw-kitchen",
+				"east": "mcsw-puppies"
 			},
 			"map": {
 				"x": 15,
@@ -167,11 +169,30 @@
 				"width": 5,
 				"height": 5,
 				"doors": {
-					"south": 15
+					"south": 15,
+					"east": 13
 				}
 			},
 			"doorTint": "red",
 			"backgroundImage": "js/images/rooms/yard.jpg"
+		},
+		"mcsw-puppies": {
+			"name": "The Puppy Pen",
+			"type": "iframe",
+			"description": "holy crap puppies oh my god so cute",
+			"directions": {
+				"west": "mcsw-yard"
+			},
+			"map": {
+				"x": 20,
+				"y": 11,
+				"width": 2,
+				"height": 3,
+				"doors": {
+					"west": 13
+				}
+			},
+			"doorTint": "yellow"
 		},
 		"bye": {
 			"name": "Bye",
