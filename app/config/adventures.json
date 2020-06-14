@@ -40,6 +40,38 @@
                 ]
             },
             "courtyard2": {
+                "name": "A lounge",
+                "text": "You step into an ancient lounge. A burlesque dancer sings through streams of silver dust, entertaining no one. She is backed by an elderly pianist in a crisp royal blue suit.",
+                "buttons": [
+                    {
+                        "text": "You approach the stage",
+                        "nextRoom": "courtyard3"
+                    },
+                    {
+                        "text": "You head to the bar",
+                        "nextRoom": "courtyard4"
+                    },
+                    {
+                        "text": "You approach the pianist",
+                        "nextRoom": "courtyard5"
+                    }
+                ]
+            },
+            "courtyard3": {
+                "name": "The stage",
+                "text": "The burlesque dancer looks down at you, sobbing. I am sorry, she says. I'm so sorry. What do you say?",
+                "buttons": [
+                    {
+                        "text": "It's ok",
+                        "nextRoom": ""
+                    },
+                    {
+                        "text": "It's really not ok",
+                        "nextRoom": ""
+                    }
+                ]
+            },
+            "courtyard3": {
                 "name": "",
                 "text": "",
                 "buttons": [
@@ -50,6 +82,16 @@
                     {
                         "text": "",
                         "nextRoom": ""
+                    }
+                ]
+            },
+            "courtyard3": {
+                "name": "",
+                "text": "",
+                "buttons": [
+                    {
+                        "text": "",
+                        "nextRoom": ""
                     },
                     {
                         "text": "",
@@ -57,7 +99,7 @@
                     }
                 ]
             },
-            "courtyard2": {
+            "courtyard3": {
                 "name": "",
                 "text": "",
                 "buttons": [
