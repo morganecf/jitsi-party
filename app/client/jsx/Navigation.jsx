@@ -97,9 +97,9 @@ class Navigation extends Component {
                                     <FontAwesomeIcon icon={faMap}/>
                                 </button>
                             }
-                            {this.props.showMapTooltip &&
+                            {/* {this.props.showMapTooltip &&
                                 <div className="map-tooltip">you have unlocked the party map!</div>
-                            }
+                            } */}
                         </div>
                         <div className="events-button-container">
                             {events && events.length > 0 &&
