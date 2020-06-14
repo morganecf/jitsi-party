@@ -150,27 +150,57 @@
 				"buttons": [
 					{
 						"text": "\"Mom?\"",
-						"nextRoom": "basementMom", // TODO
+						"nextRoom": "basementMom",
 					},
 					{
 						"text": "Is that... YOUR face?",
 						"nextRoom": [
-							"basementSelf", // TODO
 							"basementMirror"
 						]
 					},
 					{
-						"text": "Lin Manuel Miranda????",
+						"text": "\"Lin Manuel Miranda????\"",
 						"nextRoom": "basementLin" // TODO
 					}
 				]
 			},
-			"basementMirror":{
+			"basementMom": {
+				"text": "\"Honey, you really shouldn't be hiding down in the basement on your own. Go have fun with your friends!\"",
+				"buttons": [
+					{
+						"text": "Oh my GOD Mom what are you even DOING here FINE I'll go back to the party just GO HOME MOM GOD",
+						"nextRoom": "mcsw-gameRoom"
+					}
+				]
+			},
+			"basementMirror": {
 				"text": "Nevermind, that's not your clone -- you're just looking in the mirror. Wait a minute, this isn't the basement -- you've just been in the bathroom with the lights off this whole time!",
 				"buttons": [
 					{
 						"text": "Oh. You should probably go easier on the drugs.",
 						"nextRoom": "bathroom"
+					}
+				]
+			},
+			"basementLin": {
+				"text": "It is! It's 3-time-Tony-award-winning, Broadway-musical-composing, How-I-Met-Your-Mother-cameoing Lin Manuel Miranda! How are you going to impress him?",
+				"buttons": [
+					{
+						"text": "Try to rap Guns and Ships",
+						"nextRoom": "basementPerformance" // TODO
+					},
+					{
+						"text": "Tell him how you were a fan even before Hamilton",
+						"nextRoom": "basementHipster" // TODO
+					}
+				]
+			},
+			"basementPerformance": {
+				"text": "Lin Manuel Miranda isn't impressed. Actually, he doesn't seem to react much at all. Wait -- that's not Lin, you've just been rapping at a mannequin. Oh well. Maybe real people would appreciate your talents better.",
+				"buttons": [
+					{
+						"text": "Go perform in the back yard",
+						"nextRoom": "mcsw-yard"
 					}
 				]
 			},
