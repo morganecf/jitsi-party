@@ -77,7 +77,7 @@
 			"muteRoom": true,
 			"backgroundImage": "js/images/rooms/fvn_stvff_keep_it_pushin.jpg",
 			"iframeOptions": {
-				"src": "https://player.twitch.tv/?channel=david_codes&parent=jitsi.gbre.org"
+				"src": "https://player.twitch.tv/?channel=david_codes&parent=cabinweekend.party"
 			},
 			"directions": {
 				"west": "bathroom",
@@ -104,7 +104,7 @@
 			"muteRoom": true,
 			"backgroundImage": "js/images/rooms/clubpolo.jpg",
 			"iframeOptions": {
-				"src": "https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org"
+				"src": "https://player.twitch.tv/?channel=djdepolo&parent=cabinweekend.party"
 			},
 			"directions": {
 				"south": "danceParty",
@@ -368,7 +368,7 @@
 			"type": "iframe",
 			"description": "🐰 TIPS FOR TREATS: Donate at least $1 to Goddess: The American Stripper to feed Winston & Winona! https://bit.ly/2Wmxn4J 🐰",
 			"iframeOptions": {
-				"src": "https://player.twitch.tv/?channel=bunheroes&parent=jitsi.gbre.org"
+				"src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
 			},
 			"directions": {
 				"west": "kitchen"
