@@ -179,6 +179,26 @@
 						]
 					}
 				]
+			},
+            "basementStillLost": {
+				"text": "You wander around some more, but can't seem to find your way anywhere.",
+				"buttons": [
+					{
+						"text": "Keep wandering",
+						"nextRoom": [
+							"mcsw-lounge",
+							"basementStillLost",
+							"basementAbyss"
+						]
+					},
+					{
+						"text": "Cry for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					}
+				]
 			}
 		}
 	}
