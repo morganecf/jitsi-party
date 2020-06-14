@@ -41,7 +41,7 @@
             },
             "courtyard2": {
                 "name": "A lounge",
-                "text": "You step into an ancient lounge. A burlesque dancer sings through streams of silver dust, entertaining no one. She is backed by an elderly pianist in a crisp royal blue suit.",
+                "text": "You step into an ancient lounge. A burlesque dancer sings on a stage through streams of silver dust, entertaining no one. She is backed by an elderly pianist in a crisp royal blue suit.",
                 "buttons": [
                     {
                         "text": "You approach the stage",
@@ -59,57 +59,39 @@
             },
             "courtyard3": {
                 "name": "The stage",
-                "text": "The burlesque dancer looks down at you, sobbing. I am sorry, she says. I'm so sorry. What do you say?",
+                "text": "The burlesque dancer looks down at you, tears streaming down her cheeks. I am sorry, she says.",
                 "buttons": [
                     {
-                        "text": "It's ok",
-                        "nextRoom": ""
-                    },
-                    {
-                        "text": "It's really not ok",
-                        "nextRoom": ""
+                        "text": "But why?",
+                        "nextRoom": "vestibule"
                     }
                 ]
             },
-            "courtyard3": {
-                "name": "",
-                "text": "",
+            "courtyard4": {
+                "name": "The bar",
+                "text": "The bartender is wearing a white tux. You don't ask, but he tells you anyway: the courtyard is a great place to smoke.",
                 "buttons": [
                     {
-                        "text": "",
-                        "nextRoom": ""
+                        "text": "Ask for a drink",
+                        "nextRoom": "kitchen"
                     },
                     {
-                        "text": "",
-                        "nextRoom": ""
+                        "text": "Go to the courtyard",
+                        "nextRoom": "courtyard"
                     }
                 ]
             },
-            "courtyard3": {
-                "name": "",
-                "text": "",
+            "courtyard5": {
+                "name": "The pianist",
+                "text": "Most seem to have forgotten about us, the pianist says. He doesn't take his eyes off the keys. Will you be back?",
                 "buttons": [
                     {
-                        "text": "",
-                        "nextRoom": ""
+                        "text": "Probably",
+                        "nextRoom": "vestibule"
                     },
                     {
-                        "text": "",
-                        "nextRoom": ""
-                    }
-                ]
-            },
-            "courtyard3": {
-                "name": "",
-                "text": "",
-                "buttons": [
-                    {
-                        "text": "",
-                        "nextRoom": ""
-                    },
-                    {
-                        "text": "",
-                        "nextRoom": ""
+                        "text": "Probably not",
+                        "nextRoom": "bye"
                     }
                 ]
             }
