@@ -40,13 +40,27 @@
                 ]
             },
             "courtyard2": {
-                "name": "Behind the door",
+                "name": "",
                 "text": "",
                 "buttons": [
                     {
                         "text": "",
                         "nextRoom": ""
                     },
+                    {
+                        "text": "",
+                        "nextRoom": ""
+                    },
+                    {
+                        "text": "",
+                        "nextRoom": ""
+                    }
+                ]
+            },
+            "courtyard2": {
+                "name": "",
+                "text": "",
+                "buttons": [
                     {
                         "text": "",
                         "nextRoom": ""
