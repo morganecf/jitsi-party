@@ -199,6 +199,52 @@
 						]
 					}
 				]
+			},
+            "basementStranger": {
+				"text": "This person looks oddly familiar...",
+				"buttons": [
+					{
+						"text": "\"Mom?\"",
+						"nextRoom": "basementMom"
+					},
+					{
+						"text": "Is that... YOUR face?",
+						"nextRoom": "basementMirror"
+					},
+					{
+						"text": "\"Lin Manuel Miranda????\"",
+						"nextRoom": "basementLin"
+					}
+				]
+			},
+            "basementMom": {
+				"text": "It's your mom! Who invited her? She looks at your disapprovingly. \"Honey, you really shouldn't be hiding down in the basement on your own. Go have fun with your friends!\"",
+				"buttons": [
+					{
+						"text": "Oh my GOD Mom what are you even DOING here FINE I'll go back to the party just GO HOME MOM GOD",
+						"nextRoom": "mcsw-gameRoom"
+					}
+				]
+			},
+            "basementLin": {
+				"text": "It's 3-time-Tony-award-winning, Broadway-musical-composing, How-I-Met-Your-Mother-cameoing Lin Manuel Miranda! How are you going to impress him?",
+				"buttons": [
+					{
+						"text": "Try to rap Guns and Ships",
+						"nextRoom": "basementPerformance"
+					},
+					{
+						"text": "Tell him how you were a fan even before Hamilton",
+						"nextRoom": "basementHipster"
+					}
+				]
+			},
+            "basementLight": {
+				"text": "Oh, it's your friend, come downstairs to grab more snacks for the party. Well, this is awkward... On the plus side, it's much easier to get around this basement with the lights on!",
+				"buttons": {
+					"text": "Avoid eye contact and go back upstairs",
+					"nextRoom": "mcsw-lounge"
+				}
 			}
 		}
 	}
