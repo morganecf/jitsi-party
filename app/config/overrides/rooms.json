@@ -265,8 +265,7 @@
                     "east": 15
                 }
             },
-            "doorTint": "#4b0202",
-            "backgroundImage": "js/images/rooms/bunnywedding.jpg"
+            "doorTint": "#4b0202"
         },
        "kitchen": {
            "name": "Kitchen",
