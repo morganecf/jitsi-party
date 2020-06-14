@@ -272,7 +272,7 @@
            "type": "jitsi",
            "description": "The joy, joy, joy of eating someone new!",
            "directions": {
-               "west": "kitchen",
+               "west": "livingRoom",
                "east": "passageway",
                "south": "gameRoom",
                "north": "corridor"
