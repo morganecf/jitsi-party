@@ -8,7 +8,8 @@
 			"directions": {
 				"north": "mcsw-kitchen",
 				"west": "mcsw-closet",
-				"east": "mcsw-gameRoom"
+				"east": "mcsw-gameRoom",
+				"south": "outdoors"
 			},
 			"map": {
 				"x": 16,

@@ -1,12 +1,13 @@
 {
 	"adventures": {
-		"outdoors": {
-			"name": "The Street",
-			"type": "adventure",
-			"text": "You can see the subway station down the block. But are you sure you want to go home already? Why don't you pop into a random room instead?",
-			"buttons": [
-                    {
-                        "text": "I take it back. Teleport me!!",
+		"outdoorsAdventure": {
+			"outdoors": {
+				"name": "The Street",
+				"type": "adventure",
+				"text": "You can see the subway station down the block. But are you sure you want to go home already? Why don't you pop into a random room instead?",
+				"buttons": [
+					{
+						"text": "I take it back. Teleport me!!",
                         "nextRoom": "*"
                     },
                     {
@@ -14,6 +15,180 @@
                         "nextRoom": "bye"
                     }
                 ]
+			}
+		},
+		"basementAdventure": {
+			"basementStaircase": {
+				"name": "Creaky Staircase",
+				"text": "It's dark and dusty. The light from upstairs barely penetrates into the gloom.",
+				"buttons": [
+					{
+						"text": "Walk down",
+						"nextRoom": [
+							"basementWorkshop",
+							"basementAbyss",
+							"basementPantry"
+						]
+					},
+					{
+						"text": "Go back upstairs",
+						"nextRoom": "" // TODO
+					}
+				]
+			},
+			"basementWorkshop": {
+				"text": "Stumbling through the dark (why didn't you turn on a light?), you walk face-first into a table saw. Looking around you, you can barely make out tools on the walls. You must be in an old workshop...",
+				"buttons": [
+					{
+						"text": "Power tools in the dark? What could go wrong!",
+						"nextRoom": [
+							"basementInjury",
+							"basementWoodenDuck" // TODO
+						]
+					},
+					{
+						"text": "This is a bad idea, I should go back upstairs.",
+						"nextRoom": [
+							"basementLost",
+							"lounge"
+						]
+					},
+					{
+						"text": "Wait a minute, what was that sound?",
+						"nextRoom": "basementSound" // TODO
+					}
+				]
+			},
+			"basementInjury": {
+				"text": "Shit! You cut your finger. On second thought, maybe power tools in the dark was a bad idea.",
+				"buttons": [
+					{
+						"text": "Maybe the bathroom upstairs has a first-aid kit.",
+						"nextRoom": [
+							"bathroom",
+							"basementLost"
+						]
+					}
+				]
+			},
+			"basementLost": {
+				"text": "Oh no! You seem to have lost your way in the dark.",
+				"buttons": [
+					{
+						"text": "Keep wandering",
+						"nextRoom": [
+							"lounge",
+							"basementStillLost",
+							"basementAbyss",
+						]
+					},
+					{
+						"text": "Cry for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					}
+				]
+			},
+			"basementStillLost": {
+				"text": "You wander around some more, but can't seem to find your way anywhere.",
+				"buttons": [
+					{
+						"text": "Keep wandering",
+						"nextRoom": [
+							"lounge",
+							"basementStillLost",
+							"basementAbyss",
+						]
+					},
+					{
+						"text": "Cry for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					}
+				]
+			},
+			"basementAbyss": {
+				"text": "You walk blindly, following the wall with your hand, until suddenly there is no more wall. You feel around you desperately -- but everything seems to have disappeared. It's pitch black, like you're in an abyss.",
+				"buttons": [
+					{
+						"text": "Scream for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					},
+					{
+						"text": "Close your eyes and think happy thoughts.",
+						"nextRoom": "puppies" // TODO
+					}
+				]
+			},
+			"basementHelp": {
+				"text": "You feel a hand on your shoulder and spin around -- but it's just your friend. \"What are you doing down here? Come back upstairs to the party!\"",
+				"buttons": [
+					{
+						"text": "Follow your friend",
+						"nextRoom": "lounge"
+					}
+				]
+			},
+			"basementSound": {
+				"text": "You hear a shuffling of feet. Has someone come to help you get out of here? As the sound gets closer, you think you can start to make out a face...",
+				"buttons": [
+					{
+						"text": "Peer into the darkness",
+						"nextRoom": "basementSelf"
+					}
+				]
+			},
+			"basementStranger": {
+				"text": "This person looks oddly familiar...",
+				"buttons": [
+					{
+						"text": "\"Mom?\"",
+						"nextRoom": "basementMom", // TODO
+					},
+					{
+						"text": "Is that... YOUR face?",
+						"nextRoom": [
+							"basementSelf", // TODO
+							"basementMirror"
+						]
+					},
+					{
+						"text": "Lin Manuel Miranda????",
+						"nextRoom": "basementLin" // TODO
+					}
+				]
+			},
+			"basementMirror":{
+				"text": "Nevermind, that's not your clone -- you're just looking in the mirror. Wait a minute, this isn't the basement -- you've just been in the bathroom with the lights off this whole time!",
+				"buttons": [
+					{
+						"text": "Oh. You should probably go easier on the drugs.",
+						"nextRoom": "bathroom"
+					}
+				]
+			},
+			"basementPantry": {
+				"text": "Stumbling through the dark (why didn't you turn on a light?), you step on a mousetrap. OW! Wait a minute -- you're in the pantry! Boxes of food surround you. You are feeling kinda hungry...",
+				"buttons": [
+					{
+						"text": "Gorge on the food.",
+						"nextRoom": "basementAsleep"
+					},
+					{
+						"text": "Don't be rude. There's food upstairs, anyway.",
+						"nextRoom": "kitchen"
+					}
+				] 
+			},
+			"basementBedroom": {}, // TODO
+			"basementAsleep": {} // TODO
 		}
 	}
 }
