@@ -172,13 +172,11 @@
 				"buttons": [
 					{
 						"text": "\"Mom?\"",
-						"nextRoom": "basementMom",
+						"nextRoom": "basementMom"
 					},
 					{
 						"text": "Is that... YOUR face?",
-						"nextRoom": [
-							"basementMirror"
-						]
+						"nextRoom": "basementMirror"
 					},
 					{
 						"text": "\"Lin Manuel Miranda????\"",
