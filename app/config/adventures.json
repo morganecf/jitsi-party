@@ -27,7 +27,7 @@
             },
             "courtyard1": {
                 "name": "A strange door",
-                "text": "There's a door you've never noticed before off the side of this hallway. You heard a slow, grinding, mournful melody on the other side.",
+                "text": "There's a door you've never noticed before in this hallway. You heard a slow, grinding, mournful melody on the other side.",
                 "buttons": [
                     {
                         "text": "Go through it",
