@@ -1,7 +1,7 @@
 {
 	"debug": true,
-	"mapUnlockThreshold": 3,
-	"useLocalSessions": true,
+	"mapUnlockThreshold": 1,
+	"useLocalSessions": false,
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
 		"backgroundColor": "black",
