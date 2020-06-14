@@ -50,7 +50,8 @@
            "directions": {
                "north": "danceParty",
                "south": "vestibule",
-               "west": "trashyBedroom"
+               "west": "trashyBedroom",
+               "east": "kitchen"
            },
            "map": {
                "x": 11,
