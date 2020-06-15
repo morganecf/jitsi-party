@@ -202,10 +202,10 @@
 		"mcsw-gallery1": {
 			"name": "Gallery Room 1",
 			"type": "art",
-			"description": "TODO1",
+			"description": "The Capitol Hill Autonomous Zone, or CHAZ, is a six-block section of downtown Seattle where protestors have taken control and evicted the Seattle PD since June 8. Some people and media outlets have claimed it is lawless, violent and chaotic. This video shows a much more peaceful and beautiful reality.",
 			"art": {
 				"title": "BLM Street Art in the CHAZ",
-				"artist": "TODO2",
+				"artist": "Various",
 				"src": "js/images/art/chaz.gif"
 			},
 			"directions": {
@@ -226,9 +226,8 @@
 		"mcsw-gallery2": {
 			"name": "Gallery Room 2",
 			"type": "art",
-			"description": "Blah TODO",
+			"description": "May 30th, 2020 - NYC - 4 blocks from Union Square",
 			"art": {
-				"title": "May 30th, 2020 - NYC - 4 blocks from Union Square",
 				"artist": "Nick Karp, www.nickkarp.com",
 				"src": "js/images/art/nypd.jpg"
 			},
