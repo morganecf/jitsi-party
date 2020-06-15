@@ -128,7 +128,7 @@
 					"west": 17,
 					"east": 16,
 					"south": 22,
-					"north": 22
+					"north": 23
 				}
 			},
 			"doorTint": "blue",
@@ -213,13 +213,13 @@
 				"north": "mcsw-gallery2"
 			},
 			"map": {
-				"x": 22,
+				"x": 23,
 				"y": 13,
 				"width": 2,
 				"height": 2,
 				"doors": {
-					"south": 22,
-					"north": 23
+					"south": 23,
+					"north": 24
 				}
 			}
 		},
@@ -235,12 +235,12 @@
 				"south": "mcsw-gallery1"
 			},
 			"map": {
-				"x": 22,
+				"x": 23,
 				"y": 11,
 				"width": 2,
 				"height": 2,
 				"doors": {
-					"south": 23
+					"south": 24
 				}
 			}
 		},
