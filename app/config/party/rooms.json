@@ -197,6 +197,52 @@
 			},
 			"doorTint": "yellow"
 		},
+		"mcsw-gallery1": {
+			"name": "Gallery Room 1",
+			"type": "art",
+			"description": "TODO1",
+			"art": {
+				"title": "BLM Street Art in the CHAZ",
+				"artist": "TODO2",
+				"src": "js/images/art/chaz.gif"
+			},
+			"directions": {
+				"south": "mcsw-gallery",
+				"north": "mcsw-gallery2"
+			},
+			"map": {
+				"x": 22,
+				"y": 13,
+				"width": 2,
+				"height": 2,
+				"doors": {
+					"south": 22,
+					"north": 23
+				}
+			}
+		},
+		"mcsw-gallery2": {
+			"name": "Gallery Room 2",
+			"type": "art",
+			"description": "Blah TODO",
+			"art": {
+				"title": "May 30th, 2020 - NYC - 4 blocks from Union Square",
+				"artist": "Nick Karp, www.nickkarp.com",
+				"src": "js/images/art/nypd.jpg"
+			},
+			"directions": {
+				"south": "mcsw-gallery1"
+			},
+			"map": {
+				"x": 22,
+				"y": 11,
+				"width": 2,
+				"height": 2,
+				"doors": {
+					"south": 23
+				}
+			}
+		},
 		"bye": {
 			"name": "Bye",
 			"type": "redirect",
