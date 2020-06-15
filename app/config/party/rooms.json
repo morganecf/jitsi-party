@@ -116,7 +116,8 @@
 			"directions": {
 				"west": "mcsw-kitchen",
 				"east": "mcsw-lounge",
-				"south": "mcsw-gameRoom"
+				"south": "mcsw-gameRoom",
+				"north": "mcsw-gallery1"
 			},
 			"map": {
 				"x": 21,
@@ -126,7 +127,8 @@
 				"doors": {
 					"west": 17,
 					"east": 16,
-					"south": 22
+					"south": 22,
+					"north": 22
 				}
 			},
 			"doorTint": "blue",
