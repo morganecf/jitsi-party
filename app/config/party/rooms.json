@@ -244,6 +244,32 @@
 				}
 			}
 		},
+		"mcsw-gallery3": {
+			"name": "Gallery Room 3",
+			"type": "art",
+			"description": "Some Audio",
+			"art": {
+				"artist": "Someone",
+				"src": "js/images/art/nypd.jpg"
+			},
+			"audio": {
+				"path": "js/audio/harry-potter-theme.mp3",
+				"autoPlay": true,
+				"hideControls": false
+                },
+			"directions": {
+				"south": "mcsw-gallery1"
+			},
+			"map": {
+				"x": 23,
+				"y": 11,
+				"width": 2,
+				"height": 2,
+				"doors": {
+					"south": 24
+				}
+			}
+		},
 		"bye": {
 			"name": "Bye",
 			"type": "redirect",
