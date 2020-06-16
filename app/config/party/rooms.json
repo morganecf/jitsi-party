@@ -232,7 +232,8 @@
 				"src": "js/images/art/nypd.jpg"
 			},
 			"directions": {
-				"south": "mcsw-gallery1"
+				"south": "mcsw-gallery1",
+				"north": "mcsw-gallery3"
 			},
 			"map": {
 				"x": 23,
@@ -240,7 +241,8 @@
 				"width": 2,
 				"height": 2,
 				"doors": {
-					"south": 24
+					"south": 24,
+					"north": 23
 				}
 			}
 		},
@@ -249,24 +251,25 @@
 			"type": "art",
 			"description": "Some Audio",
 			"art": {
-				"artist": "Someone",
-				"src": "js/images/art/nypd.jpg"
+				"title": "\"Song\", From Black to Wack",
+				"artist": "Willi.P, ig: @willip_music",
+				"src": "js/images/art/willip.jpg"
 			},
 			"audio": {
 				"path": "js/audio/harry-potter-theme.mp3",
 				"autoPlay": true,
 				"hideControls": false
-                },
+            },
 			"directions": {
-				"south": "mcsw-gallery1"
+				"south": "mcsw-gallery2"
 			},
 			"map": {
 				"x": 23,
-				"y": 11,
+				"y": 9,
 				"width": 2,
 				"height": 2,
 				"doors": {
-					"south": 24
+					"south": 23
 				}
 			}
 		},
