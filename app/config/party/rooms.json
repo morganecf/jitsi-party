@@ -112,7 +112,7 @@
 		"mcsw-gallery": {
 			"name": "Art Gallery",
 			"type": "jitsi",
-			"description": "The following rooms contain an assortment of art pieces in different media. The only true unifying theme is that it's art that I (Brian) think is cool, or that people I know think is cool. However, I have tried to mostly highlight art by and about Black people and POC. ***NOTE:*** The art in rooms 4-6 focuses on black people who have been murdered, and may be painful or triggering.",
+			"description": "The following rooms contain an assortment of art pieces in different media. The art isn't curated to present any unified theme or message; it's simply a selection of art and artists that I think are cool and powerful. However, I have tried in particular to highlight art by Black people and POC, or related to the ongoing protests for Black lives. ***NOTE:*** The art in rooms 4-6 focuses on Black people who have been murdered, and may be painful or triggering.",
 			"directions": {
 				"west": "mcsw-kitchen",
 				"east": "mcsw-lounge",
@@ -249,14 +249,13 @@
 		"mcsw-gallery3": {
 			"name": "Gallery Room 3",
 			"type": "art",
-			"description": "Some Audio",
 			"art": {
-				"title": "\"Song\", From Black to Wack",
+				"title": "\"Black\", From Black to Wack",
 				"artist": "Willi.P, ig: @willip_music",
 				"src": "js/images/art/willip.jpg"
 			},
 			"audio": {
-				"path": "js/audio/harry-potter-theme.mp3",
+				"path": "js/audio/willip.mp3",
 				"autoPlay": true,
 				"hideControls": false
             },
