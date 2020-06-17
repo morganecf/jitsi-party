@@ -112,7 +112,7 @@
 		"mcsw-gallery": {
 			"name": "Art Gallery",
 			"type": "jitsi",
-			"description": "A quiet bathroom.",
+			"description": "The following rooms contain an assortment of art pieces in different media. The only true unifying theme is that it's art that I (Brian) think is cool, or that people I know think is cool. However, I have tried to mostly highlight art by and about Black people and POC. ***NOTE:*** The art in rooms 4-6 focuses on black people who have been murdered, and may be painful or triggering.",
 			"directions": {
 				"west": "mcsw-kitchen",
 				"east": "mcsw-lounge",
