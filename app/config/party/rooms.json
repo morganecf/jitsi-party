@@ -112,7 +112,7 @@
 		"mcsw-gallery": {
 			"name": "Art Gallery",
 			"type": "jitsi",
-			"description": "The following rooms contain an assortment of art pieces in different media. The art isn't curated to present any unified theme or message; it's simply a selection of art and artists that I think are cool and powerful. However, I have tried in particular to highlight art by Black people and POC, or related to the ongoing protests for Black lives. ***NOTE:*** The art in rooms 4-6 focuses on Black people who have been murdered, and may be painful or triggering.",
+			"description": "The following rooms contain a few art pieces in different media. The art isn't curated to present any unified theme or message; it's simply a selection of art and artists that I think are cool and powerful. However, I have tried in particular to highlight art by Black people and POC, and/or related to the ongoing protests for Black lives.",
 			"directions": {
 				"west": "mcsw-kitchen",
 				"east": "mcsw-lounge",
@@ -202,9 +202,9 @@
 		"mcsw-gallery1": {
 			"name": "Gallery Room 1",
 			"type": "art",
-			"description": "The Capitol Hill Autonomous Zone, or CHAZ, is a six-block section of downtown Seattle where protestors have taken control and evicted the Seattle PD since June 8.\nSome people and media outlets have claimed it is lawless, violent, and chaotic. This video shows a much more peaceful and beautiful reality.",
+			"description": "The Capitol Hill Autonomous Zone (CHAZ), also known as the Capitol Hill Occupied Protest (CHOP), is a six-block section of downtown Seattle where protestors have taken control and evicted the Seattle PD since June 8.",
 			"art": {
-				"title": "BLM Street Art in the CHAZ",
+				"title": "Black Lives Matter street mural in the CHAZ",
 				"artist": "Various",
 				"src": "js/images/art/chaz.gif"
 			},
@@ -260,7 +260,8 @@
 				"hideControls": false
             },
 			"directions": {
-				"south": "mcsw-gallery2"
+				"south": "mcsw-gallery2",
+				"east": "mcsw-gallery-exit"
 			},
 			"map": {
 				"x": 23,
@@ -268,10 +269,31 @@
 				"width": 2,
 				"height": 2,
 				"doors": {
+					"south": 23,
+					"east": 9
+				}
+			}
+		},
+		"mcsw-gallery-exit": {
+			"name": "Gallery Exit",
+			"type": "content",
+			"description": "Thank you for visiting the art gallery! You can exit below into the Lounge. While I couldn't get permission to include all of the art that I wanted to, I strongly recommend you also check out these AMAZING artists on Instagram: @nikkolas_smith, @broobs.psd, and @ayy.bee.",
+			"directions": {
+				"west": "mcsw-gallery3",
+				"south": "mcsw-lounge"
+			},
+			"map": {
+				"x": 25,
+				"y": 9,
+				"width": 2,
+				"height": 6,
+				"doors": {
+					"west": 9,
 					"south": 23
 				}
 			}
 		},
+		""
 		"bye": {
 			"name": "Bye",
 			"type": "redirect",
