@@ -10,10 +10,10 @@ source venv/bin/activate
 cd app/
 source setup.sh
 flask create-db
-flask run-eventlet &
+flask run-eventlet &> ~/tmp/flask-log.txt &
 
 cd client/
-bash run.sh &
+bash run.sh &> ~/tmp/run-log.txt &
 
 cd ~/jitsi-party/landing
 bash update-landing.sh up

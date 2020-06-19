@@ -2,6 +2,10 @@
 cd ~/jitsi-party/landing
 bash update-landing.sh down
 
+# Save the log files
+cp ~/tmp/flask-log.txt ~/tmp/last/flask-log.txt
+cp ~/tmp/run-log.txt ~/tmp/last/run-log.txt
+
 # Shut down flask
 sudo pkill -x "flask"
 
