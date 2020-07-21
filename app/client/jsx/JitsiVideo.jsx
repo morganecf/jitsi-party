@@ -95,7 +95,7 @@ class JitsiVideo extends Component {
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
                     // filmStripOnly: true,
-                    SHOW_JITSI_WATERMARK: true,
+                    SHOW_JITSI_WATERMARK: false,
                     DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
                     SHOW_WATERMARK_FOR_GUESTS: false,
                     TOOLBAR_BUTTONS: toolbarButtons,
