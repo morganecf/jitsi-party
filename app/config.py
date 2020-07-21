@@ -31,6 +31,15 @@ class Config:
     ]]
     OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in ['config.json', 'rooms.json', 'events.json']]
 
+    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_PORT = 465
+    MAIL_USERNAME = os.getenv('MAIL_USERNAME')
+    MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
+
+    # TODO change this to True
+    MAIL_USE_TLS = False
+    MAIL_USE_SSL = True
+
     @staticmethod
     def init_app(app):
         pass
@@ -50,6 +59,10 @@ class Config:
     @property
     def EVENTS(self):
         return self.merged_cfg.get('events', {})
+
+    @property
+    def MODERATOR_EMAILS(self):
+        return self.merged_cfg.get('moderatorEmails')
 
 
 class DevelopmentConfig(Config):

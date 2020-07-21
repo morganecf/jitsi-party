@@ -3,6 +3,9 @@
 	"mapUnlockThreshold": 0,
 	"useLocalSessions": false,
 	"startRoom": "vestibule",
+	"moderatorEmails": [
+		"morganeciot@gmail.com"
+	],
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
 		"backgroundImagePath": "./js/images/bauhaus_darker.jpg",

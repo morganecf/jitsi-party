@@ -1,16 +1,21 @@
 import os
 import eventlet
+
+eventlet.monkey_patch(socket=False)
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
 from flask_cors import CORS
 from config import config, basedir
+from flask_mail import Mail
 
 
 staticdir = os.path.join(basedir, 'client/js')
 
 db = SQLAlchemy()
 socketio = SocketIO()
+mail = Mail()
 
 # Register socket events with SocketIO instance
 from . import events  # noqa
@@ -36,6 +41,9 @@ def create_app(config_name):
     # Database
     db.init_app(app)
 
+    # Email
+    mail.init_app(app)
+
     # SocketIO
     queue = app_config.MESSAGE_QUEUE
     socketio.init_app(app, cors_allowed_origins='*', message_queue=queue)
@@ -44,6 +52,5 @@ def create_app(config_name):
 
 
 def run_eventlet(app):
-    eventlet.monkey_patch()
     socketio.init_app(app, async_mode="eventlet")
     socketio.run(app, host='0.0.0.0', port=os.getenv('FLASK_RUN_PORT'))

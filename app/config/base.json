@@ -5,6 +5,7 @@
 	"overrideJitsiServerUrlWithWindowHost": false,
 	"noJitsiServerSSL": false,
 	"useLocalSessions": true,
+	"moderatorEmails": [],
 	"startRoom": "vestibule",
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
