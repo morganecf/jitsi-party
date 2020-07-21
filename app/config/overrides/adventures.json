@@ -1,0 +1,280 @@
+{
+	"adventures": {
+		"outdoorsAdventure": {
+			"outdoors": {
+				"name": "The Street",
+				"type": "adventure",
+				"text": "You can see the subway station down the block. But are you sure you want to go home already? Why don't you pop into a random room instead?",
+				"buttons": [
+					{
+						"text": "I take it back. Teleport me!!",
+                        "nextRoom": "*"
+                    },
+                    {
+                        "text": "Let me get on that damn train >:(",
+                        "nextRoom": "bye"
+                    }
+                ]
+			}
+		},
+		"basementAdventure": {
+			"basementDoor": {
+				"name": "A Creepy-looking Basement",
+				"text": "Are you sure you should be going down here?",
+				"buttons": [
+					{
+						"text": "On second thought, maybe not.",
+						"nextRoom": "mcsw-lounge"
+					},
+					{
+						"text": "Don't tell me what to do",
+						"nextRoom": "basementStaircase"
+					}
+				]
+			},
+			"basementStaircase": {
+				"text": "A dusty staircase leads downward into darkness. The light from upstairs barely penetrates into the gloom. As you put your foot on the first step, it creaks loudly under you.",
+				"buttons": [
+					{
+						"text": "Walk down",
+						"nextRoom": [
+							"basementWorkshop",
+							"basementAbyss",
+							"basementPantry"
+						]
+					},
+					{
+						"text": "Go back upstairs",
+						"nextRoom": "mcsw-lounge"
+					}
+				]
+			},
+			"basementWorkshop": {
+				"text": "Stumbling through the dark (why didn't you turn on a light?), you walk face-first into a table saw. Looking around you, you can barely make out tools on the walls. You must be in an old workshop...",
+				"buttons": [
+					{
+						"text": "Power tools in the dark? What could go wrong!",
+						"nextRoom": [
+							"basementInjury",
+							"basementWoodenDuck"
+						]
+					},
+					{
+						"text": "This is a bad idea, I should go back upstairs.",
+						"nextRoom": [
+							"basementLost",
+							"mcsw-lounge"
+						]
+					},
+					{
+						"text": "Wait a minute, what was that sound?",
+						"nextRoom": "basementSound"
+					}
+				]
+			},
+			"basementWoodenDuck": {
+				"text": "You actually managed to carve a little wooden duck figurine! Impressive.",
+				"buttons": [
+					{
+						"text": "You should go show this off upstairs.",
+						"nextRoom": "mcsw-vestibule"
+					}
+				]
+			},
+			"basementInjury": {
+				"text": "Shit! You cut your finger. On second thought, maybe power tools in the dark was a bad idea.",
+				"buttons": [
+					{
+						"text": "Maybe the bathroom upstairs has a first-aid kit.",
+						"nextRoom": [
+							"mcsw-bathroom",
+							"basementLost"
+						]
+					}
+				]
+			},
+			"basementLost": {
+				"text": "Oh no! You seem to have lost your way in the dark.",
+				"buttons": [
+					{
+						"text": "Keep wandering",
+						"nextRoom": [
+							"mcsw-lounge",
+							"basementStillLost",
+							"basementAbyss"
+						]
+					},
+					{
+						"text": "Cry for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					}
+				]
+			},
+			"basementStillLost": {
+				"text": "You wander around some more, but can't seem to find your way anywhere.",
+				"buttons": [
+					{
+						"text": "Keep wandering",
+						"nextRoom": [
+							"mcsw-lounge",
+							"basementStillLost",
+							"basementAbyss"
+						]
+					},
+					{
+						"text": "Cry for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					}
+				]
+			},
+			"basementAbyss": {
+				"text": "You walk blindly, following the wall with your hand, until suddenly there is no more wall. You feel around you desperately -- but everything seems to have disappeared. It's pitch black, like you're in an abyss.",
+				"buttons": [
+					{
+						"text": "Scream for help!",
+						"nextRoom": [
+							"basementHelp",
+							"basementSound"
+						]
+					},
+					{
+						"text": "Close your eyes and think happy thoughts.",
+						"nextRoom": "mcsw-puppies"
+					}
+				]
+			},
+			"basementHelp": {
+				"text": "You feel a hand on your shoulder and spin around -- but it's just your friend. \"What are you doing down here? Come back upstairs to the party!\"",
+				"buttons": [
+					{
+						"text": "Follow your friend",
+						"nextRoom": "mcsw-lounge"
+					}
+				]
+			},
+			"basementSound": {
+				"text": "You hear a shuffling of feet. Has someone come to help you get out of here? As the sound gets closer, you think you can start to make out a face...",
+				"buttons": [
+					{
+						"text": "Peer into the darkness",
+						"nextRoom": "basementStranger"
+					}
+				]
+			},
+			"basementStranger": {
+				"text": "This person looks oddly familiar...",
+				"buttons": [
+					{
+						"text": "\"Mom?\"",
+						"nextRoom": "basementMom"
+					},
+					{
+						"text": "Is that... YOUR face?",
+						"nextRoom": "basementMirror"
+					},
+					{
+						"text": "\"Lin Manuel Miranda????\"",
+						"nextRoom": "basementLin"
+					}
+				]
+			},
+			"basementMom": {
+				"text": "It's your mom! Who invited her? She looks at your disapprovingly. \"Honey, you really shouldn't be hiding down in the basement on your own. Go have fun with your friends!\"",
+				"buttons": [
+					{
+						"text": "Oh my GOD Mom what are you even DOING here FINE I'll go back to the party just GO HOME MOM GOD",
+						"nextRoom": "mcsw-gameRoom"
+					}
+				]
+			},
+			"basementMirror": {
+				"text": "Nevermind, that's not your clone -- you're just looking in the mirror. Wait a minute, this isn't the basement -- you've just been in the bathroom with the lights off this whole time!",
+				"buttons": [
+					{
+						"text": "Oh. You should probably go easier on the drugs.",
+						"nextRoom": "mcsw-bathroom"
+					}
+				]
+			},
+			"basementLin": {
+				"text": "It's 3-time-Tony-award-winning, Broadway-musical-composing, How-I-Met-Your-Mother-cameoing Lin Manuel Miranda! How are you going to impress him?",
+				"buttons": [
+					{
+						"text": "Try to rap Guns and Ships",
+						"nextRoom": "basementPerformance"
+					},
+					{
+						"text": "Tell him how you were a fan even before Hamilton",
+						"nextRoom": "basementHipster"
+					}
+				]
+			},
+			"basementPerformance": {
+				"text": "Lin Manuel Miranda isn't impressed. Actually, he doesn't seem to react much at all. Wait -- that's not Lin, you've just been rapping at a mannequin. Man, you're really losing it. Oh well. Maybe real people would appreciate your talents better.",
+				"buttons": [
+					{
+						"text": "Go perform in the back yard",
+						"nextRoom": "mcsw-yard"
+					}
+				]
+			},
+			"basementHipster": {
+				"text": "Lin Manuel Miranda nods politely, but he's clearly not that interested in this conversation. \"Hey, you should check the art gallery, there's some cool pieces there that you might like\", he says, as he turns and starts walking away. \"Fuckin hipster\", you hear him mumble under his breath. Ouch.",
+				"buttons": [
+					{
+						"text": "Well, maybe you should go look at the art.",
+						"nextRoom": "mcsw-gallery"
+					}
+				]
+			},
+			"basementPantry": {
+				"text": "Stumbling through the dark (why didn't you turn on a light?), you step on a mousetrap. OW! Wait a minute -- you're in the pantry! Boxes of food surround you. You are feeling kinda hungry...",
+				"buttons": [
+					{
+						"text": "Gorge on the food.",
+						"nextRoom": "basementAsleep"
+					},
+					{
+						"text": "Don't be rude. There's food upstairs, anyway.",
+						"nextRoom": "mcsw-kitchen"
+					}
+				] 
+			},
+			"basementAsleep": {
+				"text": "You eat until you can't eat, and then, content, you fall asleep. Time passes -- minutes? Hours? Days? You slowly come back to consciousness, and remember where you are. As you open your eyes, you notice...",
+				"buttons": [
+					{
+						"text": "A noise",
+						"nextRoom": "basementSound"
+					},
+					{
+						"text": "A bright light",
+						"nextRoom": "basementLight"
+					},
+					{
+						"text": "A feeling like someone's staring at you...",
+						"nextRoom": [
+							"basementMom",
+							"basementLin"
+						]
+					}
+				]
+			},
+			"basementLight": {
+				"text": "Oh, it's your friend, come downstairs to grab more snacks for the party. Well, this is awkward... On the plus side, it's much easier to get around this basement with the lights on!",
+				"buttons": [
+                    {
+                        "text": "Avoid eye contact and go back upstairs",
+                        "nextRoom": "mcsw-lounge"
+                    }
+                ]
+			}
+		}
+	}
+}
