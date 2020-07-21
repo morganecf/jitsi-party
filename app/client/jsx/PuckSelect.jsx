@@ -1,37 +1,33 @@
-import React, { Component } from 'react';
-import PuckBox from './PuckBox.jsx';
+import React, { Component } from 'react'
+import PuckBox from './PuckBox.jsx'
 import Config from './Config.jsx'
 
-
 class PuckSelect extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
-    this.state = {
-        columnOpen: false,
-        rowOpen: null,
-        avatarDesign: '',
-        avatarColorway: '',
-        opacity: this.props.opacity
+    this.initialState = {
+      columnOpen: false,
+      rowOpen: null,
+      avatarDesign: '',
+      avatarColorway: '',
+      opacity: this.props.opacity
     }
-    this.onButtonClick = this.onButtonClick.bind(this)
-    this.onButtonClickReset = this.onButtonClickReset.bind(this)
-    this.handleClickDesign = this.handleClickDesign.bind(this)
-    this.handleClickColor = this.handleClickColor.bind(this)
+    this.state = this.initialState
+    this.handleButtonClick = this.handleButtonClick.bind(this)
   }
 
-  onButtonClick() {
-    this.setState({ columnOpen: true }) }
+  handleButtonClick () { this.setState({ columnOpen: true }) }
 
-  onButtonClickReset() {
-    this.setState({ columnOpen: false })
-    this.setState({ rowOpen: null })
-    this.setState({ avatarDesign: '' })
-    this.setState({ avatarColorway: '' })
+  handleButtonClickReset () {
+    this.setState(this.initialState)
     this.setState({ columnOpen: true })
   }
-  handleClickDesign(key, index) {
-    this.setState({ avatarDesign: key, rowOpen: index }) }
-  handleClickColor(variantKey) {
+
+  handleClickDesign (key, index) {
+    this.setState({ avatarDesign: key, rowOpen: index })
+  }
+
+  handleClickColor (variantKey) {
     this.setState({ avatarColorway: variantKey })
     this.props.handleSelect({
       type: this.state.avatarDesign,
@@ -39,70 +35,65 @@ class PuckSelect extends Component {
     })
   }
 
-  render() {
+  render () {
     const avatars = Config.avatars
-    
     if (this.state.avatarColorway === '') { // checks whether selection not yet complete
-
-      // puck list generated from purple of each design
       let allAvatarDesigns = []
       let allColorwayVariants = []
       let fade = this.props.opacity
-
-      if (this.state.columnOpen) { // checks whether selection begun by clicking button, opening column
+      if (this.state.columnOpen) {
         fade = 'fade'
         allAvatarDesigns = Object.keys(avatars).map((key, index) => {
           if (this.state.rowOpen !== index) { // checks each item in column for whether selected
-            let handleClick = () => this.handleClickDesign(key, index)
-            let image_transparency = 'image'
+            let imageTransparency = 'image'
             if (this.state.rowOpen !== null && this.state.rowOpen !== index) {
-              image_transparency = 'non-selected-image'
+              imageTransparency = 'non-selected-image'
             }
-
-            return ( // returns single instance of each nonselected design
+            const handleClick = () => this.handleClickDesign(key, index)
+            return (
               <PuckBox
-              handleClick={handleClick}
-              key={key}
-              image={avatars[key][Object.keys(avatars[key])[0]]}
-              style='box'
-              imageStyle={image_transparency}
+                handleClick={handleClick}
+                key={key}
+                image={avatars[key][Object.keys(avatars[key])[0]]}
+                style='box'
+                imageStyle={imageTransparency}
               />
             )
           } else { // selected design
             allColorwayVariants = Object.keys(avatars[key]).map((variantKey, colorIndex) => {
-              let selected = 'image'
-              let handleClick = () => this.handleClickColor(variantKey, colorIndex)
-              return ( // returns all colorways for selected design
+              const selected = 'image'
+              const handleClick = () => this.handleClickColor(variantKey, colorIndex)
+              return (
                 <PuckBox
-                handleClick={handleClick}
-                key={variantKey}
-                image={avatars[key][variantKey]}
-                imageStyle={selected}
+                  handleClick={handleClick.bind(this)}
+                  key={`${key} ${variantKey}`}
+                  image={avatars[key][variantKey]}
+                  imageStyle={selected}
                 />
               )
             })
             return ( // colorways row in place of selected column item
-              <div key="big-container" className='inner'>
-              {allColorwayVariants}
+              <div key='big-container' className='inner'>
+                {allColorwayVariants}
               </div>
             )
           }
         })
       }
-      return ( // column of singleton nonselected items with at most one of them swapped out for colorway variants row
+      return (
         <div className='outer'>
-        <input className={fade} type="button" onClick={this.onButtonClick} value={Config.welcomePage.avatarSelectionText}/>
-        {allAvatarDesigns}
+          <input className={fade + ' opaque'} type='button' onClick={this.handleButtonClick} value={Config.welcomePage.avatarSelectionText} />
+          {allAvatarDesigns}
         </div>
       )
     } else {
-      return ( // when avatar state isn't null, collapse all and display choice
+      return (
         <div className='outer'>
-          <input className='fade' type="button" onClick={this.onButtonClickReset} value={Config.welcomePage.avatarSelectionText}/>
-          <div className='spacer'/>
-          <div><img className='image' src={avatars[this.state.avatarDesign][this.state.avatarColorway]}/></div>
+          <input className='fade opaque' type='button' onClick={this.handleButtonClickReset} value={Config.welcomePage.avatarSelectionText} />
+          <div className='spacer' />
+          <div><img className='image' src={avatars[this.state.avatarDesign][this.state.avatarColorway]} /></div>
         </div>
-      ) // reselection WIP
+      )
     }
   }
 }

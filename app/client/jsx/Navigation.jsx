@@ -1,17 +1,30 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight, faMap, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import Config from './Config.jsx'
-import AudioPlayer from './AudioPlayer.jsx';
+import AudioPlayer from './AudioPlayer.jsx'
+import { PokeOptions } from './Poke.jsx'
 import reducers from './reducers.jsx'
+import { WebSocketApi } from './WebAPI.jsx'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faArrowUp,
+    faArrowDown,
+    faArrowLeft,
+    faArrowRight,
+    faMap,
+    faCalendar
+} from '@fortawesome/free-solid-svg-icons'
 
 class Navigation extends Component {
     constructor(props) {
         super(props)
 
-        this.socketApi = this.props.socketApi
+        this.state = {
+            showPokeOptions: false
+        }
+
+        this.socketApi = new WebSocketApi()
     }
 
     componentDidMount() {
@@ -50,26 +63,57 @@ class Navigation extends Component {
         this.props.updateRoomAudio(this.props.currentRoom.room, autoPlay)
     }
 
+    handlePoke(user) {
+        this.setState({ showPokeOptions: false })
+        this.socketApi.poke({
+            to: user,
+            from: this.props.user
+        })
+    }
+
+    handleClickPokeButton() {
+        this.setState({ showPokeOptions: !this.state.showPokeOptions })
+    }
+
     render() {
         const onClick = this.props.onClick
         const { north, south, east, west } = this.props.directions || {}
-        const mapButtonClass = this.props.showMapTooltip ? "map-button animated" : "map-button"
+        
+        const mapButtonClass = this.props.showMapTooltip ? 'map-button animated' : 'map-button'
+        const pokeButtonClass = this.state.showPokeOptions ? 'poke-button focused' : 'poke-button'
+
         const room = this.props.currentRoom.room
         const audio = this.props.rooms[room].audio
         const events = this.props.events
+        const users = _.flatten(Object.values(this.props.users))
 
         return (
             <div className="navigation-container">
                 <div className="column settings-container">
                     <div className="map-button-container">
-                        {this.props.showMapButton &&
+                        {this.props.showMapButton && !this.props.hideSettings &&
                             <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
                                 <FontAwesomeIcon icon={faMap}/>
                             </button>
                         }
-                        {this.props.showMapTooltip &&
+                        {/* {this.props.showMapTooltip &&
                             <div className="map-tooltip">you have unlocked the party map!</div>
+                        } */}
+                    </div>
+                    <div className="events-button-container">
+                        {events && events.length > 0 && !this.props.hideSettings &&
+                            <button className="events-button" onClick={this.props.handleOpenEvents.bind(this)}>
+                                <FontAwesomeIcon icon={faCalendar}/>
+                            </button>
                         }
+                    </div>
+                    <div className="poke-button-container">
+                        {Config.poke && this.props.isPokingUnlocked && !this.props.hideSettings &&
+                            <button className={pokeButtonClass} onClick={this.handleClickPokeButton.bind(this)}>
+                                <FontAwesomeIcon icon={Config.poke.fontAwesomeIcon} />
+                            </button>
+                        }
+                        {this.state.showPokeOptions && <PokeOptions users={users} handlePoke={this.handlePoke.bind(this)} />}
                     </div>
                     <div className="audio-button-container">
                         {audio &&
@@ -79,13 +123,6 @@ class Navigation extends Component {
                                 hide={audio.hideControls}
                                 onChange={this.handleAudioChanged.bind(this)}>
                             </AudioPlayer>
-                        }
-                    </div>
-                    <div className="events-button-container">
-                        {events && events.length > 0 &&
-                            <button className="events-button" onClick={this.props.handleOpenEvents.bind(this)}>
-                                <FontAwesomeIcon icon={faCalendar}/>
-                            </button>
                         }
                     </div>
                 </div>

@@ -25,7 +25,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $link-color;
   text-decoration: none;
 
   @include on-event {
@@ -35,6 +35,10 @@ a {
 }
 
  body {
+  background: linear-gradient(300deg, $background-color 10%, lighten($background-color, 5%) 90%);
+  background-attachment: fixed;
+  min-height: 100vh;
+
  	.container {
 		max-width: 100%;
 		padding-left: 0;

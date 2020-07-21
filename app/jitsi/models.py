@@ -94,7 +94,7 @@ class User(db.Model, SerializerMixin):
 
     def to_json(self):
         return {
-            'userId': self.id,
+            'id': self.id,
             'username': self.username,
             'avatar': self.avatar,
             'lastSeen': self.last_seen

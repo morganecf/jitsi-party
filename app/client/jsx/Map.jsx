@@ -103,7 +103,9 @@ class Map extends Component {
 
     render() {
         if (this.map) {
-            this.map.update(this.props.users)
+            this.map.update(
+                _.pickBy(this.props.users,  (val, key) => key !== 'hallway')
+            )
         }
         
         const roomId = this.state.highlighted
@@ -118,7 +120,6 @@ class Map extends Component {
             <div className="map">
                 <div className="map-header">
                     {this.getGlobalStats()}
-                    <div className="map-header-tagline">Hover over rooms to see who's where!</div>
                     <button className="map-close-button" onClick={this.props.handleCloseMap}>
                         <FontAwesomeIcon icon={faTimes}/>
                     </button>

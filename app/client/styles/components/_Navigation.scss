@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     padding: 8px 50px;
-    background-color: #191b1c;
+    background-color: $background-color-dark;
 
     .column {
         flex: 1;
@@ -20,7 +20,12 @@
         display: flex;
         flex-direction: row;
         justify-content: start;
+
+        button svg {
+            margin: 0;
+        }
     }
+
 
     button:disabled {
         opacity: 0;

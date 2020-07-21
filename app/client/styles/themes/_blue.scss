@@ -1,0 +1,43 @@
+$neutral: #c3bab3;
+$accent-color: #ff7511;
+$light-blue: #5294E2;
+
+$background-color:#1b2733;
+$background-color-dark: darken(#1b2733, 2%);
+
+$room-content-background-color: #373D48;
+$text-color: $neutral;
+$link-color: $light-blue;
+
+$disabled-text-color: color("grey-700");
+$disabled-background-color: color("grey-500");
+
+$map-unvisited-color: $background-color;
+$map-room-stroke-color: #657a91;
+$map-highlight-stroke: #657a91;
+
+$opaque-button-background-color: $light-blue;
+$opaque-button-text-color: white;
+$opaque-button-border-color: $light-blue;
+
+$focused-button-background-color: $light-blue;
+$focused-button-text-color: #fff;
+$focused-button-border-color: $light-blue;
+
+$modal-overlay-color: rgba(129, 62, 62, 0.25);
+
+$art-image-border-color: color("grey-50"); //white
+
+.june13 {
+    h1 {
+        margin: -24px 0px 18px 0px;
+        font-weight: 800;
+        font-size: 2.25em;
+        color: white;
+    }
+
+    p {
+        color: #2b0406;
+        font-weight: bold;
+    }
+}
