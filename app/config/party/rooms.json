@@ -202,10 +202,10 @@
 		"mcsw-gallery1": {
 			"name": "Gallery Room 1",
 			"type": "art",
-			"description": "The artists of the individual letters are: (B) @kimishaturner, (L) @perrypants, (A) @onesevennine, (C) @thecurlynugget, (K) @thesoufender, (L) @drakesignanddesign, (I) @stattheartist, (V) @aohamer, (E) @barryjohnson.co, (S) @snekeism, (M) @moses_sun, (A) @artbreakerbt, (TT) @tdubcustoms, (E) @future_crystals, (R) @artvaultseattle. The Capitol Hill Autonomous Zone (CHAZ), also known as the Capitol Hill Occupied Protest (CHOP), is a six-block section of downtown Seattle where protestors have taken control and evicted the Seattle PD since June 8.",
+			"description": "The Capitol Hill Autonomous Zone (CHAZ), also known as the Capitol Hill Occupied Protest (CHOP), is a six-block section of downtown Seattle where protestors have taken control and evicted the Seattle PD since June 8.",
 			"art": {
 				"title": "Black Lives Matter street mural in the CHAZ",
-				"artist": "Various (see below)",
+				"artist": "Various",
 				"src": "js/images/art/chaz.gif"
 			},
 			"directions": {
