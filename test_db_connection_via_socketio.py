@@ -1,12 +1,14 @@
-# Example usage: test_db_connection_via_socketio.py 10 5
-# Runs it 10x (10s), sending 5 events from this client per second, so 50 events total
+# Example usage: python test_db_connection_via_socketio.py 10
+# Sends 10 events per second
 
 import sys
 import time
+import random
 import socketio
 
-NUM_ITERATIONS = int(sys.argv[1])
-EVENTS_PER_SECOND = int(sys.argv[2])
+rooms = ['vestibule', 'closet', 'livingRoom', 'danceParty', 'music', 'bathroom', 'boudoir', 'trashyBedroom', 'bubbleBaths', 'punishmentCloset', 'bunnyRun', 'passageway', 'kitchen', 'corridor', 'mapRoom', 'library', 'gallery', 'cloister', 'gameRoom', 'courtyard', 'bye']
+
+EVENTS_PER_SECOND = int(sys.argv[1])
 
 sio = socketio.Client()
 
@@ -16,11 +18,12 @@ def connect():
 
 sio.connect('http://localhost:3000')
 
-for _ in range(NUM_ITERATIONS):
+while True:
     for _ in range(EVENTS_PER_SECOND):
+        room = random.choice(rooms)
         sio.emit('enter-room', {
             'user': { 'id': 1 },
-            'room': 'vestibule'
+            'room': room
         })
     time.sleep(1)
 
