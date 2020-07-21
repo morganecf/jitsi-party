@@ -69,6 +69,9 @@ def email_moderators():
         params['email'] if params.get('email') else 'Not provided'
     )
     mail.send(message)
+    import time
+    time.sleep(3)
+    x = 5 / 0
     # TODO idk about this response
     return jsonify({
         'message': 'Email was successfully sent'

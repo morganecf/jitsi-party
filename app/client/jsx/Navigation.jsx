@@ -113,7 +113,7 @@ class Navigation extends Component {
                         }
                     </div>
                     <div className="email-button-container">
-                        {!_.isEmpty(Config.moderatorEmails) &&
+                        {Config.moderation && !_.isEmpty(Config.moderation.moderatorEmails) &&
                             <button className="email-button" onClick={handleClickEmail}>
                                 <FontAwesomeIcon icon={faEnvelope}/>
                             </button>

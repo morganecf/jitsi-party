@@ -62,7 +62,7 @@ class Config:
 
     @property
     def MODERATOR_EMAILS(self):
-        return self.merged_cfg.get('moderatorEmails')
+        return self.merged_cfg.get('moderation', {}).get('moderatorEmails')
 
 
 class DevelopmentConfig(Config):

@@ -20,4 +20,23 @@
     .email-form-message .bad-word-count {
         color: $accent-color;
     }
+    .email-status {
+        display: flex;
+        flex-direction: row;
+    }
+    .email-status-label {
+        margin-left: 20px;
+    }
+    .email-status-icon {
+        align-self: center;
+
+        svg {
+            font-size: xx-large;
+        }
+    }
+    .original-message {
+        font-size: smaller;
+        border-left: 10px solid lightgrey;
+        padding: 0 20px;
+    }
 }
