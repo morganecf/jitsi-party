@@ -17,6 +17,11 @@
     input {
         margin-left: 10px;
     }
+    input.bad-email-input, input.bad-email-input:focus {
+        outline: none;
+        border: 2px solid $accent-color !important;
+        border-radius: 5px !important;
+    }
     .email-form-message .bad-word-count {
         color: $accent-color;
     }

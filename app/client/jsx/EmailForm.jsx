@@ -38,6 +38,9 @@ export default ({ user }) => {
     const numWords = message.split(/\s+/).length - 1
     const wordCountClass = numWords < MIN_WORDS || numWords === MAX_WORDS ? 'bad-word-count' : ''
 
+    const emailRegex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
+    const isBadEmailInput = !emailRegex.test(email) && email !== ''
+
     const handleMessageInput = event => {
         if (numWords <= MAX_WORDS) {
             setMessage(event.target.value)
@@ -45,7 +48,6 @@ export default ({ user }) => {
     }
     const handleEmailInput = event => setEmail(event.target.value)
     const handleSubmit = async () => {
-        // TODO email validation
         setSent(true)
         const { success } = await httpApi.emailModerators(message, email, user)
         setStatus(success ? 'succeeded' : 'failed')
@@ -76,10 +78,11 @@ export default ({ user }) => {
                         onChange={handleMessageInput}/>
                 </section>
                 <section className="email-form-email">
-                    <span>Email (optional)</span><input type="email" onChange={handleEmailInput} />
+                    <span>Email (optional)</span>
+                    <input type="email" onChange={handleEmailInput} className={isBadEmailInput ? 'bad-email-input' : ''} />
                 </section>
                 <section className="email-form-button">
-                    <button disabled={numWords < MIN_WORDS || numWords > MAX_WORDS} onClick={handleSubmit}>
+                    <button disabled={numWords < MIN_WORDS || numWords > MAX_WORDS || isBadEmailInput} onClick={handleSubmit}>
                         Send
                     </button>
                 </section>
