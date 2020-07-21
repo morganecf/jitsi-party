@@ -29,9 +29,6 @@ docs/_build/
 .vscode
 venv/
 
-# Windows thumbnails
-Thumbs.db
-
 ###### Auto-generated, can clean this up later ######
 
 # Logs
