@@ -1,10 +1,13 @@
 {
 	"debug": true,
 	"mapUnlockThreshold": 3,
+	"jitsiServerUrl": "meet.jit.si",
+	"overrideJitsiServerUrlWithWindowHost": false,
+	"noJitsiServerSSL": false,
 	"useLocalSessions": true,
+	"startRoom": "vestibule",
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
-		"backgroundColor": "black",
 		"enterSpaceButtonText": "Start",
 		"avatarSelectionText": "Select your Avatar",
 		"headerHtml": "<br><h1>Welcome</h1>"
