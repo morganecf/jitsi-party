@@ -51,9 +51,8 @@ def serve(path):
     return send_from_directory(current_app.static_folder, 'index.html')
 
 
-@main.route('/test_db_ping')
-def test_db_ping():
-    params = request.get_json()['params']
+@main.route('/test_db_write', methods=['POST'])
+def test_db_write():
     user_id = User.query.first()
     room_id = random.choice(Room.query.all()).id
     User.enter_room(user_id, room_id)
