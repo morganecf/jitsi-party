@@ -1,7 +1,6 @@
 import os
 import json
-import random
-from .models import User, Room
+from .models import User
 from datetime import datetime
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
 
@@ -51,9 +50,20 @@ def serve(path):
     return send_from_directory(current_app.static_folder, 'index.html')
 
 
+### Routes used for testing DB connection
+
+import random
+from .models import Room
+from sqlalchemy import func
+
 @main.route('/test_db_write', methods=['POST'])
 def test_db_write():
     user_id = User.query.first().id
     room = random.choice(Room.query.all()).name
     User.enter_room(user_id, room)
     return jsonify({ 'user': user_id, 'room': room })
+
+@main.route('/test_db_read')
+def test_db_read():
+    user = User.query.order_by(func.random()).first
+    return jsonify({ 'user': user.id })
