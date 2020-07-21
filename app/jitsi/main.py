@@ -53,6 +53,7 @@ def serve(path):
 
 @main.route('/test_db_write', methods=['POST'])
 def test_db_write():
-    user_id = User.query.first()
-    room_id = random.choice(Room.query.all()).id
-    User.enter_room(user_id, room_id)
+    user_id = User.query.first().id
+    room = random.choice(Room.query.all()).name
+    User.enter_room(user_id, room)
+    return jsonify({ 'user': user_id, 'room': room })
