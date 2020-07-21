@@ -1,0 +1,68 @@
+// material design colors
+$baseColors: (
+  red: #F44336,
+  pink: #E91E63,
+  purple: #9C27B0,
+  deep-purple: #673AB7,
+  indigo: #3F51B5,
+  blue: #2196F3,
+  light-blue: #03A9F4,
+  cyan: #00BCD4,
+  teal: #009688,
+  green: #4CAF50,
+  light-green: #8BC34A,
+  lime: #CDDC39,
+  yellow: #FFEB3B,
+  amber: #FFC107,
+  orange: #FF9800,
+  deep-orange: #FF5722,
+  brown: #795548,
+  grey: #9E9E9E,
+  blue-grey: #607D8B
+);
+
+// make light/dark gradations of base colors
+@function colorMap($baseColors, $variations) {
+  $colors:();
+  
+  @each $color, $value in $baseColors {
+    $maxVar: 36;
+    $mid: $variations / 2;
+    $dist: $mid - 1;
+    $step: $maxVar / $dist;
+    
+    // lighten and darken
+    @for $i from 1 through $dist {
+      $percent: $maxVar - ($step * ($i - 1));
+      $darken: ($variations - $i) * 100;
+      $lighten: $i * 100;
+
+      $colors: map-merge($colors, (
+         #{$color}-#{$lighten}: lighten($value, $percent),
+         #{$color}-#{$darken}:  darken($value, $percent)
+      ));
+    }
+
+    // middle eg 500
+    $colors: map-merge($colors, (#{$color}-50: lighten($value, 38.7)));
+    $colors: map-merge($colors, (#{$color}-#{$variations/2*100}: $value));
+  }
+  @return $colors;
+}
+
+$material-palette: colorMap($baseColors, 10);
+$custom-palette: (
+	"dark-surface": #121212
+);
+
+$palette: map-merge($custom-palette, $material-palette);
+
+@function color($key) {
+  @if map-has-key($palette, $key) {
+    @return map-get($palette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $palette.";
+  @return null;
+}
+

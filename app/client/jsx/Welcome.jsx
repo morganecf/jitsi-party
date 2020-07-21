@@ -11,7 +11,7 @@ import Config from './Config.jsx'
 class Welcome extends Component {
     constructor(props) {
         super(props)
-        
+
         this.httpApi = new HttpApi()
 
         this.useLocalSessions = Config.useLocalSessions
@@ -87,7 +87,7 @@ class Welcome extends Component {
             const user = {
                 username,
                 avatar,
-                userId: response.userId
+                id: response.id
             }
             this.props.updateUser(user)
             this.handleUserSelected(user)
@@ -109,32 +109,19 @@ class Welcome extends Component {
             return <Redirect to={this.state.redirect}/>
         }
 
-        let textEntry = {
-          padding: '6px 10px',
-          border: '2px solid #D6D3CD',
-          backgroundColor: '#D6D3CD',
-          borderRadius: '7px',
-          color: '#1B1E1F',
-          outline: 'none',
-          boxShadow: 'none',
-          fontSize: '20px'
-        }
-
-        let nameOpacity = 'form-fade'
         let avatarOpacity = 'form-fade'
+        let nameOpacity = 'form-fade'
         let partyOpacity = 'form-fade-party'
-        if (this.state.username === null) { nameOpacity = 'form' }
-        if (this.state.username) { avatarOpacity = 'form' }
-        if (this.state.username && this.state.avatar) { partyOpacity = 'form-party' }
+        if (this.state.username) {
+          avatarOpacity = 'form'
+          if (this.state.username === null) { nameOpacity = 'form' }
+          if (this.state.avatar) { partyOpacity = 'form-party' }
+        }
 
         const config = Config.welcomePage
-        const bgStyle = {
-            backgroundColor: config.backgroundColor
-        }
-
         const splash = config.backgroundImagePath
             ? <img className="splash" src={config.backgroundImagePath}/>
-            : <div className="splash" style={bgStyle}></div>
+            : null
 
         const avatarSelect = this.avatarSelectionEnabled
             ? <PuckSelect opacity={avatarOpacity} handleSelect={this.handleAvatarSelect.bind(this)} />
@@ -145,9 +132,8 @@ class Welcome extends Component {
                 <div className="header" dangerouslySetInnerHTML={{ __html: config.headerHtml }} />
                 {splash}
                 <input
-                    style={textEntry}
                     autoComplete="off"
-                    className={nameOpacity}
+                    className={`text-entry ${nameOpacity}`}
                     type="text"
                     placeholder="Name"
                     name="name"
@@ -157,7 +143,7 @@ class Welcome extends Component {
                 {avatarSelect}
                 <input
                     id='button'
-                    className={partyOpacity}
+                    className={partyOpacity + ' opaque'}
                     type="button"
                     onClick={this.handleReady.bind(this)}
                     value={config.enterSpaceButtonText}

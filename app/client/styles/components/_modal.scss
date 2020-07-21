@@ -1,0 +1,9 @@
+.ReactModal__Content {
+	border: none !important;
+	background: $modal-background-color !important;
+	box-shadow: 2px 2px 4px darken($background-color, 30%);
+}
+.ReactModal__Overlay {
+	z-index: 10;
+	background: $modal-overlay-color !important;
+}

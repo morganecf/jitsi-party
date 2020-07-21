@@ -1,6 +1,6 @@
 import React from 'react'
 import UserList from './UserList.jsx'
-import { formatTime } from './utils.js'
+import { formatEventFromNow } from './utils.js'
 
 export default props => {
     if (!props.room) {
@@ -28,10 +28,11 @@ export default props => {
         const numPeople = props.users.length > 1 ?
             `There are ${props.users.length} people in this room!` :
             'There is one person in this room'
+        const isPrivate = _.has(props.room, 'capacity')
         userContent = (
             <div>
                 <div className="room-info-content">{numPeople}</div>
-                <UserList users={props.users} room={props.room}></UserList>
+                <UserList users={props.users} anonymize={isPrivate}></UserList>
             </div>
         )
     } else {
@@ -50,7 +51,7 @@ export default props => {
                 <ul>
                     {props.events.map((event, i) => (
                         <li key={`announcement-${i}`}>
-                            {`${event.name} @ ${formatTime(event.start)}`}
+                            <b>{event.name}</b> {formatEventFromNow(event)}
                         </li>
                     ))}
                 </ul>

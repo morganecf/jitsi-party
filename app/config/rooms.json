@@ -4,7 +4,7 @@
 			"name": "Foyer",
 			"type": "jitsi",
 			"description": "Welcome!",
-			"backgroundImage": "js/images/rooms/vestibule.jpg",
+			"backgroundImage": "js/images/rooms/vestibule.png",
 			"directions": {
 				"north": "kitchen",
 				"west": "closet",
@@ -26,7 +26,7 @@
 			"name": "Closet",
 			"type": "jitsi",
 			"capacity": 2,
-			"backgroundImage": "js/images/rooms/closet.jpg",
+			"backgroundImage": "js/images/rooms/closet.png",
 			"description": "A quiet, cozy closet. Shhh.",
 			"directions": {
 				"east": "vestibule"

@@ -4,7 +4,7 @@
 			"name": "Vestibule",
 			"type": "jitsi",
 			"description": "Welcome!",
-			"backgroundImage": "js/images/rooms/vestibule.jpg",
+			"backgroundImage": "js/images/rooms/vestibule.png",
 			"directions": {
 				"north": "livingRoom",
 				"west": "closet",
@@ -26,7 +26,7 @@
 			"name": "Closet",
 			"type": "jitsi",
 			"capacity": 2,
-			"backgroundImage": "js/images/rooms/closet.jpg",
+			"backgroundImage": "js/images/rooms/closet.png",
 			"description": "A quiet, cozy closet. Shhh.",
 			"audio": {
 				"path": "js/audio/placebo-room.mp3",
@@ -77,7 +77,7 @@
 			"muteRoom": true,
 			"backgroundImage": "js/images/rooms/fvn_stvff_keep_it_pushin.jpg",
 			"iframeOptions": {
-				"src": "https://player.twitch.tv/?channel=david_codes&parent=jitsi.gbre.org"
+				"src": "https://player.twitch.tv/?channel=david_codes&parent=cabinweekend.party"
 			},
 			"directions": {
 				"west": "bathroom",
@@ -104,7 +104,7 @@
 			"muteRoom": true,
 			"backgroundImage": "js/images/rooms/clubpolo.jpg",
 			"iframeOptions": {
-				"src": "https://player.twitch.tv/?channel=djdepolo&parent=jitsi.gbre.org"
+				"src": "https://player.twitch.tv/?channel=djdepolo&parent=cabinweekend.party"
 			},
 			"directions": {
 				"south": "danceParty",
@@ -368,7 +368,7 @@
 			"type": "iframe",
 			"description": "🐰 TIPS FOR TREATS: Donate at least $1 to Goddess: The American Stripper to feed Winston & Winona! https://bit.ly/2Wmxn4J 🐰",
 			"iframeOptions": {
-				"src": "https://player.twitch.tv/?channel=bunheroes&parent=jitsi.gbre.org"
+				"src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
 			},
 			"directions": {
 				"west": "kitchen"
@@ -407,7 +407,7 @@
 				}
 			},
 			"doorTint": "green",
-			"backgroundImage": "js/images/rooms/kitchen.png"
+			"backgroundImage": "js/images/rooms/kitchen.jpg"
 		},
 		"gameRoom": {
 			"name": "Game Room",
@@ -448,7 +448,7 @@
 				}
 			},
 			"doorTint": "#946EFF",
-			"backgroundImage": "js/images/rooms/baths.png"
+			"backgroundImage": "js/images/rooms/baths.jpg"
 		},
 		"room314": {
 			"backgroundImage": "js/images/rooms/314.png",

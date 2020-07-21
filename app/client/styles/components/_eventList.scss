@@ -1,11 +1,17 @@
 .events-view {
     padding: 30px;
 
+    .events-header {
+        padding: 5px;
+        color: $events-header-color;
+        background: $events-header-background-color;
+    }
+
     .event-list {
         .event-item {
             display: flex;
             justify-content: space-between;
-            background: #303436;
+            background: $room-content-background-color;
             margin: 10px 0;
             border-radius: 5px;
     
