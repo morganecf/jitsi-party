@@ -17,6 +17,85 @@
                 ]
             }
         },
+        "courtyardAdventure": {
+            "config": {
+                "audio": {
+                    "path": "https://jitsi-party.s3.amazonaws.com/ghostoflove.mp3",
+                    "autoPlay": true,
+                    "hideControls": true
+                }
+            },
+            "courtyard1": {
+                "name": "A strange door",
+                "text": "There's a door you've never noticed before in this hallway. You heard a slow, grinding, mournful melody on the other side.",
+                "buttons": [
+                    {
+                        "text": "Go through it",
+                        "nextRoom": "courtyard2"
+                    },
+                    {
+                        "text": "Keep walking",
+                        "nextRoom": "cloister"
+                    }
+                ]
+            },
+            "courtyard2": {
+                "name": "A lounge",
+                "text": "You step into an ancient lounge. A burlesque dancer sings on a stage through streams of silver dust, entertaining no one. She is backed by an elderly pianist in a crisp royal blue suit.",
+                "buttons": [
+                    {
+                        "text": "You approach the stage",
+                        "nextRoom": "courtyard3"
+                    },
+                    {
+                        "text": "You head to the bar",
+                        "nextRoom": "courtyard4"
+                    },
+                    {
+                        "text": "You approach the pianist",
+                        "nextRoom": "courtyard5"
+                    }
+                ]
+            },
+            "courtyard3": {
+                "name": "The stage",
+                "text": "The burlesque dancer looks down at you, tears streaming down her cheeks. I am sorry, she says.",
+                "buttons": [
+                    {
+                        "text": "But why?",
+                        "nextRoom": "vestibule"
+                    }
+                ]
+            },
+            "courtyard4": {
+                "name": "The bar",
+                "text": "The bartender is wearing a white tux. You don't ask, but he tells you anyway: the courtyard is a great place to smoke.",
+                "buttons": [
+                    {
+                        "text": "Ask for a drink",
+                        "nextRoom": "kitchen"
+                    },
+                    {
+                        "text": "Go to the courtyard",
+                        "nextRoom": "courtyard"
+                    }
+                ]
+            },
+            "courtyard5": {
+                "name": "The pianist",
+                "text": "Most seem to have forgotten about us, the pianist says. He doesn't take his eyes off the keys. Will you be back?",
+                "buttons": [
+                    {
+                        "text": "Probably",
+                        "nextRoom": "vestibule"
+                    },
+                    {
+                        "text": "Probably not",
+                        "nextRoom": "bye"
+                    }
+                ]
+            }
+        },
         "closetAdventure": {
             "config": {
                 "audio": {
