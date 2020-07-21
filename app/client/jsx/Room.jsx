@@ -70,7 +70,8 @@ class Room extends Component {
         *   1. Regular Jitsi room that just has video
         *   2. Art room which has a small video panel and an image
         *   3. Text-based adventure rooms where you have to make a decision
-        *   4. Special purpose rooms that exist at a different route
+        *   4. Library room to display an organized set of PDFs
+        *   5. Special purpose rooms that exist at a different route
         */
         const roomData = this.getRoomData()
         const jitsiData = {
@@ -83,7 +84,8 @@ class Room extends Component {
             art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
             jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
             iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
-            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>
+            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
+            library: <Library libOptions={roomData.libOptions}></Library>
         }[roomData.type]
     }
 
