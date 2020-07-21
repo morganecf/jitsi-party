@@ -4,7 +4,7 @@
 			"name": "Foyer",
 			"type": "jitsi",
 			"description": "Welcome!",
-			"backgroundImage": "js/images/rooms/vestibule.png",
+			"backgroundImage": "js/images/rooms/vestibule.jpg", // TODO
 			"directions": {
 				"north": "kitchen",
 				"west": "closet",
