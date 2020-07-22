@@ -54,6 +54,9 @@ def email_moderators():
         sender=sender,
         recipients=moderators
     )
+    formatted_message = ''.join(
+        ['<p>{0}</p>'.format(paragraph) for paragraph in params['message'].split('\n')]
+    )
     message.html = '''
         <b>The following message was sent via the moderator contact form:</b>
         <blockquote>{0}</blockquote>
@@ -63,7 +66,7 @@ def email_moderators():
         <div>User ID: {2}</div>
         <div>Email: {3}</div>
     '''.format(
-        params['message'],
+        formatted_message,
         params['user']['username'],
         params['user']['id'],
         params['email'] if params.get('email') else 'Not provided'

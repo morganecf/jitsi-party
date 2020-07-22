@@ -9,6 +9,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 
+function getNumWords(str) {
+    const match = str.match(/\w+/g)
+    return match && match.length || 0
+}
+
 export default ({ user }) => {
     const MIN_WORDS = 10
     const MAX_WORDS = 500
@@ -35,14 +40,17 @@ export default ({ user }) => {
     const [sent, setSent] = useState(false)
     const [status, setStatus] = useState('sending')
 
-    const numWords = message.split(/\s+/).length - 1
+    const numWords = getNumWords(message)
     const wordCountClass = numWords < MIN_WORDS || numWords === MAX_WORDS ? 'bad-word-count' : ''
 
     const emailRegex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
     const isBadEmailInput = !emailRegex.test(email) && email !== ''
 
     const handleMessageInput = event => {
-        if (numWords <= MAX_WORDS) {
+        const newMsg = event.target.value
+        const added = newMsg.slice(message.length - 1, newMsg.length)
+        const numWordsAdded = getNumWords(added)
+        if (numWords + numWordsAdded <= MAX_WORDS) {
             setMessage(event.target.value)
         }
     }
