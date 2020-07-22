@@ -77,4 +77,3 @@ export default connect(
     {
         addConfig: reducers.addConfigActionCreator,
      })(Welcome)
-     
