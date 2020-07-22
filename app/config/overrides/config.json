@@ -64,11 +64,11 @@
 			},
 			"additionalStats": [
 				{
-					"text": "🎦 {count} watching movie",
+					"text": "🎦 {count} hatewatching",
 					"match": ["frontParlor"]
         },
         {
-					"text": "📕 {count} in the Library",
+					"text": "📕 {count} reading",
 					"match": ["library"]
         },
         {
