@@ -1,14 +1,18 @@
 {
 	"debug": true,
 	"mapUnlockThreshold": 0,
-	"useLocalSessions": false,
+	"useLocalSessions": true,
 	"startRoom": "vestibule",
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
 		"backgroundImagePath": "./js/images/bauhaus_darker.jpg",
 		"enterSpaceButtonText": "Party!",
 		"avatarSelectionText": "Pick your puck",
-		"headerHtml": "<br/><div class='bauhaus'><p>This is indeed a disturbing universe.</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>"
+		"headerHtml": "<br/><div class='bauhaus'><p>This is indeed a disturbing universe.</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>",
+		"auth": {
+			"iframe": "./js/iframes/TST_login.html",
+			"descriptionHtml": "You must log in to the TST Portal in order to use demon.chat inside the house."
+		}
 	},
 	"avatars": {
 	  "normal": {
