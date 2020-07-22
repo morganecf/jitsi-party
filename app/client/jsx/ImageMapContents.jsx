@@ -4,12 +4,15 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 export default props => {
     return (
-        <div className="imagemap-contents">
-            <div className="imagemap-header">
+        <div className="imagemap-modal">
+            <div className="header">
                 <b>{props.contentsLabel}</b>
-                <button className="contents-close-button" onClick={props.handleClose}>
+                <button onClick={props.handleClose}>
                     <FontAwesomeIcon icon={faTimes}/>
                 </button>
+            </div>
+            <div className="contents">
+                <b>Random Text</b>
             </div>
         </div>
     )

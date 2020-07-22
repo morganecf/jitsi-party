@@ -2,8 +2,34 @@
     display: flex;
     justify-content: center;
 
-    .imagemap-area {
+    area {
         cursor: pointer;
     }
 }
 
+.imagemap-modal {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        background: $background-color-dark;
+        padding: 10px 20px;
+        color: $text-color;
+
+        button {
+            padding: 1px 7px;
+            margin: 0;
+
+            svg {
+                margin: 0;
+            }
+        }
+    }
+
+    .contents {
+        display: flex;
+        justify-content: space-between;
+        background: $background-color;
+        padding: 10px 20px;
+        color: $link-color;
+    }
+}

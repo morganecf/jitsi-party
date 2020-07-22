@@ -6,7 +6,6 @@ function getAreasHtml(areasList, onClickFunc) {
     return areasList.map((a,i) =>
         <area
             key={i}
-            className="imagemap-area"
             shape={a.shape}
             coords={a.coords}
             alt={a.label}
