@@ -13,7 +13,8 @@ import {
     faArrowLeft,
     faArrowRight,
     faMap,
-    faCalendar
+    faCalendar,
+    faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
 
 class Navigation extends Component {
@@ -87,12 +88,16 @@ class Navigation extends Component {
         const events = this.props.events
         const users = _.flatten(Object.values(this.props.users))
 
+        const handleClickMap = () => this.props.handleOpenModal('map')
+        const handleClickEvents = () => this.props.handleOpenModal('events')
+        const handleClickEmail = () => this.props.handleOpenModal('email')
+
         return (
             <div className="navigation-container">
                 <div className="column settings-container">
                     <div className="map-button-container">
                         {this.props.showMapButton && !this.props.hideSettings &&
-                            <button className={mapButtonClass} disabled={false} onClick={this.props.handleOpenMap.bind(this)}>
+                            <button className={mapButtonClass} disabled={false} onClick={handleClickMap}>
                                 <FontAwesomeIcon icon={faMap}/>
                             </button>
                         }
@@ -102,8 +107,15 @@ class Navigation extends Component {
                     </div>
                     <div className="events-button-container">
                         {events && events.length > 0 && !this.props.hideSettings &&
-                            <button className="events-button" onClick={this.props.handleOpenEvents.bind(this)}>
+                            <button className="events-button" onClick={handleClickEvents}>
                                 <FontAwesomeIcon icon={faCalendar}/>
+                            </button>
+                        }
+                    </div>
+                    <div className="email-button-container">
+                        {Config.moderation && !_.isEmpty(Config.moderation.moderatorEmails) &&
+                            <button className="email-button" onClick={handleClickEmail}>
+                                <FontAwesomeIcon icon={faEnvelope}/>
                             </button>
                         }
                     </div>

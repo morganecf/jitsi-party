@@ -71,4 +71,17 @@ export class HttpApi {
             return { success: false }
         }
     }
+
+    async emailModerators(message, email, user) {
+        try {
+            const request = `${url}/email_moderators`
+            await axios.post(request, {
+                params: { message, email, user }
+            })
+            return { success: true }
+        } catch (err) {
+            console.log(err)
+            return { success: false }
+        }
+    }
 }
