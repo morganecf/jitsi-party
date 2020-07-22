@@ -7,6 +7,7 @@ import Modal from 'react-modal';
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
+import LibraryRoom from './LibraryRoom.jsx'
 import Map from './Map.jsx'
 import EventList from './EventList.jsx'
 import Door from './Door.jsx'
@@ -85,7 +86,7 @@ class Room extends Component {
             jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
             iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
             adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
-            library: <Library libOptions={roomData.libOptions}></Library>
+            library: <LibraryRoom libOptions={roomData.libOptions}></LibraryRoom>
         }[roomData.type]
     }
 
