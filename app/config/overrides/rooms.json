@@ -432,7 +432,7 @@
         },
         "satanic-library": {
             "name": "Satanic Library",
-            "type": "library",
+            "type": "imagemap",
             "directions": {
                 "west": "gameRoom"
             },
@@ -445,13 +445,13 @@
                     "west": 19
                 }
             },
-            "libOptions": {
+            "imageMapOptions": {
                 "img": "js/images/rooms/satanic-library.jpg",
                 "areas": [
                     {
                         "shape": "poly",
                         "coords": "274,364,273,226,407,240,428,592,275,647",
-                        "category": "Exorcism"
+                        "label": "Exorcism"
                     }
                 ]
             }
