@@ -11,25 +11,31 @@ function getAreasHtml(areasList, onClickFunc) {
             alt={a.label}
             title={a.label}
             // This is just a dummy onClick, to show interaction with the area
-            onClick={() => onClickFunc(a.label)}
+            onClick={() => onClickFunc(a)}
         />
     );
 }
 
+function onDisplayModal(setIsShown, setArea) {
+    return area => {
+        setArea(area)
+        setIsShown(true)
+    }
+}
+
 export default props => {
-    const [dir, setDir] = useState("")
+    const [isShown, setIsShown] = useState(false)
+    const [area, setArea] = useState({})
     return (
         <div className="imagemap-room">
             <img src={props.imageMapOptions.img} useMap="#imgmap" />
 
             <map name="imgmap">
-                {getAreasHtml(props.imageMapOptions.areas, setDir)}
+                {getAreasHtml(props.imageMapOptions.areas, onDisplayModal(setIsShown, setArea))}
             </map>
 
-            <Modal
-                isOpen={dir !== ""}
-                onRequestClose={() => setDir("")}>
-                    <ImageMapContents contentsLabel={dir} handleClose={() => setDir("")}></ImageMapContents>
+            <Modal isOpen={isShown}>
+                    <ImageMapContents area={area} handleClose={() => setIsShown(false)}></ImageMapContents>
             </Modal>
         </div>
     )
