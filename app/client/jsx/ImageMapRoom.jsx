@@ -21,7 +21,7 @@ export default props => {
             <img src={props.imageMapOptions.img} useMap="#imgmap" />
 
             <map name="imgmap">
-                {this.getAreasHtml(props.imageMapOptions.areas)}
+                {getAreasHtml(props.imageMapOptions.areas)}
             </map>
         </div>
     )
