@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from 'react-modal'
+import ImageMapContents from './ImageMapContents.jsx'
 
-function getAreasHtml(areasList) {
+function getAreasHtml(areasList, onClickFunc) {
     return areasList.map((a,i) =>
         <area
             key={i}
@@ -10,19 +12,26 @@ function getAreasHtml(areasList) {
             alt={a.label}
             title={a.label}
             // This is just a dummy onClick, to show interaction with the area
-            onClick={() => console.log(a.label)}
+            onClick={() => onClickFunc(a.label)}
         />
     );
 }
 
 export default props => {
+    const [dir, setDir] = useState("")
     return (
         <div className="imagemap-room">
             <img src={props.imageMapOptions.img} useMap="#imgmap" />
 
             <map name="imgmap">
-                {getAreasHtml(props.imageMapOptions.areas)}
+                {getAreasHtml(props.imageMapOptions.areas, setDir)}
             </map>
+
+            <Modal
+                isOpen={dir !== ""}
+                onRequestClose={() => setDir("")}>
+                    <ImageMapContents contentsLabel={dir} handleClose={() => setDir("")}></ImageMapContents>
+            </Modal>
         </div>
     )
 }
