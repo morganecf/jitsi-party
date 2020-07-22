@@ -1,16 +1,20 @@
 import os
 import json
+from . import mail
 from .models import User
 from datetime import datetime
+from flask_mail import Message
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
 
 main = Blueprint('main', __name__)
+
 
 @main.route('/join', methods=['GET', 'POST'])
 def join():
     params = request.get_json()['params']
     user = User.create(**params)
     return jsonify(user.to_json())
+
 
 @main.route('/config')
 def get_config():
@@ -38,6 +42,38 @@ def get_config():
         'events': events
     }
     return jsonify(config)
+
+
+@main.route('/email_moderators', methods=['POST'])
+def email_moderators():
+    params = request.get_json()['params']
+    moderators = current_app.config['MODERATOR_EMAILS']
+    sender = current_app.config['MAIL_USERNAME']
+    message = Message(
+        'Jitsi Party Alert',
+        sender=sender,
+        recipients=moderators
+    )
+    formatted_message = ''.join(
+        ['<p>{0}</p>'.format(paragraph) for paragraph in params['message'].split('\n')]
+    )
+    message.html = '''
+        <b>The following message was sent via the moderator contact form:</b>
+        <blockquote>{0}</blockquote>
+        <br>
+        <b>Sender details</b>
+        <div>Username: {1}</div>
+        <div>User ID: {2}</div>
+        <div>Email: {3}</div>
+    '''.format(
+        formatted_message,
+        params['user']['username'],
+        params['user']['id'],
+        params['email'] if params.get('email') else 'Not provided'
+    )
+    mail.send(message)
+    return jsonify('message sent')
+
 
 @main.route('/', defaults={'path': ''})
 @main.route('/<path:path>')
