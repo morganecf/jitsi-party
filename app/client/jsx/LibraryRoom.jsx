@@ -4,7 +4,7 @@ class LibraryRoom extends Component {
 
     getAreasHtml() {
         return this.props.libOptions.areas.map((a,i) =>
-            <area key={i} className="library-topic" shape={a.shape} coords={a.coords} alt={a.label} onClick={console.log(a.label)} />
+            <area key={i} className="library-topic" shape={a.shape} coords={a.coords} alt={a.category} onClick={console.log(a.category)} />
         );
     }
 
