@@ -446,7 +446,7 @@
                 }
             },
             "libOptions": {
-                "img": "js/images/rooms/satanic-library.png",
+                "img": "js/images/rooms/satanic-library.jpg",
                 "areas": [
                     {
                         "shape": "poly",
