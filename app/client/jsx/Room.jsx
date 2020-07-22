@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
-import LibraryRoom from './LibraryRoom.jsx'
+import ImageMapRoom from './ImageMapRoom.jsx'
 import Map from './Map.jsx'
 import EventList from './EventList.jsx'
 import Door from './Door.jsx'
@@ -71,7 +71,7 @@ class Room extends Component {
         *   1. Regular Jitsi room that just has video
         *   2. Art room which has a small video panel and an image
         *   3. Text-based adventure rooms where you have to make a decision
-        *   4. Library room to display an organized set of PDFs
+        *   4. Image map based room to display an organized & navigable set of content
         *   5. Special purpose rooms that exist at a different route
         */
         const roomData = this.getRoomData()
@@ -86,7 +86,7 @@ class Room extends Component {
             jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
             iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
             adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
-            library: <LibraryRoom libOptions={roomData.libOptions}></LibraryRoom>
+            imagemap: <ImageMapRoom imageMapOptions={roomData.imageMapOptions}></ImageMapRoom>
         }[roomData.type]
     }
 
