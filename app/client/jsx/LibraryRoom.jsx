@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 class LibraryRoom extends Component {
 
     getAreasHtml() {
-        return this.props.libOptions.areas.map(a =>
-            <area shape={a.shape} coords={a.coords} alt={a.label} />
+        return this.props.libOptions.areas.map((a,i) =>
+            <area key={i} className="library-topic" shape={a.shape} coords={a.coords} alt={a.label} onClick={console.log(a.label)} />
         );
     }
 
