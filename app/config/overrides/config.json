@@ -47,26 +47,34 @@
       "third": "./js/images/tst/sigils/Asmoday01.png",
       "fourth": "./js/images/tst/sigils/Belial01.png"
 	  }
-	},
+  },
 	"map": {
 		"stats": {
 			"numberInHouse": {
 				"display": true,
-				"text": "🏚️ {count} in VHQ"
+				"text": "🌓 {count} at VHQ"
 			},
 			"numberInHallways": {
 				"display": true,
-				"text": "🌓 {count} roaming"
+				"text": "👻 {count} haunting the hallways"
 			},
 			"numberInRooms": {
-				"display": true,
+				"display": false,
 				"text": "📍 {count} exploring"
 			},
 			"additionalStats": [
 				{
-					"text": "🛁 {count} taking bathroom break",
-					"match": ["bathroom"]
-				}
+					"text": "🎦 {count} watching movie",
+					"match": ["frontParlor"]
+        },
+        {
+					"text": "📕 {count} in the Library",
+					"match": ["library"]
+        },
+        {
+					"text": "🐶 {count} meeting animals",
+					"match": ["belfry", "aviary", "sleepingPorch", "den"]
+        }
 			]
 		},
 		"scaleBy": "opacity"
