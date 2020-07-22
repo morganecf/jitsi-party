@@ -451,7 +451,13 @@
                     {
                         "shape": "poly",
                         "coords": "274,364,273,226,407,240,428,592,275,647",
-                        "label": "Exorcism"
+                        "label": "Exorcism",
+                        "contents": [
+                            {
+                              "title": "Exorcism 1",
+                              "path": "js/pdfs/Exorcism0001.pdf"
+                            }
+                        ]
                     }
                 ]
             }
