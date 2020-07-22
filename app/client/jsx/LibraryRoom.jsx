@@ -11,7 +11,9 @@ class LibraryRoom extends Component {
                 coords={a.coords}
                 alt={a.category}
                 title={a.category}
-                onClick={() => console.log(a.category)} />
+                // This is just a dummy onClick, to show interaction with the area
+                onClick={() => console.log(a.category)}
+            />
         );
     }
 
