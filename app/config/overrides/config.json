@@ -11,60 +11,48 @@
 	},
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
-		"backgroundImagePath": "./js/images/bauhaus_darker.jpg",
-		"enterSpaceButtonText": "Party!",
-		"avatarSelectionText": "Pick your puck",
-		"headerHtml": "<br/><div class='bauhaus'><p>This is indeed a disturbing universe.</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>",
+		"backgroundImagePath": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+		"enterSpaceButtonText": "Enter",
+		"avatarSelectionText": "Select your sigil",
+		"headerHtml": "<br/><div class='tst'><p>Welcome to the Inner Sanctum</p><h1>Satanic Temple Virtual HQ</h1>",
 		"auth": {
 			"iframe": "./js/iframes/TST_login.html",
 			"descriptionHtml": "You must log in to the TST Portal in order to use demon.chat inside the house."
 		}
 	},
 	"avatars": {
-	  "normal": {
-		"blue": "./js/images/bauhausPuck/normal-blue.png",
-		"pink": "./js/images/bauhausPuck/normal-pink.png",
-	    "black": "./js/images/bauhausPuck/normal-black.png",
-	    "yellow": "./js/images/bauhausPuck/normal-yellow.png"
+	  "group1": {
+      "first": "./js/images/tst/sigils/Andromalius01.png",
+      "second": "./js/images/tst/sigils/Bathin01.png",
+      "third": "./js/images/tst/sigils/Asmoday01.png",
+      "fourth": "./js/images/tst/sigils/Belial01.png"
+    },
+	  "group2": {
+      "first": "./js/images/tst/sigils/Berith01.png",
+      "second": "./js/images/tst/sigils/Buer01.png",
+      "third": "./js/images/tst/sigils/Bune01.png",
+      "fourth": "./js/images/tst/sigils/Ipos01.png"
 	  },
-	  "book": {
-		"blue": "./js/images/bauhausPuck/book-blue.png",
-		"pink": "./js/images/bauhausPuck/book-pink.png",
-	    "black": "./js/images/bauhausPuck/book-black.png",
-	    "yellow": "./js/images/bauhausPuck/book-yellow.png"
-	  },
-	  "whippit": {
-		"blue": "./js/images/bauhausPuck/whippit-blue.png",
-		"pink": "./js/images/bauhausPuck/whippit-pink.png",
-	    "black": "./js/images/bauhausPuck/whippit-black.png",
-	    "yellow": "./js/images/bauhausPuck/whippit-yellow.png"
-	  },
-	  "dancing": {
-		"blue": "./js/images/bauhausPuck/dancing-blue.png",
-		"pink": "./js/images/bauhausPuck/dancing-pink.png",
-	    "black": "./js/images/bauhausPuck/dancing-black.png",
-	    "yellow": "./js/images/bauhausPuck/dancing-yellow.png"
-	  },
-	  "trippy": {
-		"blue": "./js/images/bauhausPuck/trippy-blue.png",
-		"pink": "./js/images/bauhausPuck/trippy-pink.png",
-	    "black": "./js/images/bauhausPuck/trippy-black.png",
-	    "yellow": "./js/images/bauhausPuck/trippy-yellow.png"
+	  "group3": {
+      "first": "./js/images/tst/sigils/Naberius01.png",
+      "second": "./js/images/tst/sigils/Shax01.png",
+      "third": "./js/images/tst/sigils/Sitri01.png",
+      "fourth": "./js/images/tst/sigils/Stolas01.png"
 	  }
 	},
 	"specialAvatars": {
 	  "goodbye": {
-		"pink": "./js/images/bauhausPuck/thumb-pink.png",
-	    "black": "./js/images/bauhausPuck/thumb-black.png",
-	    "blue": "./js/images/bauhausPuck/thumb-blue.png",
-	    "yellow": "./js/images/bauhausPuck/thumb-yellow.png"
+		  "first": "./js/images/tst/sigils/Andromalius01.png",
+      "second": "./js/images/tst/sigils/Bathin01.png",
+      "third": "./js/images/tst/sigils/Asmoday01.png",
+      "fourth": "./js/images/tst/sigils/Belial01.png"
 	  }
 	},
 	"map": {
 		"stats": {
 			"numberInHouse": {
 				"display": true,
-				"text": "🏚️ {count} in cabin"
+				"text": "🏚️ {count} in VHQ"
 			},
 			"numberInHallways": {
 				"display": true,
@@ -72,7 +60,7 @@
 			},
 			"numberInRooms": {
 				"display": true,
-				"text": "🎉 {count} partying"
+				"text": "📍 {count} exploring"
 			},
 			"additionalStats": [
 				{
@@ -84,11 +72,11 @@
 		"scaleBy": "opacity"
 	},
 	"poke": {
-		"text": "Zap someone",
-		"fontAwesomeIcon": "bolt",
-		"fromText": "{user} has zapped you!",
-		"toText": "Zapped!",
-		"unlockText": "You have unlocked the ability to zap",
+		"text": "Hex someone",
+		"fontAwesomeIcon": "skull",
+		"fromText": "{user} has hexed you!",
+		"toText": "Hexed!",
+		"unlockText": "You have unlocked the ability to hex",
 		"selfPoke": "Ouch",
 		"unlockAfterMinutes": 20
 	}
