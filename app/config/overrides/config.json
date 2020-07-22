@@ -78,6 +78,6 @@
 		"toText": "Hexed!",
 		"unlockText": "You have unlocked the ability to hex",
 		"selfPoke": "Ouch",
-		"unlockAfterMinutes": 20
+		"unlockAfterMinutes": 0
 	}
 }

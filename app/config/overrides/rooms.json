@@ -4,11 +4,11 @@
 		 "name": "Vestibule",
 		 "type": "jitsi",
 		 "description": "Welcome!",
-		 "backgroundImage": "js/images/rooms/vestibule.png",
+		 "backgroundImage": "js/images/tst/backgrounds/home.jpg",
 		 "directions": {
-			 "north": "livingRoom",
-			 "west": "closet",
-			 "east": "gameRoom"
+			 "north": "frontParlor",
+			 "west": "backParlor",
+			 "east": "mapRoom"
 		 },
 		 "map": {
 			 "x": 16,
@@ -22,7 +22,7 @@
 			 }
 		 }
 	 },
-	 "closet": {
+	 "frontParlor": {
 		 "name": "Closet",
 		 "type": "jitsi",
 		 "capacity": 2,
@@ -41,7 +41,7 @@
 			 }
 		 }
 	 },
-	 "livingRoom": {
+	 "backParlor": {
 		 "name": "Living Room",
 		 "type": "jitsi",
 		 "backgroundImage": "js/images/rooms/livingroom.jpg",
@@ -62,12 +62,9 @@
 		 },
 		 "doorTint": "#FF5938"
 	 },
-	 "gameRoom": {
+	 "mapRoom": {
 		 "name": "Game Room",
-     "type": "iframe",
-     "iframeOptions": {
-        "src": "js/iframes/TST_chat.html"
-     },
+		 "type": "jitsi",
 		 "directions": {
 			 "west": "vestibule"
 		 },
@@ -84,6 +81,126 @@
 		 },
 		 "doorTint": "orange",
 		 "backgroundImage": "js/images/rooms/gameroom.jpg"
-	 }
+   },
+   "belfry": {
+      "name": "Game Room",
+      "type": "jitsi",
+      "directions": {
+        "west": "vestibule"
+      },
+      "map": {
+        "x": 21,
+        "y": 18,
+        "width": 6,
+        "height": 3,
+        "doors": {
+          "north": 25,
+          "west": 20,
+          "east": 19
+        }
+      },
+      "doorTint": "orange",
+      "backgroundImage": "js/images/rooms/gameroom.jpg"
+    },
+    "sleepingPorch": {
+      "name": "Game Room",
+      "type": "jitsi",
+      "directions": {
+        "west": "vestibule"
+      },
+      "map": {
+        "x": 21,
+        "y": 18,
+        "width": 6,
+        "height": 3,
+        "doors": {
+          "north": 25,
+          "west": 20,
+          "east": 19
+        }
+      },
+      "doorTint": "orange",
+      "backgroundImage": "js/images/rooms/gameroom.jpg"
+    },
+    "aviary": {
+      "name": "Game Room",
+      "type": "jitsi",
+      "directions": {
+        "west": "vestibule"
+      },
+      "map": {
+        "x": 21,
+        "y": 18,
+        "width": 6,
+        "height": 3,
+        "doors": {
+          "north": 25,
+          "west": 20,
+          "east": 19
+        }
+      },
+      "doorTint": "orange",
+      "backgroundImage": "js/images/rooms/gameroom.jpg"
+    },
+    "den": {
+      "name": "Game Room",
+      "type": "jitsi",
+      "directions": {
+        "west": "vestibule"
+      },
+      "map": {
+        "x": 21,
+        "y": 18,
+        "width": 6,
+        "height": 3,
+        "doors": {
+          "north": 25,
+          "west": 20,
+          "east": 19
+        }
+      },
+      "doorTint": "orange",
+      "backgroundImage": "js/images/rooms/gameroom.jpg"
+    },
+    "library": {
+      "name": "Game Room",
+      "type": "jitsi",
+      "directions": {
+        "west": "vestibule"
+      },
+      "map": {
+        "x": 21,
+        "y": 18,
+        "width": 6,
+        "height": 3,
+        "doors": {
+          "north": 25,
+          "west": 20,
+          "east": 19
+        }
+      },
+      "doorTint": "orange",
+      "backgroundImage": "js/images/rooms/gameroom.jpg"
+    },
+    "grandBallroom": {
+      "name": "Game Room",
+      "type": "jitsi",
+      "directions": {
+        "west": "vestibule"
+      },
+      "map": {
+        "x": 21,
+        "y": 18,
+        "width": 6,
+        "height": 3,
+        "doors": {
+          "north": 25,
+          "west": 20,
+          "east": 19
+        }
+      },
+      "doorTint": "orange",
+      "backgroundImage": "js/images/rooms/gameroom.jpg"
+    }
  }
 }

@@ -1,0 +1,86 @@
+$black: #241f20;
+$grey: #595959;
+$dark-grey: #404040;
+$green: #6D9C8C;
+$bright-green: #00D089;
+$dark-green: #507A6C;
+$white: #fff;
+
+$accent-color: #752f31;
+
+$background-color: $black;
+$background-color-dark: $dark-grey;
+$door-background: $grey;
+$room-content-background-color: $bright-green;
+$modal-background-color: $grey;
+
+$text-color: $white;
+$link-color: $bright-green;
+
+$disabled-text-color: color("grey-700");
+$disabled-background-color: color("grey-500");
+
+$map-room-fill: $green;
+$map-unvisited-color: $dark-grey;
+$map-room-stroke-color: $black;
+$map-highlight-stroke: $black;
+$map-highlight-fill: $bright-green;
+
+$events-header-color: $black;
+$events-header-background-color: $green;
+
+$poke-color: $bright-green;
+$poke-background-color: $black;
+
+$button-background-color: $dark-green;
+$button-border-color: $dark-green;
+$button-text-color: $white;
+$button-border-radius: 2px;
+
+$opaque-button-background-color: $green;
+$opaque-button-text-color: white;
+$opaque-button-border-color: $green;
+
+$focused-button-background-color: $green;
+$focused-button-text-color: $white;
+$focused-button-border-color: $green;
+
+$name-input-border-color: white;
+$name-input-background-color: white;
+
+$modal-overlay-color: rgba(129, 62, 62, 0.25);
+
+$art-image-border-color: color("grey-50"); //white
+
+// .bauhaus {
+//     color: black;
+
+//     p {
+//         font-weight: bold;
+//     }
+
+//     h1 {
+//         width: 100%;
+//         background: $yellow;
+//     }
+// }
+
+// .room .door-wrapper .door-background {
+//     background: none !important;
+//     border: 4px solid $red !important;
+// }
+
+// .door-wrapper .door-target button, input[type="button"] {
+//     &:disabled {
+//         background: white;
+//         opacity: 0.5;
+//     }
+// }
+
+// #map-info .room-info {
+//     color: $black !important;
+// }
+
+// .events-view .event-list .event-item {
+//     background: $bright-blue !important;
+// }

@@ -1,0 +1,76 @@
+{
+    "events": [
+        {
+            "name": "Movie Night",
+            "description": "It's Lucien's movie night. Are you excited?",
+            "room": "frontParlor",
+            "start": "2020-07-25T18:00:00-04:00",
+            "end": "2020-07-25T11:59:00-04:00",
+            "image": "js/images/tst/events/front parlor movie.jpg"
+        },
+        {
+            "name": "Lecture",
+            "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor (@SalemWitchWiles)",
+            "room": "backParlor",
+            "start": "2020-07-25T19:00:00-04:00",
+            "end": "2020-07-25T20:00:00-04:00",
+            "image": "js/images/tst/events/back parlor lecture.jpg"
+        },
+        {
+            "name": "Cooking Workshop",
+            "description": "Relax with Emily as she paints beautiful watercolor fantasy maps",
+            "room": "mapRoom",
+            "start": "2020-07-25T19:00:00-04:00",
+            "end": "2020-07-25T20:00:00-04:00",
+            "image": "js/images/tst/events/back parlor lecture.jpg"
+        },
+        {
+            "name": "Grand Ballroom DJ Set",
+            "description": "Enjoy music in the Grand Ballroom from Kadam",
+            "room": "grandBallroom",
+            "start": "2020-07-25T22:00:00-04:00",
+            "end": "2020-07-25T23:00:00-04:00",
+            "image": "js/images/tst/events/back parlor lecture.jpg"
+        },
+        {
+            "name": "Bats in the Belfry",
+            "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Learn more about their work at batworld.org",
+            "room": "belfry",
+            "start": "2020-07-25T17:00:00-04:00",
+            "end": "2020-07-26T01:00:00-04:00",
+            "image": "js/images/tst/events/bats.jpg"
+        },
+        {
+            "name": "Sleeping Porch",
+            "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
+            "room": "sleepingPorch",
+            "start": "2020-07-25T17:00:00-04:00",
+            "end": "2020-07-26T01:00:00-04:00",
+            "image": "js/images/tst/events/cats.jpg"
+        },
+        {
+            "name": "Parrots in the Aviary",
+            "description": "Get to know some amazing parrots in the Aviary, broadcasting live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
+            "room": "aviary",
+            "start": "2020-07-25T17:00:00-04:00",
+            "end": "2020-07-26T01:00:00-04:00",
+            "image": "js/images/tst/events/parrots.jpg"
+        },
+        {
+            "name": "Den Pups",
+            "description": "Puppies are afoot in The Den, live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
+            "room": "den",
+            "start": "2020-07-25T17:00:00-04:00",
+            "end": "2020-07-26T01:00:00-04:00",
+            "image": "js/images/tst/events/dogs copy.jpg"
+        },
+        {
+            "name": "Library",
+            "description": "The Satanic Panic Archive Library is open all night. Many of these texts exist nowhere else in the world.",
+            "room": "library",
+            "start": "2020-07-25T17:00:00-04:00",
+            "end": "2020-07-26T01:00:00-04:00",
+            "image": "js/images/tst/events/library.jpg"
+        }
+    ]
+}
