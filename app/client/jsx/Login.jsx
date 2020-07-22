@@ -32,7 +32,7 @@ export default () => {
         useLocalSessions && LocalStorage.set('USER', user)
         dispatch({ type: 'UPDATE_USER', user })
         dispatch({ type: 'UPDATE_CURRENT_ROOM', currentRoom: {
-            room: 'vestibule',
+            room: Config.startRoom,
             entered: false
         }})
     }
