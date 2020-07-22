@@ -6,6 +6,7 @@
 
 .email-form {
     padding: 20px 40px;
+    color: $email-description-color;
 
     section {
         margin: 20px 0;
@@ -13,6 +14,7 @@
     textarea {
         width: 100%;
         height: 300px;
+        color: $email-form-color;
     }
     input {
         margin-left: 10px;
@@ -21,6 +23,9 @@
         outline: none;
         border: 2px solid $accent-color !important;
         border-radius: 5px !important;
+    }
+    .email-form-message span {
+        color: color('blue-300');
     }
     .email-form-message .bad-word-count {
         color: $accent-color;
