@@ -25,9 +25,8 @@ $avatar-height: 60px;
 	// transition: border .25s;
 	cursor: pointer;
 	border-radius: 100%;
-	background-color: $accent-color;
-	// box-shadow: 2px 2px 4px darken($accent-color, 30%);
-	box-shadow: -4px -4px 4px darken($accent-color, 10%);
+	background-color: darken($accent-color, 30%);
+	box-shadow: -4px -4px 4px darken($accent-color, 20%);
 }
 
 .image {
