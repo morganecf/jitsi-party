@@ -1,6 +1,6 @@
 {
     "adventures": {
-        "courtyardAdventure": {
+        "basementAdventure": {
             "config": {
                 "audio": {
                     "path": "https://jitsi-party.s3.amazonaws.com/ghostoflove.mp3",
@@ -8,73 +8,73 @@
                     "hideControls": true
                 }
             },
-            "courtyard1": {
-                "name": "A strange door",
-                "text": "There's a door you've never noticed before in this hallway. You heard a slow, grinding, mournful melody on the other side.",
+            "painting": {
+                "name": "An Askew Picture Frame",
+                "text": "There is a painting askew on the wall.",
                 "buttons": [
                     {
-                        "text": "Go through it",
-                        "nextRoom": "courtyard2"
+                        "text": "Fix it",
+                        "nextRoom": "catacombs"
                     },
                     {
-                        "text": "Keep walking",
-                        "nextRoom": "cloister"
+                        "text": "Keeping walking",
+                        "nextRoom": "library"
                     }
                 ]
             },
-            "courtyard2": {
-                "name": "A lounge",
-                "text": "You step into an ancient lounge. A burlesque dancer sings on a stage through streams of silver dust, entertaining no one. She is backed by an elderly pianist in a crisp royal blue suit.",
+            "catacombs": {
+                "name": "An Unpredictable Stair",
+                "text": "You take a step towards the wall to straighten the painting, and the stair you are standing on gives way. You fall through what appears to be a trap door. A slide carries you all the way down into a subterranean hidden chamber. The air is strangely cool and the limestone walls are faintly green. At the end of the chamber is a fortune telling machine. It has a button. There is a door to your right.",
                 "buttons": [
                     {
-                        "text": "You approach the stage",
-                        "nextRoom": "courtyard3"
+                        "text": "Go through the door",
+                        "nextRoom": "library"
                     },
                     {
-                        "text": "You head to the bar",
-                        "nextRoom": "courtyard4"
-                    },
-                    {
-                        "text": "You approach the pianist",
-                        "nextRoom": "courtyard5"
+                        "text": "Push the button",
+                        "nextRoom": "fortune"
                     }
                 ]
             },
-            "courtyard3": {
-                "name": "The stage",
-                "text": "The burlesque dancer looks down at you, tears streaming down her cheeks. I am sorry, she says.",
+            "fortune": {
+                "name": "The Machine",
+                "text": "The machine whirs and rumbles to life. Its eyes flash. You hear a piercing voice say ”welcome, knowledge seeker, to Madame Rouge's. I will now divine your future!“ A card drops out from a slot below the machine. As you bend to pick it up, you notice the door to your right is slightly ajar.",
                 "buttons": [
                     {
-                        "text": "But why?",
-                        "nextRoom": "vestibule"
+                        "text": "Pick up the card",
+                        "nextRoom": "card"
+                    },
+                    {
+                      "text": "Go through the door",
+                      "nextRoom": "library"
+                  }
+                ]
+            },
+            "card": {
+                "name": "The Card",
+                "text": "The card simply reads ”You are going to die.“ On the other side of it is an insignia that is familiar, but something about it seems off: [TBD]. You notice a slot on the side of the machine that says ”Card Return“. The door on your right is still open.",
+                "buttons": [
+                    {
+                        "text": "Go through the door",
+                        "nextRoom": "library"
+                    },
+                    {
+                        "text": "Return the card",
+                        "nextRoom": "returnCard"
                     }
                 ]
             },
-            "courtyard4": {
-                "name": "The bar",
-                "text": "The bartender is wearing a white tux. You don't ask, but he tells you anyway: the courtyard is a great place to smoke.",
+            "returnCard": {
+                "name": "The Card Return",
+                "text": "As soon as you place the card into the slot, a door to your left opens. You stare at this symmetry of choice.",
                 "buttons": [
                     {
-                        "text": "Ask for a drink",
-                        "nextRoom": "kitchen"
+                        "text": "Go through the left door",
+                        "nextRoom": "crematorium"
                     },
                     {
-                        "text": "Go to the courtyard",
-                        "nextRoom": "courtyard"
-                    }
-                ]
-            },
-            "courtyard5": {
-                "name": "The pianist",
-                "text": "Most seem to have forgotten about us, the pianist says. He doesn't take his eyes off the keys. Will you be back?",
-                "buttons": [
-                    {
-                        "text": "Probably",
-                        "nextRoom": "vestibule"
-                    },
-                    {
-                        "text": "Probably not",
-                        "nextRoom": "bye"
+                        "text": "Go through the right door",
+                        "nextRoom": "library"
                     }
                 ]
             }
