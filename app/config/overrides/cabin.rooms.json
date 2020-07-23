@@ -340,8 +340,7 @@
             "imageMapOptions": "library-map",
             "directions": {
                 "west": "mapRoom",
-                "east": "gallery",
-                "north": "readingRoom"
+                "east": "gallery"
             },
             "map": {
                 "x": 23,
@@ -352,15 +351,6 @@
                     "west": 7,
                     "east": 7
                 }
-            },
-            "doorTint": "#a7240e"
-        },
-        "readingRoom": {
-            "name": "Secret Reading Room",
-            "type": "imagemap",
-            "imageMapOptions": "readingRoomMap",
-            "directions": {
-                "south": "library"
             },
             "doorTint": "#a7240e"
         },
