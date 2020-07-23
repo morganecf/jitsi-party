@@ -31,5 +31,9 @@
         background: $background-color;
         padding: 10px 20px;
         color: $link-color;
+
+        .className {
+            cursor: pointer;
+        }
     }
 }
