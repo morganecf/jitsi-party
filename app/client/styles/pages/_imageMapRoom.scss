@@ -26,13 +26,11 @@
     }
 
     .contents {
-        display: flex;
-        justify-content: space-between;
         background: $background-color;
         padding: 10px 20px;
         color: $link-color;
 
-        .className {
+        .item {
             cursor: pointer;
         }
     }

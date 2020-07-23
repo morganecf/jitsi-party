@@ -4,7 +4,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 function getContentsHtml(contentsList, onClickFunc) {
     return contentsList.map((c,i) => 
-        <div className="item" key={i} onClick={onClickFunc(c)}>{c.title}</div>
+        <div className="item" key={i} onClick={() => onClickFunc(c)}>{c.title}</div>
     )
 }
 
@@ -18,7 +18,7 @@ export default props => {
                 </button>
             </div>
             <div className="contents">
-                {getContentsHtml(props.area.contents, () => console.log(c.path))}
+                {getContentsHtml(props.area.contents, c => console.log(c.path))}
             </div>
         </div>
     )
