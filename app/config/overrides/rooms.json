@@ -451,7 +451,32 @@
                     {
                         "shape": "poly",
                         "coords": "274,364,273,226,407,240,428,592,275,647",
-                        "label": "Exorcism"
+                        "label": "Exorcism",
+                        "contents": [
+                            {
+                              "title": "Exorcism 1",
+                              "path": "js/pdfs/Exorcism0001.pdf"
+                            },
+                            {
+                              "title": "Exorcism 2",
+                              "path": "js/pdfs/Exorcism0002.pdf"
+                            }
+                        ]
+                    },
+                    {
+                        "shape": "rect",
+                        "coords": "1243,609,774,424",
+                        "label": "Cult Crime",
+                        "contents": [
+                            {
+                              "title": "Cult Crime Network 1",
+                              "path": "js/pdfs/Cult Crime Network0001.pdf"
+                            },
+                            {
+                              "title": "Cult Cops",
+                              "path": "js/pdfs/cult cops0001.pdf"
+                            }
+                        ]
                     }
                 ]
             }
