@@ -1,8 +1,14 @@
 {
 	"debug": true,
 	"mapUnlockThreshold": 0,
-	"useLocalSessions": false,
+	"useLocalSessions": true,
 	"startRoom": "vestibule",
+	"moderation": {
+		"moderatorEmails": [
+			"morganeciot@gmail.com"
+		],
+		"formDescription": "Someone harshing your vibe? Need a moderator to look into it? We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+	},
 	"welcomePage": {
 		"avatarSelectionEnabled": true,
 		"backgroundImagePath": "./js/images/bauhaus_darker.jpg",

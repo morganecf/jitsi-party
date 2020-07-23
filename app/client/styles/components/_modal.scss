@@ -1,7 +1,16 @@
 .ReactModal__Content {
 	border: none !important;
-	background: $modal-background-color !important;
-	box-shadow: 2px 2px 4px darken($background-color, 30%);
+    background: $modal-background-color !important;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+	box-shadow: 2px 2px 4px darken($modal-background-color, 30%);
 }
 .ReactModal__Overlay {
 	z-index: 10;
