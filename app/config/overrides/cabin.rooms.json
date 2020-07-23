@@ -406,38 +406,90 @@
             "doorTint": "#4b0202",
             "backgroundImage": ""
         },
-       "gameRoom": {
-           "name": "Game Room",
-           "type": "jitsi",
-           "description": "Ask Dan S if you want to play poker.",
-           "directions": {
-               "north": "kitchen",
-               "west": "vestibule",
-               "east": "outdoors",
-               "south": "outdoors"
-           },
-           "map": {
-               "x": 21,
-               "y": 18,
-               "width": 6,
-               "height": 3,
-               "doors": {
-                   "north": 22,
-                   "west": 20
-               }
-           },
-           "doorTint": "orange",
-           "backgroundImage": "js/images/rooms/gameroom.jpg"
-       },
-       "courtyard": {
+        "gameRoom": {
+            "name": "Game Room",
+            "type": "jitsi",
+            "description": "Ask Dan S if you want to play poker.",
+            "directions": {
+                "north": "kitchen",
+                "west": "vestibule",
+                "east": "satanic-library",
+                "south": "outdoors"
+            },
+            "map": {
+                "x": 21,
+                "y": 18,
+                "width": 6,
+                "height": 3,
+                "doors": {
+                    "north": 22,
+                    "west": 20,
+                    "east": 19
+                }
+            },
+            "doorTint": "orange",
+            "backgroundImage": "js/images/rooms/gameroom.jpg"
+        },
+        "satanic-library": {
+            "name": "Satanic Library",
+            "type": "imagemap",
+            "directions": {
+                "west": "gameRoom"
+            },
+            "map": {
+                "x": 27,
+                "y": 18,
+                "width": 3,
+                "height": 3,
+                "doors": {
+                    "west": 19
+                }
+            },
+            "imageMapOptions": {
+                "img": "js/images/rooms/satanic-library.jpg",
+                "areas": [
+                    {
+                        "shape": "poly",
+                        "coords": "274,364,273,226,407,240,428,592,275,647",
+                        "label": "Exorcism",
+                        "contents": [
+                            {
+                              "title": "Exorcism 1",
+                              "path": "js/pdfs/Exorcism0001.pdf"
+                            },
+                            {
+                              "title": "Exorcism 2",
+                              "path": "js/pdfs/Exorcism0002.pdf"
+                            }
+                        ]
+                    },
+                    {
+                        "shape": "rect",
+                        "coords": "1243,609,774,424",
+                        "label": "Cult Crime",
+                        "contents": [
+                            {
+                              "title": "Cult Crime Network 1",
+                              "path": "js/pdfs/Cult Crime Network0001.pdf"
+                            },
+                            {
+                              "title": "Cult Cops",
+                              "path": "js/pdfs/cult cops0001.pdf"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "courtyard": {
             "name": "The Courtyard",
             "type": "jitsi",
             "doorTint": "blue"
-       },
-       "bye": {
-           "name": "Bye",
-           "type": "redirect",
-           "route": "/bye"
-       }
-   }
+        },
+        "bye": {
+            "name": "Bye",
+            "type": "redirect",
+            "route": "/bye"
+        }
+    }
 }

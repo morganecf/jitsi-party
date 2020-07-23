@@ -8,6 +8,7 @@ import ModalFactory from './ModalFactory.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
+import ImageMapRoom from './ImageMapRoom.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
@@ -69,7 +70,8 @@ class Room extends Component {
         *   1. Regular Jitsi room that just has video
         *   2. Art room which has a small video panel and an image
         *   3. Text-based adventure rooms where you have to make a decision
-        *   4. Special purpose rooms that exist at a different route
+        *   4. Image map based room to display an organized & navigable set of content
+        *   5. Special purpose rooms that exist at a different route
         */
         const roomData = this.getRoomData()
         const jitsiData = {
@@ -82,7 +84,8 @@ class Room extends Component {
             art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
             jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
             iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
-            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>
+            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
+            imagemap: <ImageMapRoom imageMapOptions={roomData.imageMapOptions}></ImageMapRoom>
         }[roomData.type]
     }
 

@@ -24,6 +24,7 @@
         "moment": "^2.26.0",
         "react-beforeunload": "^2.2.0",
         "react-modal": "^3.11.2",
+        "react-pdfobject": "^1.1.1",
         "react-reveal": "^1.2.2",
         "sass": "^1.26.3",
         "socket.io": "^2.3.0",
