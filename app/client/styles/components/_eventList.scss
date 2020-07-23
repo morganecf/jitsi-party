@@ -28,9 +28,11 @@
                     opacity: 0.85;
                     color: $events-description-color;
                 }
+                .event-time {
+                    width: 60%;
+                }
                 .event-coordinates {
                     display: flex;
-                    justify-content: space-between;
                     font-size: medium;
                     margin-top: 10px;
                     color: $events-coordinates-color;
