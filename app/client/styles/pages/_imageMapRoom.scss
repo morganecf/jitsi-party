@@ -1,0 +1,48 @@
+.imagemap-room {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    area {
+        cursor: pointer;
+    }
+}
+
+.imagemap-modal {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        background: $background-color-dark;
+        padding: 10px 20px;
+        color: $text-color;
+
+        button {
+            padding: 1px 7px;
+            margin: 0;
+
+            svg {
+                margin: 0;
+            }
+        }
+    }
+
+    .contents {
+        flex-grow: 1;
+        background: $background-color;
+        padding: 10px 20px;
+        color: $link-color;
+
+        .item {
+            cursor: pointer;
+        }
+
+        #pdfobject {
+            height: 100%
+        }
+    }
+}
