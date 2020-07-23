@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 function getContentsHtml(contentsList, onClickFunc) {
     return contentsList.map((c,i) => 
@@ -8,7 +8,7 @@ function getContentsHtml(contentsList, onClickFunc) {
     )
 }
 
-export default props => {
+function displayList(props, onClickFunc) {
     return (
         <div className="imagemap-modal">
             <div className="header">
@@ -18,8 +18,44 @@ export default props => {
                 </button>
             </div>
             <div className="contents">
-                {getContentsHtml(props.area.contents, c => console.log(c.path))}
+                {getContentsHtml(props.area.contents, onClickFunc)}
             </div>
         </div>
     )
+}
+
+function onSelectItem(setItemIsShown, setItem) {
+    return item => {
+        setItem(item)
+        setItemIsShown(true)
+    }
+}
+
+function displayItem(props, item, returnFunc) {
+    return (
+        <div className="imagemap-modal">
+            <div className="header">
+                <button onClick={returnFunc}>
+                    <FontAwesomeIcon icon={faArrowLeft}/>
+                </button>
+                <b>{item.title}</b>
+                <button onClick={props.handleClose}>
+                    <FontAwesomeIcon icon={faTimes}/>
+                </button>
+            </div>
+            <div className="contents">
+                <b>{item.path}</b>
+            </div>
+        </div>
+    )
+}
+
+export default props => {
+    const [itemIsShown, setItemIsShown] = useState(false)
+    const [item, setItem] = useState({})
+    if (!itemIsShown) {
+        return displayList(props, onSelectItem(setItemIsShown, setItem))
+    } else {
+        return displayItem(props, item, () => setItemIsShown(false))
+    }
 }
