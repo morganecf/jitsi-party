@@ -336,14 +336,12 @@
         },
         "library": {
             "name": "Library",
-            "type": "iframe",
-            "muteRoom": true,
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=unmemorious&parent=cabinweekend.party"
-            },
+            "type": "imagemap",
+            "imageMapOptions": "library-map",
             "directions": {
                 "west": "mapRoom",
-                "east": "gallery"
+                "east": "gallery",
+                "north": "readingRoom"
             },
             "map": {
                 "x": 23,
@@ -357,8 +355,17 @@
             },
             "doorTint": "#a7240e"
         },
+        "readingRoom": {
+            "name": "Secret Reading Room",
+            "type": "imagemap",
+            "imageMapOptions": "readingRoomMap",
+            "directions": {
+                "south": "library"
+            },
+            "doorTint": "#a7240e"
+        },
         "gallery": {
-            "name": "Art Corner",
+            "name": "Art Gallery",
             "type": "art",
             "description": "In case you missed it last time, here's a selection of submissions from previous parties.",
             "art": {
@@ -413,7 +420,6 @@
             "directions": {
                 "north": "kitchen",
                 "west": "vestibule",
-                "east": "satanicLibrary",
                 "south": "outdoors"
             },
             "map": {
@@ -429,23 +435,6 @@
             },
             "doorTint": "orange",
             "backgroundImage": "js/images/rooms/gameroom.jpg"
-        },
-        "satanicLibrary": {
-            "name": "Satanic Library",
-            "type": "imagemap",
-            "directions": {
-                "west": "gameRoom"
-            },
-            "map": {
-                "x": 27,
-                "y": 18,
-                "width": 3,
-                "height": 3,
-                "doors": {
-                    "west": 19
-                }
-            },
-            "imageMapOptions": "libraryMap"
         },
         "courtyard": {
             "name": "The Courtyard",
