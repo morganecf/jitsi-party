@@ -413,7 +413,7 @@
             "directions": {
                 "north": "kitchen",
                 "west": "vestibule",
-                "east": "satanic-library",
+                "east": "satanicLibrary",
                 "south": "outdoors"
             },
             "map": {
@@ -430,7 +430,7 @@
             "doorTint": "orange",
             "backgroundImage": "js/images/rooms/gameroom.jpg"
         },
-        "satanic-library": {
+        "satanicLibrary": {
             "name": "Satanic Library",
             "type": "imagemap",
             "directions": {
@@ -445,41 +445,7 @@
                     "west": 19
                 }
             },
-            "imageMapOptions": {
-                "img": "js/images/rooms/satanic-library.jpg",
-                "areas": [
-                    {
-                        "shape": "poly",
-                        "coords": "274,364,273,226,407,240,428,592,275,647",
-                        "label": "Exorcism",
-                        "contents": [
-                            {
-                              "title": "Exorcism 1",
-                              "path": "js/pdfs/Exorcism0001.pdf"
-                            },
-                            {
-                              "title": "Exorcism 2",
-                              "path": "js/pdfs/Exorcism0002.pdf"
-                            }
-                        ]
-                    },
-                    {
-                        "shape": "rect",
-                        "coords": "1243,609,774,424",
-                        "label": "Cult Crime",
-                        "contents": [
-                            {
-                              "title": "Cult Crime Network 1",
-                              "path": "js/pdfs/Cult Crime Network0001.pdf"
-                            },
-                            {
-                              "title": "Cult Cops",
-                              "path": "js/pdfs/cult cops0001.pdf"
-                            }
-                        ]
-                    }
-                ]
-            }
+            "imageMapOptions": "libraryMap"
         },
         "courtyard": {
             "name": "The Courtyard",
