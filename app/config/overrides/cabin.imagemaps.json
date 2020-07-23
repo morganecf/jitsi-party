@@ -1,0 +1,43 @@
+{
+    "imagemaps": {
+        "library-map": {
+            "img": "js/images/rooms/satanic-library.jpg",
+            "areas": [
+                {
+                    "shape": "poly",
+                    "coords": "274,364,273,226,407,240,428,592,275,647",
+                    "label": "Other Manifestos",
+                    "contents": [
+                        {
+                            "title": "The Cannibalist Manifesto",
+                            "path": "js/imagemap-content/library-map/other-manifestos/Andrade_Cannibalistic_Manifesto.pdf"
+                        },
+                        {
+                            "title": "The Agile Manifesto",
+                            "path":  "js/imagemap-content/library-map/other-manifestos/Agile-Manifesto.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1243,609,774,424",
+                    "label": "Art Manifestos",
+                    "contents": [
+                        {
+                            "title": "The Dada Manifesto",
+                            "path": "js/imagemap-content/library-map/art-manifestos/Tzara_Dada-Manifesto_1918.pdf"
+                        },
+                        {
+                            "title": "Superflat",
+                            "path": "js/imagemap-content/library-map/art-manifestos/Superflat.pdf"
+                        },
+                        {
+                            "title": "Surrealist Manifesto",
+                            "path": "js/imagemap-content/library-map/art-manifestos/Surrealist Manifesto.pdf"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
