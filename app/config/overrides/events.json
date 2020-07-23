@@ -18,10 +18,10 @@
         },
         {
             "name": "Cooking Workshop",
-            "description": "Relax with Emily as she paints beautiful watercolor fantasy maps",
+            "description": "Learn from @TheSatanicChef about living deliciously in the kitchen.",
             "room": "mapRoom",
-            "start": "2020-07-25T19:00:00-04:00",
-            "end": "2020-07-25T20:00:00-04:00",
+            "start": "2020-07-25T18:00:00-04:00",
+            "end": "2020-07-25T19:00:00-04:00",
             "image": "js/images/tst/events/back parlor lecture.jpg"
         },
         {
@@ -34,7 +34,7 @@
         },
         {
             "name": "Bats in the Belfry",
-            "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Learn more about their work at batworld.org",
+            "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas that cares for these sweethearts. Learn more about their work at batworld.org",
             "room": "belfry",
             "start": "2020-07-25T17:00:00-04:00",
             "end": "2020-07-26T01:00:00-04:00",
