@@ -283,73 +283,7 @@
                 "north": "boudoir",
                 "west": "aviary"
             },
-            "imageMapOptions": {
-                "img": "js/images/rooms/satanic-library.jpg",
-                "areas": [
-                    {
-                        "shape": "poly",
-                        "coords": "274,364,273,226,407,240,428,592,275,647",
-                        "label": "Exorcism",
-                        "contents": [
-                            {
-                              "title": "Exorcism 1",
-                              "path": "js/pdfs/Exorcism0001.pdf"
-                            },
-                            {
-                              "title": "Exorcism 2",
-                              "path": "js/pdfs/Exorcism0002.pdf"
-                            }
-                        ]
-                    },
-                    {
-                        "shape": "rect",
-                        "coords": "1243,609,774,424",
-                        "label": "Cult Crime",
-                        "contents": [
-                            {
-                              "title": "Cult Crime Network 1",
-                              "path": "js/pdfs/Cult Crime Network0001.pdf"
-                            },
-                            {
-                              "title": "Cult Cops",
-                              "path": "js/pdfs/cult cops0001.pdf"
-                            }
-                        ]
-                    },
-                    {
-                        "shape": "rect",
-                        "coords": "538,538,471,242",
-                        "label": "Anti-Satanist News",
-                        "contents": [
-                            
-                        ]
-                    },
-                    {
-                        "shape": "rect",
-                        "coords": "583,183,477,80",
-                        "label": "Panic Propaganda",
-                        "contents": [
-                            
-                        ]
-                    },
-                    {
-                        "shape": "rect",
-                        "coords": "781,35,997,155",
-                        "label": "Pop Culture",
-                        "contents": [
-                            
-                        ]
-                    },
-                    {
-                        "shape": "rect",
-                        "coords": "784,640,1253,713",
-                        "label": "Police Training",
-                        "contents": [
-                            
-                        ]
-                    }
-                ]
-            },
+            "imageMapOptions": "libraryMap",
             "map": {
                 "x": 7,
                 "y": 7,

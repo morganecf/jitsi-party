@@ -32,6 +32,38 @@
                     "path": "js/pdfs/cult cops0001.pdf"
                   }
               ]
+          },
+          {
+              "shape": "rect",
+              "coords": "538,538,471,242",
+              "label": "Anti-Satanist News",
+              "contents": [
+                  
+              ]
+          },
+          {
+              "shape": "rect",
+              "coords": "583,183,477,80",
+              "label": "Panic Propaganda",
+              "contents": [
+                  
+              ]
+          },
+          {
+              "shape": "rect",
+              "coords": "781,35,997,155",
+              "label": "Pop Culture",
+              "contents": [
+                  
+              ]
+          },
+          {
+              "shape": "rect",
+              "coords": "784,640,1253,713",
+              "label": "Police Training",
+              "contents": [
+                  
+              ]
           }
       ]
     }
