@@ -2,7 +2,7 @@
 	"debug": true,
 	"mapUnlockThreshold": 0,
 	"useLocalSessions": true,
-	"startRoom": "vestibule",
+	"startRoom": "antechamber",
 	"moderation": {
 		"moderatorEmails": [
 			"morganeciot@gmail.com"
