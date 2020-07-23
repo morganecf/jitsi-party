@@ -34,7 +34,9 @@ export default props => {
                 {getAreasHtml(props.imageMapOptions.areas, onDisplayModal(setIsShown, setArea))}
             </map>
 
-            <Modal isOpen={isShown}>
+            <Modal
+                isOpen={isShown}
+                onRequestClose={() => setIsShown(false)}>
                     <ImageMapContents area={area} handleClose={() => setIsShown(false)}></ImageMapContents>
             </Modal>
         </div>

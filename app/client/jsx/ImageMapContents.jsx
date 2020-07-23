@@ -56,7 +56,6 @@ export default props => {
     const [item, setItem] = useState({})
     if (!itemIsShown) {
         return displayList(props, onSelectItem(setItemIsShown, setItem))
-    } else {
-        return displayItem(props, item, () => setItemIsShown(false))
     }
+    return displayItem(props, item, () => setItemIsShown(false))
 }
