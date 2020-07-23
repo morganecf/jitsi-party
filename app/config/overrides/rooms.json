@@ -13,150 +13,403 @@
                 "north": "grandFoyer",
                 "west": "teaRoom",
                 "east": "frontParlor"
+            },
+            "map": {
+                "x": 10,
+                "y": 25,
+                "width": 5,
+                "height": 3,
+                "doors": {
+                    "north": 11,
+                    "west": 27,
+                    "east": 27
+                }
+            }
+        },
+        "teaRoom": {
+            "name": "Tea Room",
+            "type": "jitsi",
+            "capacity": 10,
+            "description": "Sugar cubes are on the window sill. Have as many as you'd like.",
+            "backgroundImage": "js/images/tst/backgrounds/tea room.jpg",
+            "directions": {
+                "east": "antechamber",
+                "west": "powderRoom",
+                "north": "grandBallroom"
+            },
+            "map": {
+                "x": 5,
+                "y": 26,
+                "width": 5,
+                "height": 5,
+                "doors": {
+                    "north": 7,
+                    "west": 27,
+                    "east": 27
+                }
+            }
+        },
+        "powderRoom": {
+            "name": "Powder Room",
+            "type": "jitsi",
+            "capacity": 3,
+            "description": "Freshen up with a few friends.",
+            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "directions": {
+                "east": "teaRoom"
+            },
+            "map": {
+                "x": 3,
+                "y": 26,
+                "width": 2,
+                "height": 2,
+                "doors": {
+                    "east": 27
+                }
+            }
+        },
+        "grandBallroom": {
+            "name": "Grand Ballroom",
+            "type": "jitsi",
+            "capacity": 10,
+            "description": "Enjoy music in the Grand Ballroom from Kadam",
+            "directions": {
+                "south": "teaRoom"
+            },
+            "doorTint": "golden",
+            "map": {
+                "x": 3,
+                "y": 18,
+                "width": 5,
+                "height": 8,
+                "doors": {
+                    "south": 7
+                }
             }
         },
         "grandFoyer": {
             "name": "Grand Foyer",
             "type": "art",
-            "description": "GRAND FOYER PLACEHOLDER",
-            "backgroundImage": "js/images/tst/backgrounds/home.jpg",
+            "art": {
+                "title": "",
+                "artist": "",
+                "src": "./js/images/tst/backgrounds/home.jpg"
+            },
+            "map": {
+                "x": 11,
+                "y": 12,
+                "width": 1,
+                "height": 13,
+                "doors": {
+                    "north": 11,
+                    "south": 11
+                }
+            },
             "directions": {
                 "north": "library",
-                "east": "trapDoor",
+                "east": "courtyard1",
                 "south": "antechamber"
             }
         },
         "frontParlor": {
             "name": "Front Parlor",
             "type": "jitsi",
-            "capacity": 2,
-            "backgroundImage": "js/images/rooms/closet.png",
             "description": "It's Lucien's movie night. Are you excited?",
             "directions": {
                 "east": "kitchen",
                 "west": "antechamber"
+            },
+            "map": {
+                "x": 15,
+                "y": 24,
+                "width": 5,
+                "height": 5,
+                "doors": {
+                    "west": 27,
+                    "east": 27
+                }
             }
         },
         "kitchen": {
             "name": "Kitchen",
             "type": "jitsi",
-            "capacity": 2,
+            "capacity": 10,
             "backgroundImage": "js/images/rooms/closet.png",
             "description": "Learn from @TheSatanicChef about living deliciously in the kitchen.",
             "directions": {
                 "north": "den",
-                "west": "frontParlor"
+                "west": "frontParlor",
+                "east": "garden"
+            },
+            "map": {
+                "x": 20,
+                "y": 24,
+                "width": 4,
+                "height": 5,
+                "doors": {
+                    "west": 27,
+                    "east": 27,
+                    "north": 22
+                }
             }
         },
         "den": {
             "name": "The Den",
             "type": "jitsi",
+            "capacity": 10,
             "description": "Puppies are afoot in The Den, live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
             "directions": {
                 "north": "backParlor",
                 "south": "kitchen"
             },
-            "doorTint": "orange",
-            "backgroundImage": "js/images/rooms/gameroom.jpg"
+            "map": {
+                "x": 21,
+                "y": 21,
+                "width": 3,
+                "height": 3,
+                "doors": {
+                    "north": 22,
+                    "south": 22
+                }
+            },
+            "doorTint": "orange"
         },
         "backParlor": {
             "name": "Back Parlor",
             "type": "jitsi",
-            "backgroundImage": "js/images/rooms/livingroom.jpg",
+            "capacity": 10,
+            "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "directions": {
                 "south": "den",
                 "west": "ritualChamber"
             },
+            "map": {
+                "x": 20,
+                "y": 16,
+                "width": 6,
+                "height": 5,
+                "doors": {
+                    "south": 22,
+                    "west": 18
+                }
+            },
+            "doorTint": "#FF5938"
+        },
+        "ritualChamber": {
+            "name": "Ritual Chamber",
+            "type": "jitsi",
+            "capacity": 10,
+            "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers. Satanic services are held in this unholy space. ",
+            "directions": {
+                "east": "backParlor"
+            },
+            "map": {
+                "x": 17,
+                "y": 17,
+                "width": 3,
+                "height": 3,
+                "doors": {
+                    "east": 18
+                }
+            },
             "doorTint": "#FF5938"
         },
         "belfry": {
-            "name": "Game Room",
+            "name": "Belfry",
             "type": "jitsi",
+            "capacity": 10,
+            "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Learn more about their work at batworld.org",
             "directions": {
-                "west": "vestibule"
+                "south": "tstHQ"
             },
-            "doorTint": "orange",
-            "backgroundImage": "js/images/rooms/gameroom.jpg"
+            "map": {
+                "x": 27,
+                "y": 5,
+                "width": 2,
+                "height": 2,
+                "doors": {
+                    "south": 27
+                }
+            },
+            "doorTint": "blue"
         },
         "sleepingPorch": {
-            "name": "Game Room",
+            "name": "Sleeping Porch",
+            "capacity": 10,
+            "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
             "type": "jitsi",
             "directions": {
-                "west": "vestibule"
+                "west": "library",
+                "east": "hauntedCorridor"
             },
             "map": {
-                "x": 21,
-                "y": 18,
-                "width": 6,
-                "height": 3,
+                "x": 14,
+                "y": 9,
+                "width": 2,
+                "height": 2,
                 "doors": {
-                    "north": 25,
-                    "west": 20,
-                    "east": 19
+                    "west": 10,
+                    "east": 10
                 }
             },
-            "doorTint": "orange",
-            "backgroundImage": "js/images/rooms/gameroom.jpg"
+            "doorTint": "blue"
         },
         "aviary": {
-            "name": "Game Room",
+            "name": "Aviary",
             "type": "jitsi",
+            "capacity": 10,
+            "description": "Get to know some amazing parrots in the Aviary, broadcasting live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org",
             "directions": {
-                "west": "vestibule"
+                "east": "library"
             },
             "map": {
-                "x": 21,
-                "y": 18,
-                "width": 6,
-                "height": 3,
+                "x": 5,
+                "y": 8,
+                "width": 2,
+                "height": 2,
                 "doors": {
-                    "north": 25,
-                    "west": 20,
-                    "east": 19
+                    "east": 9
                 }
             },
-            "doorTint": "orange",
-            "backgroundImage": "js/images/rooms/gameroom.jpg"
+            "doorTint": "orange"
         },
         "library": {
-            "name": "Game Room",
+            "name": "Library",
             "type": "jitsi",
+            "description": "Satanic Panic Archive Library. Many of these texts exist nowhere else than this room.",
             "directions": {
-                "west": "vestibule"
+                "south": "grandFoyer",
+                "east": "sleepingPorch",
+                "north": "boudoir",
+                "west": "aviary"
             },
             "map": {
-                "x": 21,
-                "y": 18,
-                "width": 6,
-                "height": 3,
+                "x": 7,
+                "y": 7,
+                "width": 7,
+                "height": 5,
                 "doors": {
-                    "north": 25,
-                    "west": 20,
-                    "east": 19
+                    "south": 11,
+                    "north": 10,
+                    "east": 10,
+                    "west": 9
                 }
             },
-            "doorTint": "orange",
-            "backgroundImage": "js/images/rooms/gameroom.jpg"
+            "doorTint": "orange"
         },
-        "grandBallroom": {
-            "name": "Game Room",
+        "boudoir": {
+            "name": "Boudoir",
             "type": "jitsi",
+            "capacity": 3,
+            "description": "An intimate space for a trio of friends to get ready, together.",
+            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
             "directions": {
-                "west": "vestibule"
+                "south": "library"
             },
             "map": {
-                "x": 21,
-                "y": 18,
-                "width": 6,
-                "height": 3,
+                "x": 9,
+                "y": 5,
+                "width": 3,
+                "height": 2,
                 "doors": {
-                    "north": 25,
-                    "west": 20,
-                    "east": 19
+                    "south": 10
                 }
             },
-            "doorTint": "orange",
-            "backgroundImage": "js/images/rooms/gameroom.jpg"
+            "doorTint": "red"
+        },
+        "hauntedCorridor": {
+            "name": "Haunted Corridor",
+            "type": "art",
+            "art": {
+                "title": "",
+                "artist": "",
+                "src": "./js/images/tst/backgrounds/home.jpg"
+            },
+            "directions": {
+                "east": "tstHQ"
+            },
+            "map": {
+                "x": 16,
+                "y": 10,
+                "width": 8,
+                "height": 1,
+                "doors": {
+                    "west": 10,
+                    "east": 10
+                }
+            }
+        },
+        "tstHQ": {
+            "name": "TST Virtual HQ Offices",
+            "type": "jitsi",
+            "capacity": 2,
+            "description": "Office Hours To Be Determined. This door is locked until we finish remodeling. Thank you for your patience.",
+            "directions": {
+                "west": "hauntedCorridor",
+                "north": "belfry"
+            },
+            "map": {
+                "x": 24,
+                "y": 7,
+                "width": 5,
+                "height": 5,
+                "doors": {
+                    "west": 10,
+                    "north": 27
+                }
+            },
+            "doorTint": "black"
+        },
+        "garden": {
+            "name": "Garden",
+            "type": "art",
+            "art": {
+                "title": "",
+                "artist": "",
+                "src": ""
+            },
+            "description": "Nightshades, blue lady hellebores, queen of the night tulips and black velvet petunias.",
+            "directions": {
+                "west": "kitchen",
+                "east": "cemetery"
+            },
+            "map": {
+                "x": 24,
+                "y": 27,
+                "width": 5,
+                "height": 1,
+                "doors": {
+                    "west": 27,
+                    "east": 27
+                }
+            },
+            "doorTint": "purple"
+        },
+        "cemetery": {
+            "name": "Cemetery",
+            "type": "jitsi",
+            "capacity": 10,
+            "description": "There's room for all of us to rest here",
+            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "directions": {
+                "west": "garden"
+            },
+            "map": {
+                "x": 29,
+                "y": 23,
+                "width": 6,
+                "height": 6,
+                "doors": {
+                    "west": 27
+                }
+            },
+            "doorTint": "white"
+        },
+        "crematorium": {
+            "name": "Crematorium",
+            "type": "jitsi",
+            "capacity": 10,
+            "doorTint": "white"
         }
     }
 }
