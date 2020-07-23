@@ -8,6 +8,10 @@
 }
 
 .imagemap-modal {
+    display: flex;
+    flex-flow: column;
+    height: 100%
+
     .header {
         display: flex;
         justify-content: space-between;
@@ -26,12 +30,17 @@
     }
 
     .contents {
+        flex-grow: 1;
         background: $background-color;
         padding: 10px 20px;
         color: $link-color;
 
         .item {
             cursor: pointer;
+        }
+
+        #pdfobject {
+            height: 100%
         }
     }
 }
