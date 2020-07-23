@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { PDFObject } from 'react-pdfobject'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -44,7 +45,7 @@ function displayItem(props, item, returnFunc) {
                 </button>
             </div>
             <div className="contents">
-                <b>{item.path}</b>
+                <PDFObject url={item.path} />
             </div>
         </div>
     )
