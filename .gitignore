@@ -2,6 +2,9 @@
 app/client/js/bundle*
 app/client/js/styles*
 
+# Email config
+app/email_config.sh
+
 # DB
 app/db.sqlite
 

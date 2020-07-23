@@ -19,16 +19,23 @@
                 padding: 10px;
                 width: 70%;
     
+                .event-name {
+                    color: $events-name-color;
+                }
                 .event-description {
                     font-size: smaller;
                     line-height: 1;
                     opacity: 0.85;
+                    color: $events-description-color;
+                }
+                .event-time {
+                    width: 60%;
                 }
                 .event-coordinates {
                     display: flex;
-                    justify-content: space-between;
                     font-size: medium;
                     margin-top: 10px;
+                    color: $events-coordinates-color;
     
                     svg {
                         margin-right: 5px;
@@ -53,7 +60,7 @@
     }
 }
 
-.ReactModal__Content.event-modal {
+.ReactModal__Content.events-modal {
     position: absolute;
     width: 50%;
     max-height: 85%;
