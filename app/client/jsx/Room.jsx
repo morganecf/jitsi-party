@@ -4,11 +4,11 @@ import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
 import { Beforeunload } from 'react-beforeunload';
 import Modal from 'react-modal';
+import ModalFactory from './ModalFactory.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
 import ArtRoom from './ArtRoom.jsx'
 import IFrameRoom from './IFrameRoom.jsx'
-import Map from './Map.jsx'
-import EventList from './EventList.jsx'
+import ImageMapRoom from './ImageMapRoom.jsx'
 import Door from './Door.jsx'
 import Adventure from './Adventure.jsx'
 import Navigation from './Navigation.jsx'
@@ -70,7 +70,8 @@ class Room extends Component {
         *   1. Regular Jitsi room that just has video
         *   2. Art room which has a small video panel and an image
         *   3. Text-based adventure rooms where you have to make a decision
-        *   4. Special purpose rooms that exist at a different route
+        *   4. Image map based room to display an organized & navigable set of content
+        *   5. Special purpose rooms that exist at a different route
         */
         const roomData = this.getRoomData()
         const jitsiData = {
@@ -83,7 +84,8 @@ class Room extends Component {
             art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
             jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
             iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
-            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>
+            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
+            imagemap: <ImageMapRoom imageMapOptions={roomData.imageMapOptions}></ImageMapRoom>
         }[roomData.type]
     }
 
@@ -162,20 +164,8 @@ class Room extends Component {
         this.socketApi.leaveRoom(this.props.user, this.state.room)
     }
 
-    handleOpenMap() {
-        this.setState({ showMap: true })
-    }
-
-    handleCloseMap() {
-        this.setState({ showMap: false })
-    }
-
-    handleOpenEvents() {
-        this.setState({ showEvents: true })
-    }
-
-    handleCloseEvents() {
-        this.setState({ showEvents: false })
+    handleModalChange(modal) {
+        this.setState({ modal })
     }
 
     computeMapState(room) {
@@ -254,20 +244,13 @@ class Room extends Component {
                     showMapButton={mapState.mapVisible}
                     showMapTooltip={mapState.showMapTooltip}
                     hideSettings={room.type === 'adventure'}
-                    handleOpenMap={this.handleOpenMap.bind(this)}
-                    handleOpenEvents={this.handleOpenEvents.bind(this)}></Navigation>
+                    handleOpenModal={this.handleModalChange.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
                 <Modal
-                    isOpen={this.state.showMap}
-                    onAfterOpen={this.handleOpenMap.bind(this)}
-                    onRequestClose={this.handleCloseMap.bind(this)}>
-                        <Map onRoomClick={this.onSwitchRoom.bind(this)} handleCloseMap={this.handleCloseMap.bind(this)}></Map>
-                </Modal>
-                <Modal
-                    isOpen={this.state.showEvents}
-                    onRequestClose={this.handleCloseEvents.bind(this)}
-                    className="event-modal">
-                        <EventList rooms={this.props.rooms} events={this.props.events}></EventList>
+                    isOpen={!!this.state.modal}
+                    onRequestClose={() => this.handleModalChange(null)}
+                    className={`${this.state.modal}-modal`}>
+                        <ModalFactory room={this} modal={this.state.modal} />
                 </Modal>
                 {!!this.state.pokeData && <PokeNotification {...this.state.pokeData} />}
             </div>
