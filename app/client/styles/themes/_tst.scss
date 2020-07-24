@@ -58,35 +58,7 @@ $modal-overlay-color: rgba(129, 62, 62, 0.25);
 
 $art-image-border-color: color("grey-50"); //white
 
-// .bauhaus {
-//     color: black;
-
-//     p {
-//         font-weight: bold;
-//     }
-
-//     h1 {
-//         width: 100%;
-//         background: $yellow;
-//     }
-// }
-
-// .room .door-wrapper .door-background {
-//     background: none !important;
-//     border: 4px solid $red !important;
-// }
-
-// .door-wrapper .door-target button, input[type="button"] {
-//     &:disabled {
-//         background: white;
-//         opacity: 0.5;
-//     }
-// }
-
-// #map-info .room-info {
-//     color: $black !important;
-// }
-
-// .events-view .event-list .event-item {
-//     background: $bright-blue !important;
-// }
+.room .room-content {
+    max-height: 100px;
+    padding: .5em 50px;
+}
