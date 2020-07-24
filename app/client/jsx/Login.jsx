@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import _ from 'lodash'
+import React, { useState, useEffect } from 'react'
 import { Redirect } from 'react-router-dom'
 import PuckSelect from './PuckSelect.jsx'
 import { HttpApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux'
 import Config from './Config.jsx'
 
 
@@ -26,7 +27,7 @@ export default () => {
 
     const [username, setUsername] = useState(user.username)
     const [avatar, setAvatar] = useState(avatarSelectionEnabled ? user.avatar : defaultAvatar)
-    const [redirect, setRedirect] = useState(null)
+    const [redirect, setRedirect] = useState(false)
 
     const handleUserSelected = user => {
         useLocalSessions && LocalStorage.set('USER', user)
@@ -48,14 +49,19 @@ export default () => {
             }
             dispatch({ type: 'UPDATE_USER', user })
             handleUserSelected(user)
-            setRedirect('/party')
+            setRedirect(true)
         }
     }
 
-    if (redirect) {
-        return <Redirect to={redirect}/>
+    // If user is present from local storage, navigate directly to house. A new user is created
+    // with a new user ID, but the user's previous username/avatar selections are persisted.
+    if (!_.isEmpty(user)) {
+        handleLogin()
     }
-
+    if (redirect) {
+        return <Redirect to='/party'/>
+    }
+    
     let avatarOpacity = 'form-fade'
     let nameOpacity = 'form-fade'
     let partyOpacity = 'form-fade-party'
@@ -74,7 +80,7 @@ export default () => {
             : null
 
     return (
-        <div>
+        <div className="login">
             <input
                 autoComplete="off"
                 className={`text-entry ${nameOpacity}`}

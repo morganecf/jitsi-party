@@ -1,5 +1,6 @@
 import os
 import json
+import copy
 from . import mail
 from .models import User
 from datetime import datetime
@@ -19,8 +20,8 @@ def join():
 @main.route('/config')
 def get_config():
     # Link adventures to rooms
-    rooms = current_app.config['ROOMS']
-    adventures = current_app.config['ADVENTURES']
+    rooms = copy.deepcopy(current_app.config['ROOMS'])
+    adventures = copy.deepcopy(current_app.config['ADVENTURES'])
     for adventure in adventures.values():
         config = adventure.get('config', {})
         for node_name, adventure_node in adventure.items():

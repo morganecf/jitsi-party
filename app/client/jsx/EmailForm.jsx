@@ -86,11 +86,11 @@ export default ({ user }) => {
                         onChange={handleMessageInput}/>
                 </section>
                 <section className="email-form-email">
-                    <span>Email (optional)</span>
+                    <span>Your email (required)</span>
                     <input type="email" onChange={handleEmailInput} className={isBadEmailInput ? 'bad-email-input' : ''} />
                 </section>
                 <section className="email-form-button">
-                    <button disabled={numWords < MIN_WORDS || numWords > MAX_WORDS || isBadEmailInput} onClick={handleSubmit}>
+                    <button disabled={numWords < MIN_WORDS || numWords > MAX_WORDS || isBadEmailInput || email === ''} onClick={handleSubmit}>
                         Send
                     </button>
                 </section>
