@@ -2,7 +2,7 @@
 	"debug": true,
 	"mapUnlockThreshold": 0,
 	"useLocalSessions": true,
-	"startRoom": "antechamber",
+	"startRoom": "cemetery",
 	"moderation": {
 		"moderatorEmails": [
 			"morganeciot@gmail.com",

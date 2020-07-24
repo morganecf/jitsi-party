@@ -1,41 +1,17 @@
 {
     "rooms": {
-        "antechamber": {
-            "name": "Antechamber",
-            "type": "art",
-            "description": "Welcome to TST VHQ!",
-            "art": {
-                "title": "",
-                "artist": "",
-                "src": "./js/images/tst/backgrounds/home.jpg"
-            },
-            "directions": {
-                "north": "grandFoyer",
-                "west": "teaRoom",
-                "east": "frontParlor"
-            },
-            "map": {
-                "x": 10,
-                "y": 25,
-                "width": 5,
-                "height": 3,
-                "doors": {
-                    "north": 11,
-                    "west": 27,
-                    "east": 27
-                }
-            }
-        },
-        "teaRoom": {
-            "name": "Tea Room",
-            "type": "jitsi",
+        "kitchen": {
+            "name": "Kitchen",
+            "type": "iframe",
             "capacity": 10,
-            "description": "Sugar cubes are on the window sill. Have as many as you'd like.",
-            "backgroundImage": "js/images/tst/backgrounds/tea room.jpg",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
+            "description": "Learn from @TheSatanicChef about living deliciously in the kitchen.",
             "directions": {
-                "east": "antechamber",
                 "west": "powderRoom",
-                "north": "grandBallroom"
+                "north": "grandBallroom",
+                "east": "frontParlor"
             },
             "map": {
                 "x": 5,
@@ -70,8 +46,11 @@
         },
         "grandBallroom": {
             "name": "Grand Ballroom",
-            "type": "jitsi",
+            "type": "iframe",
             "capacity": 10,
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=kadaminimal&parent=cabinweekend.party"
+            },
             "description": "Enjoy music in the Grand Ballroom from Kadam",
             "directions": {
                 "south": "teaRoom"
@@ -87,28 +66,28 @@
                 }
             }
         },
-        "grandFoyer": {
-            "name": "Grand Foyer",
+        "grandStaircase": {
+            "name": "Grand Staircase",
             "type": "art",
             "art": {
                 "title": "",
                 "artist": "",
                 "src": "./js/images/tst/backgrounds/home.jpg"
             },
+            "directions": {
+                "north": "library",
+                "east": "painting",
+                "south": "frontParlor"
+            },
             "map": {
                 "x": 11,
                 "y": 12,
                 "width": 1,
-                "height": 13,
+                "height": 12,
                 "doors": {
                     "north": 11,
                     "south": 11
                 }
-            },
-            "directions": {
-                "north": "library",
-                "east": "painting",
-                "south": "antechamber"
             }
         },
         "frontParlor": {
@@ -120,38 +99,37 @@
             },
             "description": "It's Lucien's movie night. Are you excited?",
             "directions": {
-                "east": "kitchen",
-                "west": "antechamber"
+                "east": "teaRoom",
+                "north": "grandStaircase",
+                "west": "kitchen"
             },
             "map": {
-                "x": 15,
+                "x": 10,
                 "y": 24,
-                "width": 5,
+                "width": 8,
                 "height": 5,
                 "doors": {
-                    "west": 27,
-                    "east": 27
+                    "east": 27,
+                    "north": 11,
+                    "west": 27
                 }
             }
         },
-        "kitchen": {
-            "name": "Kitchen",
-            "type": "iframe",
+        "teaRoom": {
+            "name": "Tea Room",
+            "type": "jitsi",
             "capacity": 10,
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
-            },
-            "backgroundImage": "js/images/rooms/closet.png",
-            "description": "Learn from @TheSatanicChef about living deliciously in the kitchen.",
+            "backgroundImage": "js/images/tst/backgrounds/tea room.jpg",
+            "description": "Sugar cubes are on the window sill. Have as many as you'd like.",
             "directions": {
                 "north": "den",
                 "west": "frontParlor",
                 "east": "garden"
             },
             "map": {
-                "x": 20,
+                "x": 18,
                 "y": 24,
-                "width": 4,
+                "width": 6,
                 "height": 5,
                 "doors": {
                     "west": 27,
@@ -288,7 +266,7 @@
                 "x": 5,
                 "y": 8,
                 "width": 2,
-                "height": 2,
+                "height": 3,
                 "doors": {
                     "east": 9
                 }
@@ -300,7 +278,7 @@
             "type": "imagemap",
             "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
             "directions": {
-                "south": "grandFoyer",
+                "south": "grandStaircase",
                 "east": "sleepingPorch",
                 "north": "boudoir",
                 "west": "aviary"
