@@ -25,6 +25,7 @@ class Door extends Component {
             `${this.props.users.length} people are in this room!` :
             '1 person is in this room!'
         const isPrivate = _.has(this.props.room, 'capacity')
+        const isLocked = this.props.room.locked
         const users = this.props.users.length ?
             (
                 <div className="user-list">
@@ -48,7 +49,7 @@ class Door extends Component {
                         <CapacitySticker capacity={this.props.room.capacity} />
                     </div>
                 </div>
-                <div id="door" className="door">
+                <div id="door" className={isLocked ? "door locked-door" : "door unlocked-door"}>
                     <div className="tint" style={tintStyle}></div>
                     <div className="knob"></div>
                     <div className="spacer"></div>

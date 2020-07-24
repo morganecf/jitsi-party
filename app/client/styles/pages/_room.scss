@@ -124,19 +124,22 @@
 			border: 1px solid $background-color;
 		}
 
-		.door {
-			z-index: 100;
-			background: gray;
+		.door.unlocked-door {
 			-webkit-transform-origin: 0% 50%;
 			-moz-transform-origin: 0% 50%;
-			overflow: visible;
-			display: flex;
-			pointer-events: none;
 			animation: door-open 1s;
 			-webkit-animation: door-open 1s;
 			-moz-animation: door-open 1s;
 			animation-fill-mode: forwards;  
 			-moz-animation-fill-mode: forwards;
+		}
+
+		.door {
+			z-index: 100;
+			background: gray;
+			overflow: visible;
+			display: flex;
+			pointer-events: none;
 
 			.knob {
 				position: absolute;

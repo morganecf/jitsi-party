@@ -5,7 +5,7 @@
             "type": "iframe",
             "capacity": 10,
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+                "src": "https://player.twitch.tv/?channel=satanicchef&parent=cabinweekend.party"
             },
             "description": "Learn from @TheSatanicChef about living deliciously in the kitchen. Sessions will occur every 30 minutes or so.",
             "directions": {
@@ -83,7 +83,8 @@
                 "height": 12,
                 "doors": {
                     "north": 11,
-                    "south": 11
+                    "south": 11,
+                    "east": 18
                 }
             }
         },
@@ -165,7 +166,7 @@
             "capacity": 10,
             "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+                "src": "https://player.twitch.tv/?channel=SalemWitchWiles&parent=cabinweekend.party"
             },
             "directions": {
                 "south": "den",
@@ -319,8 +320,10 @@
             "name": "Staircase",
             "type": "imagemap",
             "imageMapOptions": "staircase-map",
+            "description": "Try interacting with the staircase.",
             "directions": {
-                "east": "tstHQ"
+                "east": "tstHQ",
+                "west": "sleepingPorch"
             },
             "map": {
                 "x": 16,
@@ -337,6 +340,7 @@
             "name": "TST Virtual HQ Offices",
             "type": "jitsi",
             "capacity": 2,
+            "locked": true,
             "description": "Office Hours To Be Determined. This door is locked until we finish remodeling. Thank you for your patience.",
             "directions": {
                 "west": "staircase",
@@ -358,7 +362,7 @@
             "name": "Garden",
             "type": "imagemap",
             "imageMapOptions": "garden-map",
-            "description": "Nightshades, blue lady hellebores, queen of the night tulips and black velvet petunias.",
+            "description": "Nightshades, blue lady hellebores, queen of the night tulips and black velvet petunias. What happens if you hover?",
             "directions": {
                 "west": "teaRoom",
                 "east": "cemetery"
@@ -410,6 +414,7 @@
             "name": "Secret Tunnels",
             "type": "imagemap",
             "imageMapOptions": "secret-tunnel-map",
+            "description": "Try interacting with the catacombs.",
             "directions": {
                 "west": "trapDoor",
                 "east": "crematorium"
