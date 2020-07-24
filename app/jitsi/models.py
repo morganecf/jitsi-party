@@ -66,11 +66,11 @@ class User(db.Model, SerializerMixin):
     def enter_room(cls, user_id, room_name):
         room = Room.query.filter_by(name=room_name).first()
         if not room:
-            print(f"Couldn't find room for name {room_name}")
+            logger.error(f"Couldn't find room for name {room_name}")
             return
         user = User.query.filter_by(id=user_id).first()
         if not user:
-            print(f"Couldn't find user for id {user_id}")
+            logger.error(f"Couldn't find user for id {user_id}")
             return
 
         user.room = room
