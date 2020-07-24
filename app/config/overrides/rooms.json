@@ -113,7 +113,11 @@
         },
         "frontParlor": {
             "name": "Front Parlor",
-            "type": "jitsi",
+            "type": "iframe",
+            "iframeOptions": {
+                "src": "./js/iframes/TST_tv.html",
+                "secondSrc": "./js/iframes/TST_chat.html"
+            },
             "description": "It's Lucien's movie night. Are you excited?",
             "directions": {
                 "east": "kitchen",
@@ -161,7 +165,7 @@
             "type": "iframe",
             "capacity": 10,
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+                "src": "https://www.youtube.com/embed/czuh-ZgfLjo"
             },
             "description": "Puppies are afoot in The Den, live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
             "directions": {
@@ -229,7 +233,7 @@
             "capacity": 10,
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Learn more about their work at batworld.org",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+                "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
             },
             "directions": {
                 "south": "tstHQ"
@@ -251,7 +255,7 @@
             "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
             "type": "iframe",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+                "src": "https://www.youtube.com/embed/tyEq9pxjRV0"
             },
             "directions": {
                 "west": "library",
@@ -274,7 +278,7 @@
             "type": "iframe",
             "capacity": 10,
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+                "src": "https://www.youtube.com/embed/8rWf-8SI0rc"
             },
             "description": "Get to know some amazing parrots in the Aviary, broadcasting live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org",
             "directions": {
