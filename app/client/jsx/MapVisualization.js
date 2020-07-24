@@ -136,7 +136,7 @@ export default class MapVisualization {
             // .classed('unvisited', d => !visited[d.key])
     }
 
-    update(users) {
+    update(users, transition) {
         const numUsers = _.sumBy(Object.values(users), d => d.length)
         const maxUsersInRoom = (_.maxBy(Object.values(users), u => u.length) || []).length
 
@@ -146,12 +146,14 @@ export default class MapVisualization {
         ])
         this.opacityScale.domain([0, maxUsersInRoom])
 
-        console.log('max users in room:', numUsers, maxUsersInRoom)
+        const selector = transition ?
+            this.rooms
+                .interrupt()
+                .transition()
+                .duration(ROOM_TRANSITION_DURATION)
+            : this.rooms
 
-        this.rooms
-            .interrupt()
-            .transition()
-            .duration(ROOM_TRANSITION_DURATION)
+        selector
             // .attr('fill', room => this.colorScale((users[room.key] || []).length + 1))
             // .attr('fill-opacity', room => users[room.key] ? ROOM_OPACITY : EMPTY_ROOM_OPACITY)
             .attr('fill-opacity', room => numUsers ? this.opacityScale((users[room.key] || []).length) : 1)

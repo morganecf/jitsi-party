@@ -46,6 +46,12 @@ class Welcome extends Component {
                 img.src = room.art.src
             }
         })
+        _.forEach(Config.avatars, avatarGroup => {
+            _.forEach(Object.values(avatarGroup), avatar => {
+                const img = new Image()
+                img.src = avatar
+            })
+        })
     }
 
     onAuthentication() {
