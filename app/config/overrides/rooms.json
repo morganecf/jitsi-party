@@ -5,7 +5,7 @@
             "type": "iframe",
             "capacity": 10,
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=satanicchef&parent=cabinweekend.party"
+                "src": "https://player.twitch.tv/?channel=satanicchef&parent=tstvhq.com"
             },
             "description": "Learn from @TheSatanicChef about living deliciously in the kitchen. Sessions will occur every 30 minutes or so.",
             "directions": {
@@ -49,7 +49,7 @@
             "type": "iframe",
             "capacity": 10,
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=kadaminimal&parent=cabinweekend.party"
+                "src": "https://player.twitch.tv/?channel=kadaminimal&parent=tstvhq.com"
             },
             "description": "Enjoy music in the Grand Ballroom from Kadam",
             "directions": {
