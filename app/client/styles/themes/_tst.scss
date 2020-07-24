@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+$accent-font: 'Philosopher';
+
 $black: #241f20;
 $grey: #595959;
 $dark-grey: #404040;
@@ -58,7 +61,16 @@ $modal-overlay-color: rgba(129, 62, 62, 0.25);
 
 $art-image-border-color: color("grey-50"); //white
 
+.tst,
+.room-header h2, 
+#map-info .room-name,
+.events-view .events-header,
+.events-view .event-list .event-info .event-name,
+.navigation-container .settings-container .poke-button-container .poke-options .poke-header {
+    font-family: $accent-font;
+}
+
 .room .room-content {
-    max-height: 100px;
+    max-height: 80px;
     padding: .5em 50px;
 }
