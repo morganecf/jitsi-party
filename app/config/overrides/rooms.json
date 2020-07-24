@@ -283,7 +283,7 @@
                 "north": "boudoir",
                 "west": "aviary"
             },
-            "imageMapOptions": "libraryMap",
+            "imageMapOptions": "satanic-library-map",
             "map": {
                 "x": 7,
                 "y": 7,
