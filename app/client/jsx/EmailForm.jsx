@@ -55,10 +55,12 @@ export default ({ user }) => {
         }
     }
     const handleEmailInput = event => setEmail(event.target.value)
-    const handleSubmit = async () => {
+    const handleSubmit = () => {
         setSent(true)
-        const { success } = await httpApi.emailModerators(message, email, user)
-        setStatus(success ? 'succeeded' : 'failed')
+        // const { success } = httpApi.emailModerators(message, email, user)
+        // setStatus(success ? 'succeeded' : 'failed')
+        httpApi.emailModerators(message, email, user)
+        setStatus('succeeded')
     }
 
     return sent ?
