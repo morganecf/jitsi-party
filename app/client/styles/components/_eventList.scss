@@ -11,12 +11,12 @@
         .event-item {
             display: flex;
             justify-content: space-between;
-            background: $room-content-background-color;
+            background: $events-item-background-color;
             margin: 10px 0;
             border-radius: 5px;
     
             .event-info {
-                padding: 10px;
+                padding: 10px 20px;
                 width: 70%;
     
                 .event-name {
