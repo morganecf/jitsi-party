@@ -132,8 +132,11 @@
         },
         "kitchen": {
             "name": "Kitchen",
-            "type": "jitsi",
+            "type": "iframe",
             "capacity": 10,
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
             "backgroundImage": "js/images/rooms/closet.png",
             "description": "Learn from @TheSatanicChef about living deliciously in the kitchen.",
             "directions": {
@@ -155,8 +158,11 @@
         },
         "den": {
             "name": "The Den",
-            "type": "jitsi",
+            "type": "iframe",
             "capacity": 10,
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
             "description": "Puppies are afoot in The Den, live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
             "directions": {
                 "north": "backParlor",
@@ -176,9 +182,12 @@
         },
         "backParlor": {
             "name": "Back Parlor",
-            "type": "jitsi",
+            "type": "iframe",
             "capacity": 10,
             "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
             "directions": {
                 "south": "den",
                 "west": "ritualChamber"
@@ -216,9 +225,12 @@
         },
         "belfry": {
             "name": "Belfry",
-            "type": "jitsi",
+            "type": "iframe",
             "capacity": 10,
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Learn more about their work at batworld.org",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
             "directions": {
                 "south": "tstHQ"
             },
@@ -237,7 +249,10 @@
             "name": "Sleeping Porch",
             "capacity": 10,
             "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
-            "type": "jitsi",
+            "type": "iframe",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
             "directions": {
                 "west": "library",
                 "east": "hauntedCorridor"
@@ -256,8 +271,11 @@
         },
         "aviary": {
             "name": "Aviary",
-            "type": "jitsi",
+            "type": "iframe",
             "capacity": 10,
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
             "description": "Get to know some amazing parrots in the Aviary, broadcasting live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org",
             "directions": {
                 "east": "library"
