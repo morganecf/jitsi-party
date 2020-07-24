@@ -38,6 +38,10 @@ input[type="button"] {
 		color: $disabled-text-color !important;
 		border: 2px solid $disabled-text-color !important;
 		cursor: auto;
+
+		&:hover {
+			background: $button-background-color;
+		}
 	}
 
 	&.opaque {

@@ -37,6 +37,16 @@
     z-index: -1;
 }
 
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button.form-party {
+        width: fit-content;
+    }
+}
+
 .text-entry {
   	padding: 6px 10px !important;
     border: 2px solid $name-input-border-color !important;

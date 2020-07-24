@@ -52,6 +52,14 @@ class Map extends Component {
             mouseEvents
         )
         this.map.draw(this.rooms)
+        this.updateMap(false)
+    }
+
+    updateMap(transition) {
+        this.map.update(
+            _.pickBy(this.props.users,  (val, key) => key !== 'hallway'),
+            transition
+        )
     }
 
     getGlobalStats() {
@@ -103,9 +111,7 @@ class Map extends Component {
 
     render() {
         if (this.map) {
-            this.map.update(
-                _.pickBy(this.props.users,  (val, key) => key !== 'hallway')
-            )
+            this.updateMap(true)
         }
         
         const roomId = this.state.highlighted
