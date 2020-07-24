@@ -18,32 +18,32 @@
 	},
 	"avatars": {
 	  "normal": {
-		"blue": "./js/images/bauhausPuck/normal-blue.png",
-		"pink": "./js/images/bauhausPuck/normal-pink.png",
+			"blue": "./js/images/bauhausPuck/normal-blue.png",
+			"pink": "./js/images/bauhausPuck/normal-pink.png",
 	    "black": "./js/images/bauhausPuck/normal-black.png",
 	    "yellow": "./js/images/bauhausPuck/normal-yellow.png"
 	  },
 	  "book": {
-		"blue": "./js/images/bauhausPuck/book-blue.png",
-		"pink": "./js/images/bauhausPuck/book-pink.png",
+			"blue": "./js/images/bauhausPuck/book-blue.png",
+			"pink": "./js/images/bauhausPuck/book-pink.png",
 	    "black": "./js/images/bauhausPuck/book-black.png",
 	    "yellow": "./js/images/bauhausPuck/book-yellow.png"
 	  },
 	  "whippit": {
-		"blue": "./js/images/bauhausPuck/whippit-blue.png",
-		"pink": "./js/images/bauhausPuck/whippit-pink.png",
+			"blue": "./js/images/bauhausPuck/whippit-blue.png",
+			"pink": "./js/images/bauhausPuck/whippit-pink.png",
 	    "black": "./js/images/bauhausPuck/whippit-black.png",
 	    "yellow": "./js/images/bauhausPuck/whippit-yellow.png"
 	  },
 	  "dancing": {
-		"blue": "./js/images/bauhausPuck/dancing-blue.png",
-		"pink": "./js/images/bauhausPuck/dancing-pink.png",
+			"blue": "./js/images/bauhausPuck/dancing-blue.png",
+			"pink": "./js/images/bauhausPuck/dancing-pink.png",
 	    "black": "./js/images/bauhausPuck/dancing-black.png",
 	    "yellow": "./js/images/bauhausPuck/dancing-yellow.png"
 	  },
 	  "trippy": {
-		"blue": "./js/images/bauhausPuck/trippy-blue.png",
-		"pink": "./js/images/bauhausPuck/trippy-pink.png",
+			"blue": "./js/images/bauhausPuck/trippy-blue.png",
+			"pink": "./js/images/bauhausPuck/trippy-pink.png",
 	    "black": "./js/images/bauhausPuck/trippy-black.png",
 	    "yellow": "./js/images/bauhausPuck/trippy-yellow.png"
 	  }
