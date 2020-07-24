@@ -18,6 +18,7 @@ def join():
 
 @main.route('/config')
 def get_config():
+    # Link adventures to rooms
     rooms = current_app.config['ROOMS']
     adventures = current_app.config['ADVENTURES']
     for adventure in adventures.values():
@@ -33,10 +34,17 @@ def get_config():
                 }
                 if adventure_node.get('map'):
                     rooms[node_name]['map'] = adventure_node['map']
+    # Sort events by start time
     events = sorted(
         current_app.config['EVENTS'],
         key=lambda event: datetime.fromisoformat(event['start'])
     )
+    # Add image map options to image map rooms
+    image_maps = current_app.config['IMAGE_MAPS']
+    for room in rooms.values():
+        image_map = room.get('imageMapOptions')
+        if room['type'] == 'imagemap' and image_map in image_maps:
+            room['imageMapOptions'] = image_maps[image_map]
     config = {
         'rooms': rooms,
         'events': events
