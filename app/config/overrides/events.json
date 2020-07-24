@@ -10,26 +10,26 @@
         },
         {
             "name": "Lecture",
-            "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor (@SalemWitchWiles)",
+            "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor (@SalemWitchWiles). This lecture will take place every 30 minutes or until Tom gets too high.",
             "room": "backParlor",
-            "start": "2020-07-25T19:00:00-04:00",
-            "end": "2020-07-25T20:00:00-04:00",
+            "start": "2020-07-25T17:00:00-04:00",
+            "end": "2020-07-26T01:00:00-04:00",
             "image": "js/images/tst/events/back parlor lecture.jpg"
         },
         {
             "name": "Cooking Workshop",
-            "description": "Learn from @TheSatanicChef about living deliciously in the kitchen. Sessions will occur every 30 minutes or so.",
+            "description": "Learn from @TheSatanicChef about living deliciously in the kitchen.",
             "room": "kitchen",
-            "start": "2020-07-25T17:00:00-04:00",
-            "end": "2020-07-26T01:00:00-04:00",
+            "start": "2020-07-25T18:00:00-04:00",
+            "end": "2020-07-25T19:00:00-04:00",
             "image": "js/images/tst/events/cooking.jpg"
         },
         {
             "name": "Grand Ballroom DJ Set",
-            "description": "Enjoy music in the Grand Ballroom from Kadam",
+            "description": "Enjoy music in the Grand Ballroom from @kadaminimal.",
             "room": "grandBallroom",
-            "start": "2020-07-25T22:00:00-04:00",
-            "end": "2020-07-25T23:00:00-04:00",
+            "start": "2020-07-25T20:00:00-04:00",
+            "end": "2020-07-25T22:00:00-04:00",
             "image": "js/images/tst/events/live music.jpg"
         },
         {
