@@ -1,0 +1,428 @@
+{
+    "rooms": {
+        "kitchen": {
+            "name": "Kitchen",
+            "type": "iframe",
+            "capacity": 10,
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
+            "description": "Learn from @TheSatanicChef about living deliciously in the kitchen. Sessions will occur every 30 minutes or so.",
+            "directions": {
+                "west": "powderRoom",
+                "north": "grandBallroom",
+                "east": "frontParlor"
+            },
+            "map": {
+                "x": 5,
+                "y": 26,
+                "width": 5,
+                "height": 5,
+                "doors": {
+                    "north": 7,
+                    "west": 27,
+                    "east": 27
+                }
+            }
+        },
+        "powderRoom": {
+            "name": "Powder Room",
+            "type": "jitsi",
+            "capacity": 3,
+            "description": "Freshen up with a few friends.",
+            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "directions": {
+                "east": "kitchen"
+            },
+            "map": {
+                "x": 3,
+                "y": 26,
+                "width": 2,
+                "height": 2,
+                "doors": {
+                    "east": 27
+                }
+            }
+        },
+        "grandBallroom": {
+            "name": "Grand Ballroom",
+            "type": "iframe",
+            "capacity": 10,
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=kadaminimal&parent=cabinweekend.party"
+            },
+            "description": "Enjoy music in the Grand Ballroom from Kadam",
+            "directions": {
+                "south": "kitchen"
+            },
+            "doorTint": "golden",
+            "map": {
+                "x": 3,
+                "y": 18,
+                "width": 5,
+                "height": 8,
+                "doors": {
+                    "south": 7
+                }
+            }
+        },
+        "grandStaircase": {
+            "name": "Grand Staircase",
+            "type": "imagemap",
+            "imageMapOptions": "grand-staircase-map",
+            "description": "Try interacting with the staircase.",
+            "directions": {
+                "north": "library",
+                "east": "painting",
+                "south": "frontParlor"
+            },
+            "map": {
+                "x": 11,
+                "y": 12,
+                "width": 1,
+                "height": 12,
+                "doors": {
+                    "north": 11,
+                    "south": 11
+                }
+            }
+        },
+        "frontParlor": {
+            "name": "Front Parlor",
+            "type": "iframe",
+            "iframeOptions": {
+                "src": "./js/iframes/TST_tv.html",
+                "secondSrc": "./js/iframes/TST_chat.html"
+            },
+            "description": "It's Lucien's movie night. Are you excited?",
+            "directions": {
+                "east": "teaRoom",
+                "north": "grandStaircase",
+                "west": "kitchen"
+            },
+            "map": {
+                "x": 10,
+                "y": 24,
+                "width": 8,
+                "height": 5,
+                "doors": {
+                    "east": 27,
+                    "north": 11,
+                    "west": 27
+                }
+            }
+        },
+        "teaRoom": {
+            "name": "Tea Room",
+            "type": "jitsi",
+            "capacity": 10,
+            "backgroundImage": "js/images/tst/backgrounds/tea room.jpg",
+            "description": "Sugar cubes are on the window sill. Have as many as you'd like.",
+            "directions": {
+                "north": "den",
+                "west": "frontParlor",
+                "east": "garden"
+            },
+            "map": {
+                "x": 18,
+                "y": 24,
+                "width": 6,
+                "height": 5,
+                "doors": {
+                    "west": 27,
+                    "east": 27,
+                    "north": 22
+                }
+            }
+        },
+        "den": {
+            "name": "The Den",
+            "type": "iframe",
+            "capacity": 10,
+            "iframeOptions": {
+                "src": "https://www.youtube.com/embed/czuh-ZgfLjo"
+            },
+            "description": "Puppies are afoot in The Den, live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
+            "directions": {
+                "north": "backParlor",
+                "south": "teaRoom"
+            },
+            "map": {
+                "x": 21,
+                "y": 21,
+                "width": 3,
+                "height": 3,
+                "doors": {
+                    "north": 22,
+                    "south": 22
+                }
+            },
+            "doorTint": "orange"
+        },
+        "backParlor": {
+            "name": "Back Parlor",
+            "type": "iframe",
+            "capacity": 10,
+            "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
+            "directions": {
+                "south": "den",
+                "west": "ritualChamber"
+            },
+            "map": {
+                "x": 20,
+                "y": 16,
+                "width": 6,
+                "height": 5,
+                "doors": {
+                    "south": 22,
+                    "west": 18
+                }
+            },
+            "doorTint": "#FF5938"
+        },
+        "ritualChamber": {
+            "name": "Ritual Chamber",
+            "type": "jitsi",
+            "capacity": 10,
+            "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers. Satanic services are held in this unholy space. ",
+            "directions": {
+                "east": "backParlor"
+            },
+            "map": {
+                "x": 17,
+                "y": 17,
+                "width": 3,
+                "height": 3,
+                "doors": {
+                    "east": 18
+                }
+            },
+            "doorTint": "#FF5938"
+        },
+        "belfry": {
+            "name": "Belfry",
+            "type": "iframe",
+            "capacity": 10,
+            "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Learn more about their work at batworld.org",
+            "iframeOptions": {
+                "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
+            },
+            "directions": {
+                "south": "tstHQ"
+            },
+            "map": {
+                "x": 27,
+                "y": 5,
+                "width": 2,
+                "height": 2,
+                "doors": {
+                    "south": 27
+                }
+            },
+            "doorTint": "blue"
+        },
+        "sleepingPorch": {
+            "name": "Sleeping Porch",
+            "capacity": 10,
+            "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
+            "type": "iframe",
+            "iframeOptions": {
+                "src": "https://www.youtube.com/embed/tyEq9pxjRV0"
+            },
+            "directions": {
+                "west": "library",
+                "east": "staircase"
+            },
+            "map": {
+                "x": 14,
+                "y": 9,
+                "width": 2,
+                "height": 2,
+                "doors": {
+                    "west": 10,
+                    "east": 10
+                }
+            },
+            "doorTint": "blue"
+        },
+        "aviary": {
+            "name": "Aviary",
+            "type": "iframe",
+            "capacity": 10,
+            "iframeOptions": {
+                "src": "https://www.youtube.com/embed/8rWf-8SI0rc"
+            },
+            "description": "Get to know some amazing parrots in the Aviary, broadcasting live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org",
+            "directions": {
+                "east": "library"
+            },
+            "map": {
+                "x": 5,
+                "y": 8,
+                "width": 2,
+                "height": 3,
+                "doors": {
+                    "east": 9
+                }
+            },
+            "doorTint": "orange"
+        },
+        "library": {
+            "name": "Library",
+            "type": "imagemap",
+            "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
+            "directions": {
+                "south": "grandStaircase",
+                "east": "sleepingPorch",
+                "north": "boudoir",
+                "west": "aviary"
+            },
+            "imageMapOptions": "satanic-library-map",
+            "map": {
+                "x": 7,
+                "y": 7,
+                "width": 7,
+                "height": 5,
+                "doors": {
+                    "south": 11,
+                    "north": 10,
+                    "east": 10,
+                    "west": 9
+                }
+            },
+            "doorTint": "orange"
+        },
+        "boudoir": {
+            "name": "Boudoir",
+            "type": "jitsi",
+            "capacity": 3,
+            "description": "An intimate space for a trio of friends to get ready, together.",
+            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "directions": {
+                "south": "library"
+            },
+            "map": {
+                "x": 9,
+                "y": 5,
+                "width": 3,
+                "height": 2,
+                "doors": {
+                    "south": 10
+                }
+            },
+            "doorTint": "red"
+        },
+        "staircase": {
+            "name": "Staircase",
+            "type": "imagemap",
+            "imageMapOptions": "staircase-map",
+            "directions": {
+                "east": "tstHQ"
+            },
+            "map": {
+                "x": 16,
+                "y": 10,
+                "width": 8,
+                "height": 1,
+                "doors": {
+                    "west": 10,
+                    "east": 10
+                }
+            }
+        },
+        "tstHQ": {
+            "name": "TST Virtual HQ Offices",
+            "type": "jitsi",
+            "capacity": 2,
+            "description": "Office Hours To Be Determined. This door is locked until we finish remodeling. Thank you for your patience.",
+            "directions": {
+                "west": "staircase",
+                "north": "belfry"
+            },
+            "map": {
+                "x": 24,
+                "y": 7,
+                "width": 5,
+                "height": 5,
+                "doors": {
+                    "west": 10,
+                    "north": 27
+                }
+            },
+            "doorTint": "black"
+        },
+        "garden": {
+            "name": "Garden",
+            "type": "imagemap",
+            "imageMapOptions": "garden-map",
+            "description": "Nightshades, blue lady hellebores, queen of the night tulips and black velvet petunias.",
+            "directions": {
+                "west": "teaRoom",
+                "east": "cemetery"
+            },
+            "map": {
+                "x": 24,
+                "y": 27,
+                "width": 5,
+                "height": 1,
+                "doors": {
+                    "west": 27,
+                    "east": 27
+                }
+            },
+            "doorTint": "purple"
+        },
+        "cemetery": {
+            "name": "Cemetery",
+            "type": "jitsi",
+            "capacity": 10,
+            "description": "There's room for all of us to rest here",
+            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "directions": {
+                "west": "garden"
+            },
+            "map": {
+                "x": 29,
+                "y": 23,
+                "width": 6,
+                "height": 6,
+                "doors": {
+                    "west": 27
+                }
+            },
+            "doorTint": "white"
+        },
+        "trapDoor": {
+            "name": "Trap Door",
+            "type": "iframe",
+            "capacity": 2,
+            "iframeOptions": {
+                "src": "https://www.youtube.com/embed/5zcsab0-k7s"
+            },
+            "directions": {
+                "east": "secretTunnels"
+            }
+        },
+        "secretTunnels": {
+            "name": "Secret Tunnels",
+            "type": "imagemap",
+            "imageMapOptions": "secret-tunnel-map",
+            "directions": {
+                "west": "trapDoor",
+                "east": "crematorium"
+            }
+        },
+        "crematorium": {
+            "name": "Crematorium",
+            "type": "jitsi",
+            "capacity": 10,
+            "doorTint": "white",
+            "directions": {
+                "west": "secretTunnels"
+            }
+        }
+    }
+}
