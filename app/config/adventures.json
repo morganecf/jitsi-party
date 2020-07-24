@@ -3,42 +3,42 @@
         "basementAdventure": {
             "config": {
                 "audio": {
-                    "path": "https://jitsi-party.s3.amazonaws.com/ghostoflove.mp3",
+                    "path": "https://jitsi-party.s3.amazonaws.com/Satanic+Planet+999+(official+music+video).mp3",
                     "autoPlay": true,
                     "hideControls": true
                 }
             },
             "painting": {
-                "name": "An Askew Picture Frame",
-                "text": "There is a painting askew on the wall.",
+                "name": "An Askew Painting",
+                "text": "You are standing in the stairwell of The Satanic Temple’s art gallery.  Art galore decorates the rich wallpaper.  One of the paintings is slightly askew.",
                 "buttons": [
                     {
-                        "text": "Fix it",
+                        "text": "Rotate it",
                         "nextRoom": "catacombs"
                     },
                     {
-                        "text": "Keeping walking",
+                        "text": "Continue up the stairwell",
                         "nextRoom": "library"
                     }
                 ]
             },
             "catacombs": {
                 "name": "An Unpredictable Stair",
-                "text": "You take a step towards the wall to straighten the painting, and the stair you are standing on gives way. You fall through what appears to be a trap door. A slide carries you all the way down into a subterranean hidden chamber. The air is strangely cool and the limestone walls are faintly green. At the end of the chamber is a fortune telling machine. It has a button. There is a door to your right.",
+                "text": "You reach out and right the painting.  An unsettling ratcheting sound echoes in the wall and suddenly the stair you are standing on trundles aside. You tumble into a slide that carries you through cold, dark air, bumping and thumping as you round awkward turns, until it dumps you into a subterranean chamber. A fortune telling machine sits ominously in the center of the rock-hewn floor, and on the machine is a button. There is also a door to your right.",
                 "buttons": [
-                    {
-                        "text": "Go through the door",
-                        "nextRoom": "library"
-                    },
                     {
                         "text": "Push the button",
                         "nextRoom": "fortune"
+                    },
+                    {
+                        "text": "Go through the door",
+                        "nextRoom": "library"
                     }
                 ]
             },
             "fortune": {
-                "name": "The Machine",
-                "text": "The machine whirs and rumbles to life. Its eyes flash. You hear a piercing voice say ”welcome, knowledge seeker, to Madame la Vache's. I will now divine your future!“ A card drops out from a slot below the machine. As you bend to pick it up, you notice the door to your right is slightly ajar.",
+                "name": "Fortune",
+                "text": "The machine whirs and rumbles to life. Eyes flashing, the fortune teller says in a lilting Indian accent, ”My name is Madame la Vache. I sense the presence of someone seeking knowledge.  I will now divine your future!“ A card pokes out from a slot below the machine and her eyes grow dim once again. She lurches back into an awkward pose and is silent.",
                 "buttons": [
                     {
                         "text": "Pick up the card",
@@ -52,25 +52,25 @@
             },
             "card": {
                 "name": "The Card",
-                "text": "The card simply reads ”You are going to die.“ On the other side of it is an insignia that is familiar, but something about it seems off: [TBD]. You notice a slot on the side of the machine that says ”Card Return“. The door on your right is still open.",
+                "text": "For possibly the first time, divination has correctly told you something true.  The card reads, ”You are going to die someday.“",
                 "buttons": [
+                    {
+                        "text": "Put the card back",
+                        "nextRoom": "returnCard"
+                    },
                     {
                         "text": "Go through the door",
                         "nextRoom": "library"
-                    },
-                    {
-                        "text": "Return the card",
-                        "nextRoom": "returnCard"
                     }
                 ]
             },
             "returnCard": {
                 "name": "The Card Return",
-                "text": "As soon as you place the card into the slot, a door to your left opens. You stare at this symmetry of choice.",
+                "text": "You place the card back into the slot on the fortune telling machine and it disappears back into the mechanism.  Silence fills the room for a few seconds, then sudden there is a resounding ‘clunk’ of internal mechanisms in the wall.  It opens, revealing a door to your left.",
                 "buttons": [
                     {
                         "text": "Go through the left door",
-                        "nextRoom": "crematorium"
+                        "nextRoom": "trapDoor"
                     },
                     {
                         "text": "Go through the right door",

@@ -68,12 +68,9 @@
         },
         "grandStaircase": {
             "name": "Grand Staircase",
-            "type": "art",
-            "art": {
-                "title": "",
-                "artist": "",
-                "src": "./js/images/tst/backgrounds/home.jpg"
-            },
+            "type": "imagemap",
+            "imageMapOptions": "grand-staircase-map",
+            "description": "Try interacting with the staircase.",
             "directions": {
                 "north": "library",
                 "east": "painting",
@@ -237,7 +234,7 @@
             },
             "directions": {
                 "west": "library",
-                "east": "hauntedCorridor"
+                "east": "staircase"
             },
             "map": {
                 "x": 14,
@@ -318,14 +315,10 @@
             },
             "doorTint": "red"
         },
-        "hauntedCorridor": {
-            "name": "Haunted Corridor",
-            "type": "art",
-            "art": {
-                "title": "",
-                "artist": "",
-                "src": "./js/images/tst/backgrounds/home.jpg"
-            },
+        "staircase": {
+            "name": "Staircase",
+            "type": "imagemap",
+            "imageMapOptions": "staircase-map",
             "directions": {
                 "east": "tstHQ"
             },
@@ -346,7 +339,7 @@
             "capacity": 2,
             "description": "Office Hours To Be Determined. This door is locked until we finish remodeling. Thank you for your patience.",
             "directions": {
-                "west": "hauntedCorridor",
+                "west": "staircase",
                 "north": "belfry"
             },
             "map": {
@@ -363,12 +356,8 @@
         },
         "garden": {
             "name": "Garden",
-            "type": "art",
-            "art": {
-                "title": "",
-                "artist": "",
-                "src": ""
-            },
+            "type": "imagemap",
+            "imageMapOptions": "garden-map",
             "description": "Nightshades, blue lady hellebores, queen of the night tulips and black velvet petunias.",
             "directions": {
                 "west": "teaRoom",
@@ -406,11 +395,34 @@
             },
             "doorTint": "white"
         },
+        "trapDoor": {
+            "name": "Trap Door",
+            "type": "iframe",
+            "capacity": 2,
+            "iframeOptions": {
+                "src": "https://www.youtube.com/embed/5zcsab0-k7s"
+            },
+            "directions": {
+                "east": "secretTunnels"
+            }
+        },
+        "secretTunnels": {
+            "name": "Secret Tunnels",
+            "type": "imagemap",
+            "imageMapOptions": "secret-tunnel-map",
+            "directions": {
+                "west": "trapDoor",
+                "east": "crematorium"
+            }
+        },
         "crematorium": {
             "name": "Crematorium",
             "type": "jitsi",
             "capacity": 10,
-            "doorTint": "white"
+            "doorTint": "white",
+            "directions": {
+                "west": "secretTunnels"
+            }
         }
     }
 }

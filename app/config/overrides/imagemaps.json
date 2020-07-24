@@ -1,12 +1,87 @@
 {
     "imagemaps": {
+        "secret-tunnel-map": {
+            "img": "js/images/tst/imagemap-images/secret tunnel.jpg",
+            "areas": [
+                {
+                    "shape": "circle",
+                    "coords": "333,287,54",
+                    "label": "The Real Tunnels Under McMartin Preschool",
+                    "contents": [
+                        {
+                            "title": "The Real Tunnels Under McMartin Preschool",
+                            "path": "js/imagemap-content/secret-tunnel-map/tunnel2/Tunnels PDF 1.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "circle",
+                    "coords": "719,287,56",
+                    "label": "The Man Behind The Tunnels Under McMartin Preschool",
+                    "contents": [
+                        {
+                            "title": "The Man Behind The Tunnels Under McMartin Preschool",
+                            "path": "js/imagemap-content/secret-tunnel-map/tunnel1/The Man Behind the Tunnels Under McMartin (1).pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        "garden-map": {
+            "img": "js/images/tst/imagemap-images/garden.jpg",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "648,400,738,512",
+                    "label": "A lovely garden",
+                    "contents": [
+                        {
+                            "title": "A lovely garden",
+                            "path": "js/imagemap-content/garden-map/topic/Christianity Today - Satanic Influence.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        "grand-staircase-map": {
+            "img": "js/images/tst/imagemap-images/staircase1.jpg",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "332,107,455,335",
+                    "label": "What's behind this picture frame?",
+                    "contents": [
+                        {
+                            "title": "Take a closer look",
+                            "path": "js/imagemap-content/grand-staircase-map/topic/Image 0929.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        "staircase-map": {
+            "img": "js/images/tst/imagemap-images/staircase 2.jpg",
+            "areas": [
+                {
+                    "shape": "circle",
+                    "coords": "772,109,34",
+                    "label": "Hmm, this skull has an aura...",
+                    "contents": [
+                        {
+                            "title": "What does it remind you of?",
+                            "path": "js/imagemap-content/staircase-map/topic/Mesner\u2014Repressed-Memory.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
         "satanic-library-map": {
             "img": "js/images/tst/backgrounds/Library.jpg",
             "areas": [
                 {
                     "shape": "poly",
                     "coords": "274,364,273,226,407,240,428,592,275,647",
-                    "label": "cult-crime",
+                    "label": "Cult Crime",
                     "contents": [
                         {
                             "title": "Cults: Their Symbols",
@@ -49,7 +124,7 @@
                 {
                     "shape": "rect",
                     "coords": "1243,609,774,424",
-                    "label": "panic-propaganda",
+                    "label": "Panic Propaganda",
                     "contents": [
                         {
                             "title": "NACE",
@@ -88,7 +163,7 @@
                 {
                     "shape": "rect",
                     "coords": "538,538,471,242",
-                    "label": "police-training",
+                    "label": "Police Training",
                     "contents": [
                         {
                             "title": "Ritualistic Crime Seminar",
@@ -155,7 +230,7 @@
                 {
                     "shape": "rect",
                     "coords": "583,183,477,80",
-                    "label": "pop-culture",
+                    "label": "Pop Culture",
                     "contents": [
                         {
                             "title": "The Selling of Satan in Popular Literature",
@@ -190,7 +265,7 @@
                 {
                     "shape": "rect",
                     "coords": "781,35,997,155",
-                    "label": "anti-satanist-news",
+                    "label": "Anti-Satanist News",
                     "contents": [
                         {
                             "title": "Murder Part 1",
@@ -237,7 +312,7 @@
                 {
                     "shape": "rect",
                     "coords": "784,640,1253,713",
-                    "label": "exorcism",
+                    "label": "Exorcism",
                     "contents": [
                         {
                             "title": "Exorcism Spanos",
