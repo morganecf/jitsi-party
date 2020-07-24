@@ -13,7 +13,9 @@ export default ({ users, truncate, anonymize }) => {
         <div className="user-list">
             {
                 users.map(user => (
-                    <User key={user.username} user={user} anonymize={anonymize} />
+                    /* THIS IS A TST-SPECIFIC HACK: No anonymous rooms */
+                    // <User key={user.username} user={user} anonymize={anonymize} />
+                    <User key={user.username} user={user} anonymize={false} />
                 ))
             }
             { more }
