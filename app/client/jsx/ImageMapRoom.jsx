@@ -1,24 +1,20 @@
 import React, { useState } from 'react'
 import Modal from 'react-modal'
+import ImageMapper from 'react-image-mapper'
 import ImageMapContents from './ImageMapContents.jsx'
 
-function getAreasHtml(areasList, onClickFunc) {
-    return areasList.map((a,i) =>
-        <area
-            key={i}
-            shape={a.shape}
-            coords={a.coords}
-            alt={a.label}
-            title={a.label}
-            // This is just a dummy onClick, to show interaction with the area
-            onClick={() => onClickFunc(a)}
-        />
+function formatAreas(areasList) {
+    return areasList.map(a =>
+        ({
+            "shape": a.shape,
+            "coords": a.coords.split(",")
+        })
     );
 }
 
-function onDisplayModal(setIsShown, setArea) {
-    return area => {
-        setArea(area)
+function onDisplayModal(areasList, setIsShown, setArea) {
+    return (area,index,event) => {
+        setArea(areasList[index])
         setIsShown(true)
     }
 }
@@ -28,11 +24,12 @@ export default props => {
     const [area, setArea] = useState({})
     return (
         <div className="imagemap-room">
-            <img src={props.imageMapOptions.img} useMap="#imgmap" />
-
-            <map name="imgmap">
-                {getAreasHtml(props.imageMapOptions.areas, onDisplayModal(setIsShown, setArea))}
-            </map>
+            <ImageMapper
+                src={props.imageMapOptions.img}
+                map={{"name":"img", "areas":formatAreas(props.imageMapOptions.areas)}}
+                fillColor="rgba(255,255,255,0.25)"
+                onClick={onDisplayModal(props.imageMapOptions.areas, setIsShown, setArea)}
+            />
 
             <Modal
                 isOpen={isShown}

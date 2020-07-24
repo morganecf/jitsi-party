@@ -23,6 +23,7 @@
         "mini-css-extract-plugin": "^0.9.0",
         "moment": "^2.26.0",
         "react-beforeunload": "^2.2.0",
+        "react-image-mapper": "0.0.15",
         "react-modal": "^3.11.2",
         "react-pdfobject": "^1.1.1",
         "react-reveal": "^1.2.2",
