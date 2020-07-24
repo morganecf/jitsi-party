@@ -32,7 +32,7 @@
             "description": "Freshen up with a few friends.",
             "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
             "directions": {
-                "east": "teaRoom"
+                "east": "kitchen"
             },
             "map": {
                 "x": 3,
@@ -53,7 +53,7 @@
             },
             "description": "Enjoy music in the Grand Ballroom from Kadam",
             "directions": {
-                "south": "teaRoom"
+                "south": "kitchen"
             },
             "doorTint": "golden",
             "map": {
@@ -148,7 +148,7 @@
             "description": "Puppies are afoot in The Den, live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
             "directions": {
                 "north": "backParlor",
-                "south": "kitchen"
+                "south": "teaRoom"
             },
             "map": {
                 "x": 21,
@@ -371,7 +371,7 @@
             },
             "description": "Nightshades, blue lady hellebores, queen of the night tulips and black velvet petunias.",
             "directions": {
-                "west": "kitchen",
+                "west": "teaRoom",
                 "east": "cemetery"
             },
             "map": {
