@@ -2,49 +2,57 @@
 // This file contains all styles related to the PuckBox component.
 // -----------------------------------------------------------------------------
 
+// TODO place this in theme
+$avatar-width: 60px;
+$avatar-height: 60px;
 
 .box {
 	text-align: center;
-	width: 52px;
-	height: 70px;
-	margin: 6px 4px 0px 0px;
+	width: $avatar-width;
+	height: $avatar-height;
+	// margin: 6px 4px 0px 0px;
+	margin: 10px;
 	border: 1px solid rgba(0, 0, 0, 0);
 	transition: height .5s;
 	border-radius: 5px;
 	// background: radial-gradient(rgba(27, 30, 31, 1) 0%, rgba(27, 30, 31, .8) 55%, rgba(27, 30, 31, .5) 67%, rgba(27, 30, 31, 0) 95%, rgba(27, 30, 31, 0) 100%);
 }
 .box:hover {
-	width: 52px;
-	height: 70px;
-	border: 1px solid $text-color;
-	background-color: rgba(27, 30, 31, .6);
-	transition: border .25s;
+	// width: $avatar-width;
+	// height: $avatar-height;
+	// border: 1px solid $text-color;
+	// background-color: rgba(27, 30, 31, .6);
+	// transition: border .25s;
+	cursor: pointer;
+	border-radius: 100%;
+	background-color: darken($accent-color, 30%);
+	box-shadow: 2px 2px 2px darken($accent-color, 20%);
 }
 
 .image {
 	text-align: center;
-	min-width: 38px !important;
-	max-width: 38px !important;
-	width: 38px !important;
-	margin: 2px 4px 0px 4px;
+	min-width: $avatar-width !important;
+	max-width: $avatar-width !important;
+	width: $avatar-width !important;
+	// margin: 2px 4px 0px 4px;
 	height: auto;
-	max-height: 70px !important;
+	max-height: $avatar-height !important;
 }
 .non-selected-image {
 	text-align: center;
-	min-width: 38px !important;
-	width: 38px !important;
-	margin: 2px 4px 0px 4px;
+	min-width: $avatar-width !important;
+	width: $avatar-width !important;
+	// margin: 2px 4px 0px 4px;
 	height: auto;
 	opacity:.25;
 	transition: opacity .25s;
-	max-height: 70px !important;
+	max-height: $avatar-height !important;
 }
 .non-selected-box {
 	text-align: center;
-	width: 52px;
-	height: 70px;
-	margin: 6px 4px 0px 0px;
+	width: $avatar-width;
+	height: $avatar-height;
+	// margin: 6px 4px 0px 0px;
 	border: 1px solid rgba(0, 0, 0, 0);
 	transition: height .5s;
 	border-radius: 5px;

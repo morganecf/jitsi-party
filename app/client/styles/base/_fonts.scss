@@ -2,14 +2,9 @@
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
 
-$serif: 'Alegreya';
+$serif: 'Philosopher';
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap');
-
-@font-face {
-  font-family: 'Alegreya';
-  src: url('http://party.gbre.org/js/fonts/Alegreya/Alegreya-Regular.ttf'), format('ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 
 @font-face {
   font-family: 'Darker_Grotesque';
