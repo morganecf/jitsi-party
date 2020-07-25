@@ -6,6 +6,7 @@ import subprocess
 from . import mail
 from .models import User
 from datetime import datetime
+from twilio.rest import Client
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
 
 main = Blueprint('main', __name__)
@@ -52,6 +53,41 @@ def get_config():
         'events': events
     }
     return jsonify(config)
+
+@main.route('/text_moderator', methods=['POST'])
+def text_moderators():
+    params = request.get_json()['params']
+    user = params['user']
+
+    moderator = current_app.config['MODERATOR_NUMBER']
+    sender = current_app.config['TWILIO_NUMBER']
+    account_sid = current_app.config['TWILIO_ACCOUNT_SID']
+    auth_token = current_app.config['TWILIO_AUTH_TOKEN']
+
+    message = '''
+
+    The following message was sent via the moderator contact form:
+    {0}
+
+    Sender details:
+    Username: {1}
+    User ID: {2}
+    Email: {3}
+    '''.format(
+        params['message'],
+        user['username'],
+        user['id'],
+        params['email']
+    )
+
+    client = Client(account_sid, auth_token)
+    message = client.messages.create(
+        to=moderator,
+        from_=sender,
+        body=message
+    )
+
+    return jsonify('text sent')
 
 
 @main.route('/email_moderators', methods=['POST'])
