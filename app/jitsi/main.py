@@ -1,6 +1,7 @@
 import os
 import json
 import copy
+import logging
 import subprocess
 from . import mail
 from .models import User
@@ -8,7 +9,7 @@ from datetime import datetime
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
 
 main = Blueprint('main', __name__)
-
+logger = logging.getLogger(__name__)
 
 @main.route('/join', methods=['GET', 'POST'])
 def join():
@@ -56,6 +57,7 @@ def get_config():
 @main.route('/email_moderators', methods=['POST'])
 def email_moderators():
     params = request.get_json()['params']
+    user = params['user']
     moderators = current_app.config['MODERATOR_EMAILS']
     sender = current_app.config['MAIL_USERNAME']
     password = current_app.config['MAIL_PASSWORD']
@@ -72,11 +74,18 @@ def email_moderators():
         <div>Email: {3}</div>
     '''.format(
         formatted_message,
-        params['user']['username'],
-        params['user']['id'],
-        params['email'] if params.get('email') else 'Not provided'
+        user['username'],
+        user['id'],
+        params['email']
     )
     # Ugh
+    log_msg = 'User {0} (id={1}; email={2}) is sending message: {3}'.format(
+        user['username'],
+        user['id'],
+        params['email'],
+        params['message']
+    )
+    logger.warn(log_msg)
     subprocess.call([
         'python3',
         'send_email.py',
