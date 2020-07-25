@@ -66,6 +66,16 @@ body {
     font-family: $accent-font !important;
 }
 
+.vestibule .header {
+    margin-bottom: 0 !important;
+}
+
+.custom-login-description {
+    text-align: center;
+    font-size: smaller;
+    opacity: 0.8;
+}
+
 // .tst,
 // .room-header h2, 
 // #map-info .room-name,
