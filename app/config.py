@@ -67,6 +67,10 @@ class Config:
     def IMAGE_MAPS(self):
         return self.merged_cfg.get('imagemaps', {})
 
+    @property
+    def NUM_PROXIES(self):
+        return self.merged_cfg['numProxies']
+
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')

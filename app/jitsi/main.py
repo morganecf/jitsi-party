@@ -12,8 +12,10 @@ main = Blueprint('main', __name__)
 
 @main.route('/join', methods=['GET', 'POST'])
 def join():
+    num_proxies = current_app.config['NUM_PROXIES']
+    print(num_proxies)
     params = request.get_json()['params']
-    params['ip'] = compute_ip()
+    params['ip'] = compute_ip(num_proxies)
     user = User.create(**params)
     return jsonify(user.to_json())
 
