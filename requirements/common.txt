@@ -3,7 +3,6 @@ dnspython==1.16.0
 eventlet==0.25.2
 Flask==1.1.1
 Flask-Cors==3.0.8
-Flask-Mail==0.9.1
 Flask-SocketIO==4.3.0
 Flask-SQLAlchemy==2.4.1
 itsdangerous==1.1.0
