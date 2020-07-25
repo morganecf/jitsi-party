@@ -8,12 +8,20 @@
         // TST.TV Content ID: 139852_c_551937
         // Original content_id: "139852_f_920181"
 
-        // Send event when inplayer session token is found
+        function sendAuthStatus() {
+            const event = new Event('onCustomAuthentication')
+            event.token = localStorage.inplayer_token
+            window.parent.document.dispatchEvent(event)
+            return event.token
+        }
+
         const interval = setInterval(() => {
-            if (localStorage.inplayer_token) {
-                window.parent.document.dispatchEvent(new Event('onCustomAuthentication'))
+            const token = sendAuthStatus()
+            if (token) {
                 clearInterval(interval)
             }
         }, 1000)
+
+        sendAuthStatus()
     </script>
 </html>

@@ -63,6 +63,12 @@
     width: 100%;
     height: 600px;
 }
+.custom-login-container.loading {
+    visibility: hidden;
+}
+.custom-login-loading {
+    text-align: center;
+}
 
 .form {
     opacity: 1;
