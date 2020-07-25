@@ -23,7 +23,6 @@ function onDisplayModal(areasList, setIsShown, setArea) {
 // bounding box defined by (maxWidth, maxHeight) and the aspect ratio
 // defined by (curWidth, curHeight)
 function calculateFullWidth(maxWidth, maxHeight, curWidth, curHeight) {
-    console.log(maxWidth, maxHeight, curWidth, curHeight)
     var ratio = curWidth / curHeight;
     var maxWidthFromHeight = maxHeight * ratio;
     return Math.floor(Math.min(maxWidth, maxWidthFromHeight));
@@ -44,14 +43,14 @@ export default props => {
     const [maxWidth, setMaxWidth] = useState(0)
     const divRef = useRef(null)
     useEffect(() => {
-        var maxW =
+        var newMaxWidth =
             calculateFullWidth(
                 divRef.current.clientWidth,
                 divRef.current.clientHeight,
                 imgSize.width,
                 imgSize.height)
-        if (!isNaN(maxW) && maxW !== maxWidth) {
-            setMaxWidth(maxW)
+        if (!isNaN(newMaxWidth) && newMaxWidth !== maxWidth) {
+            setMaxWidth(newMaxWidth)
         }
     }, [divRef.current && divRef.current.clientWidth, imgSize.width])
 
