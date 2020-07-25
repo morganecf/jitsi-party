@@ -16,7 +16,7 @@
 		"backgroundImagePath": "js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
 		"enterSpaceButtonText": "Enter",
 		"avatarSelectionText": "Select your sigil",
-		"headerHtml": "<br/><div class='tst'><p>Welcome to the Inner Sanctum</p><h1>Satanic Temple Virtual HQ</h1>",
+		"headerHtml": "<div class='tst'><p>Welcome to the Inner Sanctum</p><h1>Satanic Temple Virtual HQ</h1>",
 		"auth": {
 			"iframe": "./js/iframes/TST_login.html",
 			"descriptionHtml": "<div>If you have a <a href='https://thesatanictemple.tv/'>TheSatanicTemple.TV</a> account, log in to party at the VHQ Estate for free!</div><div>If you do not have an account, use coupon code <b>VHQGROUP</b> to access the Estate for free.</div><div>If you have any trouble getting in, email us at <a href='mailto:vhq@thesatanictemple.com'>vhq@thesatanictemple.com</a> and we'll help you out.</div>"

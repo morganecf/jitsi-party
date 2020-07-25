@@ -1,10 +1,14 @@
 <html>
     <head>
         <title>Bathroom</title>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
         <style>
             body {
                 background: black;
                 color: white;
+            }
+            .DemonChat {
+                font-family: 'Philosopher', sans-serif !important;
             }
             div.coverpage {
                 background: black;
@@ -17,11 +21,9 @@
             div.coverpage div.inplayer-parent {
                 display: none;
             }
-            .DemonChat__ContentOverlay .DemonChat__AliasInputs {
-                display: none !important;
-            }
             .DemonChat__App .DemonChat__Button--large {
                 cursor: pointer;
+                font-family: 'Philosopher', sans-serif !important;
             }
         </style>
     </head>
@@ -33,7 +35,8 @@
         <script defer src="https://demon.chat/DemonChatInvocation.cd9bb79e4b73926fb75f.js"></script>
         <script>
             // TODO override input value with username from jitsi app
-            const username = JSON.parse(localStorage.APP).USER.value
+            // const username = JSON.parse(localStorage.APP).USER.value
+            // console.log('======USERNAME======', username)
         </script>
     </body>
 </html>
