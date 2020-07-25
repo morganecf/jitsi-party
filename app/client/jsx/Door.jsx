@@ -45,7 +45,7 @@ class Door extends Component {
                 <div className="door-target">
                     <div className="door-info">
                         {users}
-                        <button disabled={isAtCapacity} onClick={this.props.onClick.bind(this)}>{buttonText}</button>
+                        <button disabled={isAtCapacity || isLocked} onClick={this.props.onClick.bind(this)}>{buttonText}</button>
                         <CapacitySticker capacity={this.props.room.capacity} />
                     </div>
                 </div>
