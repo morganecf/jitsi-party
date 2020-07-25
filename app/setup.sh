@@ -7,3 +7,9 @@ if [ -f email_config.sh ]; then
 else
     echo "WARNING: Missing email config"
 fi
+
+if [ -f text_config.sh ]; then
+    source text_config.sh
+else
+    echo "WARNING: Missing text config"
+fi
