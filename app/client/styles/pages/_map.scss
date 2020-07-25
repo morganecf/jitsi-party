@@ -11,9 +11,9 @@
     .map-header {
         display: flex;
         justify-content: space-between;
-        background: $background-color-dark;
+        background: $map-header-background-color;
         padding: 10px 20px;
-        color: $text-color;
+        color: $map-header-color;
 
         .map-stats {
             display: flex;

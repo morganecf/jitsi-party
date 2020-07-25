@@ -96,7 +96,7 @@ class JitsiVideo extends Component {
                 interfaceConfigOverwrite: {
                     // filmStripOnly: true,
                     SHOW_JITSI_WATERMARK: false,
-                    DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Clarendonite',
+                    DEFAULT_REMOTE_DISPLAY_NAME: Config.videoDisplayName,
                     SHOW_WATERMARK_FOR_GUESTS: false,
                     TOOLBAR_BUTTONS: toolbarButtons,
 
@@ -111,7 +111,7 @@ class JitsiVideo extends Component {
                 this.makeJitsiTransparent()
                 this.hideSpinner()
                 const { type, color } = this.props.jitsiData.avatar
-                const avatarUrl = Config.avatars[type][color]
+                const avatarUrl = Config.baseUrl + Config.avatars[type][color]
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl

@@ -15,10 +15,10 @@
 	},
 	"avatars": {
 	  "normal": {
-	    "black": "./js/images/default-avatar/default-avatar-black.png",
-	    "blue": "./js/images/default-avatar/default-avatar-blue.png",
-	    "red": "./js/images/default-avatar/default-avatar-red.png",
-	    "green": "./js/images/default-avatar/default-avatar-green.png"
+	    "black": "js/images/default-avatar/default-avatar-black.png",
+	    "blue": "js/images/default-avatar/default-avatar-blue.png",
+	    "red": "js/images/default-avatar/default-avatar-red.png",
+	    "green": "js/images/default-avatar/default-avatar-green.png"
 	  }
 	},
 	"specialAvatars": {
