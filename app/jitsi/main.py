@@ -97,10 +97,8 @@ def serve(path):
     return send_from_directory(current_app.static_folder, 'index.html')
 
 
-def compute_ip():
+def compute_ip(num_proxies=0):
     headers_list = request.headers.getlist("X-Forwarded-For")
-    # using the 0th index of headers_list is dangerous for stuff explained here: http://esd.io/blog/flask-apps-heroku-real-ip-spoofing.html 
-    # TODO find a way to make this ALWAYS get client IP
-    user_ip = headers_list[0] if headers_list else request.remote_addr 
+    user_ip = headers_list[-1 * num_proxies] if headers_list else request.remote_addr 
     return user_ip
 
