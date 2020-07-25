@@ -12,7 +12,9 @@ main = Blueprint('main', __name__)
 
 @main.route('/join', methods=['GET', 'POST'])
 def join():
+    num_proxies = current_app.config['NUM_PROXIES']
     params = request.get_json()['params']
+    params['ip'] = compute_ip(num_proxies)
     user = User.create(**params)
     return jsonify(user.to_json())
 
@@ -94,3 +96,12 @@ def serve(path):
     if path and not path.startswith('client'):
         return redirect(url_for('main.serve'))
     return send_from_directory(current_app.static_folder, 'index.html')
+
+
+def compute_ip(num_proxies=0):
+    headers_list = request.headers.getlist("X-Forwarded-For")
+    if (num_proxies <= 0) or not headers_list:
+        return request.remote_addr
+    else:
+        return headers_list[-1 * num_proxies]
+
