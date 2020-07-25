@@ -18,7 +18,7 @@ class User(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
     avatar = db.Column(db.String())
-    ip = db.Column(db.String()) #can also make String(15) as I think thats the upperbound for Ips
+    ip = db.Column(db.String())
     last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
 
     room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
