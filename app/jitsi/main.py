@@ -1,10 +1,10 @@
 import os
 import json
 import copy
+import subprocess
 from . import mail
 from .models import User
 from datetime import datetime
-from flask_mail import Message
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
 
 main = Blueprint('main', __name__)
@@ -58,15 +58,11 @@ def email_moderators():
     params = request.get_json()['params']
     moderators = current_app.config['MODERATOR_EMAILS']
     sender = current_app.config['MAIL_USERNAME']
-    message = Message(
-        'Jitsi Party Alert',
-        sender=sender,
-        recipients=moderators
-    )
+    password = current_app.config['MAIL_PASSWORD']
     formatted_message = ''.join(
         ['<p>{0}</p>'.format(paragraph) for paragraph in params['message'].split('\n')]
     )
-    message.html = '''
+    html = '''
         <b>The following message was sent via the moderator contact form:</b>
         <blockquote>{0}</blockquote>
         <br>
@@ -80,7 +76,15 @@ def email_moderators():
         params['user']['id'],
         params['email'] if params.get('email') else 'Not provided'
     )
-    mail.send(message)
+    # Ugh
+    subprocess.call([
+        'python3',
+        'send_email.py',
+        sender,
+        password,
+        moderators[0],
+        html
+    ])
     return jsonify('message sent')
 
 
