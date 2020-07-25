@@ -4,6 +4,8 @@
             "name": "Kitchen",
             "type": "iframe",
             "capacity": 10,
+            "doorTint": "#00D089",
+            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels009-1green.2jpg.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=satanicchef&parent=tstvhq.com"
             },
@@ -29,8 +31,9 @@
             "name": "Powder Room",
             "type": "jitsi",
             "capacity": 3,
+            "doorTint": "pink",
             "description": "Freshen up with a few friends.",
-            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "backgroundImage": "./js/images/tst/backgrounds/powder room.jpg",
             "directions": {
                 "east": "kitchen"
             },
@@ -48,6 +51,7 @@
             "name": "Grand Ballroom",
             "type": "iframe",
             "capacity": 10,
+            "backgroundImage": "./js/images/tst/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=kadaminimal&parent=tstvhq.com"
             },
@@ -86,11 +90,13 @@
                     "south": 11,
                     "east": 18
                 }
-            }
+            },
+            "doorTint": "#00D089"
         },
         "frontParlor": {
             "name": "Front Parlor",
             "type": "iframe",
+            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
                 "src": "./js/iframes/TST_tv.html",
                 "secondSrc": "./js/iframes/TST_chat.html"
@@ -111,13 +117,14 @@
                     "north": 11,
                     "west": 27
                 }
-            }
+            },
+            "doorTint": "#00D089"
         },
         "teaRoom": {
             "name": "Tea Room",
             "type": "jitsi",
             "capacity": 10,
-            "backgroundImage": "js/images/tst/backgrounds/tea room.jpg",
+            "backgroundImage": "js/images/tst/backgrounds/tearoom.jpg",
             "description": "Sugar cubes are on the window sill. Have as many as you'd like.",
             "directions": {
                 "north": "den",
@@ -134,12 +141,14 @@
                     "east": 27,
                     "north": 22
                 }
-            }
+            },
+            "doorTint": "#00D089"
         },
         "den": {
             "name": "The Den",
             "type": "iframe",
             "capacity": 10,
+            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels005green.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/czuh-ZgfLjo"
             },
@@ -164,6 +173,7 @@
             "name": "Back Parlor",
             "type": "iframe",
             "capacity": 10,
+            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels003green.jpg",
             "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=SalemWitchWiles&parent=tstvhq.com"
@@ -188,7 +198,8 @@
             "name": "Ritual Chamber",
             "type": "jitsi",
             "capacity": 10,
-            "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers. Satanic services are held in this unholy space. ",
+            "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
+            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels004green.jpg",
             "directions": {
                 "east": "backParlor"
             },
@@ -201,7 +212,7 @@
                     "east": 18
                 }
             },
-            "doorTint": "#FF5938"
+            "doorTint": "#00D089"
         },
         "belfry": {
             "name": "Belfry",
@@ -230,6 +241,7 @@
             "capacity": 10,
             "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
             "type": "iframe",
+            "backgroundImage": "./js/images/tst/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/tyEq9pxjRV0"
             },
@@ -253,6 +265,7 @@
             "name": "Aviary",
             "type": "iframe",
             "capacity": 10,
+            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/8rWf-8SI0rc"
             },
@@ -294,7 +307,7 @@
                     "west": 9
                 }
             },
-            "doorTint": "orange"
+            "doorTint": "#00D089"
         },
         "boudoir": {
             "name": "Boudoir",
@@ -314,13 +327,13 @@
                     "south": 10
                 }
             },
-            "doorTint": "red"
+            "doorTint": "#990000"
         },
         "staircase": {
             "name": "Staircase",
             "type": "imagemap",
             "imageMapOptions": "staircase-map",
-            "description": "Try interacting with the staircase.",
+            "description": "What a peculiar painting! It's askew and glowing...",
             "directions": {
                 "east": "tstHQ",
                 "west": "sleepingPorch"
@@ -334,7 +347,8 @@
                     "west": 10,
                     "east": 10
                 }
-            }
+            },
+            "doorTint": "#00D089"
         },
         "tstHQ": {
             "name": "TST Virtual HQ Offices",
@@ -384,7 +398,7 @@
             "type": "jitsi",
             "capacity": 10,
             "description": "There's room for all of us to rest here",
-            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "backgroundImage": "./js/images/tst/backgrounds/cemeterygreen.jpg",
             "directions": {
                 "west": "garden"
             },
@@ -408,7 +422,8 @@
             },
             "directions": {
                 "east": "secretTunnels"
-            }
+            },
+            "doorTint": "black"
         },
         "secretTunnels": {
             "name": "Secret Tunnels",
@@ -418,13 +433,15 @@
             "directions": {
                 "west": "trapDoor",
                 "east": "crematorium"
-            }
+            },
+            "doorTint": "#00D089"
         },
         "crematorium": {
             "name": "Crematorium",
             "type": "jitsi",
             "capacity": 10,
             "doorTint": "white",
+            "backgroundImage": "./js/images/tst/backgrounds/crematorium.jpg",
             "directions": {
                 "west": "secretTunnels"
             }

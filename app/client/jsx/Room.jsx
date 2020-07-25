@@ -118,6 +118,7 @@ class Room extends Component {
 
     onAdventureClick(room) {
         this.setState({ room, entered: true })
+        this.props.updateCurrentRoom({ room, entered: true })
         this.socketApi.enterRoom(this.props.user, room)
     }
 
