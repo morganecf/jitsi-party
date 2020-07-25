@@ -2,10 +2,10 @@ import React from 'react'
 import JitsiVideo from './JitsiVideo.jsx'
 
 export default props => {
-    const { src, showVideo } = props.iframeOptions
+    const { src, hideVideo } = props.iframeOptions
     return (
         <div className="iframe-room">
-            {showVideo && <JitsiVideo jitsiData={props.jitsiData}></JitsiVideo>}
+            {!hideVideo && <JitsiVideo jitsiData={props.jitsiData}></JitsiVideo>}
             <div className="iframe-section">
                 <iframe
                     src={src}
