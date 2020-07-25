@@ -6,19 +6,18 @@
                 background: black;
                 color: white;
             }
+            .tst-content {
+                display: flex;
+            }
             .DemonChat {
                 font-family: 'Philosopher', sans-serif !important;
             }
-            div.coverpage {
-                background: black;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+            .chat {
+                width: 50% !important;
+                margin-left: 50%;
             }
-            div.coverpage div.inplayer-parent {
-                display: none;
+            .dc-video-player-wrapper {
+                width: 50% !important;
             }
             .DemonChat__App .DemonChat__Button--large {
                 cursor: pointer;
@@ -27,11 +26,13 @@
         </style>
     </head>
     <body>
-        <div class="coverpage">
-            <script id="139852_c_551937" width="1" src="https://player.dacast.com/js/player.js?contentId=139852_c_551937"  class="dacast-video"></script>
+        <div class="tst-content">
+            <div class="video">
+                <script id="139852_c_551937" src="https://player.dacast.com/js/player.js?contentId=139852_c_551937"  class="dacast-video"></script>
+            </div>
+            <div class="chat" id="DemonChat-container"></div>
+            <script defer src="https://demon.chat/DemonChatInvocation.cd9bb79e4b73926fb75f.js"></script>
         </div>
-        <div class="coverpage" id="DemonChat-container"></div>
-        <script defer src="https://demon.chat/DemonChatInvocation.cd9bb79e4b73926fb75f.js"></script>
         <script>
             // TODO override input value with username from jitsi app
             // const username = JSON.parse(localStorage.APP).USER.value
