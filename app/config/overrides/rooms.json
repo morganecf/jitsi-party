@@ -98,8 +98,8 @@
             "type": "iframe",
             "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/b/139852/c/551937",
-                "secondSrc": "./js/iframes/TST_chat.html"
+                "src": "./js/iframes/TST_chat1.html",
+                "showVideo": false
             },
             "description": "It's Lucien's movie night. Are you excited?",
             "directions": {
