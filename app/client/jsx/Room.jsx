@@ -37,13 +37,15 @@ class Room extends Component {
         this.roomTypesWithMap = {
             jitsi: true,
             iframe: true,
-            content: true
+            content: true,
+            imagemap: true
         }
 
         // These are the room types which require doors
         this.roomTypesWithDoors = {
             jitsi: true,
-            iframe: true
+            iframe: true,
+            imagemap: true
         }
 
         this.state = {
