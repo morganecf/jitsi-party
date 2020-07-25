@@ -4,5 +4,5 @@
 	"useLocalSessions": true,
 	"noJitsiServerSSL": true,
 	"overrideJitsiServerUrlWithWindowHost": true,
-        "numProxies": 0
+	"numProxies": 0
 }
