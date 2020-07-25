@@ -82,12 +82,24 @@ def text_moderators():
         params['email']
     )
 
-    client = Client(account_sid, auth_token)
-    message = client.messages.create(
-        to=moderator,
-        from_=sender,
-        body=message
+    log_msg = 'User {0} (id={1}; email={2}) is sending message: {3}'.format(
+        user['username'],
+        user['id'],
+        params['email'],
+        params['message']
     )
+    logger.warn(log_msg)
+
+    # Ugh
+    subprocess.call([
+        'python3',
+        'send_text.py',
+        account_sid,
+        auth_token,
+        sender,
+        moderator,
+        message
+    ])
 
     return jsonify('text sent')
 
