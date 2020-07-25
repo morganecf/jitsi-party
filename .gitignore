@@ -5,6 +5,9 @@ app/client/js/styles*
 # Email config
 app/email_config.sh
 
+# Text config
+app/text_config.sh
+
 # DB
 app/db.sqlite
 

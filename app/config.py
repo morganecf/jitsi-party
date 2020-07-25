@@ -38,6 +38,10 @@ class Config:
 
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
+    
+    TWILIO_NUMBER = os.getenv('TWILIO_NUMBER')
+    TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
+    TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 
     @staticmethod
     def init_app(app):
@@ -62,6 +66,10 @@ class Config:
     @property
     def MODERATOR_EMAILS(self):
         return self.merged_cfg.get('moderation', {}).get('moderatorEmails')
+
+    @property
+    def MODERATOR_NUMBER(self):
+        return self.merged_cfg.get('moderation', {}).get('moderatorNumber')
 
     @property
     def IMAGE_MAPS(self):

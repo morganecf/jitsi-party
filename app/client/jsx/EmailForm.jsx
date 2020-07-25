@@ -59,7 +59,7 @@ export default ({ user }) => {
         setSent(true)
         // const { success } = httpApi.emailModerators(message, email, user)
         // setStatus(success ? 'succeeded' : 'failed')
-        httpApi.emailModerators(message, email, user)
+        httpApi.messageModerator(message, email, user)
         setStatus('succeeded')
     }
 

@@ -72,9 +72,9 @@ export class HttpApi {
         }
     }
 
-    async emailModerators(message, email, user) {
+    async messageModerator(message, email, user) {
         try {
-            const request = `${url}/email_moderators`
+            const request = `${url}/text_moderator`
             await axios.post(request, {
                 params: { message, email, user }
             })
