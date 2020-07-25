@@ -98,7 +98,7 @@
             "type": "iframe",
             "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
-                "src": "./js/iframes/TST_chat1.html",
+                "src": "./js/iframes/TST_chat.html",
                 "showVideo": false
             },
             "description": "It's Lucien's movie night. Are you excited?",
