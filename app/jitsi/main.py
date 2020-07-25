@@ -99,6 +99,8 @@ def serve(path):
 
 def compute_ip(num_proxies=0):
     headers_list = request.headers.getlist("X-Forwarded-For")
-    user_ip = headers_list[-1 * num_proxies] if headers_list else request.remote_addr 
-    return user_ip
+    if (num_proxies <= 0) or not headers_list:
+        return request.remote_addr
+    else:
+        return headers_list[-1 * num_proxies]
 
