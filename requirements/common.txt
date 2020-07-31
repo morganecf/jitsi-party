@@ -10,6 +10,7 @@ Jinja2==2.11.2
 kombu==4.6.8
 MarkupSafe==1.1.1
 monotonic==1.5
+protobuf==3.12.4
 python-engineio==3.12.1
 python-socketio==4.5.1
 six==1.14.0
