@@ -1,6 +1,7 @@
 {
- 	"rooms": {
-		"vestibule": {
+ 	"rooms": [
+		{
+			"id": "vestibule",
 			"name": "Vestibule",
 			"type": "jitsi",
 			"description": "Welcome!",
@@ -22,7 +23,8 @@
 				}
 			}
 		},
-		"closet": {
+		{
+			"id": "closet",
 			"name": "Closet",
 			"type": "jitsi",
 			"capacity": 2,
@@ -41,7 +43,8 @@
 				}
 			}
 		},
-		"livingRoom": {
+		{
+			"id": "livingRoom",
 			"name": "Living Room",
 			"type": "jitsi",
 			"backgroundImage": "js/images/rooms/livingroom.jpg",
@@ -62,7 +65,8 @@
 			},
 			"doorTint": "#FF5938"
 		},
-		"gameRoom": {
+		{
+			"id": "gameRoom",
 			"name": "Game Room",
 			"type": "jitsi",
 			"directions": {
@@ -82,5 +86,5 @@
 			"doorTint": "orange",
 			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		}
-	}
+	]
 }
