@@ -42,6 +42,10 @@ message Config {
     // Required.
     string startRoom = 8;
 
+    // Default display name in Jitsi video calls
+    // Required.
+    string videoDisplayName = 15;
+
     // Options related to username & avatar selection on the welcome page
     // Required.
     WelcomePage welcomePage = 9;
@@ -60,6 +64,10 @@ message Config {
     // Options related to the poking feature
     // Optional. If not provided, poking is turned off.
     PokeConfig poke = 13;
+
+    // Number of server-side proxies in use (if unsure, probably 0)
+    // Required.
+    int32 numProxies = 14;
 }
 
 message Moderation {
