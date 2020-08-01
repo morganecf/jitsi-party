@@ -25,8 +25,12 @@ npm install
 source venv/bin/activate
 cd app/
 
-# Export env variables. Use setup_prod.sh for prod
+# Export env variables.
 source setup.sh
+
+# Build schemas
+# Equivalent to `make schema`. Run `make clean` to clean
+make
 
 # Create db
 flask create-db
