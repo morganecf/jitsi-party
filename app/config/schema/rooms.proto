@@ -1,7 +1,7 @@
 /*
  * This file defines and documents the format for rooms.json
  *
- * See https://developers.google.com/protocol-buffers/ for more info on protos
+ * Proto doc: https://developers.google.com/protocol-buffers/
  */
 
 syntax = "proto3"; // Must be proto3 to support JSON
@@ -14,6 +14,11 @@ message Rooms {
 enum RoomType {
     UNKNOWN = 0;
     JITSI = 1;
+    IFRAME = 2;
+    CONTENT = 3;
+    IMAGEMAP = 4;
+    ART = 5;
+    REDIRECT = 6;
 }
 
 message Room {
@@ -57,6 +62,34 @@ message Room {
     // Does NOT define the connecting rooms (see "directions" above)
     // Optional
     MapDisplay map = 9;
+
+    // Whether to mute all participants when joining the call
+    // Optional. Defaults to false.
+    bool muteRoom = 10;
+
+    // Whether to prevent users from entering this room
+    // Optional. Defaults to false.
+    bool locked = 11;
+
+    // IFRAME ROOMS ONLY
+    // Options related to what to display in the iframe
+    // Required for iframe rooms.
+    IframeOptions iframeOptions = 12;
+
+    // IMAGEMAP ROOMS ONLY
+    // ID for options to use for this room from the imagemaps config
+    // Required for imagemap rooms.
+    string imageMapOptions = 13;
+
+    // ART ROOMS ONLY
+    // Options related to the art to display
+    // Required for art rooms.
+    ArtOptions art = 14;
+
+    // REDIRECT ROOMS ONLY
+    // The page to redirect to
+    // Required for redirect rooms.
+    string route = ;
 }
 
 message NavDirections {
@@ -111,4 +144,28 @@ message DisplayDoors {
     // vertical (Y) coordinate of the western door on the map
     // Optional
     int32 west = 4;
+}
+
+message IframeOptions {
+    // source URL for the iframe
+    // Required.
+    string src = 1;
+
+    // Whether to remove the jitsi video and show the iframe only
+    // Optional. Defaults to false.
+    bool hideVideo = 2;
+}
+
+message ArtOptions {
+    // Title to display
+    // Optional.
+    string title = 1;
+
+    // Artist to display
+    // Optional.
+    string artist = 2;
+
+    // Path to the file for the art
+    // Required.
+    string src = 3;
 }
