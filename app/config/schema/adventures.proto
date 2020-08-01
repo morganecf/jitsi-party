@@ -68,6 +68,4 @@ message Button {
     // Wildcard "*" can be used to randomly choose from all rooms
     // Required.
     repeated string nextRoom = 2;
-
-
 }
