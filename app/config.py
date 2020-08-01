@@ -1,8 +1,8 @@
 import os
 import json
 import sys
-import rooms_pb2 as rooms
-import google.protobuf.json_format as json_format
+from jitsi import rooms_pb2 as rooms
+from google.protobuf import json_format
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 configdir = os.path.join(basedir, 'config')
@@ -14,8 +14,8 @@ def get_json_dict(path):
             json_dict = json.load(file)
             json_format.ParseDict(json_dict, rooms.Rooms())
             return json_dict
-    except:
-        print(sys.exc_info()[0])
+    except Exception as e:
+        print(path,e)
         return dict()
 
 def make_merged_cfg(paths):
