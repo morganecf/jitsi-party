@@ -1,0 +1,56 @@
+/*
+ * This file defines and documents the format for imagemaps.json
+ *
+ * Proto doc: https://developers.google.com/protocol-buffers/
+ */
+
+syntax = "proto3"; // Must be proto3 to support JSON
+
+message ImageMaps {
+    // Details for imagemap rooms
+    // Optional
+    repeated ImageMapOptions imagemaps = 1;
+}
+
+message ImageMapOptions {
+    // ID for these imagemap options
+    // Should match the "imageMapOptions" field on an IMAGEMAP room in rooms.json
+    // Required.
+    string id = 1;
+
+    // Source image for the background of the imagemap
+    // Required.
+    string img = 2;
+
+    repeated ImageMapArea areas = 3;
+}
+
+// Many of the fields in this message relate to the HTML area element
+// See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area
+message ImageMapArea {
+    // The shape for this area on the imagemap
+    // Required.
+    string shape = 1;
+
+    // The coordinates for where to place this area on the image
+    // Required for shapes other than "default".
+    string coords = 2;
+
+    // The header to display when this area is clicked
+    // Required.
+    string label = 3;
+
+    // Details for the PDFs to display
+    // Optional.
+    repeated Content contents = 4;
+}
+
+message Content {
+    // Label for this PDF
+    // Required.
+    string title = 1;
+
+    // Path to the file for this PDF
+    // Required.
+    string path = 2;
+}
