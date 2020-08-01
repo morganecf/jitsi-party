@@ -24,6 +24,7 @@ enum RoomType {
 message Room {
     // Unique identifier for the room within this house
     // Used for defining paths between rooms and for creating Jitsi videos
+    // In loaded config, can be used to key into the rooms dict
     // Required
     string id = 1;
 

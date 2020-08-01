@@ -1,7 +1,7 @@
 import os
 import json
 import sys
-from jitsi import rooms_pb2 as rooms
+from jitsi import adventures_pb2,config_pb2,events_pb2,imagemaps_pb2,rooms_pb2
 from google.protobuf import json_format
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -11,11 +11,9 @@ overridedir = os.path.join(configdir, 'overrides')
 def get_json_dict(path):
     try:
         with open(path) as file:
-            json_dict = json.load(file)
-            json_format.ParseDict(json_dict, rooms.Rooms())
-            return json_dict
+            return json.load(file)
     except Exception as e:
-        print(path,e)
+        print(e)
         return dict()
 
 def make_merged_cfg(paths):
@@ -29,18 +27,27 @@ class Config:
     BASE_DIR = basedir
     # MESSAGE_QUEUE = 'amqp://localhost:5672'
     MESSAGE_QUEUE = None
-    CONFIG_PATHS = [os.path.join(configdir, file) for file in [
-        'base.json',
-        'rooms.json',
-        'adventures.json',
-        'events.json'
-    ]]
-    OVERRIDE_PATHS = [os.path.join(overridedir, file) for file in [
-        'config.json',
-        'rooms.json',
-        'events.json',
-        'imagemaps.json'
-    ]]
+
+    # TODO: Should we add adventures & imagemaps to both dirs?
+    ROOM_PATHS = [
+        os.path.join(configdir, 'rooms.json'),
+        os.path.join(overridedir, 'rooms.json')
+    ]
+    ADVENTURE_PATHS = [
+        os.path.join(configdir, 'adventures.json')
+    ]
+    EVENT_PATHS = [
+        os.path.join(configdir, 'events.json'),
+        os.path.join(overridedir, 'events.json')
+    ]
+    IMAGEMAP_PATHS = [
+        os.path.join(overridedir, 'imagemaps.json')
+    ]
+    # TODO: Need to separate these to put dev/prod in-between
+    CONFIG_PATHS = [
+        os.path.join(configdir, 'base.json'),
+        os.path.join(overridedir, 'config.json')
+    ]
 
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
@@ -54,46 +61,82 @@ class Config:
         pass
 
     def __init__(self):
-        self.merged_cfg = make_merged_cfg(self.CONFIG_PATHS)
+        baseRooms = make_merged_cfg(self.ROOM_PATHS)
+        try:
+            json_format.ParseDict(baseRooms, rooms_pb2.Rooms())
+        except Exception as e:
+            print(e)
+        self.rooms = {r['id']: r for r in baseRooms['rooms']}
+
+        baseAdventures = make_merged_cfg(self.ADVENTURE_PATHS)
+        try:
+            json_format.ParseDict(baseAdventures, adventures_pb2.Adventures())
+        except Exception as e:
+            print(e)
+        # Process
+
+        baseEvents = make_merged_cfg(self.EVENT_PATHS)
+        try:
+            json_format.ParseDict(baseEvents, events_pb2.Events())
+        except Exception as e:
+            print(e)
+        self.events = baseEvents
+
+        baseImagemaps = make_merged_cfg(self.IMAGEMAP_PATHS)
+        try:
+            json_format.ParseDict(baseImagemaps, imagemaps_pb2.ImageMaps())
+        except Exception as e:
+            print(e)
+        self.imagemaps = {i['id']: i for i in baseImagemaps['imagemaps']}
+
+        baseConfig = make_merged_cfg(self.CONFIG_PATHS)
+        try:
+            json_format.ParseDict(baseConfig, config_pb2.Config())
+        except Exception as e:
+            print(e)
+        self.config = baseConfig
 
     # have to be all caps for flask to allow access
     @property
     def ROOMS(self):
-        return self.merged_cfg['rooms']
+        return self.rooms
 
+    # TODO: Make sure this works with empty adventures
     @property
     def ADVENTURES(self):
-        return self.merged_cfg.get('adventures', {})
+        return self.adventures
 
+    # TODO: Make sure this works with empty events
     @property
     def EVENTS(self):
-        return self.merged_cfg.get('events', {})
+        return self.events
 
     @property
     def MODERATOR_EMAILS(self):
-        return self.merged_cfg.get('moderation', {}).get('moderatorEmails')
+        return self.config.get('moderation', {}).get('moderatorEmails')
 
     @property
     def MODERATOR_NUMBER(self):
-        return self.merged_cfg.get('moderation', {}).get('moderatorNumber')
+        return self.config.get('moderation', {}).get('moderatorNumber')
 
+    # TODO: Make sure this works with empty imagemaps
     @property
     def IMAGE_MAPS(self):
-        return self.merged_cfg.get('imagemaps', {})
+        return self.imagemaps
 
     @property
     def NUM_PROXIES(self):
-        return self.merged_cfg['numProxies']
+        return self.config['numProxies']
 
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
-    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(configdir, 'development.json')] + Config.OVERRIDE_PATHS
+    CONFIG_PATHS = Config.CONFIG_PATHS + os.path.join(configdir, 'development.json')
 
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://waa:woo@jitsi-party-db:5432/jitsi'
-    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(configdir, 'production.json')] + Config.OVERRIDE_PATHS
+    CONFIG_PATHS = Config.CONFIG_PATHS + os.path.join(configdir, 'production.json')
 
 
 config = {
