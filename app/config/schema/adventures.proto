@@ -1,0 +1,73 @@
+/*
+ * This file defines and documents the format for adventures.json
+ *
+ * Proto doc: https://developers.google.com/protocol-buffers/
+ */
+
+syntax = "proto3"; // Must be proto3 to support JSON
+
+message Adventures {
+    // Logic groupings of adventures
+    repeated Adventure adventures = 1;
+}
+
+message Adventure {
+    // TODO: is this actually needed/used anywhere?
+    string id = 1;
+
+    // Configuration options applying to the entire adventure
+    // Optional.
+    AdventureConfig config = 2;
+
+    // TODO: deal with this
+    repeated AdventureRoom rooms = 3;
+}
+
+message AdventureConfig {
+    message Audio {
+        // Audio resource to play
+        // Required.
+        string path = 1;
+
+        // Whether to automatically play the audio when entering this adventure
+        // Optional. Defaults to false.
+        bool autoPlay = 2;
+
+        // Whether to show UI controls for playing and pausing the audio
+        // Optional. Defaults to false.
+        bool hideControls = 3;
+    }
+
+    // Optional.
+    Audio audio = 1;
+}
+
+message AdventureRoom {
+    // Unique identifier for this room. Must not conflict with rooms.json
+    // Required.
+    string id = 1;
+
+    // Display name for this room.
+    // Optional.
+    string name = 2;
+
+    // Buttons to continue the adventure
+    // Required.
+    repeated Button buttons = 3;
+}
+
+message Button {
+    // Text to display on the button
+    // Required.
+    string text = 1;
+
+    // TODO: make sure this is flexible enough
+    // The ID of the room or rooms to navigate on button click
+    // Can be another adventure room or a regular room
+    // If a list is supplied, navigation will be chosen at random
+    // Wildcard "*" can be used to randomly choose from all rooms
+    // Required.
+    repeated string nextRoom = 2;
+
+
+}
