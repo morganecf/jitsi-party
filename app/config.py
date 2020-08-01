@@ -1,5 +1,8 @@
 import os
 import json
+import sys
+import rooms_pb2 as rooms
+import google.protobuf.json_format as json_format
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 configdir = os.path.join(basedir, 'config')
@@ -8,8 +11,11 @@ overridedir = os.path.join(configdir, 'overrides')
 def get_json_dict(path):
     try:
         with open(path) as file:
-            return json.load(file)
+            json_dict = json.load(file)
+            json_format.ParseDict(json_dict, rooms.Rooms())
+            return json_dict
     except:
+        print(sys.exc_info()[0])
         return dict()
 
 def make_merged_cfg(paths):
