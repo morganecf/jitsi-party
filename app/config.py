@@ -73,14 +73,18 @@ class Config:
             json_format.ParseDict(baseAdventures, adventures_pb2.Adventures())
         except Exception as e:
             print(e)
-        # Process
+        # This is kinda ugly and I wish it was nicer
+        for adventure in baseAdventures['adventures']:
+            adventure['rooms'] = {r['id']: r for r in adventure['rooms']}
+        self.adventures = baseAdventures['adventures']
+            
 
         baseEvents = make_merged_cfg(self.EVENT_PATHS)
         try:
             json_format.ParseDict(baseEvents, events_pb2.Events())
         except Exception as e:
             print(e)
-        self.events = baseEvents
+        self.events = baseEvents['events']
 
         baseImagemaps = make_merged_cfg(self.IMAGEMAP_PATHS)
         try:
