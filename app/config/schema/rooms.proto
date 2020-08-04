@@ -90,7 +90,7 @@ message Room {
     // REDIRECT ROOMS ONLY
     // The page to redirect to
     // Required for redirect rooms.
-    string route = ;
+    string route = 15;
 }
 
 message NavDirections {

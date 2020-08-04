@@ -12,9 +12,6 @@ message Adventures {
 }
 
 message Adventure {
-    // TODO: is this actually needed/used anywhere?
-    string id = 1;
-
     // Configuration options applying to the entire adventure
     // Optional.
     AdventureConfig config = 2;
