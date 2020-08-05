@@ -51,11 +51,12 @@ message Config {
     WelcomePage welcomePage = 9;
 
     // Sets of avatar choices
+    // Each AvatarSet should have the same number of images
     // Required if "avatarSelectionEnabled" is true in "welcomePage".
     repeated AvatarSet avatars = 10;
 
     // TODO: What is this for?
-    repeated AvatarSet specialAvatars = 11;
+    SpecialAvatarSets specialAvatars = 11;
 
     // Options related to displaying the map
     // Required.
@@ -101,10 +102,17 @@ message WelcomePage {
     string headerHtml = 4;
 }
 
-// TODO: figure this out
 message AvatarSet {
-    // Unique ID of this set of avatars
-    string id = 1;
+    // Paths to avatar images
+    // Required.
+    repeated string images = 1;
+}
+
+message SpecialAvatarSets {
+    // The set of avatars to show when a user exits
+    // Should be the same size as the regular avatar sets
+    // Optional.
+    AvatarSet goodbye = 1;
 }
 
 message MapConfig {

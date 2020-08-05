@@ -22,34 +22,41 @@
 			"descriptionHtml": "<div>If you have a <a href='https://thesatanictemple.tv/'>TheSatanicTemple.TV</a> account, log in to party at the VHQ Estate for free!</div><div>If you do not have an account, use coupon code <b>VHQGROUP</b> to access the Estate for free.</div><div>If you have any trouble getting in, email us at <a href='mailto:vhq@thesatanictemple.com'>vhq@thesatanictemple.com</a> and we'll help you out.</div>"
 		}
 	},
-	"avatars": {
-	  "group1": {
-      "first": "js/images/tst/sigils/Andromalius01.png",
-      "second": "js/images/tst/sigils/Bathin01.png",
-      "third": "js/images/tst/sigils/Asmoday01.png",
-      "fourth": "js/images/tst/sigils/Belial01.png"
-    },
-	  "group2": {
-      "first": "js/images/tst/sigils/Berith01.png",
-      "second": "js/images/tst/sigils/Buer01.png",
-      "third": "js/images/tst/sigils/Bune01.png",
-      "fourth": "js/images/tst/sigils/Ipos01.png"
-	  },
-	  "group3": {
-      "first": "js/images/tst/sigils/Naberius01.png",
-      "second": "js/images/tst/sigils/Shax01.png",
-      "third": "js/images/tst/sigils/Sitri01.png",
-      "fourth": "js/images/tst/sigils/Stolas01.png"
-	  }
-	},
+	"avatars": [
+        {
+            "images": [
+                "js/images/tst/sigils/Andromalius01.png",
+                "js/images/tst/sigils/Bathin01.png",
+                "js/images/tst/sigils/Asmoday01.png",
+                "js/images/tst/sigils/Belial01.png"
+            ]
+        },
+        {
+            "images": [
+                "js/images/tst/sigils/Berith01.png",
+                "js/images/tst/sigils/Buer01.png",
+                "js/images/tst/sigils/Bune01.png",
+                "js/images/tst/sigils/Ipos01.png"
+            ]
+        },
+        {
+            "images": [
+                "js/images/tst/sigils/Naberius01.png",
+                "js/images/tst/sigils/Shax01.png",
+                "js/images/tst/sigils/Sitri01.png",
+                "js/images/tst/sigils/Stolas01.png"
+            ]
+        }
+	],
 	"specialAvatars": {
-	  "goodbye": {
-		  "first": "js/images/tst/sigils/Andromalius01.png",
-      "second": "js/images/tst/sigils/Bathin01.png",
-      "third": "js/images/tst/sigils/Asmoday01.png",
-      "fourth": "js/images/tst/sigils/Belial01.png"
-	  }
-  },
+        "goodbye": {
+            "images": [
+                "js/images/tst/sigils/Andromalius01.png",
+                "js/images/tst/sigils/Bathin01.png",
+                "js/images/tst/sigils/Asmoday01.png",
+                "js/images/tst/sigils/Belial01.png"
+            ]
+    },
 	"map": {
 		"stats": {
 			"numberInHouse": {
