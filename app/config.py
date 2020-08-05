@@ -130,12 +130,12 @@ class Config:
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
-    CONFIG_PATHS = Config.CONFIG_PATHS + os.path.join(configdir, 'development.json')
+    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(configdir, 'development.json')]
 
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://waa:woo@jitsi-party-db:5432/jitsi'
-    CONFIG_PATHS = Config.CONFIG_PATHS + os.path.join(configdir, 'production.json')
+    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(configdir, 'production.json')]
 
 
 config = {
