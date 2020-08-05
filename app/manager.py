@@ -2,7 +2,7 @@ import os
 import json
 from jitsi import create_app, db, run_eventlet
 from jitsi.models import Room, User
-from config import make_merged_cfg
+from config import load_and_validate_rooms
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 configdir = os.path.join(basedir, 'config')
@@ -41,8 +41,8 @@ def create_db():
     db.create_all()
 
     # Load room definition
-    roomConfigs = [os.path.join(folder, 'rooms.json') for folder in [configdir, overridedir]]
-    roomConfig = make_merged_cfg(roomConfigs)['rooms']
+    roomConfigPaths = [os.path.join(folder, 'rooms.json') for folder in [configdir, overridedir]]
+    roomConfig = load_and_validate_rooms(roomConfigPaths)
 
     # Create rooms and insert
     db_rooms = [Room(name=room_name, room_type=room['type'])

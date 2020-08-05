@@ -19,6 +19,49 @@ def get_json_dict(path):
 def make_merged_cfg(paths):
     return {k: v for path in paths for k, v in get_json_dict(path).items()}
 
+def load_and_validate_rooms(paths):
+    baseRooms = make_merged_cfg(paths)
+    try:
+        json_format.ParseDict(baseRooms, rooms_pb2.Rooms())
+    except Exception as e:
+        print(e)
+    return {r['id']: r for r in baseRooms.get('rooms', [])}
+
+def load_and_validate_adventures(paths):
+    baseAdventures = make_merged_cfg(paths)
+    try:
+        json_format.ParseDict(baseAdventures, adventures_pb2.Adventures())
+    except Exception as e:
+        print(e)
+    adventures = baseAdventures.get('adventures', [])
+    for a in adventures:
+        a['rooms'] = {r['id']: r for r in a['rooms']}
+    return adventures
+
+def load_and_validate_events(paths):
+    baseEvents = make_merged_cfg(paths)
+    try:
+        json_format.ParseDict(baseEvents, events_pb2.Events())
+    except Exception as e:
+        print(e)
+    return baseEvents.get('events', [])
+
+def load_and_validate_imagemaps(paths):
+    baseImagemaps = make_merged_cfg(paths)
+    try:
+        json_format.ParseDict(baseImagemaps, imagemaps_pb2.ImageMaps())
+    except Exception as e:
+        print(e)
+    return {i['id']: i for i in baseImagemaps.get('imagemaps', [])}
+
+def load_and_validate_config(paths):
+    baseConfig = make_merged_cfg(paths)
+    try:
+        json_format.ParseDict(baseConfig, config_pb2.Config())
+    except Exception as e:
+        print(e)
+    return baseConfig
+
 class Config:
     # Need to change this
     SECRET_KEY = 'figure-this-out'
@@ -61,42 +104,11 @@ class Config:
         pass
 
     def __init__(self):
-        baseRooms = make_merged_cfg(self.ROOM_PATHS)
-        try:
-            json_format.ParseDict(baseRooms, rooms_pb2.Rooms())
-        except Exception as e:
-            print(e)
-        self.rooms = {r['id']: r for r in baseRooms.get('rooms', [])}
-
-        baseAdventures = make_merged_cfg(self.ADVENTURE_PATHS)
-        try:
-            json_format.ParseDict(baseAdventures, adventures_pb2.Adventures())
-        except Exception as e:
-            print(e)
-        self.adventures = baseAdventures.get('adventures', [])
-        for adventure in self.adventures:
-            adventure['rooms'] = {r['id']: r for r in adventure['rooms']}
-
-        baseEvents = make_merged_cfg(self.EVENT_PATHS)
-        try:
-            json_format.ParseDict(baseEvents, events_pb2.Events())
-        except Exception as e:
-            print(e)
-        self.events = baseEvents.get('events', [])
-
-        baseImagemaps = make_merged_cfg(self.IMAGEMAP_PATHS)
-        try:
-            json_format.ParseDict(baseImagemaps, imagemaps_pb2.ImageMaps())
-        except Exception as e:
-            print(e)
-        self.imagemaps = {i['id']: i for i in baseImagemaps.get('imagemaps', [])}
-
-        baseConfig = make_merged_cfg(self.CONFIG_PATHS)
-        try:
-            json_format.ParseDict(baseConfig, config_pb2.Config())
-        except Exception as e:
-            print(e)
-        self.config = baseConfig
+        self.rooms = load_and_validate_rooms(self.ROOM_PATHS)
+        self.adventures = load_and_validate_adventures(self.ADVENTURE_PATHS)
+        self.events = load_and_validate_events(self.EVENT_PATHS)
+        self.imagemaps = load_and_validate_imagemaps(self.IMAGEMAP_PATHS)
+        self.config = load_and_validate_config(self.CONFIG_PATHS)
 
     # have to be all caps for flask to allow access
     @property
