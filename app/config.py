@@ -1,7 +1,7 @@
 import os
 import json
 import sys
-from jitsi import adventures_pb2,config_pb2,events_pb2,imagemaps_pb2,rooms_pb2
+from jitsi.schema import adventures_pb2,config_pb2,events_pb2,imagemaps_pb2,rooms_pb2
 from google.protobuf import json_format
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -66,32 +66,30 @@ class Config:
             json_format.ParseDict(baseRooms, rooms_pb2.Rooms())
         except Exception as e:
             print(e)
-        self.rooms = {r['id']: r for r in baseRooms['rooms']}
+        self.rooms = {r['id']: r for r in baseRooms.get('rooms', [])}
 
         baseAdventures = make_merged_cfg(self.ADVENTURE_PATHS)
         try:
             json_format.ParseDict(baseAdventures, adventures_pb2.Adventures())
         except Exception as e:
             print(e)
-        # This is kinda ugly and I wish it was nicer
-        for adventure in baseAdventures['adventures']:
+        self.adventures = baseAdventures.get('adventures', [])
+        for adventure in self.adventures:
             adventure['rooms'] = {r['id']: r for r in adventure['rooms']}
-        self.adventures = baseAdventures['adventures']
-            
 
         baseEvents = make_merged_cfg(self.EVENT_PATHS)
         try:
             json_format.ParseDict(baseEvents, events_pb2.Events())
         except Exception as e:
             print(e)
-        self.events = baseEvents['events']
+        self.events = baseEvents.get('events', [])
 
         baseImagemaps = make_merged_cfg(self.IMAGEMAP_PATHS)
         try:
             json_format.ParseDict(baseImagemaps, imagemaps_pb2.ImageMaps())
         except Exception as e:
             print(e)
-        self.imagemaps = {i['id']: i for i in baseImagemaps['imagemaps']}
+        self.imagemaps = {i['id']: i for i in baseImagemaps.get('imagemaps', [])}
 
         baseConfig = make_merged_cfg(self.CONFIG_PATHS)
         try:
@@ -105,12 +103,10 @@ class Config:
     def ROOMS(self):
         return self.rooms
 
-    # TODO: Make sure this works with empty adventures
     @property
     def ADVENTURES(self):
         return self.adventures
 
-    # TODO: Make sure this works with empty events
     @property
     def EVENTS(self):
         return self.events
@@ -123,7 +119,6 @@ class Config:
     def MODERATOR_NUMBER(self):
         return self.config.get('moderation', {}).get('moderatorNumber')
 
-    # TODO: Make sure this works with empty imagemaps
     @property
     def IMAGE_MAPS(self):
         return self.imagemaps
