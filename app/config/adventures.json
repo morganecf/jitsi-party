@@ -16,11 +16,11 @@
                     "buttons": [
                         {
                             "text": "Rotate it",
-                            "nextRoom": "catacombs"
+                            "nextRoom": ["catacombs"]
                         },
                         {
                             "text": "Continue up the stairwell",
-                            "nextRoom": "library"
+                            "nextRoom": ["library"]
                         }
                     ]
                 },
@@ -31,11 +31,11 @@
                     "buttons": [
                         {
                             "text": "Push the button",
-                            "nextRoom": "fortune"
+                            "nextRoom": ["fortune"]
                         },
                         {
                             "text": "Go through the door",
-                            "nextRoom": "library"
+                            "nextRoom": ["library"]
                         }
                     ]
                 },
@@ -46,11 +46,11 @@
                     "buttons": [
                         {
                             "text": "Pick up the card",
-                            "nextRoom": "card"
+                            "nextRoom": ["card"]
                         },
                         {
                           "text": "Go through the door",
-                          "nextRoom": "library"
+                          "nextRoom": ["library"]
                       }
                     ]
                 },
@@ -61,11 +61,11 @@
                     "buttons": [
                         {
                             "text": "Put the card back",
-                            "nextRoom": "returnCard"
+                            "nextRoom": ["returnCard"]
                         },
                         {
                             "text": "Go through the door",
-                            "nextRoom": "library"
+                            "nextRoom": ["library"]
                         }
                     ]
                 },
@@ -76,11 +76,11 @@
                     "buttons": [
                         {
                             "text": "Go through the left door",
-                            "nextRoom": "trapDoor"
+                            "nextRoom": ["trapDoor"]
                         },
                         {
                             "text": "Go through the right door",
-                            "nextRoom": "library"
+                            "nextRoom": ["library"]
                         }
                     ]
                 }
