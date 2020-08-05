@@ -64,13 +64,13 @@ class PuckSelect extends Component {
           //     <PuckBox
           //       handleClick={handleClick}
           //       key={setIndex}
-          //       image={set[0]}
+          //       image={set.images[0]}
           //       style='box'
           //       imageStyle={imageTransparency}
           //     />
           //   )
           // } else { // selected design
-          allVariants = set.map((image, variantIndex) => {
+          allVariants = set.images.map((image, variantIndex) => {
             const selected = 'image'
             // const handleClick = () => this.handleClickColor(variantKey, colorIndex)
             const handleClick = () => this.handleClickAvatar(setIndex, variantIndex)
@@ -102,7 +102,7 @@ class PuckSelect extends Component {
         <div className='outer'>
           <input className='fade opaque' type='button' onClick={this.handleButtonClickReset.bind(this)} value={Config.welcomePage.avatarSelectionText} />
           <div className='spacer' />
-          <div><img className='image' src={avatars[this.state.avatarSetIndex][this.state.avatarVariantIndex]} /></div>
+          <div><img className='image' src={avatars[this.state.avatarSetIndex].images[this.state.avatarVariantIndex]} /></div>
         </div>
       )
     }
