@@ -7,9 +7,8 @@ class PuckSelect extends Component {
     super(props)
     this.initialState = {
       columnOpen: false,
-      rowOpen: null,
-      avatarDesign: '',
-      avatarColorway: '',
+      avatarSetIndex: null,
+      avatarVariantIndex: null,
       opacity: this.props.opacity
     }
     this.state = this.initialState
@@ -23,70 +22,70 @@ class PuckSelect extends Component {
     this.setState({ columnOpen: true })
   }
 
-  handleClickDesign (key, index) {
-    this.setState({ avatarDesign: key, rowOpen: index })
+  handleClickDesign (setIndex) {
+    this.setState({ avatarSetIndex: setIndex })
   }
 
-  handleClickColor (variantKey) {
-    this.setState({ avatarColorway: variantKey })
+  handleClickColor (variantIndex) {
+    this.setState({ avatarVariantIndex: variantIndex })
     this.props.handleSelect({
-      type: this.state.avatarDesign,
-      color: variantKey
+      type: this.state.avatarSetIndex,
+      color: variantIndex
     })
   }
 
-  handleClickAvatar(avatarDesign, variantKey) {
+  handleClickAvatar(setIndex, variantIndex) {
     this.setState({
-      avatarDesign, 
-      avatarColorway: variantKey
+      avatarSetIndex: setIndex, 
+      avatarVariantIndex: variantIndex
     })
     this.props.handleSelect({
-      type: avatarDesign,
-      color: variantKey
+      type: setIndex,
+      color: variantIndex
     })
   }
 
   render () {
     const avatars = Config.avatars
-    if (this.state.avatarColorway === '') { // checks whether selection not yet complete
+    if (this.state.avatarVariantIndex === null) { // checks whether selection not yet complete
       let allAvatarDesigns = []
       let allColorwayVariants = []
       let fade = this.props.opacity
       if (this.state.columnOpen) {
         fade = 'fade'
-        allAvatarDesigns = Object.keys(avatars).map((key, index) => {
-          // if (this.state.rowOpen !== index) { // checks each item in column for whether selected
+        allAvatarDesigns = avatars.map((set, setIndex) => {
+          // if (this.state.avatarVariantIndex !== index) { // checks each item in column for whether selected
           //   let imageTransparency = 'image'
-          //   if (this.state.rowOpen !== null && this.state.rowOpen !== index) {
+          //   if (this.state.avatarSetIndex !== null && this.state.avatarSetIndex !== index) {
           //     imageTransparency = 'non-selected-image'
           //   }
-          //   const handleClick = () => this.handleClickDesign(key, index)
+          //   const handleClick = () => this.handleClickDesign(setIndex)
           //   return (
           //     <PuckBox
           //       handleClick={handleClick}
-          //       key={key}
-          //       image={avatars[key][Object.keys(avatars[key])[0]]}
+          //       key={setIndex}
+          //       image={set[0]}
           //       style='box'
           //       imageStyle={imageTransparency}
           //     />
           //   )
           // } else { // selected design
-          allColorwayVariants = Object.keys(avatars[key]).map((variantKey, colorIndex) => {
+          allVariants = set.map((image, variantIndex) => {
             const selected = 'image'
             // const handleClick = () => this.handleClickColor(variantKey, colorIndex)
-            const handleClick = () => this.handleClickAvatar(key, variantKey)
+            const handleClick = () => this.handleClickAvatar(setIndex, variantIndex)
             return (
               <PuckBox
                 handleClick={handleClick.bind(this)}
-                key={`${key} ${variantKey}`}
-                image={avatars[key][variantKey]}
+                key={`${setIndex} ${variantIndex}`}
+                image={image}
                 imageStyle={selected}
               />
             )
           })
-          return ( // colorways row in place of selected column item
-            <div key={`big-container ${key}`} className='inner'>
-              {allColorwayVariants}
+          return ( // variants row in place of selected column item
+            <div key={`big-container ${setIndex}`} className='inner'>
+              {allVariants}
             </div>
           )
         })
@@ -103,7 +102,7 @@ class PuckSelect extends Component {
         <div className='outer'>
           <input className='fade opaque' type='button' onClick={this.handleButtonClickReset.bind(this)} value={Config.welcomePage.avatarSelectionText} />
           <div className='spacer' />
-          <div><img className='image' src={avatars[this.state.avatarDesign][this.state.avatarColorway]} /></div>
+          <div><img className='image' src={avatars[this.state.avatarSetIndex][this.state.avatarVariantIndex]} /></div>
         </div>
       )
     }
