@@ -48,9 +48,12 @@ message AdventureRoom {
     // Optional.
     string name = 2;
 
+    // Display text for this room.
+    string text = 3;
+
     // Buttons to continue the adventure
     // Required.
-    repeated Button buttons = 3;
+    repeated Button buttons = 4;
 }
 
 message Button {
