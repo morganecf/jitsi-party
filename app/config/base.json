@@ -13,14 +13,16 @@
 		"avatarSelectionText": "Select your Avatar",
 		"headerHtml": "<br><h1>Welcome</h1>"
 	},
-	"avatars": {
-	  "normal": {
-	    "black": "js/images/default-avatar/default-avatar-black.png",
-	    "blue": "js/images/default-avatar/default-avatar-blue.png",
-	    "red": "js/images/default-avatar/default-avatar-red.png",
-	    "green": "js/images/default-avatar/default-avatar-green.png"
+	"avatars": [
+	  {
+	  	"images": [
+	    	"js/images/default-avatar/default-avatar-black.png",
+	    	"js/images/default-avatar/default-avatar-blue.png",
+	    	"js/images/default-avatar/default-avatar-red.png",
+	    	"js/images/default-avatar/default-avatar-green.png"
+	    ]
 	  }
-	},
+	],
 	"specialAvatars": {
 	},
 	"map": {
