@@ -49,7 +49,7 @@ class PuckSelect extends Component {
     const avatars = Config.avatars
     if (this.state.avatarVariantIndex === null) { // checks whether selection not yet complete
       let allAvatarDesigns = []
-      let allColorwayVariants = []
+      let allVariants = []
       let fade = this.props.opacity
       if (this.state.columnOpen) {
         fade = 'fade'
