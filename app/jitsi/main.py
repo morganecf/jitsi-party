@@ -26,7 +26,7 @@ def get_config():
     # Link adventures to rooms
     rooms = copy.deepcopy(current_app.config['ROOMS'])
     adventures = copy.deepcopy(current_app.config['ADVENTURES'])
-    for adventure in adventures.values():
+    for adventure in adventures:
         config = adventure.get('config', {})
         for node_name, adventure_node in adventure.items():
             if node_name != 'config':
