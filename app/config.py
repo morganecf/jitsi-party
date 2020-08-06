@@ -35,7 +35,8 @@ def load_and_validate_adventures(paths):
         print(e)
     adventures = baseAdventures.get('adventures', [])
     for a in adventures:
-        a['rooms'] = {r['id']: r for r in a['rooms']}
+        for r in a.pop('rooms'):
+            a[r['id']] = r
     return adventures
 
 def load_and_validate_events(paths):

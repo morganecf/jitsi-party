@@ -47,7 +47,7 @@ class Welcome extends Component {
             }
         })
         _.forEach(Config.avatars, avatarGroup => {
-            _.forEach(Object.values(avatarGroup), avatar => {
+            _.forEach(avatarGroup.images, avatar => {
                 const img = new Image()
                 img.src = avatar
             })
