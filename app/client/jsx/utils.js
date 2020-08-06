@@ -6,7 +6,7 @@ function pickRandom(arr) {
 
 function teleport() {
     const leafRooms = Object.keys(this.rooms).filter(
-        room => this.rooms[room].type !== 'adventure' && room !== 'bye'
+        room => this.rooms[room].type !== 'ADVENTURE' && room !== 'bye'
     )
     return pickRandom(leafRooms)
 }
