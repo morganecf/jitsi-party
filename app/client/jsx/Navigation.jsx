@@ -162,7 +162,7 @@ class Navigation extends Component {
                 </div>
                 <div className="column column-avatar">
                     <div className="puck-wrapper">
-                      <img src={Config.avatars[this.props.user.avatar.type][this.props.user.avatar.color]}/>
+                      <img src={Config.avatars[this.props.user.avatar.type].images[this.props.user.avatar.color]}/>
                     </div>
                 </div>
             </div>
