@@ -91,15 +91,32 @@ message WelcomePage {
     // Optional. Defaults to false.
     bool avatarSelectionEnabled = 1;
 
+    // Image to show behind the welcome page
+    // Optional.
+    string backgroundImagePath = 2;
+
     // What text to show on the button to join the party
     // Required.
-    string enterSpaceButtonText = 2;
+    string enterSpaceButtonText = 3;
 
     // Required.
-    string avatarSelectionText = 3;
+    string avatarSelectionText = 4;
 
     // Optional.
-    string headerHtml = 4;
+    string headerHtml = 5;
+
+    // Configuration for a sign-in iframe before joining the space.
+    // Optional.
+    Auth auth = 6;
+}
+
+message Auth {
+    // Path to the login page to iframe
+    // Optional.
+    string iframe = 1;
+
+    // HTML to display with the login page
+    string descriptionHtml = 2;
 }
 
 message AvatarSet {
