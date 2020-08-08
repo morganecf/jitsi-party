@@ -1,8 +1,9 @@
 {
-    "rooms": {
-       "vestibule": {
+    "rooms": [
+        {
+           "id": "vestibule",
            "name": "Vestibule",
-           "type": "jitsi",
+           "type": "JITSI",
            "description": "Welcome!",
            "backgroundImage": "js/images/rooms/vestibule.png",
            "directions": {
@@ -23,9 +24,10 @@
            },
            "doorTint": "#f5ccc5"
        },
-       "closet": {
+       {
+           "id": "closet",
            "name": "Closet",
-           "type": "jitsi",
+           "type": "JITSI",
            "capacity": 2,
            "backgroundImage": "js/images/rooms/closet.png",
            "description": "A quiet, cozy closet for two. Shhh.",
@@ -43,9 +45,10 @@
            },
            "doorTint": "f3bd1b"
        },
-       "livingRoom": {
+       {
+           "id": "livingRoom",
            "name": "Living Room",
-           "type": "jitsi",
+           "type": "JITSI",
            "backgroundImage": "js/images/rooms/livingroom.jpg",
            "directions": {
                "north": "danceParty",
@@ -67,9 +70,10 @@
            },
            "doorTint": "#FF5938"
        },
-       "danceParty": {
+       {
+           "id": "danceParty",
            "name": "Dave's Rave Cave",
-           "type": "iframe",
+           "type": "IFRAME",
            "description": "Dance until you die!!",
            "muteRoom": true,
            "backgroundImage": "js/images/rooms/fvn_stvff_keep_it_pushin.jpg",
@@ -94,9 +98,10 @@
            },
            "doorTint": "#E8BE3C"
        },
-       "music": {
+       {
+           "id": "music",
            "name": "Music Room",
-           "type": "iframe",
+           "type": "IFRAME",
            "description": "@kadam is DJing all night!",
            "muteRoom": true,
            "iframeOptions": {
@@ -117,9 +122,10 @@
            },
            "doorTint": "#9EFF7A"
        },
-       "bathroom": {
+       {
+           "id": "bathroom",
            "name": "Bathroom",
-           "type": "jitsi",
+           "type": "JITSI",
            "capacity": 3,
            "description": "A cozy bathroom.",
            "directions": {
@@ -140,9 +146,10 @@
            },
            "doorTint": "white"
        },
-       "boudoir": {
+       {
+           "id": "boudoir",
            "name": "Le Boudoir",
-           "type": "jitsi",
+           "type": "JITSI",
            "capacity": 5,
            "description": "One is a mass of lust and greed that absorbs and excrete.",
            "directions": {
@@ -159,9 +166,10 @@
            },
            "doorTint": "red"
        },
-       "trashyBedroom": {
+       {
+           "id": "trashyBedroom",
            "name": "Parent HQ",
-           "type": "jitsi",
+           "type": "JITSI",
            "capacity": 10,
            "description": "A gathering space for parents!",
            "directions": {
@@ -184,9 +192,10 @@
            },
            "doorTint": "black"
        },
-       "bubbleBaths": {
+       {
+           "id": "bubbleBaths",
             "name": "Bubble Baths",
-            "type": "jitsi",
+            "type": "JITSI",
             "description": "Let's make a human soup!",
             "directions": {
                 "north": "trashyBedroom"
@@ -203,9 +212,10 @@
             "doorTint": "#946EFF",
             "backgroundImage": "js/images/rooms/baths.jpg"
         },
-       "punishmentCloset": {
+        {
+           "id": "punishmentCloset",
            "name": "Punishment Closet",
-           "type": "jitsi",
+           "type": "JITSI",
            "capacity": 2,
            "description": "Fits two.",
            "directions": {
@@ -222,9 +232,10 @@
            },
            "doorTint": "black"
        },
-       "bunnyRun": {
+       {
+           "id": "bunnyRun",
            "name": "The Bunny Run",
-           "type": "iframe",
+           "type": "IFRAME",
            "description": "🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰",
            "iframeOptions": {
                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
@@ -246,9 +257,10 @@
            "doorTint": "#64E0E8",
            "backgroundImage": "js/images/rooms/bunnywedding.jpg"
        },
-       "passageway": {
+       {
+           "id": "passageway",
             "name": "Narrow Passage",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 2,
             "description": "Squeeeeeze",
             "directions": {
@@ -267,9 +279,10 @@
             },
             "doorTint": "#4b0202"
         },
-       "kitchen": {
+        {
+           "id": "kitchen",
            "name": "Kitchen",
-           "type": "jitsi",
+           "type": "JITSI",
            "description": "The joy, joy, joy of eating someone new!",
            "directions": {
                "west": "livingRoom",
@@ -291,10 +304,11 @@
            },
            "doorTint": "green",
            "backgroundImage": "js/images/rooms/kitchen.jpg"
-       },
-       "corridor": {
+        },
+        {
+           "id": "corridor",
             "name": "Haunted Corridor",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 3,
             "directions": {
                 "south": "kitchen",
@@ -312,9 +326,10 @@
             },
             "doorTint": "grey"
        },
-        "mapRoom": {
+        {
+           "id": "mapRoom",
             "name": "Map Room",
-            "type": "iframe",
+            "type": "IFRAME",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=emilymap&parent=cabinweekend.party"
             },
@@ -334,9 +349,10 @@
             },
             "doorTint": "blue"
         },
-        "library": {
+        {
+           "id": "library",
             "name": "Library",
-            "type": "imagemap",
+            "type": "IMAGEMAP",
             "imageMapOptions": "library-map",
             "directions": {
                 "west": "mapRoom",
@@ -354,15 +370,16 @@
             },
             "doorTint": "#a7240e"
         },
-        "gallery": {
+        {
+           "id": "gallery",
             "name": "Art Gallery",
-            "type": "art",
+            "type": "ART",
             "description": "In case you missed it last time, here's a selection of submissions from previous parties.",
             "art": {
-				"title": "From left to right:",
-				"artist": "Daniel, Alex, Mihai, LaRen, Ramona",
-				"src": "./js/images/art/clarendon-retro.png"
-			},
+              "title": "From left to right:",
+              "artist": "Daniel, Alex, Mihai, LaRen, Ramona",
+              "src": "./js/images/art/clarendon-retro.png"
+            },
             "directions": {
                 "west": "library",
                 "south": "cloister"
@@ -380,9 +397,10 @@
             "doorTint": "purple",
             "backgroundImage": ""
         },
-        "cloister": {
+        {
+           "id": "cloister",
             "name": "A Humble Cloister",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 2,
             "description": "A secluded transit for two people",
             "directions": {
@@ -403,9 +421,10 @@
             "doorTint": "#4b0202",
             "backgroundImage": ""
         },
-        "gameRoom": {
+        {
+           "id": "gameRoom",
             "name": "Game Room",
-            "type": "jitsi",
+            "type": "JITSI",
             "description": "Ask Dan S if you want to play poker.",
             "directions": {
                 "north": "kitchen",
@@ -426,15 +445,17 @@
             "doorTint": "orange",
             "backgroundImage": "js/images/rooms/gameroom.jpg"
         },
-        "courtyard": {
+        {
+           "id": "courtyard",
             "name": "The Courtyard",
-            "type": "jitsi",
+            "type": "JITSI",
             "doorTint": "blue"
         },
-        "bye": {
+        {
+            "id": "bye",
             "name": "Bye",
-            "type": "redirect",
+            "type": "REDIRECT",
             "route": "/bye"
         }
-    }
+    ]
 }
