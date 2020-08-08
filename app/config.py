@@ -87,11 +87,9 @@ class Config:
     IMAGEMAP_PATHS = [
         os.path.join(overridedir, 'imagemaps.json')
     ]
-    # TODO: Need to separate these to put dev/prod in-between
-    CONFIG_PATHS = [
-        os.path.join(configdir, 'base.json'),
-        os.path.join(overridedir, 'config.json')
-    ]
+    BASE_CONFIG_PATHS = [os.path.join(configdir, 'base.json')]
+    OVERRIDE_CONFIG_PATHS = [os.path.join(overridedir, 'config.json')]
+    CONFIG_PATHS = BASE_CONFIG_PATHS + OVERRIDE_CONFIG_PATHS
 
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
@@ -143,12 +141,12 @@ class Config:
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
-    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(configdir, 'development.json')]
+    CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(configdir, 'development.json')] + Config.OVERRIDE_CONFIG_PATHS
 
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://waa:woo@jitsi-party-db:5432/jitsi'
-    CONFIG_PATHS = Config.CONFIG_PATHS + [os.path.join(configdir, 'production.json')]
+    CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(configdir, 'production.json')] + Config.OVERRIDE_CONFIG_PATHS
 
 
 config = {
