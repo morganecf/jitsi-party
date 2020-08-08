@@ -16,7 +16,8 @@ message Adventure {
     // Optional.
     AdventureConfig config = 2;
 
-    // TODO: deal with this
+    // The set of adventure rooms grouped together that share this config
+    // Required.
     repeated AdventureRoom rooms = 3;
 }
 
@@ -61,10 +62,9 @@ message Button {
     // Required.
     string text = 1;
 
-    // TODO: make sure this is flexible enough
     // The ID of the room or rooms to navigate on button click
     // Can be another adventure room or a regular room
-    // If a list is supplied, navigation will be chosen at random
+    // If multiple are supplied, navigation will be chosen at random
     // Wildcard "*" can be used to randomly choose from all rooms
     // Required.
     repeated string next_room = 2;

@@ -8,7 +8,7 @@
 syntax = "proto3"; // Must be proto3 to support JSON
 
 message Config {
-    // I'm.... actually not sure what this does. TBD
+    // TODO: What does this flag do?
     bool debug = 1;
 
     // The min number of visited rooms before a guest is shown the map
@@ -55,7 +55,9 @@ message Config {
     // Required if "avatarSelectionEnabled" is true in "welcomePage".
     repeated AvatarSet avatars = 10;
 
-    // TODO: What is this for?
+    // Set of additional avatars for specific situations
+    // Correspond to the user's choice of avatar
+    // Optional
     SpecialAvatarSets special_avatars = 11;
 
     // Options related to displaying the map

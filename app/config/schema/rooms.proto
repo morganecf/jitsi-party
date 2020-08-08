@@ -10,7 +10,6 @@ message Rooms {
     repeated Room rooms = 1;
 }
 
-// TODO: fill this out
 enum RoomType {
     UNKNOWN = 0;
     JITSI = 1;
