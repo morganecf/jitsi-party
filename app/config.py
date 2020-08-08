@@ -13,7 +13,7 @@ def get_json_dict(path):
         with open(path) as file:
             return json.load(file)
     except Exception as e:
-        print(e)
+        print("Error on path ", path, e)
         return dict()
 
 def make_merged_cfg(paths):
