@@ -24,7 +24,7 @@ def load_and_validate_rooms(paths):
     try:
         json_format.ParseDict(baseRooms, rooms_pb2.Rooms())
     except Exception as e:
-        print(e)
+        print("Error validating rooms: ", e)
     return {r['id']: r for r in baseRooms.get('rooms', [])}
 
 def load_and_validate_adventures(paths):
@@ -32,7 +32,7 @@ def load_and_validate_adventures(paths):
     try:
         json_format.ParseDict(baseAdventures, adventures_pb2.Adventures())
     except Exception as e:
-        print(e)
+        print("Error validating adventures: ", e)
     adventures = baseAdventures.get('adventures', [])
     for a in adventures:
         for r in a.pop('rooms'):
@@ -44,7 +44,7 @@ def load_and_validate_events(paths):
     try:
         json_format.ParseDict(baseEvents, events_pb2.Events())
     except Exception as e:
-        print(e)
+        print("Error validating events: ", e)
     return baseEvents.get('events', [])
 
 def load_and_validate_imagemaps(paths):
@@ -52,7 +52,7 @@ def load_and_validate_imagemaps(paths):
     try:
         json_format.ParseDict(baseImagemaps, imagemaps_pb2.ImageMaps())
     except Exception as e:
-        print(e)
+        print("Error validating imagemaps: ", e)
     return {i['id']: i for i in baseImagemaps.get('imagemaps', [])}
 
 def load_and_validate_config(paths):
@@ -60,7 +60,7 @@ def load_and_validate_config(paths):
     try:
         json_format.ParseDict(baseConfig, config_pb2.Config())
     except Exception as e:
-        print(e)
+        print("Error validating config: ", e)
     return baseConfig
 
 class Config:
