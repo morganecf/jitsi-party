@@ -13,26 +13,26 @@ message Config {
 
     // The min number of visited rooms before a guest is shown the map
     // Optional. Defaults to 0.
-    int32 mapUnlockThreshold = 2;
+    int32 map_unlock_threshold = 2;
 
     // What base URL to use for iframing Jitsi video calls
     // Can be overridden by "overrideJitsiServerUrlWithWindowHost" (see below)
     // Optional. If not set, "overrideJitsiServerUrlWithWindowHost" must be true.
-    string jitsiServerUrl = 3;
+    string jitsi_server_url = 3;
 
     // Whether to use the host site for Jitsi call URLs
     // Overrides "jitsiServerUrl" (see above)
     // Optional. Defaults to false.
-    bool overrideJitsiServerUrlWithWindowHost = 4;
+    bool override_jitsi_server_url_with_window_host = 4;
 
     // Passed to Jitsi when connecting to determine whether to use SSL.
     // Optional. Defaults to false.
-    bool noJitsiServerSSL = 5;
+    bool no_jitsi_server_SSL = 5;
 
     // Whether to store state locally in the user's browser.
     // If false, reloading the page will mean rejoining as a new user.
     // Optional. Defaults to false.
-    bool useLocalSessions = 6;
+    bool use_local_sessions = 6;
 
     // Options related to space moderators
     // Optional.
@@ -40,15 +40,15 @@ message Config {
 
     // ID of the room to place users when they first join
     // Required.
-    string startRoom = 8;
+    string start_room = 8;
 
     // Default display name in Jitsi video calls
     // Required.
-    string videoDisplayName = 15;
+    string video_display_name = 15;
 
     // Options related to username & avatar selection on the welcome page
     // Required.
-    WelcomePage welcomePage = 9;
+    WelcomePage welcome_page = 9;
 
     // Sets of avatar choices
     // Each AvatarSet should have the same number of images
@@ -56,7 +56,7 @@ message Config {
     repeated AvatarSet avatars = 10;
 
     // TODO: What is this for?
-    SpecialAvatarSets specialAvatars = 11;
+    SpecialAvatarSets special_avatars = 11;
 
     // Options related to displaying the map
     // Required.
@@ -68,42 +68,42 @@ message Config {
 
     // Number of server-side proxies in use (if unsure, probably 0)
     // Required.
-    int32 numProxies = 14;
+    int32 num_proxies = 14;
 }
 
 message Moderation {
     // Contact emails for moderators to receive moderation form submissions
     // TODO: Is this currently used?
     // Required (at least one).
-    repeated string moderatorEmails = 1;
+    repeated string moderator_emails = 1;
 
     // Moderator cell phone number to receive text of form submissions
     // Required.
-    string moderatorNumber = 2;
+    string moderator_number = 2;
 
     // Description shown to users when sending moderator messages
     // Required.
-    string formDescription = 3;
+    string form_description = 3;
 }
 
 message WelcomePage {
     // Whether to have users select an avatar, or use a default for everyone
     // Optional. Defaults to false.
-    bool avatarSelectionEnabled = 1;
+    bool avatar_selection_enabled = 1;
 
     // Image to show behind the welcome page
     // Optional.
-    string backgroundImagePath = 2;
+    string background_image_path = 2;
 
     // What text to show on the button to join the party
     // Required.
-    string enterSpaceButtonText = 3;
+    string enter_space_button_text = 3;
 
     // Required.
-    string avatarSelectionText = 4;
+    string avatar_selection_text = 4;
 
     // Optional.
-    string headerHtml = 5;
+    string header_html = 5;
 
     // Configuration for a sign-in iframe before joining the space.
     // Optional.
@@ -116,7 +116,7 @@ message Auth {
     string iframe = 1;
 
     // HTML to display with the login page
-    string descriptionHtml = 2;
+    string description_html = 2;
 }
 
 message AvatarSet {
@@ -138,7 +138,7 @@ message MapConfig {
     MapStats stats = 1;
 
     // TODO: What is this, and what values can it take?
-    string scaleBy = 2;
+    string scale_by = 2;
 }
 
 message MapStats {
@@ -166,19 +166,19 @@ message MapStats {
 
     // Total number of users currently online
     // Required.
-    BuiltInStat numberInHouse = 1;
+    BuiltInStat number_in_house = 1;
 
     // Number of users not actively in a room
     // Required.
-    BuiltInStat numberInHallways = 2;
+    BuiltInStat number_in_hallways = 2;
 
     // Number of users actively in a room
     // Required.
-    BuiltInStat numberInRooms = 3;
+    BuiltInStat number_in_rooms = 3;
 
     // Additional stats to display on the map
     // Optional.
-    repeated AdditionalStat additionalStats = 4;
+    repeated AdditionalStat additional_stats = 4;
 }
 
 message PokeConfig {
@@ -188,27 +188,27 @@ message PokeConfig {
 
     // Icon ID for the poke button
     // Required.
-    string fontAwesomeIcon = 2;
+    string font_awesome_icon = 2;
 
     // Text to display to a user when the user is poked
     // The string "{user}" will be replaced with the poking user
     // Required.
-    string fromText = 3;
+    string from_text = 3;
 
     // Text to display to a user when they poke another user
     // The string "{user}" will be replaced with the poked user
     // Required.
-    string toText = 4;
+    string to_text = 4;
 
     // Text to display when poking is unlocked (see "unlockAfterMinutes" below)
     // Required.
-    string unlockText = 5;
+    string unlock_text = 5;
 
     // Text to display when a user pokes themself.
     // Required.
-    string selfPoke = 6;
+    string self_poke = 6;
 
     // How long after joining that a user is allowed to use pokes
     // Required.
-    int32 unlockAfterMinutes = 7;
+    int32 unlock_after_minutes = 7;
 }

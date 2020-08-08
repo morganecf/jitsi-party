@@ -42,12 +42,12 @@ message Room {
 
     // Relative filepath to an image to display behind room content
     // Optional
-    string backgroundImage = 5;
+    string background_image = 5;
 
     // Color for the entrance door, formatted as a hex code or HTML color name
     // TODO: What is the default?
     // Optional
-    string doorTint = 6;
+    string door_tint = 6;
 
     // Maximum number of people who can be in the room at once
     // If not specified, defaults to infinite
@@ -66,7 +66,7 @@ message Room {
 
     // Whether to mute all participants when joining the call
     // Optional. Defaults to false.
-    bool muteRoom = 10;
+    bool mute_room = 10;
 
     // Whether to prevent users from entering this room
     // Optional. Defaults to false.
@@ -75,12 +75,12 @@ message Room {
     // IFRAME ROOMS ONLY
     // Options related to what to display in the iframe
     // Required for iframe rooms.
-    IframeOptions iframeOptions = 12;
+    IframeOptions iframe_options = 12;
 
     // IMAGEMAP ROOMS ONLY
     // ID for options to use for this room from the imagemaps config
     // Required for imagemap rooms.
-    string imageMapOptions = 13;
+    string image_map_options = 13;
 
     // ART ROOMS ONLY
     // Options related to the art to display
@@ -154,7 +154,7 @@ message IframeOptions {
 
     // Whether to remove the jitsi video and show the iframe only
     // Optional. Defaults to false.
-    bool hideVideo = 2;
+    bool hide_video = 2;
 }
 
 message ArtOptions {

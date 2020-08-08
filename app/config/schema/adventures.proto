@@ -28,11 +28,11 @@ message AdventureConfig {
 
         // Whether to automatically play the audio when entering this adventure
         // Optional. Defaults to false.
-        bool autoPlay = 2;
+        bool auto_play = 2;
 
         // Whether to show UI controls for playing and pausing the audio
         // Optional. Defaults to false.
-        bool hideControls = 3;
+        bool hide_controls = 3;
     }
 
     // Optional.
@@ -67,5 +67,5 @@ message Button {
     // If a list is supplied, navigation will be chosen at random
     // Wildcard "*" can be used to randomly choose from all rooms
     // Required.
-    repeated string nextRoom = 2;
+    repeated string next_room = 2;
 }
