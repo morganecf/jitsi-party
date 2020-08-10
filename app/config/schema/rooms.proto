@@ -44,8 +44,7 @@ message Room {
     string background_image = 5;
 
     // Color for the entrance door, formatted as a hex code or HTML color name
-    // TODO: What is the default?
-    // Optional
+    // Optional. Defaults to black.
     string door_tint = 6;
 
     // Maximum number of people who can be in the room at once
@@ -111,7 +110,6 @@ message NavDirections {
 }
 
 message MapDisplay {
-    // TODO: is this accurate?
     // X and Y coordinates of the top-left corner of the room
     // (0,0) is the top-left of the map
     // Required

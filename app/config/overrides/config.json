@@ -1,28 +1,28 @@
 {
-	"debug": true,
-	"mapUnlockThreshold": 0,
-	"useLocalSessions": false,
-	"startRoom": "cemetery",
-	"videoDisplayName": "Fellow Satanist",
-	"moderation": {
-		"moderatorEmails": [
-			"vhq@thesatanictemple.com"
-		],
-		"moderatorNumber": "+14802941991",
-		"formDescription": "Someone harshing your vibe? Need a moderator to look into it? We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
-	},
-	"welcomePage": {
-		"avatarSelectionEnabled": true,
-		"backgroundImagePath": "js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
-		"enterSpaceButtonText": "Enter",
-		"avatarSelectionText": "Select your sigil",
-		"headerHtml": "<div class='tst'><p>Welcome to the Inner Sanctum</p><h1>Satanic Temple Virtual HQ</h1>",
-		"auth": {
-			"iframe": "./js/iframes/TST_login.html",
-			"descriptionHtml": "<div>If you have a <a href='https://thesatanictemple.tv/'>TheSatanicTemple.TV</a> account, log in to party at the VHQ Estate for free!</div><div>If you do not have an account, use coupon code <b>VHQGROUP</b> to access the Estate for free.</div><div>If you have any trouble getting in, email us at <a href='mailto:vhq@thesatanictemple.com'>vhq@thesatanictemple.com</a> and we'll help you out.</div>"
-		}
-	},
-	"avatars": [
+    "debug": true,
+    "mapUnlockThreshold": 0,
+    "useLocalSessions": false,
+    "startRoom": "cemetery",
+    "videoDisplayName": "Fellow Satanist",
+    "moderation": {
+        "moderatorEmails": [
+            "vhq@thesatanictemple.com"
+        ],
+        "moderatorNumber": "+14802941991",
+        "formDescription": "Someone harshing your vibe? Need a moderator to look into it? We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+    },
+    "welcomePage": {
+        "avatarSelectionEnabled": true,
+        "backgroundImagePath": "js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+        "enterSpaceButtonText": "Enter",
+        "avatarSelectionText": "Select your sigil",
+        "headerHtml": "<div class='tst'><p>Welcome to the Inner Sanctum</p><h1>Satanic Temple Virtual HQ</h1>",
+        "auth": {
+            "iframe": "./js/iframes/TST_login.html",
+            "descriptionHtml": "<div>If you have a <a href='https://thesatanictemple.tv/'>TheSatanicTemple.TV</a> account, log in to party at the VHQ Estate for free!</div><div>If you do not have an account, use coupon code <b>VHQGROUP</b> to access the Estate for free.</div><div>If you have any trouble getting in, email us at <a href='mailto:vhq@thesatanictemple.com'>vhq@thesatanictemple.com</a> and we'll help you out.</div>"
+        }
+    },
+    "avatars": [
         {
             "images": [
                 "js/images/tst/sigils/Andromalius01.png",
@@ -47,8 +47,8 @@
                 "js/images/tst/sigils/Stolas01.png"
             ]
         }
-	],
-	"specialAvatars": {
+    ],
+    "specialAvatars": {
         "goodbye": {
             "images": [
                 "js/images/tst/sigils/Andromalius01.png",
@@ -58,44 +58,43 @@
             ]
         }
     },
-	"map": {
-		"stats": {
-			"numberInHouse": {
-				"display": true,
-				"text": "🌓 {count} at VHQ"
-			},
-			"numberInHallways": {
-				"display": true,
-				"text": "👻 {count} haunting the hallways"
-			},
-			"numberInRooms": {
-				"display": false,
-				"text": "📍 {count} exploring"
-			},
-			"additionalStats": [
-				{
-					"text": "🎦 {count} hatewatching",
-					"match": ["frontParlor"]
-        },
-        {
-					"text": "📕 {count} reading",
-					"match": ["library"]
-        },
-        {
-					"text": "🦇 {count} meeting animals",
-					"match": ["belfry", "aviary", "sleepingPorch", "den"]
+    "map": {
+        "stats": {
+            "numberInHouse": {
+                "display": true,
+                "text": "🌓 {count} at VHQ"
+            },
+            "numberInHallways": {
+                "display": true,
+                "text": "👻 {count} haunting the hallways"
+            },
+            "numberInRooms": {
+                "display": false,
+                "text": "📍 {count} exploring"
+            },
+            "additionalStats": [
+                {
+                    "text": "🎦 {count} hatewatching",
+                    "match": ["frontParlor"]
+                },
+                {
+                    "text": "📕 {count} reading",
+                    "match": ["library"]
+                },
+                {
+                    "text": "🦇 {count} meeting animals",
+                    "match": ["belfry", "aviary", "sleepingPorch", "den"]
+                }
+            ]
         }
-			]
-		},
-		"scaleBy": "opacity"
-	},
-	"poke": {
-		"text": "Hex someone",
-		"fontAwesomeIcon": "skull",
-		"fromText": "{user} has hexed you!",
-		"toText": "Hexed!",
-		"unlockText": "You have unlocked the ability to hex",
-		"selfPoke": "Ouch",
-		"unlockAfterMinutes": 0
-	}
+    },
+    "poke": {
+        "text": "Hex someone",
+        "fontAwesomeIcon": "skull",
+        "fromText": "{user} has hexed you!",
+        "toText": "Hexed!",
+        "unlockText": "You have unlocked the ability to hex",
+        "selfPoke": "Ouch",
+        "unlockAfterMinutes": 0
+    }
 }

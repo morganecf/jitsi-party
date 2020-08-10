@@ -8,7 +8,9 @@
 syntax = "proto3"; // Must be proto3 to support JSON
 
 message Config {
-    // TODO: What does this flag do?
+    // Developer mode flag to turn map on automatically
+    // May also do other developer-mode-things
+    // Optional. Defaults to false.
     bool debug = 1;
 
     // The min number of visited rooms before a guest is shown the map
@@ -75,7 +77,6 @@ message Config {
 
 message Moderation {
     // Contact emails for moderators to receive moderation form submissions
-    // TODO: Is this currently used?
     // Required (at least one).
     repeated string moderator_emails = 1;
 
@@ -138,9 +139,6 @@ message MapConfig {
     // Options related to the stats to display above the map
     // Required.
     MapStats stats = 1;
-
-    // TODO: What is this, and what values can it take?
-    string scale_by = 2;
 }
 
 message MapStats {

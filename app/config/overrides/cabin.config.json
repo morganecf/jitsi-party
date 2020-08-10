@@ -83,8 +83,7 @@
 					"match": ["bathroom"]
 				}
 			]
-		},
-		"scaleBy": "opacity"
+		}
 	},
 	"poke": {
 		"text": "Zap someone",
