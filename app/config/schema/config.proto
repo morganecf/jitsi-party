@@ -44,7 +44,8 @@ message Config {
     // Required.
     string start_room = 8;
 
-    // Default display name in Jitsi video calls
+    // Default display name for other users in Jitsi video calls
+    // Should be in singular form, e.g. "Fellow Attendee"
     // Required.
     string video_display_name = 15;
 
