@@ -12,6 +12,9 @@ def get_json_dict(path):
     try:
         with open(path) as file:
             return json.load(file)
+    except OSError:
+        # Failed to open the file, e.g. file not found
+        return dict()
     except Exception as e:
         print("Error on path ", path, e)
         return dict()
@@ -34,9 +37,9 @@ def load_and_validate_adventures(paths):
     except Exception as e:
         print("Error validating adventures: ", e)
     adventures = baseAdventures.get('adventures', [])
-    for a in adventures:
-        for r in a.pop('rooms'):
-            a[r['id']] = r
+    for adventure in adventures:
+        for room in adventure.pop('rooms'):
+            adventure[room['id']] = room
     return adventures
 
 def load_and_validate_events(paths):
