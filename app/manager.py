@@ -40,13 +40,9 @@ def create_db():
     # Create tables corresponding to models defined in models.py
     db.create_all()
 
-    # Load room definition
-    roomConfigPaths = [os.path.join(folder, 'rooms.json') for folder in [configdir, overridedir]]
-    roomConfig = load_and_validate_rooms(roomConfigPaths)
-
     # Create rooms and insert
     db_rooms = [Room(name=room_name, room_type=room['type'])
-                for room_name, room in roomConfig.items()]
+                for room_name, room in app.config['ROOMS'].items()]
     db.session.add_all(db_rooms)
     db.session.commit()
 
