@@ -1,97 +1,97 @@
 {
-	"debug": true,
-	"mapUnlockThreshold": 0,
-	"useLocalSessions": false,
-	"startRoom": "vestibule",
-	"videoDisplayName": "Fellow Clarendonite",
-	"welcomePage": {
-		"avatarSelectionEnabled": true,
-		"backgroundImagePath": "js/images/bauhaus_darker.jpg",
-		"enterSpaceButtonText": "Party!",
-		"avatarSelectionText": "Pick your puck",
-		"headerHtml": "<br/><div class='bauhaus'><p>This is indeed a disturbing universe.</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>"
-	},
-	"avatars": [
-		{
-			"images": [
-				"js/images/bauhausPuck/normal-blue.png",
-				"js/images/bauhausPuck/normal-pink.png",
-		    	"js/images/bauhausPuck/normal-black.png",
-		    	"js/images/bauhausPuck/normal-yellow.png"
-		    ]
-		  },
-	  	{
-	  		"images": [
-				"js/images/bauhausPuck/book-blue.png",
-				"js/images/bauhausPuck/book-pink.png",
-	    		"js/images/bauhausPuck/book-black.png",
-	    		"js/images/bauhausPuck/book-yellow.png"
-	    	]
-	  	},
-	  	{
-	  		"images": [
-				"js/images/bauhausPuck/whippit-blue.png",
-				"js/images/bauhausPuck/whippit-pink.png",
-	    		"js/images/bauhausPuck/whippit-black.png",
-	    		"js/images/bauhausPuck/whippit-yellow.png"
-	    	]
-	  	},
-	  	{
-	  		"images": [
-				"js/images/bauhausPuck/dancing-blue.png",
-				"js/images/bauhausPuck/dancing-pink.png",
-	    		"js/images/bauhausPuck/dancing-black.png",
-	    		"js/images/bauhausPuck/dancing-yellow.png"
-	    	]
-	  	},
-	  	{
-	  		"images": [
-				"js/images/bauhausPuck/trippy-blue.png",
-				"js/images/bauhausPuck/trippy-pink.png",
-	    		"js/images/bauhausPuck/trippy-black.png",
-	    		"js/images/bauhausPuck/trippy-yellow.png"
-	    	]
-	  	}
-	],
-	"specialAvatars": {
-	  "goodbye": {
-	  		"images": [
-				"js/images/bauhausPuck/thumb-pink.png",
-	    		"js/images/bauhausPuck/thumb-black.png",
-	    		"js/images/bauhausPuck/thumb-blue.png",
-	    		"js/images/bauhausPuck/thumb-yellow.png"
-	    	]
-	  	}
-	},
-	"map": {
-		"stats": {
-			"numberInHouse": {
-				"display": true,
-				"text": "🏚️ {count} in cabin"
-			},
-			"numberInHallways": {
-				"display": true,
-				"text": "🌓 {count} roaming"
-			},
-			"numberInRooms": {
-				"display": true,
-				"text": "🎉 {count} partying"
-			},
-			"additionalStats": [
-				{
-					"text": "🛁 {count} taking bathroom break",
-					"match": ["bathroom"]
-				}
-			]
-		}
-	},
-	"poke": {
-		"text": "Zap someone",
-		"fontAwesomeIcon": "bolt",
-		"fromText": "{user} has zapped you!",
-		"toText": "Zapped!",
-		"unlockText": "You have unlocked the ability to zap",
-		"selfPoke": "Ouch",
-		"unlockAfterMinutes": 20
-	}
+    "debug": true,
+    "mapUnlockThreshold": 0,
+    "useLocalSessions": false,
+    "startRoom": "vestibule",
+    "videoDisplayName": "Fellow Clarendonite",
+    "welcomePage": {
+        "avatarSelectionEnabled": true,
+        "backgroundImagePath": "js/images/bauhaus_darker.jpg",
+        "enterSpaceButtonText": "Party!",
+        "avatarSelectionText": "Pick your puck",
+        "headerHtml": "<br/><div class='bauhaus'><p>This is indeed a disturbing universe.</p><h1>Cabin Weekend is Dead. Long Live Cabin Fever.</h1>"
+    },
+    "avatars": [
+        {
+            "images": [
+                "js/images/bauhausPuck/normal-blue.png",
+                "js/images/bauhausPuck/normal-pink.png",
+                "js/images/bauhausPuck/normal-black.png",
+                "js/images/bauhausPuck/normal-yellow.png"
+            ]
+          },
+        {
+            "images": [
+                "js/images/bauhausPuck/book-blue.png",
+                "js/images/bauhausPuck/book-pink.png",
+                "js/images/bauhausPuck/book-black.png",
+                "js/images/bauhausPuck/book-yellow.png"
+            ]
+        },
+        {
+            "images": [
+                "js/images/bauhausPuck/whippit-blue.png",
+                "js/images/bauhausPuck/whippit-pink.png",
+                "js/images/bauhausPuck/whippit-black.png",
+                "js/images/bauhausPuck/whippit-yellow.png"
+            ]
+        },
+        {
+            "images": [
+                "js/images/bauhausPuck/dancing-blue.png",
+                "js/images/bauhausPuck/dancing-pink.png",
+                "js/images/bauhausPuck/dancing-black.png",
+                "js/images/bauhausPuck/dancing-yellow.png"
+            ]
+        },
+        {
+            "images": [
+                "js/images/bauhausPuck/trippy-blue.png",
+                "js/images/bauhausPuck/trippy-pink.png",
+                "js/images/bauhausPuck/trippy-black.png",
+                "js/images/bauhausPuck/trippy-yellow.png"
+            ]
+        }
+    ],
+    "specialAvatars": {
+      "goodbye": {
+            "images": [
+                "js/images/bauhausPuck/thumb-pink.png",
+                "js/images/bauhausPuck/thumb-black.png",
+                "js/images/bauhausPuck/thumb-blue.png",
+                "js/images/bauhausPuck/thumb-yellow.png"
+            ]
+        }
+    },
+    "map": {
+        "stats": {
+            "numberInHouse": {
+                "display": true,
+                "text": "🏚️ {count} in cabin"
+            },
+            "numberInHallways": {
+                "display": true,
+                "text": "🌓 {count} roaming"
+            },
+            "numberInRooms": {
+                "display": true,
+                "text": "🎉 {count} partying"
+            },
+            "additionalStats": [
+                {
+                    "text": "🛁 {count} taking bathroom break",
+                    "match": ["bathroom"]
+                }
+            ]
+        }
+    },
+    "poke": {
+        "text": "Zap someone",
+        "fontAwesomeIcon": "bolt",
+        "fromText": "{user} has zapped you!",
+        "toText": "Zapped!",
+        "unlockText": "You have unlocked the ability to zap",
+        "selfPoke": "Ouch",
+        "unlockAfterMinutes": 20
+    }
 }
