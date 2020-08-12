@@ -1,6 +1,7 @@
 {
-    "imagemaps": {
-        "library-map": {
+    "imagemaps": [
+        {
+            "id": "library-map",
             "img": "js/images/rooms/satanic-library.jpg",
             "areas": [
                 {
@@ -39,5 +40,5 @@
                 }
             ]
         }
-    }
+    ]
 }

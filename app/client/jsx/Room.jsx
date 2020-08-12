@@ -35,17 +35,17 @@ class Room extends Component {
 
         // These are the room types for which we show the map button
         this.roomTypesWithMap = {
-            jitsi: true,
-            iframe: true,
-            content: true,
-            imagemap: true
+            JITSI: true,
+            IFRAME: true,
+            CONTENT: true,
+            IMAGEMAP: true
         }
 
         // These are the room types which require doors
         this.roomTypesWithDoors = {
-            jitsi: true,
-            iframe: true,
-            imagemap: true
+            JITSI: true,
+            IFRAME: true,
+            IMAGEMAP: true
         }
 
         this.state = {
@@ -83,11 +83,11 @@ class Room extends Component {
             muteRoom: roomData.muteRoom,
         }
         return {
-            art: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
-            jitsi: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
-            iframe: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
-            adventure: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
-            imagemap: <ImageMapRoom imageMapOptions={roomData.imageMapOptions}></ImageMapRoom>
+            ART: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
+            JITSI: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
+            IFRAME: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
+            ADVENTURE: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
+            IMAGEMAP: <ImageMapRoom imageMapOptions={roomData.imageMapOptions}></ImageMapRoom>
         }[roomData.type]
     }
 
@@ -218,7 +218,7 @@ class Room extends Component {
 
         const room = this.props.rooms[this.state.room]
 
-        if (room.type === 'redirect') {
+        if (room.type === 'REDIRECT') {
             this.socketApi.enterRoom(this.props.user, this.state.room)
             return <Redirect to={room.route} />
         }
@@ -246,7 +246,7 @@ class Room extends Component {
                     onClick={this.onSwitchRoom.bind(this)}
                     showMapButton={mapState.mapVisible}
                     showMapTooltip={mapState.showMapTooltip}
-                    hideSettings={room.type === 'adventure'}
+                    hideSettings={room.type === 'ADVENTURE'}
                     handleOpenModal={this.handleModalChange.bind(this)}></Navigation>
                 <Beforeunload onBeforeunload={this.handleBeforeUnload.bind(this)} />
                 <Modal

@@ -1,8 +1,9 @@
 {
-    "rooms": {
-        "kitchen": {
+    "rooms": [
+        {
+            "id": "kitchen",
             "name": "Kitchen",
-            "type": "iframe",
+            "type": "IFRAME",
             "capacity": 10,
             "doorTint": "#00D089",
             "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels009-1green.2jpg.jpg",
@@ -27,9 +28,10 @@
                 }
             }
         },
-        "powderRoom": {
+        {
+            "id": "powderRoom",
             "name": "Powder Room",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 3,
             "doorTint": "pink",
             "description": "Freshen up with a few friends.",
@@ -47,9 +49,10 @@
                 }
             }
         },
-        "grandBallroom": {
+        {
+            "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "iframe",
+            "type": "IFRAME",
             "capacity": 10,
             "backgroundImage": "./js/images/tst/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
@@ -70,9 +73,10 @@
                 }
             }
         },
-        "grandStaircase": {
+        {
+            "id": "grandStaircase",
             "name": "Grand Staircase",
-            "type": "imagemap",
+            "type": "IMAGEMAP",
             "imageMapOptions": "grand-staircase-map",
             "description": "Try interacting with the staircase.",
             "directions": {
@@ -93,9 +97,10 @@
             },
             "doorTint": "#00D089"
         },
-        "frontParlor": {
+        {
+            "id": "frontParlor",
             "name": "Front Parlor",
-            "type": "iframe",
+            "type": "IFRAME",
             "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
                 "src": "./js/iframes/TST_chat2.html",
@@ -120,9 +125,10 @@
             },
             "doorTint": "#00D089"
         },
-        "teaRoom": {
+        {
+            "id": "teaRoom",
             "name": "Tea Room",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 10,
             "backgroundImage": "js/images/tst/backgrounds/tearoom.jpg",
             "description": "Sugar cubes are on the window sill. Have as many as you'd like.",
@@ -144,9 +150,10 @@
             },
             "doorTint": "#00D089"
         },
-        "den": {
+        {
+            "id": "den",
             "name": "The Den",
-            "type": "iframe",
+            "type": "IFRAME",
             "capacity": 10,
             "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels005green.jpg",
             "iframeOptions": {
@@ -169,9 +176,10 @@
             },
             "doorTint": "orange"
         },
-        "backParlor": {
+        {
+            "id": "backParlor",
             "name": "Back Parlor",
-            "type": "iframe",
+            "type": "IFRAME",
             "capacity": 10,
             "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels003green.jpg",
             "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
@@ -194,9 +202,10 @@
             },
             "doorTint": "#FF5938"
         },
-        "ritualChamber": {
+        {
+            "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 10,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels004green.jpg",
@@ -214,9 +223,10 @@
             },
             "doorTint": "#00D089"
         },
-        "belfry": {
+        {
+            "id": "belfry",
             "name": "Belfry",
-            "type": "iframe",
+            "type": "IFRAME",
             "capacity": 10,
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Learn more about their work at batworld.org",
             "iframeOptions": {
@@ -236,11 +246,12 @@
             },
             "doorTint": "blue"
         },
-        "sleepingPorch": {
+        {
+            "id": "sleepingPorch",
             "name": "Sleeping Porch",
             "capacity": 10,
             "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
-            "type": "iframe",
+            "type": "IFRAME",
             "backgroundImage": "./js/images/tst/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/tyEq9pxjRV0"
@@ -261,9 +272,10 @@
             },
             "doorTint": "blue"
         },
-        "aviary": {
+        {
+            "id": "aviary",
             "name": "Aviary",
-            "type": "iframe",
+            "type": "IFRAME",
             "capacity": 10,
             "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
@@ -284,9 +296,10 @@
             },
             "doorTint": "orange"
         },
-        "library": {
+        {
+            "id": "library",
             "name": "Library",
-            "type": "imagemap",
+            "type": "IMAGEMAP",
             "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
             "directions": {
                 "south": "grandStaircase",
@@ -309,9 +322,10 @@
             },
             "doorTint": "#00D089"
         },
-        "boudoir": {
+        {
+            "id": "boudoir",
             "name": "Boudoir",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 3,
             "description": "An intimate space for a trio of friends to get ready, together.",
             "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
@@ -329,9 +343,10 @@
             },
             "doorTint": "#990000"
         },
-        "staircase": {
+        {
+            "id": "staircase",
             "name": "Staircase",
-            "type": "imagemap",
+            "type": "IMAGEMAP",
             "imageMapOptions": "staircase-map",
             "description": "What a peculiar painting! It's askew and glowing...",
             "directions": {
@@ -350,9 +365,10 @@
             },
             "doorTint": "#00D089"
         },
-        "tstHQ": {
+        {
+            "id": "tstHQ",
             "name": "TST Virtual HQ Offices",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 2,
             "locked": true,
             "description": "Office Hours To Be Determined. This door is locked until we finish remodeling. Thank you for your patience.",
@@ -372,9 +388,10 @@
             },
             "doorTint": "black"
         },
-        "garden": {
+        {
+            "id": "garden",
             "name": "Garden",
-            "type": "imagemap",
+            "type": "IMAGEMAP",
             "imageMapOptions": "garden-map",
             "description": "Nightshades, blue lady hellebores, queen of the night tulips and black velvet petunias. What happens if you hover?",
             "directions": {
@@ -393,9 +410,10 @@
             },
             "doorTint": "purple"
         },
-        "cemetery": {
+        {
+            "id": "cemetery",
             "name": "Cemetery",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 10,
             "description": "There's room for all of us to rest here",
             "backgroundImage": "./js/images/tst/backgrounds/cemeterygreen.jpg",
@@ -413,9 +431,10 @@
             },
             "doorTint": "white"
         },
-        "trapDoor": {
+        {
+            "id": "trapDoor",
             "name": "Trap Door",
-            "type": "iframe",
+            "type": "IFRAME",
             "capacity": 2,
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/5zcsab0-k7s"
@@ -425,9 +444,10 @@
             },
             "doorTint": "black"
         },
-        "secretTunnels": {
+        {
+            "id": "secretTunnels",
             "name": "Secret Tunnels",
-            "type": "imagemap",
+            "type": "IMAGEMAP",
             "imageMapOptions": "secret-tunnel-map",
             "description": "Try interacting with the catacombs.",
             "directions": {
@@ -436,9 +456,10 @@
             },
             "doorTint": "#00D089"
         },
-        "crematorium": {
+        {
+            "id": "crematorium",
             "name": "Crematorium",
-            "type": "jitsi",
+            "type": "JITSI",
             "capacity": 10,
             "doorTint": "white",
             "backgroundImage": "./js/images/tst/backgrounds/crematorium.jpg",
@@ -446,5 +467,5 @@
                 "west": "secretTunnels"
             }
         }
-    }
+    ]
 }

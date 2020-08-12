@@ -150,9 +150,13 @@ dist
 .vscode-test
 
 # yarn v2
-
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
 .pnp.*
+
+# Windows thumbnail files
 *.db
+
+# Generated python files for proto schemas
+app/jitsi/schema/*pb2.py

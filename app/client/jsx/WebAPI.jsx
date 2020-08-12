@@ -61,7 +61,7 @@ export class HttpApi {
             const response = await axios.get(request)
             const { rooms, events } = response.data
             Object.values(rooms).forEach(room => {
-                if (room.type === 'adventure') {
+                if (room.type === 'ADVENTURE') {
                     createAdventureActions(room, rooms)
                 }
             })

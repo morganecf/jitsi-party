@@ -1,8 +1,9 @@
 {
- 	"rooms": {
-		"vestibule": {
+ 	"rooms": [
+		{
+			"id": "vestibule",
 			"name": "Vestibule",
-			"type": "jitsi",
+			"type": "JITSI",
 			"description": "Welcome!",
 			"backgroundImage": "js/images/rooms/vestibule.png",
 			"directions": {
@@ -22,9 +23,10 @@
 				}
 			}
 		},
-		"closet": {
+		{
+			"id": "closet",
 			"name": "Closet",
-			"type": "jitsi",
+			"type": "JITSI",
 			"capacity": 2,
 			"backgroundImage": "js/images/rooms/closet.png",
 			"description": "A quiet, cozy closet. Shhh.",
@@ -41,9 +43,10 @@
 				}
 			}
 		},
-		"livingRoom": {
+		{
+			"id": "livingRoom",
 			"name": "Living Room",
-			"type": "jitsi",
+			"type": "JITSI",
 			"backgroundImage": "js/images/rooms/livingroom.jpg",
 			"directions": {
 				"south": "vestibule"
@@ -62,9 +65,10 @@
 			},
 			"doorTint": "#FF5938"
 		},
-		"gameRoom": {
+		{
+			"id": "gameRoom",
 			"name": "Game Room",
-			"type": "jitsi",
+			"type": "JITSI",
 			"directions": {
 				"west": "vestibule"
 			},
@@ -82,5 +86,5 @@
 			"doorTint": "orange",
 			"backgroundImage": "js/images/rooms/gameroom.jpg"
 		}
-	}
+	]
 }

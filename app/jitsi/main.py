@@ -26,13 +26,13 @@ def get_config():
     # Link adventures to rooms
     rooms = copy.deepcopy(current_app.config['ROOMS'])
     adventures = copy.deepcopy(current_app.config['ADVENTURES'])
-    for adventure in adventures.values():
+    for adventure in adventures:
         config = adventure.get('config', {})
         for node_name, adventure_node in adventure.items():
             if node_name != 'config':
                 rooms[node_name] = {
                     'name': adventure_node.get('name', ''),
-                    'type': 'adventure',
+                    'type': 'ADVENTURE',
                     'text': adventure_node['text'],
                     'buttons': adventure_node['buttons'],
                     'audio': config.get('audio')
@@ -48,7 +48,7 @@ def get_config():
     image_maps = current_app.config['IMAGE_MAPS']
     for room in rooms.values():
         image_map = room.get('imageMapOptions')
-        if room['type'] == 'imagemap' and image_map in image_maps:
+        if room['type'] == 'IMAGEMAP' and image_map in image_maps:
             room['imageMapOptions'] = image_maps[image_map]
     config = {
         'rooms': rooms,
