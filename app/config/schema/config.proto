@@ -1,0 +1,215 @@
+/*
+ * This file defines and documents the format for config.json and other
+ * top-level configuration (base.json, development.json, production.json)
+ *
+ * Proto doc: https://developers.google.com/protocol-buffers/
+ */
+
+syntax = "proto3"; // Must be proto3 to support JSON
+
+message Config {
+    // Developer mode flag to turn map on automatically
+    // May also do other developer-mode-things
+    // Optional. Defaults to false.
+    bool debug = 1;
+
+    // The min number of visited rooms before a guest is shown the map
+    // Optional. Defaults to 0.
+    int32 map_unlock_threshold = 2;
+
+    // What base URL to use for iframing Jitsi video calls
+    // Can be overridden by "overrideJitsiServerUrlWithWindowHost" (see below)
+    // Optional. If not set, "overrideJitsiServerUrlWithWindowHost" must be true.
+    string jitsi_server_url = 3;
+
+    // Whether to use the host site for Jitsi call URLs
+    // Overrides "jitsiServerUrl" (see above)
+    // Optional. Defaults to false.
+    bool override_jitsi_server_url_with_window_host = 4;
+
+    // Passed to Jitsi when connecting to determine whether to use SSL.
+    // Optional. Defaults to false.
+    bool no_jitsi_server_SSL = 5;
+
+    // Whether to store state locally in the user's browser.
+    // If false, reloading the page will mean rejoining as a new user.
+    // Optional. Defaults to false.
+    bool use_local_sessions = 6;
+
+    // Options related to space moderators
+    // Optional.
+    Moderation moderation = 7;
+
+    // ID of the room to place users when they first join
+    // Required.
+    string start_room = 8;
+
+    // Default display name for other users in Jitsi video calls
+    // Should be in singular form, e.g. "Fellow Attendee"
+    // Required.
+    string video_display_name = 15;
+
+    // Options related to username & avatar selection on the welcome page
+    // Required.
+    WelcomePage welcome_page = 9;
+
+    // Sets of avatar choices
+    // Each AvatarSet should have the same number of images
+    // Required if "avatarSelectionEnabled" is true in "welcomePage".
+    repeated AvatarSet avatars = 10;
+
+    // Set of additional avatars for specific situations
+    // Correspond to the user's choice of avatar
+    // Optional
+    SpecialAvatarSets special_avatars = 11;
+
+    // Options related to displaying the map
+    // Required.
+    MapConfig map = 12;
+
+    // Options related to the poking feature
+    // Optional. If not provided, poking is turned off.
+    PokeConfig poke = 13;
+
+    // Number of server-side proxies in use (if unsure, probably 0)
+    // Required.
+    int32 num_proxies = 14;
+}
+
+message Moderation {
+    // Contact emails for moderators to receive moderation form submissions
+    // Required (at least one).
+    repeated string moderator_emails = 1;
+
+    // Moderator cell phone number to receive text of form submissions
+    // Required.
+    string moderator_number = 2;
+
+    // Description shown to users when sending moderator messages
+    // Required.
+    string form_description = 3;
+}
+
+message WelcomePage {
+    // Whether to have users select an avatar, or use a default for everyone
+    // Optional. Defaults to false.
+    bool avatar_selection_enabled = 1;
+
+    // Image to show behind the welcome page
+    // Optional.
+    string background_image_path = 2;
+
+    // What text to show on the button to join the party
+    // Required.
+    string enter_space_button_text = 3;
+
+    // Required.
+    string avatar_selection_text = 4;
+
+    // Optional.
+    string header_html = 5;
+
+    // Configuration for a sign-in iframe before joining the space.
+    // Optional.
+    Auth auth = 6;
+}
+
+message Auth {
+    // Path to the login page to iframe
+    // Optional.
+    string iframe = 1;
+
+    // HTML to display with the login page
+    string description_html = 2;
+}
+
+message AvatarSet {
+    // Paths to avatar images
+    // Required.
+    repeated string images = 1;
+}
+
+message SpecialAvatarSets {
+    // The set of avatars to show when a user exits
+    // Should be the same size as the regular avatar sets
+    // Optional.
+    AvatarSet goodbye = 1;
+}
+
+message MapConfig {
+    // Options related to the stats to display above the map
+    // Required.
+    MapStats stats = 1;
+}
+
+message MapStats {
+    message BuiltInStat {
+        // Whether to show this stat
+        // Required.
+        bool display = 1;
+
+        // Descriptive text for this stat
+        // The string "{count}" will be replaced with the applicable number
+        // Required. 
+        string text = 2;
+    }
+
+    message AdditionalStat {
+        // Descriptive text for this stat
+        // The string "{count}" will be replaced with the applicable number
+        // Required. 
+        string text = 1;
+
+        // A list of room IDs. Users in these rooms will be included in the count
+        // Required.
+        repeated string match = 2;
+    }
+
+    // Total number of users currently online
+    // Required.
+    BuiltInStat number_in_house = 1;
+
+    // Number of users not actively in a room
+    // Required.
+    BuiltInStat number_in_hallways = 2;
+
+    // Number of users actively in a room
+    // Required.
+    BuiltInStat number_in_rooms = 3;
+
+    // Additional stats to display on the map
+    // Optional.
+    repeated AdditionalStat additional_stats = 4;
+}
+
+message PokeConfig {
+    // Header text for the poke dialog
+    // Required.
+    string text = 1;
+
+    // Icon ID for the poke button
+    // Required.
+    string font_awesome_icon = 2;
+
+    // Text to display to a user when the user is poked
+    // The string "{user}" will be replaced with the poking user
+    // Required.
+    string from_text = 3;
+
+    // Text to display to a user when they poke another user
+    // The string "{user}" will be replaced with the poked user
+    // Required.
+    string to_text = 4;
+
+    // Text to display when poking is unlocked (see "unlockAfterMinutes" below)
+    // Required.
+    string unlock_text = 5;
+
+    // Text to display when a user pokes themself.
+    // Required.
+    string self_poke = 6;
+
+    // How long after joining that a user is allowed to use pokes
+    // Required.
+    int32 unlock_after_minutes = 7;
+}

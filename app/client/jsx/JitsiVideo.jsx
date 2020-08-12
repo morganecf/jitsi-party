@@ -111,7 +111,7 @@ class JitsiVideo extends Component {
                 this.makeJitsiTransparent()
                 this.hideSpinner()
                 const { type, color } = this.props.jitsiData.avatar
-                const avatarUrl = Config.baseUrl + Config.avatars[type][color]
+                const avatarUrl = Config.baseUrl + Config.avatars[type].images[color]
                 const commands = {
                     displayName: this.props.jitsiData.displayName,
                     avatarUrl

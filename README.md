@@ -12,7 +12,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Make sure you have node/npm installed
-brew install node
+brew install node # on Linux: `apt install npm`
+
+# Make sure you have protoc installed
+brew install protobuf # on Linux: `apt install protobuf-compiler`
 
 # Install client dependencies
 cd app/client/
@@ -25,8 +28,12 @@ npm install
 source venv/bin/activate
 cd app/
 
-# Export env variables. Use setup_prod.sh for prod
+# Export env variables.
 source setup.sh
+
+# Build proto schemas for config files
+# Equivalent to `make schema`. Run `make clean` to clean
+make
 
 # Create db
 flask create-db

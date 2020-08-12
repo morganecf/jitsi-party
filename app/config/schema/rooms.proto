@@ -1,0 +1,169 @@
+/*
+ * This file defines and documents the format for rooms.json
+ *
+ * Proto doc: https://developers.google.com/protocol-buffers/
+ */
+
+syntax = "proto3"; // Must be proto3 to support JSON
+
+message Rooms {
+    repeated Room rooms = 1;
+}
+
+enum RoomType {
+    UNKNOWN = 0;
+    JITSI = 1;
+    IFRAME = 2;
+    CONTENT = 3;
+    IMAGEMAP = 4;
+    ART = 5;
+    REDIRECT = 6;
+}
+
+message Room {
+    // Unique identifier for the room within this house
+    // Used for defining paths between rooms and for creating Jitsi videos
+    // In loaded config, can be used to key into the rooms dict
+    // Required
+    string id = 1;
+
+    // User-facing display name of the room
+    // Required
+    string name = 2;
+
+    // What this room will contain
+    // Required
+    RoomType type = 3;
+
+    // User-facing description/flavor-text
+    // Optional
+    string description = 4;
+
+    // Relative filepath to an image to display behind room content
+    // Optional
+    string background_image = 5;
+
+    // Color for the entrance door, formatted as a hex code or HTML color name
+    // Optional. Defaults to black.
+    string door_tint = 6;
+
+    // Maximum number of people who can be in the room at once
+    // If not specified, defaults to infinite
+    // Optional
+    int32 capacity = 7;
+
+    // Defines the connecting rooms in the navigation
+    // Does NOT define the map display (see "map" below)
+    // Optional
+    NavDirections directions = 8;
+
+    // Defines the size, position, and doors shown on the map
+    // Does NOT define the connecting rooms (see "directions" above)
+    // Optional
+    MapDisplay map = 9;
+
+    // Whether to mute all participants when joining the call
+    // Optional. Defaults to false.
+    bool mute_room = 10;
+
+    // Whether to prevent users from entering this room
+    // Optional. Defaults to false.
+    bool locked = 11;
+
+    // IFRAME ROOMS ONLY
+    // Options related to what to display in the iframe
+    // Required for iframe rooms.
+    IframeOptions iframe_options = 12;
+
+    // IMAGEMAP ROOMS ONLY
+    // ID for options to use for this room from the imagemaps config
+    // Required for imagemap rooms.
+    string image_map_options = 13;
+
+    // ART ROOMS ONLY
+    // Options related to the art to display
+    // Required for art rooms.
+    ArtOptions art = 14;
+
+    // REDIRECT ROOMS ONLY
+    // The page to redirect to
+    // Required for redirect rooms.
+    string route = 15;
+}
+
+message NavDirections {
+    // ID of the room to the north
+    // Optional
+    string north = 1;
+
+    // ID of the room to the east
+    // Optional
+    string east = 2;
+
+    // ID of the room to the south
+    // Optional
+    string south = 3;
+
+    // ID of the room to the west
+    // Optional
+    string west = 4;
+}
+
+message MapDisplay {
+    // X and Y coordinates of the top-left corner of the room
+    // (0,0) is the top-left of the map
+    // Required
+    int32 x = 1;
+    int32 y = 2;
+
+    // Width and height of the room as displayed on the map
+    // Required
+    int32 width = 3;
+    int32 height = 4;
+
+    // Where to show doorways on the map
+    // Optional
+    DisplayDoors doors = 5;
+}
+
+message DisplayDoors {
+    // horizontal (X) coordinate of the northern door on the map
+    // Optional
+    int32 north = 1;
+
+    // vertical (Y) coordinate of the eastern door on the map
+    // Optional
+    int32 east = 2;
+
+    // horizontal (X) coordinate of the southern door on the map
+    // Optional
+    int32 south = 3;
+
+    // vertical (Y) coordinate of the western door on the map
+    // Optional
+    int32 west = 4;
+}
+
+message IframeOptions {
+    // source URL for the iframe
+    // Required.
+    string src = 1;
+
+    // Whether to remove the jitsi video and show the iframe only
+    // Optional. Defaults to false.
+    bool hide_video = 2;
+}
+
+message ArtOptions {
+    // Title to display
+    // Optional.
+    string title = 1;
+
+    // Artist to display
+    // Optional.
+    string artist = 2;
+
+    // Path to the file for the art
+    // Required.
+    string src = 3;
+}

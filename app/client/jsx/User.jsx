@@ -7,7 +7,7 @@ export default ({ user, anonymize, children }) => {
     const username = anonymize ? 'anonymous' : user.username
     return (
         <div className="room-user">
-            <img className={imgClass} src={Config.avatars[type][color]}></img>
+            <img className={imgClass} src={Config.avatars[type].images[color]}></img>
             <div>{username}</div>
             {children}
         </div>

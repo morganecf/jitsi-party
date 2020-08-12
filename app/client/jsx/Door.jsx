@@ -35,7 +35,7 @@ class Door extends Component {
             ) :
             null
 
-        const tintStyle = this.props.tintColor ? { background: this.props.tintColor } : {}
+        const tintStyle = this.props.tintColor ? { background: this.props.tintColor } : { background: "black" }
         const isAtCapacity = this.props.room.capacity && this.props.users.length >= this.props.room.capacity
         const buttonText = isAtCapacity ? 'Room is full' : `Enter ${this.props.room.name}`
 

@@ -1,6 +1,7 @@
 {
-    "imagemaps": {
-        "secret-tunnel-map": {
+    "imagemaps": [
+        {
+            "id": "secret-tunnel-map",
             "img": "js/images/tst/imagemap-images/secret tunnel.jpg",
             "areas": [
                 {
@@ -27,7 +28,8 @@
                 }
             ]
         },
-        "garden-map": {
+        {
+            "id": "garden-map",
             "img": "js/images/tst/imagemap-images/garden.jpg",
             "areas": [
                 {
@@ -43,7 +45,8 @@
                 }
             ]
         },
-        "grand-staircase-map": {
+        {
+            "id": "grand-staircase-map",
             "img": "js/images/tst/imagemap-images/staircase1.jpg",
             "areas": [
                 {
@@ -59,7 +62,8 @@
                 }
             ]
         },
-        "staircase-map": {
+        {
+            "id": "staircase-map",
             "img": "js/images/tst/imagemap-images/staircase 2.jpg",
             "areas": [
                 {
@@ -75,7 +79,8 @@
                 }
             ]
         },
-        "satanic-library-map": {
+        {
+            "id": "satanic-library-map",
             "img": "js/images/tst/backgrounds/Library.jpg",
             "areas": [
                 {
@@ -346,5 +351,5 @@
                 }
             ]
         }
-    }
+    ]
 }

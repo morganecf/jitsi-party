@@ -1,0 +1,39 @@
+/*
+ * This file defines and documents the format for events.json
+ *
+ * Proto doc: https://developers.google.com/protocol-buffers/
+ */
+
+syntax = "proto3"; // Must be proto3 to support JSON
+
+message Events {
+    // Scheduled events in different rooms
+    // Optional.
+    repeated Event events = 1;
+}
+
+message Event {
+    // Name of the event
+    // Required.
+    string name = 1;
+
+    // Event description
+    // Required.
+    string description = 2;
+
+    // ID of the room the event takes place in
+    // Required.
+    string room = 3;
+
+    // ISO-8601 timestamp for when this event starts
+    // Required.
+    string start = 4;
+
+    // ISO-8601 timestamp for when this event ends
+    // Required.
+    string end = 5;
+
+    // Path to an image to show for the event
+    // Required.
+    string image = 6;
+}
