@@ -44,40 +44,40 @@
             "name": "Bats in the Belfry",
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas that cares for these sweethearts. Learn more about their work at batworld.org",
             "room": "belfry",
-            "start": "2020-07-25T19:00:00-04:00",
-            "end": "2020-07-26T01:00:00-04:00",
+            "start": "2020-08-20T19:00:00-04:00",
+            "end": "2020-08-21T01:00:00-04:00",
             "image": "js/images/tst/events/bats.jpg"
         },
         {
             "name": "Sleeping Porch",
             "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
             "room": "sleepingPorch",
-            "start": "2020-07-25T19:00:00-04:00",
-            "end": "2020-07-26T01:00:00-04:00",
+            "start": "2020-08-20T19:00:00-04:00",
+            "end": "2020-08-21T01:00:00-04:00",
             "image": "js/images/tst/events/cats.jpg"
         },
         {
             "name": "Parrots in the Aviary",
             "description": "Get to know some amazing parrots in the Aviary, broadcasting live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
             "room": "aviary",
-            "start": "2020-07-25T19:00:00-04:00",
-            "end": "2020-07-26T01:00:00-04:00",
+            "start": "2020-08-20T19:00:00-04:00",
+            "end": "2020-08-21T01:00:00-04:00",
             "image": "js/images/tst/events/parrots.jpg"
         },
         {
             "name": "Den Pups",
             "description": "Puppies are afoot in The Den, live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
             "room": "den",
-            "start": "2020-07-25T19:00:00-04:00",
-            "end": "2020-07-26T01:00:00-04:00",
+            "start": "2020-08-20T19:00:00-04:00",
+            "end": "2020-08-21T01:00:00-04:00",
             "image": "js/images/tst/events/dogs.jpg"
         },
         {
             "name": "Library",
             "description": "The Satanic Panic Archive Library is open all night. Many of these texts exist nowhere else in the world.",
             "room": "library",
-            "start": "2020-07-25T19:00:00-04:00",
-            "end": "2020-07-26T01:00:00-04:00",
+            "start": "2020-08-20T19:00:00-04:00",
+            "end": "2020-08-21T01:00:00-04:00",
             "image": "js/images/tst/events/library.jpg"
         }
     ]
