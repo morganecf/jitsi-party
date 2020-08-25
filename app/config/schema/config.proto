@@ -82,7 +82,7 @@ message Config {
     // Overall start and stop times for the space
     // Users will be unable to join the jitsi-party outside of these time bounds
     // Optional. If not provided, event defaults to open.
-    EventTimeConfig event_times = 15;
+    EventTimeConfig event_times = 16;
 }
 
 message Moderation {
