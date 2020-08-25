@@ -58,7 +58,31 @@ class Welcome extends Component {
         this.setState({ authenticated: true })
     }
 
+    isOpen() {
+        if (!Config.eventTimes) return true;
+
+        const now = new Date()
+        if (Config.eventTimes.start) {
+            const start = Date.parse(Config.eventTimes.start)
+            if (now < start) return false;
+        }
+        if (Config.eventTimes.end) {
+            const end = Date.parse(Config.eventTimes.end)
+            if (now > end) return false;
+        }
+
+        return true
+    }
+
     render() {
+        if (!isOpen()) {
+            return (
+                <div className="eventClosed">
+                    {Config.eventTimes.closedPage}
+                </div>
+            )
+        }
+
         const config = Config.welcomePage
         const splash = config.backgroundImagePath
             ? <img className="splash" src={config.backgroundImagePath}/>
