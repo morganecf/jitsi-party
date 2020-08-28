@@ -46,16 +46,21 @@ cd client/
 bash run.sh
 ```
 
-The app should now be running on localhost:3000.
+The default app installation should now be running on localhost:3000.
 
 ### Configuration
 
 App configuration is done with a collection of JSON files in app/config.
-`base.conf` is the root configuration, and is merged with/superceded by the values in `development.json` and `production.json` when in those respective environments.
+`base/config.conf` is the root configuration, and is merged with/superceded by the values in `development.json` and `production.json` when in those respective environments.
 `rooms.json` contains the room layout that is loaded into the database and used by all connected clients.
 
-To use a custom configuration, add a `config.json` and/or `rooms.json` to `app/config/overrides/`.
+To use a custom configuration, symlink a `config.json` and/or `rooms.json` to `app/config/overrides/`.
 `app/config/overrides/config.json` will be merged with/supercede the default configs, while `app/config/overrides/rooms.json` will completely replace the default rooms.
+
+Advanced configuration for events (`overrides/events.json`) and image maps (`overrides/imagemaps.json`) is also supported.
+
+By convention, different installations of the application are stored as folders under `config/` e.g. `config/cabin-weekend`.
+To set up your local build as one of the existing configurations, simply symlink all the files is that in configuration's folder into `config/overrides`
 
 ### Querying the DB
 Using sqlite directly
