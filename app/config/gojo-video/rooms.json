@@ -1,0 +1,46 @@
+{
+	"rooms": [
+        {
+            "id": "entryHall",
+            "name": "Entry Hall",
+            "type": "JITSI",
+            "capacity": 10,
+            "description": "Say hello!",
+            "directions": {
+                "south": "courtyard"
+            }
+		},
+		{
+            "id": "courtyard",
+            "name": "Courtyard",
+            "type": "JITSI",
+            "capacity": 6,
+            "description": "Talk and casual play, kibitzing permitted",
+            "directions": {
+				"north": "entryHall",
+				"south": "battlefield"
+            }
+		},
+		{
+            "id": "battlefield",
+            "name": "Battlefield",
+            "type": "JITSI",
+            "capacity": 6,
+            "description": "No kibitzing, serious play only (and minimal chat as necessary)",
+            "directions": {
+				"north": "courtyard",
+				"east": "dungeonCell"
+            }
+		},
+		{
+            "id": "dungeonCell",
+            "name": "Dungeon Cell",
+            "type": "JITSI",
+            "capacity": 2,
+            "description": "Players Only",
+            "directions": {
+				"west": "battlefield"
+            }
+		}
+	]
+}

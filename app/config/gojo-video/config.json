@@ -1,0 +1,50 @@
+{
+    "debug": true,
+    "mapDisabled": true,
+    "mapUnlockThreshold": 999,
+    "useLocalSessions": false,
+    "startRoom": "entryHall",
+    "videoDisplayName": "Fellow Bushi",
+    "welcomePage": {
+        "avatarSelectionEnabled": true,
+        "enterSpaceButtonText": "Enter",
+        "avatarSelectionText": "Choose your avatar",
+        "headerHtml": "<div class='tst'><p>The Gojo</p><h1>Prepare for Battle</h1>"
+    },
+    "avatars": [
+        {
+            "images": [
+                "https://gojo-video.s3.us-east-2.amazonaws.com/circles/circle-black.png",
+                "https://gojo-video.s3.us-east-2.amazonaws.com/circles/circle-white.png",
+                "https://gojo-video.s3.us-east-2.amazonaws.com/circles/circle-blue.png",
+                "https://gojo-video.s3.us-east-2.amazonaws.com/circles/circle-green.png"
+            ]
+        },
+        {
+            "images": [
+                "https://gojo-video.s3.us-east-2.amazonaws.com/circles/circle-magenta.png",
+                "https://gojo-video.s3.us-east-2.amazonaws.com/circles/circle-orange.png",
+                "https://gojo-video.s3.us-east-2.amazonaws.com/circles/circle-red.png",
+                "https://gojo-video.s3.us-east-2.amazonaws.com/circles/circle-yellow.png"
+            ]
+        }
+    ],
+    "map": {
+        "stats": {
+            "numberInHouse": {
+                "display": true,
+                "text": "⚫ {count} playing"
+            },
+            "numberInHallways": {
+                "display": true,
+                "text": "⚪ {count} wandering the hallways"
+            },
+            "numberInRooms": {
+                "display": false,
+                "text": "📍 {count} exploring"
+            },
+            "additionalStats": [
+            ]
+        }
+    }
+}

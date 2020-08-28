@@ -107,6 +107,7 @@ class JitsiVideo extends Component {
             }
 
             window.api = new window.JitsiMeetExternalAPI(domain, options)
+            debugger
             window.api.addEventListener('videoConferenceJoined', () => {
                 this.makeJitsiTransparent()
                 this.hideSpinner()

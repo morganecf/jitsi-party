@@ -13,6 +13,10 @@ message Config {
     // Optional. Defaults to false.
     bool debug = 1;
 
+    // Controls whether or not the map is ever available.
+    // Optional. Defaults to false.
+    bool map_disabled = 16;
+
     // The min number of visited rooms before a guest is shown the map
     // Optional. Defaults to 0.
     int32 map_unlock_threshold = 2;
