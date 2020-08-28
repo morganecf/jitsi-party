@@ -5,9 +5,8 @@ from jitsi.schema import adventures_pb2,config_pb2,events_pb2,imagemaps_pb2,room
 from google.protobuf import json_format
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-configdir = os.path.join(basedir, 'config')
-basecfgdir = os.path.join(configdir, 'base')
-overridedir = os.path.join(configdir, 'overrides')
+basecfgdir = os.path.join(basedir, 'config', 'base')
+overridedir = os.path.join(basedir, 'config', 'overrides')
 
 def get_json_dict(path):
     try:

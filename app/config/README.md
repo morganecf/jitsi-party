@@ -3,7 +3,7 @@
 This folder contains the default configuration files for the jitsi-party application.
 Both the server and the client use these files.
 
-`base` contains the basic/default configurations, on which oyur custom configs will build. Do not alter these files.
+`base` contains the basic/default configurations, on which your custom configs will build. Do not alter these files.
 
 To configure your custom installation of jitsi-party, symlink your configuration files into the `overrides` folder.
 The contents of this folder are gitignored, so the symlinks will not be stored in the repository.
