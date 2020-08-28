@@ -5,8 +5,8 @@ from jitsi.schema import adventures_pb2,config_pb2,events_pb2,imagemaps_pb2,room
 from google.protobuf import json_format
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-configdir = os.path.join(basedir, 'config')
-overridedir = os.path.join(configdir, 'overrides')
+basecfgdir = os.path.join(basedir, 'config', 'base')
+overridedir = os.path.join(basedir, 'config', 'overrides')
 
 def get_json_dict(path):
     try:
@@ -75,22 +75,21 @@ class Config:
     # MESSAGE_QUEUE = 'amqp://localhost:5672'
     MESSAGE_QUEUE = None
 
-    # TODO: Should we add adventures & imagemaps to both dirs?
     ROOM_PATHS = [
-        os.path.join(configdir, 'rooms.json'),
+        os.path.join(basecfgdir, 'rooms.json'),
         os.path.join(overridedir, 'rooms.json')
     ]
     ADVENTURE_PATHS = [
-        os.path.join(configdir, 'adventures.json')
+        os.path.join(overridedir, 'adventures.json'),
     ]
     EVENT_PATHS = [
-        os.path.join(configdir, 'events.json'),
+        os.path.join(basecfgdir, 'events.json'),
         os.path.join(overridedir, 'events.json')
     ]
     IMAGEMAP_PATHS = [
         os.path.join(overridedir, 'imagemaps.json')
     ]
-    BASE_CONFIG_PATHS = [os.path.join(configdir, 'base.json')]
+    BASE_CONFIG_PATHS = [os.path.join(basecfgdir, 'config.json')]
     OVERRIDE_CONFIG_PATHS = [os.path.join(overridedir, 'config.json')]
     CONFIG_PATHS = BASE_CONFIG_PATHS + OVERRIDE_CONFIG_PATHS
 
@@ -144,12 +143,12 @@ class Config:
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
-    CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(configdir, 'development.json')] + Config.OVERRIDE_CONFIG_PATHS
+    CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(basecfgdir, 'development.json')] + Config.OVERRIDE_CONFIG_PATHS
 
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://waa:woo@jitsi-party-db:5432/jitsi'
-    CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(configdir, 'production.json')] + Config.OVERRIDE_CONFIG_PATHS
+    CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(basecfgdir, 'production.json')] + Config.OVERRIDE_CONFIG_PATHS
 
 
 config = {

@@ -182,7 +182,7 @@ class Room extends Component {
         const showMapTooltip = !mapAlreadyUnlocked && isMapUnlocked
         LocalStorage.set("MAP_UNLOCKED", isMapUnlocked)
         return {
-            mapVisible: isMapUnlocked,
+            mapVisible: isMapUnlocked && !Config.mapDisabled,
             showMapTooltip: showMapTooltip
         }
     }

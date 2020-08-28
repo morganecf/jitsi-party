@@ -64,6 +64,7 @@ class Welcome extends Component {
             ? <img className="splash" src={config.backgroundImagePath}/>
             : null
 
+        debugger
         const login = !_.isEmpty(config.auth) && !this.state.authenticated ?
             <CustomAuthWrapper options={config.auth} onAuthentication={this.onAuthentication.bind(this)} /> :
             <Login/>
