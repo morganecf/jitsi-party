@@ -1,6 +1,6 @@
 /*
  * This file defines and documents the format for config.json and other
- * top-level configuration (base.json, development.json, production.json)
+ * top-level configuration (base/config.json, base/development.json, base/production.json)
  *
  * Proto doc: https://developers.google.com/protocol-buffers/
  */

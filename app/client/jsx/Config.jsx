@@ -1,6 +1,6 @@
-import baseConfig from '../../config/base.json'
-import devConfig from '../../config/development.json'
-import prodConfig from '../../config/production.json'
+import baseConfig from '../../config/base/config.json'
+import devConfig from '../../config/base/development.json'
+import prodConfig from '../../config/base/production.json'
 
 // overrides/config.json and overrides/rooms.json supercede anything in the default configs.
 // overrides/config.json is merged with underlying configs, but overrides/rooms.json replaces default rooms completely
