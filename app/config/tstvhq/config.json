@@ -96,6 +96,6 @@
     "eventTimes": {
         "start": "2020-08-27T19:00:00-04:00",
         "end": "2020-08-27T01:00:00-04:00",
-        "closed_html": "<h1>Sorry, event is closed</h1>"
+        "closedText": "Sorry, the event is closed"
     }
 }
