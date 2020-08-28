@@ -4,10 +4,6 @@ from jitsi import create_app, db, run_eventlet
 from jitsi.models import Room, User
 from config import load_and_validate_rooms
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-configdir = os.path.join(basedir, 'config', 'base')
-overridedir = os.path.join(configdir, 'overrides')
-
 # Create the application context
 app = create_app(os.getenv('FLASK_ENV') or 'default')
 
