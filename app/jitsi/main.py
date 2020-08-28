@@ -8,7 +8,7 @@ from .models import User
 from datetime import datetime
 from twilio.rest import Client
 from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
-from datetime import datetime
+from datetime import datetime, timezone
 
 main = Blueprint('main', __name__)
 logger = logging.getLogger(__name__)
@@ -167,7 +167,7 @@ def compute_ip(num_proxies=0):
 
 def is_open():
     times = current_app.config.get("EVENT_TIMES")
-    now = datetime.now()
+    now = datetime.now(timezone.utc)
     if "start" in times:
         start_time = datetime.fromisoformat(times["start"])
         if (now < start_time):
