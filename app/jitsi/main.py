@@ -171,9 +171,9 @@ def is_open():
     if "start" in times:
         start_time = datetime.fromisoformat(times["start"])
         if (now < start_time):
-            return false
+            return False
     if "end" in times:
         end_time = datetime.fromisoformat(times["end"])
         if (now > end_time):
-            return false
-    return true
+            return False
+    return True
