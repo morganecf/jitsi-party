@@ -1,5 +1,6 @@
 {
     "debug": true,
+    "pageTitle": "The Gojo",
     "mapDisabled": true,
     "mapUnlockThreshold": 999,
     "useLocalSessions": false,

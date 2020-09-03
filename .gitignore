@@ -163,3 +163,6 @@ dist
 
 # Generated python files for proto schemas
 app/jitsi/schema/*pb2.py
+
+# VSCode
+*.code-workspace

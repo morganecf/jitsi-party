@@ -13,6 +13,11 @@ message Config {
     // Optional. Defaults to false.
     bool debug = 1;
 
+    // Title for main page
+    // document.title in the DOM
+    // Required.
+    string pageTitle = 17;
+
     // Controls whether or not the map is ever available.
     // Optional. Defaults to false.
     bool map_disabled = 16;
