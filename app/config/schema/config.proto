@@ -232,7 +232,7 @@ message EventTimeConfig {
     // Optional.
     string end = 5;
 
-    // HTML to display when the space is closed 
+    // Text to display when the space is closed 
     // Required (if using start or end times).
-    string closed_html = 6;
+    string closed_text = 6;
 }
