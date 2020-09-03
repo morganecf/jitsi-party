@@ -144,6 +144,10 @@ class Config:
     def PAGE_TITLE(self):
         return self.config['pageTitle']
 
+    @property
+    def EVENT_TIMES(self):
+        return self.config.get('eventTimes', {})
+
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')

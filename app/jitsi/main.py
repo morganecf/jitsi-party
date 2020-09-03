@@ -8,12 +8,15 @@ from .models import User
 from datetime import datetime
 from twilio.rest import Client
 from flask import Blueprint, render_template, redirect, url_for, current_app, request, jsonify
+from datetime import datetime, timezone
 
 main = Blueprint('main', __name__)
 logger = logging.getLogger(__name__)
 
 @main.route('/join', methods=['GET', 'POST'])
 def join():
+    if not is_open():
+        return "Event is not currently open", 400
     num_proxies = current_app.config['NUM_PROXIES']
     params = request.get_json()['params']
     params['ip'] = compute_ip(num_proxies)
@@ -162,3 +165,15 @@ def compute_ip(num_proxies=0):
     else:
         return headers_list[-1 * num_proxies]
 
+def is_open():
+    times = current_app.config.get("EVENT_TIMES")
+    now = datetime.now(timezone.utc)
+    if "start" in times:
+        start_time = datetime.fromisoformat(times["start"])
+        if (now < start_time):
+            return False
+    if "end" in times:
+        end_time = datetime.fromisoformat(times["end"])
+        if (now > end_time):
+            return False
+    return True
