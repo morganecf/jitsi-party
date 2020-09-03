@@ -78,6 +78,11 @@ message Config {
     // Number of server-side proxies in use (if unsure, probably 0)
     // Required.
     int32 num_proxies = 14;
+
+    // Overall start and stop times for the space
+    // Users will be unable to join the jitsi-party outside of these time bounds
+    // Optional. If not provided, event defaults to open.
+    EventTimeConfig event_times = 16;
 }
 
 message Moderation {
@@ -216,4 +221,18 @@ message PokeConfig {
     // How long after joining that a user is allowed to use pokes
     // Required.
     int32 unlock_after_minutes = 7;
+}
+
+message EventTimeConfig {
+    // ISO-8601 timestamp for when the space opens
+    // Optional.
+    string start = 4;
+
+    // ISO-8601 timestamp for when the space closes
+    // Optional.
+    string end = 5;
+
+    // Text to display when the space is closed 
+    // Required (if using start or end times).
+    string closed_text = 6;
 }
