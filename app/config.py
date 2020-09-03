@@ -140,6 +140,10 @@ class Config:
     def NUM_PROXIES(self):
         return self.config['numProxies']
 
+    @property
+    def EVENT_TIMES(self):
+        return self.config.get('eventTimes', {})
+
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
