@@ -22,7 +22,7 @@ const EventGroup = props => {
                         <div className="event-description">
                             <ReactMarkdown
                                 source={event.description}
-                                allowedTypes={['text', 'emphasis', 'strong', 'thematicBreak', 'delete', 'link']}
+                                allowedTypes={['text', 'break', 'emphasis', 'strong', 'delete', 'link']}
                                 unwrapDisallowed={true}>
                             </ReactMarkdown>
                         </div>

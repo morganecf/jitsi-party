@@ -98,7 +98,7 @@ class Room extends Component {
                 <div className="room-content">
                     <ReactMarkdown
                         source={this.props.rooms[this.state.room].description}
-                        allowedTypes={['text', 'emphasis', 'strong', 'thematicBreak', 'delete', 'link']}
+                        allowedTypes={['text', 'break', 'emphasis', 'strong', 'delete', 'link']}
                         unwrapDisallowed={true}>
                     </ReactMarkdown>
                 </div>
