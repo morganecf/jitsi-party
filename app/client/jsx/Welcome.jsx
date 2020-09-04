@@ -80,16 +80,15 @@ class Welcome extends Component {
             ? <img className="splash" src={config.backgroundImagePath}/>
             : null
 
-        debugger
         const login = !_.isEmpty(config.auth) && !this.state.authenticated ?
             <CustomAuthWrapper options={config.auth} onAuthentication={this.onAuthentication.bind(this)} /> :
             <Login/>
 
-        const closed = (
+        const closed = Config.eventTimes ? (
             <div className="eventClosed">
                 <h1>{Config.eventTimes.closedText}</h1>
             </div>
-        )
+        ) : null
 
         return (
             <div className="vestibule">

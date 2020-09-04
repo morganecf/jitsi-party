@@ -12,10 +12,8 @@
 
 $black: #241f20;
 $brown: #4b0202;
-// $blue: #1c6bb0;
 $blue: #005aaba6;
 $bright-blue: #005aab;
-// $red: #eb1d25;
 $red: #a7240e;
 $yellow: #f3bd1b;
 $grey: #7c716b;
@@ -49,6 +47,7 @@ $events-header-background-color: $yellow;
 $events-name-color: $pink;
 $events-description-color: white;
 $events-coordinates-color: $pink;
+$events-item-background-color: $bright-blue;
 
 $email-form-color: $grey;
 $email-description-color: $black;
@@ -103,8 +102,4 @@ $art-image-border-color: color("grey-50"); //white
 
 #map-info .room-info {
     color: $black !important;
-}
-
-.events-view .event-list .event-item {
-    background: $bright-blue !important;
 }

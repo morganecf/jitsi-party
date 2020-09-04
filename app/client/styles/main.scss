@@ -13,10 +13,9 @@
 
 // 3. Themes
 @import
-  // 'themes/default',
-  // 'themes/june13';
-  // 'themes/bauhaus';
-  'themes/tst';
+// symlink your theme file to "themes/_active.scss" and it will override the default
+// if you don't have a theme, just `ln -s _default.scss _active.scss`
+  'active';
 
 // 4. Base stuff
 @import
