@@ -63,6 +63,13 @@ Advanced configuration for events (`overrides/events.json`) and image maps (`ove
 By convention, different installations of the application are stored as folders under `config/` e.g. `config/cabin-weekend`.
 To set up your local build as one of the existing configurations, simply symlink all the files is that in configuration's folder into `config/overrides`, then run `flask create-db` and `flask run`
 
+### Themes
+
+The easiest way to style the app is to add a theme.
+Themes live in `app/client/styles/themes`.
+There is a default theme, which you can override by creating a scss file or a symlink at `app/client/styles/themes/_active.scss`.
+For example, one can activate the bauhuas theme by doing `ln -s app/client/styles/themes/_bauhaus.scss app/client/styles/themes/_active.scss`
+
 ### Querying the DB
 Using sqlite directly
 ```
