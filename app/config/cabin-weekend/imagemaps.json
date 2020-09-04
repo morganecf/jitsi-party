@@ -2,7 +2,7 @@
     "imagemaps": [
         {
             "id": "library-map",
-            "img": "js/images/rooms/satanic-library.jpg",
+            "img": "https://cabin-weekend.s3.amazonaws.com/rooms/satanic-library.jpg",
             "areas": [
                 {
                     "shape": "poly",

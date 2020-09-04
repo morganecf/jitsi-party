@@ -6,7 +6,7 @@
             "room": "teaRoom",
             "start": "2020-08-20T20:30:00-04:00",
             "end": "2020-08-20T21:30:00-04:00",
-            "image": "js/images/tst/events/front parlor movie.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/front parlor movie.jpg"
         },
         {
             "name": "Salem Witch Lecture",
@@ -14,7 +14,7 @@
             "room": "backParlor",
             "start": "2020-08-20T19:00:00-04:00",
             "end": "2020-08-20T01:00:00-04:00",
-            "image": "js/images/tst/events/back parlor lecture.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
         {
             "name": "Sadie's Toy Box",
@@ -22,7 +22,7 @@
             "room": "boudoir",
             "start": "2020-08-20T20:00:00-04:00",
             "end": "2020-08-21T02:00:00-04:00",
-            "image": "js/images/tst/events/cooking.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/cooking.jpg"
         },
         {
             "name": "Juggs: A Musical Tribute",
@@ -30,7 +30,7 @@
             "room": "grandBallroom",
             "start": "2020-08-20T20:00:00-04:00",
             "end": "2020-08-21T02:00:00-04:00",
-            "image": "js/images/tst/events/live music.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
             "name": "Films For Your Pleasure",
@@ -38,7 +38,7 @@
             "room": "frontParlor",
             "start": "2020-08-20T20:00:00-04:00",
             "end": "2020-08-21T02:00:00-04:00",
-            "image": "js/images/tst/events/bats.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/bats.jpg"
         },
         {
             "name": "Bats in the Belfry",
@@ -46,7 +46,7 @@
             "room": "belfry",
             "start": "2020-08-20T19:00:00-04:00",
             "end": "2020-08-21T01:00:00-04:00",
-            "image": "js/images/tst/events/bats.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/bats.jpg"
         },
         {
             "name": "Sleeping Porch",
@@ -54,7 +54,7 @@
             "room": "sleepingPorch",
             "start": "2020-08-20T19:00:00-04:00",
             "end": "2020-08-21T01:00:00-04:00",
-            "image": "js/images/tst/events/cats.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/cats.jpg"
         },
         {
             "name": "Parrots in the Aviary",
@@ -62,7 +62,7 @@
             "room": "aviary",
             "start": "2020-08-20T19:00:00-04:00",
             "end": "2020-08-21T01:00:00-04:00",
-            "image": "js/images/tst/events/parrots.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/parrots.jpg"
         },
         {
             "name": "Den Pups",
@@ -70,7 +70,7 @@
             "room": "den",
             "start": "2020-08-20T19:00:00-04:00",
             "end": "2020-08-21T01:00:00-04:00",
-            "image": "js/images/tst/events/dogs.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/dogs.jpg"
         },
         {
             "name": "Library",
@@ -78,7 +78,7 @@
             "room": "library",
             "start": "2020-08-20T19:00:00-04:00",
             "end": "2020-08-21T01:00:00-04:00",
-            "image": "js/images/tst/events/library.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
         }
     ]
 }
