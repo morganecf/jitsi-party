@@ -13,7 +13,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your sigil",
         "headerHtml": "<div class='tst'><p>Welcome to the Inner Sanctum</p><h1>Satanic Temple Virtual HQ</h1>"
@@ -21,36 +21,36 @@
     "avatars": [
         {
             "images": [
-                "js/images/tst/sigils/Andromalius01.png",
-                "js/images/tst/sigils/Bathin01.png",
-                "js/images/tst/sigils/Asmoday01.png",
-                "js/images/tst/sigils/Belial01.png"
+                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
             ]
         },
         {
             "images": [
-                "js/images/tst/sigils/Berith01.png",
-                "js/images/tst/sigils/Buer01.png",
-                "js/images/tst/sigils/Bune01.png",
-                "js/images/tst/sigils/Ipos01.png"
+                "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
             ]
         },
         {
             "images": [
-                "js/images/tst/sigils/Naberius01.png",
-                "js/images/tst/sigils/Shax01.png",
-                "js/images/tst/sigils/Sitri01.png",
-                "js/images/tst/sigils/Stolas01.png"
+                "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
             ]
         }
     ],
     "specialAvatars": {
         "goodbye": {
             "images": [
-                "js/images/tst/sigils/Andromalius01.png",
-                "js/images/tst/sigils/Bathin01.png",
-                "js/images/tst/sigils/Asmoday01.png",
-                "js/images/tst/sigils/Belial01.png"
+                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
             ]
         }
     },
@@ -92,10 +92,5 @@
         "unlockText": "You have unlocked the ability to hex",
         "selfPoke": "Ouch",
         "unlockAfterMinutes": 0
-    },
-    "eventTimes": {
-        "start": "2020-08-27T19:00:00-04:00",
-        "end": "2020-08-27T01:00:00-04:00",
-        "closedText": "Sorry, the event is closed"
     }
 }

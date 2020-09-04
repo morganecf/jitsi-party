@@ -7,7 +7,7 @@
             "capacity": 10,
             "doorTint": "#00D089",
             "muteRoom": true,
-            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels009-1green.2jpg.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels009-1green.2jpg.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=satanicchef&parent=tstvhq.com"
             },
@@ -36,7 +36,7 @@
             "capacity": 3,
             "doorTint": "pink",
             "description": "Freshen up with a few friends.",
-            "backgroundImage": "./js/images/tst/backgrounds/powder room.jpg",
+            "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/powder room.jpg",
             "directions": {
                 "east": "kitchen"
             },
@@ -56,7 +56,7 @@
             "type": "IFRAME",
             "capacity": 10,
             "muteRoom": true,
-            "backgroundImage": "./js/images/tst/backgrounds/the-revolt-of-the-angels011green.jpg",
+            "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=tstvhq.com"
             },
@@ -105,7 +105,7 @@
             "type": "IFRAME",
             "capacity": 10,
             "muteRoom": true,
-            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels012green.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/KqwI2EHmiHg"
             },
@@ -137,7 +137,7 @@
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=themarissayoung&parent=tstvhq.com"
             },
-            "backgroundImage": "js/images/tst/backgrounds/tearoom.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
             "description": "Darker arias and art songs sung by a Friends of TST Delaware member (MarissaYoung.com)",
             "directions": {
                 "north": "den",
@@ -162,7 +162,7 @@
             "name": "The Den",
             "type": "IFRAME",
             "capacity": 10,
-            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels005green.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels005green.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/czuh-ZgfLjo"
             },
@@ -189,7 +189,7 @@
             "type": "IFRAME",
             "capacity": 10,
             "muteRoom": true,
-            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels003green.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
             "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=SalemWitchWiles&parent=tstvhq.com"
@@ -216,7 +216,7 @@
             "type": "JITSI",
             "capacity": 10,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
-            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels004green.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
             "directions": {
                 "east": "backParlor"
             },
@@ -260,7 +260,7 @@
             "capacity": 10,
             "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
             "type": "IFRAME",
-            "backgroundImage": "./js/images/tst/backgrounds/sleeping porch.jpg",
+            "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/tyEq9pxjRV0"
             },
@@ -285,7 +285,7 @@
             "name": "Aviary",
             "type": "IFRAME",
             "capacity": 10,
-            "backgroundImage": "js/images/tst/backgrounds/the-revolt-of-the-angels012green.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/8rWf-8SI0rc"
             },
@@ -340,7 +340,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/LWSztBAmkvc"
             },
-            "backgroundImage": "./js/images/tst/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
             "directions": {
                 "south": "library"
             },
@@ -428,7 +428,7 @@
             "type": "JITSI",
             "capacity": 10,
             "description": "There's room for all of us to rest here",
-            "backgroundImage": "./js/images/tst/backgrounds/cemeterygreen.jpg",
+            "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/cemeterygreen.jpg",
             "directions": {
                 "west": "garden"
             },
@@ -474,7 +474,7 @@
             "type": "JITSI",
             "capacity": 10,
             "doorTint": "white",
-            "backgroundImage": "./js/images/tst/backgrounds/crematorium.jpg",
+            "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
             "directions": {
                 "west": "secretTunnels"
             }
