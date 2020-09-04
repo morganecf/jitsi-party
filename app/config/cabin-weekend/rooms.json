@@ -5,7 +5,7 @@
            "name": "Vestibule",
            "type": "JITSI",
            "description": "Welcome!",
-           "backgroundImage": "js/images/rooms/vestibule.png",
+           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/vestibule.png",
            "directions": {
                "north": "livingRoom",
                "west": "closet",
@@ -29,7 +29,7 @@
            "name": "Closet",
            "type": "JITSI",
            "capacity": 2,
-           "backgroundImage": "js/images/rooms/closet.png",
+           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/closet.png",
            "description": "A quiet, cozy closet for two. Shhh.",
            "directions": {
                "east": "vestibule"
@@ -49,7 +49,7 @@
            "id": "livingRoom",
            "name": "Living Room",
            "type": "JITSI",
-           "backgroundImage": "js/images/rooms/livingroom.jpg",
+           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/livingroom.jpg",
            "directions": {
                "north": "danceParty",
                "south": "vestibule",
@@ -76,7 +76,7 @@
            "type": "IFRAME",
            "description": "Dance until you die!!",
            "muteRoom": true,
-           "backgroundImage": "js/images/rooms/fvn_stvff_keep_it_pushin.jpg",
+           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/fvn_stvff_keep_it_pushin.jpg",
            "iframeOptions": {
                "src": "https://player.twitch.tv/?channel=david_codes&parent=cabinweekend.party"
            },
@@ -210,7 +210,7 @@
                 }
             },
             "doorTint": "#946EFF",
-            "backgroundImage": "js/images/rooms/baths.jpg"
+            "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/baths.jpg"
         },
         {
            "id": "punishmentCloset",
@@ -255,7 +255,7 @@
                }
            },
            "doorTint": "#64E0E8",
-           "backgroundImage": "js/images/rooms/bunnywedding.jpg"
+           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/bunnywedding.jpg"
        },
        {
            "id": "passageway",
@@ -303,7 +303,7 @@
                }
            },
            "doorTint": "green",
-           "backgroundImage": "js/images/rooms/kitchen.jpg"
+           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/kitchen.jpg"
         },
         {
            "id": "corridor",
@@ -378,7 +378,7 @@
             "art": {
               "title": "From left to right:",
               "artist": "Daniel, Alex, Mihai, LaRen, Ramona",
-              "src": "./js/images/art/clarendon-retro.png"
+              "src": "https://cabin-weekend.s3.amazonaws.com/art/clarendon-retro.png"
             },
             "directions": {
                 "west": "library",
@@ -443,7 +443,7 @@
                 }
             },
             "doorTint": "orange",
-            "backgroundImage": "js/images/rooms/gameroom.jpg"
+            "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/gameroom.jpg"
         },
         {
            "id": "courtyard",

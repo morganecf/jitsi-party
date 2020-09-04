@@ -5,7 +5,7 @@
 			"name": "Vestibule",
 			"type": "JITSI",
 			"description": "Welcome!",
-			"backgroundImage": "js/images/rooms/vestibule.png",
+			"backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/vestibule.png",
 			"directions": {
 				"north": "livingRoom",
 				"west": "closet",
@@ -28,7 +28,7 @@
 			"name": "Closet",
 			"type": "JITSI",
 			"capacity": 2,
-			"backgroundImage": "js/images/rooms/closet.png",
+			"backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/closet.png",
 			"description": "A quiet, cozy closet. Shhh.",
 			"directions": {
 				"east": "vestibule"
@@ -47,7 +47,7 @@
 			"id": "livingRoom",
 			"name": "Living Room",
 			"type": "JITSI",
-			"backgroundImage": "js/images/rooms/livingroom.jpg",
+			"backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/livingroom.jpg",
 			"directions": {
 				"south": "vestibule"
 			},
@@ -84,7 +84,7 @@
 				}
 			},
 			"doorTint": "orange",
-			"backgroundImage": "js/images/rooms/gameroom.jpg"
+			"backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/gameroom.jpg"
 		}
 	]
 }

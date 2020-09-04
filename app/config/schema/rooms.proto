@@ -118,8 +118,8 @@ message MapDisplay {
 
     // Width and height of the room as displayed on the map
     // Required
-    int32 width = 3;
-    int32 height = 4;
+    double width = 3;
+    double height = 4;
 
     // Where to show doorways on the map
     // Optional
