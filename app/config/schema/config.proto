@@ -16,7 +16,7 @@ message Config {
     // Title for main page
     // document.title in the DOM
     // Required.
-    string pageTitle = 18;
+    string page_title = 18;
 
     // Controls whether or not the map is ever available.
     // Optional. Defaults to false.

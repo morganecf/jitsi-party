@@ -1,6 +1,6 @@
 {
 	"debug": true,
-	"pageTitle": "Jitsi Party",
+	"page_title": "Jitsi Party",
 	"mapUnlockThreshold": 3,
 	"jitsiServerUrl": "meet.jit.si",
 	"overrideJitsiServerUrlWithWindowHost": false,

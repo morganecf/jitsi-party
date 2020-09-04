@@ -142,7 +142,7 @@ class Config:
 
     @property
     def PAGE_TITLE(self):
-        return self.config['pageTitle']
+        return self.config['page_title']
 
     @property
     def EVENT_TIMES(self):

@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "pageTitle": "Cabin Weekend",
+    "page_title": "Cabin Weekend",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "startRoom": "vestibule",
