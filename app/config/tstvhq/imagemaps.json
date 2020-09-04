@@ -2,7 +2,7 @@
     "imagemaps": [
         {
             "id": "secret-tunnel-map",
-            "img": "js/images/tst/imagemap-images/secret tunnel.jpg",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/secret tunnel.jpg",
             "areas": [
                 {
                     "shape": "circle",
@@ -30,7 +30,7 @@
         },
         {
             "id": "garden-map",
-            "img": "js/images/tst/imagemap-images/garden.jpg",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/garden.jpg",
             "areas": [
                 {
                     "shape": "rect",
@@ -47,7 +47,7 @@
         },
         {
             "id": "grand-staircase-map",
-            "img": "js/images/tst/imagemap-images/staircase1.jpg",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/staircase1.jpg",
             "areas": [
                 {
                     "shape": "rect",
@@ -64,7 +64,7 @@
         },
         {
             "id": "staircase-map",
-            "img": "js/images/tst/imagemap-images/staircase 2.jpg",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/staircase 2.jpg",
             "areas": [
                 {
                     "shape": "circle",
@@ -81,7 +81,7 @@
         },
         {
             "id": "satanic-library-map",
-            "img": "js/images/tst/backgrounds/Library.jpg",
+            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/Library.jpg",
             "areas": [
                 {
                     "shape": "poly",

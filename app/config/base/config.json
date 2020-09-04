@@ -17,10 +17,10 @@
 	"avatars": [
 	  {
 	  	"images": [
-	    	"js/images/default-avatar/default-avatar-black.png",
-	    	"js/images/default-avatar/default-avatar-blue.png",
-	    	"js/images/default-avatar/default-avatar-red.png",
-	    	"js/images/default-avatar/default-avatar-green.png"
+	    	"https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-black.png",
+	    	"https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-blue.png",
+	    	"https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-red.png",
+	    	"https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-green.png"
 	    ]
 	  }
 	],

@@ -6,7 +6,7 @@
             "room": "livingRoom",
             "start": "2020-06-13T20:30:00-04:00",
             "end": "2020-06-14T00:03:00-04:00",
-            "image": "js/images/events/midnight-sun.png"
+            "image": "https://cabin-weekend.s3.amazonaws.com/events/midnight-sun.png"
         },
         {
             "name": "DJ Set: Dave's Rave Cave",
@@ -14,7 +14,7 @@
             "room": "danceParty",
             "start": "2020-06-13T23:00:00-04:00",
             "end": "2020-06-14T01:00:00-04:00",
-            "image": "js/images/events/prellerhaus.jpg"
+            "image": "https://cabin-weekend.s3.amazonaws.com/events/prellerhaus.jpg"
         },
         {
             "name": "Emily Maps",
@@ -22,7 +22,7 @@
             "room": "mapRoom",
             "start": "2020-06-13T20:30:00-04:00",
             "end": "2020-06-13T22:00:00-04:00",
-            "image": "js/images/events/map.png"
+            "image": "https://cabin-weekend.s3.amazonaws.com/events/map.png"
         },
         {
             "name": "The Children’s Bountiful Feast",
@@ -30,7 +30,7 @@
             "room": "bunnyRun",
             "start": "2020-06-13T20:30:00-04:00",
             "end": "2020-06-14T02:00:00-04:00",
-            "image": "js/images/events/bunny.png"
+            "image": "https://cabin-weekend.s3.amazonaws.com/events/bunny.png"
         },
         {
             "name": "Invisible Cities",
@@ -38,7 +38,7 @@
             "room": "library",
             "start": "2020-06-13T22:00:00-04:00",
             "end": "2020-06-13T23:00:00-04:00",
-            "image": "js/images/events/invisible-cities-2.png"
+            "image": "https://cabin-weekend.s3.amazonaws.com/events/invisible-cities-2.png"
         }
     ]
 }
