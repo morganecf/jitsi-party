@@ -72,8 +72,8 @@ class Config:
     # To silence deprecation warning
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BASE_DIR = basedir
-    # MESSAGE_QUEUE = 'amqp://localhost:5672'
-    MESSAGE_QUEUE = None
+    MESSAGE_QUEUE = 'amqp://localhost:5672'
+    # MESSAGE_QUEUE = None
 
     # TODO: Should we add adventures & imagemaps to both dirs?
     ROOM_PATHS = [

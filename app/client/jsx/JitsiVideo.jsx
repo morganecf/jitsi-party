@@ -98,8 +98,7 @@ class JitsiVideo extends Component {
                     SHOW_JITSI_WATERMARK: false,
                     DEFAULT_REMOTE_DISPLAY_NAME: Config.videoDisplayName,
                     SHOW_WATERMARK_FOR_GUESTS: false,
-                    TOOLBAR_BUTTONS: toolbarButtons,
-
+                    TOOLBAR_BUTTONS: toolbarButtons
                 },
                 configOverwrite: {
                     disableSimulcast: false
