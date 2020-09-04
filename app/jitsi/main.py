@@ -7,7 +7,7 @@ from . import mail
 from .models import User
 from datetime import datetime
 from twilio.rest import Client
-from flask import Blueprint, send_from_directory, redirect, url_for, current_app, request, jsonify
+from flask import Blueprint, render_template, redirect, url_for, current_app, request, jsonify
 from datetime import datetime, timezone
 
 main = Blueprint('main', __name__)
@@ -155,7 +155,7 @@ def email_moderators():
 def serve(path):
     if path and not path.startswith('client'):
         return redirect(url_for('main.serve'))
-    return send_from_directory(current_app.static_folder, 'index.html')
+    return render_template('index.html', config = current_app.config)
 
 
 def compute_ip(num_proxies=0):
