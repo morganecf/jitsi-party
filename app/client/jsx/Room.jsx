@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import reducers from './reducers.jsx'
 import { Redirect } from 'react-router-dom'
-import { Beforeunload } from 'react-beforeunload';
+import { Beforeunload } from 'react-beforeunload'
+import ReactMarkdown from 'react-markdown'
 import Modal from 'react-modal';
 import ModalFactory from './ModalFactory.jsx'
 import JitsiVideo from './JitsiVideo.jsx'
@@ -95,7 +96,11 @@ class Room extends Component {
         if (this.props.rooms[this.state.room].description) {
             return (
                 <div className="room-content">
-                    {this.props.rooms[this.state.room].description}
+                    <ReactMarkdown
+                        source={this.props.rooms[this.state.room].description}
+                        allowedTypes={['text', 'emphasis', 'strong', 'thematicBreak', 'delete', 'link']}
+                        unwrapDisallowed={true}>
+                    </ReactMarkdown>
                 </div>
             )
         }
