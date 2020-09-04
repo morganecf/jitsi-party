@@ -119,5 +119,3 @@ It seems like the Jitsi Meet library isn't intended to be consumed the way you'd
 // To use inside a React component
 const JitsiAPI = window.JitsiMeetExternalAPI
 ```
-
-Testing if I can do this
