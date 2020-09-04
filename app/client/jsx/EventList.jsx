@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 import moment from 'moment'
 import { formatTime } from './utils.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,7 +20,11 @@ const EventGroup = props => {
                             {event.name}
                         </div>
                         <div className="event-description">
-                            {event.description}
+                            <ReactMarkdown
+                                source={event.description}
+                                allowedTypes={['text', 'break', 'emphasis', 'strong', 'delete', 'link']}
+                                unwrapDisallowed={true}>
+                            </ReactMarkdown>
                         </div>
                         <div className="event-coordinates">
                             <div className="event-time">
