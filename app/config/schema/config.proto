@@ -1,6 +1,6 @@
 /*
  * This file defines and documents the format for config.json and other
- * top-level configuration (base.json, development.json, production.json)
+ * top-level configuration (base/config.json, base/development.json, base/production.json)
  *
  * Proto doc: https://developers.google.com/protocol-buffers/
  */
@@ -12,6 +12,10 @@ message Config {
     // May also do other developer-mode-things
     // Optional. Defaults to false.
     bool debug = 1;
+
+    // Controls whether or not the map is ever available.
+    // Optional. Defaults to false.
+    bool map_disabled = 16;
 
     // The min number of visited rooms before a guest is shown the map
     // Optional. Defaults to 0.
@@ -74,6 +78,11 @@ message Config {
     // Number of server-side proxies in use (if unsure, probably 0)
     // Required.
     int32 num_proxies = 14;
+
+    // Overall start and stop times for the space
+    // Users will be unable to join the jitsi-party outside of these time bounds
+    // Optional. If not provided, event defaults to open.
+    EventTimeConfig event_times = 16;
 }
 
 message Moderation {
@@ -212,4 +221,18 @@ message PokeConfig {
     // How long after joining that a user is allowed to use pokes
     // Required.
     int32 unlock_after_minutes = 7;
+}
+
+message EventTimeConfig {
+    // ISO-8601 timestamp for when the space opens
+    // Optional.
+    string start = 4;
+
+    // ISO-8601 timestamp for when the space closes
+    // Optional.
+    string end = 5;
+
+    // Text to display when the space is closed 
+    // Required (if using start or end times).
+    string closed_text = 6;
 }

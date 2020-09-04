@@ -92,5 +92,10 @@
         "unlockText": "You have unlocked the ability to hex",
         "selfPoke": "Ouch",
         "unlockAfterMinutes": 0
+    },
+    "eventTimes": {
+        "start": "2020-08-27T19:00:00-04:00",
+        "end": "2020-08-27T01:00:00-04:00",
+        "closedText": "Sorry, the event is closed"
     }
 }

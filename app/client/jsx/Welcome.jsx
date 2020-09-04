@@ -58,21 +58,44 @@ class Welcome extends Component {
         this.setState({ authenticated: true })
     }
 
+    isOpen() {
+        if (!Config.eventTimes) return true;
+
+        const now = new Date()
+        if (Config.eventTimes.start) {
+            const start = Date.parse(Config.eventTimes.start)
+            if (now < start) return false;
+        }
+        if (Config.eventTimes.end) {
+            const end = Date.parse(Config.eventTimes.end)
+            if (now > end) return false;
+        }
+
+        return true
+    }
+
     render() {
         const config = Config.welcomePage
         const splash = config.backgroundImagePath
             ? <img className="splash" src={config.backgroundImagePath}/>
             : null
 
+        debugger
         const login = !_.isEmpty(config.auth) && !this.state.authenticated ?
             <CustomAuthWrapper options={config.auth} onAuthentication={this.onAuthentication.bind(this)} /> :
             <Login/>
+
+        const closed = (
+            <div className="eventClosed">
+                <h1>{Config.eventTimes.closedText}</h1>
+            </div>
+        )
 
         return (
             <div className="vestibule">
                 <div className="header" dangerouslySetInnerHTML={{ __html: config.headerHtml }} />
                 {splash}
-                {login}
+                {this.isOpen() ? login : closed}
             </div>
         )
     }
