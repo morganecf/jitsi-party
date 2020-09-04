@@ -1,5 +1,6 @@
 {
     "debug": true,
+    "page_title": "TST VHQ",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "startRoom": "cemetery",

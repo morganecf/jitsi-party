@@ -141,6 +141,10 @@ class Config:
         return self.config['numProxies']
 
     @property
+    def PAGE_TITLE(self):
+        return self.config['page_title']
+
+    @property
     def EVENT_TIMES(self):
         return self.config.get('eventTimes', {})
 
