@@ -62,33 +62,37 @@ message Room {
     // Optional
     MapDisplay map = 9;
 
-    // Whether to mute all participants when joining the call
+    // Whether to force-mute all participants in a room
     // Optional. Defaults to false.
     bool mute_room = 10;
 
+    // Whether to force-hide all participants' videos in a room
+    // Optiona. Defaults to false.
+    bool hide_video = 11;
+
     // Whether to prevent users from entering this room
     // Optional. Defaults to false.
-    bool locked = 11;
+    bool locked = 12;
 
     // IFRAME ROOMS ONLY
     // Options related to what to display in the iframe
     // Required for iframe rooms.
-    IframeOptions iframe_options = 12;
+    IframeOptions iframe_options = 13;
 
     // IMAGEMAP ROOMS ONLY
     // ID for options to use for this room from the imagemaps config
     // Required for imagemap rooms.
-    string image_map_options = 13;
+    string image_map_options = 14;
 
     // ART ROOMS ONLY
     // Options related to the art to display
     // Required for art rooms.
-    ArtOptions art = 14;
+    ArtOptions art = 15;
 
     // REDIRECT ROOMS ONLY
     // The page to redirect to
     // Required for redirect rooms.
-    string route = 15;
+    string route = 16;
 }
 
 message NavDirections {
