@@ -81,7 +81,11 @@ class JitsiVideo extends Component {
             // If muteRoom=true in room settings, remove microphone controls.
             let toolbarButtons = this.toolbarButtons;
             if (this.props.jitsiData.muteRoom) {
-                toolbarButtons = _.without(this.toolbarButtons, 'microphone')
+                toolbarButtons = _.without(toolbarButtons, 'microphone')
+            }
+            // If hideVideo=true in room settings, remove microphone controls.
+            if (this.props.jitsiData.hideVideo) {
+                toolbarButtons = _.without(toolbarButtons, 'camera')
             }
 
             let domain = Config.jitsiServerUrl
@@ -98,8 +102,7 @@ class JitsiVideo extends Component {
                     SHOW_JITSI_WATERMARK: false,
                     DEFAULT_REMOTE_DISPLAY_NAME: Config.videoDisplayName,
                     SHOW_WATERMARK_FOR_GUESTS: false,
-                    TOOLBAR_BUTTONS: toolbarButtons,
-
+                    TOOLBAR_BUTTONS: toolbarButtons
                 },
                 configOverwrite: {
                     disableSimulcast: false
@@ -120,7 +123,7 @@ class JitsiVideo extends Component {
                 if (this.isAudioMuted || this.props.jitsiData.muteRoom) {
                     commands.toggleAudio = []
                 }
-                if (this.isVideoMuted) {
+                if (this.isVideoMuted || this.props.jitsiData.hideVideo) {
                     commands.toggleVideo = []
                 }
                 window.api.executeCommands(commands)
@@ -131,6 +134,9 @@ class JitsiVideo extends Component {
                 })
                 window.api.addEventListener('videoMuteStatusChanged', ({ muted }) => {
                     this.isVideoMuted = muted
+                    if (!this.props.jitsiData.hideVideo) {
+                        this.isVideoMuted = muted
+                    }
                 })
             })
         } catch (err) {
