@@ -54,13 +54,13 @@
             "id": "grandBallroom",
             "name": "Grand Ballroom",
             "type": "IFRAME",
-            "capacity": 10,
+            "capacity": 20,
             "muteRoom": true,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=incrprl&parent=tstvhq.com"
             },
-            "description": "Where @LucienGreaves DJs.",
+            "description": "Disappear into the night with DJ incrprl, spinning a mysterious and haunting mix of cold wave, witch house, EBM, industrial bass, and other dark electronic sounds. In the liminal space of the incorporeal estate, let the bewitching melodies entrance you to dance until you drop.",
             "directions": {
                 "south": "kitchen"
             },
