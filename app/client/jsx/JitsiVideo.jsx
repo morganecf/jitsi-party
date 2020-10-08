@@ -81,11 +81,11 @@ class JitsiVideo extends Component {
             // If muteRoom=true in room settings, remove microphone controls.
             let toolbarButtons = this.toolbarButtons;
             if (this.props.jitsiData.muteRoom) {
-                toolbarButtons = _.without(this.toolbarButtons, 'microphone')
+                toolbarButtons = _.without(toolbarButtons, 'microphone')
             }
             // If hideVideo=true in room settings, remove microphone controls.
             if (this.props.jitsiData.hideVideo) {
-                toolbarButtons = _.without(this.toolbarButtons, 'camera')
+                toolbarButtons = _.without(toolbarButtons, 'camera')
             }
 
             let domain = Config.jitsiServerUrl
