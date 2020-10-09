@@ -52,11 +52,14 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "IFRAME",
+            "capacity": 20,
             "muteRoom": true,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
-            "description": "See and be seen.",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=incrprl&parent=tstvhq.com"
+            },
+            "description": "Disappear into the night with DJ incrprl, spinning a mysterious and haunting mix of cold wave, witch house, EBM, industrial bass, and other dark electronic sounds. In the liminal space of the incorporeal estate, let the bewitching melodies entrance you to dance until you drop.",
             "directions": {
                 "south": "kitchen"
             },
