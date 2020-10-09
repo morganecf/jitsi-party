@@ -1,6 +1,5 @@
 {
-    "events": [
-        {
+    "events": [{
             "name": "Salem Walking Tours",
             "description": "Salem's history from a Satanic perspective by local Satanic Salem witch Thomas Vallor. This is an hour long presentation.",
             "room": "backParlor",
@@ -13,9 +12,9 @@
             "description": "DM: Christopher Robichaud ... Friends and members of the Satanic Temple play the popular version of Dungeons & Dragons in the 1980s--First Edition D&D--in the way that everyone was afraid the game was being played back then. Players will get a chance to enjoy an expanded version of the Judges Guild classic old-school module, Inferno (by Geoffry O. Dale), in which characters must descend into the depths of Dante's Hell. But this time around, it's because they're on a rescue mission to release the Dark Prince from his frozen prison.",
             "room": "crematorium",
             "start": "2020-10-10T00:00:00-04:00",
-            "end": "2020-10-10T04:00:00-04:00",
+            "end": "2020-10-10T04:00:00-04:00"
         },
-          {
+        {
             "name": "See Food Spooktacular",
             "description": "Satanic Chef Adam Dodge shares cooking tips and tricks. In my introductory class learn how to shuck oysters, make Tuna tar tar and crab sofritto.",
             "room": "Kitchen",
@@ -46,11 +45,12 @@
             "end": "2020-10-10T04:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
         },
-         {
+        {
             "name": "Down the Rabbit Hole",
             "description": "Down the rabbit hole...meet Winston and Winona, Ada's beloved rabbits!",
             "room": "den",
             "start": "2020-10-10T00:00:00-04:00",
             "end": "2020-08-21T01:04:00-04:00"
+        }
     ]
 }
