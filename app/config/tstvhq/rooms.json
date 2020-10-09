@@ -254,9 +254,6 @@
             "description": "A lovely place to lounge.",
             "type": "JITSI",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
-            "iframeOptions": {
-                "src": "https://www.youtube.com/embed/tyEq9pxjRV0"
-            },
             "directions": {
                 "west": "library",
                 "east": "staircase"
@@ -282,7 +279,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/8rWf-8SI0rc"
             },
-            "description": "Beutiful plumage, the norwegian blue.",
+            "description": "Beautiful plumage, the norwegian blue.",
             "directions": {
                 "east": "library"
             },
@@ -420,7 +417,7 @@
             "description": "There's room for all of us to rest here",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/cemeterygreen.jpg",
             "iframeOptions": {
-                "src": "https://youtu.be/ydqOaUvqhbQ"
+                "src": "https://www.youtube.com/embed/ydqOaUvqhbQ"
             },
             "directions": {
                 "west": "garden"
