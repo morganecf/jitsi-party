@@ -1,84 +1,56 @@
 {
     "events": [
         {
-            "name": "Dark Arias",
-            "description": "Darker arias and art songs sung by a Friends of TST Delaware member (MarissaYoung.com)",
-            "room": "teaRoom",
-            "start": "2020-08-20T20:30:00-04:00",
-            "end": "2020-08-20T21:30:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/front parlor movie.jpg"
-        },
-        {
-            "name": "Salem Witch Lecture",
-            "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor (@SalemWitchWiles). This lecture will take place every 30 minutes or until he smokes too much weed.",
+            "name": "Salem Walking Tours",
+            "description": "Salem's history from a Satanic perspective by local Satanic Salem witch Thomas Vallor. This is an hour long presentation.",
             "room": "backParlor",
-            "start": "2020-08-20T19:00:00-04:00",
-            "end": "2020-08-20T01:00:00-04:00",
+            "start": "2020-10-10T02:00:00-04:00",
+            "end": "2020-10-10T03:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
         {
-            "name": "Sadie's Toy Box",
-            "description": "Educational sex toy presentation by @SadieSatanas",
-            "room": "boudoir",
-            "start": "2020-08-20T20:00:00-04:00",
-            "end": "2020-08-21T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/cooking.jpg"
+            "name": "Satanic Dungeons & Dragons",
+            "description": "DM: Christopher Robichaud ... Friends and members of the Satanic Temple play the popular version of Dungeons & Dragons in the 1980s--First Edition D&D--in the way that everyone was afraid the game was being played back then. Players will get a chance to enjoy an expanded version of the Judges Guild classic old-school module, Inferno (by Geoffry O. Dale), in which characters must descend into the depths of Dante's Hell. But this time around, it's because they're on a rescue mission to release the Dark Prince from his frozen prison.",
+            "room": "crematorium",
+            "start": "2020-10-10T00:00:00-04:00",
+            "end": "2020-10-10T04:00:00-04:00",
+        },
+          {
+            "name": "See Food Spooktacular",
+            "description": "Satanic Chef Adam Dodge shares cooking tips and tricks. In my introductory class learn how to shuck oysters, make Tuna tar tar and crab sofritto.",
+            "room": "Kitchen",
+            "start": "2020-10-10T00:00:00-04:00",
+            "end": "2020-10-10T01:00:00-04:00"
         },
         {
-            "name": "Juggs: A Musical Tribute",
-            "description": "Where @LucienGreaves DJs.",
-            "room": "grandBallroom",
-            "start": "2020-08-20T20:00:00-04:00",
-            "end": "2020-08-21T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
-        },
-        {
-            "name": "Films For Your Pleasure",
+            "name": "DJ incrprl",
             "description": "Film of the day by Lucien Greaves.",
-            "room": "frontParlor",
-            "start": "2020-08-20T20:00:00-04:00",
-            "end": "2020-08-21T02:00:00-04:00",
+            "room": "grandBallroom",
+            "start": "2020-10-10T00:00:00-04:00",
+            "end": "2020-10-10T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/bats.jpg"
         },
         {
             "name": "Bats in the Belfry",
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas that cares for these sweethearts. Learn more about their work at batworld.org",
             "room": "belfry",
-            "start": "2020-08-20T19:00:00-04:00",
-            "end": "2020-08-21T01:00:00-04:00",
+            "start": "2020-10-10T00:00:00-04:00",
+            "end": "2020-08-21T01:04:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/bats.jpg"
-        },
-        {
-            "name": "Sleeping Porch",
-            "description": "Lounge among slumbering cats on the sleeping porch, live from Best Friends Animal Society. Learn more about these cats and how you can adopt one at BestFriends.org.",
-            "room": "sleepingPorch",
-            "start": "2020-08-20T19:00:00-04:00",
-            "end": "2020-08-21T01:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/cats.jpg"
-        },
-        {
-            "name": "Parrots in the Aviary",
-            "description": "Get to know some amazing parrots in the Aviary, broadcasting live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
-            "room": "aviary",
-            "start": "2020-08-20T19:00:00-04:00",
-            "end": "2020-08-21T01:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/parrots.jpg"
-        },
-        {
-            "name": "Den Pups",
-            "description": "Puppies are afoot in The Den, live from Best Friends Animal Society. Learn how to adopt one at BestFriends.org.",
-            "room": "den",
-            "start": "2020-08-20T19:00:00-04:00",
-            "end": "2020-08-21T01:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/dogs.jpg"
         },
         {
             "name": "Library",
             "description": "The Satanic Panic Archive Library is open all night. Many of these texts exist nowhere else in the world.",
             "room": "library",
-            "start": "2020-08-20T19:00:00-04:00",
-            "end": "2020-08-21T01:00:00-04:00",
+            "start": "2020-10-10T00:00:00-04:00",
+            "end": "2020-10-10T04:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
-        }
+        },
+         {
+            "name": "Down the Rabbit Hole",
+            "description": "Down the rabbit hole...meet Winston and Winona, Ada's beloved rabbits!",
+            "room": "den",
+            "start": "2020-10-10T00:00:00-04:00",
+            "end": "2020-08-21T01:04:00-04:00"
     ]
 }
