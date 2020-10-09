@@ -77,12 +77,12 @@ class Welcome extends Component {
     render() {
         const config = Config.welcomePage
         const splash = config.backgroundImagePath
-            ? <img className="splash" src={config.backgroundImagePath}/>
+            ? <img className="splash" src={config.backgroundImagePath} />
             : null
 
         const login = !_.isEmpty(config.auth) && !this.state.authenticated ?
             <CustomAuthWrapper options={config.auth} onAuthentication={this.onAuthentication.bind(this)} /> :
-            <Login/>
+            <Login />
 
         const closed = Config.eventTimes ? (
             <div className="eventClosed">
@@ -104,4 +104,4 @@ export default connect(
     state => state,
     {
         addConfig: reducers.addConfigActionCreator,
-     })(Welcome)
+    })(Welcome)
