@@ -1,6 +1,5 @@
 {
-    "rooms": [
-        {
+    "rooms": [{
             "id": "kitchen",
             "name": "Kitchen",
             "type": "IFRAME",
