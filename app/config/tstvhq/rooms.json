@@ -276,9 +276,6 @@
             "type": "JITSI",
             "capacity": 10,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
-            "iframeOptions": {
-                "src": "https://www.youtube.com/embed/8rWf-8SI0rc"
-            },
             "description": "Beautiful plumage, the norwegian blue.",
             "directions": {
                 "east": "library"
