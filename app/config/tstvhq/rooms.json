@@ -185,7 +185,7 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
             "description": "Lectures from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=SalemWitchWiles&parent=tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=SalemWitchWiles&parent=estate.tstvhq.com"
             },
             "directions": {
                 "south": "den",
