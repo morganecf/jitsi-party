@@ -8,7 +8,7 @@
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels009-1green.2jpg.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=satanicchef&parent=tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
             },
             "description": "Learn from The Satanic Chef about living deliciously in the kitchen.",
             "directions": {
@@ -57,7 +57,7 @@
             "muteRoom": true,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=incrprl&parent=tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=incrprl&parent=estate.tstvhq.com"
             },
             "description": "Disappear into the night with DJ incrprl, spinning a mysterious and haunting mix of cold wave, witch house, EBM, industrial bass, and other dark electronic sounds. In the liminal space of the incorporeal estate, let the bewitching melodies entrance you to dance until you drop.",
             "directions": {
@@ -103,9 +103,9 @@
             "name": "Front Parlor",
             "type": "JITSI",
             "capacity": 10,
-            "muteRoom": true,
+            "muteRoom": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
-            "description": "Welcome to TSTVHQ.",
+            "description": "Welcome Home.",
             "directions": {
                 "east": "teaRoom",
                 "north": "grandStaircase",
@@ -129,7 +129,7 @@
             "name": "Tea Room",
             "type": "JITSI",
             "capacity": 10,
-            "muteRoom": true,
+            "muteRoom": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
@@ -157,7 +157,7 @@
             "capacity": 10,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels005green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=estate.tstvhq.com"
             },
             "description": "Meet Winston and Winona, Ada's beloved rabbits.",
             "directions": {
@@ -183,7 +183,7 @@
             "capacity": 20,
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
-            "description": "Learn about the Salem Witch Trials from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
+            "description": "Lectures from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=SalemWitchWiles&parent=tstvhq.com"
             },
@@ -322,7 +322,7 @@
             "name": "Boudoir",
             "type": "JITSI",
             "capacity": 10,
-            "muteRoom": true,
+            "muteRoom": false,
             "description": "An intimate setting.",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
             "directions": {
@@ -367,7 +367,7 @@
             "type": "JITSI",
             "capacity": 10,
             "locked": false,
-            "description": "Office hours will be posted or by appointment.",
+            "description": "A place for business",
             "directions": {
                 "west": "staircase",
                 "north": "belfry"
