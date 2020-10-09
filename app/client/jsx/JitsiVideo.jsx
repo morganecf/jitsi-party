@@ -98,11 +98,12 @@ class JitsiVideo extends Component {
                 roomName: this.props.jitsiData.roomName,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
-                    // filmStripOnly: true,
+                    filmStripOnly: true,
                     SHOW_JITSI_WATERMARK: false,
                     DEFAULT_REMOTE_DISPLAY_NAME: Config.videoDisplayName,
                     SHOW_WATERMARK_FOR_GUESTS: false,
-                    TOOLBAR_BUTTONS: toolbarButtons
+                    TOOLBAR_BUTTONS: toolbarButtons,
+                    HIDE_INVITE_MORE_HEADER: true
                 },
                 configOverwrite: {
                     disableSimulcast: false
