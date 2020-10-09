@@ -19,8 +19,7 @@
         "avatarSelectionText": "Select your sigil",
         "headerHtml": "<div class='tst'><p>Welcome to the Inner Sanctum</p><h1>Satanic Temple Virtual HQ</h1>"
     },
-    "avatars": [
-        {
+    "avatars": [{
             "images": [
                 "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
                 "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
@@ -69,8 +68,7 @@
                 "display": false,
                 "text": "📍 {count} exploring"
             },
-            "additionalStats": [
-                {
+            "additionalStats": [{
                     "text": "🎦 {count} hatewatching",
                     "match": ["frontParlor"]
                 },
