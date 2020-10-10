@@ -4,7 +4,7 @@
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "startRoom": "cemetery",
-    "videoDisplayName": "Fellow Satanist",
+    "videoDisplayName": "Satanist",
     "moderation": {
         "moderatorEmails": [
             "vhq@thesatanictemple.com"
@@ -17,7 +17,7 @@
         "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your sigil",
-        "headerHtml": "<div class='tst'><p>Welcome to the Inner Sanctum</p><h1>The Satanic Temple Virtual Headquarters</h1>"
+        "headerHtml": "<div class='tst'><p>Welcome Home/p><h1>The Satanic Temple Virtual Headquarters</h1>"
     },
     "avatars": [{
             "images": [
@@ -69,16 +69,12 @@
                 "text": "📍 {count} exploring"
             },
             "additionalStats": [{
-                    "text": "🎦 {count} hatewatching",
-                    "match": ["frontParlor"]
-                },
-                {
                     "text": "📕 {count} reading",
                     "match": ["library"]
                 },
                 {
                     "text": "🦇 {count} meeting animals",
-                    "match": ["belfry", "aviary", "sleepingPorch", "den"]
+                    "match": ["belfry", "den"]
                 }
             ]
         }
@@ -89,7 +85,7 @@
         "fromText": "{user} has hexed you!",
         "toText": "Hexed!",
         "unlockText": "You have unlocked the ability to hex",
-        "selfPoke": "Ouch",
+        "selfPoke": "Curses!",
         "unlockAfterMinutes": 0
     }
 }
