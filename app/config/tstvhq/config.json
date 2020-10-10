@@ -69,7 +69,6 @@
                 "text": "📍 {count} exploring"
             },
             "additionalStats": [{
-                {
                     "text": "📕 {count} reading",
                     "match": ["library"]
                 },
