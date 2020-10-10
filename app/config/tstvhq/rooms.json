@@ -53,13 +53,13 @@
             "id": "grandBallroom",
             "name": "Grand Ballroom",
             "type": "IFRAME",
-            "capacity": 20,
+            "capacity": 30,
             "muteRoom": true,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=incrprl&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
             },
-            "description": "Disappear into the night with DJ incrprl, spinning a mysterious and haunting mix of cold wave, witch house, EBM, industrial bass, and other dark electronic sounds. In the liminal space of the incorporeal estate, let the bewitching melodies entrance you to dance until you drop.",
+            "description": "TST Salem's Mercy Maelica spins songs of isolation and despair. 80s/90s goth and industrial, metal, obscure and pop electronica and occasional rap.",
             "directions": {
                 "south": "kitchen"
             },
@@ -180,7 +180,7 @@
             "id": "backParlor",
             "name": "Back Parlor",
             "type": "IFRAME",
-            "capacity": 20,
+            "capacity": 30,
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
             "description": "Lectures from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
@@ -228,7 +228,7 @@
             "id": "belfry",
             "name": "Belfry",
             "type": "IFRAME",
-            "capacity": 10,
+            "capacity": 20,
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Learn more about their work at batworld.org",
             "iframeOptions": {
                 "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
@@ -321,9 +321,9 @@
             "id": "boudoir",
             "name": "Boudoir",
             "type": "JITSI",
-            "capacity": 10,
+            "capacity": 20,
             "muteRoom": false,
-            "description": "An intimate setting.",
+            "description": "An intimate setting for covert conversations about the Satanic Agenda",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
             "directions": {
                 "south": "library"
@@ -363,11 +363,11 @@
         },
         {
             "id": "tstHQ",
-            "name": "TST Virtual HQ Offices",
+            "name": "Infernal Theater",
             "type": "JITSI",
-            "capacity": 10,
+            "capacity": 30,
             "locked": false,
-            "description": "A place for business",
+            "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
             "directions": {
                 "west": "staircase",
                 "north": "belfry"
@@ -410,7 +410,7 @@
             "id": "cemetery",
             "name": "Cemetery",
             "type": "IFRAME",
-            "capacity": 15,
+            "capacity": 20,
             "description": "There's room for all of us to rest here",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/cemeterygreen.jpg",
             "iframeOptions": {
@@ -460,7 +460,7 @@
             "name": "Crematorium",
             "type": "JITSI",
             "capacity": 10,
-            "description": "Dungeons and Dragons, anyone?",
+            "description": "Is it a little hot in here?",
             "doorTint": "white",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
             "directions": {
