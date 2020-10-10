@@ -127,7 +127,8 @@ class JitsiVideo extends Component {
                     DEFAULT_REMOTE_DISPLAY_NAME: Config.videoDisplayName,
                     SHOW_WATERMARK_FOR_GUESTS: false,
                     TOOLBAR_BUTTONS: toolbarButtons,
-                    HIDE_INVITE_MORE_HEADER: true
+                    HIDE_INVITE_MORE_HEADER: true,
+                    DISABLE_JOIN_LEAVE_NOTIFICATIONS: true
                 },
                 configOverwrite: {
                     disableSimulcast: false
