@@ -13,11 +13,31 @@ class JitsiVideo extends Component {
             hasLoaded: false
         }
         this.toolbarButtons = [
-            'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
-            'fodeviceselection', 'profile', 'chat', 'recording',
-            'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
-            'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-            'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone',
+            'microphone',           // toggle sound on and off
+            'camera',               // toggle video on and off
+            'closedcaptions',
+            'desktop',              // share screen
+            'fullscreen',           // full screen
+            'fodeviceselection',    // more actions > settings > devices
+            'profile',              // more actions > settings > profile
+            'chat',                 // open/close text chat
+            // 'recording',         // start recording
+            'livestreaming',        // start a live stream
+            'etherpad',
+            'sharedvideo',          // share a youtube video
+            'settings',             // additional settings
+            'raisehand',            // raise hand
+            'videoquality',         // manage video quality
+            'filmstrip',
+            // 'invite',            // invite more people (off by default to hide jitsi room URLs)
+            // 'feedback',          // send feedback to jitsi
+            'stats',                // speaker stats
+            'shortcuts',            // shortcut to settings
+            'tileview',
+            'videobackgroundblur',
+            'download',
+            // 'help',              // link to jitsi meet handbook
+            'mute-everyone',        // yup, you can mute everyone! but they can unmute themselves
             'e2ee'
         ]
 
@@ -87,6 +107,12 @@ class JitsiVideo extends Component {
             if (this.props.jitsiData.hideVideo) {
                 toolbarButtons = _.without(toolbarButtons, 'camera')
             }
+            // remove screensharing, youtube video sharing, and livestreaming
+            if (this.props.jitsiData.disableSharing) {
+                toolbarButtons = _.without(toolbarButtons, 'desktop', 'sharedvideo', 'livestreaming')
+            }
+
+            console.log(toolbarButtons, this.props.jitsiData)
 
             let domain = Config.jitsiServerUrl
             if (Config.overrideJitsiServerUrlWithWindowHost) {
@@ -98,7 +124,7 @@ class JitsiVideo extends Component {
                 roomName: this.props.jitsiData.roomName,
                 parentNode: document.getElementById('jitsi-container'),
                 interfaceConfigOverwrite: {
-                    filmStripOnly: true,
+                    // filmStripOnly: true,
                     SHOW_JITSI_WATERMARK: false,
                     DEFAULT_REMOTE_DISPLAY_NAME: Config.videoDisplayName,
                     SHOW_WATERMARK_FOR_GUESTS: false,
