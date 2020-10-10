@@ -112,8 +112,6 @@ class JitsiVideo extends Component {
                 toolbarButtons = _.without(toolbarButtons, 'desktop', 'sharedvideo', 'livestreaming')
             }
 
-            console.log(toolbarButtons, this.props.jitsiData)
-
             let domain = Config.jitsiServerUrl
             if (Config.overrideJitsiServerUrlWithWindowHost) {
                 domain = `${window.location.host}/jitsi`
