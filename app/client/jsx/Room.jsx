@@ -59,7 +59,7 @@ class Room extends Component {
         this.socketApi.startPinging(this.props.user.id)
         this.socketApi.on('user-event', this.props.updateUsers.bind(this))
         this.socketApi.on(`poke-${this.props.user.id}`, this.handlePoke.bind(this))
-        
+
         this.computePokeUnlockedState()
     }
 
@@ -82,7 +82,8 @@ class Room extends Component {
             avatar: this.props.user.avatar,
             roomName: this.state.room,
             muteRoom: roomData.muteRoom,
-            hideVideo: roomData.hideVideo
+            hideVideo: roomData.hideVideo,
+            disableSharing: roomData.type === 'IFRAME'
         }
         return {
             ART: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
@@ -259,7 +260,7 @@ class Room extends Component {
                     isOpen={!!this.state.modal}
                     onRequestClose={() => this.handleModalChange(null)}
                     className={`${this.state.modal}-modal`}>
-                        <ModalFactory room={this} modal={this.state.modal} />
+                    <ModalFactory room={this} modal={this.state.modal} />
                 </Modal>
                 {!!this.state.pokeData && <PokeNotification {...this.state.pokeData} />}
             </div>
@@ -270,5 +271,5 @@ class Room extends Component {
 export default connect(state => state, {
     updateUsers: reducers.updateUsersActionCreator,
     updateCurrentRoom: reducers.updateCurrentRoomActionCreator,
-    unlockPoking: reducers.unlockPokingActionCreator 
+    unlockPoking: reducers.unlockPokingActionCreator
 })(Room)
