@@ -1,32 +1,32 @@
 {
     "events": [{
-            "name": "Salem Walking Tours",
-            "description": "Salem's history from a Satanic perspective by local Satanic Salem witch Thomas Vallor. This is an hour long presentation.",
+            "name": "Satanic Symbolism",
+            "description": "Where do the symbols of Satanism come from and what exactly do they mean? Lecture by local Satanic Salem witch Thomas Vallor. This is an hour long presentation.",
             "room": "backParlor",
             "start": "2020-10-09T22:00:00-04:00",
             "end": "2020-10-09T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
         {
-            "name": "Satanic Dungeons & Dragons",
-            "description": "DM: Christopher Robichaud ... Friends and members of the Satanic Temple play the popular version of Dungeons & Dragons in the 1980s--First Edition D&D--in the way that everyone was afraid the game was being played back then. Players will get a chance to enjoy an expanded version of the Judges Guild classic old-school module, Inferno (by Geoffry O. Dale), in which characters must descend into the depths of Dante's Hell. But this time around, it's because they're on a rescue mission to release the Dark Prince from his frozen prison.",
-            "room": "crematorium",
-            "start": "2020-10-09T20:00:00-04:00",
-            "end": "2020-10-10T00:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/front parlor movie.jpg"
-        },
-        {
-            "name": "See Food Spooktacular",
-            "description": "Satanic Chef Adam Dodge shares cooking tips and tricks. In my introductory class learn how to shuck oysters, make Tuna tar tar and crab sofritto.",
+            "name": "Korean Street Food Cooking",
+            "description": "Satanic Chef Adam Dodge shares cooking tips and tricks on how to cook Korean Pancakes the traditional way and a dipping sauce that will go along and some really awesome lettuce wraps.",
             "room": "kitchen",
             "start": "2020-10-09T20:00:00-04:00",
             "end": "2020-10-09T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
         {
-            "name": "DJ incrprl",
-            "description": "Film of the day by Lucien Greaves.",
+            "name": "DJ Mercy Maelica",
+            "description": "TST Salem's Mercy Maelica spins songs of isolation and despair. 80s/90s goth and industrial, metal, obscure and pop electronica and occasional rap.",
             "room": "grandBallroom",
+            "start": "2020-10-09T20:00:00-04:00",
+            "end": "2020-10-09T22:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
+        },
+        {
+            "name": "BaphoNet 101: An Introduction to Satanic Social Media",
+            "description": "This room offers a closer look at BaphoNet Antisocial Network. Aria deSatanas gives a short presentation and then will host a short Q and A for all interested.",
+            "room": "Boudoir",
             "start": "2020-10-09T20:00:00-04:00",
             "end": "2020-10-09T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
@@ -49,7 +49,7 @@
         },
         {
             "name": "Down the Rabbit Hole",
-            "description": "Down the rabbit hole...meet Winston and Winona, Ada's beloved rabbits!",
+            "description": "Meet Winston and Winona, Ada's beloved rabbits!",
             "room": "den",
             "start": "2020-10-09T20:00:00-04:00",
             "end": "2020-10-10T00:00:00-04:00",
