@@ -372,7 +372,7 @@
             "name": "Infernal Theater",
             "type": "IFRAME",
             "capacity": 20,
-            "muteRoom"=true,
+            "muteRoom": true,
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
              "iframeOptions": {
