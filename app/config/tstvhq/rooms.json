@@ -262,7 +262,7 @@
             "type": "IFRAME",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/watch?v=_UItI96xdm4&feature=youtu.be"
+                "src": "https://www.youtube.com/embed/_UItI96xdm4"
             },
             "directions": {
                 "west": "library",
