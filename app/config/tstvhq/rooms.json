@@ -127,10 +127,13 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "JITSI",
-            "capacity": 10,
-            "muteRoom": false,
+            "type": "iFrame",
+            "capacity": 50,
+            "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
+             "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
+            },
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
                 "north": "den",
@@ -206,10 +209,13 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "IFRAME",
+            "capacity": 20,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=tstgreyfaction&parent=estate.tstvhq.com"
+            },
             "directions": {
                 "east": "backParlor"
             },
@@ -252,8 +258,11 @@
             "name": "Sleeping Porch",
             "capacity": 10,
             "description": "A lovely place to lounge.",
-            "type": "JITSI",
+            "type": "IFRAME",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
+            "iframeOptions": {
+                "src": "https://youtu.be/OGasr2AEKzk"
+            },
             "directions": {
                 "west": "library",
                 "east": "staircase"
@@ -364,10 +373,14 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "JITSI",
-            "capacity": 30,
+            "type": "IFRAME",
+            "capacity": 20,
+            "muteRoom": true,
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
+             "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=karlkasarda&parent=estate.tstvhq.com"
+            },
             "directions": {
                 "west": "staircase",
                 "north": "belfry"
