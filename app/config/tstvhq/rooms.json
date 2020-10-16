@@ -258,8 +258,11 @@
             "name": "Sleeping Porch",
             "capacity": 10,
             "description": "A lovely place to lounge.",
-            "type": "JITSI",
+            "type": "IFRAME",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
+            "iframeOptions": {
+                "src": "https://youtu.be/OGasr2AEKzk"
+            },
             "directions": {
                 "west": "library",
                 "east": "staircase"
