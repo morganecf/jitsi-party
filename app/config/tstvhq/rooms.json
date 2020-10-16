@@ -128,7 +128,7 @@
             "id": "teaRoom",
             "name": "Tea Room",
             "type": "iFrame",
-            "capacity": 20,
+            "capacity": 50,
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
              "iframeOptions": {
