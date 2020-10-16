@@ -57,9 +57,9 @@
             "muteRoom": true,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=LysandraAriella&parent=estate.tstvhq.com"
             },
-            "description": "TST Salem's Mercy Maelica spins songs of isolation and despair. 80s/90s goth and industrial, metal, obscure and pop electronica and occasional rap.",
+            "description": "The Hazy Tomb - DJ set by Lysandra Ariella",
             "directions": {
                 "south": "kitchen"
             },
