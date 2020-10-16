@@ -57,7 +57,7 @@
             "muteRoom": true,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
-                 "src": "https://player.twitch.tv/?channel=LysandraAriella&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=LysandraAriella&parent=estate.tstvhq.com"
             },
             "description": "The Hazy Tomb - DJ set by Lysandra Ariella",
             "directions": {
