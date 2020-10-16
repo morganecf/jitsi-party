@@ -127,11 +127,12 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "iFrame",
+            "type": "IFRAME",
             "capacity": 50,
             "muteRoom": true,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
-             "iframeOptions": {
+            "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
             },
             "description": "Cream or sugar? Come have a nice spot of tea.",
