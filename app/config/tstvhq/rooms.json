@@ -32,7 +32,7 @@
             "id": "powderRoom",
             "name": "Powder Room",
             "type": "JITSI",
-            "capacity": 10,
+            "capacity": 20,
             "doorTint": "pink",
             "description": "Freshen up with a few friends.",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/powder room.jpg",
@@ -53,8 +53,9 @@
             "id": "grandBallroom",
             "name": "Grand Ballroom",
             "type": "IFRAME",
-            "capacity": 30,
+            "capacity": 100,
             "muteRoom": true,
+            "hideVideo": true,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=LysandraAriella&parent=estate.tstvhq.com"
@@ -128,12 +129,12 @@
             "id": "teaRoom",
             "name": "Tea Room",
             "type": "IFRAME",
-            "capacity": 50,
+            "capacity": 100,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=lennyflatley&parent=estate.tstvhq.com"
             },
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
@@ -158,7 +159,7 @@
             "id": "den",
             "name": "The Den",
             "type": "IFRAME",
-            "capacity": 10,
+            "capacity": 20,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels005green.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=bunheroes&parent=estate.tstvhq.com"
@@ -184,8 +185,9 @@
             "id": "backParlor",
             "name": "Back Parlor",
             "type": "IFRAME",
-            "capacity": 30,
+            "capacity": 100,
             "muteRoom": true,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
             "description": "Lectures from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "iframeOptions": {
@@ -211,7 +213,9 @@
             "id": "ritualChamber",
             "name": "Ritual Chamber",
             "type": "IFRAME",
-            "capacity": 20,
+            "capacity": 100,
+            "muteRoom": true,
+            "hideVideo": true,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
             "iframeOptions": {
@@ -330,11 +334,15 @@
         {
             "id": "boudoir",
             "name": "Boudoir",
-            "type": "JITSI",
-            "capacity": 20,
-            "muteRoom": false,
+            "type": "IFRAME",
+            "capacity": 100,
+            "muteRoom": true,
+            "hideVideo": true,
             "description": "An intimate setting for covert conversations about the Satanic Agenda",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
+            },
             "directions": {
                 "south": "library"
             },
@@ -375,12 +383,13 @@
             "id": "tstHQ",
             "name": "Infernal Theater",
             "type": "IFRAME",
-            "capacity": 20,
+            "capacity": 100,
             "muteRoom": true,
+            "hideVideo": true,
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
              "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=karlkasarda&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=faeinthewae&parent=estate.tstvhq.com"
             },
             "directions": {
                 "west": "staircase",
