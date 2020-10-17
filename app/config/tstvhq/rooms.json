@@ -331,11 +331,15 @@
         {
             "id": "boudoir",
             "name": "Boudoir",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 20,
-            "muteRoom": false,
+            "muteRoom": true,
+            "hideVideo": true,
             "description": "An intimate setting for covert conversations about the Satanic Agenda",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+             "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
+            },
             "directions": {
                 "south": "library"
             },
