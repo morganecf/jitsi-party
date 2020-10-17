@@ -64,7 +64,7 @@
             "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
         },
         {
-            "name": "DJ set- Mercy Maelica",
+            "name": "DJ Mercy",
             "description": "Mercy spins Heresy and Blasphemy from TST Salem, MA",
             "room": "boudoir",
             "start": "2020-10-17T22:00:00-04:00",
@@ -72,9 +72,17 @@
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
-            "name": "GOATS!",
+            "name": "Infernal Goat Nursery",
             "description": "Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
+            "start": "2020-10-17T20:00:00-04:00",
+            "end": "2020-10-17T23:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
+        },
+        {
+            "name": "the incorporeal estate",
+            "description": "Disappear into the night with DJ incrprl, spinning a mysterious and haunting mix of cold wave, witch house, EBM, industrial bass, and other dark electronic sounds. In the liminal space of the incorporeal estate, let the bewitching melodies entrance you to dance until you drop.",
+            "room": "frontParlor",
             "start": "2020-10-17T20:00:00-04:00",
             "end": "2020-10-17T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
