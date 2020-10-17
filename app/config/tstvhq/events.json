@@ -19,8 +19,8 @@
             "name": "Salem Cemeteries",
             "description": "Thomas Valor discusses graveyard history and gravestone symbolism from early new England and how it relates to the occult.",
             "room": "backParlor",
-            "start": "2020-10-17T20:00:00-04:00",
-            "end": "2020-10-17T21:00:00-04:00",
+            "start": "2020-10-17T22:00:00-04:00",
+            "end": "2020-10-17T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
                   {
@@ -62,6 +62,14 @@
             "start": "2020-10-17T20:00:00-04:00",
             "end": "2020-10-17T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
+        },
+        {
+            "name": "DJ set- Mercy Maelica",
+            "description": "Mercy spins Heresy and Blasphemy from TST Salem, MA",
+            "room": "boudoir",
+            "start": "2020-10-17T22:00:00-04:00",
+            "end": "2020-10-17T23:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
             "name": "GOATS!",
