@@ -1,82 +1,74 @@
 {
     "events": [{
-            "name": "Grey Faction: The Fight Continues",
-            "description": "Evan Anderson gives a presentation/lecture providing overview of Grey Faction and the path forward.",
+            "name": "Blood Libel: Satanic Panic, QAnon, and Anti-Semitism",
+            "description": "Evan Anderson presents the anti-Semitic roots of Satanic Panic and QAnon.",
             "room": "ritualChamber",
-            "start": "2020-10-16T20:00:00-04:00",
-            "end": "2020-10-16T21:00:00-04:00",
+            "start": "2020-10-17T20:00:00-04:00",
+            "end": "2020-10-17T21:00:00-04:00",
         "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
                   {
-            "name": "From the ISSTD to QAnon: mapping the evolution of the Satanic Panic",
-            "description": "Presentation/lecture on the propagation of Satanic Panic conspiracy theories in QAnon.",
+            "name": "Ted Gunderson and The Finders",
+            "description": "Lenny Flatley discusses Ted Gunderson and the Finders and the long, strange trip from the Satanic Panic to QAnon.",
             "room": "teaRoom",
-            "start": "2020-10-16T21:00:00-04:00",
-            "end": "2020-10-16T22:00:00-04:00",
+            "start": "2020-10-17T21:00:00-04:00",
+            "end": "2020-10-17T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
                   {
-            "name": "Burning of the Green Witch",
-            "description": "Burning of the Green Witch... aka the social history of Absinthe with Karl Kasarda.",
+            "name": "La Bete of Satan",
+            "description": "An early satanic panic based around the Beast of Guevudan Lecture and Q&A with Zee Kay.",
             "room": "tstHQ",
-            "start": "2020-10-16T21:00:00-04:00",
-            "end": "2020-10-16T22:00:00-04:00",
+            "start": "2020-10-17T22:00:00-04:00",
+            "end": "2020-10-17T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
-            "name": "Pasta Night",
-            "description": "Creating the perfect pasta dish using dried pasta and seasonal ingredients with The Satanic Chef.",
+            "name": "Pumpkin Soup",
+            "description": "Learn how to cook a really awesome seasonal pumpkin soup as The Satanic Chef takes you through the steps to make this at home.",
             "room": "kitchen",
-            "start": "2020-10-16T20:00:00-04:00",
-            "end": "2020-10-16T21:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
-        },
-               {
-            "name": "Dungeons & Dragons",
-            "description": "Go through the askew painting on the Grand Staircase and wind through the catacombs to the abandoned crematorium. Friends and members of the Satanic Temple play the popular version of Dungeons & Dragons in the 1980s--First Edition D&D--in the way that everyone was afraid the game was being played back then. Players will get a chance to enjoy an expanded version of the Judges Guild classic old-school module, Inferno (by Geoffry O. Dale), in which characters must descend into the depths of Dante's Hell. But this time around, it's because they're on a rescue mission to release the Dark Prince from his frozen prison.",
-            "room": "crematorium",
-            "start": "2020-10-16T20:00:00-04:00",
-            "end": "2020-10-16T22:00:00-04:00",
+            "start": "2020-10-17T20:00:00-04:00",
+            "end": "2020-10-17T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
         {
             "name": "The Hazy Tomb",
             "description": "DJ Lysandra Ariella",
             "room": "grandBallroom",
-            "start": "2020-10-16T22:00:00-04:00",
-            "end": "2020-10-16T23:59:00-04:00",
+            "start": "2020-10-17T20:00:00-04:00",
+            "end": "2020-10-17T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
             "name": "Bats in the Belfry",
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas that cares for these sweethearts. Learn more about their work at batworld.org",
             "room": "belfry",
-            "start": "2020-10-16T20:00:00-04:00",
-            "end": "2020-10-16T23:59:00-04:00",
+            "start": "2020-10-17T20:00:00-04:00",
+            "end": "2020-10-17T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/bats.jpg"
         },
         {
             "name": "Library",
             "description": "The Satanic Panic Archive Library is open all night. Many of these texts exist nowhere else in the world.",
             "room": "library",
-            "start": "2020-10-16T20:00:00-04:00",
-            "end": "2020-10-16T23:59:00-04:00",
+            "start": "2020-10-17T20:00:00-04:00",
+            "end": "2020-10-17T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
         },
         {
             "name": "GOATS!",
             "description": "Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
-            "start": "2020-10-16T20:00:00-04:00",
-            "end": "2020-10-16T23:59:00-04:00",
+            "start": "2020-10-17T20:00:00-04:00",
+            "end": "2020-10-17T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
         {
             "name": "Down the Rabbit Hole",
             "description": "Meet Winston and Winona, Ada's beloved rabbits!",
             "room": "den",
-            "start": "2020-10-16T20:00:00-04:00",
-            "end": "2020-10-16T23:59:00-04:00",
+            "start": "2020-10-17T20:00:00-04:00",
+            "end": "2020-10-17T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/cats.jpg"
         }
     ]
