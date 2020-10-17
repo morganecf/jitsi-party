@@ -55,6 +55,7 @@
             "type": "IFRAME",
             "capacity": 30,
             "muteRoom": true,
+            "hideVideo": true,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=LysandraAriella&parent=estate.tstvhq.com"
@@ -128,12 +129,12 @@
             "id": "teaRoom",
             "name": "Tea Room",
             "type": "IFRAME",
-            "capacity": 50,
+            "capacity": 30,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=lennyflatley&parent=estate.tstvhq.com"
             },
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
@@ -380,7 +381,7 @@
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
              "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=karlkasarda&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=faeinthewae&parent=estate.tstvhq.com"
             },
             "directions": {
                 "west": "staircase",
