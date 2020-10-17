@@ -187,7 +187,7 @@
             "type": "IFRAME",
             "capacity": 100,
             "muteRoom": true,
-            "hideVideo" true,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
             "description": "Lectures from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "iframeOptions": {
@@ -385,7 +385,7 @@
             "type": "IFRAME",
             "capacity": 100,
             "muteRoom": true,
-            "hideVideo" true,
+            "hideVideo": true,
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
              "iframeOptions": {
