@@ -1,21 +1,21 @@
 {
     "events": [{
             "name": "MENTAL HEALTH ABUSE & MALPRACTICE",
-            "description": "Grey Faction with Lucien Greaves. On the abuse and malpractice in the mental health industry.",
+            "description": "Grey Faction with Lucien Greaves. On abuse and malpractice in the mental health industry.",
             "room": "tstHQ",
             "start": "2020-10-23T20:00:00-04:00",
             "end": "2020-10-23T21:00:00-04:00",
         "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
-                  {
+        {
             "name": "A RUMOR OF DEVILS",
-            "description": "Grey Faction with Chalice Blythe. Presentation highlighting the "A Rumor of Devils" project with Chalice Blythe.",
+            "description": "Grey Faction with Chalice Blythe. Presentation highlighting the A Rumor of Devils project.",
             "room": "boudoir",
             "start": "2020-10-23T21:00:00-04:00",
             "end": "2020-10-23T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
-               {
+        {
             "name": "SATANIC SALEM WALKING TOUR",
             "description": "A live walking tour of Salem, MA: Salem's history from a Satanic perspective.",
             "room": "backParlor",
@@ -29,7 +29,8 @@
             "room": "kitchen",
             "start": "2020-10-23T20:00:00-04:00",
             "end": "2020-10-23T21:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg" 
+        },
         {
             "name": "The Hazy Tomb",
             "description": "DJ Lysandra Ariella",
@@ -64,7 +65,7 @@
         },
         {
             "name": "Down the Rabbit Hole",
-            "description": "Today we'll see if the kids like pumpkin!",
+            "description": "Winston and Winona: Ideal Lagomorphs",
             "room": "den",
             "start": "2020-10-23T20:00:00-04:00",
             "end": "2020-10-23T23:59:00-04:00",
