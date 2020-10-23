@@ -102,13 +102,10 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 20,
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=incrprl&parent=estate.tstvhq.com"
-            },
             "description": "Welcome Home.",
             "directions": {
                 "east": "teaRoom",
@@ -131,14 +128,11 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 100,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=lennyflatley&parent=estate.tstvhq.com"
-            },
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
                 "north": "den",
@@ -222,7 +216,7 @@
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=tstgreyfaction&parent=estate.tstvhq.com"
+                "src": "https://www.youtube.com/embed/irar6G8srgc&parent=estate.tstvhq.com"
             },
             "directions": {
                 "east": "backParlor"
@@ -385,15 +379,12 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 100,
             "muteRoom": true,
             "hideVideo": true,
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
-             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=faeinthewae&parent=estate.tstvhq.com"
-            },
             "directions": {
                 "west": "staircase",
                 "north": "belfry"
