@@ -102,13 +102,10 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 20,
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=incrprl&parent=estate.tstvhq.com"
-            },
             "description": "Welcome Home.",
             "directions": {
                 "east": "teaRoom",
@@ -293,7 +290,7 @@
             "type": "JITSI",
             "capacity": 10,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
-            "description": "Beautiful plumage, the norwegian blue.",
+            "description": "Beautiful plumage, the Norwegian Blue.",
             "directions": {
                 "east": "library"
             },
@@ -344,7 +341,7 @@
             "description": "An intimate setting for covert conversations about the Satanic Agenda",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=chaliceinpains"
+                "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
             },
             "directions": {
                 "south": "library"
