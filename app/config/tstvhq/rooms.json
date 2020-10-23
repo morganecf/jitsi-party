@@ -60,7 +60,7 @@
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=LysandraAriella&parent=estate.tstvhq.com"
             },
-            "description": "The Hazy Tomb - DJ set by Lysandra Ariella",
+            "description": "What tasteful candelabras!",
             "directions": {
                 "south": "kitchen"
             },
@@ -80,7 +80,7 @@
             "name": "Grand Staircase",
             "type": "IMAGEMAP",
             "imageMapOptions": "grand-staircase-map",
-            "description": "Try interacting with the staircase.",
+            "description": "What's on the staircase?",
             "directions": {
                 "north": "library",
                 "east": "painting",
