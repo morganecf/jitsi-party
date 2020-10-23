@@ -2,7 +2,7 @@
     "events": [{
             "name": "MENTAL HEALTH ABUSE & MALPRACTICE",
             "description": "Grey Faction with Lucien Greaves. On abuse and malpractice in the mental health industry.",
-            "room": "tstHQ",
+            "room": "ritualChamber",
             "start": "2020-10-23T20:00:00-04:00",
             "end": "2020-10-23T21:00:00-04:00",
         "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
