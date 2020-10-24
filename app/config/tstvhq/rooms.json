@@ -3,7 +3,7 @@
             "id": "kitchen",
             "name": "Kitchen",
             "type": "IFRAME",
-            "capacity": 20,
+            "capacity": 100,
             "doorTint": "#00D089",
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels009-1green.2jpg.jpg",
@@ -104,7 +104,7 @@
             "name": "Front Parlor",
             "type": "JITSI",
             "capacity": 20,
-            "muteRoom": true,
+            "muteRoom": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
             "description": "Welcome Home.",
             "directions": {
@@ -129,9 +129,9 @@
             "id": "teaRoom",
             "name": "Tea Room",
             "type": "JITSI",
-            "capacity": 100,
-            "muteRoom": true,
-            "hideVideo": true,
+            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
@@ -210,13 +210,13 @@
             "id": "ritualChamber",
             "name": "Ritual Chamber",
             "type": "IFRAME",
-            "capacity": 100,
+            "capacity": 200,
             "muteRoom": true,
             "hideVideo": true,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/irar6G8srgc"
+                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
             },
             "directions": {
                 "east": "backParlor"
@@ -285,7 +285,7 @@
             "id": "aviary",
             "name": "Aviary",
             "type": "JITSI",
-            "capacity": 10,
+            "capacity": 2,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
             "description": "Beautiful plumage, the Norwegian Blue.",
             "directions": {
@@ -338,7 +338,7 @@
             "description": "An intimate setting for covert conversations about the Satanic Agenda",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
             },
             "directions": {
                 "south": "library"
