@@ -129,7 +129,7 @@
             "id": "teaRoom",
             "name": "Tea Room",
             "type": "JITSI",
-            "capacity": 100,
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
