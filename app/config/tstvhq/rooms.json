@@ -54,7 +54,7 @@
             "name": "Grand Ballroom",
             "type": "IFRAME",
             "capacity": 100,
-            "muteRoom": false,
+            "muteRoom": true,
             "hideVideo": false,
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels011green.jpg",
             "iframeOptions": {
