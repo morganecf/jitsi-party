@@ -102,10 +102,13 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 20,
-            "muteRoom": false,
+            "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=truverou&parent=estate.tstvhq.com"
+          },
             "description": "Welcome Home.",
             "directions": {
                 "east": "teaRoom",
@@ -285,7 +288,7 @@
             "id": "aviary",
             "name": "Aviary",
             "type": "JITSI",
-            "capacity": 2,
+            "capacity": 5,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
             "description": "Beautiful plumage, the Norwegian Blue.",
             "directions": {
