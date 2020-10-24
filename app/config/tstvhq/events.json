@@ -1,74 +1,82 @@
 {
     "events": [{
-            "name": "MENTAL HEALTH ABUSE & MALPRACTICE",
+            "name": "Arguments Against Mental Healthcare Pseudoscience",
             "description": "Grey Faction with Lucien Greaves. On abuse and malpractice in the mental health industry.",
             "room": "ritualChamber",
-            "start": "2020-10-23T20:00:00-04:00",
-            "end": "2020-10-23T21:00:00-04:00",
+            "start": "2020-10-24T23:00:00-04:00",
+            "end": "2020-10-24T23:59:00-04:00",
         "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
         {
-            "name": "A RUMOR OF DEVILS",
-            "description": "Grey Faction with Chalice Blythe. Presentation highlighting the A Rumor of Devils project.",
+            "name": "I Love Luci(fer): A Crash Course on Milton's Paradise Lost",
+            "description": "How biblical fanfiction helped Lucifer become such an important guy.",
             "room": "boudoir",
             "start": "2020-10-23T21:00:00-04:00",
             "end": "2020-10-23T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
-            "name": "SATANIC SALEM WALKING TOUR",
-            "description": "A live walking tour of Salem, MA: Salem's history from a Satanic perspective.",
-            "room": "backParlor",
-            "start": "2020-10-23T22:00:00-04:00",
-            "end": "2020-10-23T23:00:00-04:00",
+            "name": "Live from Salem: Songs of Heresy and Blasphemy",
+            "description": "with DJ Mercy.",
+            "room": "boudoir",
+            "start": "2020-10-23T21:00:00-04:00",
+            "end": "2020-10-23T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
-            "name": "FUN WITH VEGETABLES",
-            "description": "We will be cooking some organic seasonal produce that can be prepared in your kitchen.",
+            "name": "SALEM'S CEMETERIES",
+            "description": "Graveyard history and gravestone symbolism from early new England and how it relates to the occult with Thomas Vallor.",
+            "room": "backParlor",
+            "start": "2020-10-24T22:00:00-04:00",
+            "end": "2020-10-24T23:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
+        },
+        {
+            "name": "MAKING HUMMUS FUN TIME",
+            "description": "We will be making a traditional hummus that will go along with a protein of my choice.",
             "room": "kitchen",
-            "start": "2020-10-23T20:00:00-04:00",
-            "end": "2020-10-23T21:00:00-04:00",
+            "start": "2020-10-24T20:00:00-04:00",
+            "end": "2020-10-24T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg" 
         },
         {
-            "name": "The Hazy Tomb",
+            "name": "THE HAZY TOMB",
             "description": "DJ Lysandra Ariella",
             "room": "grandBallroom",
-            "start": "2020-10-23T20:00:00-04:00",
-            "end": "2020-10-23T23:59:00-04:00",
+            "start": "2020-10-24T20:00:00-04:00",
+            "end": "2020-10-24T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
             "name": "Bats in the Belfry",
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas that cares for these sweethearts. Learn more about their work at batworld.org",
             "room": "belfry",
-            "start": "2020-10-23T20:00:00-04:00",
-            "end": "2020-10-23T23:59:00-04:00",
+            "start": "2020-10-24T20:00:00-04:00",
+            "end": "2020-10-24T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/bats.jpg"
         },
         {
             "name": "Library",
             "description": "The Satanic Panic Archive Library is open all night. Many of these texts exist nowhere else in the world.",
             "room": "library",
-            "start": "2020-10-23T20:00:00-04:00",
-            "end": "2020-10-23T23:59:00-04:00",
+            "start": "2020-10-24T20:00:00-04:00",
+            "end": "2020-10-24T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
         },
         {
             "name": "Infernal Goat Nursery",
             "description": "Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
-            "start": "2020-10-23T20:00:00-04:00",
-            "end": "2020-10-23T23:59:00-04:00",
+            "start": "2020-10-24T20:00:00-04:00",
+            "end": "2020-10-24T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
         {
             "name": "Down the Rabbit Hole",
             "description": "Winston and Winona: Ideal Lagomorphs",
             "room": "den",
-            "start": "2020-10-23T20:00:00-04:00",
-            "end": "2020-10-23T23:59:00-04:00",
+            "start": "2020-10-24T20:00:00-04:00",
+            "end": "2020-10-24T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/cats.jpg"
         }
     ]
