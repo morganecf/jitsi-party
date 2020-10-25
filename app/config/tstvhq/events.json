@@ -1,16 +1,9 @@
 {
-    "events": [{
-            "name": "Arguments Against Mental Healthcare Pseudoscience",
-            "description": "Grey Faction with Lucien Greaves. On abuse and malpractice in the mental health industry.",
-            "room": "ritualChamber",
-            "start": "2020-10-24T23:00:00-04:00",
-            "end": "2020-10-24T23:59:00-04:00",
-        "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
-        },
+    "events": [
         {
-            "name": "I Love Luci(fer): A Crash Course on Milton's Paradise Lost",
-            "description": "How biblical fanfiction helped Lucifer become such an important guy.",
-            "room": "frontParlor",
+            "name": "Satanic Panic Sunday",
+            "description": "Satanic Panic Sunday is a compilation of archived videos, presentations, and outright lunacy from the heart of the Satanic Panic - Grey Faction",
+            "room": "tstHQ",
             "start": "2020-10-24T21:00:00-04:00",
             "end": "2020-10-24T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
@@ -24,16 +17,16 @@
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
-            "name": "SALEM'S CEMETERIES",
-            "description": "Graveyard history and gravestone symbolism from early new England and how it relates to the occult with Thomas Vallor.",
+            "name": "WTF is Witchcraft",
+            "description": "Witchcraft for atheists. Everything from its ancient roots to modern branches. -Thomas Vallor",
             "room": "backParlor",
             "start": "2020-10-24T22:00:00-04:00",
             "end": "2020-10-24T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
-            "name": "MAKING HUMMUS FUN TIME",
-            "description": "We will be making a traditional hummus that will go along with a protein of my choice.",
+            "name": "Sunday Supper",
+            "description": "Adam (Satanic Chef) will be educating on the basics of how to make the perfect tomato sauce, how to make the best meatballs with their choice of protein and a baked ziti with an awesome Caesar salad.",
             "room": "kitchen",
             "start": "2020-10-24T20:00:00-04:00",
             "end": "2020-10-24T21:00:00-04:00",
