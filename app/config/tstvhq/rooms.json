@@ -132,7 +132,7 @@
             "id": "teaRoom",
             "name": "Tea Room",
             "type": "JITSI",
-            "capacity": 20,
+            "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
@@ -187,7 +187,7 @@
             "type": "IFRAME",
             "capacity": 100,
             "muteRoom": true,
-            "hideVideo": true,
+            "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
             "description": "Lectures from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
             "iframeOptions": {
@@ -212,10 +212,10 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "IFRAME",
-            "capacity": 200,
-            "muteRoom": true,
-            "hideVideo": true,
+            "type": "JITSI",
+            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
             "iframeOptions": {
@@ -337,7 +337,7 @@
             "type": "IFRAME",
             "capacity": 100,
             "muteRoom": true,
-            "hideVideo": true,
+            "hideVideo": false,
             "description": "An intimate setting for covert conversations about the Satanic Agenda",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
             "iframeOptions": {
@@ -382,12 +382,15 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 100,
-            "muteRoom": true,
-            "hideVideo": true,
+            "muteRoom": false,
+            "hideVideo": false,
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
+            "iframeOptions": {
+                "src": "https://www.youtube.com/playlist?list=PLVo0KZZdkRu0bYUG2XWBJh_7uSTZMLjvW"
+            },
             "directions": {
                 "west": "staircase",
                 "north": "belfry"
