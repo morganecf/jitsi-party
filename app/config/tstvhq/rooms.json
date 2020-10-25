@@ -389,7 +389,7 @@
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
             "iframeOptions": {
-                "src": "https://www.youtube.com/playlist?list=PLVo0KZZdkRu0bYUG2XWBJh_7uSTZMLjvW"
+                "src": "https://www.youtube.com/embed/videoseries?list=PLVo0KZZdkRu0bYUG2XWBJh_7uSTZMLjvW"
             },
             "directions": {
                 "west": "staircase",
