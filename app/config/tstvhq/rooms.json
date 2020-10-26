@@ -212,7 +212,7 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
