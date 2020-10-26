@@ -5,7 +5,7 @@
             "description": "Author Joseph Laycock gives us a short summary on his book with a follow-up live Q&A."            
             "room": "tstHQ",
             "start": "2020-10-26T20:00:00-04:00",
-            "end": "2020-10-26T22:00:00-04:00",
+            "end": "2020-10-26T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
@@ -61,6 +61,30 @@
             "description": "Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
             "start": "2020-10-26T20:00:00-04:00",
+            "end": "2020-10-26T23:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
+        },
+        {
+            "name": "Sacred Tension",
+            "description": "Blogger and Sacred Tension Podcast host Stephen B. Long presents his work with a follow-up live Q&A.",
+            "room": "frontParlor",
+            "start": "2020-10-26T21:00:00-04:00",
+            "end": "2020-10-26T22:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
+        },
+        {
+            "name": "The Happy Satanist",
+            "description": "Pre-recorded lecture by Lilith Starr, NO Q&A.",
+            "room": "sleepingPorch",
+            "start": "2020-10-26T20:00:00-04:00",
+            "end": "2020-10-26T23:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
+        },
+        {
+            "name": "Finding Empowerment: Tenets, Sigils, Rituals",
+            "description": "Author and blogger Aria deSatanas presents her handbook and blog with a follow-up live Q&A.",
+            "room": "ritualChamber",
+            "start": "2020-10-26T23:00:00-04:00",
             "end": "2020-10-26T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         },
