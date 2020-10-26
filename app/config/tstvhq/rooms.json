@@ -107,7 +107,7 @@
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=truverou&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=stephenbradfordlong&parent=estate.tstvhq.com"
           },
             "description": "Welcome Home.",
             "directions": {
@@ -131,17 +131,20 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "IFRAME",
+            "capacity": 100,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
+            "iframeOptions": {
+                "src": "https://www.youtube.com/embed/r2LWC_2O_cU"
+        },
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
                 "north": "den",
                 "west": "frontParlor",
-                "east": "garden"
-            },
+                "east": "garden",
+           },
             "map": {
                 "x": 18,
                 "y": 24,
@@ -158,13 +161,10 @@
         {
             "id": "den",
             "name": "The Den",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 20,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels005green.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=bunheroes&parent=estate.tstvhq.com"
-            },
-            "description": "Meet Winston and Winona, Ada's beloved rabbits.",
+            "description": "Cozy, don't you think?",
             "directions": {
                 "north": "backParlor",
                 "south": "teaRoom"
@@ -219,7 +219,7 @@
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
+                "src": "https://www.twitch.tv/ariadnesatanas"
             },
             "directions": {
                 "east": "backParlor"
@@ -307,7 +307,7 @@
         },
         {
             "id": "library",
-            "name": "Library",
+            "name": "Satanic Archives",
             "type": "IMAGEMAP",
             "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
             "directions": {
@@ -389,7 +389,7 @@
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/videoseries?list=PLVo0KZZdkRu0bYUG2XWBJh_7uSTZMLjvW"
+                "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
             },
             "directions": {
                 "west": "staircase",
