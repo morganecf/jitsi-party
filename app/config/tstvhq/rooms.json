@@ -105,7 +105,7 @@
             "capacity": 10,
             "description": "Check out these good kids! Sponsor one at woodstocksanctuary.org",
             "type": "IFRAME",
-            "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/_UItI96xdm4"
             },
@@ -218,7 +218,6 @@
             "hideVideo": false,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg"
-            },
             "directions": {
                 "east": "backParlor"
             },
@@ -267,7 +266,6 @@
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=schuxfamicom&parent=estate.tstvhq.com"
-            },
             "directions": {
                 "west": "library",
                 "east": "staircase"
