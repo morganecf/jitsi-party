@@ -59,7 +59,7 @@
         {
             "name": "Infernal Goat Nursery",
             "description": "Sponsor one of these good kids at woodstocksanctuary.org",
-            "room": "sleepingPorch",
+            "room": "frontParlor",
             "start": "2020-10-27T20:00:00-04:00",
             "end": "2020-10-27T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
