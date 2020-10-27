@@ -102,13 +102,13 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
+            "capacity": 10,
+            "description": "Check out these good kids! Sponsor one at woodstocksanctuary.org",
             "type": "IFRAME",
-            "capacity": 100,
-            "muteRoom": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels012green.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=stephenbradfordlong&parent=estate.tstvhq.com"
-          },
+                "src": "https://www.youtube.com/embed/_UItI96xdm4"
+            },
             "description": "Welcome Home.",
             "directions": {
                 "east": "teaRoom",
@@ -132,7 +132,7 @@
             "id": "teaRoom",
             "name": "Tea Room",
             "type": "IFRAME",
-            "capacity": 100,
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
@@ -212,15 +212,12 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=ariadnesatanas&parent=estate.tstvhq.com"
-            },
             "directions": {
                 "east": "backParlor"
             },
@@ -261,13 +258,15 @@
         {
             "id": "sleepingPorch",
             "name": "Sleeping Porch",
-            "capacity": 10,
-            "description": "Check out these good kids! Sponsor one at woodstocksanctuary.org",
+            "capacity": 100,
+            "muteRoom": true,
+            "hideVideo": false,  
+            "description": "Hang out and chill",
             "type": "IFRAME",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/_UItI96xdm4"
-            },
+                "src": "https://player.twitch.tv/?channel=schuxfamicom&parent=estate.tstvhq.com"
+              },
             "directions": {
                 "west": "library",
                 "east": "staircase"
@@ -382,19 +381,16 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "IFRAME",
-            "capacity": 100,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
-            },
             "directions": {
                 "west": "staircase",
                 "north": "belfry"
-            },
+                },
             "map": {
                 "x": 24,
                 "y": 7,
@@ -482,7 +478,7 @@
             "id": "crematorium",
             "name": "Crematorium",
             "type": "JITSI",
-            "capacity": 10,
+            "capacity": 50,
             "description": "Is it a little hot in here?",
             "doorTint": "white",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
