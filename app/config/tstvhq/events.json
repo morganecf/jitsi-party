@@ -1,91 +1,67 @@
 {
     "events": [
         {
-            "name": "How The Satanic Temple is Changing the Way We Talk about Religion",
-            "description": "Author Joseph Laycock gives us a short summary on his book with a follow-up live Q&A.",            
-            "room": "tstHQ",
-            "start": "2020-10-26T20:00:00-04:00",
-            "end": "2020-10-26T21:00:00-04:00",
+            "name": "Salem's Cemetaries",
+            "description": "Graveyard history and gravestone symbolism from early new England and how it relates to the occult - with Thomas Vallor.",            
+            "room": "backParlor",
+            "start": "2020-10-27T22:00:00-04:00",
+            "end": "2020-10-27T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
             "name": "Live from Salem: Songs of Heresy and Blasphemy",
             "description": "with DJ Mercy.",
             "room": "boudoir",
-            "start": "2020-10-26T20:00:00-04:00",
+            "start": "2020-10-27T20:00:00-04:00",
+            "end": "2020-10-27T23:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
+        },
+        {
+            "name": "DJ Shux Famicom",
+            "description": "Black box, TVT, Cleopatra, Waxtrax, 4AD.",
+            "room": "sleepingPorch",
+            "start": "2020-10-26T22:00:00-04:00",
             "end": "2020-10-26T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
-            "name": "Satanic Symbolism",
-            "description": "Where do the symbols of Satanism come from and what exactly do they mean? With Thomas Vallor.",
-            "room": "backParlor",
-            "start": "2020-10-26T22:00:00-04:00",
-            "end": "2020-10-26T23:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
-        },
-        {
-            "name": "Ramen Making!",
-            "description": "Another Case of the Mondaze: Come home and relax and take this class on ramen making-- with Satanic Chef.",
+            "name": "Satanic Taco Party",
+            "description": "Teaching how to make tortillas and take people through the process of creating the perfect taco for you or your guests. Vegan, Vegetarian and pescatarian tacos. - The Satanic Chef.",
             "room": "kitchen",
-            "start": "2020-10-26T20:00:00-04:00",
-            "end": "2020-10-26T21:00:00-04:00",
+            "start": "2020-10-27T20:00:00-04:00",
+            "end": "2020-10-27T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg" 
         },
         {
             "name": "THE HAZY TOMB",
             "description": "DJ Lysandra Ariella",
             "room": "grandBallroom",
-            "start": "2020-10-26T20:00:00-04:00",
-            "end": "2020-10-26T23:59:00-04:00",
+            "start": "2020-10-27T20:00:00-04:00",
+            "end": "2020-10-27T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
             "name": "Bats in the Belfry",
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas that cares for these sweethearts. Learn more about their work at batworld.org",
             "room": "belfry",
-            "start": "2020-10-26T20:00:00-04:00",
-            "end": "2020-10-26T23:59:00-04:00",
+            "start": "2020-10-27T20:00:00-04:00",
+            "end": "2020-10-27T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/bats.jpg"
         },
         {
             "name": "Satanic Archives",
             "description": "The Satanic Panic Archive Library is open all night. Many of these texts exist nowhere else in the world.",
             "room": "library",
-            "start": "2020-10-26T20:00:00-04:00",
-            "end": "2020-10-26T23:59:00-04:00",
+            "start": "2020-10-27T20:00:00-04:00",
+            "end": "2020-10-27T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
         },
         {
             "name": "Infernal Goat Nursery",
             "description": "Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
-            "start": "2020-10-26T20:00:00-04:00",
-            "end": "2020-10-26T23:59:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
-        },
-        {
-            "name": "Sacred Tension",
-            "description": "Blogger and Sacred Tension Podcast host Stephen B. Long presents his work with a follow-up live Q&A.",
-            "room": "frontParlor",
-            "start": "2020-10-26T21:00:00-04:00",
-            "end": "2020-10-26T22:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
-        },
-        {
-            "name": "The Happy Satanist",
-            "description": "Pre-recorded lecture by Lilith Starr, NO Q&A.",
-            "room": "teaRoom",
-            "start": "2020-10-26T20:00:00-04:00",
-            "end": "2020-10-26T23:59:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
-        },
-        {
-            "name": "Finding Empowerment: Tenets, Sigils, Rituals",
-            "description": "Author and blogger Aria deSatanas presents her handbook and blog with a follow-up live Q&A.",
-            "room": "ritualChamber",
-            "start": "2020-10-26T23:00:00-04:00",
-            "end": "2020-10-26T23:59:00-04:00",
+            "start": "2020-10-27T20:00:00-04:00",
+            "end": "2020-10-27T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         }
     ]
