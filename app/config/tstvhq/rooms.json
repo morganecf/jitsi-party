@@ -389,7 +389,8 @@
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
             "directions": {
                 "west": "staircase",
-                "north": "belfry",
+                "north": "belfry"
+                },
             "map": {
                 "x": 24,
                 "y": 7,
