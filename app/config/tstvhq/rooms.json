@@ -131,14 +131,11 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tearoom.jpg",
-            "iframeOptions": {
-                "src": "https://www.youtube.com/embed/r2LWC_2O_cU"
-        },
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
                 "north": "den",
