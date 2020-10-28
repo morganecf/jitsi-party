@@ -1,67 +1,67 @@
 {
     "events": [
         {
-            "name": "Salem's Cemetaries",
-            "description": "Graveyard history and gravestone symbolism from early new England and how it relates to the occult - with Thomas Vallor.",            
+            "name": "Satanic Salem Walking Tour",
+            "description": "Salem's history from a Satanic perspective with Thomas Vallor.",            
             "room": "backParlor",
-            "start": "2020-10-27T22:00:00-04:00",
-            "end": "2020-10-27T23:00:00-04:00",
+            "start": "2020-10-28T23:00:00-04:00",
+            "end": "2020-10-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
             "name": "Live from Salem: Songs of Heresy and Blasphemy",
             "description": "with DJ Mercy.",
             "room": "boudoir",
-            "start": "2020-10-27T20:00:00-04:00",
-            "end": "2020-10-27T23:59:00-04:00",
+            "start": "2020-10-28T20:00:00-04:00",
+            "end": "2020-10-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
-            "name": "DJ Shux Famicom",
-            "description": "Black box, TVT, Cleopatra, Waxtrax, 4AD.",
-            "room": "sleepingPorch",
-            "start": "2020-10-27T22:00:00-04:00",
-            "end": "2020-10-27T23:59:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
-        },
-        {
-            "name": "Satanic Taco Party",
-            "description": "Teaching how to make tortillas and take people through the process of creating the perfect taco for you or your guests. Vegan, Vegetarian and pescatarian tacos. - The Satanic Chef.",
+            "name": "Chef's Choice",
+            "description": "TBA - The Satanic Chef.",
             "room": "kitchen",
-            "start": "2020-10-27T20:00:00-04:00",
-            "end": "2020-10-27T21:00:00-04:00",
+            "start": "2020-10-28T20:00:00-04:00",
+            "end": "2020-10-28T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg" 
         },
         {
             "name": "THE HAZY TOMB",
             "description": "DJ Lysandra Ariella",
             "room": "grandBallroom",
-            "start": "2020-10-27T20:00:00-04:00",
-            "end": "2020-10-27T23:59:00-04:00",
+            "start": "2020-10-28T20:00:00-04:00",
+            "end": "2020-10-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/live music.jpg"
         },
         {
             "name": "Bats in the Belfry",
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas that cares for these sweethearts. Learn more about their work at batworld.org",
             "room": "belfry",
-            "start": "2020-10-27T20:00:00-04:00",
-            "end": "2020-10-27T23:59:00-04:00",
+            "start": "2020-10-28T20:00:00-04:00",
+            "end": "2020-10-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/bats.jpg"
         },
         {
             "name": "Satanic Archives",
             "description": "The Satanic Panic Archive Library is open all night. Many of these texts exist nowhere else in the world.",
             "room": "library",
-            "start": "2020-10-27T20:00:00-04:00",
-            "end": "2020-10-27T23:59:00-04:00",
+            "start": "2020-10-28T20:00:00-04:00",
+            "end": "2020-10-28T23:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
+        },
+        {
+            "name": "Drag Demons & Resurrected Reveries",
+            "description": "A dramatic presentation of created creatures and their tales by Disasterina & Ave Rose",
+            "room": "ritualChamber",
+            "start": "2020-10-28T20:00:00-04:00",
+            "end": "2020-10-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/library.jpg"
         },
         {
             "name": "Infernal Goat Nursery",
             "description": "Sponsor one of these good kids at woodstocksanctuary.org",
-            "room": "frontParlor",
-            "start": "2020-10-27T20:00:00-04:00",
-            "end": "2020-10-27T23:59:00-04:00",
+            "room": "sleepingPorch",
+            "start": "2020-10-28T20:00:00-04:00",
+            "end": "2020-10-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/back parlor lecture.jpg"
         }
     ]
