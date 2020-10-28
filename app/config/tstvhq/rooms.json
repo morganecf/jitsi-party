@@ -209,12 +209,15 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "JITSI",
-            "capacity": 20,
-            "muteRoom": false,
+            "type": "IFRAME",
+            "capacity": 200,
+            "muteRoom": true,
             "hideVideo": false,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=disasterina&parent=estate.tstvhq.com"
+            }, 
             "directions": {
                 "east": "backParlor"
             },
@@ -255,10 +258,10 @@
         {
             "id": "sleepingPorch",
             "name": "Sleeping Porch",
-            "capacity": 100,
+            "capacity": 20,
             "muteRoom": true,
             "hideVideo": false,  
-            "description": "Hang out and chill",
+            "description": "Isn't the breeze so nice?",
             "type": "IFRAME",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
             "iframeOptions": {
@@ -474,11 +477,14 @@
         {
             "id": "crematorium",
             "name": "Crematorium",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 50,
             "description": "Is it a little hot in here?",
             "doorTint": "white",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
+             "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=ariadnesatanas&parent=estate.tstvhq.com"
+            },
             "directions": {
                 "west": "secretTunnels"
             }
