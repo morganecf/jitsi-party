@@ -158,10 +158,13 @@
         {
             "id": "den",
             "name": "The Den",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "IFRAME",
+            "capacity": 50,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels005green.jpg",
             "description": "Cozy, don't you think?",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=ariadnesatanas&parent=estate.tstvhq.com"
+            },
             "directions": {
                 "north": "backParlor",
                 "south": "teaRoom"
@@ -181,15 +184,12 @@
         {
             "id": "backParlor",
             "name": "Back Parlor",
-            "type": "IFRAME",
-            "capacity": 100,
-            "muteRoom": true,
+            "type": "JITSI",
+            "capacity": 20,
+            "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
-            "description": "Lectures from our own Salem Witch, Thomas Vallor. @SalemWitchWiles",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=SalemWitchWiles&parent=estate.tstvhq.com"
-            },
+            "description": "Welcome Home.",
             "directions": {
                 "south": "den",
                 "west": "ritualChamber"
@@ -258,15 +258,12 @@
         {
             "id": "sleepingPorch",
             "name": "Sleeping Porch",
-            "capacity": 20,
-            "muteRoom": true,
+            "capacity": 5,
+            "muteRoom": false,
             "hideVideo": false,  
             "description": "Isn't the breeze so nice?",
-            "type": "IFRAME",
-            "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=schuxfamicom&parent=estate.tstvhq.com"
-              },
+            "type": "JITSI",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
             "directions": {
                 "west": "library",
                 "east": "staircase"
@@ -477,14 +474,11 @@
         {
             "id": "crematorium",
             "name": "Crematorium",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 50,
             "description": "Is it a little hot in here?",
             "doorTint": "white",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
-             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=ariadnesatanas&parent=estate.tstvhq.com"
-            },
             "directions": {
                 "west": "secretTunnels"
             }
