@@ -109,7 +109,6 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/_UItI96xdm4"
             },
-            "description": "Welcome Home.",
             "directions": {
                 "east": "teaRoom",
                 "north": "grandStaircase",
@@ -158,13 +157,10 @@
         {
             "id": "den",
             "name": "The Den",
-            "type": "IFRAME",
-            "capacity": 50,
+            "type": "JITSI",
+            "capacity": 20,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels005green.jpg",
             "description": "Cozy, don't you think?",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=ariadnesatanas&parent=estate.tstvhq.com"
-            },
             "directions": {
                 "north": "backParlor",
                 "south": "teaRoom"
@@ -184,11 +180,14 @@
         {
             "id": "backParlor",
             "name": "Back Parlor",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=SalemWitchWiles&parent=estate.tstvhq.com"
+            },
             "description": "Welcome Home.",
             "directions": {
                 "south": "den",
@@ -212,11 +211,11 @@
             "type": "IFRAME",
             "capacity": 200,
             "muteRoom": true,
-            "hideVideo": false,
+            "hideVideo": true,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=disasterina&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
             }, 
             "directions": {
                 "east": "backParlor"
