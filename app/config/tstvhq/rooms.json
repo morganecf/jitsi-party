@@ -32,7 +32,7 @@
             "id": "powderRoom",
             "name": "Powder Room",
             "type": "JITSI",
-            "capacity": 20,
+            "capacity": 3,
             "doorTint": "pink",
             "description": "Freshen up with a few friends.",
             "backgroundImage": "./https://tstvhq.s3.amazonaws.com/backgrounds/powder room.jpg",
@@ -158,7 +158,7 @@
             "id": "den",
             "name": "The Den",
             "type": "JITSI",
-            "capacity": 20,
+            "capacity": 2,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels005green.jpg",
             "description": "Cozy, don't you think?",
             "directions": {
@@ -181,8 +181,8 @@
             "id": "backParlor",
             "name": "Back Parlor",
             "type": "IFRAME",
-            "capacity": 20,
-            "muteRoom": false,
+            "capacity": 200,
+            "muteRoom": true,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels003green.jpg",
             "iframeOptions": {
@@ -211,11 +211,11 @@
             "type": "IFRAME",
             "capacity": 200,
             "muteRoom": true,
-            "hideVideo": true,
+            "hideVideo": false,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/the-revolt-of-the-angels004green.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
+                "src": "https://www.youtube.com/embed/videoseries?list=PLEwbi5s6T9R5flOFmQ0QI94NOZWk3-EAl"
             }, 
             "directions": {
                 "east": "backParlor"
@@ -377,12 +377,15 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
             "description": "The crushed velvet seats recline! Are they emerald or black? Hard to tell in the dark.",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=coffeepriest&parent=estate.tstvhq.com"
+         },
             "directions": {
                 "west": "staircase",
                 "north": "belfry"
