@@ -17,6 +17,7 @@ $avatar-height: 60px;
 	border-radius: 5px;
 	// background: radial-gradient(rgba(27, 30, 31, 1) 0%, rgba(27, 30, 31, .8) 55%, rgba(27, 30, 31, .5) 67%, rgba(27, 30, 31, 0) 95%, rgba(27, 30, 31, 0) 100%);
 }
+
 .box:hover {
 	// width: $avatar-width;
 	// height: $avatar-height;
@@ -25,8 +26,8 @@ $avatar-height: 60px;
 	// transition: border .25s;
 	cursor: pointer;
 	border-radius: 100%;
-	background-color: darken($accent-color, 30%);
-	box-shadow: 2px 2px 2px darken($accent-color, 20%);
+	background-color: $avatar-highlight-color;
+	box-shadow: 2px 2px 2px $avatar-highlight-color;
 }
 
 .image {
@@ -38,16 +39,18 @@ $avatar-height: 60px;
 	height: auto;
 	max-height: $avatar-height !important;
 }
+
 .non-selected-image {
 	text-align: center;
 	min-width: $avatar-width !important;
 	width: $avatar-width !important;
 	// margin: 2px 4px 0px 4px;
 	height: auto;
-	opacity:.25;
+	opacity: .25;
 	transition: opacity .25s;
 	max-height: $avatar-height !important;
 }
+
 .non-selected-box {
 	text-align: center;
 	width: $avatar-width;
@@ -64,6 +67,7 @@ $avatar-height: 60px;
 	flex-direction: column;
 	align-items: center;
 }
+
 .inner {
 	display: flex;
 	flex-direction: row;
