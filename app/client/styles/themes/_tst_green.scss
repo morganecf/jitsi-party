@@ -1,69 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 $accent-font: 'Philosopher';
 
-$dark-blue: #100321;
-$dark-lavender: #847c9c;
-$fuckyou-turquoise: #00FFE2;
-$light-blue: #B1EDFC;
-$matte-purple: #262b56;
 $black: #241f20;
-$white: #fff;
 $grey: #595959;
 $dark-grey: #404040;
-$matte-blue: #294b7f;
-$light-grey: #ece9e9;
+$green: #6D9C8C;
+$bright-green: #00D089;
+$dark-green: #507A6C;
+$white: #fff;
 
-// Hexing notifications & icon
-$accent-color: $fuckyou-turquoise;
+$accent-color: #eb1d25;
 
-$avatar-highlight-color: $matte-blue;
-
-$background-color: $dark-blue;
-$background-color-dark: $dark-blue;
-$door-background: darken($dark-lavender, 20%);
-$room-content-background-color: $matte-purple;
-$modal-background-color: $dark-blue;
+$background-color: $black;
+$background-color-dark: $dark-grey;
+$door-background: $grey;
+$room-content-background-color: $bright-green;
+$modal-background-color: $grey;
 
 $text-color: $white;
-$link-color: $fuckyou-turquoise;
+$link-color: $dark-green;
 
 $disabled-text-color: color("grey-700");
 $disabled-background-color: color("grey-500");
 
-$map-header-color: $light-grey;
-$map-header-background-color: $matte-purple;
+$map-header-color: $black;
+$map-header-background-color: $bright-green;
 
-$map-room-fill: $dark-lavender;
+$map-room-fill: $green;
 $map-unvisited-color: $dark-grey;
-$map-room-stroke-color: $dark-blue;
-$map-highlight-stroke: $dark-blue;
-$map-highlight-fill: $matte-purple;
+$map-room-stroke-color: $black;
+$map-highlight-stroke: $black;
+$map-highlight-fill: $bright-green;
 
 $events-header-color: $black;
-$events-header-background-color: $dark-lavender;
+$events-header-background-color: $bright-green;
 $events-name-color: $white;
-$events-description-color: $light-grey;
+$events-description-color: $black;
 $events-coordinates-color: $white;
-$events-item-background-color: $matte-purple;
+$events-item-background-color: $green;
 
 $email-form-color: $grey;
 $email-description-color: $white;
 
-$poke-color: $light-blue;
+$poke-color: $bright-green;
 $poke-background-color: $black;
 
-$button-background-color: $dark-lavender;
-$button-border-color: $dark-lavender;
+$button-background-color: $dark-green;
+$button-border-color: $dark-green;
 $button-text-color: $white;
 $button-border-radius: 2px;
 
-$opaque-button-background-color: $dark-blue;
+$opaque-button-background-color: $green;
 $opaque-button-text-color: white;
-$opaque-button-border-color: $dark-blue;
+$opaque-button-border-color: $green;
 
-$focused-button-background-color: $matte-purple;
+$focused-button-background-color: $green;
 $focused-button-text-color: $white;
-$focused-button-border-color: $matte-purple;
+$focused-button-border-color: $green;
 
 $name-input-border-color: white;
 $name-input-background-color: white;

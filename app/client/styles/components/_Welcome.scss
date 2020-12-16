@@ -48,7 +48,7 @@
 }
 
 .text-entry {
-  	padding: 6px 10px !important;
+    padding: 6px 10px !important;
     border: 2px solid $name-input-border-color !important;
     background-color: $name-input-background-color !important;
     border-radius: 7px !important;
@@ -63,9 +63,11 @@
     width: 100%;
     height: 600px;
 }
+
 .custom-login-container.loading {
     visibility: hidden;
 }
+
 .custom-login-loading {
     text-align: center;
 }
@@ -74,15 +76,25 @@
     opacity: 1;
     text-align: center;
 }
+
 .form-party {
     opacity: 1;
     text-align: center;
     animation: flash linear .666s infinite;
 }
+
 @-webkit-keyframes flash {
-    0% { opacity: 1; }
-    50% { opacity: .5; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 // necessary ugliness to wrangle inherited :disabled effects
@@ -91,24 +103,31 @@
     transition: opacity .33s;
     text-align: center;
 }
+
 .form-fade-party:hover {
     transition: opacity .05s;
 }
+
 .form-fade {
     opacity: .5;
     transition: opacity .33s;
     text-align: center;
 }
+
 .form-fade:focus,
 .form-fade:hover {
     opacity: 1;
     transition: opacity .666s;
     text-align: center;
 }
-.form-fade:disabled,
-#button:disabled,
-#button:hover {
-    background-color: $disabled-background-color !important;
-    border: 2px solid $disabled-background-color !important;
-    color: $disabled-text-color !important;
+
+// .form-fade:disabled,
+// #button:disabled,
+// #button:hover {
+//     background-color: $disabled-background-color !important;
+//     border: 2px solid $disabled-background-color !important;
+//     color: $disabled-text-color !important;
+// }
+#button:disabled {
+    border: none !important;
 }
