@@ -3,7 +3,7 @@
         {
             "config": {
                 "audio": {
-                    "path": "https://jitsi-party.s3.amazonaws.com/Satanic+Planet+999+(official+music+video).mp3",
+                    "path": "https://drive.google.com/file/d/142NtV56pgDTcQuBpHSUef6uJVDiqiStp/view?usp=sharing",
                     "autoPlay": true,
                     "hideControls": true
                 }
@@ -11,11 +11,11 @@
             "rooms": [
                 {
                     "id": "painting",
-                    "name": "An Askew Painting",
-                    "text": "You are standing in the stairwell of The Satanic Temple’s art gallery.  Art galore decorates the rich wallpaper.  One of the paintings is slightly askew.",
+                    "name": "Click here",
+                    "text": "You are standing in the stairwell of The Satanic Temple’s art gallery.  Art galore decorates the rich wallpaper.  While traversing the stairs, you are jostled by a fellow patron. Your shoulder knocks a painting askew. A secret door opens. You are the only one who seems to notice.",
                     "buttons": [
                         {
-                            "text": "Rotate it",
+                            "text": "Secret door",
                             "nextRoom": ["catacombs"]
                         },
                         {
@@ -26,45 +26,45 @@
                 },
                 {
                     "id": "catacombs",
-                    "name": "An Unpredictable Stair",
-                    "text": "You reach out and right the painting.  An unsettling ratcheting sound echoes in the wall and suddenly the stair you are standing on trundles aside. You tumble into a slide that carries you through cold, dark air, bumping and thumping as you round awkward turns, until it dumps you into a subterranean chamber. A fortune telling machine sits ominously in the center of the rock-hewn floor, and on the machine is a button. There is also a door to your right.",
+                    "name": "Through the looking glass",
+                    "text": "You appear to be the only one who sees that you have inadvertantly opened a secret door. You decend down the spiral staircase within. The door closes behind you. Decending, you find yourself in an ante-chamber with a single door.",
                     "buttons": [
                         {
-                            "text": "Push the button",
+                            "text": "Open the door",
                             "nextRoom": ["fortune"]
                         },
                         {
-                            "text": "Go through the door",
+                            "text": "Look for a way out",
                             "nextRoom": ["library"]
                         }
                     ]
                 },
                 {
                     "id": "fortune",
-                    "name": "Fortune",
-                    "text": "The machine whirs and rumbles to life. Eyes flashing, the fortune teller says in a lilting Indian accent, ”My name is Madame la Vache. I sense the presence of someone seeking knowledge.  I will now divine your future!“ A card pokes out from a slot below the machine and her eyes grow dim once again. She lurches back into an awkward pose and is silent.",
+                    "name": "Open the door",
+                    "text": "The door will not open. It is locked. You can hear it though.",
                     "buttons": [
                         {
-                            "text": "Pick up the card",
+                            "text": "stop and listen",
                             "nextRoom": ["card"]
                         },
                         {
-                          "text": "Go through the door",
+                          "text": "Look for a way out",
                           "nextRoom": ["library"]
                       }
                     ]
                 },
                 {
                     "id": "card",
-                    "name": "The Card",
-                    "text": "For possibly the first time, divination has correctly told you something true.  The card reads, ”You are going to die someday.“",
+                    "name": "listen",
+                    "text": "You listen.“",
                     "buttons": [
                         {
-                            "text": "Put the card back",
+                            "text": "keep listening",
                             "nextRoom": ["returnCard"]
                         },
                         {
-                            "text": "Go through the door",
+                            "text": "Try to find a way out",
                             "nextRoom": ["library"]
                         }
                     ]
@@ -72,14 +72,14 @@
                 {
                     "id": "returnCard",
                     "name": "The Card Return",
-                    "text": "You place the card back into the slot on the fortune telling machine and it disappears back into the mechanism.  Silence fills the room for a few seconds, then sudden there is a resounding ‘clunk’ of internal mechanisms in the wall.  It opens, revealing a door to your left.",
+                    "text": "After a while, the voices drift off into music. You feel as if whatever was going on is over. Suddenly there is a resounding ‘clunk’ of internal mechanisms in the wall.  It opens, revealing a door to your left.",
                     "buttons": [
                         {
                             "text": "Go through the left door",
                             "nextRoom": ["trapDoor"]
                         },
                         {
-                            "text": "Go through the right door",
+                            "text": "Look for another way out",
                             "nextRoom": ["library"]
                         }
                     ]
