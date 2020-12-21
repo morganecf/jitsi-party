@@ -443,7 +443,6 @@
             "capacity": 100,
             "description": "It's warmer underground. Hand me that shovel, I'll show you.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/cemetery.jpg",
-            },
             "directions": {
                 "west": "garden"
             },
