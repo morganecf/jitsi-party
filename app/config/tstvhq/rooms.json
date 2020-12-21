@@ -165,7 +165,7 @@
             "name": "Barnyard",
             "type": "IFRAME",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=disasterina&parent=estate.tstvhq.com"
+                "src": "https://youtu.be/N_DwST8vKdQ"
             },
             "capacity": 20,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
@@ -396,7 +396,7 @@
             "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=jasonatomic&parent=estate.tstvhq.com"
          },
             "directions": {
                 "west": "staircase",
