@@ -14,7 +14,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/greenthe-revolt-of-the-angels002-e1552149546844.jpg",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/welcomehome.jpg",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your sigil",
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
