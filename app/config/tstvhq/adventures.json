@@ -3,7 +3,7 @@
         {
             "config": {
                 "audio": {
-                    "path": "https://drive.google.com/file/d/142NtV56pgDTcQuBpHSUef6uJVDiqiStp/view?usp=sharing",
+                    "path": "https://tstvhq.s3.amazonaws.com/music/elevator_ritual.mp3",
                     "autoPlay": true,
                     "hideControls": true
                 }
