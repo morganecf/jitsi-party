@@ -108,7 +108,7 @@
             "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
             "type": "IFRAME",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front parlor.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=disasterina&parent=estate.tstvhq.com"
             },
@@ -140,7 +140,7 @@
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
             },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea room.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea_room.jpg",
             "description": "Cream or sugar? Come have a nice spot of tea.",
             "directions": {
                 "north": "den",
@@ -193,7 +193,7 @@
             "capacity": 200,
             "muteRoom": true,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back parlor.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=luciengreaves&parent=estate.tstvhq.com"
             },
@@ -222,7 +222,7 @@
             "muteRoom": true,
             "hideVideo": false,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual chamber.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual_chamber.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
             }, 
@@ -272,7 +272,7 @@
             "hideVideo": false,  
             "description": "Will you please smoke faster? It's freezing in here",
             "type": "JITSI",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping porch.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping_porch.jpg",
             "directions": {
                 "west": "library",
                 "east": "staircase"
@@ -344,7 +344,7 @@
             "muteRoom": true,
             "hideVideo": false,
             "description": "An intimate setting for covert conversations about the Satanic Agenda",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing room.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=artetak&parent=estate.tstvhq.com"
             },
@@ -367,7 +367,7 @@
             "name": "Grand Staircase",
             "type": "JITSI",
             "description": "Mind the bannister, it's a bit loose.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grandstaircase.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grand_staircase.jpg",
             "capacity": 10,
             "directions": {
                 "east": "tstHQ",
@@ -477,7 +477,7 @@
             "name": "Secret Tunnels",
             "type": "JITSI",
             "capacity": 50,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/secret tunnel.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/secret_tunnel.jpg",
             "description": "This looks just like under McMartin Preschool!",
             "directions": {
                 "west": "trapDoor",
