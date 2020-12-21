@@ -81,7 +81,7 @@
         },
         {
             "id": "satanic-library-map",
-            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/Library.jpg",
+            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/library.jpg",
             "areas": [
                 {
                     "shape": "poly",
