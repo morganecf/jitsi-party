@@ -57,7 +57,7 @@
                 {
                     "id": "card",
                     "name": "listen",
-                    "text": "You listen.“",
+                    "text": "You listen.",
                     "buttons": [
                         {
                             "text": "keep listening",
