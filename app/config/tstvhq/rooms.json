@@ -195,7 +195,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=luciengreaves&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
             },
             "description": "Conversations with Thomas Vallor @SalemWitchWiles",
             "directions": {
