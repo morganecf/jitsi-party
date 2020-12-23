@@ -3,14 +3,14 @@
             "id": "kitchen",
             "name": "Kitchen",
             "type": "IFRAME",
-            "capacity": 100,
+            "capacity": 200,
             "doorTint": "#00D089",
             "muteRoom": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/kitchen.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
             },
-            "description": "Adam Dodge @The Satanic Chef teaches us how to live deliciously in the kitchen.",
+            "description": "Adam Dodge @TheSatanicChef teaches us how to live deliciously in the kitchen.",
             "directions": {
                 "west": "powderRoom",
                 "north": "grandBallroom",
@@ -60,7 +60,7 @@
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=themarissayoung&parent=estate.tstvhq.com"
             },
-            "description": "Is a waltz or minuet more suitable for this tune?",
+            "description": "Is a waltz or minuet more suitable for this? What about swaying somberly?",
             "directions": {
                 "south": "kitchen"
             },
@@ -80,7 +80,7 @@
             "name": "Elevator",
             "type": "JITSI",
             "capacity": 10,
-            "description": "It's so difficult to get an inspector here. Be careful, won't you?",
+            "description": "The inspector won't return my calls. Be careful, won't you?",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/elevator.gif",
             "directions": {
                 "north": "library",
@@ -107,7 +107,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
-            "type": "IFRAME",
+            "type": "JITSI",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=disasterina&parent=estate.tstvhq.com"
@@ -133,15 +133,15 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "IFRAME",
-            "capacity": 20,
+            "type": "JITSI",
+            "capacity": 5,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea_room.jpg",
-            "description": "Cream or sugar? Come have a nice spot of tea.",
+            "description": "Cream or sugar? Come have a nice cuppa.",
             "directions": {
                 "north": "den",
                 "west": "frontParlor",
@@ -162,14 +162,14 @@
         },
         {
             "id": "den",
-            "name": "Barnyard",
+            "name": "Cloven Corner",
             "type": "IFRAME",
             "iframeOptions": {
                 "src": "https://youtu.be/N_DwST8vKdQ"
             },
             "capacity": 20,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
-            "description": "Such good kids from Woodstock Farm Sanctuary",
+            "description": "Such good kids from Woodstock Farm Sanctuary. Donate at woodstocksanctuary.org",
             "directions": {
                 "north": "backParlor",
                 "south": "teaRoom"
@@ -192,10 +192,10 @@
             "type": "IFRAME",
             "capacity": 200,
             "muteRoom": true,
-            "hideVideo": false,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=luciengreaves&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
             },
             "description": "Conversations with Thomas Vallor @SalemWitchWiles",
             "directions": {
@@ -217,7 +217,7 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 200,
             "muteRoom": true,
             "hideVideo": false,
@@ -267,7 +267,7 @@
         {
             "id": "sleepingPorch",
             "name": "Sleeping Porch",
-            "capacity": 10,
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,  
             "description": "Will you please smoke faster? It's freezing in here",
@@ -339,11 +339,11 @@
         {
             "id": "boudoir",
             "name": "Boudoir",
-            "type": "IFRAME",
-            "capacity": 100,
-            "muteRoom": true,
+            "type": "JITSI",
+            "capacity": 20,
+            "muteRoom": false,
             "hideVideo": false,
-            "description": "An intimate setting for covert conversations about the Satanic Agenda",
+            "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=artetak&parent=estate.tstvhq.com"
@@ -396,7 +396,7 @@
             "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=jasonatomic&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
          },
             "directions": {
                 "west": "staircase",
@@ -465,7 +465,7 @@
             "capacity": 10,
             "description": "This is just wide enough to fit through. Follow me-- what could go wrong?",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/5zcsab0-k7s"
+                "src": "https://www.youtube.com/embed/ngKBYMzD_Fg"
             },
             "directions": {
                 "east": "secretTunnels"
