@@ -103,7 +103,7 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 100,
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
@@ -165,7 +165,7 @@
             "name": "Cloven Corner",
             "type": "IFRAME",
             "iframeOptions": {
-                "src": "https://youtu.be/N_DwST8vKdQ"
+                "src": "https://www.youtube.com/embed/-FVgurmo05o"
             },
             "capacity": 20,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
@@ -192,7 +192,7 @@
             "type": "IFRAME",
             "capacity": 200,
             "muteRoom": true,
-            "hideVideo": true,
+            "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
@@ -339,7 +339,7 @@
         {
             "id": "boudoir",
             "name": "Boudoir",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
