@@ -58,9 +58,9 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=themarissayoung&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
             },
-            "description": "Is a waltz or minuet more suitable for this? What about swaying somberly?",
+            "description": "Settle down for the night in the comfy chairs, won't you? Let us tell stories.",
             "directions": {
                 "south": "kitchen"
             },
