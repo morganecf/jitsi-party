@@ -1,59 +1,51 @@
 {
     "events": [
         {
-            "name": "Live Guest Judging: Satanic Christmas Carols",
-            "description": "A cutthroat competition of musical genius with untold riches at stake. Whose dreams will come true?",
-            "room": "tstHQ",
-            "start": "2020-12-23T23:00:00-05:00",
-            "end": "2020-12-23T23:59:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg" 
-        },
-        {
-            "name": "A Night at the Satanic Opera",
-            "description": "Friends of TST Delaware member Marissa Young performs arias and gives a short lecture.",
-            "room": "grandBallroom",
-            "start": "2020-12-23T20:00:00-05:00",
-            "end": "2020-12-23T21:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/marissa.jpg"
-        },        
-        {
             "name": "Demons, Monsters, and Pagans: The True Story of Christmas",
             "description": "Lecture by @SalemWitchWiles-- Thomas Vallor of TST Salem",
             "room": "backParlor",
-            "start": "2020-12-23T22:00:00-05:00",
-            "end": "2020-12-23T23:59:00-05:00",
+            "start": "2020-12-24T22:00:00-05:00",
+            "end": "2020-12-24T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/thomas.jpg"
         },
         {
-            "name": "Cooking Workshop with The Satanic Chef",
-            "description": "Learning to live deliciously in the kitchen with TST Salem's Adam Dodge.",
+            "name": "The Satanic Chef holiday party!",
+            "description": "Living deliciously in the kitchen with TST Salem's Adam Dodge.",
             "room": "kitchen",
-            "start": "2020-12-23T21:00:00-05:00",
-            "end": "2020-12-23T22:00:00-05:00",
+            "start": "2020-12-24T21:00:00-05:00",
+            "end": "2020-12-24T22:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/adam.jpg" 
+        },
+        {
+            "name": "Lucien Greave's Christmas Miracle",
+            "description": "Join Lucien Greaves as he does a live retelling of some of the age old Christian holiday stories!",
+            "room": "backParlor",
+            "start": "2020-12-24T23:00:00-05:00",
+            "end": "2020-12-25T01:00:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         },
         {
             "name": "Bats in the Belfry",
             "description": "Livestreaming your new best friends, a bat from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2020-12-23T20:00:00-05:00",
-            "end": "2020-12-24T02:00:00-05:00",
+            "start": "2020-12-24T20:00:00-05:00",
+            "end": "2020-12-25T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         },
         {
             "name": "A Happy Hooven Home: Goats!",
             "description": "Livestream of goats! Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "den",
-            "start": "2020-12-23T20:00:00-05:00",
-            "end": "2020-12-24T00:02:00-05:00",
+            "start": "2020-12-24T20:00:00-05:00",
+            "end": "2020-12-25T00:02:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         },
         {
             "name": "Late Night Library: Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Many of these texts exist nowhere else in the world.",
             "room": "library",
-            "start": "2020-12-23T20:00:00-05:00",
-            "end": "2020-12-24T02:00:00-05:00",
+            "start": "2020-12-24T20:00:00-05:00",
+            "end": "2020-12-25T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         }
     ]
