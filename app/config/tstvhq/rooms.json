@@ -495,7 +495,7 @@
             "doorTint": "white",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
             "directions": {
-                "west": "secretTunnels" }e
+                "west": "secretTunnels" }
         }
     ]
 }
