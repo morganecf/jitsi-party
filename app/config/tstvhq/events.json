@@ -5,7 +5,7 @@
             "description": "Lecture by @SalemWitchWiles-- Thomas Vallor of TST Salem",
             "room": "backParlor",
             "start": "2020-12-24T22:00:00-05:00",
-            "end": "2020-12-24T23:59:00-05:00",
+            "end": "2020-12-24T23:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/thomas.jpg"
         },
         {
@@ -17,11 +17,11 @@
             "image": "https://tstvhq.s3.amazonaws.com/events/adam.jpg" 
         },
         {
-            "name": "Lucien Greave's Christmas Miracle",
-            "description": "Join Lucien Greaves as he does a live retelling of some of the age old Christian holiday stories!",
-            "room": "backParlor",
+            "name": "Lucien's Christmas Miracle",
+            "description": "Join Lucien Greaves as retells some Christian stories!",
+            "room": "ballroom",
             "start": "2020-12-24T23:00:00-05:00",
-            "end": "2020-12-25T01:00:00-05:00",
+            "end": "2020-12-25T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         },
         {
