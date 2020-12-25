@@ -6,6 +6,7 @@
             "capacity": 200,
             "doorTint": "#00D089",
             "muteRoom": true,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/kitchen.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
@@ -53,14 +54,14 @@
             "id": "grandBallroom",
             "name": "Grand Ballroom",
             "type": "IFRAME",
-            "capacity": 100,
+            "capacity": 500,
             "muteRoom": true,
-            "hideVideo": false,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
             },
-            "description": "Settle down for the night in the comfy chairs, won't you? Let us tell stories.",
+            "description": "Settle down in the comfy chairs, won't you? It's storytime.",
             "directions": {
                 "south": "kitchen"
             },
@@ -79,8 +80,8 @@
             "id": "grandStaircase",
             "name": "Elevator",
             "type": "JITSI",
-            "capacity": 10,
-            "description": "The inspector won't return my calls. Be careful, won't you?",
+            "capacity": 20,
+            "description": "The inspector won't return our calls. Be careful, won't you?",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/elevator.gif",
             "directions": {
                 "north": "library",
@@ -103,7 +104,7 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 20,
+            "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
@@ -138,7 +139,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=jasonatomic&parent=estate.tstvhq.com"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea_room.jpg",
             "description": "Cream or sugar? Come have a nice cuppa.",
@@ -190,9 +191,9 @@
             "id": "backParlor",
             "name": "Back Parlor",
             "type": "IFRAME",
-            "capacity": 200,
+            "capacity": 500,
             "muteRoom": true,
-            "hideVideo": false,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
@@ -244,7 +245,7 @@
             "id": "belfry",
             "name": "Belfry",
             "type": "IFRAME",
-            "capacity": 20,
+            "capacity": 50,
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Donate at batworld.org",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/belfry.jpg",
             "iframeOptions": {
@@ -340,7 +341,7 @@
             "id": "boudoir",
             "name": "Boudoir",
             "type": "JITSI",
-            "capacity": 20,
+            "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
             "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
@@ -495,6 +496,33 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
             "directions": {
                 "west": "secretTunnels"
+            }
+        {
+            "id": "clarendon",
+            "name": "Clarendon",
+            "type": "JITSI",
+            "capacity": 50,
+            "description": "Aw shit I got weed all over the beanbag.",
+            "doorTint": "white",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grandstaircase.jpg",
+            }
+        {
+            "id": "24",
+            "name": "24 Alewife",
+            "type": "JITSI",
+            "capacity": 50,
+            "description": "Alexa: Turn On Pong Lights",
+            "doorTint": "white",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grandstaircase.jpg",
+            }
+        {
+            "id": "loudHouse",
+            "name": "Loud House",
+            "type": "JITSI",
+            "capacity": 50,
+            "description": "how is jackson still drumming if he's barely conscious",
+            "doorTint": "white",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/garden.jpg",
             }
         }
     ]
