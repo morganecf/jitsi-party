@@ -80,6 +80,7 @@
             "id": "grandStaircase",
             "name": "Elevator",
             "type": "JITSI",
+            "hideVideo": true,
             "capacity": 20,
             "description": "The inspector won't return our calls. Be careful, won't you?",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/elevator.gif",
@@ -104,7 +105,7 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 50,
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
@@ -221,7 +222,7 @@
             "type": "JITSI",
             "capacity": 200,
             "muteRoom": true,
-            "hideVideo": false,
+            "hideVideo": true,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual_chamber.jpg",
             "iframeOptions": {
@@ -295,6 +296,7 @@
             "name": "Aviary",
             "type": "JITSI",
             "capacity": 20,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/aviary.jpg",
             "description": "It's sweet to see the birds huddled together.",
             "directions": {
@@ -343,7 +345,7 @@
             "type": "JITSI",
             "capacity": 50,
             "muteRoom": false,
-            "hideVideo": false,
+            "hideVideo": true,
             "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
             "iframeOptions": {
@@ -392,7 +394,7 @@
             "type": "IFRAME",
             "capacity": 200,
             "muteRoom": true,
-            "hideVideo": false,
+            "hideVideo": true,
             "locked": false,
             "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
@@ -478,6 +480,7 @@
             "name": "Secret Tunnels",
             "type": "JITSI",
             "capacity": 50,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/secret_tunnel.jpg",
             "description": "This looks just like under McMartin Preschool!",
             "directions": {
@@ -491,6 +494,7 @@
             "name": "Crematorium",
             "type": "JITSI",
             "capacity": 50,
+            "hideVideo": true,
             "description": "Let's gather around the fire.",
             "doorTint": "white",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
