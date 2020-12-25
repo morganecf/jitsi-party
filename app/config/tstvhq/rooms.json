@@ -496,16 +496,6 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
             "directions": {
                 "west": "secretTunnels"
-            }
-        {
-            "id": "clarendon",
-            "name": "Clarendon",
-            "type": "JITSI",
-            "capacity": 50,
-            "description": "Aw shit I got weed all over the beanbag.",
-            "doorTint": "white",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grandstaircase.jpg",
-            }
         }
     ]
 }
