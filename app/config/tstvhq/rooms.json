@@ -397,7 +397,7 @@
             "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
+                "src": "https://www.youtube.com/watch?v=328Y_HqHcWA&feature=youtu.be"
          },
             "directions": {
                 "west": "staircase",
@@ -495,7 +495,7 @@
             "doorTint": "white",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
             "directions": {
-                "west": "secretTunnels"
+                "west": "secretTunnels" }e
         }
     ]
 }
