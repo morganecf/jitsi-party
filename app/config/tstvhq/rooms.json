@@ -297,7 +297,7 @@
             "name": "Aviary",
             "type": "JITSI",
             "capacity": 20,
-            "muteRoom": true,
+            "muteRoom": false,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/aviary.jpg",
             "description": "It's sweet to see the birds huddled together.",
@@ -374,7 +374,7 @@
             "description": "Mind the bannister, it's a bit loose.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grand_staircase.jpg",
             "capacity": 20,
-            "muteRoom": true,
+            "muteRoom": false,
             "hideVideo": true,
             "directions": {
                 "east": "tstHQ",
@@ -395,7 +395,7 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
@@ -452,7 +452,7 @@
             "type": "JITSI",
             "capacity": 50,
             "muteRoom": false,
-            "hideVideo": true,
+            "hideVideo": false,
             "description": "It's warmer underground. Hand me that shovel, I'll show you.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/cemetery.jpg",
             "directions": {
