@@ -2,11 +2,11 @@
     "rooms": [{
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "IFRAME",
+            "capacity": 500,
             "doorTint": "#00D089",
-            "muteRoom": false,
-            "hideVideo": false,
+            "muteRoom": true,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/kitchen.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
@@ -54,7 +54,7 @@
             "id": "grandBallroom",
             "name": "Grand Ballroom",
             "type": "JITSI",
-            "capacity": 10,
+            "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
@@ -80,9 +80,9 @@
             "id": "grandStaircase",
             "name": "Elevator",
             "type": "JITSI",
-            "muteRoom": true,
-            "hideVideo": true,
-            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
+            "capacity": 10,
             "description": "The inspector won't return our calls. Should it be making that noise?",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/elevator.gif",
             "directions": {
@@ -106,7 +106,7 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 10,
+            "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
@@ -170,7 +170,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/-FVgurmo05o"
             },
-            "capacity": 10,
+            "capacity": 15,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
             "description": "Such good kids from Woodstock Farm Sanctuary. Donate at woodstocksanctuary.org",
             "directions": {
@@ -227,7 +227,7 @@
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual_chamber.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
             }, 
             "directions": {
                 "east": "backParlor"
@@ -247,7 +247,7 @@
             "id": "belfry",
             "name": "Belfry",
             "type": "IFRAME",
-            "capacity": 10,
+            "capacity": 15,
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Donate at batworld.org",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/belfry.jpg",
             "iframeOptions": {
@@ -296,9 +296,9 @@
             "id": "aviary",
             "name": "Aviary",
             "type": "JITSI",
-            "capacity": 20,
+            "capacity": 15,
             "muteRoom": false,
-            "hideVideo": true,
+            "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/aviary.jpg",
             "description": "It's sweet to see the birds huddled together.",
             "directions": {
@@ -345,7 +345,7 @@
             "id": "boudoir",
             "name": "Boudoir",
             "type": "JITSI",
-            "capacity": 10,
+            "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
             "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
@@ -395,15 +395,15 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "IFRAME",
+            "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
             "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/watch?v=328Y_HqHcWA&feature=youtu.be"
+                "src": "https://www.youtube.com/embed/cyyVTE8cxgc"
          },
             "directions": {
                 "west": "staircase",
@@ -427,7 +427,7 @@
             "type": "JITSI",
             "capacity": 20,
             "muteRoom": false,
-            "hideVideo": true,
+            "hideVideo": false,
             "description": "The last ice storm made every dead branch sparkle!",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/garden.jpg",
             "directions": {
@@ -474,7 +474,7 @@
             "name": "Trap Door",
             "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/trapdoor.jpg",
-            "capacity": 20,
+            "capacity": 15,
             "description": "This is just wide enough to fit through. Follow me-- what could go wrong?",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/ngKBYMzD_Fg"
@@ -488,9 +488,9 @@
             "id": "secretTunnels",
             "name": "Secret Tunnels",
             "type": "JITSI",
-            "capacity": 20,
+            "capacity": 15,
             "hideVideo": false,
-            "muteRoom": true,
+            "muteRoom": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/secret_tunnel.jpg",
             "description": "This looks just like under McMartin Preschool!",
             "directions": {
@@ -503,7 +503,7 @@
             "id": "crematorium",
             "name": "Crematorium",
             "type": "JITSI",
-            "capacity": 20,
+            "capacity": 15,
             "hideVideo": false,
             "description": "Let's gather around the fire.",
             "doorTint": "white",
