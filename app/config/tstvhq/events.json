@@ -26,15 +26,15 @@
         },
         {
             "name": "Laughing in Disbelief: Live Interview of Ada King, Director of TSTVHQ",
-            "description": "Jack Matirko interviews director of TSTVHQ Ada King with host Andy Hall*,
-            "room": "infernalTheater",
+            "description": "Jack Matirko interviews director of TSTVHQ Ada King with host Andy Hall",
+            "room": "tstHQ",
             "start": "2020-12-27T22:30:00-05:00",
             "end": "2020-12-27T23:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         },
         {
             "name": "Bats in the Belfry",
-            "description": "Livestreaming your new best friends, a bat from BatWorld. Donate at batworld.org",
+            "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
             "start": "2020-12-27T20:00:00-05:00",
             "end": "2020-12-28T02:00:00-05:00",
