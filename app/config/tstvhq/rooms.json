@@ -33,7 +33,7 @@
             "id": "powderRoom",
             "name": "Powder Room",
             "type": "JITSI",
-            "capacity": 10,
+            "capacity": 5,
             "doorTint": "pink",
             "description": "Freshen up with a few friends.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
@@ -110,10 +110,10 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
-            "type": "JITSI",
+            "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=disasterina&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=satanicstudyhall&parent=estate.tstvhq.com"
             },
             "directions": {
                 "east": "teaRoom",
@@ -403,7 +403,7 @@
             "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/cyyVTE8cxgc"
+                "src": "https://www.youtube.com/embed/e6EKWioP98g"
          },
             "directions": {
                 "west": "staircase",
