@@ -113,7 +113,7 @@
             "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=satanicstudyhall&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
             },
             "directions": {
                 "east": "teaRoom",
@@ -220,8 +220,8 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "IFRAME",
-            "capacity": 500,
+            "type": "JITSI",
+            "capacity": 15,
             "muteRoom": true,
             "hideVideo": true,
             "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
