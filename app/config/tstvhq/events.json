@@ -6,7 +6,7 @@
             "room": "backParlor",
             "start": "2020-12-27T22:00:00-05:00",
             "end": "2020-12-27T23:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/thomas.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         },
         {
             "name": "Cooking Workshop with Satanic Chef",
@@ -14,7 +14,7 @@
             "room": "kitchen",
             "start": "2020-12-27T21:00:00-05:00",
             "end": "2020-12-27T22:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/thomas.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         },
          {
             "name": "An Evening with Krampus by Satanic Study Hall",
