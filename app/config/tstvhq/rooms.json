@@ -106,9 +106,9 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 15,
-            "muteRoom": false,
-            "hideVideo": false,
+            "capacity": 500,
+            "muteRoom": true,
+            "hideVideo": true,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
             "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
