@@ -113,7 +113,7 @@
             "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=disasterina&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=artetak&parent=estate.tstvhq.com"
             },
             "directions": {
                 "east": "teaRoom",
