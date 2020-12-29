@@ -27,7 +27,7 @@
                 {
                     "id": "catacombs",
                     "name": "Through the looking glass",
-                    "text": "You appear to be the only one who sees that you have inadvertantly opened a secret door. You decend down the spiral staircase within. The door closes behind you. Decending, you find yourself in an ante-chamber with a single door.",
+                    "text": "You appear to be the only one who sees that you have inadvertently opened a secret door. You descend down the spiral staircase within. The door closes behind you. Descending, you find yourself in an ante-chamber with a single door.",
                     "buttons": [
                         {
                             "text": "Open the door",
