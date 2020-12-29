@@ -113,7 +113,7 @@
             "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=disasterina&parent=estate.tstvhq.com"
             },
             "directions": {
                 "east": "teaRoom",
@@ -200,7 +200,7 @@
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
             },
-            "description": "Conversations with Thomas Vallor @SalemWitchWiles",
+            "description": "Lectures and Lessons from Thomas Vallor @SalemWitchWiles",
             "directions": {
                 "south": "den",
                 "west": "ritualChamber"
@@ -344,14 +344,14 @@
         {
             "id": "boudoir",
             "name": "Boudoir",
-            "type": "JITSI",
-            "capacity": 15,
+            "type": "IFRAME",
+            "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
             "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=artetak&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
             },
             "directions": {
                 "south": "library"
@@ -395,7 +395,7 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
