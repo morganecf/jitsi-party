@@ -294,13 +294,13 @@
         },
         {
             "id": "aviary",
-            "name": "Aviary",
+            "name": "Study",
             "type": "JITSI",
-            "capacity": 15,
+            "capacity": 7,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/aviary.jpg",
-            "description": "It's sweet to see the birds huddled together.",
+            "description": "Have a question? A VHQ Caretaker should be around here somewhere...",
             "directions": {
                 "east": "library"
             },
