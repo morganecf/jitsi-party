@@ -39,16 +39,18 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
             "directions": {
                 "east": "kitchen"
+        },
+        {
+            "id": "clarendon",
+            "name": "Clarendon",
+            "type": "JITSI",
+            "capacity": 20,
+            "doorTint": "pink",
+            "description": "Shit, I spilled my grinder all over the beanbag.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
+            "directions": {
+                "east": "powderRoom"
             },
-            "map": {
-                "x": 3,
-                "y": 26,
-                "width": 2,
-                "height": 2,
-                "doors": {
-                    "east": 27
-                }
-            }
         },
         {
             "id": "grandBallroom",
