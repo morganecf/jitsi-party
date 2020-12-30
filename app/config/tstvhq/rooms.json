@@ -106,11 +106,11 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 500,
-            "muteRoom": true,
-            "hideVideo": true,
+            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
-            "type": "IFRAME",
+            "type": "JITSI",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=artetak&parent=estate.tstvhq.com"
@@ -136,10 +136,10 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "JITSI",
-            "capacity": 10,
-            "muteRoom": false,
-            "hideVideo": false,
+            "type": "IFRAME",
+            "capacity": 200,
+            "muteRoom": true,
+            "hideVideo": true,
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=jasonatomic&parent=estate.tstvhq.com"
             },
@@ -395,15 +395,15 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "JITSI",
-            "capacity": 15,
-            "muteRoom": false,
+            "type": "IFRAME",
+            "capacity": 100,
+            "muteRoom": true,
             "hideVideo": false,
             "locked": false,
             "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/e6EKWioP98g"
+                "src": "https://player.twitch.tv/?channel=coffeepriest&parent=estate.tstvhq.com"
          },
             "directions": {
                 "west": "staircase",
