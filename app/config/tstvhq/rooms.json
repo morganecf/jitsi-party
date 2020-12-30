@@ -346,7 +346,7 @@
             "name": "Boudoir",
             "type": "IFRAME",
             "capacity": 50,
-            "muteRoom": false,
+            "muteRoom": true,
             "hideVideo": false,
             "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
