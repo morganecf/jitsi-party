@@ -106,11 +106,11 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 500,
-            "muteRoom": true,
-            "hideVideo": true,
+            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
-            "type": "IFRAME",
+            "type": "JITSI",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=artetak&parent=estate.tstvhq.com"
