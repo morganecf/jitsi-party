@@ -41,7 +41,6 @@
                 "east": "kitchen" 
             }
         }
-     },
         {
             "id": "clarendon",
             "name": "Clarendon",
@@ -54,7 +53,6 @@
                 "east": "powderRoom"
               }
            }
-      },
             {
             "id": "24",
             "name": "24",
