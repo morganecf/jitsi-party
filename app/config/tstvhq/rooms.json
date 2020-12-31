@@ -106,14 +106,14 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 20,
-            "muteRoom": false,
-            "hideVideo": false,
+            "capacity": 200,
+            "muteRoom": true,
+            "hideVideo": true,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
             "type": "JITSI",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=artetak&parent=estate.tstvhq.com"
+                "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
             },
             "directions": {
                 "east": "teaRoom",
@@ -136,10 +136,10 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "IFRAME",
-            "capacity": 200,
-            "muteRoom": true,
-            "hideVideo": true,
+            "type": "JITSI",
+            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=jasonatomic&parent=estate.tstvhq.com"
             },
@@ -395,7 +395,7 @@
         {
             "id": "tstHQ",
             "name": "Infernal Theater",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 100,
             "muteRoom": true,
             "hideVideo": false,
