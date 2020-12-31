@@ -59,12 +59,13 @@
             "description": "Shit, I spilled my grinder all over the beanbag.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
             "directions": {
-                "east": "powderRoom"
+                "east": "powderRoom",
+                "west": "twentyFour"
               }
            },
             {
-            "id": "24",
-            "name": "24",
+            "id": "twentyFour",
+            "name": "Twenty Four",
             "type": "JITSI",
             "capacity": 20,
             "doorTint": "green",
