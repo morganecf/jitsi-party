@@ -38,8 +38,10 @@
             "description": "Freshen up with a few friends.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
             "directions": {
-                "east": "kitchen"
-        },
+                "east": "kitchen" 
+            }
+        }
+     },
         {
             "id": "clarendon",
             "name": "Clarendon",
@@ -50,7 +52,9 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
             "directions": {
                 "east": "powderRoom"
-            },
+              }
+           }
+      },
             {
             "id": "24",
             "name": "24",
@@ -61,7 +65,8 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
             "directions": {
                 "east": "clarendon"
-            },
+            }
+          }
         },
         {
             "id": "grandBallroom",
