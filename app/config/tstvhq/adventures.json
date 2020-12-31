@@ -105,7 +105,7 @@
                         }
                     ]
                 },
-  {
+        {
                     "id": "clarendon",
                     "name": "Mass Ave",
                     "text": "You mighty moth, you! Are you going to head into Clarendon then? Or do you go ahead for another block or two and see if anyone is around at 24?",
@@ -120,5 +120,6 @@
                         }
                     ]
                 }
+          }
     ]
 }
