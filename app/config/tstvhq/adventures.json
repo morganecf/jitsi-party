@@ -83,7 +83,7 @@
                             "nextRoom": ["library"]
                         } 
                     ]
-                },
+                }
                 {
                     "id": "massAve",
                     "name": "Mass Ave",
