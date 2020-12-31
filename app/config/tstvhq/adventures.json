@@ -12,7 +12,7 @@
                 {
                     "id": "painting",
                     "name": "Click here",
-                    "text": "You are standing in the stairwell of The Satanic Temple’s art gallery.  Art galore decorates the rich wallpaper.  While traversing the stairs, you are jostled by a fellow patron. Your shoulder knocks a painting askew. A secret door opens. You are the only one who seems to notice.",
+                    "text": "You are standing in the stairwell of The Satanic Temple's art gallery.  Art galore decorates the rich wallpaper.  While traversing the stairs, you are jostled by a fellow patron. Your shoulder knocks a painting askew. A secret door opens. You are the only one who seems to notice.",
                     "buttons": [
                         {
                             "text": "Secret door",
@@ -72,7 +72,7 @@
                 {
                     "id": "returnCard",
                     "name": "The Card Return",
-                    "text": "After a while, the voices drift off into music. You feel as if whatever was going on is over. Suddenly there is a resounding ‘clunk’ of internal mechanisms in the wall.  It opens, revealing a door to your left.",
+                    "text": "After a while, the voices drift off into music. You feel as if whatever was going on is over. Suddenly there is a resounding 'clunk' of internal mechanisms in the wall.  It opens, revealing a door to your left.",
                     "buttons": [
                         {
                             "text": "Go through the left door",
@@ -81,7 +81,38 @@
                         {
                             "text": "Look for another way out",
                             "nextRoom": ["library"]
+                        },
+ {
+            "config": {},
+            "rooms": [
+                {
+                    "id": "massAve",
+                    "name": "Mass Ave",
+                    "text": "You are walking along Mass Ave and see the NTB on the corner of Clarendon and Mass Ave. Do you keep walking or turn towards the glowing light away from Dunkin Donuts? Are you man or moth?",
+                    "buttons": [
+                        {
+                            "text": "A mere man",
+                            "nextRoom": ["kitchen"]
+                        },
+                        {
+                            "text": "A mighty moth",
+                            "nextRoom": ["clarendon"]
                         }
+  {
+                    "id": "clarendon",
+                    "name": "Mass Ave",
+                    "text": "You mighty moth, you! Are you going to head into Clarendon then? Or do you go ahead for another block or two and see if anyone is around at 24?",
+                    "buttons": [
+                        {
+                            "text": "Clarendon",
+                            "nextRoom": ["clarendon"]
+                        },
+                        {
+                            "text": "24 Please",
+                            "nextRoom": ["24"]
+                        }
+                    ]
+                },
                     ]
                 }
             ]
