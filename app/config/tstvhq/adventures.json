@@ -80,7 +80,7 @@
                         },
                         {
                             "text": "Look for another way out",
-                            "nextRoom": ["library"]},
+                            "nextRoom": ["library"]
                         } 
                     ]
                 },
