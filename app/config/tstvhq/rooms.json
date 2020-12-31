@@ -39,7 +39,15 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
             "directions": {
                 "east": "kitchen" 
-            }
+            },
+            "map": {
+                "x": 3,
+                "y": 26,
+                "width": 2,
+                "height": 2,
+                "doors": {
+                    "east": 27
+                }
         },
         {
             "id": "clarendon",
