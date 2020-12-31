@@ -38,7 +38,8 @@
             "description": "Freshen up with a few friends.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
             "directions": {
-                "east": "kitchen" 
+                "east": "kitchen",
+                "west": "massAve"
             },
             "map": {
                 "x": 3,
