@@ -38,7 +38,7 @@
             "description": "Freshen up with a few friends.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
             "directions": {
-                "east": "kitchen"
+                "east": "kitchen" 
             },
             "map": {
                 "x": 3,
@@ -50,6 +50,30 @@
                 }
             }
         },
+        {
+            "id": "clarendon",
+            "name": "Clarendon",
+            "type": "JITSI",
+            "capacity": 20,
+            "doorTint": "pink",
+            "description": "Shit, I spilled my grinder all over the beanbag.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
+            "directions": {
+                "east": "powderRoom"
+              }
+           },
+            {
+            "id": "24",
+            "name": "24",
+            "type": "JITSI",
+            "capacity": 20,
+            "doorTint": "green",
+            "description": "Alexa, turn on Pong.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
+            "directions": {
+                "east": "clarendon"
+            }
+          },
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
