@@ -51,6 +51,17 @@
             "directions": {
                 "east": "powderRoom"
             },
+            {
+            "id": "24",
+            "name": "24",
+            "type": "JITSI",
+            "capacity": 20,
+            "doorTint": "green",
+            "description": "Alexa, turn on Pong.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
+            "directions": {
+                "east": "clarendon"
+            },
         },
         {
             "id": "grandBallroom",
