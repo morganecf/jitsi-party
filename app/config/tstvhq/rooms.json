@@ -40,7 +40,7 @@
             "directions": {
                 "east": "kitchen" 
             }
-        }
+        },
         {
             "id": "clarendon",
             "name": "Clarendon",
@@ -52,7 +52,7 @@
             "directions": {
                 "east": "powderRoom"
               }
-           }
+           },
             {
             "id": "24",
             "name": "24",
@@ -64,8 +64,7 @@
             "directions": {
                 "east": "clarendon"
             }
-          }
-        },
+          },
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
