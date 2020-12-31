@@ -99,7 +99,9 @@
                         {
                             "text": "A mighty moth",
                             "nextRoom": ["clarendon"]
-                        }},
+                        }
+                    ]
+                },
   {
                     "id": "clarendon",
                     "name": "Mass Ave",
