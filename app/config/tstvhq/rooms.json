@@ -110,7 +110,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
-            "type": "JITSI",
+            "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
             "iframeOptions": {
                 "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
