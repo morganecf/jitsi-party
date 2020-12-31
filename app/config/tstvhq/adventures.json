@@ -66,7 +66,7 @@
                         {
                             "text": "Try to find a way out",
                             "nextRoom": ["library"]
-                        }
+                        } 
                     ]
                 },
                 {
