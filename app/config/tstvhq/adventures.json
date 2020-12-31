@@ -84,9 +84,6 @@
                         } 
                     ]
                 },
- {
-            "config": {},
-            "rooms": [
                 {
                     "id": "massAve",
                     "name": "Mass Ave",
