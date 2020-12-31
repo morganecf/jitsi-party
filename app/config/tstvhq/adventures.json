@@ -84,7 +84,10 @@
                         } 
                     ]
                 }
-                {
+
+            ]
+        },
+               {
                     "id": "massAve",
                     "name": "Mass Ave",
                     "text": "You are walking along Mass Ave and see the NTB on the corner of Clarendon and Mass Ave. Do you keep walking or turn towards the glowing light away from Dunkin Donuts? Are you man or moth?",
@@ -114,7 +117,5 @@
                         }
                     ]
                 }
-            ]
-        }
     ]
 }
