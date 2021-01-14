@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 $accent-font: 'Philosopher';
 
-$dark-blue: #100321;
+$dark-red: #8B0000;
 $dark-lavender: #847c9c;
 $fuckyou-turquoise: #00FFE2;
 $light-blue: #B1EDFC;
@@ -18,11 +18,11 @@ $accent-color: $fuckyou-turquoise;
 
 $avatar-highlight-color: $matte-blue;
 
-$background-color: $dark-blue;
-$background-color-dark: $dark-blue;
+$background-color: $dark-red;
+$background-color-dark: $dark-red;
 $door-background: darken($dark-lavender, 20%);
 $room-content-background-color: $matte-purple;
-$modal-background-color: $dark-blue;
+$modal-background-color: $dark-red;
 
 $text-color: $white;
 $link-color: $fuckyou-turquoise;
@@ -35,8 +35,8 @@ $map-header-background-color: $matte-purple;
 
 $map-room-fill: $dark-lavender;
 $map-unvisited-color: $dark-grey;
-$map-room-stroke-color: $dark-blue;
-$map-highlight-stroke: $dark-blue;
+$map-room-stroke-color: $dark-red;
+$map-highlight-stroke: $dark-red;
 $map-highlight-fill: $matte-purple;
 
 $events-header-color: $black;
@@ -57,9 +57,9 @@ $button-border-color: $dark-lavender;
 $button-text-color: $white;
 $button-border-radius: 2px;
 
-$opaque-button-background-color: $dark-blue;
+$opaque-button-background-color: $dark-red;
 $opaque-button-text-color: white;
-$opaque-button-border-color: $dark-blue;
+$opaque-button-border-color: $dark-red;
 
 $focused-button-background-color: $matte-purple;
 $focused-button-text-color: $white;
