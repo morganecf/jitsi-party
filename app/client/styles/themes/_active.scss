@@ -1,62 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 $accent-font: 'Philosopher';
 
+$dark-red: #8B0000;
+$dark-lavender: #847c9c;
+$fuckyou-turquoise: #00FFE2;
+$light-blue: #B1EDFC;
+$matte-purple: #262b56;
 $black: #241f20;
+$white: #fff;
 $grey: #595959;
 $dark-grey: #404040;
-$green: #6D9C8C;
-$bright-green: #00D089;
-$dark-green: #507A6C;
-$white: #fff;
+$matte-blue: #294b7f;
+$light-grey: #ece9e9;
 
-$accent-color: #eb1d25;
+// Hexing notifications & icon
+$accent-color: $fuckyou-turquoise;
 
-$background-color: $black;
-$background-color-dark: $dark-grey;
-$door-background: $grey;
-$room-content-background-color: $bright-green;
-$modal-background-color: $grey;
+$avatar-highlight-color: $matte-blue;
+
+$background-color: $dark-red;
+$background-color-dark: $dark-red;
+$door-background: darken($dark-lavender, 20%);
+$room-content-background-color: $matte-purple;
+$modal-background-color: $dark-red;
 
 $text-color: $white;
-$link-color: $bright-green;
+$link-color: $fuckyou-turquoise;
 
 $disabled-text-color: color("grey-700");
 $disabled-background-color: color("grey-500");
 
-$map-header-color: $black;
-$map-header-background-color: $bright-green;
+$map-header-color: $light-grey;
+$map-header-background-color: $matte-purple;
 
-$map-room-fill: $green;
+$map-room-fill: $dark-lavender;
 $map-unvisited-color: $dark-grey;
-$map-room-stroke-color: $black;
-$map-highlight-stroke: $black;
-$map-highlight-fill: $bright-green;
+$map-room-stroke-color: $dark-red;
+$map-highlight-stroke: $dark-red;
+$map-highlight-fill: $matte-purple;
 
 $events-header-color: $black;
-$events-header-background-color: $bright-green;
+$events-header-background-color: $dark-lavender;
 $events-name-color: $white;
-$events-description-color: $black;
+$events-description-color: $light-grey;
 $events-coordinates-color: $white;
-$events-item-background-color: $green;
+$events-item-background-color: $matte-purple;
 
 $email-form-color: $grey;
 $email-description-color: $white;
 
-$poke-color: $bright-green;
+$poke-color: $light-blue;
 $poke-background-color: $black;
 
-$button-background-color: $dark-green;
-$button-border-color: $dark-green;
+$button-background-color: $dark-lavender;
+$button-border-color: $dark-lavender;
 $button-text-color: $white;
 $button-border-radius: 2px;
 
-$opaque-button-background-color: $green;
+$opaque-button-background-color: $dark-red;
 $opaque-button-text-color: white;
-$opaque-button-border-color: $green;
+$opaque-button-border-color: $dark-red;
 
-$focused-button-background-color: $green;
+$focused-button-background-color: $matte-purple;
 $focused-button-text-color: $white;
-$focused-button-border-color: $green;
+$focused-button-border-color: $matte-purple;
 
 $name-input-border-color: white;
 $name-input-background-color: white;
@@ -89,6 +96,6 @@ body {
 // }
 
 .room .room-content {
-    max-height: 80px;
+    max-height: 120px;
     padding: .5em 50px;
 }
