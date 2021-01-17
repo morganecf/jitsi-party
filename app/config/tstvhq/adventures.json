@@ -52,7 +52,7 @@
                           "text": "Look for a way out",
                           "nextRoom": ["library"]
                       }
-                    ]
+                  ]
                 },
                 {
                     "id": "card",
@@ -86,40 +86,40 @@
                 }
             ]
         },
-       {
+        {
             "config": {},
             "rooms": [ 
                {
-                    "id": "massAve",
-                    "name": "MassAve",
-                    "text": "You are walking along Mass Ave and see the NTB on the corner of Clarendon and Mass Ave. Do you keep walking or turn towards the glowing light away from Dunkin Donuts? Are you man or moth?",
-                    "buttons": [
-                        {
-                            "text": "A mere man",
-                            "nextRoom": ["kitchen"]
-                        },
-                        {
-                            "text": "A mighty moth",
-                            "nextRoom": ["outsideClarendon"]
-                        }
-                    ]
-                },
-                {
-                    "id": "outsideClarendon",
-                    "name": "Outside Clarendon",
-                    "text": "You mighty moth, you! Are you going to head into Clarendon then? Or do you go ahead for another block or two and see if anyone is around at 24?",
-                    "buttons": [
-                        {
-                            "text": "Clarendon",
-                            "nextRoom": ["clarendon"]
-                        },
-                        {
-                            "text": "Twenty Four Please",
-                            "nextRoom": ["twentyFour"]
-                        }
-                    ]
-                }
-            ]
+                "id": "massAve",
+                "name": "MassAve",
+                "text": "You are walking along Mass Ave and see the NTB on the corner of Clarendon and Mass Ave. Do you keep walking or turn towards the glowing light away from Dunkin Donuts? Are you man or moth?",
+                "buttons": [
+                    {
+                        "text": "A mere man",
+                        "nextRoom": ["kitchen"]
+                    },
+                    {
+                        "text": "A mighty moth",
+                        "nextRoom": ["outsideClarendon"]
+                    }
+                ]
+            },
+            {
+                "id": "outsideClarendon",
+                "name": "Outside Clarendon",
+                "text": "You mighty moth, you! Are you going to head into Clarendon then? Or do you go ahead for another block or two and see if anyone is around at 24?",
+                "buttons": [
+                    {
+                        "text": "Clarendon",
+                        "nextRoom": ["clarendon"]
+                    },
+                    {
+                        "text": "Twenty Four Please",
+                        "nextRoom": ["twentyFour"]
+                    }
+                ]
+            }
+        ]
         }
     ]
 }
