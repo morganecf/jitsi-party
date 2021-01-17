@@ -1,541 +1,541 @@
 {
     "rooms": [{
-            "id": "kitchen",
-            "name": "Kitchen",
-            "type": "IFRAME",
-            "capacity": 500,
-            "doorTint": "#00D089",
-            "muteRoom": true,
-            "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/kitchen.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
-            },
-            "description": "Adam Dodge @TheSatanicChef teaches us how to live deliciously in the kitchen.",
-            "directions": {
-                "west": "powderRoom",
-                "north": "grandBallroom",
-                "east": "frontParlor"
-            },
-            "map": {
-                "x": 5,
-                "y": 26,
-                "width": 5,
-                "height": 5,
-                "doors": {
-                    "north": 7,
-                    "west": 27,
-                    "east": 27
-                }
+        "id": "kitchen",
+        "name": "Kitchen",
+        "type": "IFRAME",
+        "capacity": 500,
+        "doorTint": "#00D089",
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/kitchen.jpg",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+        },
+        "description": "Adam Dodge @TheSatanicChef teaches us how to live deliciously in the kitchen.",
+        "directions": {
+            "west": "powderRoom",
+            "north": "grandBallroom",
+            "east": "frontParlor"
+        },
+        "map": {
+            "x": 5,
+            "y": 26,
+            "width": 5,
+            "height": 5,
+            "doors": {
+                "north": 7,
+                "west": 27,
+                "east": 27
             }
-        },
-        {
-            "id": "powderRoom",
-            "name": "Powder Room",
-            "type": "JITSI",
-            "capacity": 5,
-            "doorTint": "pink",
-            "description": "Freshen up with a few friends.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
-            "directions": {
-                "east": "kitchen",
-                "west": "massAve"
-            },
-            "map": {
-                "x": 3,
-                "y": 26,
-                "width": 2,
-                "height": 2,
-                "doors": {
-                    "east": 27
-                }
-            }
-        },
-        {
-            "id": "clarendon",
-            "name": "Clarendon",
-            "type": "JITSI",
-            "capacity": 20,
-            "doorTint": "pink",
-            "description": "Shit, I spilled my grinder all over the beanbag.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
-            "directions": {
-                "east": "powderRoom",
-                "west": "twentyFour"
-              }
-           },
-            {
-            "id": "twentyFour",
-            "name": "Twenty Four",
-            "type": "JITSI",
-            "capacity": 20,
-            "doorTint": "green",
-            "description": "Alexa, turn on Pong.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
-            "directions": {
-                "east": "clarendon"
-            }
-          },
-        {
-            "id": "grandBallroom",
-            "name": "Grand Ballroom",
-            "type": "JITSI",
-            "capacity": 15,
-            "muteRoom": false,
-            "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
-            },
-            "description": "Settle down in the comfy chairs, won't you? It's storytime.",
-            "directions": {
-                "south": "kitchen"
-            },
-            "doorTint": "golden",
-            "map": {
-                "x": 3,
-                "y": 18,
-                "width": 5,
-                "height": 8,
-                "doors": {
-                    "south": 7
-                }
-            }
-        },
-        {
-            "id": "grandStaircase",
-            "name": "Elevator",
-            "type": "JITSI",
-            "muteRoom": false,
-            "hideVideo": false,
-            "capacity": 10,
-            "description": "The inspector won't return our calls. Should it be making that noise?",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/elevator.gif",
-            "directions": {
-                "north": "library",
-                "east": "painting",
-                "south": "frontParlor"
-            },
-            "map": {
-                "x": 11,
-                "y": 12,
-                "width": 1,
-                "height": 12,
-                "doors": {
-                    "north": 11,
-                    "south": 11,
-                    "east": 18
-                }
-            },
-            "doorTint": "#00D089"
-        },
-        {
-            "id": "frontParlor",
-            "name": "Front Parlor",
-            "capacity": 200,
-            "muteRoom": true,
-            "hideVideo": true,
-            "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
-            "type": "IFRAME",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
-            },
-            "directions": {
-                "east": "teaRoom",
-                "north": "grandStaircase",
-                "west": "kitchen"
-            },
-            "map": {
-                "x": 10,
-                "y": 24,
-                "width": 8,
-                "height": 5,
-                "doors": {
-                    "east": 27,
-                    "north": 11,
-                    "west": 27
-                }
-            },
-            "doorTint": "#00D089"
-        },
-        {
-            "id": "teaRoom",
-            "name": "Tea Room",
-            "type": "JITSI",
-            "capacity": 20,
-            "muteRoom": false,
-            "hideVideo": false,
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=jasonatomic&parent=estate.tstvhq.com"
-            },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea_room.jpg",
-            "description": "Cream or sugar? Come have a nice cuppa.",
-            "directions": {
-                "north": "den",
-                "west": "frontParlor",
-                "east": "garden"
-           },
-            "map": {
-                "x": 18,
-                "y": 24,
-                "width": 6,
-                "height": 5,
-                "doors": {
-                    "west": 27,
-                    "east": 27,
-                    "north": 22
-                }
-            },
-            "doorTint": "#00D089"
-        },
-        {
-            "id": "den",
-            "name": "Cloven Corner",
-            "type": "IFRAME",
-            "iframeOptions": {
-                "src": "https://www.youtube.com/embed/-FVgurmo05o"
-            },
-            "capacity": 15,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
-            "description": "Such good kids from Woodstock Farm Sanctuary. Donate at woodstocksanctuary.org",
-            "directions": {
-                "north": "backParlor",
-                "south": "teaRoom"
-            },
-            "map": {
-                "x": 21,
-                "y": 21,
-                "width": 3,
-                "height": 3,
-                "doors": {
-                    "north": 22,
-                    "south": 22
-                }
-            },
-            "doorTint": "orange"
-        },
-        {
-            "id": "backParlor",
-            "name": "Back Parlor",
-            "type": "IFRAME",
-            "capacity": 500,
-            "muteRoom": true,
-            "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
-            },
-            "description": "Lectures and Lessons from Thomas Vallor @SalemWitchWiles",
-            "directions": {
-                "south": "den",
-                "west": "ritualChamber"
-            },
-            "map": {
-                "x": 20,
-                "y": 16,
-                "width": 6,
-                "height": 5,
-                "doors": {
-                    "south": 22,
-                    "west": 18
-                }
-            },
-            "doorTint": "#FF5938"
-        },
-        {
-            "id": "ritualChamber",
-            "name": "Ritual Chamber",
-            "type": "JITSI",
-            "capacity": 15,
-            "muteRoom": true,
-            "hideVideo": true,
-            "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual_chamber.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
-            }, 
-            "directions": {
-                "east": "backParlor"
-            },
-            "map": {
-                "x": 17,
-                "y": 17,
-                "width": 3,
-                "height": 3,
-                "doors": {
-                    "east": 18
-                }
-            },
-            "doorTint": "#00D089"
-        },
-        {
-            "id": "belfry",
-            "name": "Belfry",
-            "type": "IFRAME",
-            "capacity": 15,
-            "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Donate at batworld.org",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/belfry.jpg",
-            "iframeOptions": {
-                "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
-            },
-            "directions": {
-                "south": "tstHQ"
-            },
-            "map": {
-                "x": 27,
-                "y": 5,
-                "width": 2,
-                "height": 2,
-                "doors": {
-                    "south": 27
-                }
-            },
-            "doorTint": "blue"
-        },
-        {
-            "id": "sleepingPorch",
-            "name": "Sleeping Porch",
-            "capacity": 10,
-            "muteRoom": true,
-            "hideVideo": true, 
-            "description": "Will you please smoke faster? It's freezing in here",
-            "type": "JITSI",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping_porch.jpg",
-            "directions": {
-                "west": "library",
-                "east": "staircase"
-            },
-            "map": {
-                "x": 14,
-                "y": 9,
-                "width": 2,
-                "height": 2,
-                "doors": {
-                    "west": 10,
-                    "east": 10
-                }
-            },
-            "doorTint": "blue"
-        },
-        {
-            "id": "aviary",
-            "name": "Study",
-            "type": "JITSI",
-            "capacity": 7,
-            "muteRoom": false,
-            "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/aviary.jpg",
-            "description": "Have a question? A VHQ Caretaker should be around here somewhere...",
-            "directions": {
-                "east": "library"
-            },
-            "map": {
-                "x": 5,
-                "y": 8,
-                "width": 2,
-                "height": 3,
-                "doors": {
-                    "east": 9
-                }
-            },
-            "doorTint": "orange"
-        },
-        {
-            "id": "library",
-            "name": "Satanic Archives",
-            "type": "IMAGEMAP",
-            "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
-            "directions": {
-                "south": "grandStaircase",
-                "east": "sleepingPorch",
-                "north": "boudoir",
-                "west": "aviary"
-            },
-            "imageMapOptions": "satanic-library-map",
-            "map": {
-                "x": 7,
-                "y": 7,
-                "width": 7,
-                "height": 5,
-                "doors": {
-                    "south": 11,
-                    "north": 10,
-                    "east": 10,
-                    "west": 9
-                }
-            },
-            "doorTint": "#00D089"
-        },
-        {
-            "id": "boudoir",
-            "name": "Boudoir",
-            "type": "IFRAME",
-            "capacity": 50,
-            "muteRoom": true,
-            "hideVideo": false,
-            "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
-            },
-            "directions": {
-                "south": "library"
-            },
-            "map": {
-                "x": 9,
-                "y": 5,
-                "width": 3,
-                "height": 2,
-                "doors": {
-                    "south": 10
-                }
-            },
-            "doorTint": "#990000"
-        },
-        {
-            "id": "staircase",
-            "name": "Grand Staircase",
-            "type": "JITSI",
-            "description": "Mind the bannister, it's a bit loose.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grand_staircase.jpg",
-            "capacity": 20,
-            "muteRoom": false,
-            "hideVideo": true,
-            "directions": {
-                "east": "tstHQ",
-                "west": "sleepingPorch"
-            },
-            "map": {
-                "x": 16,
-                "y": 10,
-                "width": 8,
-                "height": 1,
-                "doors": {
-                    "west": 10,
-                    "east": 10
-                }
-            },
-            "doorTint": "#00D089"
-        },
-        {
-            "id": "tstHQ",
-            "name": "Infernal Theater",
-            "type": "JITSI",
-            "capacity": 100,
-            "muteRoom": true,
-            "hideVideo": false,
-            "locked": false,
-            "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
-            "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=coffeepriest&parent=estate.tstvhq.com"
-         },
-            "directions": {
-                "west": "staircase",
-                "north": "belfry"
-                },
-            "map": {
-                "x": 24,
-                "y": 7,
-                "width": 5,
-                "height": 5,
-                "doors": {
-                    "west": 10,
-                    "north": 27
-                }
-            },
-            "doorTint": "black"
-        },
-        {
-            "id": "garden",
-            "name": "Garden",
-            "type": "JITSI",
-            "capacity": 20,
-            "muteRoom": false,
-            "hideVideo": false,
-            "description": "The last ice storm made every dead branch sparkle!",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/garden.jpg",
-            "directions": {
-                "west": "teaRoom",
-                "east": "cemetery"
-            },
-            "map": {
-                "x": 24,
-                "y": 27,
-                "width": 5,
-                "height": 1,
-                "doors": {
-                    "west": 27,
-                    "east": 27
-                }
-            },
-            "doorTint": "purple"
-        },
-        {
-            "id": "cemetery",
-            "name": "Cemetery",
-            "type": "JITSI",
-            "capacity": 50,
-            "muteRoom": false,
-            "hideVideo": false,
-            "description": "It's warmer underground. Hand me that shovel, I'll show you.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/cemetery.jpg",
-            "directions": {
-                "west": "garden"
-            },
-            "map": {
-                "x": 29,
-                "y": 23,
-                "width": 6,
-                "height": 6,
-                "doors": {
-                    "west": 27
-                }
-            },
-            "doorTint": "white"
-        },
-        {
-            "id": "trapDoor",
-            "name": "Trap Door",
-            "type": "IFRAME",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/trapdoor.jpg",
-            "capacity": 15,
-            "description": "This is just wide enough to fit through. Follow me-- what could go wrong?",
-            "iframeOptions": {
-                "src": "https://www.youtube.com/embed/ngKBYMzD_Fg"
-            },
-            "directions": {
-                "east": "secretTunnels"
-            },
-            "doorTint": "black"
-        },
-        {
-            "id": "secretTunnels",
-            "name": "Secret Tunnels",
-            "type": "JITSI",
-            "capacity": 15,
-            "hideVideo": false,
-            "muteRoom": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/secret_tunnel.jpg",
-            "description": "This looks just like under McMartin Preschool!",
-            "directions": {
-                "west": "trapDoor",
-                "east": "crematorium"
-            },
-            "doorTint": "#00D089"
-        },
-        {
-            "id": "crematorium",
-            "name": "Crematorium",
-            "type": "JITSI",
-            "capacity": 15,
-            "hideVideo": false,
-            "description": "Let's gather around the fire.",
-            "doorTint": "white",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
-            "directions": {
-                "west": "secretTunnels" }
         }
-    ]
+    },
+    {
+        "id": "powderRoom",
+        "name": "Powder Room",
+        "type": "JITSI",
+        "capacity": 5,
+        "doorTint": "pink",
+        "description": "Freshen up with a few friends.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
+        "directions": {
+            "east": "kitchen",
+            "west": "massAve"
+        },
+        "map": {
+            "x": 3,
+            "y": 26,
+            "width": 2,
+            "height": 2,
+            "doors": {
+                "east": 27
+            }
+        }
+    },
+    {
+        "id": "clarendon",
+        "name": "Clarendon",
+        "type": "JITSI",
+        "capacity": 20,
+        "doorTint": "pink",
+        "description": "Shit, I spilled my grinder all over the beanbag.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
+        "directions": {
+            "east": "powderRoom",
+            "west": "twentyFour"
+        }
+    },
+    {
+        "id": "twentyFour",
+        "name": "Twenty Four",
+        "type": "JITSI",
+        "capacity": 20,
+        "doorTint": "green",
+        "description": "Alexa, turn on Pong.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
+        "directions": {
+            "east": "clarendon"
+        }
+    },
+    {
+        "id": "grandBallroom",
+        "name": "Grand Ballroom",
+        "type": "JITSI",
+        "capacity": 15,
+        "muteRoom": false,
+        "hideVideo": false,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
+        },
+        "description": "Settle down in the comfy chairs, won't you? It's storytime.",
+        "directions": {
+            "south": "kitchen"
+        },
+        "doorTint": "golden",
+        "map": {
+            "x": 3,
+            "y": 18,
+            "width": 5,
+            "height": 8,
+            "doors": {
+                "south": 7
+            }
+        }
+    },
+    {
+        "id": "grandStaircase",
+        "name": "Elevator",
+        "type": "JITSI",
+        "muteRoom": false,
+        "hideVideo": false,
+        "capacity": 10,
+        "description": "The inspector won't return our calls. Should it be making that noise?",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/elevator.gif",
+        "directions": {
+            "north": "library",
+            "east": "painting",
+            "south": "frontParlor"
+        },
+        "map": {
+            "x": 11,
+            "y": 12,
+            "width": 1,
+            "height": 12,
+            "doors": {
+                "north": 11,
+                "south": 11,
+                "east": 18
+            }
+        },
+        "doorTint": "#00D089"
+    },
+    {
+        "id": "frontParlor",
+        "name": "Front Parlor",
+        "capacity": 200,
+        "muteRoom": true,
+        "hideVideo": true,
+        "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
+        "type": "IFRAME",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
+        },
+        "directions": {
+            "east": "teaRoom",
+            "north": "grandStaircase",
+            "west": "kitchen"
+        },
+        "map": {
+            "x": 10,
+            "y": 24,
+            "width": 8,
+            "height": 5,
+            "doors": {
+                "east": 27,
+                "north": 11,
+                "west": 27
+            }
+        },
+        "doorTint": "#00D089"
+    },
+    {
+        "id": "teaRoom",
+        "name": "Tea Room",
+        "type": "JITSI",
+        "capacity": 20,
+        "muteRoom": false,
+        "hideVideo": false,
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=jasonatomic&parent=estate.tstvhq.com"
+        },
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea_room.jpg",
+        "description": "Cream or sugar? Come have a nice cuppa.",
+        "directions": {
+            "north": "den",
+            "west": "frontParlor",
+            "east": "garden"
+        },
+        "map": {
+            "x": 18,
+            "y": 24,
+            "width": 6,
+            "height": 5,
+            "doors": {
+                "west": 27,
+                "east": 27,
+                "north": 22
+            }
+        },
+        "doorTint": "#00D089"
+    },
+    {
+        "id": "den",
+        "name": "Cloven Corner",
+        "type": "IFRAME",
+        "iframeOptions": {
+            "src": "https://www.youtube.com/embed/-FVgurmo05o"
+        },
+        "capacity": 15,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
+        "description": "Such good kids from Woodstock Farm Sanctuary. Donate at woodstocksanctuary.org",
+        "directions": {
+            "north": "backParlor",
+            "south": "teaRoom"
+        },
+        "map": {
+            "x": 21,
+            "y": 21,
+            "width": 3,
+            "height": 3,
+            "doors": {
+                "north": 22,
+                "south": 22
+            }
+        },
+        "doorTint": "orange"
+    },
+    {
+        "id": "backParlor",
+        "name": "Back Parlor",
+        "type": "IFRAME",
+        "capacity": 500,
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "description": "Lectures and Lessons from Thomas Vallor @SalemWitchWiles",
+        "directions": {
+            "south": "den",
+            "west": "ritualChamber"
+        },
+        "map": {
+            "x": 20,
+            "y": 16,
+            "width": 6,
+            "height": 5,
+            "doors": {
+                "south": 22,
+                "west": 18
+            }
+        },
+        "doorTint": "#FF5938"
+    },
+    {
+        "id": "ritualChamber",
+        "name": "Ritual Chamber",
+        "type": "JITSI",
+        "capacity": 15,
+        "muteRoom": true,
+        "hideVideo": true,
+        "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual_chamber.jpg",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
+        }, 
+        "directions": {
+            "east": "backParlor"
+        },
+        "map": {
+            "x": 17,
+            "y": 17,
+            "width": 3,
+            "height": 3,
+            "doors": {
+                "east": 18
+            }
+        },
+        "doorTint": "#00D089"
+    },
+    {
+        "id": "belfry",
+        "name": "Belfry",
+        "type": "IFRAME",
+        "capacity": 15,
+        "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Donate at batworld.org",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/belfry.jpg",
+        "iframeOptions": {
+            "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
+        },
+        "directions": {
+            "south": "tstHQ"
+        },
+        "map": {
+            "x": 27,
+            "y": 5,
+            "width": 2,
+            "height": 2,
+            "doors": {
+                "south": 27
+            }
+        },
+        "doorTint": "blue"
+    },
+    {
+        "id": "sleepingPorch",
+        "name": "Sleeping Porch",
+        "capacity": 10,
+        "muteRoom": true,
+        "hideVideo": true, 
+        "description": "Will you please smoke faster? It's freezing in here",
+        "type": "JITSI",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping_porch.jpg",
+        "directions": {
+            "west": "library",
+            "east": "staircase"
+        },
+        "map": {
+            "x": 14,
+            "y": 9,
+            "width": 2,
+            "height": 2,
+            "doors": {
+                "west": 10,
+                "east": 10
+            }
+        },
+        "doorTint": "blue"
+    },
+    {
+        "id": "aviary",
+        "name": "Study",
+        "type": "JITSI",
+        "capacity": 7,
+        "muteRoom": false,
+        "hideVideo": false,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/aviary.jpg",
+        "description": "Have a question? A VHQ Caretaker should be around here somewhere...",
+        "directions": {
+            "east": "library"
+        },
+        "map": {
+            "x": 5,
+            "y": 8,
+            "width": 2,
+            "height": 3,
+            "doors": {
+                "east": 9
+            }
+        },
+        "doorTint": "orange"
+    },
+    {
+        "id": "library",
+        "name": "Satanic Archives",
+        "type": "IMAGEMAP",
+        "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
+        "directions": {
+            "south": "grandStaircase",
+            "east": "sleepingPorch",
+            "north": "boudoir",
+            "west": "aviary"
+        },
+        "imageMapOptions": "satanic-library-map",
+        "map": {
+            "x": 7,
+            "y": 7,
+            "width": 7,
+            "height": 5,
+            "doors": {
+                "south": 11,
+                "north": 10,
+                "east": 10,
+                "west": 9
+            }
+        },
+        "doorTint": "#00D089"
+    },
+    {
+        "id": "boudoir",
+        "name": "Boudoir",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": false,
+        "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
+        },
+        "directions": {
+            "south": "library"
+        },
+        "map": {
+            "x": 9,
+            "y": 5,
+            "width": 3,
+            "height": 2,
+            "doors": {
+                "south": 10
+            }
+        },
+        "doorTint": "#990000"
+    },
+    {
+        "id": "staircase",
+        "name": "Grand Staircase",
+        "type": "JITSI",
+        "description": "Mind the bannister, it's a bit loose.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grand_staircase.jpg",
+        "capacity": 20,
+        "muteRoom": false,
+        "hideVideo": true,
+        "directions": {
+            "east": "tstHQ",
+            "west": "sleepingPorch"
+        },
+        "map": {
+            "x": 16,
+            "y": 10,
+            "width": 8,
+            "height": 1,
+            "doors": {
+                "west": 10,
+                "east": 10
+            }
+        },
+        "doorTint": "#00D089"
+    },
+    {
+        "id": "tstHQ",
+        "name": "Infernal Theater",
+        "type": "JITSI",
+        "capacity": 100,
+        "muteRoom": true,
+        "hideVideo": false,
+        "locked": false,
+        "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=coffeepriest&parent=estate.tstvhq.com"
+        },
+        "directions": {
+            "west": "staircase",
+            "north": "belfry"
+        },
+        "map": {
+            "x": 24,
+            "y": 7,
+            "width": 5,
+            "height": 5,
+            "doors": {
+                "west": 10,
+                "north": 27
+            }
+        },
+        "doorTint": "black"
+    },
+    {
+        "id": "garden",
+        "name": "Garden",
+        "type": "JITSI",
+        "capacity": 20,
+        "muteRoom": false,
+        "hideVideo": false,
+        "description": "The last ice storm made every dead branch sparkle!",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/garden.jpg",
+        "directions": {
+            "west": "teaRoom",
+            "east": "cemetery"
+        },
+        "map": {
+            "x": 24,
+            "y": 27,
+            "width": 5,
+            "height": 1,
+            "doors": {
+                "west": 27,
+                "east": 27
+            }
+        },
+        "doorTint": "purple"
+    },
+    {
+        "id": "cemetery",
+        "name": "Cemetery",
+        "type": "JITSI",
+        "capacity": 50,
+        "muteRoom": false,
+        "hideVideo": false,
+        "description": "It's warmer underground. Hand me that shovel, I'll show you.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/cemetery.jpg",
+        "directions": {
+            "west": "garden"
+        },
+        "map": {
+            "x": 29,
+            "y": 23,
+            "width": 6,
+            "height": 6,
+            "doors": {
+                "west": 27
+            }
+        },
+        "doorTint": "white"
+    },
+    {
+        "id": "trapDoor",
+        "name": "Trap Door",
+        "type": "IFRAME",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/trapdoor.jpg",
+        "capacity": 15,
+        "description": "This is just wide enough to fit through. Follow me-- what could go wrong?",
+        "iframeOptions": {
+            "src": "https://www.youtube.com/embed/ngKBYMzD_Fg"
+        },
+        "directions": {
+            "east": "secretTunnels"
+        },
+        "doorTint": "black"
+    },
+    {
+        "id": "secretTunnels",
+        "name": "Secret Tunnels",
+        "type": "JITSI",
+        "capacity": 15,
+        "hideVideo": false,
+        "muteRoom": false,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/secret_tunnel.jpg",
+        "description": "This looks just like under McMartin Preschool!",
+        "directions": {
+            "west": "trapDoor",
+            "east": "crematorium"
+        },
+        "doorTint": "#00D089"
+    },
+    {
+        "id": "crematorium",
+        "name": "Crematorium",
+        "type": "JITSI",
+        "capacity": 15,
+        "hideVideo": false,
+        "description": "Let's gather around the fire.",
+        "doorTint": "white",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
+        "directions": {
+        "west": "secretTunnels" }
+    }
+]
 }
