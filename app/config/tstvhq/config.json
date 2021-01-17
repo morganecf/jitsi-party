@@ -20,30 +20,30 @@
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
     },
     "avatars": [{
-            "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
-            ]
-        },
-        {
-            "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
-            ]
-        },
-        {
-            "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
-            ]
-        }
-    ],
+        "images": [
+            "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
+        ]
+    },
+    {
+        "images": [
+            "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
+        ]
+    },
+    {
+        "images": [
+            "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
+        ]
+    }
+],
     "specialAvatars": {
         "goodbye": {
             "images": [
@@ -69,14 +69,14 @@
                 "text": "📍 {count} exploring"
             },
             "additionalStats": [{
-                    "text": "📕 {count} reading",
-                    "match": ["library"]
-                },
-                {
-                    "text": "🦇 {count} meeting animals",
-                    "match": ["belfry", "den"]
-                }
-            ]
+                "text": "📕 {count} reading",
+                "match": ["library"]
+            },
+            {
+                "text": "🦇 {count} meeting animals",
+                "match": ["belfry", "den"]
+            }
+        ]
         }
     },
     "poke": {
