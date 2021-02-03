@@ -246,14 +246,14 @@
     {
         "id": "ritualChamber",
         "name": "Ritual Chamber",
-        "type": "JITSI",
+        "type": "IFRAME",
         "capacity": 15,
         "muteRoom": true,
         "hideVideo": true,
         "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual_chamber.jpg",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
         }, 
         "directions": {
             "east": "backParlor"
