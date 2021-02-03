@@ -79,13 +79,13 @@
     {
         "id": "grandBallroom",
         "name": "Grand Ballroom",
-        "type": "JITSI",
-        "capacity": 15,
+        "type": "IFRAME",
+        "capacity": 100,
         "muteRoom": false,
         "hideVideo": false,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=lucien_greaves&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=DJKittyBot&parent=estate.tstvhq.com"
         },
         "description": "Settle down in the comfy chairs, won't you? It's storytime.",
         "directions": {
@@ -139,7 +139,7 @@
         "type": "IFRAME",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=LEDflashing&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=kaeleakae&parent=estate.tstvhq.com"
         },
         "directions": {
             "east": "teaRoom",
@@ -162,15 +162,15 @@
     {
         "id": "teaRoom",
         "name": "Tea Room",
-        "type": "JITSI",
-        "capacity": 20,
+        "type": "IFRAME",
+        "capacity": 100,
         "muteRoom": false,
         "hideVideo": false,
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=jasonatomic&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=mandisa0904&parent=estate.tstvhq.com"
         },
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea_room.jpg",
-        "description": "Cream or sugar? Come have a nice cuppa.",
+        "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick. You'll love it.",
         "directions": {
             "north": "den",
             "west": "frontParlor",
@@ -191,14 +191,14 @@
     },
     {
         "id": "den",
-        "name": "Cloven Corner",
+        "name": "Den",
         "type": "IFRAME",
         "iframeOptions": {
-            "src": "https://www.youtube.com/embed/-FVgurmo05o"
+            "src": "https://portal.hdontap.com/b67610d4-c2a9-4f6f-912e-4b416da64c8f"
         },
         "capacity": 15,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
-        "description": "Such good kids from Woodstock Farm Sanctuary. Donate at woodstocksanctuary.org",
+        "description": "Snuggle and play with friends from the NY Wolf Conservation Center. Donate at nywolf.org",
         "directions": {
             "north": "backParlor",
             "south": "teaRoom"
@@ -377,7 +377,7 @@
         "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=mercymaelica&parent=estate.tstvhq.com"
+            "src": "https://picarto.tv/InfernalZoey666"
         },
         "directions": {
             "south": "library"
@@ -420,8 +420,8 @@
     },
     {
         "id": "tstHQ",
-        "name": "Infernal Theater",
-        "type": "JITSI",
+        "name": "Theater",
+        "type": "IFRAME",
         "capacity": 100,
         "muteRoom": true,
         "hideVideo": false,
@@ -429,7 +429,7 @@
         "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=coffeepriest&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
         },
         "directions": {
             "west": "staircase",
