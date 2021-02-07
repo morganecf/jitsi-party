@@ -74,7 +74,7 @@
             },
             {
                 "text": "🦇 {count} meeting animals",
-                "match": ["belfry", "den"]
+                "match": ["belfry", "den", "sleepingPorch"]
             }
         ]
         }
