@@ -45,7 +45,7 @@
                     "text": "As you make your way through the trees you hear a gruff voice call to you from beyond the tree line along the path. ‘These woods have such beauty within them. Come pick some flowers.’ Delightful fragrant scents fill the air and you are tempted to see what kind of flowers could produce such a lovely bouquet.",
                     "buttons": [
                         {
-                            "text": "Pick flowers”,
+                            "text": "Pick flowers",
                             "nextRoom": ["card"]
                         },
                         {
