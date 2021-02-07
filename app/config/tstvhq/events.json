@@ -25,12 +25,12 @@
             "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
         },
         {
-            "name": "Whimsical Blasphemy: DJ and Videos from Mercy",
-            "description": "Live from Salem",
-            "room": "boudoir",
-            "start": "2020-12-31T20:30:00-05:00",
+            "name": "Whimsical Blasphemy",
+            "description": "DJ and Videos from Mercy: Live from Salem",
+            "room": "grandBallroom",
+            "start": "2021-02-11T20:30:00-05:00",
             "end": "2021-01-01T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/generic.jpg"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-music.png"
         },
         {
             "name": "Bats in the Belfry",
