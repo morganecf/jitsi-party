@@ -3,7 +3,7 @@
         {
             "config": {
                 "audio": {
-                    "path": "https://jitsi-party.s3.amazonaws.com/Satanic+Planet+999+(official+music+video).mp3",
+                    "path": "https://tstvhq.s3.amazonaws.com/music/Haunted+Woods.mp3",
                     "autoPlay": true,
                     "hideControls": true
                 }
