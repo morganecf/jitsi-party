@@ -7,7 +7,7 @@
         "doorTint": "#00D089",
         "muteRoom": true,
         "hideVideo": true,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/kitchen.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
         },
@@ -36,7 +36,7 @@
         "capacity": 5,
         "doorTint": "pink",
         "description": "Freshen up with a few friends.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-powder+room.png",
         "directions": {
             "east": "kitchen",
             "west": "massAve"
@@ -81,13 +81,13 @@
         "name": "Grand Ballroom",
         "type": "IFRAME",
         "capacity": 100,
-        "muteRoom": false,
+        "muteRoom": true,
         "hideVideo": false,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=DJKittyBot&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
         },
-        "description": "Settle down in the comfy chairs, won't you? It's storytime.",
+        "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
             "south": "kitchen"
         },
@@ -110,7 +110,7 @@
         "hideVideo": false,
         "capacity": 10,
         "description": "The inspector won't return our calls. Should it be making that noise?",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/elevator.gif",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-elevator.gif",
         "directions": {
             "north": "library",
             "east": "painting",
