@@ -3,7 +3,7 @@
         {
             "config": {
                 "audio": {
-                    "path": "https://tstvhq.s3.amazonaws.com/music/elevator_ritual.mp3",
+                    "path": "https://jitsi-party.s3.amazonaws.com/Satanic+Planet+999+(official+music+video).mp3",
                     "autoPlay": true,
                     "hideControls": true
                 }
@@ -11,11 +11,11 @@
             "rooms": [
                 {
                     "id": "painting",
-                    "name": "Click here",
-                    "text": "You are standing in the stairwell of The Satanic Temple's art gallery.  Art galore decorates the rich wallpaper.  While traversing the stairs, you are jostled by a fellow patron. Your shoulder knocks a painting askew. A secret door opens. You are the only one who seems to notice.",
+                    "name": "Cloak on Wall",
+                    "text": "The red cloak on the wall looks very fine. You take it off its hook to admire it. When you do, the hook is pulled forward and engages a hidden switch. A clanking mechanism whirs and a panel slides open to reveal a secret door. Beyond the door is shrouded in shadow and a chill fills the air.",
                     "buttons": [
                         {
-                            "text": "Secret door",
+                            "text": "Enter door",
                             "nextRoom": ["catacombs"]
                         },
                         {
@@ -26,66 +26,68 @@
                 },
                 {
                     "id": "catacombs",
-                    "name": "Through the looking glass",
-                    "text": "You appear to be the only one who sees that you have inadvertently opened a secret door. You descend down the spiral staircase within. The door closes behind you. Descending, you find yourself in an ante-chamber with a single door.",
+                    "name": "a path of temptations",
+                    "text": "Donning the cloak you trepadaciously enter the secret door. Descending down a staircase you find yourself outside. A path leads into the woods. You find a note in the pocket of the cloak. It reads: ‘Whatever you do, don’t stray from the path. Love, Mom.’",
                     "buttons": [
                         {
-                            "text": "Open the door",
+                            "text": "Into the Woods!",
                             "nextRoom": ["fortune"]
                         },
                         {
-                            "text": "Look for a way out",
+                            "text": "Go back",
                             "nextRoom": ["library"]
                         }
                     ]
                 },
                 {
                     "id": "fortune",
-                    "name": "Open the door",
-                    "text": "The door will not open. It is locked. You can hear it though.",
+                    "name": "Encounter with the wolf",
+                    "text": "As you make your way through the trees you hear a gruff voice call to you from beyond the tree line along the path. ‘These woods have such beauty within them. Come pick some flowers.’ Delightful fragrant scents fill the air and you are tempted to see what kind of flowers could produce such a lovely bouquet.",
                     "buttons": [
                         {
-                            "text": "stop and listen",
+                            "text": "Pick flowers",
                             "nextRoom": ["card"]
                         },
                         {
-                          "text": "Look for a way out",
-                          "nextRoom": ["library"]
+                          "text": "Stay on path",
+                          "nextRoom": ["cemetery"]
                       }
-                  ]
+                    ]
                 },
                 {
                     "id": "card",
-                    "name": "listen",
-                    "text": "You listen.",
+                    "name": "Pushing Daisies",
+                    "text": "In a clearing you find a cluster of the most intoxicating wildflowers oddly blooming in a patch of moonlight. You pick an assortment. Perhaps they’d make a nice gift for whoever’s mother this coat belongs to. Continuing on you try to find your way back, but you aren’t sure if the path you are now on is the same one as before. Off to your left, farther from the path you see a table laid out for a feast. The gruff voice returns but you still cannot see its owner. ‘A feast fit for royalty, come indulge in the decadence of our Lupercalia offerings.’",
                     "buttons": [
                         {
-                            "text": "keep listening",
+                            "text": "Check out feast",
                             "nextRoom": ["returnCard"]
                         },
                         {
-                            "text": "Try to find a way out",
-                            "nextRoom": ["library"]
-                        } 
+                            "text": "continue on path",
+                            "nextRoom": ["cemetery"]
+                        }
                     ]
                 },
                 {
                     "id": "returnCard",
-                    "name": "The Card Return",
-                    "text": "After a while, the voices drift off into music. You feel as if whatever was going on is over. Suddenly there is a resounding 'clunk' of internal mechanisms in the wall.  It opens, revealing a door to your left.",
+                    "name": "The Feast of Lupercalia",
+                    "text": "You approach the table and are overcome with hunger. Without thinking you gorge yourself on the most decadent of foods. Meade from Gemini’s casks, fruits of untold delectability whose juices run down your chin and stain your clothes. Once sated, you look for the path to continue your journey. You think you can see it, but you also notice the entrance to a cave. Strange markings are scratched in its walls, and a light emanates from inside. You creep closer. Within the cave, you can see an open book on a pedestal. The voice speaks from inside the cave. 'Knowledge is the greatest gift. You've come this far. Eat of the fruit and become as a god.'",
                     "buttons": [
                         {
-                            "text": "Go through the left door",
+                            "text": "Enter Cave",
                             "nextRoom": ["trapDoor"]
                         },
                         {
-                            "text": "Look for another way out",
-                            "nextRoom": ["library"]
-                        } 
+                            "text": "Stay on Path",
+                            "nextRoom": ["cemetery"]
+                        }
                     ]
                 }
             ]
-        },
+        }
+    ]
+},
         {
             "config": {},
             "rooms": [ 
