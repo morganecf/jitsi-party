@@ -83,7 +83,7 @@
         "capacity": 100,
         "muteRoom": true,
         "hideVideo": false,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand+ballroom.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
         },
@@ -137,7 +137,7 @@
         "hideVideo": true,
         "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
         "type": "IFRAME",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front+parlor.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=kaeleakae&parent=estate.tstvhq.com"
         },
@@ -169,8 +169,8 @@
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=mandisa0904&parent=estate.tstvhq.com"
         },
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea_room.jpg",
-        "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick. You'll love it.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-tea+room.png",
+        "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick. It's cozy.",
         "directions": {
             "north": "den",
             "west": "frontParlor",
@@ -197,7 +197,7 @@
             "src": "https://portal.hdontap.com/b67610d4-c2a9-4f6f-912e-4b416da64c8f"
         },
         "capacity": 15,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-barnyard.png",
         "description": "Snuggle and play with friends from the NY Wolf Conservation Center. Donate at nywolf.org",
         "directions": {
             "north": "backParlor",
@@ -222,7 +222,7 @@
         "capacity": 500,
         "muteRoom": true,
         "hideVideo": true,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back+Parlor.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
         },
@@ -251,7 +251,7 @@
         "muteRoom": true,
         "hideVideo": true,
         "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual_chamber.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-ritual.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
         }, 
@@ -275,7 +275,7 @@
         "type": "IFRAME",
         "capacity": 15,
         "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Donate at batworld.org",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/belfry.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-belfry.png",
         "iframeOptions": {
             "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
         },
@@ -301,7 +301,7 @@
         "hideVideo": true, 
         "description": "Will you please smoke faster? It's freezing in here",
         "type": "JITSI",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping_porch.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-sleeping+porch.png",
         "directions": {
             "west": "library",
             "east": "staircase"
@@ -320,13 +320,13 @@
     },
     {
         "id": "aviary",
-        "name": "Study",
+        "name": "Aviary",
         "type": "JITSI",
         "capacity": 7,
         "muteRoom": false,
         "hideVideo": false,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/aviary.jpg",
-        "description": "Have a question? A VHQ Caretaker should be around here somewhere...",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-aviary.png",
+        "description": "A cacophony of hoots, chirps and flutters.",
         "directions": {
             "east": "library"
         },
@@ -375,7 +375,7 @@
         "muteRoom": true,
         "hideVideo": false,
         "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-boudoir.png",
         "iframeOptions": {
             "src": "https://picarto.tv/InfernalZoey666"
         },
@@ -398,7 +398,7 @@
         "name": "Grand Staircase",
         "type": "JITSI",
         "description": "Mind the bannister, it's a bit loose.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grand_staircase.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-staircase.png",
         "capacity": 20,
         "muteRoom": false,
         "hideVideo": true,
@@ -427,7 +427,7 @@
         "hideVideo": false,
         "locked": false,
         "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
         },
@@ -455,7 +455,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "description": "The last ice storm made every dead branch sparkle!",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/garden.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Garden.png",
         "directions": {
             "west": "teaRoom",
             "east": "cemetery"
@@ -480,7 +480,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "description": "It's warmer underground. Hand me that shovel, I'll show you.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/cemetery.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-cemetery.png",
         "directions": {
             "west": "garden"
         },
@@ -499,7 +499,7 @@
         "id": "trapDoor",
         "name": "Trap Door",
         "type": "IFRAME",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/trapdoor.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-trap+door.png",
         "capacity": 15,
         "description": "This is just wide enough to fit through. Follow me-- what could go wrong?",
         "iframeOptions": {
@@ -517,7 +517,7 @@
         "capacity": 15,
         "hideVideo": false,
         "muteRoom": false,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/secret_tunnel.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-secret+tunnels.png",
         "description": "This looks just like under McMartin Preschool!",
         "directions": {
             "west": "trapDoor",
@@ -533,7 +533,7 @@
         "hideVideo": false,
         "description": "Let's gather around the fire.",
         "doorTint": "white",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Crematorium.png",
         "directions": {
         "west": "secretTunnels" }
     }
