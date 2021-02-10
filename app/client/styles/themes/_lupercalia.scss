@@ -1,68 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 $accent-font: 'Philosopher';
 
-$white: #FFFFFF
-$black: #000000
-$burgundy: #370000
-$wine: #750505
-$red: #D60000
-$bright-red: #F10000
-$light-red: #FA3E3E
-$grey: #595959
-$dark-grey: #404040
-$light-grey: #ECE9E9
-
-$accent-color: #eb1d25;
+$white: #FFFFFF;
+$black: #0E0301;
+$black-red: #1E0500;
+$wine: #750505;
+$red: #D60000;
+$light-red: #FA3E3E;
+$grey: #595959;
+$dark-grey: #404040;
+$pink-swan: #C2B5B5;
+$accent-color: red;
 
 $background-color: $black;
-$background-color-dark: $dark-grey;
-$door-background: $grey;
-$room-content-background-color: $bright-green;
-$modal-background-color: $grey;
+$background-color-dark: $black;
+$door-background: $dark-grey;
+$room-content-background-color: $red;
+$modal-background-color: $black;
 
 $text-color: $white;
-$link-color: $dark-green;
+$link-color: $light-red;
 
 $disabled-text-color: color("grey-700");
 $disabled-background-color: color("grey-500");
 
-$map-header-color: $black;
-$map-header-background-color: $bright-green;
+$map-header-color: $white;
+$map-header-background-color: $black;
 
-$map-room-fill: $green;
+$map-room-fill: $dark-grey;
 $map-unvisited-color: $dark-grey;
 $map-room-stroke-color: $black;
 $map-highlight-stroke: $black;
-$map-highlight-fill: $bright-green;
+$map-highlight-fill: $wine;
 
 $events-header-color: $black;
-$events-header-background-color: $bright-green;
+$events-header-background-color: $black;
 $events-name-color: $white;
-$events-description-color: $black;
+$events-description-color: $pink-swan;
 $events-coordinates-color: $white;
-$events-item-background-color: $green;
-
+$events-item-background-color: $wine;
+$avatar-highlight-color: $black;
 $email-form-color: $grey;
 $email-description-color: $white;
 
-$poke-color: $bright-green;
+$poke-color: $red;
 $poke-background-color: $black;
 
-$button-background-color: $dark-green;
-$button-border-color: $dark-green;
+$button-background-color: $black;
+$button-border-color: $red;
 $button-text-color: $white;
 $button-border-radius: 2px;
 
-$opaque-button-background-color: $green;
-$opaque-button-text-color: white;
-$opaque-button-border-color: $green;
+$opaque-button-background-color: $black;
+$opaque-button-text-color: $white;
+$opaque-button-border-color: $red;
 
-$focused-button-background-color: $green;
+$focused-button-background-color: $black;
 $focused-button-text-color: $white;
-$focused-button-border-color: $green;
+$focused-button-border-color: $red;
 
-$name-input-border-color: white;
-$name-input-background-color: white;
+$name-input-border-color: $white;
+$name-input-background-color: $white;
 
 $modal-overlay-color: rgba(129, 62, 62, 0.25);
 
