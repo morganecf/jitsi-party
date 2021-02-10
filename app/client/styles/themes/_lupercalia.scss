@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+$accent-font: 'Philosopher';
+
+$white: #FFFFFF;
+$black: #0E0301;
+$black-red: #1E0500;
+$wine: #750505;
+$red: #D60000;
+$light-red: #FA3E3E;
+$grey: #595959;
+$dark-grey: #404040;
+$pink-swan: #C2B5B5;
+$accent-color: red;
+
+$background-color: $black;
+$background-color-dark: $black;
+$door-background: $dark-grey;
+$room-content-background-color: $red;
+$modal-background-color: $black;
+
+$text-color: $white;
+$link-color: $light-red;
+
+$disabled-text-color: color("grey-700");
+$disabled-background-color: color("grey-500");
+
+$map-header-color: $white;
+$map-header-background-color: $black;
+
+$map-room-fill: $dark-grey;
+$map-unvisited-color: $dark-grey;
+$map-room-stroke-color: $black;
+$map-highlight-stroke: $black;
+$map-highlight-fill: $wine;
+
+$events-header-color: $black;
+$events-header-background-color: $black;
+$events-name-color: $white;
+$events-description-color: $pink-swan;
+$events-coordinates-color: $white;
+$events-item-background-color: $wine;
+$avatar-highlight-color: $black;
+$email-form-color: $grey;
+$email-description-color: $white;
+
+$poke-color: $red;
+$poke-background-color: $black;
+
+$button-background-color: $black;
+$button-border-color: $red;
+$button-text-color: $white;
+$button-border-radius: 2px;
+
+$opaque-button-background-color: $black;
+$opaque-button-text-color: $white;
+$opaque-button-border-color: $red;
+
+$focused-button-background-color: $black;
+$focused-button-text-color: $white;
+$focused-button-border-color: $red;
+
+$name-input-border-color: $white;
+$name-input-background-color: $white;
+
+$modal-overlay-color: rgba(129, 62, 62, 0.25);
+
+$art-image-border-color: color("grey-50"); //white
+
+body {
+    font-family: $accent-font !important;
+}
+
+.vestibule .header {
+    margin-bottom: 0 !important;
+}
+
+.custom-login-description {
+    text-align: center;
+    font-size: smaller;
+    opacity: 0.8;
+}
+
+// .tst,
+// .room-header h2, 
+// #map-info .room-name,
+// .events-view .events-header,
+// .events-view .event-list .event-info .event-name,
+// .navigation-container .settings-container .poke-button-container .poke-options .poke-header {
+//     font-family: $accent-font;
+// }
+
+.room .room-content {
+    max-height: 80px;
+    padding: .5em 50px;
+}
