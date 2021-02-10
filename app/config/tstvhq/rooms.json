@@ -4,10 +4,10 @@
         "name": "Kitchen",
         "type": "IFRAME",
         "capacity": 500,
-        "doorTint": "#00D089",
+        "doorTint": "#404040",
         "muteRoom": true,
         "hideVideo": true,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/kitchen.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
         },
@@ -34,9 +34,9 @@
         "name": "Powder Room",
         "type": "JITSI",
         "capacity": 5,
-        "doorTint": "pink",
+        "doorTint": "#404040",
         "description": "Freshen up with a few friends.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-powder-room.png",
         "directions": {
             "east": "kitchen",
             "west": "massAve"
@@ -52,46 +52,21 @@
         }
     },
     {
-        "id": "clarendon",
-        "name": "Clarendon",
-        "type": "JITSI",
-        "capacity": 20,
-        "doorTint": "pink",
-        "description": "Shit, I spilled my grinder all over the beanbag.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/bath.jpg",
-        "directions": {
-            "east": "powderRoom",
-            "west": "twentyFour"
-        }
-    },
-    {
-        "id": "twentyFour",
-        "name": "Twenty Four",
-        "type": "JITSI",
-        "capacity": 20,
-        "doorTint": "green",
-        "description": "Alexa, turn on Pong.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
-        "directions": {
-            "east": "clarendon"
-        }
-    },
-    {
         "id": "grandBallroom",
         "name": "Grand Ballroom",
         "type": "IFRAME",
         "capacity": 100,
-        "muteRoom": false,
+        "muteRoom": true,
         "hideVideo": false,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ballroom.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=DJKittyBot&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
         },
-        "description": "Settle down in the comfy chairs, won't you? It's storytime.",
+        "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
             "south": "kitchen"
         },
-        "doorTint": "golden",
+        "doorTint": "#404040",
         "map": {
             "x": 3,
             "y": 18,
@@ -110,7 +85,7 @@
         "hideVideo": false,
         "capacity": 10,
         "description": "The inspector won't return our calls. Should it be making that noise?",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/elevator.gif",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-elevator.gif",
         "directions": {
             "north": "library",
             "east": "painting",
@@ -127,7 +102,7 @@
                 "east": 18
             }
         },
-        "doorTint": "#00D089"
+        "doorTint": "#404040"
     },
     {
         "id": "frontParlor",
@@ -135,9 +110,9 @@
         "capacity": 200,
         "muteRoom": true,
         "hideVideo": true,
-        "description": "The fireplace is ungodly warm. Mind if I slip off my shawl?",
+        "description": "Loveseats, chaises, armchairs-- oh my!",
         "type": "IFRAME",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/front_parlor.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=kaeleakae&parent=estate.tstvhq.com"
         },
@@ -157,20 +132,20 @@
                 "west": 27
             }
         },
-        "doorTint": "#00D089"
+        "doorTint": "#404040"
     },
     {
         "id": "teaRoom",
         "name": "Tea Room",
-        "type": "IFRAME",
+        "type": "JITSI",
         "capacity": 100,
         "muteRoom": false,
         "hideVideo": false,
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=mandisa0904&parent=estate.tstvhq.com"
         },
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/tea_room.jpg",
-        "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick. You'll love it.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-tea-room.png",
+        "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick.",
         "directions": {
             "north": "den",
             "west": "frontParlor",
@@ -187,18 +162,18 @@
                 "north": 22
             }
         },
-        "doorTint": "#00D089"
+        "doorTint": "#404040"
     },
     {
         "id": "den",
         "name": "Den",
         "type": "IFRAME",
         "iframeOptions": {
-            "src": "https://portal.hdontap.com/b67610d4-c2a9-4f6f-912e-4b416da64c8f"
+            "src": "http://portal.hdontap.com/s/embed/?stream=nywolf_mexicanwolves-trumpetandlighthawk_enclosure-ST&ratio=16:9&fluid=true"
         },
         "capacity": 15,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/barnyard.jpg",
-        "description": "Snuggle and play with friends from the NY Wolf Conservation Center. Donate at nywolf.org",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-barnyard.png",
+        "description": "Snuggle and play with the babies from the NY Wolf Conservation Center. Donate at nywolf.org",
         "directions": {
             "north": "backParlor",
             "south": "teaRoom"
@@ -213,7 +188,7 @@
                 "south": 22
             }
         },
-        "doorTint": "orange"
+        "doorTint": "#404040"
     },
     {
         "id": "backParlor",
@@ -222,11 +197,11 @@
         "capacity": 500,
         "muteRoom": true,
         "hideVideo": true,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/back_parlor.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
         },
-        "description": "Lectures and Lessons from Thomas Vallor @SalemWitchWiles",
+        "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
         "directions": {
             "south": "den",
             "west": "ritualChamber"
@@ -241,17 +216,17 @@
                 "west": 18
             }
         },
-        "doorTint": "#FF5938"
+        "doorTint": "#404040"
     },
     {
         "id": "ritualChamber",
         "name": "Ritual Chamber",
-        "type": "IFRAME",
-        "capacity": 15,
+        "type": "JITSI",
+        "capacity": 10,
         "muteRoom": true,
         "hideVideo": true,
         "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/ritual_chamber.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-ritual.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
         }, 
@@ -267,15 +242,15 @@
                 "east": 18
             }
         },
-        "doorTint": "#00D089"
+        "doorTint": "#404040"
     },
     {
         "id": "belfry",
         "name": "Belfry",
         "type": "IFRAME",
-        "capacity": 15,
-        "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld, a shelter in Texas who cares for these sweethearts. Donate at batworld.org",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/belfry.jpg",
+        "capacity": 25,
+        "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld! Donate at batworld.org",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-belfry.png",
         "iframeOptions": {
             "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
         },
@@ -291,21 +266,24 @@
                 "south": 27
             }
         },
-        "doorTint": "blue"
+        "doorTint": "#404040"
     },
     {
         "id": "sleepingPorch",
         "name": "Sleeping Porch",
-        "capacity": 10,
-        "muteRoom": true,
-        "hideVideo": true, 
-        "description": "Will you please smoke faster? It's freezing in here",
-        "type": "JITSI",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/sleeping_porch.jpg",
+        "capacity": 25,
+        "muteRoom": false,
+        "hideVideo": false, 
+        "description": "Give the goats from Woodstock Farm Sanctuary a snack at woodstocksanctuary.org/",
+        "type": "IFRAME",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-sleeping-porch.png",
         "directions": {
             "west": "library",
             "east": "staircase"
         },
+        "iframeOptions": {
+            "src": "http://portal.hdontap.com/s/embed/?stream=nywolf_mexicanwolves-trumpetandlighthawk_enclosure-ST&ratio=16:9&fluid=true"
+        }, 
         "map": {
             "x": 14,
             "y": 9,
@@ -316,17 +294,17 @@
                 "east": 10
             }
         },
-        "doorTint": "blue"
+        "doorTint": "#404040"
     },
     {
         "id": "aviary",
-        "name": "Study",
+        "name": "Aviary",
         "type": "JITSI",
-        "capacity": 7,
+        "capacity": 5,
         "muteRoom": false,
         "hideVideo": false,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/aviary.jpg",
-        "description": "Have a question? A VHQ Caretaker should be around here somewhere...",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-aviary.png",
+        "description": "A cacophony of hoots, chirps and flutters.",
         "directions": {
             "east": "library"
         },
@@ -339,7 +317,7 @@
                 "east": 9
             }
         },
-        "doorTint": "orange"
+        "doorTint": "#404040"
     },
     {
         "id": "library",
@@ -365,17 +343,17 @@
                 "west": 9
             }
         },
-        "doorTint": "#00D089"
+        "doorTint": "#404040"
     },
     {
         "id": "boudoir",
         "name": "Boudoir",
-        "type": "IFRAME",
+        "type": "JITSI",
         "capacity": 50,
         "muteRoom": true,
         "hideVideo": false,
-        "description": "An intimate setting for covert conversations regarding the Satanic Agenda",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/dressing_room.jpg",
+        "description": "Covert conversations regarding the Satanic Agenda",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-boudoir.png",
         "iframeOptions": {
             "src": "https://picarto.tv/InfernalZoey666"
         },
@@ -391,14 +369,14 @@
                 "south": 10
             }
         },
-        "doorTint": "#990000"
+        "doorTint": "#404040"
     },
     {
         "id": "staircase",
         "name": "Grand Staircase",
         "type": "JITSI",
-        "description": "Mind the bannister, it's a bit loose.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/grand_staircase.jpg",
+        "description": "Mind the loose bannister-- others haven't.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-staircase.png",
         "capacity": 20,
         "muteRoom": false,
         "hideVideo": true,
@@ -416,18 +394,18 @@
                 "east": 10
             }
         },
-        "doorTint": "#00D089"
+        "doorTint": "#404040"
     },
     {
         "id": "tstHQ",
         "name": "Theater",
         "type": "IFRAME",
-        "capacity": 100,
+        "capacity": 500,
         "muteRoom": true,
-        "hideVideo": false,
+        "hideVideo": true,
         "locked": false,
-        "description": "The velvet seats recline! Are they violet or black? Hard to tell in the dark.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/theatre.jpg",
+        "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
         },
@@ -445,7 +423,7 @@
                 "north": 27
             }
         },
-        "doorTint": "black"
+        "doorTint": "#404040"
     },
     {
         "id": "garden",
@@ -454,8 +432,8 @@
         "capacity": 20,
         "muteRoom": false,
         "hideVideo": false,
-        "description": "The last ice storm made every dead branch sparkle!",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/garden.jpg",
+        "description": "The amaryllis is already blooming!",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Garden.png",
         "directions": {
             "west": "teaRoom",
             "east": "cemetery"
@@ -470,7 +448,7 @@
                 "east": 27
             }
         },
-        "doorTint": "purple"
+        "doorTint": "#404040"
     },
     {
         "id": "cemetery",
@@ -480,7 +458,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "description": "It's warmer underground. Hand me that shovel, I'll show you.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/cemetery.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-cemetery.png",
         "directions": {
             "west": "garden"
         },
@@ -493,22 +471,22 @@
                 "west": 27
             }
         },
-        "doorTint": "white"
+        "doorTint": "#404040"
     },
     {
         "id": "trapDoor",
-        "name": "Trap Door",
+        "name": "Trap Door to Hell",
         "type": "IFRAME",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/trapdoor.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-trap-door.png",
         "capacity": 15,
-        "description": "This is just wide enough to fit through. Follow me-- what could go wrong?",
+        "description": "Are we next to the boiler? Why is it so hot down here?",
         "iframeOptions": {
             "src": "https://www.youtube.com/embed/ngKBYMzD_Fg"
         },
         "directions": {
             "east": "secretTunnels"
         },
-        "doorTint": "black"
+        "doorTint": "#404040"
     },
     {
         "id": "secretTunnels",
@@ -517,13 +495,13 @@
         "capacity": 15,
         "hideVideo": false,
         "muteRoom": false,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/secret_tunnel.jpg",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-secret-tunnels.png",
         "description": "This looks just like under McMartin Preschool!",
         "directions": {
             "west": "trapDoor",
             "east": "crematorium"
         },
-        "doorTint": "#00D089"
+        "doorTint": "#404040"
     },
     {
         "id": "crematorium",
@@ -531,9 +509,9 @@
         "type": "JITSI",
         "capacity": 15,
         "hideVideo": false,
-        "description": "Let's gather around the fire.",
-        "doorTint": "white",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/crematorium.jpg",
+        "description": "Have a marshmallow. It's time for s'mores!",
+        "doorTint": "#404040",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Crematorium.png",
         "directions": {
         "west": "secretTunnels" }
     }
