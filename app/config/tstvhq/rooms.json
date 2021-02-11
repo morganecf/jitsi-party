@@ -4,7 +4,7 @@
         "name": "Kitchen",
         "type": "IFRAME",
         "capacity": 500,
-        "doorTint": "#D60000",
+        "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
@@ -34,7 +34,7 @@
         "name": "Powder Room",
         "type": "JITSI",
         "capacity": 5,
-        "doorTint": "#D60000",
+        "doorTint": "#000000",
         "description": "Freshen up with a few friends.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-powder-room.png",
         "directions": {
@@ -66,7 +66,7 @@
         "directions": {
             "south": "kitchen"
         },
-        "doorTint": "#D60000",
+        "doorTint": "#000000",
         "map": {
             "x": 3,
             "y": 18,
@@ -102,7 +102,7 @@
                 "east": 18
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "frontParlor",
@@ -132,7 +132,7 @@
                 "west": 27
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "teaRoom",
@@ -162,7 +162,7 @@
                 "north": 22
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "den",
@@ -188,7 +188,7 @@
                 "south": 22
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "backParlor",
@@ -216,7 +216,7 @@
                 "west": 18
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "ritualChamber",
@@ -242,7 +242,7 @@
                 "east": 18
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "belfry",
@@ -266,7 +266,7 @@
                 "south": 27
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "sleepingPorch",
@@ -294,7 +294,7 @@
                 "east": 10
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "aviary",
@@ -317,7 +317,7 @@
                 "east": 9
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "library",
@@ -343,7 +343,7 @@
                 "west": 9
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "boudoir",
@@ -369,7 +369,7 @@
                 "south": 10
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "staircase",
@@ -394,7 +394,7 @@
                 "east": 10
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "tstHQ",
@@ -423,7 +423,7 @@
                 "north": 27
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "garden",
@@ -448,7 +448,7 @@
                 "east": 27
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "cemetery",
@@ -471,7 +471,7 @@
                 "west": 27
             }
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "trapDoor",
@@ -486,7 +486,7 @@
         "directions": {
             "east": "secretTunnels"
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "secretTunnels",
@@ -501,7 +501,7 @@
             "west": "trapDoor",
             "east": "crematorium"
         },
-        "doorTint": "#D60000"
+        "doorTint": "#000000"
     },
     {
         "id": "crematorium",
@@ -510,7 +510,7 @@
         "capacity": 15,
         "hideVideo": false,
         "description": "Have a marshmallow. It's time for s'mores!",
-        "doorTint": "#D60000",
+        "doorTint": "#000000",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Crematorium.png",
         "directions": {
         "west": "secretTunnels" }
