@@ -73,7 +73,7 @@
                 "match": ["library"]
             },
             {
-                "text": "🦇 {count} meeting animals",
+                "text": "🖤 {count} meeting animals",
                 "match": ["belfry", "den", "sleepingPorch"]
             }
         ]
