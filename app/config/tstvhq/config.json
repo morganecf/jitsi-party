@@ -58,18 +58,18 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "🌓 {count} at VHQ"
+                "text": "🖤  {count} at VHQ"
             },
             "numberInHallways": {
                 "display": true,
-                "text": "👻 {count} haunting the hallways"
+                "text": "🖤 {count} haunting the hallways"
             },
             "numberInRooms": {
                 "display": false,
-                "text": "📍 {count} exploring"
+                "text": "🖤 {count} exploring"
             },
             "additionalStats": [{
-                "text": "📕 {count} reading",
+                "text": "🖤 {count} reading",
                 "match": ["library"]
             },
             {
