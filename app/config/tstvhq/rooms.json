@@ -169,7 +169,7 @@
         "name": "Den",
         "type": "IFRAME",
         "iframeOptions": {
-            "src": "http://portal.hdontap.com/s/embed/?stream=nywolf_mexicanwolves-trumpetandlighthawk_enclosure-ST&ratio=16:9&fluid=true"
+            "src": "//portal.hdontap.com/s/embed/?stream=nywolf_mexicanwolves-trumpetandlighthawk_enclosure-ST&ratio=16:9&fluid=true"
         },
         "capacity": 15,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-barnyard.png",
@@ -282,7 +282,7 @@
             "east": "staircase"
         },
         "iframeOptions": {
-            "src": "http://portal.hdontap.com/s/embed/?stream=nywolf_mexicanwolves-trumpetandlighthawk_enclosure-ST&ratio=16:9&fluid=true"
+            "src": "https://www.youtube.com/embed/-FVgurmo05o"
         }, 
         "map": {
             "x": 14,
