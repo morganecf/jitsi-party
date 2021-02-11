@@ -2,15 +2,15 @@
     "events": [
         {
             "name": "Doomed Love",
-            "description": "Lecture series with @SalemWitchWiles-- Thomas O'Brien Vallor of TST Salem",
+            "description": "Lecture series with Thomas O'Brien Vallor of TST Salem",
             "room": "backParlor",
             "start": "2021-02-11T22:00:00-05:00",
             "end": "2021-02-11T23:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "Cooking Workshop with The Satanic Chef",
-            "description": "Learn to live deliciously with @TheSatanicChef",
+            "name": "Basic Skills with The Satanic Chef",
+            "description": "Our favorite Chef Adam Dodge will be teaching basic cooking skills as an introduction to his Lupercalia class series,
             "room": "kitchen",
             "start": "2021-02-11T21:00:00-05:00",
             "end": "2021-02-11T22:00:00-05:00",
