@@ -12,9 +12,25 @@
             "name": "Basic Skills with The Satanic Chef",
             "description": "Our favorite Chef Adam Dodge will be teaching basic cooking skills as an introduction to his Lupercalia class series",
             "room": "kitchen",
+            "start": "2021-02-11T20:00:00-05:00",
+            "end": "2021-02-11T21:00:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-performance.png"
+        },
+        {
+            "name": "Sex Ed - Room 666",
+            "description": "Satanic Study Hall learns about the history of Lupercalia and explores Sexual Health and related topics with Dr. Eric Sprankle.",
+            "room": "tstHQ",
+            "start": "2021-02-11T23:00:00-05:00",
+            "end": "2021-02-12T01:00:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
+        },
+        {
+            "name": "Awake, Arise, Or Be Forever Fallen: Satanism and the Fight for Trans Rights",
+            "description": "A discussion on how Satanism embraces trans and gender non-conforming identities and how we can maintain an inclusive activist community for queer Satanists.",
+            "room": "frontParlor",
             "start": "2021-02-11T21:00:00-05:00",
             "end": "2021-02-11T22:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-performance.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
             "name": "Whimsical Blasphemy",
