@@ -2,7 +2,7 @@
     "rooms": [{
         "id": "kitchen",
         "name": "Kitchen",
-        "type": "IFRAME",
+        "type": "JITSI",
         "capacity": 500,
         "doorTint": "#000000",
         "muteRoom": true,
@@ -11,7 +11,7 @@
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
         },
-        "description": "Adam Dodge @TheSatanicChef teaches us how to live deliciously in the kitchen.",
+        "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
         "directions": {
             "west": "powderRoom",
             "north": "grandBallroom",
@@ -107,14 +107,14 @@
     {
         "id": "frontParlor",
         "name": "Front Parlor",
-        "capacity": 200,
+        "capacity": 500,
         "muteRoom": true,
         "hideVideo": true,
         "description": "Loveseats, chaises, armchairs-- oh my!",
         "type": "IFRAME",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=kaeleakae&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=dresdenvisage&parent=estate.tstvhq.com"
         },
         "directions": {
             "east": "teaRoom",
@@ -137,10 +137,10 @@
     {
         "id": "teaRoom",
         "name": "Tea Room",
-        "type": "JITSI",
-        "capacity": 100,
-        "muteRoom": false,
-        "hideVideo": false,
+        "type": "IFRAME",
+        "capacity": 500,
+        "muteRoom": true,
+        "hideVideo": true,
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=mandisa0904&parent=estate.tstvhq.com"
         },
@@ -171,7 +171,7 @@
         "iframeOptions": {
             "src": "https://www.youtube.com/embed/T4iPx3JrTvc"
         },
-        "capacity": 15,
+        "capacity": 20,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-barnyard.png",
         "description": "Snuggle and play with the babies from the NY Wolf Conservation Center. Donate at nywolf.org",
         "directions": {
@@ -221,14 +221,14 @@
     {
         "id": "ritualChamber",
         "name": "Ritual Chamber",
-        "type": "JITSI",
-        "capacity": 10,
+        "type": "IFRAME",
+        "capacity": 20,
         "muteRoom": true,
         "hideVideo": true,
         "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-ritual.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
+            "src": "https://www.youtube.com/embed/NU2zK5cRyUc"
         }, 
         "directions": {
             "east": "backParlor"
@@ -282,7 +282,7 @@
             "east": "staircase"
         },
         "iframeOptions": {
-            "src": "https://www.youtube.com/embed/-FVgurmo05o"
+            "src": "https://www.youtube.com/embed/-ryIgwbpIao"
         }, 
         "map": {
             "x": 14,
@@ -348,14 +348,14 @@
     {
         "id": "boudoir",
         "name": "Boudoir",
-        "type": "JITSI",
-        "capacity": 50,
+        "type": "IFRAME",
+        "capacity": 500,
         "muteRoom": true,
         "hideVideo": false,
         "description": "Covert conversations regarding the Satanic Agenda",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-boudoir.png",
         "iframeOptions": {
-            "src": "https://picarto.tv/InfernalZoey666"
+            "src": "https://player.twitch.tv/?channel=tstvhq&parent=estate.tstvhq.com"
         },
         "directions": {
             "south": "library"
@@ -399,8 +399,8 @@
     {
         "id": "tstHQ",
         "name": "Theater",
-        "type": "IFRAME",
-        "capacity": 500,
+        "type": "JITSI",
+        "capacity": 20,
         "muteRoom": true,
         "hideVideo": true,
         "locked": false,
