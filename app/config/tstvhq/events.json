@@ -1,43 +1,35 @@
 {
     "events": [
         {
-            "name": "Doomed Love",
-            "description": "Lecture series with Thomas O'Brien Vallor of TST Salem",
+            "name": "Satanic Salem Walking Tour",
+            "description": "Join our favorite Salem witch as he walks around his haunts and explains a complicated and little known history of how the nations favorite Halloween destination came to be with Thomas O'Brien Vallor of TST Salem",
             "room": "backParlor",
-            "start": "2021-02-11T22:00:00-05:00",
-            "end": "2021-02-11T23:00:00-05:00",
+            "start": "2021-02-12T22:00:00-05:00",
+            "end": "2021-02-12T23:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "Basic Skills with The Satanic Chef",
-            "description": "Our favorite Chef Adam Dodge will be teaching basic cooking skills as an introduction to his Lupercalia class series",
-            "room": "kitchen",
-            "start": "2021-02-11T20:00:00-05:00",
-            "end": "2021-02-11T21:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-performance.png"
-        },
-        {
-            "name": "Sex Ed - Room 666",
-            "description": "Satanic Study Hall learns about the history of Lupercalia and explores Sexual Health and related topics with Dr. Eric Sprankle.",
-            "room": "tstHQ",
-            "start": "2021-02-11T23:00:00-05:00",
-            "end": "2021-02-12T01:00:00-05:00",
+            "name": "Michelle Remembers: The Porn Parody",
+            "description": "A live table reading with unreleased illustrations of Lucien Greaves masterpiece",
+            "room": "boudoir",
+            "start": "2021-02-12T23:00:00-05:00",
+            "end": "2021-02-13T01:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "Awake, Arise, Or Be Forever Fallen: Satanism and the Fight for Trans Rights",
-            "description": "A discussion on how Satanism embraces trans and gender non-conforming identities and how we can maintain an inclusive activist community for queer Satanists.",
+            "name": "Hail Nonmonogamy?",
+            "description": "Dresden Visage and Maryline Spicy share their experiences of navigating unconventional relationships by employing Satanic self-empowerment and the Seven Fundamental Tenets.",
             "room": "frontParlor",
-            "start": "2021-02-11T21:00:00-05:00",
-            "end": "2021-02-11T22:00:00-05:00",
+            "start": "2021-02-12T21:00:00-05:00",
+            "end": "2021-02-12T22:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
             "name": "Whimsical Blasphemy",
             "description": "Join Mercy of TST Salem for Music and Videos",
             "room": "grandBallroom",
-            "start": "2021-02-11T20:30:00-05:00",
-            "end": "2021-02-12T02:00:00-05:00",
+            "start": "2021-02-12T20:30:00-05:00",
+            "end": "2021-02-13T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-music.png"
         },
         {
@@ -49,27 +41,35 @@
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
+            "name": "Black Nonbelievers: Past, Present and Future",
+            "description": "Noted lecturer, board member of American Atheists and the American Humanist Association and founder of the nonprofit Black Nonbelievers, we are honored to host Mandisa Thomas.",
+            "room": "teaRoom",
+            "start": "2021-02-12T20:00:00-05:00",
+            "end": "2021-02-12T21:00:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+        },
+        {
             "name": "A Happy Hooven Home: Goats!",
             "description": "Livestream of goats. Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
-            "start": "2021-02-11T20:00:00-05:00",
-            "end": "2021-02-12T02:00:00-05:00",
+            "start": "2021-02-12T20:00:00-05:00",
+            "end": "2021-02-13T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "Lupercalia Wolves!",
             "description": "Livestream of wolves. Donate at nywolf.org",
-            "room": "sleepingPorch",
-            "start": "2021-02-11T20:00:00-05:00",
-            "end": "2021-02-12T02:00:00-05:00",
+            "room": "den",
+            "start": "2021-02-12T20:00:00-05:00",
+            "end": "2021-02-13T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "Late Night Library: Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-02-11T20:00:00-05:00",
-            "end": "2021-02-12T02:00:00-05:00",
+            "start": "2021-02-12T20:00:00-05:00",
+            "end": "2021-02-13T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-art.png"
         }
     ]
