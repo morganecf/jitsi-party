@@ -196,7 +196,7 @@
         "id": "backParlor",
         "name": "Back Parlor",
         "type": "IFRAME",
-        "capacity": 500,
+        "capacity": 50,
         "muteRoom": true,
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
@@ -352,14 +352,14 @@
     {
         "id": "boudoir",
         "name": "Boudoir",
-        "type": "JITSI",
-        "capacity": 20,
-        "muteRoom": false,
-        "hideVideo": false,
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
         "description": "Covert conversations regarding the Satanic Agenda",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-boudoir.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=tstvhq&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
         },
         "directions": {
             "south": "library"
@@ -403,15 +403,15 @@
     {
         "id": "tstHQ",
         "name": "Theater",
-        "type": "JITSI",
-        "capacity": 20,
-        "muteRoom": false,
-        "hideVideo": false,
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
         "locked": false,
         "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
         },
         "directions": {
             "west": "staircase",
