@@ -401,8 +401,8 @@
         "doorTint": "#000000"
     },
     {
-        "id": "tstHQ",
-        "name": "Theater",
+        "id": "theater1",
+        "name": "Theater I",
         "type": "IFRAME",
         "capacity": 50,
         "muteRoom": true,
@@ -414,18 +414,70 @@
             "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
         },
         "directions": {
-            "west": "staircase",
-            "north": "belfry"
+            "east": "theater2",
+            "west": "staircase"
         },
         "map": {
             "x": 24,
             "y": 7,
-            "width": 5,
+            "width": 2,
             "height": 5,
             "doors": {
-                "west": 10,
+                "west": 10
+            }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "theater2",
+        "name": "Theater II",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
+        "locked": false,
+        "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "directions": {
+            "east": "theater1",
+            "west": "theater3",
+            "north": "belfry"
+        },
+        "map": {
+            "x": 26,
+            "y": 7,
+            "width": 2,
+            "height": 5,
+            "doors": {
                 "north": 27
             }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "theater3",
+        "name": "Theater III",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
+        "locked": false,
+        "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "directions": {
+            "east": "theater2"
+        },
+        "map": {
+            "x": 28,
+            "y": 7,
+            "width": 2,
+            "height": 5
         },
         "doorTint": "#000000"
     },
