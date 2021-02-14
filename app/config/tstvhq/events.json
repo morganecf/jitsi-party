@@ -1,83 +1,67 @@
 {
     "events": [
         {
-            "name": "Satanic Salem Walking Tour",
-            "description": "Join our favorite Salem witch as he walks around his haunts and explains a complicated and little known history of how the nations favorite Halloween destination came to be with Thomas O'Brien Vallor of TST Salem",
+            "name": "Doomed Love",
+            "description": "Romantic stories from Salem's history and folklore of star-crossed, toxic, or otherwise doomed lovers.",
             "room": "backParlor",
-            "start": "2021-02-12T22:00:00-05:00",
-            "end": "2021-02-12T23:00:00-05:00",
+            "start": "2021-02-13T22:00:00-05:00",
+            "end": "2021-02-13T23:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "Hail Yourself",
-            "description": "A Lupercalia ritual from TST Atlanta with chat based Q&A from co-chapterhead",
+            "name": "Romantic Satanism: Rituals for Love + Heart Healing",
+            "description": "Shiva Honey will discuss her experience creating and performing Satanic love rituals, share secrets to working your own love magic, and share rituals from her book The Devil’s Tome that focus on finding love, cultivating self-love, and healing heartbreak.",
             "room": "ritualChamber",
-            "start": "2021-02-13T01:00:00-05:00",
-            "end": "2021-02-13T01:15:00-05:00",
+            "start": "2021-02-13T21:00:00-05:00",
+            "end": "2021-02-13T22:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "Michelle Remembers: The Porn Parody",
-            "description": "A live table reading with unreleased illustrations of Lucien Greaves masterpiece",
-            "room": "boudoir",
-            "start": "2021-02-12T23:00:00-05:00",
-            "end": "2021-02-13T01:00:00-05:00",
+            "name": "Get Down Make Love",
+            "description": "DJ Set - w/Shiva Honey + Grahamzig.",
+            "room": "ritualChamber",
+            "start": "2021-02-13T23:00:00-05:00",
+            "end": "2021-02-14T01:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "Hail Nonmonogamy?",
-            "description": "Dresden Visage and Maryline Spicy share their experiences of navigating unconventional relationships by employing Satanic self-empowerment and the Seven Fundamental Tenets.",
-            "room": "frontParlor",
-            "start": "2021-02-12T21:00:00-05:00",
-            "end": "2021-02-12T22:00:00-05:00",
+            "name": "Bloody Beets - The Satanic Chef",
+            "description": "The Satanic Chef live, is a live, interactive-cooking class on TSTVHQ. In these classes our devilish Chef combines unique cooking style in an entertaining & educating satanic context.",
+            "room": "kitchen",
+            "start": "2021-02-13T20:00:00-05:00",
+            "end": "2021-02-13T21:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
-        },
-        {
-            "name": "Whimsical Blasphemy",
-            "description": "Join Mercy of TST Salem for Music and Videos",
-            "room": "grandBallroom",
-            "start": "2021-02-12T20:30:00-05:00",
-            "end": "2021-02-13T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-music.png"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-02-12T20:00:00-05:00",
-            "end": "2021-02-13T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
-        },
-        {
-            "name": "Black Nonbelievers: Past, Present and Future",
-            "description": "Noted lecturer, board member of American Atheists and the American Humanist Association and founder of the nonprofit Black Nonbelievers, we are honored to host Mandisa Thomas.",
-            "room": "teaRoom",
-            "start": "2021-02-12T20:00:00-05:00",
-            "end": "2021-02-12T21:00:00-05:00",
+            "start": "2021-02-13T20:00:00-05:00",
+            "end": "2021-02-14T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "A Happy Hooven Home: Goats!",
             "description": "Livestream of goats. Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
-            "start": "2021-02-12T20:00:00-05:00",
-            "end": "2021-02-13T02:00:00-05:00",
+            "start": "2021-02-13T20:00:00-05:00",
+            "end": "2021-02-14T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "Lupercalia Wolves!",
             "description": "Livestream of wolves. Donate at nywolf.org",
             "room": "den",
-            "start": "2021-02-12T20:00:00-05:00",
-            "end": "2021-02-13T02:00:00-05:00",
+            "start": "2021-02-13T20:00:00-05:00",
+            "end": "2021-02-14T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "Late Night Library: Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-02-12T20:00:00-05:00",
-            "end": "2021-02-13T02:00:00-05:00",
+            "start": "2021-02-13T20:00:00-05:00",
+            "end": "2021-02-14T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-art.png"
         }
     ]
