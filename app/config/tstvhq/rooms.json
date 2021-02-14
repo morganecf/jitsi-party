@@ -14,8 +14,7 @@
         "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
         "directions": {
             "west": "powderRoom",
-            "north": "grandBallroom",
-            "east": "frontParlor"
+            "east": "kitchen2"
         },
         "map": {
             "x": 4,
@@ -41,9 +40,9 @@
         },
         "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
         "directions": {
-            "west": "powderRoom",
-            "north": "grandBallroom",
-            "east": "frontParlor"
+            "west": "kitchen1",
+            "north": "grandBallroom1",
+            "east": "kitchen3"
         },
         "map": {
             "x": 6,
@@ -69,9 +68,8 @@
         },
         "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
         "directions": {
-            "west": "kitchen1",
-            "north": "grandBallroom",
-            "east": "kitchen3"
+            "west": "kitchen2",
+            "east": "frontParlor"
         },
         "map": {
             "x": 8,
