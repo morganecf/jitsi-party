@@ -72,7 +72,7 @@
         "map": {
             "x": 3,
             "y": 18,
-            "width": 3,
+            "width": 5,
             "height": 4
         }
     },
@@ -96,7 +96,7 @@
         "map": {
             "x": 3,
             "y": 22,
-            "width": 3,
+            "width": 5,
             "height": 4,
             "doors": {
                 "south": 7
