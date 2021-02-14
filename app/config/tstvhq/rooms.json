@@ -109,14 +109,14 @@
     {
         "id": "frontParlor",
         "name": "Front Parlor",
-        "capacity": 20,
-        "muteRoom": false,
-        "hideVideo": false,
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
         "description": "Loveseats, chaises, armchairs-- oh my!",
-        "type": "JITSI",
+        "type": "IFRAME",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=dresdenvisage&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
         },
         "directions": {
             "east": "teaRoom",
@@ -139,12 +139,12 @@
     {
         "id": "teaRoom",
         "name": "Tea Room",
-        "type": "JITSI",
-        "capacity": 20,
-        "muteRoom": false,
-        "hideVideo": false,
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=mandisa0904&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
         },
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-tea-room.png",
         "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick.",
@@ -224,7 +224,7 @@
         "id": "ritualChamber",
         "name": "Ritual Chamber",
         "type": "IFRAME",
-        "capacity": 200,
+        "capacity": 50,
         "muteRoom": true,
         "hideVideo": true,
         "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
