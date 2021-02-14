@@ -141,7 +141,7 @@
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
             "north": "grandBallroom1",
-            "south": "kitchen"
+            "south": "kitchen2"
         },
         "doorTint": "#000000",
         "map": {
@@ -196,7 +196,7 @@
         "directions": {
             "east": "teaRoom",
             "north": "grandStaircase",
-            "west": "kitchen"
+            "west": "kitchen3"
         },
         "map": {
             "x": 10,
