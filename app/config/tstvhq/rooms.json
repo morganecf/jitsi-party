@@ -41,7 +41,7 @@
         "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
         "directions": {
             "west": "kitchen1",
-            "north": "grandBallroom1",
+            "north": "grandBallroom2",
             "east": "kitchen3"
         },
         "map": {
