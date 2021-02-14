@@ -54,8 +54,8 @@
         }
     },
     {
-        "id": "grandBallroom",
-        "name": "Grand Ballroom",
+        "id": "grandBallroom1",
+        "name": "Grand Ballroom I",
         "type": "JITSI",
         "capacity": 20,
         "muteRoom": false,
@@ -66,13 +66,37 @@
         },
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
-            "south": "kitchen"
+            "east": "grandBallroom2"
         },
         "doorTint": "#000000",
         "map": {
             "x": 3,
             "y": 18,
             "width": 5,
+            "height": 8
+        }
+    },
+    {
+        "id": "grandBallroom2",
+        "name": "Grand Ballroom II",
+        "type": "JITSI",
+        "capacity": 20,
+        "muteRoom": false,
+        "hideVideo": false,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
+        },
+        "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
+        "directions": {
+            "west": "grandBallroom1",
+            "south": "kitchen"
+        },
+        "doorTint": "#000000",
+        "map": {
+            "x": 6,
+            "y": 18,
+            "width": 3,
             "height": 8,
             "doors": {
                 "south": 7
