@@ -1,7 +1,7 @@
 {
     "rooms": [{
-        "id": "kitchen",
-        "name": "Kitchen",
+        "id": "kitchen1",
+        "name": "Kitchen I",
         "type": "IFRAME",
         "capacity": 500,
         "doorTint": "#000000",
@@ -18,13 +18,67 @@
             "east": "frontParlor"
         },
         "map": {
-            "x": 5,
+            "x": 4,
             "y": 26,
-            "width": 5,
+            "width": 2,
             "height": 5,
             "doors": {
-                "north": 7,
-                "west": 27,
+                "west": 27
+            }
+        }
+    },
+    {
+        "id": "kitchen2",
+        "name": "Kitchen II",
+        "type": "IFRAME",
+        "capacity": 500,
+        "doorTint": "#000000",
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+        },
+        "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
+        "directions": {
+            "west": "powderRoom",
+            "north": "grandBallroom",
+            "east": "frontParlor"
+        },
+        "map": {
+            "x": 6,
+            "y": 26,
+            "width": 2,
+            "height": 5,
+            "doors": {
+                "north": 7
+            }
+        }
+    },
+    {
+        "id": "kitchen3",
+        "name": "Kitchen III",
+        "type": "IFRAME",
+        "capacity": 500,
+        "doorTint": "#000000",
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+        },
+        "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
+        "directions": {
+            "west": "kitchen1",
+            "north": "grandBallroom",
+            "east": "kitchen3"
+        },
+        "map": {
+            "x": 8,
+            "y": 26,
+            "width": 2,
+            "height": 5,
+            "doors": {
                 "east": 27
             }
         }
@@ -40,11 +94,10 @@
         "description": "Freshen up with a few friends.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-powder-room.png",
         "directions": {
-            "east": "kitchen",
-            "west": "massAve"
+            "east": "kitchen1"
         },
         "map": {
-            "x": 3,
+            "x": 2,
             "y": 26,
             "width": 2,
             "height": 2,
