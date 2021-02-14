@@ -66,14 +66,14 @@
         },
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
-            "east": "grandBallroom2"
+            "south": "grandBallroom2"
         },
         "doorTint": "#000000",
         "map": {
             "x": 3,
             "y": 18,
             "width": 3,
-            "height": 8
+            "height": 4
         }
     },
     {
@@ -89,15 +89,15 @@
         },
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
-            "west": "grandBallroom1",
+            "north": "grandBallroom1",
             "south": "kitchen"
         },
         "doorTint": "#000000",
         "map": {
-            "x": 6,
-            "y": 18,
+            "x": 3,
+            "y": 22,
             "width": 3,
-            "height": 8,
+            "height": 4,
             "doors": {
                 "south": 7
             }
