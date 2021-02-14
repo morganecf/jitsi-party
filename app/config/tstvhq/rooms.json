@@ -442,8 +442,8 @@
             "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
         },
         "directions": {
-            "east": "theater1",
-            "west": "theater3",
+            "west": "theater1",
+            "east": "theater3",
             "north": "belfry"
         },
         "map": {
@@ -471,7 +471,7 @@
             "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
         },
         "directions": {
-            "east": "theater2"
+            "west": "theater2"
         },
         "map": {
             "x": 28,
