@@ -259,7 +259,7 @@
             "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
         },
         "directions": {
-            "south": "tstHQ"
+            "south": "theater2"
         },
         "map": {
             "x": 27,
@@ -385,7 +385,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "directions": {
-            "east": "tstHQ",
+            "east": "theater1",
             "west": "sleepingPorch"
         },
         "map": {
