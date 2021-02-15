@@ -17,7 +17,7 @@
             "east": "kitchen2"
         },
         "map": {
-            "x": 4,
+            "x": 3,
             "y": 26,
             "width": 2,
             "height": 5,
@@ -46,9 +46,9 @@
             "east": "kitchen3"
         },
         "map": {
-            "x": 6,
+            "x": 5,
             "y": 26,
-            "width": 2,
+            "width": 3,
             "height": 5,
             "doors": {
                 "north": 7,
@@ -99,7 +99,7 @@
             "east": "kitchen1"
         },
         "map": {
-            "x": 2,
+            "x": 1,
             "y": 26,
             "width": 2,
             "height": 2,
