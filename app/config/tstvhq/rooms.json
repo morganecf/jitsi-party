@@ -280,7 +280,8 @@
         },
         "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
         "directions": {
-            "west": "ritualChamber"
+            "west": "ritualChamber",
+            "east": "backParlor2"
         },
         "map": {
             "x": 20,
@@ -307,7 +308,8 @@
         "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
         "directions": {
             "south": "den",
-            "west": "ritualChamber"
+            "east": "backParlor3",
+            "west": "backParlor1"
         },
         "map": {
             "x": 22,
@@ -333,8 +335,7 @@
         },
         "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
         "directions": {
-            "south": "den",
-            "west": "ritualChamber"
+            "west": "backParlor2"
         },
         "map": {
             "x": 24,
