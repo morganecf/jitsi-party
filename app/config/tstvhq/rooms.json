@@ -138,7 +138,7 @@
     {
         "id": "grandBallroom2",
         "name": "Grand Ballroom II",
-        "type": "JITSI",
+        "type": "IFRAME",
         "capacity": 50,
         "muteRoom": true,
         "hideVideo": true,
