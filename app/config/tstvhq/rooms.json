@@ -289,6 +289,7 @@
             "width": 2,
             "height": 5,
             "doors": {
+                "east": 24,
                 "west": 18
             }
         },
@@ -317,6 +318,8 @@
             "width": 2,
             "height": 5,
             "doors": {
+                "east": 24,
+                "west": 24,
                 "south": 22
             }
         },
@@ -341,7 +344,11 @@
             "x": 24,
             "y": 16,
             "width": 2,
-            "height": 5
+            "height": 5,
+            "doors":
+            {
+                "west": 24
+            }
         },
         "doorTint": "#000000"
     },
