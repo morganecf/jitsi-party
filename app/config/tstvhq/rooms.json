@@ -261,7 +261,7 @@
             "width": 3,
             "height": 3,
             "doors": {
-                "north": 22,
+                "north": 23,
                 "south": 22
             }
         },
@@ -320,7 +320,7 @@
             "doors": {
                 "east": 18,
                 "west": 18,
-                "south": 22
+                "south": 23
             }
         },
         "doorTint": "#000000"
