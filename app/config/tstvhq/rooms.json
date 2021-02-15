@@ -3,7 +3,7 @@
         "id": "kitchen1",
         "name": "Kitchen I",
         "type": "IFRAME",
-        "capacity": 500,
+        "capacity": 50,
         "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
@@ -31,7 +31,7 @@
         "id": "kitchen2",
         "name": "Kitchen II",
         "type": "IFRAME",
-        "capacity": 500,
+        "capacity": 50,
         "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
@@ -61,7 +61,7 @@
         "id": "kitchen3",
         "name": "Kitchen III",
         "type": "IFRAME",
-        "capacity": 500,
+        "capacity": 50,
         "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
@@ -111,10 +111,10 @@
     {
         "id": "grandBallroom1",
         "name": "Grand Ballroom I",
-        "type": "JITSI",
-        "capacity": 20,
-        "muteRoom": false,
-        "hideVideo": false,
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
@@ -139,12 +139,12 @@
         "id": "grandBallroom2",
         "name": "Grand Ballroom II",
         "type": "JITSI",
-        "capacity": 20,
-        "muteRoom": false,
-        "hideVideo": false,
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=djkittybot&parent=estate.tstvhq.com"
         },
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
@@ -200,7 +200,7 @@
         "type": "IFRAME",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
         },
         "directions": {
             "east": "teaRoom",
@@ -223,7 +223,7 @@
     {
         "id": "teaRoom",
         "name": "Tea Room",
-        "type": "IFRAME",
+        "type": "JITSI",
         "capacity": 50,
         "muteRoom": true,
         "hideVideo": true,
@@ -371,7 +371,7 @@
         "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-ritual.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
         }, 
         "directions": {
             "east": "backParlor1"
@@ -552,7 +552,7 @@
         "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
         },
         "directions": {
             "east": "theater2",
@@ -581,7 +581,7 @@
         "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
         },
         "directions": {
             "west": "theater1",
@@ -612,7 +612,7 @@
         "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
         },
         "directions": {
             "west": "theater2"
@@ -631,10 +631,13 @@
     {
         "id": "garden",
         "name": "Garden",
-        "type": "JITSI",
+        "type": "IFRAME",
         "capacity": 20,
         "muteRoom": false,
         "hideVideo": false,
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
+        },
         "description": "The amaryllis is already blooming!",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Garden.png",
         "directions": {
