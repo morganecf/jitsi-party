@@ -225,8 +225,8 @@
         "name": "Tea Room",
         "type": "JITSI",
         "capacity": 50,
-        "muteRoom": true,
-        "hideVideo": true,
+        "muteRoom": false,
+        "hideVideo": false,
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
         },
@@ -633,8 +633,8 @@
         "name": "Garden",
         "type": "IFRAME",
         "capacity": 20,
-        "muteRoom": false,
-        "hideVideo": false,
+        "muteRoom": true,
+        "hideVideo": true,
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
         },
