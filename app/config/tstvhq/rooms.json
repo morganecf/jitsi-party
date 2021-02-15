@@ -1,7 +1,7 @@
 {
     "rooms": [{
-        "id": "kitchen",
-        "name": "Kitchen",
+        "id": "kitchen1",
+        "name": "Kitchen I",
         "type": "IFRAME",
         "capacity": 500,
         "doorTint": "#000000",
@@ -14,18 +14,74 @@
         "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
         "directions": {
             "west": "powderRoom",
-            "north": "grandBallroom",
-            "east": "frontParlor"
+            "east": "kitchen2"
+        },
+        "map": {
+            "x": 3,
+            "y": 26,
+            "width": 2,
+            "height": 5,
+            "doors": {
+                "east": 27,
+                "west": 27
+            }
+        }
+    },
+    {
+        "id": "kitchen2",
+        "name": "Kitchen II",
+        "type": "IFRAME",
+        "capacity": 500,
+        "doorTint": "#000000",
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+        },
+        "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
+        "directions": {
+            "west": "kitchen1",
+            "north": "grandBallroom2",
+            "east": "kitchen3"
         },
         "map": {
             "x": 5,
             "y": 26,
-            "width": 5,
+            "width": 3,
             "height": 5,
             "doors": {
-                "north": 7,
-                "west": 27,
-                "east": 27
+                "north": 6,
+                "east": 27,
+                "west": 27
+            }
+        }
+    },
+    {
+        "id": "kitchen3",
+        "name": "Kitchen III",
+        "type": "IFRAME",
+        "capacity": 500,
+        "doorTint": "#000000",
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+        },
+        "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
+        "directions": {
+            "west": "kitchen2",
+            "east": "frontParlor"
+        },
+        "map": {
+            "x": 8,
+            "y": 26,
+            "width": 2,
+            "height": 5,
+            "doors": {
+                "east": 27,
+                "west": 27
             }
         }
     },
@@ -40,11 +96,10 @@
         "description": "Freshen up with a few friends.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-powder-room.png",
         "directions": {
-            "east": "kitchen",
-            "west": "massAve"
+            "east": "kitchen1"
         },
         "map": {
-            "x": 3,
+            "x": 1,
             "y": 26,
             "width": 2,
             "height": 2,
@@ -54,8 +109,8 @@
         }
     },
     {
-        "id": "grandBallroom",
-        "name": "Grand Ballroom",
+        "id": "grandBallroom1",
+        "name": "Grand Ballroom I",
         "type": "JITSI",
         "capacity": 20,
         "muteRoom": false,
@@ -66,16 +121,45 @@
         },
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
-            "south": "kitchen"
+            "south": "grandBallroom2"
         },
         "doorTint": "#000000",
         "map": {
             "x": 3,
             "y": 18,
             "width": 5,
-            "height": 8,
+            "height": 4,
             "doors": {
                 "south": 7
+            }
+
+        }
+    },
+    {
+        "id": "grandBallroom2",
+        "name": "Grand Ballroom II",
+        "type": "JITSI",
+        "capacity": 20,
+        "muteRoom": false,
+        "hideVideo": false,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
+        },
+        "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
+        "directions": {
+            "north": "grandBallroom1",
+            "south": "kitchen2"
+        },
+        "doorTint": "#000000",
+        "map": {
+            "x": 3,
+            "y": 22,
+            "width": 5,
+            "height": 4,
+            "doors": {
+                "north": 7,
+                "south": 6
             }
         }
     },
@@ -121,7 +205,7 @@
         "directions": {
             "east": "teaRoom",
             "north": "grandStaircase",
-            "west": "kitchen"
+            "west": "kitchen3"
         },
         "map": {
             "x": 10,
@@ -177,7 +261,7 @@
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-barnyard.png",
         "description": "Snuggle and play with the babies from the NY Wolf Conservation Center. Donate at nywolf.org",
         "directions": {
-            "north": "backParlor",
+            "north": "backParlor2",
             "south": "teaRoom"
         },
         "map": {
@@ -186,15 +270,43 @@
             "width": 3,
             "height": 3,
             "doors": {
-                "north": 22,
+                "north": 23,
                 "south": 22
             }
         },
         "doorTint": "#000000"
     },
     {
-        "id": "backParlor",
-        "name": "Back Parlor",
+        "id": "backParlor1",
+        "name": "Back Parlor I",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
+        "directions": {
+            "west": "ritualChamber",
+            "east": "backParlor2"
+        },
+        "map": {
+            "x": 20,
+            "y": 16,
+            "width": 2,
+            "height": 5,
+            "doors": {
+                "east": 18,
+                "west": 18
+            }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "backParlor2",
+        "name": "Back Parlor II",
         "type": "IFRAME",
         "capacity": 50,
         "muteRoom": true,
@@ -206,15 +318,44 @@
         "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
         "directions": {
             "south": "den",
-            "west": "ritualChamber"
+            "east": "backParlor3",
+            "west": "backParlor1"
         },
         "map": {
-            "x": 20,
+            "x": 22,
             "y": 16,
-            "width": 6,
+            "width": 3,
             "height": 5,
             "doors": {
-                "south": 22,
+                "east": 18,
+                "west": 18,
+                "south": 23
+            }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "backParlor3",
+        "name": "Back Parlor III",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
+        "directions": {
+            "west": "backParlor2"
+        },
+        "map": {
+            "x": 25,
+            "y": 16,
+            "width": 2,
+            "height": 5,
+            "doors":
+            {
                 "west": 18
             }
         },
@@ -233,7 +374,7 @@
             "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
         }, 
         "directions": {
-            "east": "backParlor"
+            "east": "backParlor1"
         },
         "map": {
             "x": 17,
@@ -259,7 +400,7 @@
             "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
         },
         "directions": {
-            "south": "tstHQ"
+            "south": "theater2"
         },
         "map": {
             "x": 27,
@@ -385,7 +526,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "directions": {
-            "east": "tstHQ",
+            "east": "theater1",
             "west": "sleepingPorch"
         },
         "map": {
@@ -401,8 +542,8 @@
         "doorTint": "#000000"
     },
     {
-        "id": "tstHQ",
-        "name": "Theater",
+        "id": "theater1",
+        "name": "Theater I",
         "type": "IFRAME",
         "capacity": 50,
         "muteRoom": true,
@@ -414,17 +555,75 @@
             "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
         },
         "directions": {
-            "west": "staircase",
-            "north": "belfry"
+            "east": "theater2",
+            "west": "staircase"
         },
         "map": {
             "x": 24,
             "y": 7,
-            "width": 5,
+            "width": 2,
             "height": 5,
             "doors": {
                 "west": 10,
-                "north": 27
+                "east": 10
+            }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "theater2",
+        "name": "Theater II",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
+        "locked": false,
+        "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "directions": {
+            "west": "theater1",
+            "east": "theater3",
+            "north": "belfry"
+        },
+        "map": {
+            "x": 26,
+            "y": 7,
+            "width": 3,
+            "height": 5,
+            "doors": {
+                "north": 27,
+                "west": 10,
+                "east": 10
+            }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "theater3",
+        "name": "Theater III",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
+        "locked": false,
+        "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "directions": {
+            "west": "theater2"
+        },
+        "map": {
+            "x": 29,
+            "y": 7,
+            "width": 2,
+            "height": 5,
+            "doors": {
+                "west": 10
             }
         },
         "doorTint": "#000000"
