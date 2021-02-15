@@ -252,7 +252,7 @@
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-barnyard.png",
         "description": "Snuggle and play with the babies from the NY Wolf Conservation Center. Donate at nywolf.org",
         "directions": {
-            "north": "backParlor",
+            "north": "backParlor2",
             "south": "teaRoom"
         },
         "map": {
@@ -268,8 +268,34 @@
         "doorTint": "#000000"
     },
     {
-        "id": "backParlor",
-        "name": "Back Parlor",
+        "id": "backParlor1",
+        "name": "Back Parlor I",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
+        "directions": {
+            "west": "ritualChamber"
+        },
+        "map": {
+            "x": 20,
+            "y": 16,
+            "width": 2,
+            "height": 5,
+            "doors": {
+                "west": 18
+            }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "backParlor2",
+        "name": "Back Parlor II",
         "type": "IFRAME",
         "capacity": 50,
         "muteRoom": true,
@@ -284,14 +310,37 @@
             "west": "ritualChamber"
         },
         "map": {
-            "x": 20,
+            "x": 22,
             "y": 16,
-            "width": 6,
+            "width": 2,
             "height": 5,
             "doors": {
-                "south": 22,
-                "west": 18
+                "south": 22
             }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "backParlor3",
+        "name": "Back Parlor III",
+        "type": "IFRAME",
+        "capacity": 50,
+        "muteRoom": true,
+        "hideVideo": true,
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
+        "iframeOptions": {
+            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+        },
+        "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
+        "directions": {
+            "south": "den",
+            "west": "ritualChamber"
+        },
+        "map": {
+            "x": 24,
+            "y": 16,
+            "width": 2,
+            "height": 5
         },
         "doorTint": "#000000"
     },
