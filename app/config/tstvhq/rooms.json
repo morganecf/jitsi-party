@@ -124,7 +124,11 @@
             "x": 3,
             "y": 18,
             "width": 5,
-            "height": 4
+            "height": 4,
+            "doors": {
+                "south": 7
+            }
+
         }
     },
     {
@@ -150,6 +154,7 @@
             "width": 5,
             "height": 4,
             "doors": {
+                "north": 7,
                 "south": 7
             }
         }
