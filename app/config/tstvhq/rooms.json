@@ -591,7 +591,7 @@
         "map": {
             "x": 26,
             "y": 7,
-            "width": 2,
+            "width": 3,
             "height": 5,
             "doors": {
                 "north": 27,
@@ -618,7 +618,7 @@
             "west": "theater2"
         },
         "map": {
-            "x": 28,
+            "x": 29,
             "y": 7,
             "width": 2,
             "height": 5,
