@@ -315,7 +315,7 @@
         "map": {
             "x": 22,
             "y": 16,
-            "width": 2,
+            "width": 3,
             "height": 5,
             "doors": {
                 "east": 18,
@@ -341,7 +341,7 @@
             "west": "backParlor2"
         },
         "map": {
-            "x": 24,
+            "x": 25,
             "y": 16,
             "width": 2,
             "height": 5,
