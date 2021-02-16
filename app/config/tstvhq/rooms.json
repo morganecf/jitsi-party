@@ -714,10 +714,13 @@
     {
         "id": "crematorium",
         "name": "Crematorium",
-        "type": "JITSI",
+        "type": "IFRAME",
         "capacity": 15,
         "muteRoom": false,
         "hideVideo": false,
+        "iframeOptions": {
+            "src": "https://player.angelthump.com/?channel=ledflashing"
+        },
         "description": "Have a marshmallow. It's time for s'mores!",
         "doorTint": "#000000",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Crematorium.png",
