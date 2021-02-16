@@ -144,7 +144,7 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=djkittybot&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
         },
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
@@ -200,7 +200,7 @@
         "type": "IFRAME",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=grayglows&parent=estate.tstvhq.com"
         },
         "directions": {
             "east": "teaRoom",
@@ -285,9 +285,9 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
         },
-        "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
+        "description": "Lectures and Lessons",
         "directions": {
             "west": "ritualChamber",
             "east": "backParlor2"
@@ -313,9 +313,9 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
         },
-        "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
+        "description": "Lectures and Lessons",
         "directions": {
             "south": "den",
             "east": "backParlor3",
@@ -343,9 +343,9 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
         },
-        "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
+        "description": "Lectures and Lessons",
         "directions": {
             "west": "backParlor2"
         },
@@ -364,10 +364,10 @@
     {
         "id": "ritualChamber",
         "name": "Ritual Chamber",
-        "type": "IFRAME",
-        "capacity": 50,
-        "muteRoom": true,
-        "hideVideo": true,
+        "type": "JITSI",
+        "capacity": 25,
+        "muteRoom": false,
+        "hideVideo": false,
         "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-ritual.png",
         "iframeOptions": {
@@ -500,7 +500,7 @@
         "description": "Covert conversations regarding the Satanic Agenda",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-boudoir.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=grayglows&parent=estate.tstvhq.com"
         },
         "directions": {
             "south": "library"
@@ -552,7 +552,7 @@
         "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
         },
         "directions": {
             "east": "theater2",
@@ -581,7 +581,7 @@
         "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
         },
         "directions": {
             "west": "theater1",
@@ -612,7 +612,7 @@
         "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
         },
         "directions": {
             "west": "theater2"
@@ -632,11 +632,11 @@
         "id": "garden",
         "name": "Garden",
         "type": "IFRAME",
-        "capacity": 20,
+        "capacity": 50,
         "muteRoom": true,
         "hideVideo": true,
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
+            "src": "https://player.twitch.tv/?channel=grayglows&parent=estate.tstvhq.com"
         },
         "description": "The amaryllis is already blooming!",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Garden.png",
@@ -714,10 +714,13 @@
     {
         "id": "crematorium",
         "name": "Crematorium",
-        "type": "JITSI",
+        "type": "IFRAME",
         "capacity": 15,
         "muteRoom": false,
         "hideVideo": false,
+        "iframeOptions": {
+            "src": "https://player.angelthump.com/?channel=ledflashing"
+        },
         "description": "Have a marshmallow. It's time for s'mores!",
         "doorTint": "#000000",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Crematorium.png",
