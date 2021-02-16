@@ -1,83 +1,75 @@
 {
     "events": [
         {
-            "name": "Charmed, Enchanted, and Spellbound",
-            "description": "Learn about the sometimes strange and disgusting world of selling people false hope in the form of love spells. Please join us in one of our three Back Parlors for this event.",
+            "name": "History of Bodily Autonomy, Non-Heteronormative Political Impacts and Culture in Caribbean Communities",
+            "description": "Join award-winning internationally touring recording artist and D.C. affiliate Director of Black Nonbelievers Rogiérs Fibby as he lectures regarding intra-community oppressive dynamics, sexual identities and revolution in the Caribbean communities. In addition to his work with Alicia Keys, Robert Glasper, Mo’Nique and others, he works closely with the American Humanist Association, Freedom From Religion Foundation, the Religious Freedom Forum, the Secular Coalition of America and serves on the board of the Washington Area Secular Humanists ("WASH"). Q&A to follow the lecture. Please join us in one of our three Back Parlors for this event.",
             "room": "backParlor1",
-            "start": "2021-02-14T22:00:00-05:00",
-            "end": "2021-02-14T23:00:00-05:00",
+            "start": "2021-02-15T22:00:00-05:00",
+            "end": "2021-02-15T23:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
             "name": "Whimsical Blasphemy",
             "description": "Join DJ Mercy Maelica in one of our Grand Ballrooms all night long.",
             "room": "grandBallroom1",
-            "start": "2021-02-14T20:00:00-05:00",
-            "end": "2021-02-15T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
-        },
-        {
-            "name": "Elder Goth Night",
-            "description": "In our newly renovated Second Grand Ballroom join DJ Kittybot for an ALL VINYL goth/industrial favorites set",
-            "room": "grandBallroom2",
-            "start": "2021-02-14T21:00:00-05:00",
-            "end": "2021-02-14T22:00:00-05:00",
+            "start": "2021-02-15T20:00:00-05:00",
+            "end": "2021-02-16T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
             "name": "The Satanic Chef--Live!",
             "description": "The Satanic Chef live, is a live, interactive-cooking class on TSTVHQ. In these classes I combine unique cooking style in an entertaining & educating satanic context. Available in one of our three (3!) kitchens!",
             "room": "kitchen1",
-            "start": "2021-02-14T20:00:00-05:00",
-            "end": "2021-02-14T21:00:00-05:00",
+            "start": "2021-02-15T20:00:00-05:00",
+            "end": "2021-02-15T21:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "NSFW Live Drawing with Zoey Inferni",
-            "description": "Zoey Inferni of TSTIN (@TheSphinxDen on Twitter) will be illustrating a sexy, kinky Baphomet pinup for Lupercalia! Come hang out, chat, watch the debauchery, and celebrate sexual liberation. 18+ only. Also available in the Garden and Ritual Chamber.",
+            "name": "THOT Thoughts with Gloria Gray",
+            "description": "Stand Up Comedy from Sex Worker/Activist/Comedian Gloria Gray. She speaks of the trials and tribulations of sex work and everything in-between. A true Stripper philosopher. Wait a truly hot stripper philosopher. Well both. Also available in the Garden, Boudoir and Ritual Chamber.",
             "room": "frontParlor",
-            "start": "2021-02-14T23:00:00-05:00",
-            "end": "2021-02-15T01:00:00-05:00",
+            "start": "2021-02-15T21:00:00-05:00",
+            "end": "2021-02-15T22:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
          {
-            "name": "Asexuality: A Panel Discussion with Audience Q&A",
-            "description": "Want to know more about Asexuality? Class is in session in ALL THREE(3!) Infernal Theaters with Bill and Veronica from Satanic Study Hall! Join our panel representing the asexuality spectrum Helle Bent, Azura Rose and Attar B'alam, lead by Bill and Veronica. Audience Q&A to follow.",
+            "name": "Feast of the FLESH",
+            "description": "Sample the buffet of submitted written lust rituals with the ladies of FLESH: Michelle Shortt and Chalice Blythe Audience Q&A to follow.",
             "room": "theater1",
-            "start": "2021-02-14T21:00:00-05:00",
-            "end": "2021-02-14T22:00:00-05:00",
+            "start": "2021-02-15T23:00:00-05:00",
+            "end": "2021-02-16T01:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-02-14T20:00:00-05:00",
-            "end": "2021-02-15T02:00:00-05:00",
+            "start": "2021-02-15T20:00:00-05:00",
+            "end": "2021-02-16T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "A Happy Hooven Home: Goats!",
             "description": "Livestream of goats. Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
-            "start": "2021-02-14T20:00:00-05:00",
-            "end": "2021-02-15T02:00:00-05:00",
+            "start": "2021-02-15T20:00:00-05:00",
+            "end": "2021-02-16T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "Lupercalia Wolves!",
             "description": "Livestream of wolves. Donate at nywolf.org",
             "room": "den",
-            "start": "2021-02-14T20:00:00-05:00",
-            "end": "2021-02-15T02:00:00-05:00",
+            "start": "2021-02-15T20:00:00-05:00",
+            "end": "2021-02-16T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "Late Night Library: Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-02-14T20:00:00-05:00",
-            "end": "2021-02-15T02:00:00-05:00",
+            "start": "2021-02-15T20:00:00-05:00",
+            "end": "2021-02-16T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-art.png"
         }
     ]
