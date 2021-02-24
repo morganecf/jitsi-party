@@ -194,5 +194,10 @@ services:
         networks:
             party.jitsi:
 
+    node:
+        build: ./node
+        volumes:
+            - ./app:/app
+
 networks:
     party.jitsi:

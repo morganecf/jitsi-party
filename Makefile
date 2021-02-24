@@ -10,7 +10,6 @@ clean-schema:
 .env:
 	cp env.template.sh .env
 
-.PHONY: passwords
 passwords: .env
 	./gen-passwords.sh
 
@@ -29,8 +28,7 @@ clean-config:
 	rm -rf .env
 
 app/client/node_modules:
-	cd app/client && \
-	npm install
+	docker-compose run node npm install
 
 .PHONY: clean-node
 clean-node:
@@ -46,9 +44,8 @@ clean-theme:
 
 js = app/client/js
 webpack-files := $(js)/bundle.js $(js)/bundle.js.map
-$(webpack-files): app/client/node_modules schema $(theme)
-	cd app/client && \
-	node_modules/.bin/webpack
+$(webpack-files)&: config app/client/node_modules schema $(theme)
+	docker-compose run node node_modules/.bin/webpack
 
 .PHONY: webpack
 webpack: $(webpack-files)
