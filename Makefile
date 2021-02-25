@@ -7,8 +7,7 @@ schema:
 clean-schema:
 	rm -rf app/jitsi/schema/*pb2.py
 
-env = .env
-$(env):
+.env:
 	$(shell \
 		cp env.template.sh .env; \
 		./gen-passwords.sh; \
@@ -16,10 +15,10 @@ $(env):
 		perl -pi -e "s#TZ=.*#TZ=$${TZ}#g" .env \
 	)
 
-config: $(env)
+env: .env
 
-.PHONY: clean-config
-clean-config:
+.PHONY: clean-env
+clean-env:
 	rm -rf .env
 
 node = app/client/node_modules
@@ -40,7 +39,7 @@ clean-theme:
 
 js = app/client/js
 webpack-files := $(js)/bundle.js $(js)/bundle.js.map
-$(webpack-files)&: config $(node) schema $(theme)
+$(webpack-files)&: env $(node) schema $(theme)
 	docker-compose run node node_modules/.bin/webpack
 
 .PHONY: webpack
@@ -51,7 +50,7 @@ clean-webpack:
 	rm -rf $(webpack-files)
 
 .PHONY: up
-up: webpack config schema
+up: webpack env schema
 	docker-compose up -d
 
 .PHONY: restart
@@ -67,8 +66,12 @@ clean-docker:
 	docker-compose stop
 	docker-compose rm -f
 
+.PHONY: clean-config
+clean-config:
+	rm -f app/config/overrides
+
 .PHONY: clean
-clean: config clean-docker clean-config clean-schema clean-theme clean-webpack
+clean: env clean-docker clean-env clean-config clean-schema clean-theme clean-webpack
 
 .PHONY: clean-all
 clean-all: clean clean-node
