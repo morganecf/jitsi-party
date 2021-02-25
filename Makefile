@@ -22,12 +22,13 @@ config: $(env)
 clean-config:
 	rm -rf .env
 
-app/client/node_modules:
+node = app/client/node_modules
+$(node):
 	docker-compose run node npm install
 
 .PHONY: clean-node
 clean-node:
-	rm -rf app/client/node_modules
+	rm -rf $(node)
 
 theme = app/client/styles/themes/_active.scss
 $(theme):
@@ -39,7 +40,7 @@ clean-theme:
 
 js = app/client/js
 webpack-files := $(js)/bundle.js $(js)/bundle.js.map
-$(webpack-files)&: config app/client/node_modules schema $(theme)
+$(webpack-files)&: config $(node) schema $(theme)
 	docker-compose run node node_modules/.bin/webpack
 
 .PHONY: webpack
