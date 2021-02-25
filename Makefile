@@ -7,21 +7,16 @@ schema:
 clean-schema:
 	rm -rf app/jitsi/schema/*pb2.py
 
-.env:
-	cp env.template.sh .env
-
-passwords: .env
-	./gen-passwords.sh
-
-.PHONY: timezone
-timezone: .env
+env = .env
+$(env):
 	$(shell \
+		cp env.template.sh .env; \
+		./gen-passwords.sh; \
 		TZ=$$(readlink /etc/localtime | grep -oE '[a-zA-Z_]+/[a-zA-Z_]+$$'); \
-		sed -i "" -e "s#TZ=.*#TZ=$${TZ}#g" .env \
+		perl -pi -e "s#TZ=.*#TZ=$${TZ}#g" .env \
 	)
 
-.PHONY: config
-config: passwords timezone
+config: $(env)
 
 .PHONY: clean-config
 clean-config:
@@ -34,7 +29,7 @@ app/client/node_modules:
 clean-node:
 	rm -rf app/client/node_modules
 
-theme = app/client/styles/themes/default/_active.scss
+theme = app/client/styles/themes/_active.scss
 $(theme):
 	app/set_theme.sh basic
 
