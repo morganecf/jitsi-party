@@ -117,7 +117,7 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
+            "src": "https://www.youtube.com/embed/ugJml6AhdT0"
         },
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
@@ -200,7 +200,7 @@
         "type": "IFRAME",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=grayglows&parent=estate.tstvhq.com"
+            "src": "https://www.youtube.com/embed/vKWQ8scB1qk"
         },
         "directions": {
             "east": "teaRoom",
