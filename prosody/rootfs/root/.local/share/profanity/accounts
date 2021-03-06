@@ -1,5 +1,6 @@
 [guest]
 enabled=true
+password=
 jid=guest.party.jitsi
 resource=profanity
 muc.nick=docker
