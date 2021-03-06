@@ -76,15 +76,6 @@ if [[ ! -z $JIGASI_XMPP_USER ]] && [[ ! -z $JIGASI_XMPP_PASSWORD ]]; then
     prosodyctl --config $PROSODY_CFG register $JIGASI_XMPP_USER $XMPP_AUTH_DOMAIN $JIGASI_XMPP_PASSWORD
 fi
 
-if [[ ! -z $PARTY_XMPP_USER ]] && [[ ! -z $PARTY_XMPP_PASSWORD ]]; then
-    OLD_PARTY_XMPP_PASSWORD=passw0rd
-    if [[ "$PARTY_XMPP_PASSWORD" == "$OLD_PARTY_XMPP_PASSWORD" ]]; then
-        echo 'FATAL ERROR: Party auth password must be changed, check the README'
-        exit 1
-    fi
-    prosodyctl --config $PROSODY_CFG register $PARTY_XMPP_USER $XMPP_AUTH_DOMAIN $PARTY_XMPP_PASSWORD
-fi
-
 mkdir -p /config/certs
 
 if [[ ! -f /config/certs/$XMPP_DOMAIN.crt ]]; then

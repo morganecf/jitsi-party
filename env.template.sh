@@ -34,8 +34,6 @@ JITSI_PARTY_DB_PASS=
 JITSI_PARTY_DB_USER=jitsi-party
 JITSI_PARTY_DB=jitsi-party
 
-PARTY_XMPP_USER=web
-PARTY_XMPP_PASSWORD=
 
 #
 # Basic configuration options
@@ -61,7 +59,7 @@ ENABLE_XMPP_WEBSOCKET = false
 # Public URL for the web service
 PUBLIC_URL=https://localhost
 
-# IP address of the Docker host
+# IP address of the Docker host 
 # See the "Running behind NAT or on a LAN environment" section in the README
 #DOCKER_HOST_ADDRESS=192.168.1.1
 
