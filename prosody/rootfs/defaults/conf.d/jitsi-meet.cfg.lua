@@ -7,7 +7,7 @@ plugin_paths = { "/prosody-plugins/", "/prosody-plugins-custom" }
 http_default_host = "{{ .Env.XMPP_DOMAIN }}"
 
 {{ $ENABLE_AUTH := .Env.ENABLE_AUTH | default "0" | toBool }}
-{{ $ENABLE_GUEST_DOMAIN := and $ENABLE_AUTH (.Env.ENABLE_GUESTS | default "0" | toBool)}}
+{{ $ENABLE_GUEST_DOMAIN := (.Env.ENABLE_GUESTS | default "0" | toBool)}}
 {{ $AUTH_TYPE := .Env.AUTH_TYPE | default "internal" }}
 {{ $JWT_ASAP_KEYSERVER := .Env.JWT_ASAP_KEYSERVER | default "" }}
 {{ $JWT_ALLOW_EMPTY := .Env.JWT_ALLOW_EMPTY | default "0" | toBool }}
@@ -112,12 +112,8 @@ VirtualHost "{{ .Env.XMPP_DOMAIN }}"
 
 {{ if $ENABLE_GUEST_DOMAIN }}
 VirtualHost "{{ .Env.XMPP_GUEST_DOMAIN }}"
-    -- https://github.com/jitsi/docker-jitsi-meet/pull/502#issuecomment-619146339
-    {{ if $ENABLE_XMPP_WEBSOCKET }}
-    authentication = "token"
-    {{ else }}
     authentication = "anonymous"
-    {{ end }}
+    storage = "memory"
     app_id = ""
     app_secret = ""
     allow_empty_token = true

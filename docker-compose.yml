@@ -102,6 +102,7 @@ services:
             - AUTH_TYPE
             - ENABLE_AUTH
             - ENABLE_GUESTS
+            - ENABLE_GUEST_DOMAIN
             - GLOBAL_MODULES
             - GLOBAL_CONFIG
             - LDAP_URL

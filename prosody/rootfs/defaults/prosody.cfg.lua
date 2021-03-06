@@ -89,7 +89,7 @@ modules_disabled = {
 
 -- Disable account creation by default, for security
 -- For more information see http://prosody.im/doc/creating_accounts
-allow_registration = false;
+allow_registration = true;
 
 daemonize = false;
 
