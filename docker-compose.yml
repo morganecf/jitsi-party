@@ -19,6 +19,8 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - PARTY_XMPP_USER
+            - PARTY_XMPP_PASSWORD
         volumes:
             - ./app:/app
         depends_on:
@@ -35,6 +37,8 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - PARTY_XMPP_USER
+            - PARTY_XMPP_PASSWORD
         volumes:
             - ./app:/app
         depends_on:
@@ -92,7 +96,8 @@ services:
                     - ${XMPP_DOMAIN}
 
     prosody:
-        image: jitsi/prosody:stable-5142-4
+        build: ./prosody
+        image: cabinweekend/jitsi-party-prosody
         environment:
             - AUTH_TYPE
             - ENABLE_AUTH
@@ -141,6 +146,8 @@ services:
             - JWT_AUTH_TYPE
             - JWT_TOKEN_AUTH_MODULE
             - LOG_LEVEL
+            - PARTY_XMPP_USER
+            - PARTY_XMPP_PASSWORD
             - TZ
         networks:
             party.jitsi:

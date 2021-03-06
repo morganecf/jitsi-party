@@ -12,6 +12,61 @@ from sqlalchemy_serializer import SerializerMixin
 USER_TIMEOUT = 30
 logger = logging.getLogger(__name__)
 
+import slixmpp
+
+class XMPPClient(slixmpp.ClientXMPP):
+    def __init__(self, jid, password, new_user, new_password):
+        logger.warn(f"jid: {jid}")
+        super().__init__(jid, password)
+        logger.warn("initialized xmpp")
+        self.add_event_handler("session_start", self.start)
+        self.add_event_handler("register", self.register)
+        self.user = new_user
+        self.password = new_password
+
+    async def start(self, event):
+        logger.warn("starting")
+
+        await self.get_roster()
+        logger.warn("got roster")
+
+        await self.send_presence()
+        logger.warn("sent presence")
+
+
+    async def register(self, iq):
+        logger.warn("registering...")
+        resp = self.Iq()
+        resp['type'] = 'set'
+        resp['register']['username'] = self.user
+        resp['register']['password'] = self.password
+
+        try:
+            await resp.send()
+            logger.warn("Account created for %s!" % self.user)
+        except IqError as e:
+            logger.error("Could not register account: %s" %
+                    e.iq['error']['text'])
+            self.disconnect()
+        except IqTimeout:
+            logger.error("No response from server.")
+            self.disconnect()
+
+        self.disconnect()
+
+
+
+def register_xmpp_user(user, password):
+    client = XMPPClient('web@auth.party.jitsi', 'woo', user, password)
+    client.register_plugin('xep_0030')
+    client.register_plugin('xep_0004')
+    client.register_plugin('xep_0066')
+    client.register_plugin('xep_0077')
+    client.register_plugin('xep_0045')
+    client.connect(address=('xmpp.party.jitsi', 5222))
+    client.process(timeout=10)
+    logger.warn(f"registered {user}")
+
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
@@ -46,6 +101,9 @@ class User(db.Model, SerializerMixin):
         user = cls(username=username, avatar=avatar, ip=ip)
         db.session.add(user)
         db.session.commit()
+
+        register_xmpp_user('wee', 'woo')
+
         return user
 
     @classmethod
