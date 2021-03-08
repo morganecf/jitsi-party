@@ -19,6 +19,7 @@ def get_json_dict(path):
         print("Error on path ", path, e)
         return dict()
 
+
 def make_merged_cfg(paths):
     return {k: v for path in paths for k, v in get_json_dict(path).items()}
 
@@ -68,7 +69,7 @@ def load_and_validate_config(paths):
 
 class Config:
     # Need to change this
-    SECRET_KEY = 'figure-this-out'
+    SECRET_KEY = "figure-this-out"
     # To silence deprecation warning
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BASE_DIR = basedir
@@ -155,12 +156,12 @@ class DevelopmentConfig(Config):
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://waa:woo@jitsi-party-db:5432/jitsi'
+    SQLALCHEMY_DATABASE_URI = f'postgresql+psycopg2://{os.getenv("JITSI_PARTY_DB_USER")}:{os.getenv("JITSI_PARTY_DB_PASS")}@db:5432/{os.getenv("JITSI_PARTY_DB")}'
     CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(basecfgdir, 'production.json')] + Config.OVERRIDE_CONFIG_PATHS
 
 
 config = {
-    'development': DevelopmentConfig,
-    'production': ProductionConfig,
-    'default': DevelopmentConfig
+    "development": DevelopmentConfig,
+    "production": ProductionConfig,
+    "default": DevelopmentConfig,
 }

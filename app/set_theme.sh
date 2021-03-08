@@ -1,14 +1,16 @@
 #!/bin/bash
 
-# Usage: ./set_theme.sh theme_stylesheet.scss
-#   This hardlinks the theme based on the name of the theme stylesheet.
-#   Example: ./set_theme.sh _bauhaus.scss
+# Usage: ./set_theme.sh <name of theme directory>
+#   This symlinks the theme based on the name of the theme
+#   directory.
+#   Example: ./set_theme.sh cabin-weekend
 
-if [ -f "client/styles/themes/$1" ]; then
-    rm -f client/styles/themes/_active.scss
-    ln client/styles/themes/$1 client/styles/themes/_active.scss
-    echo "$1 has been set as the theme."
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+THEME=$DIR"/client/styles/themes/_"$1".scss"
+
+if [ -f $THEME ]; then
+    ln -sf "_"$1".scss" $DIR/client/styles/themes/_active.scss
+    echo "${1} has been set as the current theme."
 else
-    echo "$1 does not exist. Create $1 in client/styles/themes/ and try again."
+    echo "Theme ${1} doesn't exist!"
 fi
-
