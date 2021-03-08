@@ -32,19 +32,52 @@ To set up your local build as one of the existing configurations, simply symlink
 
 There is a helpful script that does all of this for you:
 ```bash
-app/set_config.sh <name_of_config_directory>
+app/set_config.sh <name_of_config>
 ```
 
 ### Themes
 
 The easiest way to style the app is to add a theme.
 Themes live in `app/client/styles/themes`.
-There is a default theme, which you can override by creating a scss file or a symlink at `app/client/styles/themes/_active.scss`.
+There is a default theme, which you can override by creating a symlink at `app/client/styles/themes/_active.scss`.
 
 There is a helpful script that does all of this for you:
 ```bash
-app/set_theme.sh <name_of_theme_file>
+app/set_theme.sh <name_of_theme>
 ```
+
+### Development flows
+
+## Frontend
+When modifying (S)CSS or JS or HTML, you will need to rerun webpack, which is dockerized.
+
+```bash
+make webpack
+```
+
+Currently watch mode is not supported.
+
+## Backend
+It's a bit overkill, but for now the simplest thing to do after modifying python code is to restart all containers:
+
+```bash
+make restart
+```
+
+## Changing configs
+After changing configs with `app/set_config.sh`, you should rerun webpack and restart, then once the db is running reinitialize it:
+
+```bash
+make webpack && make restart; sleep 15; make db
+```
+
+## Changing themes
+After changing themes with `app/set_theme.sh`, you should rerun webpack:
+
+```bash
+make webpack
+```
+
 
 ### Jitsi API documentation
 API doc:
