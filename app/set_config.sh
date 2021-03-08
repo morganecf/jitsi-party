@@ -8,7 +8,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 if [ -d $DIR/config/$1 ]; then
-    ln -sf $1 $DIR/config/overrides
+    rm -f $DIR/config/overrides
+    ln -s "$1" $DIR/config/overrides
     echo "${1} has been set as the current config."
 else
     echo "Config ${1} doesn't exist!"
