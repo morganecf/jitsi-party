@@ -14,6 +14,8 @@ make up && make db
 
 The default app installation should now be running on localhost:443 with a self-signed certificate.
 
+To allow self-signed certs for localhost in Chrome, toggle this debug flag: chrome://flags/#allow-insecure-localhost
+
 ### Configuration
 
 App configuration is done with a collection of JSON files in app/config.
