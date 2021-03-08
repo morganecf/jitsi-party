@@ -1,7 +1,7 @@
 import os
 import eventlet
 
-eventlet.monkey_patch(socket=False)
+eventlet.monkey_patch(socket=True)
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy

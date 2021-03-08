@@ -5,9 +5,5 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y libpq-dev
 
-ADD start.sh .
-
 ADD requirements ./requirements
 RUN pip install --upgrade pip && pip install -r requirements/prod.txt
-
-COPY ./app /app

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function generatePassword() {
+    openssl rand -hex 16
+}
+
+JICOFO_COMPONENT_SECRET=`generatePassword`
+JICOFO_AUTH_PASSWORD=`generatePassword`
+JVB_AUTH_PASSWORD=`generatePassword`
+JIGASI_XMPP_PASSWORD=`generatePassword`
+JIBRI_RECORDER_PASSWORD=`generatePassword`
+JIBRI_XMPP_PASSWORD=`generatePassword`
+JITSI_PARTY_DB_PASS=`generatePassword`
+
+perl -pi -e "s#JICOFO_COMPONENT_SECRET=.*#JICOFO_COMPONENT_SECRET=${JICOFO_COMPONENT_SECRET}#g" .env
+perl -pi -e "s#JICOFO_AUTH_PASSWORD=.*#JICOFO_AUTH_PASSWORD=${JICOFO_AUTH_PASSWORD}#g" .env
+perl -pi -e "s#JVB_AUTH_PASSWORD=.*#JVB_AUTH_PASSWORD=${JVB_AUTH_PASSWORD}#g" .env
+perl -pi -e "s#JIGASI_XMPP_PASSWORD=.*#JIGASI_XMPP_PASSWORD=${JIGASI_XMPP_PASSWORD}#g" .env
+perl -pi -e "s#JIBRI_RECORDER_PASSWORD=.*#JIBRI_RECORDER_PASSWORD=${JIBRI_RECORDER_PASSWORD}#g" .env
+perl -pi -e "s#JIBRI_XMPP_PASSWORD=.*#JIBRI_XMPP_PASSWORD=${JIBRI_XMPP_PASSWORD}#g" .env
+
+perl -pi -e "s#JITSI_PARTY_DB_PASS=.*#JITSI_PARTY_DB_PASS=${JITSI_PARTY_DB_PASS}#g" .env
