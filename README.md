@@ -48,9 +48,7 @@ There is a helpful script that does all of this for you:
 app/set_theme.sh <name_of_theme>
 ```
 
-### Development flows
-
-## Frontend
+### Frontend development flow
 When modifying (S)CSS or JS or HTML, you will need to rerun webpack, which is dockerized.
 
 ```bash
@@ -59,21 +57,21 @@ make webpack
 
 Currently watch mode is not supported.
 
-## Backend
+### Backend development flow
 It's a bit overkill, but for now the simplest thing to do after modifying python code is to restart all containers:
 
 ```bash
 make restart
 ```
 
-## Changing configs
+### Changing configs
 After changing configs with `app/set_config.sh`, you should rerun webpack and restart, then once the db is running reinitialize it:
 
 ```bash
 make webpack && make restart; sleep 15; make db
 ```
 
-## Changing themes
+### Changing themes
 After changing themes with `app/set_theme.sh`, you should rerun webpack:
 
 ```bash
