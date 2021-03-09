@@ -1,11 +1,8 @@
 version: "3.2"
 services:
     proxy:
-        build:
-            context: ./proxy
-            cache_from:
-                - cabinweekend/jitsi-party-proxy:latest
         image: cabinweekend/jitsi-party-proxy
+        restart: unless-stopped
         ports:
             - 80:80
             - 443:443
@@ -22,16 +19,14 @@ services:
             - web-worker_2
 
     web-worker_1:
-        build: ./app
         image: cabinweekend/jitsi-party-web
+        restart: unless-stopped
         ports:
             - 7071:80
         environment:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
-        volumes:
-            - ./app:/app
         depends_on:
             - db
             - queue
@@ -39,16 +34,14 @@ services:
             party.jitsi:
 
     web-worker_2:
-        build: ./app
         image: cabinweekend/jitsi-party-web
+        restart: unless-stopped
         ports:
             - 7072:80
         environment:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
-        volumes:
-            - ./app:/app
         depends_on:
             - db
             - queue
@@ -57,6 +50,7 @@ services:
 
     db:
         image: postgres:12.2-alpine
+        restart: unless-stopped
         environment:
             - POSTGRES_USER=${JITSI_PARTY_DB_USER}
             - POSTGRES_PASSWORD=${JITSI_PARTY_DB_PASS}
@@ -68,15 +62,13 @@ services:
 
     queue:
         image: rabbitmq:3.8.4-management-alpine
+        restart: unless-stopped
         networks:
             party.jitsi:
 
     jitsi-meet:
-        build:
-            context: ./meet
-            cache_from:
-                - cabinweekend/jitsi-party-meet:latest
         image: cabinweekend/jitsi-party-meet
+        restart: unless-stopped
         ports:
             - 81:80
         environment:
@@ -108,11 +100,8 @@ services:
                     - ${XMPP_DOMAIN}
 
     prosody:
-        build:
-            context: ./prosody
-            cache_from:
-                - cabinweekend/jitsi-party-prosody:latest
         image: cabinweekend/jitsi-party-prosody
+        restart: unless-stopped
         environment:
             - AUTH_TYPE
             - ENABLE_AUTH
@@ -170,6 +159,7 @@ services:
 
     jicofo:
         image: jitsi/jicofo:stable-5142-4
+        restart: unless-stopped
         environment:
             - ENABLE_AUTH
             - XMPP_DOMAIN
@@ -193,6 +183,7 @@ services:
 
     jvb:
         image: jitsi/jvb:stable-5142-4
+        restart: unless-stopped
         ports:
             - '${JVB_PORT}:${JVB_PORT}/udp'
             - '${JVB_TCP_PORT}:${JVB_TCP_PORT}'
@@ -215,17 +206,6 @@ services:
         networks:
             party.jitsi:
 
-    node:
-        image: cabinweekend/jitsi-party-node
-        build:
-            context: .
-            dockerfile: node/Dockerfile
-        volumes:
-            - ./app:/app
-            - exclude:/app/client/node_modules
-
 networks:
     party.jitsi:
 
-volumes:
-    exclude:
