@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-export const StreamingRoom = ({ boshUrl, iframeOptions: { src } }) => {
+export const StreamingRoom = ({
+  id: roomId,
+  boshUrl,
+  iframeOptions: { src },
+}) => {
   const [chat, setChat] = useState(false);
 
   // initialize converse
@@ -8,8 +12,7 @@ export const StreamingRoom = ({ boshUrl, iframeOptions: { src } }) => {
     window.converse.initialize({
       bosh_service_url: boshUrl,
       authentication: "anonymous",
-      prebind_url: "https://localhost/jitsi",
-      jid: "localhost/jitsi/guest.party.jitsi",
+      jid: `guest.party.jitsi`,
       view_mode: "embedded",
       auto_login: true,
       auto_reconnect: true,
