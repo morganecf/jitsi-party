@@ -21,8 +21,9 @@ env: .env
 clean-env:
 	rm -rf .env
 
-node:
-	docker-compose run node npm install
+.PHONY: npm-install
+npm-install:
+	docker-compose run -T node npm install
 
 theme = app/client/styles/themes/_active.scss
 $(theme):
