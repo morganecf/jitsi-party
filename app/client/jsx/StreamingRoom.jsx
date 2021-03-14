@@ -12,7 +12,7 @@ export const StreamingRoom = ({
     window.converse.initialize({
       bosh_service_url: boshUrl,
       authentication: "anonymous",
-      jid: `guest.party.jitsi`,
+      jid: "guest.party.jitsi",
       view_mode: "embedded",
       auto_login: true,
       auto_reconnect: true,
