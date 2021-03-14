@@ -1,17 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- <link rel="stylesheet" type="text/css" href="js/styles.css"> -->
-</head>
+    <script src="js/external_api.js" defer></script>
+    <script src="js/converse.min.js" defer></script>
+    <script type="text/javascript" src="js/bundle.js" defer></script>
 
-<body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://cdn.conversejs.org/7.0.4/dist/converse.min.css"
+    />
+  </head>
+
+  <body>
     <title>{{ config['PAGE_TITLE'] }}</title>
     <div class="container">
-        <div class="app"></div>
+      <div class="app"></div>
     </div>
-    <script src='js/external_api.js'></script>
-    <script type="text/javascript" src="js/bundle.js"></script>
-</body>
-
+  </body>
 </html>

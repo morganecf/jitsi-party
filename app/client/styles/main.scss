@@ -1,47 +1,29 @@
 @charset "UTF-8";
 
 // 1. Configuration and helpers
-@import 'abstracts/variables',
-'abstracts/functions',
-'abstracts/mixins',
-'abstracts/palette';
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins",
+  "abstracts/palette";
 
 // 2. Vendors
-@import 'vendors/normalize';
+@import "vendors/normalize";
 
 // 3. Themes
 @import // symlink your theme file to "themes/_active.scss" and it will override the default
-// if you don't have a theme, just `ln -s _default.scss _active.scss`
-'themes/active';
+  // if you don't have a theme, just `ln -s _default.scss _active.scss`
+  "themes/active";
 
 // 4. Base stuff
-@import 'base/base',
-'base/fonts',
-'base/typography',
-'base/helpers';
+@import "base/base", "base/fonts", "base/typography", "base/helpers";
 
 // 5. Layout-related sections
-@import 'layout/header',
-'layout/footer';
+@import "layout/header", "layout/footer";
 
 // 6. Components
-@import 'components/button',
-'components/modal',
-'components/puckBox',
-'components/PuckSelect',
-'components/Welcome',
-'components/Navigation',
-'components/jitsiVideo',
-'components/userList',
-'components/audioPlayer',
-'components/eventList',
-'components/poke',
-'components/email';
+@import "components/button", "components/modal", "components/puckBox",
+  "components/PuckSelect", "components/Welcome", "components/Navigation",
+  "components/jitsiVideo", "components/userList", "components/audioPlayer",
+  "components/eventList", "components/poke", "components/email";
 
 // 7. Page-specific styles
-@import 'pages/room',
-'pages/artRoom',
-'pages/iframeRoom',
-'pages/exit',
-'pages/map',
-'pages/imageMapRoom';
+@import "pages/room", "pages/artRoom", "pages/iframeRoom", "pages/streamingRoom",
+  "pages/exit", "pages/map", "pages/imageMapRoom";

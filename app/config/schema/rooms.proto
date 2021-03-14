@@ -18,6 +18,7 @@ enum RoomType {
     IMAGEMAP = 4;
     ART = 5;
     REDIRECT = 6;
+    STREAM = 7;
 }
 
 message Room {
@@ -93,6 +94,11 @@ message Room {
     // The page to redirect to
     // Required for redirect rooms.
     string route = 16;
+
+    // STREAMING ROOMS ONLY
+    // Options related to the bosh service
+    // Required for streaming rooms.
+    string boshUrl = 17;
 }
 
 message NavDirections {
