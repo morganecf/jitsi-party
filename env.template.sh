@@ -59,7 +59,7 @@ ENABLE_XMPP_WEBSOCKET = false
 # Public URL for the web service
 PUBLIC_URL=https://localhost
 
-# IP address of the Docker host 
+# IP address of the Docker host
 # See the "Running behind NAT or on a LAN environment" section in the README
 #DOCKER_HOST_ADDRESS=192.168.1.1
 
@@ -113,7 +113,7 @@ PUBLIC_URL=https://localhost
 #ENABLE_AUTH=1
 
 # Enable guest access
-#ENABLE_GUESTS=1
+ENABLE_GUESTS=1
 
 # Select authentication type: internal, jwt or ldap
 #AUTH_TYPE=internal

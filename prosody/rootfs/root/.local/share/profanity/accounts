@@ -1,0 +1,15 @@
+[guest]
+enabled=true
+password=
+jid=guest.party.jitsi
+resource=profanity
+muc.nick=docker
+presence.last=online
+presence.login=online
+priority.online=0
+priority.chat=0
+priority.away=0
+priority.xa=0
+priority.dnd=0
+server=localhost
+tls.policy=disable

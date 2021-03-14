@@ -61,6 +61,10 @@ restart:
 db:
 	docker-compose exec -e 'FLASK_ENV=production' -e 'FLASK_APP=manager.py' web-worker_1 flask create-db
 
+.PHONY: chat
+chat:
+	docker-compose exec prosody profanity -a guest
+
 .PHONY: clean-docker
 clean-docker:
 	docker-compose stop
