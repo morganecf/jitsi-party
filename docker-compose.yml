@@ -92,11 +92,13 @@ services:
                     - ${XMPP_DOMAIN}
 
     prosody:
-        image: jitsi/prosody:stable-5142-4
+        build: ./prosody
+        image: cabinweekend/jitsi-party-prosody
         environment:
             - AUTH_TYPE
             - ENABLE_AUTH
             - ENABLE_GUESTS
+            - ENABLE_GUEST_DOMAIN
             - GLOBAL_MODULES
             - GLOBAL_CONFIG
             - LDAP_URL
