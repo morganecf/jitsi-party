@@ -203,7 +203,7 @@ services:
             dockerfile: node/Dockerfile
         volumes:
             - ./app:/app
-            - exclude:/app/client/node_modules 
+            - exclude:/app/client/node_modules
 
 networks:
     party.jitsi:
