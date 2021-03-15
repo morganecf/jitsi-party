@@ -78,6 +78,14 @@ After changing themes with `app/set_theme.sh`, you should rerun webpack:
 make webpack
 ```
 
+### Updating npm dependencies
+Node, npm, and its dependencies are all happily dockerized, so you shouldn't have to worry about this unless you are actually changing npm packages. If you are, you will need to build a new `node` image, and commit the resulting lock file changes. Ideally you would also push the new image, but permissions aren't available for this for most devs yet.
+
+The following command will run the build and copy out the lockfile for you:
+
+```bash
+make npm-update
+```
 
 ### Jitsi API documentation
 API doc:
