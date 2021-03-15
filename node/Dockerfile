@@ -1,7 +1,6 @@
 FROM node:14.16.0-buster-slim
 
-RUN mkdir /build
-WORKDIR /build
+WORKDIR /
 COPY ./app/client/package.json package.json
 COPY ./app/client/package-lock.json package-lock.json
 RUN ["npm", "install"]
