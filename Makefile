@@ -37,6 +37,7 @@ clean-theme:
 js = app/client/js
 webpack-files := $(js)/bundle.js $(js)/bundle.js.map
 $(webpack-files)&: env schema $(theme)
+	docker-compose pull node
 	docker-compose run node /node_modules/.bin/webpack
 
 .PHONY: webpack
