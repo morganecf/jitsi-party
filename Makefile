@@ -24,7 +24,7 @@ clean-env:
 .PHONY: npm-update
 npm-update:
 	docker-compose build node
-	docker-compose run node cp /build/package-lock.json /app/client/package-lock.json
+	docker-compose run node cp /package-lock.json /app/client/package-lock.json
 
 theme = app/client/styles/themes/_active.scss
 $(theme):
