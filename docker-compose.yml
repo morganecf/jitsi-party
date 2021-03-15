@@ -197,9 +197,16 @@ services:
             party.jitsi:
 
     node:
-        build: ./node
+        image: cabinweekend/jitsi-party-node
+        build:
+            context: .
+            dockerfile: node/Dockerfile
         volumes:
             - ./app:/app
+            - exclude:/app/client/node_modules
 
 networks:
     party.jitsi:
+
+volumes:
+    exclude:
