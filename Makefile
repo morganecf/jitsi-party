@@ -48,6 +48,7 @@ clean-webpack:
 
 .PHONY: up
 up: webpack env schema
+	docker-compose pull
 	docker-compose up -d
 
 .PHONY: restart
