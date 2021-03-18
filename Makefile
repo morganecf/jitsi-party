@@ -21,13 +21,10 @@ env: .env
 clean-env:
 	rm -rf .env
 
-node = app/client/node_modules
-$(node):
-	docker-compose run node npm install
-
-.PHONY: clean-node
-clean-node:
-	rm -rf $(node)
+.PHONY: npm-update
+npm-update:
+	docker-compose build node
+	docker-compose run node cp /package-lock.json /app/client/package-lock.json
 
 theme = app/client/styles/themes/_active.scss
 $(theme):
@@ -39,8 +36,9 @@ clean-theme:
 
 js = app/client/js
 webpack-files := $(js)/bundle.js $(js)/bundle.js.map
-$(webpack-files)&: env $(node) schema $(theme)
-	docker-compose run node node_modules/.bin/webpack
+$(webpack-files)&: env schema $(theme)
+	docker-compose pull node
+	docker-compose run node /node_modules/.bin/webpack
 
 .PHONY: webpack
 webpack: $(webpack-files)
@@ -51,6 +49,7 @@ clean-webpack:
 
 .PHONY: up
 up: webpack env schema
+	docker-compose pull
 	docker-compose up -d
 
 .PHONY: restart
@@ -76,7 +75,4 @@ clean-config:
 
 .PHONY: clean
 clean: env clean-docker clean-env clean-config clean-schema clean-theme clean-webpack
-
-.PHONY: clean-all
-clean-all: clean clean-node
 
