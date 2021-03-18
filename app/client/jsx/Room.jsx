@@ -88,6 +88,7 @@ class Room extends Component {
       hideVideo: roomData.hideVideo,
       disableSharing: roomData.type === "IFRAME",
     };
+    const combo = { ...roomData, ...jitsiData };
     return {
       ART: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
       JITSI: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
@@ -97,7 +98,7 @@ class Room extends Component {
           iframeOptions={roomData.iframeOptions}
         ></IFrameRoom>
       ),
-      STREAM: <StreamingRoom {...roomData}></StreamingRoom>,
+      STREAM: <StreamingRoom {...combo}></StreamingRoom>,
       ADVENTURE: (
         <Adventure
           options={roomData}

@@ -9,7 +9,7 @@
       "muteRoom": true,
       "hideVideo": true,
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
-      "boshUrl": "https://localhost/jitsi/http-bind?room=kitchen1",
+      "boshUrl": "https://localhost/jitsi/http-bind",
       "iframeOptions": {
         "src": "https://thesatanictemplesocal.com/about/tenets"
       },

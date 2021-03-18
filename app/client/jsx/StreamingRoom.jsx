@@ -1,39 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 export const StreamingRoom = ({
   id: roomId,
+  displayName,
   boshUrl,
   iframeOptions: { src },
 }) => {
-  const [chat, setChat] = useState(false);
-
   // initialize converse
   useEffect(() => {
     window.converse.initialize({
-      bosh_service_url: boshUrl,
       authentication: "anonymous",
-      jid: "guest.party.jitsi",
-      view_mode: "embedded",
       auto_login: true,
-      auto_reconnect: true,
-      allow_logout: true,
+      auto_join_rooms: [
+        { jid: `${roomId}@muc.party.jitsi`, nick: displayName },
+      ],
+      bosh_service_url: boshUrl,
+      jid: "guest.party.jitsi",
+      singleton: true,
+      view_mode: "embedded",
     });
-  }, []);
-
-  useEffect(() => {
-    return () => setChat(false);
   }, []);
 
   return (
     <div className="iframe-room">
       <div className="jitsi-video">
-        <div className="jitsi-container">
-          {chat ? (
-            <div id="conversejs"></div>
-          ) : (
-            <button onClick={() => setChat(true)}>Start Chat</button>
-          )}
-        </div>
+        <div className="jitsi-container"></div>
       </div>
       <div className="iframe-section">
         <iframe src={src} height="100%" width="100%" frameBorder="0px"></iframe>
