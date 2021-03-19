@@ -1,4 +1,9 @@
 #conversejs {
-  position: relative !important;
-  bottom: 0 !important;
+  position: absolute !important;
+  top: 9vh !important;
+  bottom: auto !important;
+  width: 45vw !important;
+  left: 1vw !important;
+  height: 70vh !important;
+  z-index: 9 !important;
 }

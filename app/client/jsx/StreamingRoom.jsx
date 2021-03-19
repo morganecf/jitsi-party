@@ -6,8 +6,25 @@ export const StreamingRoom = ({
   boshUrl,
   iframeOptions: { src },
 }) => {
-  // initialize converse
+  // register the 'jitsi-plugin' and initialize converse and cleanup after close
   useEffect(() => {
+    // placeholder variable for the logout
+    let logout;
+
+    // configure the 'jitsi-plugin' to get our hands on the converse api logout
+    try {
+      window.converse.plugins.add("jitsi-plugin", {
+        initialize: function () {
+          this._converse.log.log("This had better work.");
+          console.dir(this);
+          logout = this._converse.api.user.logout;
+        },
+      });
+    } catch (error) {
+      // do nothing since the plugin is already registered
+    }
+
+    // initialize converse
     window.converse.initialize({
       authentication: "anonymous",
       auto_login: true,
@@ -17,8 +34,13 @@ export const StreamingRoom = ({
       bosh_service_url: boshUrl,
       jid: "guest.party.jitsi",
       singleton: true,
+      clear_cache_on_logout: true,
+      whitelisted_plugins: ["jitsi-plugin"],
       view_mode: "embedded",
     });
+
+    // call the converse api logout at cleanup
+    return () => logout();
   }, []);
 
   return (
