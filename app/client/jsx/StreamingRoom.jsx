@@ -2,24 +2,36 @@ import React, { useEffect } from "react";
 
 export const StreamingRoom = ({
   id: roomId,
+  name: roomName,
   displayName,
   boshUrl,
   iframeOptions: { src },
 }) => {
   // register the 'jitsi-plugin' and initialize converse and cleanup after close
   useEffect(() => {
-    // placeholder variable for the logout
-    let logout;
+    let logout = null;
+    let plugins = null;
 
     // configure the 'jitsi-plugin' to get our hands on the converse api logout
     try {
       window.converse.plugins.add("jitsi-plugin", {
         initialize: function () {
           logout = this._converse.api.user.logout;
+          plugins = this._converse.pluggable.plugins;
+
+          // add event listener to restucture the chatbox
+          this._converse.api.listen.on("chatBoxInsertedIntoDOM", () => {
+            const title = document.querySelector(".chatbox-title__text");
+            const dd = document.querySelector(".chatbox-title__buttons");
+
+            title.innerHTML = roomName;
+            dd.remove();
+          });
         },
       });
     } catch (error) {
       // do nothing since the plugin is already registered
+      console.error("Well, that didn't work");
     }
 
     // initialize converse
@@ -38,14 +50,15 @@ export const StreamingRoom = ({
     });
 
     // call the converse api logout at cleanup
-    return () => logout();
+    return () => {
+      plugins["jitsi-plugin"] = undefined;
+      logout();
+    };
   }, []);
 
   return (
     <div className="iframe-room">
-      <div className="jitsi-video">
-        <div className="jitsi-container"></div>
-      </div>
+      <div className="jitsi-video"></div>
       <div className="iframe-section">
         <iframe src={src} height="100%" width="100%" frameBorder="0px"></iframe>
       </div>

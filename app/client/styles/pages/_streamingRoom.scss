@@ -6,4 +6,10 @@
   left: 1vw !important;
   height: 70vh !important;
   z-index: 9 !important;
+
+  .badge,
+  .chat-info,
+  .hide-occupants {
+    display: none !important;
+  }
 }
