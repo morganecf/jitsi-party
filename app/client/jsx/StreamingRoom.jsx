@@ -15,8 +15,6 @@ export const StreamingRoom = ({
     try {
       window.converse.plugins.add("jitsi-plugin", {
         initialize: function () {
-          this._converse.log.log("This had better work.");
-          console.dir(this);
           logout = this._converse.api.user.logout;
         },
       });
