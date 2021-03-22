@@ -1,10 +1,17 @@
-version: "3.5"
+version: "3.2"
 services:
     proxy:
         build: ./proxy
+        image: cabinweekend/jitsi-party-proxy
         ports:
             - 80:80
             - 443:443
+        environment:
+            - PROXY_AUTH_ENABLED
+            - PROXY_AUTH_DISCOVERY
+            - PROXY_AUTH_CLIENT_ID
+            - PROXY_AUTH_CLIENT_SECRET
+            - PROXY_AUTH_ALLOWED_GROUPS
         networks:
             party.jitsi:
         depends_on:
@@ -13,6 +20,7 @@ services:
 
     web-worker_1:
         build: ./app
+        image: cabinweekend/jitsi-party-web
         ports:
             - 7071:80
         environment:
@@ -29,6 +37,7 @@ services:
 
     web-worker_2:
         build: ./app
+        image: cabinweekend/jitsi-party-web
         ports:
             - 7072:80
         environment:
