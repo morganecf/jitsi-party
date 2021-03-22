@@ -1,10 +1,12 @@
-version: 2
+version: 2.1
+orbs:
+  protobuf: izumin5210/protobuf@0.1.0
 jobs:
  build:
    machine: true
    steps:
+     - protobuf/install
      - checkout
      - run: |
-         docker login --username $DOCKER_USER --password $DOCKER_PASS
-         ./build_and_push.sh
+         docker login -u $DOCKER_USER -p $DOCKER_PASS && ./build_and_push.sh
 
