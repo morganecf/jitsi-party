@@ -5,6 +5,6 @@ jobs:
    steps:
      - checkout
      - run: |
-         echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+         docker login --username $DOCKER_USER --password $DOCKER_PASS
          ./build_and_push.sh
 
