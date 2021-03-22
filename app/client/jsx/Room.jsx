@@ -17,7 +17,7 @@ import { PokeNotification } from "./Poke.jsx";
 import { WebSocketApi } from "./WebAPI.jsx";
 import LocalStorage from "./LocalStorage.jsx";
 import Config from "./Config.jsx";
-import { StreamingRoom } from "./StreamingRoom.jsx";
+import { ChatStreamRoom } from "./ChatStreamRoom.jsx";
 
 class Room extends Component {
   /*
@@ -39,7 +39,7 @@ class Room extends Component {
     this.roomTypesWithMap = {
       JITSI: true,
       IFRAME: true,
-      STREAM: true,
+      CHATSTREAM: true,
       CONTENT: true,
       IMAGEMAP: true,
     };
@@ -48,7 +48,7 @@ class Room extends Component {
     this.roomTypesWithDoors = {
       JITSI: true,
       IFRAME: true,
-      STREAM: true,
+      CHATSTREAM: true,
       IMAGEMAP: true,
     };
 
@@ -98,7 +98,7 @@ class Room extends Component {
           iframeOptions={roomData.iframeOptions}
         ></IFrameRoom>
       ),
-      STREAM: <StreamingRoom {...combo}></StreamingRoom>,
+      CHATSTREAM: <ChatStreamRoom {...combo}></ChatStreamRoom>,
       ADVENTURE: (
         <Adventure
           options={roomData}

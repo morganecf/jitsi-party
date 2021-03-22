@@ -1,6 +1,17 @@
 import React, { useEffect } from "react";
 
-export const StreamingRoom = ({
+/**
+ * This component is used to render a Converse.js chat component on the
+ * left side and an IFrame on the right. While this component does have
+ * the jitsi-video class in the render it is only for placement: there
+ * is no jitsi video in this component.
+ *
+ * This component works in conjunction with the CHATSTREAM room type.
+ *
+ * @param props a combo of roomData and jitsiData
+ * @returns
+ */
+export const ChatStreamRoom = ({
   id: roomId,
   name: roomName,
   displayName,
@@ -58,9 +69,7 @@ export const StreamingRoom = ({
 
   return (
     <div className="iframe-room">
-      <div className="jitsi-video">
-        <div className="chat-content"></div>
-      </div>
+      <div className="jitsi-video"></div>
       <div className="iframe-section">
         <iframe src={src} height="100%" width="100%" frameBorder="0px"></iframe>
       </div>
