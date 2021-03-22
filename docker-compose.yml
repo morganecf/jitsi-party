@@ -20,6 +20,7 @@ services:
 
     web-worker_1:
         build: ./app
+        image: cabinweekend/jitsi-party-web
         ports:
             - 7071:80
         environment:
@@ -36,6 +37,7 @@ services:
 
     web-worker_2:
         build: ./app
+        image: cabinweekend/jitsi-party-web
         ports:
             - 7072:80
         environment:
