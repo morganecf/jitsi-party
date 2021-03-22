@@ -1,15 +1,60 @@
+$mobile_landscape_height: 450px !default;
+$mobile_portrait_length: 480px !default;
+
 #conversejs {
   position: absolute !important;
-  top: 9vh !important;
+  top: 10% !important;
   bottom: auto !important;
   width: 45vw !important;
   left: 1vw !important;
-  height: 70vh !important;
+  height: 66% !important;
   z-index: 9 !important;
 
   .badge,
   .chat-info,
   .hide-occupants {
     display: none !important;
+  }
+
+  .chat-head {
+    background-color: $background-color !important;
+  }
+
+  .chat-textarea:focus {
+    outline-color: $background-color !important;
+  }
+
+  .occupants-heading {
+    color: $background-color !important;
+  }
+
+  .occupant-status {
+    vertical-align: sub;
+  }
+
+  .occupant-nick {
+    font-size: 0.9rem;
+  }
+
+  .chatroom {
+    converse-chat-toolbar {
+      border-top: 2px solid $background-color !important;
+
+      button:focus {
+        outline-color: $background-color !important;
+      }
+
+      svg {
+        fill: $background-color !important;
+      }
+    }
+  }
+
+  .separator {
+    border-bottom: 2px solid $background-color !important;
+  }
+
+  .send-button {
+    background-color: $background-color !important;
   }
 }

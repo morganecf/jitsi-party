@@ -58,7 +58,9 @@ export const StreamingRoom = ({
 
   return (
     <div className="iframe-room">
-      <div className="jitsi-video"></div>
+      <div className="jitsi-video">
+        <div className="chat-content"></div>
+      </div>
       <div className="iframe-section">
         <iframe src={src} height="100%" width="100%" frameBorder="0px"></iframe>
       </div>
