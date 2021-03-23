@@ -1,7 +1,10 @@
 version: "3.2"
 services:
     proxy:
-        build: ./proxy
+        build:
+            context: ./proxy
+            cache_from:
+                - cabinweekend/jitsi-party-proxy:latest
         image: cabinweekend/jitsi-party-proxy
         ports:
             - 80:80
