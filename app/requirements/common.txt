@@ -8,7 +8,7 @@ Flask-Mail==0.9.1
 Flask-SocketIO==4.3.0
 Flask-SQLAlchemy==2.4.1
 itsdangerous==1.1.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 kombu==4.6.8
 MarkupSafe==1.1.1
 monotonic==1.5
