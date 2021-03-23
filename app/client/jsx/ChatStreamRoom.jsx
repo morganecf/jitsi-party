@@ -60,6 +60,12 @@ export const ChatStreamRoom = ({
       view_mode: "embedded",
     });
 
+    // listen to beforeunload to logout and cleanup
+    window.addEventListener("beforeunload", () => {
+      plugins["jitsi-plugin"] = undefined;
+      logout();
+    });
+
     // call the converse api logout at cleanup
     return () => {
       plugins["jitsi-plugin"] = undefined;
