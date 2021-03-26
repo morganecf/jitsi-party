@@ -55,6 +55,7 @@ export const ChatStreamRoom = ({
       bosh_service_url: boshUrl,
       jid: "guest.party.jitsi",
       singleton: true,
+      hide_offline_users: true,
       clear_cache_on_logout: true,
       whitelisted_plugins: ["jitsi-plugin"],
       view_mode: "embedded",
