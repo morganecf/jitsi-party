@@ -30,14 +30,13 @@ export const ChatStreamRoom = ({
           logout = this._converse.api.user.logout;
           plugins = this._converse.pluggable.plugins;
 
-          // add event listener to restucture the chatbox
-          this._converse.api.listen.on("chatBoxInsertedIntoDOM", () => {
-            const title = document.querySelector(".chatbox-title__text");
-            const dd = document.querySelector(".chatbox-title__buttons");
+          // this._converse.api.listen.on("chatRoomViewInitialized", () => {
+          //   const title = document.querySelector(".chatbox-title__text");
+          //   const dd = document.querySelector(".chatbox-title__buttons");
 
-            title.innerHTML = roomName;
-            dd.remove();
-          });
+          //   title.innerHTML = roomName;
+          //   dd.remove();
+          // });
         },
       });
     } catch (error) {
@@ -60,6 +59,21 @@ export const ChatStreamRoom = ({
       whitelisted_plugins: ["jitsi-plugin"],
       view_mode: "embedded",
     });
+
+    // use MutationObserver to restucture the chatbox
+    const observer = new MutationObserver((muts) => {
+      if(document.querySelector('.chatbox-title__buttons')  !== null ) {
+        const title = document.querySelector(".chatbox-title__text");
+        const dd = document.querySelector(".chatbox-title__buttons");
+
+        title.innerHTML = roomName;
+        dd.remove();
+
+        observer.disconnect();
+      }
+    })
+
+    observer.observe(document, {childList: true, attributes: true, subtree: true})
 
     // listen to beforeunload to logout and cleanup
     window.addEventListener("beforeunload", () => {
