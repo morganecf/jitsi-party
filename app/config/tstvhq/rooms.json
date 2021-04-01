@@ -1,66 +1,63 @@
 {
-  "rooms": [
-    {
-      "id": "kitchen1",
-      "name": "Kitchen I",
-      "type": "CHATSTREAM",
-      "capacity": 50,
-      "doorTint": "#000000",
-      "muteRoom": true,
-      "hideVideo": true,
-      "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
-      "boshUrl": "https://localhost/jitsi/http-bind",
-      "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
-      },
-      "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
-      "directions": {
-        "west": "powderRoom",
-        "east": "kitchen2"
-      },
-      "map": {
-        "x": 3,
-        "y": 26,
-        "width": 2,
-        "height": 5,
-        "doors": {
-          "east": 27,
-          "west": 27
-        }
-      }
+  "rooms": [{
+    "id": "kitchen1",
+    "name": "Kitchen I",
+    "type": "CHATSTREAM",
+    "capacity": 50,
+    "doorTint": "#000000",
+    "muteRoom": true,
+    "hideVideo": true,
+    "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
+    "iframeOptions": {
+      "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
     },
-    {
-      "id": "kitchen2",
-      "name": "Kitchen II",
-      "type": "CHATSTREAM",
-      "capacity": 50,
-      "doorTint": "#000000",
-      "muteRoom": true,
-      "hideVideo": true,
-      "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
-      "boshUrl": "https://localhost/jitsi/http-bind",
-      "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
-      },
-      "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
-      "directions": {
-        "west": "kitchen1",
-        "north": "grandBallroom2",
-        "east": "kitchen3"
-      },
-      "map": {
-        "x": 5,
-        "y": 26,
-        "width": 3,
-        "height": 5,
-        "doors": {
-          "north": 6,
-          "east": 27,
-          "west": 27
-        }
-      }
+    "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
+    "directions": {
+      "west": "powderRoom",
+      "east": "kitchen2"
     },
-    {
+    "map": {
+      "x": 3,
+      "y": 26,
+      "width": 2,
+      "height": 5,
+      "doors": {
+        "east": 27,
+        "west": 27
+      }
+    }
+  },
+  {
+    "id": "kitchen2",
+    "name": "Kitchen II",
+    "type": "CHATSTREAM",
+    "capacity": 50,
+    "doorTint": "#000000",
+    "muteRoom": true,
+    "hideVideo": true,
+    "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
+    "iframeOptions": {
+      "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+    },
+    "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
+    "directions": {
+      "west": "kitchen1",
+      "north": "grandBallroom2",
+      "east": "kitchen3"
+    },
+    "map": {
+      "x": 5,
+      "y": 26,
+      "width": 3,
+      "height": 5,
+      "doors": {
+        "north": 6,
+        "east": 27,
+        "west": 27
+      }
+    }
+  },
+  {
       "id": "kitchen3",
       "name": "Kitchen III",
       "type": "IFRAME",
@@ -70,25 +67,25 @@
       "hideVideo": true,
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
       },
       "description": "@TheSatanicChef teaches us how to live deliciously in the kitchen.",
       "directions": {
-        "west": "kitchen2",
-        "east": "frontParlor"
+          "west": "kitchen2",
+          "east": "frontParlor"
       },
       "map": {
-        "x": 8,
-        "y": 26,
-        "width": 2,
-        "height": 5,
-        "doors": {
-          "east": 27,
-          "west": 27
-        }
+          "x": 8,
+          "y": 26,
+          "width": 2,
+          "height": 5,
+          "doors": {
+              "east": 27,
+              "west": 27
+          }
       }
-    },
-    {
+  },
+  {
       "id": "powderRoom",
       "name": "Powder Room",
       "type": "JITSI",
@@ -99,19 +96,19 @@
       "description": "Freshen up with a few friends.",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-powder-room.png",
       "directions": {
-        "east": "kitchen1"
+          "east": "kitchen1"
       },
       "map": {
-        "x": 1,
-        "y": 26,
-        "width": 2,
-        "height": 2,
-        "doors": {
-          "east": 27
-        }
+          "x": 1,
+          "y": 26,
+          "width": 2,
+          "height": 2,
+          "doors": {
+              "east": 27
+          }
       }
-    },
-    {
+  },
+  {
       "id": "grandBallroom1",
       "name": "Grand Ballroom I",
       "type": "IFRAME",
@@ -120,24 +117,25 @@
       "hideVideo": true,
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
       "iframeOptions": {
-        "src": "https://www.youtube.com/embed/ugJml6AhdT0"
+          "src": "https://www.youtube.com/embed/ugJml6AhdT0"
       },
       "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
       "directions": {
-        "south": "grandBallroom2"
+          "south": "grandBallroom2"
       },
       "doorTint": "#000000",
       "map": {
-        "x": 3,
-        "y": 18,
-        "width": 5,
-        "height": 4,
-        "doors": {
-          "south": 7
-        }
+          "x": 3,
+          "y": 18,
+          "width": 5,
+          "height": 4,
+          "doors": {
+              "south": 7
+          }
+
       }
-    },
-    {
+  },
+  {
       "id": "grandBallroom2",
       "name": "Grand Ballroom II",
       "type": "IFRAME",
@@ -146,26 +144,26 @@
       "hideVideo": true,
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
       },
       "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
       "directions": {
-        "north": "grandBallroom1",
-        "south": "kitchen2"
+          "north": "grandBallroom1",
+          "south": "kitchen2"
       },
       "doorTint": "#000000",
       "map": {
-        "x": 3,
-        "y": 22,
-        "width": 5,
-        "height": 4,
-        "doors": {
-          "north": 7,
-          "south": 6
-        }
+          "x": 3,
+          "y": 22,
+          "width": 5,
+          "height": 4,
+          "doors": {
+              "north": 7,
+              "south": 6
+          }
       }
-    },
-    {
+  },
+  {
       "id": "grandStaircase",
       "name": "Elevator",
       "type": "JITSI",
@@ -175,24 +173,24 @@
       "description": "The inspector won't return our calls. Should it be making that noise?",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-elevator.gif",
       "directions": {
-        "north": "library",
-        "east": "painting",
-        "south": "frontParlor"
+          "north": "library",
+          "east": "painting",
+          "south": "frontParlor"
       },
       "map": {
-        "x": 11,
-        "y": 12,
-        "width": 1,
-        "height": 12,
-        "doors": {
-          "north": 11,
-          "south": 11,
-          "east": 18
-        }
+          "x": 11,
+          "y": 12,
+          "width": 1,
+          "height": 12,
+          "doors": {
+              "north": 11,
+              "south": 11,
+              "east": 18
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "frontParlor",
       "name": "Front Parlor",
       "capacity": 50,
@@ -202,27 +200,27 @@
       "type": "IFRAME",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
       "iframeOptions": {
-        "src": "https://www.youtube.com/embed/vKWQ8scB1qk"
+          "src": "https://www.youtube.com/embed/vKWQ8scB1qk"
       },
       "directions": {
-        "east": "teaRoom",
-        "north": "grandStaircase",
-        "west": "kitchen3"
+          "east": "teaRoom",
+          "north": "grandStaircase",
+          "west": "kitchen3"
       },
       "map": {
-        "x": 10,
-        "y": 24,
-        "width": 8,
-        "height": 5,
-        "doors": {
-          "east": 27,
-          "north": 11,
-          "west": 27
-        }
+          "x": 10,
+          "y": 24,
+          "width": 8,
+          "height": 5,
+          "doors": {
+              "east": 27,
+              "north": 11,
+              "west": 27
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "teaRoom",
       "name": "Tea Room",
       "type": "JITSI",
@@ -230,55 +228,55 @@
       "muteRoom": false,
       "hideVideo": false,
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=shiva_honey&parent=estate.tstvhq.com"
       },
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-tea-room.png",
       "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick.",
       "directions": {
-        "north": "den",
-        "west": "frontParlor",
-        "east": "garden"
+          "north": "den",
+          "west": "frontParlor",
+          "east": "garden"
       },
       "map": {
-        "x": 18,
-        "y": 24,
-        "width": 6,
-        "height": 5,
-        "doors": {
-          "west": 27,
-          "east": 27,
-          "north": 22
-        }
+          "x": 18,
+          "y": 24,
+          "width": 6,
+          "height": 5,
+          "doors": {
+              "west": 27,
+              "east": 27,
+              "north": 22
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "den",
       "name": "Den",
       "type": "IFRAME",
       "iframeOptions": {
-        "src": "https://www.youtube.com/embed/T4iPx3JrTvc"
+          "src": "https://www.youtube.com/embed/T4iPx3JrTvc"
       },
       "capacity": 20,
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-barnyard.png",
       "description": "Snuggle and play with the babies from the NY Wolf Conservation Center. Donate at nywolf.org",
       "directions": {
-        "north": "backParlor2",
-        "south": "teaRoom"
+          "north": "backParlor2",
+          "south": "teaRoom"
       },
       "map": {
-        "x": 21,
-        "y": 21,
-        "width": 3,
-        "height": 3,
-        "doors": {
-          "north": 23,
-          "south": 22
-        }
+          "x": 21,
+          "y": 21,
+          "width": 3,
+          "height": 3,
+          "doors": {
+              "north": 23,
+              "south": 22
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "backParlor1",
       "name": "Back Parlor I",
       "type": "IFRAME",
@@ -287,26 +285,26 @@
       "hideVideo": true,
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
       },
       "description": "Lectures and Lessons",
       "directions": {
-        "west": "ritualChamber",
-        "east": "backParlor2"
+          "west": "ritualChamber",
+          "east": "backParlor2"
       },
       "map": {
-        "x": 20,
-        "y": 16,
-        "width": 2,
-        "height": 5,
-        "doors": {
-          "east": 18,
-          "west": 18
-        }
+          "x": 20,
+          "y": 16,
+          "width": 2,
+          "height": 5,
+          "doors": {
+              "east": 18,
+              "west": 18
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "backParlor2",
       "name": "Back Parlor II",
       "type": "IFRAME",
@@ -315,28 +313,28 @@
       "hideVideo": true,
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
       },
       "description": "Lectures and Lessons",
       "directions": {
-        "south": "den",
-        "east": "backParlor3",
-        "west": "backParlor1"
+          "south": "den",
+          "east": "backParlor3",
+          "west": "backParlor1"
       },
       "map": {
-        "x": 22,
-        "y": 16,
-        "width": 3,
-        "height": 5,
-        "doors": {
-          "east": 18,
-          "west": 18,
-          "south": 23
-        }
+          "x": 22,
+          "y": 16,
+          "width": 3,
+          "height": 5,
+          "doors": {
+              "east": 18,
+              "west": 18,
+              "south": 23
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "backParlor3",
       "name": "Back Parlor III",
       "type": "IFRAME",
@@ -345,24 +343,25 @@
       "hideVideo": true,
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=danile310&parent=estate.tstvhq.com"
       },
       "description": "Lectures and Lessons",
       "directions": {
-        "west": "backParlor2"
+          "west": "backParlor2"
       },
       "map": {
-        "x": 25,
-        "y": 16,
-        "width": 2,
-        "height": 5,
-        "doors": {
-          "west": 18
-        }
+          "x": 25,
+          "y": 16,
+          "width": 2,
+          "height": 5,
+          "doors":
+          {
+              "west": 18
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "ritualChamber",
       "name": "Ritual Chamber",
       "type": "JITSI",
@@ -372,23 +371,23 @@
       "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-ritual.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
-      },
+          "src": "https://player.twitch.tv/?channel=InfernalZoey666&parent=estate.tstvhq.com"
+      }, 
       "directions": {
-        "east": "backParlor1"
+          "east": "backParlor1"
       },
       "map": {
-        "x": 17,
-        "y": 17,
-        "width": 3,
-        "height": 3,
-        "doors": {
-          "east": 18
-        }
+          "x": 17,
+          "y": 17,
+          "width": 3,
+          "height": 3,
+          "doors": {
+              "east": 18
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "belfry",
       "name": "Belfry",
       "type": "IFRAME",
@@ -398,51 +397,51 @@
       "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld! Donate at batworld.org",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-belfry.png",
       "iframeOptions": {
-        "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
+          "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
       },
       "directions": {
-        "south": "theater2"
+          "south": "theater2"
       },
       "map": {
-        "x": 27,
-        "y": 5,
-        "width": 2,
-        "height": 2,
-        "doors": {
-          "south": 27
-        }
+          "x": 27,
+          "y": 5,
+          "width": 2,
+          "height": 2,
+          "doors": {
+              "south": 27
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "sleepingPorch",
       "name": "Sleeping Porch",
       "capacity": 25,
       "muteRoom": false,
-      "hideVideo": false,
+      "hideVideo": false, 
       "description": "Give the goats from Woodstock Farm Sanctuary a snack at woodstocksanctuary.org/",
       "type": "IFRAME",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-sleeping-porch.png",
       "directions": {
-        "west": "library",
-        "east": "staircase"
+          "west": "library",
+          "east": "staircase"
       },
       "iframeOptions": {
-        "src": "https://www.youtube.com/embed/Jv5AwHpxwb4"
-      },
+          "src": "https://www.youtube.com/embed/Jv5AwHpxwb4"
+      }, 
       "map": {
-        "x": 14,
-        "y": 9,
-        "width": 2,
-        "height": 2,
-        "doors": {
-          "west": 10,
-          "east": 10
-        }
+          "x": 14,
+          "y": 9,
+          "width": 2,
+          "height": 2,
+          "doors": {
+              "west": 10,
+              "east": 10
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "aviary",
       "name": "Aviary",
       "type": "JITSI",
@@ -452,46 +451,46 @@
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-aviary.png",
       "description": "A cacophony of hoots, chirps and flutters.",
       "directions": {
-        "east": "library"
+          "east": "library"
       },
       "map": {
-        "x": 5,
-        "y": 8,
-        "width": 2,
-        "height": 3,
-        "doors": {
-          "east": 9
-        }
+          "x": 5,
+          "y": 8,
+          "width": 2,
+          "height": 3,
+          "doors": {
+              "east": 9
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "library",
       "name": "Satanic Archives",
       "type": "IMAGEMAP",
       "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
       "directions": {
-        "south": "grandStaircase",
-        "east": "sleepingPorch",
-        "north": "boudoir",
-        "west": "aviary"
+          "south": "grandStaircase",
+          "east": "sleepingPorch",
+          "north": "boudoir",
+          "west": "aviary"
       },
       "imageMapOptions": "satanic-library-map",
       "map": {
-        "x": 7,
-        "y": 7,
-        "width": 7,
-        "height": 5,
-        "doors": {
-          "south": 11,
-          "north": 10,
-          "east": 10,
-          "west": 9
-        }
+          "x": 7,
+          "y": 7,
+          "width": 7,
+          "height": 5,
+          "doors": {
+              "south": 11,
+              "north": 10,
+              "east": 10,
+              "west": 9
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "boudoir",
       "name": "Boudoir",
       "type": "IFRAME",
@@ -501,23 +500,23 @@
       "description": "Covert conversations regarding the Satanic Agenda",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-boudoir.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=grayglows&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=grayglows&parent=estate.tstvhq.com"
       },
       "directions": {
-        "south": "library"
+          "south": "library"
       },
       "map": {
-        "x": 9,
-        "y": 5,
-        "width": 3,
-        "height": 2,
-        "doors": {
-          "south": 10
-        }
+          "x": 9,
+          "y": 5,
+          "width": 3,
+          "height": 2,
+          "doors": {
+              "south": 10
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "staircase",
       "name": "Grand Staircase",
       "type": "JITSI",
@@ -527,22 +526,22 @@
       "muteRoom": false,
       "hideVideo": false,
       "directions": {
-        "east": "theater1",
-        "west": "sleepingPorch"
+          "east": "theater1",
+          "west": "sleepingPorch"
       },
       "map": {
-        "x": 16,
-        "y": 10,
-        "width": 8,
-        "height": 1,
-        "doors": {
-          "west": 10,
-          "east": 10
-        }
+          "x": 16,
+          "y": 10,
+          "width": 8,
+          "height": 1,
+          "doors": {
+              "west": 10,
+              "east": 10
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "theater1",
       "name": "Theater I",
       "type": "IFRAME",
@@ -553,25 +552,25 @@
       "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
       },
       "directions": {
-        "east": "theater2",
-        "west": "staircase"
+          "east": "theater2",
+          "west": "staircase"
       },
       "map": {
-        "x": 24,
-        "y": 7,
-        "width": 2,
-        "height": 5,
-        "doors": {
-          "west": 10,
-          "east": 10
-        }
+          "x": 24,
+          "y": 7,
+          "width": 2,
+          "height": 5,
+          "doors": {
+              "west": 10,
+              "east": 10
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "theater2",
       "name": "Theater II",
       "type": "IFRAME",
@@ -582,27 +581,27 @@
       "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
       },
       "directions": {
-        "west": "theater1",
-        "east": "theater3",
-        "north": "belfry"
+          "west": "theater1",
+          "east": "theater3",
+          "north": "belfry"
       },
       "map": {
-        "x": 26,
-        "y": 7,
-        "width": 3,
-        "height": 5,
-        "doors": {
-          "north": 27,
-          "west": 10,
-          "east": 10
-        }
+          "x": 26,
+          "y": 7,
+          "width": 3,
+          "height": 5,
+          "doors": {
+              "north": 27,
+              "west": 10,
+              "east": 10
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "theater3",
       "name": "Theater III",
       "type": "IFRAME",
@@ -613,23 +612,23 @@
       "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=chaliceinpains&parent=estate.tstvhq.com"
       },
       "directions": {
-        "west": "theater2"
+          "west": "theater2"
       },
       "map": {
-        "x": 29,
-        "y": 7,
-        "width": 2,
-        "height": 5,
-        "doors": {
-          "west": 10
-        }
+          "x": 29,
+          "y": 7,
+          "width": 2,
+          "height": 5,
+          "doors": {
+              "west": 10
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "garden",
       "name": "Garden",
       "type": "IFRAME",
@@ -637,27 +636,27 @@
       "muteRoom": true,
       "hideVideo": true,
       "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=grayglows&parent=estate.tstvhq.com"
+          "src": "https://player.twitch.tv/?channel=grayglows&parent=estate.tstvhq.com"
       },
       "description": "The amaryllis is already blooming!",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Garden.png",
       "directions": {
-        "west": "teaRoom",
-        "east": "cemetery"
+          "west": "teaRoom",
+          "east": "cemetery"
       },
       "map": {
-        "x": 24,
-        "y": 27,
-        "width": 5,
-        "height": 1,
-        "doors": {
-          "west": 27,
-          "east": 27
-        }
+          "x": 24,
+          "y": 27,
+          "width": 5,
+          "height": 1,
+          "doors": {
+              "west": 27,
+              "east": 27
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "cemetery",
       "name": "Cemetery",
       "type": "JITSI",
@@ -667,20 +666,20 @@
       "description": "It's warmer underground. Hand me that shovel, I'll show you.",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-cemetery.png",
       "directions": {
-        "west": "garden"
+          "west": "garden"
       },
       "map": {
-        "x": 29,
-        "y": 23,
-        "width": 6,
-        "height": 6,
-        "doors": {
-          "west": 27
-        }
+          "x": 29,
+          "y": 23,
+          "width": 6,
+          "height": 6,
+          "doors": {
+              "west": 27
+          }
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "trapDoor",
       "name": "Trap Door to Hell!",
       "type": "IFRAME",
@@ -690,14 +689,14 @@
       "hideVideo": false,
       "description": "Papa Lupus has been expecting you...",
       "iframeOptions": {
-        "src": "https://www.youtube.com/embed/-b6VRRMD66g"
+          "src": "https://www.youtube.com/embed/-b6VRRMD66g"
       },
       "directions": {
-        "east": "secretTunnels"
+          "east": "secretTunnels"
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "secretTunnels",
       "name": "Secret Tunnels",
       "type": "JITSI",
@@ -707,12 +706,12 @@
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-secret-tunnels.png",
       "description": "This looks just like under McMartin Preschool!",
       "directions": {
-        "west": "trapDoor",
-        "east": "crematorium"
+          "west": "trapDoor",
+          "east": "crematorium"
       },
       "doorTint": "#000000"
-    },
-    {
+  },
+  {
       "id": "crematorium",
       "name": "Crematorium",
       "type": "IFRAME",
@@ -720,14 +719,13 @@
       "muteRoom": false,
       "hideVideo": false,
       "iframeOptions": {
-        "src": "https://player.angelthump.com/?channel=ledflashing"
+          "src": "https://player.angelthump.com/?channel=ledflashing"
       },
       "description": "Have a marshmallow. It's time for s'mores!",
       "doorTint": "#000000",
       "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Crematorium.png",
       "directions": {
-        "west": "secretTunnels"
-      }
-    }
-  ]
+      "west": "secretTunnels" }
+  }
+]
 }

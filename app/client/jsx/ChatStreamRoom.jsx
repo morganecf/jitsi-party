@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Config from './Config.jsx';
 
 /**
  * This component is used to render a Converse.js chat component on the
@@ -15,7 +16,6 @@ export const ChatStreamRoom = ({
   id: roomId,
   name: roomName,
   displayName,
-  boshUrl,
   iframeOptions: { src },
 }) => {
   // register the 'jitsi-plugin' and initialize converse and cleanup after close
@@ -52,7 +52,7 @@ export const ChatStreamRoom = ({
       auto_join_rooms: [
         { jid: `${roomId}@muc.party.jitsi`, nick: displayName },
       ],
-      bosh_service_url: boshUrl,
+      bosh_service_url: `${Config.baseUrl}jitsi/http-bind`,
       jid: "guest.party.jitsi",
       singleton: true,
       hide_offline_users: true,

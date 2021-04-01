@@ -17,6 +17,7 @@ import { PokeNotification } from './Poke.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
 import Config from './Config.jsx'
+import { ChatStreamRoom } from './ChatStreamRoom.jsx'
 
 class Room extends Component {
     /*
