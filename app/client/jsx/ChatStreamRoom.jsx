@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Config from './Config.jsx';
+import Config from "./Config.jsx";
 
 /**
  * This component is used to render a Converse.js chat component on the
@@ -29,19 +29,11 @@ export const ChatStreamRoom = ({
         initialize: function () {
           logout = this._converse.api.user.logout;
           plugins = this._converse.pluggable.plugins;
-
-          // this._converse.api.listen.on("chatRoomViewInitialized", () => {
-          //   const title = document.querySelector(".chatbox-title__text");
-          //   const dd = document.querySelector(".chatbox-title__buttons");
-
-          //   title.innerHTML = roomName;
-          //   dd.remove();
-          // });
         },
       });
     } catch (error) {
       // do nothing since the plugin is already registered
-      console.error("Well, that didn't work");
+      console.error(error);
     }
 
     // initialize converse
@@ -62,7 +54,7 @@ export const ChatStreamRoom = ({
 
     // use MutationObserver to restucture the chatbox
     const observer = new MutationObserver((muts) => {
-      if(document.querySelector('.chatbox-title__buttons')  !== null ) {
+      if (document.querySelector(".chatbox-title__buttons") !== null) {
         const title = document.querySelector(".chatbox-title__text");
         const dd = document.querySelector(".chatbox-title__buttons");
 
@@ -71,9 +63,13 @@ export const ChatStreamRoom = ({
 
         observer.disconnect();
       }
-    })
+    });
 
-    observer.observe(document, {childList: true, attributes: true, subtree: true})
+    observer.observe(document, {
+      childList: true,
+      attributes: true,
+      subtree: true,
+    });
 
     // listen to beforeunload to logout and cleanup
     window.addEventListener("beforeunload", () => {
