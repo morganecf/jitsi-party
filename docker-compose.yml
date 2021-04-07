@@ -5,6 +5,8 @@ services:
             context: ./proxy
             cache_from:
                 - cabinweekend/jitsi-party-proxy:latest
+            args:
+                - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-proxy
         ports:
             - 80:80
@@ -26,6 +28,8 @@ services:
             context: ./app
             cache_from:
                 - cabinweekend/jitsi-party-web:latest
+            args:
+                - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-web
         ports:
             - 7071:80
@@ -78,6 +82,8 @@ services:
             context: ./meet
             cache_from:
                 - cabinweekend/jitsi-party-meet:latest
+            args:
+                - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-meet
         ports:
             - 81:80
@@ -114,6 +120,8 @@ services:
             context: ./prosody
             cache_from:
                 - cabinweekend/jitsi-party-prosody:latest
+            args:
+                - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-prosody
         environment:
             - AUTH_TYPE
@@ -222,6 +230,8 @@ services:
         build:
             context: .
             dockerfile: node/Dockerfile
+            args:
+                - BUILDKIT_INLINE_CACHE=1
         volumes:
             - ./app:/app
             - exclude:/app/client/node_modules
