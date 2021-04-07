@@ -22,7 +22,10 @@ services:
             - web-worker_2
 
     web-worker_1:
-        build: ./app
+        build:
+            context: ./app
+            cache_from:
+                - cabinweekend/jitsi-party-web:latest
         image: cabinweekend/jitsi-party-web
         ports:
             - 7071:80
@@ -39,7 +42,6 @@ services:
             party.jitsi:
 
     web-worker_2:
-        build: ./app
         image: cabinweekend/jitsi-party-web
         ports:
             - 7072:80
