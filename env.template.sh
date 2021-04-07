@@ -36,6 +36,9 @@ PROXY_SESSION_SECRET=
 JITSI_PARTY_DB_USER=jitsi-party
 JITSI_PARTY_DB=jitsi-party
 
+# Proxy
+PROXY_LETSENCRYPT_ENABLED=
+PROXY_LETSENCRYPT_DOMAIN=
 
 #
 # Basic configuration options

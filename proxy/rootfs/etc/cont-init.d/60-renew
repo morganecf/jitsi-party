@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-if [ -z ${PROXY_ENABLE_LETSENCRYPT+x} ]; then
+if [ -z ${PROXY_LETSENCRYPT_ENABLED+x} ]; then
     openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
         -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=localhost" \
         -keyout /etc/ssl/private/localhost.key -out /etc/ssl/certs/localhost.crt
