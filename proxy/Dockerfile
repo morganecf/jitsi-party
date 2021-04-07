@@ -98,14 +98,21 @@ ENV S6_KEEP_ENV=1
 RUN apk add --no-cache curl \
     && curl -L -s https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-amd64.tar.gz | tar xvzf - -C /
 
-# Generate cert
+# Install runtime packages
 
-RUN apk add --no-cache openssl perl && \
-    rm -rf /var/cache/apk/*
+RUN apk add --no-cache \
+    openssl \
+    perl \
+    py3-cryptography \
+	py3-future \
+	py3-pip
 
-RUN openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
-    -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=localhost" \
-    -keyout /etc/ssl/private/localhost.key -out /etc/ssl/certs/localhost.crt
+RUN rm -rf /var/cache/apk/*
+
+RUN pip3 install -U pip
+RUN pip3 install -U \
+	certbot \
+    certbot-dns-route53
 
 RUN opm install zmartzone/lua-resty-openidc
 
