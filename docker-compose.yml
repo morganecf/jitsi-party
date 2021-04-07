@@ -19,8 +19,8 @@ services:
             - PROXY_AUTH_ALLOWED_GROUPS
             - PROXY_LETSENCRYPT_ENABLED
             - PROXY_LETSENCRYPT_DOMAIN
-            - AWS_ACCESS_KEY_ID
-            - AWS_SECRET_ACCESS_KEY
+            - AWS_ACCESS_KEY_ID=PROXY_AWS_ACCESS_KEY_ID
+            - AWS_SECRET_ACCESS_KEY=PROXY_AWS_SECRET_ACCESS_KEY
         networks:
             party.jitsi:
         depends_on:
