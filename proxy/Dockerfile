@@ -1,6 +1,6 @@
 # Stolen from https://github.com/khvzak/docker-openresty-s6
 
-FROM alpine:3.7
+FROM alpine:3.7 AS prod
 
 # Docker Build Arguments
 ARG S6_OVERLAY_VERSION="1.21.4.0"
@@ -120,4 +120,3 @@ COPY rootfs /
 
 ENTRYPOINT ["/init"]
 CMD []
-

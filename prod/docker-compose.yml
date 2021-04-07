@@ -12,6 +12,8 @@ services:
             - PROXY_AUTH_CLIENT_ID
             - PROXY_AUTH_CLIENT_SECRET
             - PROXY_AUTH_ALLOWED_GROUPS
+            - PROXY_ENABLE_LETSENCRYPT
+            - PROXY_LETSENCRYPT_DOMAIN
         networks:
             party.jitsi:
         depends_on:
