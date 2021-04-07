@@ -33,7 +33,7 @@ if [ ! -f "/config/keys/letsencrypt/fullchain.pem" ]; then
   openssl pkcs12 -export -out privkey.pfx -inkey privkey.pem -in cert.pem -certfile chain.pem -passout pass:
   sleep 1
   cat {privkey,fullchain}.pem > priv-fullchain-bundle.pem
-  echo "New certificate generated; starting nginx"
+  echo "New certificate generated; starting openresty"
 else
-  echo "Certificate exists; parameters unchanged; starting nginx"
+  echo "Certificate exists; parameters unchanged; starting openresty"
 fi
