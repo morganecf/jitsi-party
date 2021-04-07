@@ -30,7 +30,7 @@ docker push $REPO_BASE-prosody:$GIT_COMMIT
 docker tag $REPO_BASE-node:latest $REPO_BASE-node:$GIT_COMMIT
 docker push $REPO_BASE-node:$GIT_COMMIT
 
-docker build --cache-from $REPO_BASE-meet:latest -t $REPO_BASE-meet meet
+docker tag $REPO_BASE-meet:latest $REPO_BASE-meet:$GIT_COMMIT
 docker push $REPO_BASE-meet:$GIT_COMMIT
 
 
