@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bash
 
+ACMESERVER="https://acme-v02.api.letsencrypt.org/directory"
+
 # generating certs if necessary
 if [ ! -f "/config/keys/letsencrypt/fullchain.pem" ]; then
   echo "Generating new certificate"
