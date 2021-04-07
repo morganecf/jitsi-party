@@ -105,7 +105,7 @@ RUN opm install zmartzone/lua-resty-openidc \
     && ln -sf /dev/stderr /usr/local/openresty/nginx/logs/error.log \
     && rm -rf /var/cache/apk/*
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash openssl
 
 COPY rootfs /
 
