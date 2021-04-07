@@ -1,5 +1,9 @@
 #!/usr/bin/with-contenv bash
 
+# setting the symlink for key location
+rm -rf /config/keys/letsencrypt
+ln -s /etc/letsencrypt/live/"$PROXY_LETSENCRYPT_DOMAIN" /config/keys/letsencrypt
+
 ACMESERVER="https://acme-v02.api.letsencrypt.org/directory"
 
 # generating certs if necessary
