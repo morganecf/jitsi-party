@@ -5,7 +5,13 @@ ACMESERVER="https://acme-v02.api.letsencrypt.org/directory"
 # generating certs if necessary
 if [ ! -f "/config/keys/letsencrypt/fullchain.pem" ]; then
   echo "Generating new certificate"
-  certbot certonly --renew-by-default --server $ACMESERVER $ZEROSSL_EAB $PREFCHAL --rsa-key-size 4096 $EMAILPARAM --agree-tos $URL_REAL
+  certbot certonly --renew-by-default \
+    --server $ACMESERVER \
+    --dns-route53 \
+    --rsa-key-size 4096 \
+    --agree-tos \
+    -d "*.${PROXY_LETSENCRYPT_DOMAIN}" \
+    -d "${PROXY_LETSENCRYPT_DOMAIN}"
   if [ -d /config/keys/letsencrypt ]; then
     cd /config/keys/letsencrypt || exit
   else
