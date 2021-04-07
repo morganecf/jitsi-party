@@ -100,6 +100,7 @@ services:
             - ENABLE_RECORDING
             - BRIDGE_CHANNEL
             - ENABLE_XMPP_WEBSOCKET
+            - PUBLIC_URL=$PROXY_LETSENCRYPT_DOMAIN
         networks:
             party.jitsi:
                 aliases:
