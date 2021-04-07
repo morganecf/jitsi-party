@@ -1,0 +1,35 @@
+# generating certs if necessary
+if [ ! -f "/config/keys/letsencrypt/fullchain.pem" ]; then
+  if [ "$CERTPROVIDER" = "zerossl" ] && [ -n "$EMAIL" ]; then
+    echo "Retrieving EAB from ZeroSSL"
+    EAB_CREDS=$(curl -s https://api.zerossl.com/acme/eab-credentials-email --data "email=$EMAIL")
+    ZEROSSL_EAB_KID=$(echo "$EAB_CREDS" | python3 -c "import sys, json; print(json.load(sys.stdin)['eab_kid'])")
+    ZEROSSL_EAB_HMAC_KEY=$(echo "$EAB_CREDS" | python3 -c "import sys, json; print(json.load(sys.stdin)['eab_hmac_key'])")
+    if [ -z "$ZEROSSL_EAB_KID" ] || [ -z "$ZEROSSL_EAB_HMAC_KEY" ]; then
+      echo "Unable to retrieve EAB credentials from ZeroSSL. Check the outgoing connections to api.zerossl.com and dns. Sleeping."
+      sleep infinity
+    fi
+    ZEROSSL_EAB="--eab-kid ${ZEROSSL_EAB_KID} --eab-hmac-key ${ZEROSSL_EAB_HMAC_KEY}"
+  fi
+  echo "Generating new certificate"
+  # shellcheck disable=SC2086
+  certbot certonly --renew-by-default --server $ACMESERVER $ZEROSSL_EAB $PREFCHAL --rsa-key-size 4096 $EMAILPARAM --agree-tos $URL_REAL
+  if [ -d /config/keys/letsencrypt ]; then
+    cd /config/keys/letsencrypt || exit
+  else
+    if [ "$VALIDATION" = "dns" ]; then
+      echo "ERROR: Cert does not exist! Please see the validation error above. Make sure you entered correct credentials into the /config/dns-conf/${FILENAME} file."
+    elif [ "$VALIDATION" = "duckdns" ]; then
+      echo "ERROR: Cert does not exist! Please see the validation error above. Make sure your DUCKDNSTOKEN is correct."
+    else
+      echo "ERROR: Cert does not exist! Please see the validation error above. The issue may be due to incorrect dns or port forwarding settings. Please fix your settings and recreate the container"
+    fi
+    sleep infinity
+  fi
+  openssl pkcs12 -export -out privkey.pfx -inkey privkey.pem -in cert.pem -certfile chain.pem -passout pass:
+  sleep 1
+  cat {privkey,fullchain}.pem > priv-fullchain-bundle.pem
+  echo "New certificate generated; starting nginx"
+else
+  echo "Certificate exists; parameters unchanged; starting nginx"
+fi
