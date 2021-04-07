@@ -2,6 +2,18 @@
 
 # setting the symlink for key location
 rm -rf /config/keys/letsencrypt
+
+if [ -z ${PROXY_LETSENCRYPT_ENABLED+x} ]; then
+    mkdir /config/keys/letsencrypt
+    cd /config/keys/letsencrypt
+    openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
+        -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=localhost" \
+        -keyout privkey.pem -out fullchain.pem
+
+   echo "New self-signed certificate generated; starting openresty"
+   exit 0
+fi
+
 ln -s /etc/letsencrypt/live/"$PROXY_LETSENCRYPT_DOMAIN" /config/keys/letsencrypt
 
 ACMESERVER="https://acme-v02.api.letsencrypt.org/directory"
