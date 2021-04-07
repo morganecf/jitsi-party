@@ -120,6 +120,7 @@ services:
             context: ./prosody
             cache_from:
                 - cabinweekend/jitsi-party-prosody:latest
+                - jitsi/base
             args:
                 - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-prosody
