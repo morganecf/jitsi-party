@@ -30,7 +30,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     python3 \
     python3-pip
 
-pip3 install awscliv2
-
 cat extra_keys >> ~/.ssh/authorized_keys
 echo 'PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
+
+pip3 install awscliv2
