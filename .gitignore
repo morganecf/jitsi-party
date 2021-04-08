@@ -18,6 +18,9 @@ app/email_config.sh
 app/config/overrides
 app/client/styles/themes/_active.scss
 
+# Node Modules
+app/client/node_modules/
+
 # Flask
 .DS_Store
 .env

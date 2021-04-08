@@ -18,6 +18,7 @@ enum RoomType {
     IMAGEMAP = 4;
     ART = 5;
     REDIRECT = 6;
+    CHATSTREAM = 7;
 }
 
 message Room {
@@ -93,6 +94,11 @@ message Room {
     // The page to redirect to
     // Required for redirect rooms.
     string route = 16;
+
+    // CHATSTREAM ROOMS ONLY
+    // Options related to the bosh service
+    // Required for chat streaming rooms.
+    string boshUrl = 17;
 }
 
 message NavDirections {

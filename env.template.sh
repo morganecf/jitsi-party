@@ -54,8 +54,8 @@ HTTPS_PORT=7443
 TZ=America/Los_Angeles
 
 
-BRIDGE_CHANNEL = datachannel
-ENABLE_XMPP_WEBSOCKET = false
+BRIDGE_CHANNEL=datachannel
+ENABLE_XMPP_WEBSOCKET=false
 
 
 # Public URL for the web service

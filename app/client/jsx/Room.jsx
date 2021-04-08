@@ -17,6 +17,7 @@ import { PokeNotification } from './Poke.jsx'
 import { WebSocketApi } from './WebAPI.jsx'
 import LocalStorage from './LocalStorage.jsx'
 import Config from './Config.jsx'
+import { ChatStreamRoom } from './ChatStreamRoom.jsx'
 
 class Room extends Component {
     /*
@@ -38,6 +39,7 @@ class Room extends Component {
         this.roomTypesWithMap = {
             JITSI: true,
             IFRAME: true,
+            CHATSTREAM: true,
             CONTENT: true,
             IMAGEMAP: true
         }
@@ -46,6 +48,7 @@ class Room extends Component {
         this.roomTypesWithDoors = {
             JITSI: true,
             IFRAME: true,
+            CHATSTREAM: true,
             IMAGEMAP: true
         }
 
@@ -85,10 +88,14 @@ class Room extends Component {
             hideVideo: roomData.hideVideo,
             disableSharing: roomData.type === 'IFRAME'
         }
+
+        const combo = { ...roomData, ...jitsiData };
+
         return {
             ART: <ArtRoom jitsiData={jitsiData} art={roomData.art}></ArtRoom>,
             JITSI: <JitsiVideo jitsiData={jitsiData}></JitsiVideo>,
             IFRAME: <IFrameRoom jitsiData={jitsiData} iframeOptions={roomData.iframeOptions}></IFrameRoom>,
+            CHATSTREAM: <ChatStreamRoom {...combo}></ChatStreamRoom>,
             ADVENTURE: <Adventure options={roomData} onClick={this.onAdventureClick.bind(this)}></Adventure>,
             IMAGEMAP: <ImageMapRoom imageMapOptions={roomData.imageMapOptions}></ImageMapRoom>
         }[roomData.type]
