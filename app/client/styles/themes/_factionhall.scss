@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+$accent-font: 'Philosopher';
+
+$dark-red: #8B0000;
+$dark-lavender: #847c9c;
+$fuckyou-turquoise: #00FFE2;
+$light-blue: #B1EDFC;
+$matte-purple: #262b56;
+$black: #241f20;
+$white: #fff;
+$grey: #595959;
+$dark-grey: #404040;
+$matte-blue: #294b7f;
+$light-grey: #ece9e9;
+
+// Chat color variables
+$chat-separator-bars: $matte-blue; // separator bars at the top of the chat area
+$chat-separator-text: $matte-blue; // text between the separators
+$chat-separator-text-bg: $fuckyou-turquoise; // background for the text area
+$chat-content: $fuckyou-turquoise; // the main chat area on the left
+$chat-notification-bg: $fuckyou-turquoise; // entry/exit notification background
+$chat-notification-text: $matte-blue; // entry/exit notification text color
+$chat-msg-author: $matte-blue; // color of user name
+$chat-msg-time: $matte-blue; // color of the chat time
+$chat-msg-text: $matte-blue; // color the chat text
+$chat-msg-menu: $matte-blue; // color the hamburgar menu to the right of the chat message
+$chat-msg-menu-bg: $fuckyou-turquoise; // background color of the menu dropdown
+$chat-msg-menu-items: $matte-blue; // color for the menu items
+$toolbox-bg: $fuckyou-turquoise; // background color for the location of the emoji picker icon
+$toolbox-emoji-color: $matte-blue; // the color for the emoji icon
+$emoji-header-footer: $matte-blue; // color for the header and footer inside the emoji popup
+$emoji-category-heading: $matte-blue; // color for the emoji heading text in the popup
+$emoji-popup-bg: $matte-purple; // background color of the emoji popup 
+$emoji-separator: $fuckyou-turquoise; // color for th emoji separator bar
+$message-area-bg: $fuckyou-turquoise; // background for the message text area
+$message-input-top-border: $matte-blue; // the border at the top of the message area
+$message-focus: $matte-blue; // the color of the message area border when focused
+$message-text: $matte-blue; // the text color in the message area
+$chat-participants: $fuckyou-turquoise; // the participants sidebar on the right of the chat
+$chat-participants-resize: $matte-blue; // color of the participants resize handle
+$participants-title: $matte-blue; // the title of the participants list
+$participants-name: $matte-blue; // the name of each participant in the list
+
+// Hexing notifications & icon
+$accent-color: $fuckyou-turquoise;
+
+$avatar-highlight-color: $matte-blue;
+
+$background-color: $dark-red;
+$background-color-dark: $dark-red;
+$door-background: darken($dark-lavender, 20%);
+$room-content-background-color: $matte-purple;
+$modal-background-color: $dark-red;
+
+$text-color: $white;
+$link-color: $fuckyou-turquoise;
+
+$disabled-text-color: color("grey-700");
+$disabled-background-color: color("grey-500");
+
+$map-header-color: $light-grey;
+$map-header-background-color: $matte-purple;
+
+$map-room-fill: $dark-lavender;
+$map-unvisited-color: $dark-grey;
+$map-room-stroke-color: $dark-red;
+$map-highlight-stroke: $dark-red;
+$map-highlight-fill: $matte-purple;
+
+$events-header-color: $black;
+$events-header-background-color: $dark-lavender;
+$events-name-color: $white;
+$events-description-color: $light-grey;
+$events-coordinates-color: $white;
+$events-item-background-color: $matte-purple;
+
+$email-form-color: $grey;
+$email-description-color: $white;
+
+$poke-color: $light-blue;
+$poke-background-color: $black;
+
+$button-background-color: $dark-lavender;
+$button-border-color: $dark-lavender;
+$button-text-color: $white;
+$button-border-radius: 2px;
+
+$opaque-button-background-color: $dark-red;
+$opaque-button-text-color: white;
+$opaque-button-border-color: $dark-red;
+
+$focused-button-background-color: $matte-purple;
+$focused-button-text-color: $white;
+$focused-button-border-color: $matte-purple;
+
+$name-input-border-color: white;
+$name-input-background-color: white;
+
+$modal-overlay-color: rgba(129, 62, 62, 0.25);
+
+$art-image-border-color: color("grey-50"); //white
+
+body {
+  font-family: $accent-font !important;
+}
+
+.vestibule .header {
+  margin-bottom: 0 !important;
+}
+
+.custom-login-description {
+  text-align: center;
+  font-size: smaller;
+  opacity: 0.8;
+}
+
+// .tst,
+// .room-header h2,
+// #map-info .room-name,
+// .events-view .events-header,
+// .events-view .event-list .event-info .event-name,
+// .navigation-container .settings-container .poke-button-container .poke-options .poke-header {
+//     font-family: $accent-font;
+// }
+
+.room .room-content {
+  max-height: 120px;
+  padding: 0.5em 50px;
+}
