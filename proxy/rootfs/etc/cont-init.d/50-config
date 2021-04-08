@@ -28,7 +28,6 @@ if [ ! -f "/config/keys/letsencrypt/fullchain.pem" ]; then
     -m cabinweekendparty@gmail.com \
     --no-eff-email \
     --agree-tos \
-    -d "*.${PROXY_LETSENCRYPT_DOMAIN}" \
     -d "${PROXY_LETSENCRYPT_DOMAIN}" \
     -d "hack.${PROXY_LETSENCRYPT_DOMAIN}"
   if [ -d /config/keys/letsencrypt ]; then
