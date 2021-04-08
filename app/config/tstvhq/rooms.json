@@ -8,6 +8,9 @@
         "muteRoom": true,
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfstormauditorium.png",
+        "iframeOptions": {
+        "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+        },
         "description": "More like a light shower, really.",
         "directions": {
             "east": "foyer",
