@@ -26,7 +26,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     containerd.io \
     docker-ce=$DOCKER_VERSION \
     docker-ce-cli=$DOCKER_VERSION \
-    docker-compose=1.21.0-3
+    docker-compose=1.21.0-3 \
+    python3 \
+    python3-pip
+
+pip3 install awscliv2
 
 cat extra_keys >> ~/.ssh/authorized_keys
-
+echo 'PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
