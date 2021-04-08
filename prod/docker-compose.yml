@@ -27,8 +27,6 @@ services:
     web-worker_1:
         image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
         restart: unless-stopped
-        ports:
-            - 7071:80
         environment:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
@@ -42,8 +40,84 @@ services:
     web-worker_2:
         image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
         restart: unless-stopped
-        ports:
-            - 7072:80
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_3:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_4:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_5:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_6:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_7:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_8:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
         environment:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
