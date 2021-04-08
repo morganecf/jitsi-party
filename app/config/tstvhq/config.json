@@ -1,23 +1,23 @@
 {
     "debug": true,
-    "page_title": "TST VHQ",
+    "page_title": "Faction Hall",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "startRoom": "cemetery",
-    "videoDisplayName": "Satanist",
+    "videoDisplayName": "Guest",
     "moderation": {
         "moderatorEmails": [
-            "vhq@thesatanictemple.com"
+            "support@thesatanic.estate"
         ],
         "moderatorNumber": "+14802941991",
-        "formDescription": "Someone harshing your vibe? Need a moderator to look into it? We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+        "formDescription": "Need a moderator to look into some unsavory behavior? Let us know what's going on, when, where and who is involved. We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
         "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-welcome.png",
         "enterSpaceButtonText": "Enter",
-        "avatarSelectionText": "Select your sigil",
-        "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
+        "avatarSelectionText": "Select your symbol",
+        "headerHtml": "<div class='tst'><p>Welcome to</p><h1>The World Congress on Moral Panics Temple Virtual Headquarters</h1>"
     },
     "avatars": [{
         "images": [
@@ -58,7 +58,7 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "🖤  {count} at VHQ"
+                "text": "🖤  {count} at Faction Hall"
             },
             "numberInHallways": {
                 "display": true,
