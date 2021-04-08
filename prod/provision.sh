@@ -28,7 +28,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     docker-ce-cli=$DOCKER_VERSION \
     docker-compose=1.21.0-3 \
     python3 \
-    python3-pip
+    python3-pip \
+    jq
 
 cat extra_keys >> ~/.ssh/authorized_keys
 echo 'PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
