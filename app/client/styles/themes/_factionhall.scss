@@ -1,104 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 $accent-font: 'Philosopher';
 
-$dark-red: #8B0000;
-$dark-lavender: #847c9c;
-$fuckyou-turquoise: #00FFE2;
-$light-blue: #B1EDFC;
-$matte-purple: #262b56;
-$black: #241f20;
-$white: #fff;
+$dark-grey: #333232;
+$bisected-hall: #011d1f;
+$removed-tile: #333232;
+$offwhite: #F0F0F0;
 $grey: #595959;
-$dark-grey: #404040;
-$matte-blue: #294b7f;
-$light-grey: #ece9e9;
+$medical-teal: #0f666b;
+$dirty-gown: #7c9c94;
 
 // Chat color variables
-$chat-separator-bars: $matte-blue; // separator bars at the top of the chat area
-$chat-separator-text: $matte-blue; // text between the separators
-$chat-separator-text-bg: $fuckyou-turquoise; // background for the text area
-$chat-content: $fuckyou-turquoise; // the main chat area on the left
-$chat-notification-bg: $fuckyou-turquoise; // entry/exit notification background
-$chat-notification-text: $matte-blue; // entry/exit notification text color
-$chat-msg-author: $matte-blue; // color of user name
-$chat-msg-time: $matte-blue; // color of the chat time
-$chat-msg-text: $matte-blue; // color the chat text
-$chat-msg-menu: $matte-blue; // color the hamburgar menu to the right of the chat message
-$chat-msg-menu-bg: $fuckyou-turquoise; // background color of the menu dropdown
-$chat-msg-menu-items: $matte-blue; // color for the menu items
-$toolbox-bg: $fuckyou-turquoise; // background color for the location of the emoji picker icon
-$toolbox-emoji-color: $matte-blue; // the color for the emoji icon
-$emoji-header-footer: $matte-blue; // color for the header and footer inside the emoji popup
-$emoji-category-heading: $matte-blue; // color for the emoji heading text in the popup
-$emoji-popup-bg: $matte-purple; // background color of the emoji popup 
-$emoji-separator: $fuckyou-turquoise; // color for th emoji separator bar
-$message-area-bg: $fuckyou-turquoise; // background for the message text area
-$message-input-top-border: $matte-blue; // the border at the top of the message area
-$message-focus: $matte-blue; // the color of the message area border when focused
-$message-text: $matte-blue; // the text color in the message area
-$chat-participants: $fuckyou-turquoise; // the participants sidebar on the right of the chat
-$chat-participants-resize: $matte-blue; // color of the participants resize handle
-$participants-title: $matte-blue; // the title of the participants list
-$participants-name: $matte-blue; // the name of each participant in the list
+$chat-separator-bars: $medical-teal; // separator bars at the top of the chat area
+$chat-separator-text: $dirty-gown; // text between the separators
+$chat-separator-text-bg: $dark-grey; // background for the text area
+$chat-content: $dark-grey; // the main chat area on the left
+$chat-notification-bg: $dark-grey; // entry/exit notification background
+$chat-notification-text: $offwhite; // entry/exit notification text color
+$chat-msg-author: $dirty-gown; // color of user name
+$chat-msg-time: $dirty-gown; // color of the chat time
+$chat-msg-text: $offwhite; // color the chat text
+$chat-msg-menu: $dark-grey; // color the hamburgar menu to the right of the chat message
+$chat-msg-menu-bg: $dark-grey; // background color of the menu dropdown
+$chat-msg-menu-items: $offwhite; // color for the menu items
+$toolbox-bg: $medical-teal; // background color for the location of the emoji picker icon
+$toolbox-emoji-color: $dark-grey; // the color for the emoji icon
+$emoji-header-footer: $dark-grey; // color for the header and footer inside the emoji popup
+$emoji-category-heading: $dark-grey; // color for the emoji heading text in the popup
+$emoji-popup-bg: $dark-grey; // background color of the emoji popup 
+$emoji-separator: $dark-grey; // color for th emoji separator bar
+$message-area-bg: $dark-grey; // background for the message text area
+$message-input-top-border: $medical-teal; // the border at the top of the message area
+$message-focus: $removed-tile; // the color of the message area border when focused
+$message-text: $offwhite; // the text color in the message area
+$chat-participants: $dark-grey; // the participants sidebar on the right of the chat
+$chat-participants-resize: $offwhite; // color of the participants resize handle
+$participants-title: $dirty-gown; // the title of the participants list
+$participants-name: $dirty-gown; // the name of each participant in the list
 
 // Hexing notifications & icon
-$accent-color: $fuckyou-turquoise;
+$accent-color: $medical-teal;
+$avatar-highlight-color: $medical-teal;
 
-$avatar-highlight-color: $matte-blue;
+// House decor
+$background-color: $dark-grey;
+$background-color-dark: $dark-grey;
+$door-background: darken($removed-tile, 10%);
+$room-content-background-color: $bisected-hall;
+$modal-background-color: $dark-grey;
 
-$background-color: $dark-red;
-$background-color-dark: $dark-red;
-$door-background: darken($dark-lavender, 20%);
-$room-content-background-color: $matte-purple;
-$modal-background-color: $dark-red;
-
-$text-color: $white;
-$link-color: $fuckyou-turquoise;
+$text-color: $offwhite;
+$link-color: $medical-teal;
 
 $disabled-text-color: color("grey-700");
 $disabled-background-color: color("grey-500");
 
-$map-header-color: $light-grey;
-$map-header-background-color: $matte-purple;
+$map-header-color: $dirty-gown;
+$map-header-background-color: $dark-grey;
 
-$map-room-fill: $dark-lavender;
+$map-room-fill: $dark-grey;
 $map-unvisited-color: $dark-grey;
-$map-room-stroke-color: $dark-red;
-$map-highlight-stroke: $dark-red;
-$map-highlight-fill: $matte-purple;
+$map-room-stroke-color: $dirty-gown;
+$map-highlight-stroke: $dirty-gown;
+$map-highlight-fill: $dirty-gown;
 
-$events-header-color: $black;
-$events-header-background-color: $dark-lavender;
-$events-name-color: $white;
-$events-description-color: $light-grey;
-$events-coordinates-color: $white;
-$events-item-background-color: $matte-purple;
+$events-header-color: $offwhite;
+$events-header-background-color: $dark-grey;
+$events-name-color: $offwhite;
+$events-description-color: $dirty-gown;
+$events-coordinates-color: $dirty-gown;
+$events-item-background-color: $dark-grey;
 
-$email-form-color: $grey;
-$email-description-color: $white;
+$email-form-color: $dark-grey;
+$email-description-color: $offwhite;
 
-$poke-color: $light-blue;
-$poke-background-color: $black;
+$poke-color: $dirty-gown;
+$poke-background-color: $dark-grey;
 
-$button-background-color: $dark-lavender;
-$button-border-color: $dark-lavender;
-$button-text-color: $white;
+$button-background-color: $dark-grey;
+$button-border-color: $dark-grey;
+$button-text-color: $offwhite;
 $button-border-radius: 2px;
 
-$opaque-button-background-color: $dark-red;
-$opaque-button-text-color: white;
-$opaque-button-border-color: $dark-red;
+$opaque-button-background-color: $dark-grey;
+$opaque-button-text-color: $offwhite;
+$opaque-button-border-color: $medical-teal;
 
-$focused-button-background-color: $matte-purple;
-$focused-button-text-color: $white;
-$focused-button-border-color: $matte-purple;
+$focused-button-background-color: $dark-grey;
+$focused-button-text-color: $offwhite;
+$focused-button-border-color: $medical-teal;
 
-$name-input-border-color: white;
-$name-input-background-color: white;
+$name-input-border-color: $offwhite;
+$name-input-background-color: $offwhite;
 
-$modal-overlay-color: rgba(129, 62, 62, 0.25);
+$modal-overlay-color: rgba(66, 66, 66, 0.25);
 
-$art-image-border-color: color("grey-50"); //white
+$art-image-border-color: color("grey-50"); //offwhite
 
 body {
   font-family: $accent-font !important;
