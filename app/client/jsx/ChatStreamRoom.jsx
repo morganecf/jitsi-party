@@ -14,7 +14,6 @@ import Config from "./Config.jsx";
  */
 export const ChatStreamRoom = ({
   id: roomId,
-  name: roomName,
   displayName,
   iframeOptions: { src },
 }) => {
@@ -48,6 +47,13 @@ export const ChatStreamRoom = ({
       singleton: true,
       hide_offline_users: true,
       clear_cache_on_logout: true,
+      time_format: "hh:mm a",
+      visible_toolbar_buttons: {
+        call: false,
+        spoiler: false,
+        emoji: true,
+        toggle_occupants: false,
+      },
       whitelisted_plugins: ["jitsi-plugin"],
       view_mode: "embedded",
     });
@@ -55,12 +61,11 @@ export const ChatStreamRoom = ({
     // use MutationObserver to restucture the chatbox
     const observer = new MutationObserver((muts) => {
       if (document.querySelector(".chatbox-title__buttons") !== null) {
-        const title = document.querySelector(".chatbox-title__text");
-        const dd = document.querySelector(".chatbox-title__buttons");
+        document.querySelector(".chat-head").remove();
+      }
 
-        title.innerHTML = roomName;
-        dd.remove();
-
+      if (document.querySelector(".send-button") !== null) {
+        document.querySelector(".send-button").remove();
         observer.disconnect();
       }
     });

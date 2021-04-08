@@ -20,10 +20,6 @@ $mobile_portrait_length: 480px !default;
     background-color: $background-color !important;
   }
 
-  .chat-textarea:focus {
-    outline-color: $background-color !important;
-  }
-
   .occupants-heading {
     color: $background-color !important;
   }
@@ -37,24 +33,122 @@ $mobile_portrait_length: 480px !default;
   }
 
   .chatroom {
-    converse-chat-toolbar {
-      border-top: 2px solid $background-color !important;
+    // color themes
+    .separator {
+      border-bottom: 2px solid $chat-separator-bars !important;
+    }
 
-      button:focus {
-        outline-color: $background-color !important;
-      }
+    .separator-text {
+      color: $chat-separator-text !important;
+      background-color: $chat-separator-text-bg !important;
+    }
 
+    .chat-content {
+      background-color: $chat-content;
+    }
+
+    .chat-msg__author {
+      color: $chat-msg-author !important;
+    }
+
+    .chat-msg__time {
+      color: $chat-msg-time !important;
+    }
+
+    .chat-msg__text {
+      color: $chat-msg-text !important;
+    }
+
+    .fa-bars {
+      color: $chat-msg-menu !important
+    }
+
+    .dropdown-menu {
+      background-color: $chat-msg-menu-bg !important;
+    }
+
+    .chat-msg__action {
+      color: $chat-msg-menu-items !important;
       svg {
-        fill: $background-color !important;
+        fill: $chat-msg-menu-items !important;
       }
     }
-  }
 
-  .separator {
-    border-bottom: 2px solid $background-color !important;
-  }
+    .chat-content__notifications {
+      background-color: $chat-notification-bg  !important;
+      color: $chat-notification-text  !important;
+    }
 
-  .send-button {
-    background-color: $background-color !important;
+    converse-muc-sidebar {
+      background-color: $chat-participants !important;
+      border-left-color: $chat-participants-resize !important;
+    }
+
+    .occupants-heading {
+      color: $participants-title !important;
+    }
+
+    .occupant-nick {
+      color: $participants-name !important;
+    }
+
+    .suggestion-box {
+      border-top: 1px solid $message-input-top-border !important;
+    }
+
+    .chat-textarea {
+      background-color: $message-area-bg !important;
+      margin-bottom: -5px !important;
+      color: $message-text !important;
+      &::placeholder {
+        color: lighten($message-text, 20%) !important;
+      }
+      &:focus {
+        outline: 0px !important;
+        border: 2px solid $message-focus !important;
+        border-bottom: 3px solid $message-focus !important;
+      }
+    }
+
+    .sendXMPPMessage {
+      background-color: $message-area-bg !important;
+    }
+
+    .emoji-picker__header,
+    .emoji-skintone-picker {
+      background-color: $emoji-header-footer !important;
+    }
+
+    .emoji-picker {
+      background-color: $emoji-separator !important;
+    }
+
+    .emoji-picker__lists {
+      background-color: $emoji-popup-bg !important;
+    }
+
+    .emoji-category__heading {
+      color: $emoji-category-heading !important;
+    }
+
+    .toggle-emojis:focus {
+      outline: 0px !important;
+    }
+
+    // other adjustments
+    .chat-content__help {
+      border: 0px !important;
+    }
+
+    converse-chat-toolbar {
+      border-top: 0px !important;
+      background-color: $toolbox-bg !important;
+
+      svg {
+        fill: $toolbox-emoji-color !important;
+      }  .separator {
+        border-bottom: 2px solid $toolbox-bg !important;
+      }
+    }
   }
 }
