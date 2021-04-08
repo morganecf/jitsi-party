@@ -25,7 +25,7 @@ services:
             - web-worker_2
 
     web-worker_1:
-        image: cabinweekend/jitsi-party-web-$PARTY_CONFIG-$PARTY_THEME-latest
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
         restart: unless-stopped
         ports:
             - 7071:80
@@ -40,7 +40,7 @@ services:
             party.jitsi:
 
     web-worker_2:
-        image: cabinweekend/jitsi-party-web-$PARTY_CONFIG-$PARTY_THEME-latest
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
         restart: unless-stopped
         ports:
             - 7072:80
