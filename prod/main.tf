@@ -162,10 +162,57 @@ resource "aws_eip" "main" {
     vpc = true
 }
 
+resource "aws_iam_instance_profile" "main" {
+    name = "jitsi_party"
+    role = aws_iam_role.main.name
+}
+
+resource "aws_iam_role" "main" {
+    name = "jitsi-party"
+    path = "/"
+
+    assume_role_policy = jsonencode({
+        Version = "2012-10-17"
+        Statement = [
+            {
+                Action = "sts:AssumeRole"
+                Effect = "Allow"
+                Sid = ""
+                Principal = {
+                    Service = "ec2.amazonaws.com"
+                }
+            },
+        ]
+    })
+
+    inline_policy {
+        name = "AccessPartySecrets"
+
+        policy = jsonencode({
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "secretsmanager:GetResourcePolicy",
+                        "secretsmanager:GetSecretValue",
+                        "secretsmanager:DescribeSecret",
+                        "secretsmanager:ListSecretVersionIds"
+                    ],
+                    "Resource": [
+                        "arn:aws:secretsmanager:us-east-2:241532693788:secret:tst/jitsi-party/proxy-vars-9UVtXg"
+                    ]
+                }
+            ]
+        })
+  }
+}
+
 resource "aws_instance" "main" {
     count = var.vhq_enabled ? 1 : 0
     ami = data.aws_ami.jitsi-party.id
     instance_type = "t3.medium"
+    iam_instance_profile = aws_iam_instance_profile.main.name
     vpc_security_group_ids = [aws_security_group.main.id]
     key_name = aws_key_pair.main.key_name
     user_data = file("first_run.sh")
