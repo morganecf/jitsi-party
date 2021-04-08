@@ -98,9 +98,8 @@ services:
             - JIBRI_RECORDER_USER
             - JIBRI_RECORDER_PASSWORD
             - ENABLE_RECORDING
-            - BRIDGE_CHANNEL
+            - BRIDGE_CHANNEL=false
             - ENABLE_XMPP_WEBSOCKET
-            - PUBLIC_URL=$PROXY_LETSENCRYPT_DOMAIN
         networks:
             party.jitsi:
                 aliases:
