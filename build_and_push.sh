@@ -19,7 +19,9 @@ docker-compose build
 docker-compose push
 
 docker tag $REPO_BASE-web:latest $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-$GIT_COMMIT
+docker tag $REPO_BASE-web:latest $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-latest
 docker push $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-$GIT_COMMIT
+docker push $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-latest
 
 docker tag $REPO_BASE-proxy:latest $REPO_BASE-proxy:$GIT_COMMIT
 docker push $REPO_BASE-proxy:$GIT_COMMIT
