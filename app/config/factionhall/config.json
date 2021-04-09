@@ -3,7 +3,7 @@
     "page_title": "Faction Hall",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
-    "startRoom": "cemetery",
+    "startRoom": "foyer",
     "videoDisplayName": "Guest",
     "moderation": {
         "moderatorEmails": [
