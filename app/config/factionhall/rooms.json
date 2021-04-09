@@ -121,8 +121,9 @@
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfcometpizzaparlor.png",
         "description": "What do you mean you don't sell pizza here?",
         "directions": {
-            "east": "foyer",
-            "west": "medium-lounge"
+            "north": "foyer",
+            "west": "medium-lounge",
+            "east": "lounge"
         },
         "doorTint": "#000000",
         "map": {
