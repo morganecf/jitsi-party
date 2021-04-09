@@ -20,9 +20,6 @@ services:
             - /config/keys
         networks:
             party.jitsi:
-        depends_on:
-            - web-worker_1
-            - web-worker_2
 
     web-worker_1:
         image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
