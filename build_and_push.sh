@@ -15,24 +15,24 @@ GIT_COMMIT=`git rev-parse HEAD`
 REPO_BASE="cabinweekend/jitsi-party"
 
 export DOCKER_BUILDKIT=1
-docker-compose build
-docker-compose push
+docker-compose build proxy
+docker-compose push proxy
 
 docker tag $REPO_BASE-web:latest $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-$GIT_COMMIT
 docker tag $REPO_BASE-web:latest $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-latest
 docker push $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-$GIT_COMMIT
 docker push $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-latest
 
-docker tag $REPO_BASE-proxy:latest $REPO_BASE-proxy:$GIT_COMMIT
-docker push $REPO_BASE-proxy:$GIT_COMMIT
-
-docker tag $REPO_BASE-prosody:latest $REPO_BASE-prosody:$GIT_COMMIT
-docker push $REPO_BASE-prosody:$GIT_COMMIT
-
-docker tag $REPO_BASE-node:latest $REPO_BASE-node:$GIT_COMMIT
-docker push $REPO_BASE-node:$GIT_COMMIT
-
-docker tag $REPO_BASE-meet:latest $REPO_BASE-meet:$GIT_COMMIT
-docker push $REPO_BASE-meet:$GIT_COMMIT
+#docker tag $REPO_BASE-proxy:latest $REPO_BASE-proxy:$GIT_COMMIT
+#docker push $REPO_BASE-proxy:$GIT_COMMIT
+#
+#docker tag $REPO_BASE-prosody:latest $REPO_BASE-prosody:$GIT_COMMIT
+#docker push $REPO_BASE-prosody:$GIT_COMMIT
+#
+#docker tag $REPO_BASE-node:latest $REPO_BASE-node:$GIT_COMMIT
+#docker push $REPO_BASE-node:$GIT_COMMIT
+#
+#docker tag $REPO_BASE-meet:latest $REPO_BASE-meet:$GIT_COMMIT
+#docker push $REPO_BASE-meet:$GIT_COMMIT
 
 
