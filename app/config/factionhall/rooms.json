@@ -2,7 +2,7 @@
     "rooms": [{
         "id": "auditorium",
         "name": "The Storm Auditorium",
-        "type": "Chatstream",
+        "type": "CHATSTREAM",
         "capacity": 500,
         "doorTint": "#000000",
         "muteRoom": true,
@@ -30,7 +30,7 @@
     {
         "id": "jude-mirra",
         "name": "Jude Mirra Hall",
-        "type": "Chatstream",
+        "type": "CHATSTREAM",
         "capacity": 250,
         "doorTint": "#000000",
         "muteRoom": true,
@@ -58,7 +58,7 @@
     {
         "id": "michelle-tallmadge",
         "name": "Michelle Tallmadge Hall",
-        "type": "Chatstream",
+        "type": "CHATSTREAM",
         "capacity": 100,
         "doorTint": "#000000",
         "muteRoom": true,
@@ -132,7 +132,6 @@
                 "east": 27,
                 "west": 27
             }
-​
         }
     },
     {
@@ -239,8 +238,8 @@
         "id": "mcmartin",
         "name": "McMartin Chamber",
         "type": "JITSI",
-        "muteRoom": "false",
-        "hideVideo": "false",
+        "muteRoom": false,
+        "hideVideo": false,
         "capacity": 5,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmcmartinchamber.jpeg",
         "description": "Tunnels are closed for rennovation",
