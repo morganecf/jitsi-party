@@ -299,7 +299,7 @@
             "width": 2,
             "height": 5,
             "doors": {
-                "west": 23
+                "west": 27
             }
         },
         "doorTint": "#000000"
