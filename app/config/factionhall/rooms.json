@@ -70,7 +70,8 @@
         "description": "Please pass the decanter of ritual chartreuse.",
         "directions": {
             "west": "jude-mirra",
-            "south": "foyer"
+            "south": "foyer",
+            "east": "mkultra"
         },
         "map": {
             "x": 8,
@@ -98,7 +99,7 @@
                 "src": "https://youtube.com/embed/y3Secr0FuPY"
         },
         "directions": {
-            "west": "NS-hallway-2"
+            "west": "michelle-tallmadge"
         },
         "map": {
             "x": 17,
