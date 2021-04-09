@@ -1,6 +1,6 @@
 # Stolen from https://github.com/khvzak/docker-openresty-s6
 
-FROM alpine:3.7
+FROM alpine:3.13.4
 
 # Docker Build Arguments
 ARG S6_OVERLAY_VERSION="1.21.4.0"
@@ -49,23 +49,35 @@ ARG _RESTY_CONFIG_DEPS="--with-openssl=/tmp/openssl-${RESTY_OPENSSL_VERSION} --w
 # 3) Build OpenResty
 # 4) Cleanup
 
+ENV S6_KEEP_ENV=1
+
 RUN apk add --no-cache --virtual .build-deps \
         build-base \
         curl \
         gd-dev \
         geoip-dev \
         libxslt-dev \
+        libffi-dev \
         linux-headers \
         make \
         perl-dev \
+        python3-dev \
         readline-dev \
         zlib-dev \
     && apk add --no-cache \
         gd \
-        geoip \
         libgcc \
         libxslt \
         zlib \
+        perl \
+        python3 \
+        py3-cryptography \
+        py3-pip \
+    && curl -L -s https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-amd64.tar.gz | tar xvzf - -C / \
+    && pip3 install -U pip \
+    && pip3 install -U \
+        certbot \
+        certbot-dns-route53 \
     && cd /tmp \
     && curl -fSL https://www.openssl.org/source/openssl-${RESTY_OPENSSL_VERSION}.tar.gz -o openssl-${RESTY_OPENSSL_VERSION}.tar.gz \
     && tar xzf openssl-${RESTY_OPENSSL_VERSION}.tar.gz \
@@ -79,38 +91,23 @@ RUN apk add --no-cache --virtual .build-deps \
     && make -j${RESTY_J} install \
     && cd /tmp \
     && rm -rf \
-        openssl-${RESTY_OPENSSL_VERSION} \
-        openssl-${RESTY_OPENSSL_VERSION}.tar.gz \
-        openresty-${RESTY_VERSION}.tar.gz openresty-${RESTY_VERSION} \
-        pcre-${RESTY_PCRE_VERSION}.tar.gz pcre-${RESTY_PCRE_VERSION} \
-    && apk del .build-deps \
-    && ln -sf /dev/stdout /usr/local/openresty/nginx/logs/access.log \
-    && ln -sf /dev/stderr /usr/local/openresty/nginx/logs/error.log
+       openssl-${RESTY_OPENSSL_VERSION} \
+       openssl-${RESTY_OPENSSL_VERSION}.tar.gz \
+       openresty-${RESTY_VERSION}.tar.gz openresty-${RESTY_VERSION} \
+       pcre-${RESTY_PCRE_VERSION}.tar.gz pcre-${RESTY_PCRE_VERSION}
 
 # Add additional binaries into PATH for convenience
 ENV PATH=$PATH:/usr/local/openresty/luajit/bin:/usr/local/openresty/nginx/sbin:/usr/local/openresty/bin
 
+RUN opm install zmartzone/lua-resty-openidc \
+    && apk del .build-deps \
+    && ln -sf /dev/stdout /usr/local/openresty/nginx/logs/access.log \
+    && ln -sf /dev/stderr /usr/local/openresty/nginx/logs/error.log \
+    && rm -rf /var/cache/apk/*
 
-# Install s6-overlay
-
-ENV S6_KEEP_ENV=1
-
-RUN apk add --no-cache curl \
-    && curl -L -s https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-amd64.tar.gz | tar xvzf - -C /
-
-# Generate cert
-
-RUN apk add --no-cache openssl perl && \
-    rm -rf /var/cache/apk/*
-
-RUN openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
-    -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=localhost" \
-    -keyout /etc/ssl/private/localhost.key -out /etc/ssl/certs/localhost.crt
-
-RUN opm install zmartzone/lua-resty-openidc
+RUN apk add --no-cache bash openssl
 
 COPY rootfs /
 
 ENTRYPOINT ["/init"]
 CMD []
-

@@ -166,3 +166,8 @@ app/jitsi/schema/*pb2.py
 
 # VSCode
 *.code-workspace
+
+# Terraform
+**/*.terraform
+**/terraform.tfstate*
+**/.tfplan

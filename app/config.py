@@ -96,10 +96,12 @@ class Config:
 
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-    
+
     TWILIO_NUMBER = os.getenv('TWILIO_NUMBER')
     TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
     TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
+
+    SQLALCHEMY_DATABASE_URI = f'postgresql+psycopg2://{os.getenv("JITSI_PARTY_DB_USER")}:{os.getenv("JITSI_PARTY_DB_PASS")}@db:5432/{os.getenv("JITSI_PARTY_DB")}'
 
     @staticmethod
     def init_app(app):
@@ -151,12 +153,10 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
     CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(basecfgdir, 'development.json')] + Config.OVERRIDE_CONFIG_PATHS
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = f'postgresql+psycopg2://{os.getenv("JITSI_PARTY_DB_USER")}:{os.getenv("JITSI_PARTY_DB_PASS")}@db:5432/{os.getenv("JITSI_PARTY_DB")}'
     CONFIG_PATHS = Config.BASE_CONFIG_PATHS + [os.path.join(basecfgdir, 'production.json')] + Config.OVERRIDE_CONFIG_PATHS
 
 

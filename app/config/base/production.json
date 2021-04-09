@@ -2,5 +2,6 @@
     "debug": false,
     "noJitsiServerSSL": false,
     "overrideJitsiServerUrlWithWindowHost": true,
-    "numProxies": 1
+    "numProxies": 1,
+    "useLocalSessions": false
 }
