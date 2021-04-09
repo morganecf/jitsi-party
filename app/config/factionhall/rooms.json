@@ -101,7 +101,7 @@
         },
         "map": {
             "x": 17,
-            "y": 11,
+            "y": 3,
             "width": 2,
             "height": 4,
             "doors": {
@@ -229,7 +229,7 @@
             "height": 15,
             "doors": {
                 "west": 19,
-                "east": 27,
+                "east": 16,
                 "north": 14,
                 "south": 14
             }
