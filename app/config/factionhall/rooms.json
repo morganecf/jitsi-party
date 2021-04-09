@@ -295,7 +295,7 @@
         "description": "Drink it all in.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfAdrenochromeloungered.jpeg",
         "directions": {
-            "west": "foyer"
+            "west": "large-lounge"
         },
         "map": {
             "x": 16,
