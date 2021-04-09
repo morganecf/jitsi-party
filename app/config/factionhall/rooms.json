@@ -79,7 +79,8 @@
             "height": 8,
             "doors": {
                 "south": 14,
-                "west": 5
+                "west": 5,
+                "east": 3
             }
         }
     },
@@ -105,7 +106,7 @@
             "width": 2,
             "height": 4,
             "doors": {
-                "west": 17
+                "west": 3
             }
         }
     },
