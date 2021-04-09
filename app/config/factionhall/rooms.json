@@ -220,8 +220,8 @@
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfIlluminatedfoyer.jpeg",
         "description": "The entrance of a Virtual Conference Regarding Conspiracism and Pseudoscience in the Age of QAnon.",
         "directions": {
-            "north": "",
-            "east": "lounge",
+            "north": "michelle-tallmadge",
+            "east": "library",
             "west": "large-lounge"
         },
         "map": {
