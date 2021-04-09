@@ -130,7 +130,8 @@
             "height": 6,
             "doors": {
                 "east": 27,
-                "north": 14
+                "north": 14,
+                "west": 27
             }
         }
     },
@@ -293,7 +294,7 @@
             "west": "foyer"
         },
         "map": {
-            "x": 21,
+            "x": 16,
             "y": 21,
             "width": 2,
             "height": 5,
