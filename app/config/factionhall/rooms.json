@@ -222,6 +222,7 @@
         "description": "The entrance of a Virtual Conference Regarding Conspiracism and Pseudoscience in the Age of QAnon.",
         "directions": {
             "north": "michelle-tallmadge",
+            "east": "library",
             "south": "large-lounge",
             "west": "auditorium"
         },
@@ -232,6 +233,7 @@
             "height": 15,
             "doors": {
                 "west": 19,
+                "east": 16,
                 "north": 14,
                 "south": 14
             }
@@ -259,6 +261,26 @@
             "doors": {
                 "east": 27,
                 "west": 27
+            }
+        },
+        "doorTint": "#000000"
+    },
+    {
+        "id": "library",
+        "name": "Satanic Panic Archives",
+        "type": "IMAGEMAP",
+        "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
+        "directions": {
+            "west": "foyer"
+        },
+        "imageMapOptions": "satanic-library-map",
+        "map": {
+            "x": 18,
+            "y": 16,
+            "width": 2,
+            "height": 4,
+            "doors": {
+                "west": 16
             }
         },
         "doorTint": "#000000"
