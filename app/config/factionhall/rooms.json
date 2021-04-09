@@ -223,7 +223,8 @@
         "directions": {
             "north": "michelle-tallmadge",
             "east": "library",
-            "west": "large-lounge"
+            "south": "large-lounge",
+            "west": "auditorium"
         },
         "map": {
             "x": 12,
@@ -270,7 +271,7 @@
         "type": "IMAGEMAP",
         "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
         "directions": {
-            "west": "NS-hallway-2"
+            "west": "foyer"
         },
         "imageMapOptions": "satanic-library-map",
         "map": {
