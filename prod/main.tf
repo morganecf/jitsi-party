@@ -211,7 +211,7 @@ resource "aws_iam_role" "main" {
 resource "aws_instance" "main" {
     count = var.vhq_enabled ? 1 : 0
     ami = data.aws_ami.jitsi-party.id
-    instance_type = "t3.medium"
+    instance_type = "c5a.4xlarge"
     iam_instance_profile = aws_iam_instance_profile.main.name
     vpc_security_group_ids = [aws_security_group.main.id]
     key_name = aws_key_pair.main.key_name
