@@ -9,9 +9,9 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfstormauditorium.png",
         "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+        "src": "https://youtube.com/embed/7xJ2rw68e-Y"
         },
-        "description": "More like a light shower, really.",
+        "description": "Smells like q droppings.",
         "directions": {
             "east": "foyer",
             "north": "jude-mirra"
@@ -37,7 +37,7 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfjudemirrahall.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+            "src": "https://youtube.com/embed/pwP0zHMqVV8"
         },
         "description": "Pseudoscience Kills.",
         "directions": {
@@ -65,7 +65,7 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmichelletallmadgehall.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+            "src": "https://youtube.com/embed/9cnElOLbgCs"
         },
         "description": "Please pass the decanter of ritual chartreuse.",
         "directions": {
@@ -94,7 +94,7 @@
         "description": "Fly with the Monarchs",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmkultratheater.jpeg",
         "iframeOptions": {
-                "src": ""
+                "src": "https://youtube.com/embed/y3Secr0FuPY"
         },
         "directions": {
             "west": "NS-hallway-2"
