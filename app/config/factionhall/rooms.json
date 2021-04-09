@@ -126,11 +126,11 @@
         "map": {
             "x": 10,
             "y": 24,
-            "width": 2,
+            "width": 6,
             "height": 6,
             "doors": {
                 "east": 27,
-                "west": 27
+                "north": 14
             }
         }
     },
@@ -229,7 +229,8 @@
             "doors": {
                 "west": 19,
                 "east": 27,
-                "north": 14
+                "north": 14,
+                "south": 14
             }
         },
         "doorTint": "#000000"
