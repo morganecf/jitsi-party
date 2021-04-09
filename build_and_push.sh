@@ -15,8 +15,8 @@ GIT_COMMIT=`git rev-parse HEAD`
 REPO_BASE="cabinweekend/jitsi-party"
 
 export DOCKER_BUILDKIT=1
-docker-compose build proxy
-docker-compose push proxy
+docker-compose build web-worker_1
+docker-compose push web-worker_1
 
 docker tag $REPO_BASE-web:latest $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-$GIT_COMMIT
 docker tag $REPO_BASE-web:latest $REPO_BASE-web:$PARTY_CONFIG-$PARTY_THEME-latest
