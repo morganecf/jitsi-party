@@ -30,7 +30,7 @@
     {
         "id": "jude-mirra",
         "name": "Jude Mirra Hall",
-        "type": "CHATSTREAM",
+        "type": "IFRAME",
         "capacity": 250,
         "doorTint": "#000000",
         "muteRoom": true,
@@ -58,7 +58,7 @@
     {
         "id": "michelle-tallmadge",
         "name": "Michelle Tallmadge Hall",
-        "type": "CHATSTREAM",
+        "type": "IFRAME",
         "capacity": 100,
         "doorTint": "#000000",
         "muteRoom": true,
