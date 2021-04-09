@@ -148,12 +148,12 @@
         },
         "doorTint": "#000000",
         "map": {
-            "x": 5,
+            "x": 1,
             "y": 23,
             "width": 2,
             "height": 3,
             "doors": {
-                "south": 6
+                "south": 1
             }
         }
     },
@@ -172,13 +172,13 @@
             "east": "medium-lounge"
         },
         "map": {
-            "x": 5,
+            "x": 1,
             "y": 26,
             "width": 2,
             "height": 3,
             "doors": {
-                "north": 5,
-                "south": 5,
+                "north": 1,
+                "south": 1,
                 "east": 27
             }
         },
@@ -197,12 +197,12 @@
             "north": "small-2"
         },
         "map": {
-            "x": 5,
+            "x": 1,
             "y": 29,
             "width": 2,
             "height": 3,
             "doors": {
-                "north": 11
+                "north": 1
             }
         },
         "doorTint": "#000000"
@@ -235,7 +235,7 @@
         "doorTint": "#000000"
     },
     {
-        "id": "mcmartin",
+        "id": "medium-lounge",
         "name": "McMartin Chamber",
         "type": "JITSI",
         "muteRoom": false,
@@ -248,7 +248,7 @@
             "west": "small-2"
         },
         "map": {
-            "x": 6,
+            "x": 4,
             "y": 25,
             "width": 2,
             "height": 4,
