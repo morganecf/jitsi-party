@@ -2,7 +2,7 @@
     "rooms": [{
         "id": "auditorium",
         "name": "The Storm Auditorium",
-        "type": "CHATSTREAM",
+        "type": "IFRAME",
         "capacity": 500,
         "doorTint": "#000000",
         "muteRoom": true,
@@ -223,9 +223,9 @@
         },
         "map": {
             "x": 12,
-            "y": 21,
+            "y": 19,
             "width": 6,
-            "height": 5,
+            "height": 9,
             "doors": {
                 "west": 21,
                 "east": 27,
