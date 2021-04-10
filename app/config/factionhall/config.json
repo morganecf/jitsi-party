@@ -23,21 +23,21 @@
         "images": [
             "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF1.png",
             "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF2.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF3.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF3.png"
         ]
     },
     {
         "images": [
             "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF4.png",
             "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF5.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF6.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF6.png"
         ]
     },
     {
         "images": [
             "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF7.png",
             "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF8.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF9.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF9.png"
         ]
     }
 ],
