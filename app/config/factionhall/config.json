@@ -16,31 +16,28 @@
         "avatarSelectionEnabled": true,
         "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/welcomefaction.png",
         "enterSpaceButtonText": "Enter",
-        "avatarSelectionText": "Select your symbol",
+        "avatarSelectionText": "Identify your Cabal",
         "headerHtml": "<div class='tst'><p>Welcome to</p><h1>The World Congress on Moral Panics Temple Virtual Headquarters</h1>"
     },
     "avatars": [{
         "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF1.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF2.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF3.png"
         ]
     },
     {
         "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF4.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF5.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF6.png"
         ]
     },
     {
         "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF7.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF8.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF9.png"
         ]
     }
 ],
@@ -66,15 +63,11 @@
             },
             "numberInRooms": {
                 "display": false,
-                "text": "🖤 {count} exploring"
+                "text": "🖤 {count} learning"
             },
             "additionalStats": [{
                 "text": "🖤 {count} reading",
                 "match": ["library"]
-            },
-            {
-                "text": "🖤 {count} meeting animals",
-                "match": ["belfry", "den", "sleepingPorch"]
             }
         ]
         }
@@ -82,10 +75,10 @@
     "poke": {
         "text": "Implant a False Memory",
         "fontAwesomeIcon": "skull",
-        "fromText": "{user} has implanted a false memory",
-        "toText": "Grandma was a high priestess?!",
+        "fromText": "{user} has implanted a false memory!",
+        "toText": "You implanted a false memory!",
         "unlockText": "You have unlocked the ability to hex",
-        "selfPoke": "Curses!",
-        "unlockAfterMinutes": 0
+        "selfPoke": "Grandma was a High Priestess?!",
+        "unlockAfterMinutes": 5
     }
 }
