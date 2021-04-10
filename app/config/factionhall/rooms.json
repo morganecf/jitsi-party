@@ -2,14 +2,14 @@
     "rooms": [{
         "id": "auditorium",
         "name": "The Storm Auditorium",
-        "type": "IFRAME",
+        "type": "CHATSTREAM",
         "capacity": 500,
         "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfstormauditorium.png",
         "iframeOptions": {
-        "src": "https://youtube.com/embed/tDYbTH9gtp8"
+        "src": "https://youtube.com/embed/07LfzvmOIN8"
         },
         "description": "Smells like q droppings.",
         "directions": {
@@ -18,8 +18,8 @@
         },
         "map": {
             "x": 1,
-            "y": 10,
-            "width": 11,
+            "y": 12,
+            "width": 9,
             "height": 10,
             "doors": {
                 "north": 5,
@@ -30,14 +30,14 @@
     {
         "id": "jude-mirra",
         "name": "Jude Mirra Hall",
-        "type": "IFRAME",
+        "type": "CHATSTREAM",
         "capacity": 250,
         "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfjudemirrahall.png",
         "iframeOptions": {
-            "src": "https://youtube.com/embed/pwP0zHMqVV8"
+            "src": "https://youtube.com/embed/UW1TRhlD8qg"
         },
         "description": "Pseudoscience Kills.",
         "directions": {
@@ -58,30 +58,28 @@
     {
         "id": "michelle-tallmadge",
         "name": "Michelle Tallmadge Hall",
-        "type": "IFRAME",
+        "type": "CHATSTREAM",
         "capacity": 100,
         "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmichelletallmadgehall.png",
         "iframeOptions": {
-            "src": "https://youtube.com/embed/9cnElOLbgCs"
+            "src": "https://youtube.com/embed/Xs5Yiy_30J8"
         },
         "description": "Please pass the decanter of ritual chartreuse.",
         "directions": {
             "west": "jude-mirra",
-            "south": "foyer",
-            "east": "mkultra"
+            "south": "foyer"
         },
         "map": {
-            "x": 8,
+            "x": 10,
             "y": 1,
-            "width": 9,
+            "width": 4,
             "height": 8,
             "doors": {
                 "south": 14,
-                "west": 5,
-                "east": 3
+                "west": 5
             }
         }
     },
@@ -96,18 +94,18 @@
         "description": "Fly with the Monarchs",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmkultratheater.jpeg",
         "iframeOptions": {
-                "src": "https://youtube.com/embed/y3Secr0FuPY"
+                "src": "https://www.youtube.com/embed/videoseries?list=PLVo0KZZdkRu0Dr0UjZLwHMSTbfidYdazc"
         },
         "directions": {
-            "west": "michelle-tallmadge"
+            "west": "NS-hallway-2"
         },
         "map": {
-            "x": 17,
-            "y": 3,
+            "x": 15,
+            "y": 11,
             "width": 2,
             "height": 4,
             "doors": {
-                "west": 3
+                "west": 17
             }
         }
     },
@@ -121,19 +119,17 @@
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfcometpizzaparlor.png",
         "description": "What do you mean you don't sell pizza here?",
         "directions": {
-            "north": "foyer",
-            "west": "medium-lounge",
-            "east": "lounge"
+            "east": "foyer",
+            "west": "medium-lounge"
         },
         "doorTint": "#000000",
         "map": {
             "x": 10,
             "y": 24,
-            "width": 6,
+            "width": 2,
             "height": 6,
             "doors": {
                 "east": 27,
-                "north": 14,
                 "west": 27
             }
         }
@@ -152,12 +148,12 @@
         },
         "doorTint": "#000000",
         "map": {
-            "x": 1,
+            "x": 5,
             "y": 23,
             "width": 2,
             "height": 3,
             "doors": {
-                "south": 1
+                "south": 6
             }
         }
     },
@@ -176,13 +172,13 @@
             "east": "medium-lounge"
         },
         "map": {
-            "x": 1,
+            "x": 5,
             "y": 26,
-            "width": 3,
+            "width": 2,
             "height": 3,
             "doors": {
-                "north": 1,
-                "south": 1,
+                "north": 5,
+                "south": 5,
                 "east": 27
             }
         },
@@ -201,12 +197,12 @@
             "north": "small-2"
         },
         "map": {
-            "x": 1,
+            "x": 5,
             "y": 29,
             "width": 2,
             "height": 3,
             "doors": {
-                "north": 1
+                "north": 11
             }
         },
         "doorTint": "#000000"
@@ -221,27 +217,25 @@
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfIlluminatedfoyer.jpeg",
         "description": "The entrance of a Virtual Conference Regarding Conspiracism and Pseudoscience in the Age of QAnon.",
         "directions": {
-            "north": "michelle-tallmadge",
-            "east": "library",
-            "south": "large-lounge",
-            "west": "auditorium"
+            "north": "",
+            "east": "lounge",
+            "west": "large-lounge"
         },
         "map": {
             "x": 12,
-            "y": 9,
+            "y": 21,
             "width": 6,
-            "height": 15,
+            "height": 5,
             "doors": {
-                "west": 19,
-                "east": 16,
-                "north": 14,
-                "south": 14
+                "west": 21,
+                "east": 27,
+                "north": 14
             }
         },
         "doorTint": "#000000"
     },
     {
-        "id": "medium-lounge",
+        "id": "mcmartin",
         "name": "McMartin Chamber",
         "type": "JITSI",
         "muteRoom": false,
@@ -254,9 +248,9 @@
             "west": "small-2"
         },
         "map": {
-            "x": 4,
+            "x": 6,
             "y": 25,
-            "width": 6,
+            "width": 2,
             "height": 4,
             "doors": {
                 "east": 27,
@@ -271,11 +265,11 @@
         "type": "IMAGEMAP",
         "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
         "directions": {
-            "west": "foyer"
+            "west": "NS-hallway-2"
         },
         "imageMapOptions": "satanic-library-map",
         "map": {
-            "x": 18,
+            "x": 15,
             "y": 16,
             "width": 2,
             "height": 4,
@@ -295,15 +289,15 @@
         "description": "Drink it all in.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfAdrenochromeloungered.jpeg",
         "directions": {
-            "west": "large-lounge"
+            "west": "foyer"
         },
         "map": {
-            "x": 16,
-            "y": 24,
+            "x": 21,
+            "y": 21,
             "width": 2,
             "height": 5,
             "doors": {
-                "west": 27
+                "west": 23
             }
         },
         "doorTint": "#000000"
