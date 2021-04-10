@@ -1,36 +1,36 @@
 {
     "events": [
-    {
-        "name": "The Navajo Witch Trials of 1878 with Karl Kasarda",
-        "description": "It is 1878. Apache and Navajo peoples are rounded up and sent on a forced march east to  what can only be called a death camp at Bosque Redondo, NM.  Navajo survivors were eventually let free due to environmental conditions even the oppressors could no longer accept.   After a slow and dangerous death trek home they turned their ire on themselves.  The horror of what happened was blamed not on white colonizers, but on witches in their own community who brought this suffering upon them due to their evil ways. This is the Navajo Witch Purge of 1878.",
-        "room": "michelle-tallmadge",
-        "start": "2021-04-09T17:00:00-05:00",
-        "end": "2021-04-09T18:00:00-05:00",
-        "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/bunny.png"
-    },
-    {
-        "name": "What is Grey Faction? with Lucien Greaves",
-        "description": "Lucien Greaves, co-founder of The Satanic Temple describes the history and mission of one of the oldest campaigns of The Satanic Temple, Grey Faction.",
-        "room": "auditorium",
-        "start": "2021-04-09T15:30:00-05:00",
-        "end": "2021-04-09T16:30:00-05:00",
-        "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarflower.png"
-    },
-    {
-        "name": "Is QAnon a religious cult? with Joseph Laycock",
-        "description": "This is a presentation on using the field of new religious movements to analyze QAnon.",
-        "room": "jude-mirra",
-        "start": "2021-04-09T18:30:00-05:00",
-        "end": "2021-04-09T19:00:00-05:00",
-        "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png"
-    },
-    {
-        "name": "How Disinformation and Conspiracies in America Affect BIPOCs and their Religious Identity with the Satanists of Color Coalition",
-        "description": "A panel discussion with the Satanists of Color Coalition",
-        "room": "mkultra",
-        "start": "2021-04-09T20:00:00-05:00",
-        "end": "2021-04-09T21:00:00-05:00",
-        "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarrobe.png"
-    }
+        {
+            "name": "Surviving Conspiracy Therapy with Evan Anderson in conversation with a victim of recovered memory therapy (pre-recorded)",
+            "description": "In depth discussion with a victim of recovered memory therapy.",
+            "room": "backParlor1",
+            "start": "2021-04-10T18:00:00-05:00",
+            "end": "2021-04-10T19:00:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/bunny.png"
+        },
+        {
+            "name": "Satanic Panic, QAnon, and Media Misconceptions Panel with Lucien Greaves, Carrie Poppy, Mike Rothschild, and Joe Ondrak.",
+            "description": "Co-founder and spokesperson for The Satanic Temple is joined by investigative journalist Carrie Poppy, Mike Rothschild, and Joe Ondrak for general discussion.",
+            "room": "grandBallroom1",
+            "start": "2021-04-10T16:30:00-05:00",
+            "end": "2021-04-10T17:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarflower.png"
+        },
+        {
+            "name": "Origins of the Satanic Panic Panel with Gerard O'Sullivan and Donald Frew in conversation",
+            "description": "Author of The Satan Scare Gerard O'Sullivan and ",
+            "room": "kitchen1",
+            "start": "2021-04-10T19:30:00-05:00",
+            "end": "2021-04-10T20:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png"
+        },
+        {
+            "name": "Satanic Panic Saturday - A Glimpse Into the Archive",
+            "description": "strange media from the vaults",
+            "room": "frontParlor",
+            "start": "2021-04-10T00:00:00-05:00",
+            "end": "2021-04-10T23:59:59-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarrobe.png"
+        }
     ]
 }
