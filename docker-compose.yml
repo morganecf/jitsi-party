@@ -9,8 +9,8 @@ services:
                 - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-proxy
         ports:
-            - 680:80
-            - 6443:443
+            - 80:80
+            - 443:443
         environment:
             - PROXY_AUTH_ENABLED
             - PROXY_AUTH_DISCOVERY

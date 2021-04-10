@@ -14,7 +14,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-welcome.png",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/welcomefaction.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your symbol",
         "headerHtml": "<div class='tst'><p>Welcome to</p><h1>The World Congress on Moral Panics Temple Virtual Headquarters</h1>"
@@ -80,12 +80,12 @@
         }
     },
     "poke": {
-        "text": "Hex someone",
+        "text": "Implant a False Memory",
         "fontAwesomeIcon": "skull",
-        "fromText": "{user} has hexed you!",
-        "toText": "Hexed!",
+        "fromText": "{user} has implanted a false memory",
+        "toText": "Grandma was a high priestess?!",
         "unlockText": "You have unlocked the ability to hex",
         "selfPoke": "Curses!",
-        "unlockAfterMinutes": 5
+        "unlockAfterMinutes": 0
     }
 }
