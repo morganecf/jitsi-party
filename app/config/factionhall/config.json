@@ -14,7 +14,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-welcome.png",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/welcomefaction.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Identify your Cabal",
         "headerHtml": "<div class='tst'><p>Welcome to</p><h1>The World Congress on Moral Panics Temple Virtual Headquarters</h1>"
