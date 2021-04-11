@@ -288,14 +288,17 @@
     {
         "id": "lounge",
         "name": "Adrenochrome Lounge",
-        "type": "JITSI",
+        "type": "IFRAME",
         "capacity": 25,
-        "muteRoom": false,
+        "muteRoom": true,
         "hideVideo": false,
         "description": "Drink it all in.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfAdrenochromeloungered.jpeg",
         "directions": {
             "west": "large-lounge"
+        },
+        "iframeOptions": {
+                "src": "https://player.angelthump.com/?channel=ledflashing"
         },
         "map": {
             "x": 16,
