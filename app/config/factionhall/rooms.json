@@ -9,7 +9,7 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfstormauditorium.png",
         "iframeOptions": {
-        "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=enter.thesatanic.estate"
+        "src": "https://youtube.com/embed/KYGvH_s3BdQ"
         },
         "description": "Smells like q droppings.",
         "directions": {
@@ -37,7 +37,7 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfjudemirrahall.png",
         "iframeOptions": {
-            "src": "https://youtube.com/embed/UW1TRhlD8qg"
+            "src": "https://youtube.com/embed/1I7Mn9yJ5GY"
         },
         "description": "Pseudoscience Kills.",
         "directions": {
@@ -65,7 +65,7 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmichelletallmadgehall.png",
         "iframeOptions": {
-            "src": "https://youtube.com/embed/Xs5Yiy_30J8"
+            "src": "https://youtube.com/embed/rVSH6VaQRtQ"
         },
         "description": "Please pass the decanter of ritual chartreuse.",
         "directions": {
@@ -96,7 +96,7 @@
         "description": "Fly with the Monarchs",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmkultratheater.jpeg",
         "iframeOptions": {
-                "src": "https://www.youtube.com/embed/videoseries?list=PLVo0KZZdkRu0Dr0UjZLwHMSTbfidYdazc"
+                "src": "https://www.youtube.com/embed/videoseries?list=PLEwbi5s6T9R5flOFmQ0QI94NOZWk3-EAl"
         },
         "directions": {
             "west": "michelle-tallmadge"
@@ -289,16 +289,16 @@
         "id": "lounge",
         "name": "Adrenochrome Lounge",
         "type": "IFRAME",
-        "capacity": 25,
+        "capacity": 150,
         "muteRoom": true,
-        "hideVideo": false,
+        "hideVideo": true,
         "description": "Drink it all in.",
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfAdrenochromeloungered.jpeg",
         "directions": {
             "west": "large-lounge"
         },
         "iframeOptions": {
-                "src": "https://player.angelthump.com/?channel=ledflashing"
+                "src": "https://youtube.com/embed/XrVhYJlWvbk"
         },
         "map": {
             "x": 16,
