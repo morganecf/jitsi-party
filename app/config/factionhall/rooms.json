@@ -9,7 +9,7 @@
         "hideVideo": true,
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfstormauditorium.png",
         "iframeOptions": {
-        "src": "https://youtube.com/embed/07LfzvmOIN8"
+        "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
         },
         "description": "Smells like q droppings.",
         "directions": {
