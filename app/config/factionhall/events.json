@@ -1,44 +1,36 @@
 {
     "events": [
         {
-            "name": "The Modern Satanic Panic in Europe with TST UK",
-            "description": "Pre-recorded with a live Q&A",
-            "room": "lounge",
-            "start": "2021-04-11T14:00:00-04:00",
-            "end": "2021-04-11T15:00:00-04:00",
+            "name": "Round Table with Satanists of Color Coalition (SoCC)",
+            "description": "How the Current Age of Disinformation and Conspiracies in America Affects BIPOCs and Their Religious Identity",
+            "room": "auditorium",
+            "start": "2021-04-12T20:00:00-04:00",
+            "end": "2021-04-12T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/bunny.png"
         },
         {
-            "name": "Adventures in Conspiracy Therapy",
-            "description": "A peek into the fantasy world of conspiracy therapists with Evan Anderson, Director of Grey Faction",
-            "room": "jude-mirra",
-            "start": "2021-04-11T18:30:00-04:00",
-            "end": "2021-04-11T19:30:00-04:00",
+            "name": "Butcher, Witch, & Wolf: The Werewolf Trials of Europe with Zee Kay",
+            "description": "Europe's Werewolf Trials paralleled the more infamous Witch Trials in the 15th - 17th century, yet the confessions of accused werewolves were even more bizarre, including lurid tales of bestiality, cannibalism, serial killing, and deals with a shapeshifting Devil. Come explore how the Church integrated pre-Christian folk beliefs into its cosmology to construct a new category of witchcraft: the witch as wild animal, an uncivilized and uncivilizing force that represented the perils of life away from religion.",
+            "room": "mkultra",
+            "start": "2021-04-12T18:30:00-04:00",
+            "end": "2021-04-12T19:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarflower.png"
         },
         {
-            "name": "The Monarch Mind Control Mythos",
-            "description": "The 'CIA mind control sex slave' mythology and how it has come to have real-world impact in the age of QAnon",
+            "name": "The Taxil Hoax and the Making of Modern Religious Panic with Hadrian Flyte",
+            "description": "How the Taxil Hoax in the 19th century laid the groundwork for ongoing conspiracy theory outrage and how early Catholic panic over Freemasonry set the world on fire.",
             "room": "michelle-tallmadge",
-            "start": "2021-04-11T17:00:00-04:00",
-            "end": "2021-04-11T18:30:00-04:00",
+            "start": "2021-04-12T17:00:00-04:00",
+            "end": "2021-04-12T18:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png"
         },
         {
-            "name": "Grey Mass",
-            "description": "Recorded rituals from Grey Faction taking a stand against pseudoscience in mental healthcare",
-            "room": "mkultra",
-            "start": "2021-04-11T14:00:00-04:00",
+            "name": "Whimsical Blasphemy",
+            "description": "Music and Videos with Mercy, live from Salem,
+            "room": "lounge",
+            "start": "2021-04-12T14:00:00-04:00",
             "end": "2021-04-11T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png"
-        },
-        {
-            "name": "Satanism, Stigma, and Mental Health",
-            "description": "Psychological Research from the Satanic Panic Era to Current Projects with Eric Sprankle",
-            "room": "auditorium",
-            "start": "2021-04-11T15:30:00-04:00",
-            "end": "2021-04-11T16:30:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarrobe.png"
         }
     ]
 }
