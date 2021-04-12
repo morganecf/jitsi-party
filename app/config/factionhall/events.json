@@ -6,7 +6,7 @@
             "room": "mkultra",
             "start": "2021-04-12T18:30:00-04:00",
             "end": "2021-04-12T19:30:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarflower.png",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarflower.png"
         },
         {
             "name": "The Taxil Hoax and the Making of Modern Religious Panic with Hadrian Flyte",
@@ -14,15 +14,15 @@
             "room": "michelle-tallmadge",
             "start": "2021-04-12T17:00:00-04:00",
             "end": "2021-04-12T18:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png"
         },
         {
             "name": "Whimsical Blasphemy",
             "description": "Music and Videos with Mercy, live from Salem",
-            "room": "mcmartin",
+            "room": "medium-lounge",
             "start": "2021-04-12T14:00:00-04:00",
             "end": "2021-04-12T23:59:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png"
         }
     ]
 }
