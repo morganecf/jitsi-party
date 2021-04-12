@@ -1,14 +1,6 @@
 {
     "events": [
         {
-            "name": "Round Table with Satanists of Color Coalition (SoCC)",
-            "description": "How the Current Age of Disinformation and Conspiracies in America Affects BIPOCs and Their Religious Identity",
-            "room": "auditorium",
-            "start": "2021-04-12T20:00:00-04:00",
-            "end": "2021-04-12T21:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/bunny.png"
-        },
-        {
             "name": "Butcher, Witch, & Wolf: The Werewolf Trials of Europe with Zee Kay",
             "description": "Europe's Werewolf Trials paralleled the more infamous Witch Trials in the 15th - 17th century, yet the confessions of accused werewolves were even more bizarre, including lurid tales of bestiality, cannibalism, serial killing, and deals with a shapeshifting Devil. Come explore how the Church integrated pre-Christian folk beliefs into its cosmology to construct a new category of witchcraft: the witch as wild animal, an uncivilized and uncivilizing force that represented the perils of life away from religion.",
             "room": "mkultra",
@@ -27,7 +19,7 @@
         {
             "name": "Whimsical Blasphemy",
             "description": "Music and Videos with Mercy, live from Salem,
-            "room": "lounge",
+            "room": "mcmartin",
             "start": "2021-04-12T14:00:00-04:00",
             "end": "2021-04-11T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/calendarhall.png"
