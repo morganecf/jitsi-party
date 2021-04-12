@@ -2,8 +2,8 @@
     "rooms": [{
         "id": "auditorium",
         "name": "The Storm Auditorium",
-        "type": "IFRAME",
-        "capacity": 500,
+        "type": "JITSI",
+        "capacity": 25,
         "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
@@ -89,7 +89,7 @@
         "id": "mkultra",
         "name": "MKULTRA Theater",
         "type": "IFRAME",
-        "capacity": 50,
+        "capacity": 100,
         "muteRoom": true,
         "hideVideo": true,
         "doorTint": "#000000",
@@ -243,10 +243,13 @@
     {
         "id": "medium-lounge",
         "name": "McMartin Chamber",
-        "type": "JITSI",
-        "muteRoom": false,
-        "hideVideo": false,
-        "capacity": 5,
+        "type": "IFRAME",
+        "muteRoom": true,
+        "hideVideo": true,
+        "capacity": 25,
+        "iframeOptions": {
+                "src": "https://player.angelthump.com/?channel=ledflashing"
+        },
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmcmartinchamber.jpeg",
         "description": "Tunnels are closed for rennovation",
         "directions": {
@@ -288,7 +291,7 @@
     {
         "id": "lounge",
         "name": "Adrenochrome Lounge",
-        "type": "IFRAME",
+        "type": "JITSI",
         "capacity": 150,
         "muteRoom": true,
         "hideVideo": false,
@@ -296,9 +299,6 @@
         "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfAdrenochromeloungered.jpeg",
         "directions": {
             "west": "large-lounge"
-        },
-        "iframeOptions": {
-                "src": "https://player.angelthump.com/?channel=ledflashing"
         },
         "map": {
             "x": 16,
