@@ -1,10 +1,14 @@
 #!/usr/bin/with-contenv bash
 
+set -xe
+
+tpl /defaults/nginx.conf > "/usr/local/openresty/nginx/conf/nginx.conf"
+
 # setting the symlink for key location
 rm -rf /config/keys/letsencrypt
 
 if [ -z ${PROXY_LETSENCRYPT_ENABLED+x} ]; then
-    mkdir /config/keys/letsencrypt
+    mkdir -p /config/keys/letsencrypt
     cd /config/keys/letsencrypt
     openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
         -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=localhost" \
