@@ -1,0 +1,84 @@
+{
+    "debug": true,
+    "page_title": "Faction Hall",
+    "mapUnlockThreshold": 0,
+    "useLocalSessions": false,
+    "startRoom": "foyer",
+    "videoDisplayName": "Guest",
+    "moderation": {
+        "moderatorEmails": [
+            "support@thesatanic.estate"
+        ],
+        "moderatorNumber": "+14802941991",
+        "formDescription": "Need a moderator to look into some unsavory behavior? Let us know what's going on, when, where and who is involved. We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+    },
+    "welcomePage": {
+        "avatarSelectionEnabled": true,
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/welcomefaction.png",
+        "enterSpaceButtonText": "Enter",
+        "avatarSelectionText": "Identify your Cabal",
+        "headerHtml": "<div class='tst'><p>Welcome to</p><h1>The World Congress on Moral Panics</h1>"
+    },
+    "avatars": [{
+        "images": [
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF1.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF2.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF3.png"
+        ]
+    },
+    {
+        "images": [
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF4.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF5.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF6.png"
+        ]
+    },
+    {
+        "images": [
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF7.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF8.png",
+            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF9.png"
+        ]
+    }
+],
+    "specialAvatars": {
+        "goodbye": {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
+            ]
+        }
+    },
+    "map": {
+        "stats": {
+            "numberInHouse": {
+                "display": true,
+                "text": "🖤  {count} at Faction Hall"
+            },
+            "numberInHallways": {
+                "display": true,
+                "text": "🖤 {count} haunting the hallways"
+            },
+            "numberInRooms": {
+                "display": false,
+                "text": "🖤 {count} learning"
+            },
+            "additionalStats": [{
+                "text": "🖤 {count} reading",
+                "match": ["library"]
+            }
+        ]
+        }
+    },
+    "poke": {
+        "text": "Implant a False Memory",
+        "fontAwesomeIcon": "skull",
+        "fromText": "{user} has implanted a false memory!",
+        "toText": "You implanted a false memory!",
+        "unlockText": "You have unlocked the ability to hex",
+        "selfPoke": "Grandma was a High Priestess?!",
+        "unlockAfterMinutes": 5
+    }
+}

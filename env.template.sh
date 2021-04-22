@@ -38,6 +38,15 @@ JITSI_PARTY_DB=jitsi-party
 
 
 #
+# Proxy
+#
+PROXY_LETSENCRYPT_ENABLED=
+PROXY_LETSENCRYPT_DOMAIN=
+PROXY_AWS_ACCESS_KEY_ID=
+PROXY_AWS_SECRET_ACCESS_KEY=
+
+
+#
 # Basic configuration options
 #
 

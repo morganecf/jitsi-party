@@ -1,13 +1,8 @@
 version: "3.2"
 services:
     proxy:
-        build:
-            context: ./proxy
-            cache_from:
-                - cabinweekend/jitsi-party-proxy:latest
-            args:
-                - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-proxy
+        restart: unless-stopped
         ports:
             - 80:80
             - 443:443
@@ -17,28 +12,22 @@ services:
             - PROXY_AUTH_CLIENT_ID
             - PROXY_AUTH_CLIENT_SECRET
             - PROXY_AUTH_ALLOWED_GROUPS
+            - PROXY_LETSENCRYPT_ENABLED
+            - PROXY_LETSENCRYPT_DOMAIN
+            - AWS_ACCESS_KEY_ID=$PROXY_AWS_ACCESS_KEY_ID
+            - AWS_SECRET_ACCESS_KEY=$PROXY_AWS_SECRET_ACCESS_KEY
+        volumes:
+            - /config/keys
         networks:
             party.jitsi:
-        depends_on:
-            - web-worker_1
-            - web-worker_2
 
     web-worker_1:
-        build:
-            context: ./app
-            cache_from:
-                - cabinweekend/jitsi-party-web:latest
-            args:
-                - BUILDKIT_INLINE_CACHE=1
-        image: cabinweekend/jitsi-party-web
-        ports:
-            - 7071:80
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
         environment:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
-        volumes:
-            - ./app:/app
         depends_on:
             - db
             - queue
@@ -46,15 +35,90 @@ services:
             party.jitsi:
 
     web-worker_2:
-        image: cabinweekend/jitsi-party-web
-        ports:
-            - 7072:80
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
         environment:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
-        volumes:
-            - ./app:/app
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_3:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_4:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_5:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_6:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_7:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
+        depends_on:
+            - db
+            - queue
+        networks:
+            party.jitsi:
+
+    web-worker_8:
+        image: cabinweekend/jitsi-party-web:$PARTY_CONFIG-$PARTY_THEME-latest
+        restart: unless-stopped
+        environment:
+            - JITSI_PARTY_DB
+            - JITSI_PARTY_DB_USER
+            - JITSI_PARTY_DB_PASS
         depends_on:
             - db
             - queue
@@ -63,6 +127,7 @@ services:
 
     db:
         image: postgres:12.2-alpine
+        restart: unless-stopped
         environment:
             - POSTGRES_USER=${JITSI_PARTY_DB_USER}
             - POSTGRES_PASSWORD=${JITSI_PARTY_DB_PASS}
@@ -74,17 +139,13 @@ services:
 
     queue:
         image: rabbitmq:3.8.4-management-alpine
+        restart: unless-stopped
         networks:
             party.jitsi:
 
     jitsi-meet:
-        build:
-            context: ./meet
-            cache_from:
-                - cabinweekend/jitsi-party-meet:latest
-            args:
-                - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-meet
+        restart: unless-stopped
         ports:
             - 81:80
         environment:
@@ -108,7 +169,7 @@ services:
             - JIBRI_RECORDER_USER
             - JIBRI_RECORDER_PASSWORD
             - ENABLE_RECORDING
-            - BRIDGE_CHANNEL
+            - BRIDGE_CHANNEL=false
             - ENABLE_XMPP_WEBSOCKET
         networks:
             party.jitsi:
@@ -116,14 +177,8 @@ services:
                     - ${XMPP_DOMAIN}
 
     prosody:
-        build:
-            context: ./prosody
-            cache_from:
-                - cabinweekend/jitsi-party-prosody:latest
-                - jitsi/base
-            args:
-                - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-prosody
+        restart: unless-stopped
         environment:
             - AUTH_TYPE
             - ENABLE_AUTH
@@ -181,6 +236,7 @@ services:
 
     jicofo:
         image: jitsi/jicofo:stable-5142-4
+        restart: unless-stopped
         environment:
             - ENABLE_AUTH
             - XMPP_DOMAIN
@@ -204,6 +260,7 @@ services:
 
     jvb:
         image: jitsi/jvb:stable-5142-4
+        restart: unless-stopped
         ports:
             - '${JVB_PORT}:${JVB_PORT}/udp'
             - '${JVB_TCP_PORT}:${JVB_TCP_PORT}'
@@ -226,19 +283,6 @@ services:
         networks:
             party.jitsi:
 
-    node:
-        image: cabinweekend/jitsi-party-node
-        build:
-            context: .
-            dockerfile: node/Dockerfile
-            args:
-                - BUILDKIT_INLINE_CACHE=1
-        volumes:
-            - ./app:/app
-            - exclude:/app/client/node_modules
-
 networks:
     party.jitsi:
 
-volumes:
-    exclude:
