@@ -1,0 +1,4 @@
+#!/bin/bash
+
+exec frep --strict $1:-
+
