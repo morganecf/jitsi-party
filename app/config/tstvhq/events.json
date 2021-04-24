@@ -2,7 +2,7 @@
     "events": [
         {
             "name": "The Whimsical Blasphemy Show with Mercy Maelica",
-            "description": "Join award-winning internationally touring recording artist and D.C. affiliate Director of Black Nonbelievers Rogiérs Fibby as he lectures regarding intra-community oppressive dynamics, sexual identities and revolution in the Caribbean communities. In addition to his work with Alicia Keys, Robert Glasper, Mo’Nique and others, he works closely with the American Humanist Association, Freedom From Religion Foundation, the Religious Freedom Forum, the Secular Coalition of America and serves on the board of the Washington Area Secular Humanists. Q&A to follow the lecture. Please join us in one of our three Back Parlors for this event.",
+            "description": "Join award-winning internationally touring recording artist and D.C. affiliate Director of Black Nonbelievers Rogi\u00e9rs Fibby as he lectures regarding intra-community oppressive dynamics, sexual identities and revolution in the Caribbean communities. In addition to his work with Alicia Keys, Robert Glasper, Mo\u2019Nique and others, he works closely with the American Humanist Association, Freedom From Religion Foundation, the Religious Freedom Forum, the Secular Coalition of America and serves on the board of the Washington Area Secular Humanists. Q&A to follow the lecture. Please join us in one of our three Back Parlors for this event.",
             "room": "grandBallroom",
             "start": "2021-04-29T20:00:00-05:00",
             "end": "2021-04-30T02:00:00-05:00",
@@ -32,7 +32,7 @@
             "end": "2021-04-29T23:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
-         {
+        {
             "name": "Salem Witch Wiles",
             "description": "Join Thomas O'Brien Vallor, The Estate's resident Salem Witch for a conversation about Hexennacht.",
             "room": "backParlor",

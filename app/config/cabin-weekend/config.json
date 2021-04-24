@@ -20,7 +20,7 @@
                 "https://cabin-weekend.s3.amazonaws.com/bauhausPuck/normal-black.png",
                 "https://cabin-weekend.s3.amazonaws.com/bauhausPuck/normal-yellow.png"
             ]
-          },
+        },
         {
             "images": [
                 "https://cabin-weekend.s3.amazonaws.com/bauhausPuck/book-blue.png",
@@ -55,7 +55,7 @@
         }
     ],
     "specialAvatars": {
-      "goodbye": {
+        "goodbye": {
             "images": [
                 "https://cabin-weekend.s3.amazonaws.com/bauhausPuck/thumb-pink.png",
                 "https://cabin-weekend.s3.amazonaws.com/bauhausPuck/thumb-black.png",
@@ -68,20 +68,22 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "🏚️ {count} in cabin"
+                "text": "\ud83c\udfda\ufe0f {count} in cabin"
             },
             "numberInHallways": {
                 "display": true,
-                "text": "🌓 {count} roaming"
+                "text": "\ud83c\udf13 {count} roaming"
             },
             "numberInRooms": {
                 "display": true,
-                "text": "🎉 {count} partying"
+                "text": "\ud83c\udf89 {count} partying"
             },
             "additionalStats": [
                 {
-                    "text": "🛁 {count} taking bathroom break",
-                    "match": ["bathroom"]
+                    "text": "\ud83d\udec1 {count} taking bathroom break",
+                    "match": [
+                        "bathroom"
+                    ]
                 }
             ]
         }

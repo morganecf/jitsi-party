@@ -34,18 +34,17 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "⚫ {count} playing"
+                "text": "\u26ab {count} playing"
             },
             "numberInHallways": {
                 "display": true,
-                "text": "⚪ {count} wandering the hallways"
+                "text": "\u26aa {count} wandering the hallways"
             },
             "numberInRooms": {
                 "display": false,
-                "text": "📍 {count} exploring"
+                "text": "\ud83d\udccd {count} exploring"
             },
-            "additionalStats": [
-            ]
+            "additionalStats": []
         }
     }
 }
