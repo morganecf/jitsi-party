@@ -246,7 +246,7 @@
         {
             "id": "belfry",
             "name": "Belfry",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
