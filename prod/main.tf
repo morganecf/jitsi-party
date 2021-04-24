@@ -215,7 +215,7 @@ resource "aws_instance" "main" {
     iam_instance_profile = aws_iam_instance_profile.main.name
     vpc_security_group_ids = [aws_security_group.main.id]
     key_name = aws_key_pair.main.key_name
-    user_data = templatefile("first_run.sh", { config = tstvhq, theme = tst })
+    user_data = templatefile("first_run.sh.tpl", { config = tstvhq, theme = tst })
 }
 
 resource "aws_route53_record" "main" {
