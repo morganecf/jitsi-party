@@ -3,7 +3,7 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "capacity": 500,
             "doorTint": "#000000",
             "muteRoom": true,
@@ -82,7 +82,7 @@
         {
             "id": "backParlor",
             "name": "Back Parlor",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "capacity": 50,
             "muteRoom": true,
             "hideVideo": true,
@@ -141,7 +141,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "description": "Loveseats, chaises, armchairs-- oh my!",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/vKWQ8scB1qk"
@@ -197,7 +197,7 @@
         {
             "id": "den",
             "name": "Den",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/T4iPx3JrTvc"
             },
@@ -249,7 +249,7 @@
         {
             "id": "belfry",
             "name": "Belfry",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
@@ -279,7 +279,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "Give the goats from Woodstock Farm Sanctuary a snack at woodstocksanctuary.org/",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-sleeping-porch.png",
             "directions": {
                 "west": "library",
@@ -352,7 +352,7 @@
         {
             "id": "theater",
             "name": "Theater",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "capacity": 50,
             "muteRoom": true,
             "hideVideo": true,
@@ -404,7 +404,7 @@
         {
             "id": "boudoir",
             "name": "Boudoir",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "capacity": 50,
             "muteRoom": true,
             "hideVideo": true,
@@ -455,7 +455,7 @@
         {
             "id": "trapDoor",
             "name": "Trap Door to Hell!",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-trap-door.png",
             "capacity": 15,
             "muteRoom": false,
