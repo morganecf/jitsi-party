@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "page_title": "TST VHQ",
+    "page_title": "TSTVHQ",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "startRoom": "cemetery",
@@ -14,7 +14,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-welcome.png",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/welcome.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your sigil",
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
@@ -59,28 +59,27 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "\ud83d\udda4  {count} at VHQ"
+                "text": "🖤  {count} at VHQ"
             },
             "numberInHallways": {
                 "display": true,
-                "text": "\ud83d\udda4 {count} haunting the hallways"
+                "text": "🖤 {count} haunting the hallways"
             },
             "numberInRooms": {
                 "display": false,
-                "text": "\ud83d\udda4 {count} exploring"
+                "text": "🖤 {count} exploring"
             },
             "additionalStats": [
                 {
-                    "text": "\ud83d\udda4 {count} reading",
+                    "text": "🖤 {count} reading",
                     "match": [
                         "library"
                     ]
                 },
                 {
-                    "text": "\ud83d\udda4 {count} meeting animals",
+                    "text": "🖤 {count} meeting animals",
                     "match": [
                         "belfry",
-                        "den",
                         "sleepingPorch"
                     ]
                 }
