@@ -231,6 +231,8 @@ services:
         image: cabinweekend/jitsi-party-node
         build:
             context: .
+            cache_from:
+                - cabinweekend/jitsi-party-node:latest
             dockerfile: node/Dockerfile
             args:
                 - BUILDKIT_INLINE_CACHE=1
