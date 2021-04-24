@@ -105,49 +105,6 @@
                     "text": "This is the fanciest ice cream cart you\u2019ve found in years. You get a giant scoop of strawberry ice cream in a waffle cone and drizzled with a (frankly, obscenely expensive) balsamic vinegar. The kindly woman running the cart smiles at you, and winks when returning your change. You notice the quarter\u2019s faces here have Mary Ellen Pleasant on them instead of George Washington. Anyway, you see a path that leads off into the woods and you hear the sounds of a guitar strumming, perhaps flutes, coming from the wooded path.\u2019"
                 }
             ]
-        },
-        {
-            "config": {},
-            "rooms": [
-                {
-                    "buttons": [
-                        {
-                            "nextRoom": [
-                                "kitchen"
-                            ],
-                            "text": "A mere man"
-                        },
-                        {
-                            "nextRoom": [
-                                "outsideClarendon"
-                            ],
-                            "text": "A mighty moth"
-                        }
-                    ],
-                    "id": "massAve",
-                    "name": "MassAve",
-                    "text": "You are walking along Mass Ave and see the NTB on the corner of Clarendon and Mass Ave. Do you keep walking or turn towards the glowing light away from Dunkin Donuts? Are you man or moth?"
-                },
-                {
-                    "buttons": [
-                        {
-                            "nextRoom": [
-                                "clarendon"
-                            ],
-                            "text": "Clarendon"
-                        },
-                        {
-                            "nextRoom": [
-                                "twentyFour"
-                            ],
-                            "text": "Twenty Four Please"
-                        }
-                    ],
-                    "id": "outsideClarendon",
-                    "name": "Outside Clarendon",
-                    "text": "You mighty moth, you! Are you going to head into Clarendon then? Or do you go ahead for another block or two and see if anyone is around at 24?"
-                }
-            ]
         }
     ]
 }
