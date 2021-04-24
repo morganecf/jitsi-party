@@ -10,7 +10,7 @@
             "vhq@thesatanictemple.com"
         ],
         "moderatorNumber": "+14802941991",
-        "formDescription": "Someone harshing your vibe? Need a moderator to look into it? We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+        "formDescription": "Someone harshing your vibe? Need a moderator to look into it? We\u2019ll keep what you tell us private, and we\u2019ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
@@ -19,31 +19,32 @@
         "avatarSelectionText": "Select your sigil",
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
     },
-    "avatars": [{
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
-        ]
-    },
-    {
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
-        ]
-    },
-    {
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
-        ]
-    }
-],
+    "avatars": [
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
+            ]
+        },
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
+            ]
+        },
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
+            ]
+        }
+    ],
     "specialAvatars": {
         "goodbye": {
             "images": [
@@ -58,25 +59,32 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "🖤  {count} at VHQ"
+                "text": "\ud83d\udda4  {count} at VHQ"
             },
             "numberInHallways": {
                 "display": true,
-                "text": "🖤 {count} haunting the hallways"
+                "text": "\ud83d\udda4 {count} haunting the hallways"
             },
             "numberInRooms": {
                 "display": false,
-                "text": "🖤 {count} exploring"
+                "text": "\ud83d\udda4 {count} exploring"
             },
-            "additionalStats": [{
-                "text": "🖤 {count} reading",
-                "match": ["library"]
-            },
-            {
-                "text": "🖤 {count} meeting animals",
-                "match": ["belfry", "den", "sleepingPorch"]
-            }
-        ]
+            "additionalStats": [
+                {
+                    "text": "\ud83d\udda4 {count} reading",
+                    "match": [
+                        "library"
+                    ]
+                },
+                {
+                    "text": "\ud83d\udda4 {count} meeting animals",
+                    "match": [
+                        "belfry",
+                        "den",
+                        "sleepingPorch"
+                    ]
+                }
+            ]
         }
     },
     "poke": {

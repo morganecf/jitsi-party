@@ -1,153 +1,153 @@
 {
-  "adventures": [
-    {
-      "config": {
-        "audio": {
-          "autoPlay": true,
-          "hideControls": true,
-          "path": "https://tstvhq.s3.amazonaws.com/music/Ambient_Birds.mp3"
+    "adventures": [
+        {
+            "config": {
+                "audio": {
+                    "autoPlay": true,
+                    "hideControls": true,
+                    "path": "https://tstvhq.s3.amazonaws.com/music/Ambient_Birds.mp3"
+                }
+            },
+            "rooms": [
+                {
+                    "buttons": [
+                        {
+                            "nextRoom": [
+                                "catacombs"
+                            ],
+                            "text": "Fuck it"
+                        },
+                        {
+                            "nextRoom": [
+                                "library"
+                            ],
+                            "text": "Avoid Nail"
+                        }
+                    ],
+                    "id": "painting",
+                    "name": "Tricky Stair",
+                    "text": "While traversing the grand staircase, you imperceptibly notice a nail sticking out of one of the antique floorboards."
+                },
+                {
+                    "buttons": [
+                        {
+                            "nextRoom": [
+                                "fortune"
+                            ],
+                            "text": "Go Outside!"
+                        },
+                        {
+                            "nextRoom": [
+                                "sleepingPorch"
+                            ],
+                            "text": "Pass Out!"
+                        }
+                    ],
+                    "id": "catacombs",
+                    "name": "What the hell just happened?",
+                    "text": "Stepping on the Nail because you didn\u2019t think you\u2019d feel it through 4 inch platform heels your foot catches and, miraculously, you trip at a 90 degree angle to the 3rd dimension and find yourself in the kitchen of a respectable middle class rural suburban household. It smells of fresh coffee, and there\u2019s a half eaten scone on the counter. The kitchen door is open to the outside and you can see a park across the street.\u2019"
+                },
+                {
+                    "buttons": [
+                        {
+                            "nextRoom": [
+                                "card"
+                            ],
+                            "text": "Walk in the Park"
+                        },
+                        {
+                            "nextRoom": [
+                                "cemetery"
+                            ],
+                            "text": "Rusty Gate"
+                        }
+                    ],
+                    "id": "fortune",
+                    "name": "A breath of fresh air",
+                    "text": "The sun shines bright and birds singing in the trees. Couples are strolling in the park together with blankets and picnic baskets. A slight breeze brings scents of cherry blossoms. Their pink petals float in the breeze and line the sidewalks. You see a rusted gate at the end of the street that looks familiar."
+                },
+                {
+                    "buttons": [
+                        {
+                            "nextRoom": [
+                                "returnCard"
+                            ],
+                            "text": "Ice Cream!"
+                        },
+                        {
+                            "nextRoom": [
+                                "frontParlor"
+                            ],
+                            "text": "back to the party!"
+                        }
+                    ],
+                    "id": "card",
+                    "name": "A Lovely Day",
+                    "text": "As you stroll through the park an older man with the most adorable brown puppy and an ice cream cone passes by. He smiles at you friendlily. \u2018Great day for a double dip,\u2019 he says, motioning to the ice cream cart up the path. You remember that you appear to find yourself in an alternate reality and wonder if you should try to find your way back."
+                },
+                {
+                    "buttons": [
+                        {
+                            "nextRoom": [
+                                "trapDoor"
+                            ],
+                            "text": "Follow the music"
+                        },
+                        {
+                            "nextRoom": [
+                                "sleepingPorch"
+                            ],
+                            "text": "I\u2019m Creeped Out"
+                        }
+                    ],
+                    "id": "returnCard",
+                    "name": "Off the beaten path",
+                    "text": "This is the fanciest ice cream cart you\u2019ve found in years. You get a giant scoop of strawberry ice cream in a waffle cone and drizzled with a (frankly, obscenely expensive) balsamic vinegar. The kindly woman running the cart smiles at you, and winks when returning your change. You notice the quarter\u2019s faces here have Mary Ellen Pleasant on them instead of George Washington. Anyway, you see a path that leads off into the woods and you hear the sounds of a guitar strumming, perhaps flutes, coming from the wooded path.\u2019"
+                }
+            ]
+        },
+        {
+            "config": {},
+            "rooms": [
+                {
+                    "buttons": [
+                        {
+                            "nextRoom": [
+                                "kitchen"
+                            ],
+                            "text": "A mere man"
+                        },
+                        {
+                            "nextRoom": [
+                                "outsideClarendon"
+                            ],
+                            "text": "A mighty moth"
+                        }
+                    ],
+                    "id": "massAve",
+                    "name": "MassAve",
+                    "text": "You are walking along Mass Ave and see the NTB on the corner of Clarendon and Mass Ave. Do you keep walking or turn towards the glowing light away from Dunkin Donuts? Are you man or moth?"
+                },
+                {
+                    "buttons": [
+                        {
+                            "nextRoom": [
+                                "clarendon"
+                            ],
+                            "text": "Clarendon"
+                        },
+                        {
+                            "nextRoom": [
+                                "twentyFour"
+                            ],
+                            "text": "Twenty Four Please"
+                        }
+                    ],
+                    "id": "outsideClarendon",
+                    "name": "Outside Clarendon",
+                    "text": "You mighty moth, you! Are you going to head into Clarendon then? Or do you go ahead for another block or two and see if anyone is around at 24?"
+                }
+            ]
         }
-      },
-      "rooms": [
-        {
-          "buttons": [
-            {
-              "nextRoom": [
-                "catacombs"
-              ],
-              "text": "Fuck it"
-            },
-            {
-              "nextRoom": [
-                "library"
-              ],
-              "text": "Avoid Nail"
-            }
-          ],
-          "id": "painting",
-          "name": "Tricky Stair",
-          "text": "While traversing the grand staircase, you imperceptibly notice a nail sticking out of one of the antique floorboards."
-        },
-        {
-          "buttons": [
-            {
-              "nextRoom": [
-                "fortune"
-              ],
-              "text": "Go Outside!"
-            },
-            {
-              "nextRoom": [
-                "sleepingPorch"
-              ],
-              "text": "Pass Out!"
-            }
-          ],
-          "id": "catacombs",
-          "name": "What the hell just happened?",
-          "text": "Stepping on the Nail because you didn’t think you’d feel it through 4 inch platform heels your foot catches and, miraculously, you trip at a 90 degree angle to the 3rd dimension and find yourself in the kitchen of a respectable middle class rural suburban household. It smells of fresh coffee, and there’s a half eaten scone on the counter. The kitchen door is open to the outside and you can see a park across the street.’"
-        },
-        {
-          "buttons": [
-            {
-              "nextRoom": [
-                "card"
-              ],
-              "text": "Walk in the Park"
-            },
-            {
-              "nextRoom": [
-                "cemetery"
-              ],
-              "text": "Rusty Gate"
-            }
-          ],
-          "id": "fortune",
-          "name": "A breath of fresh air",
-          "text": "The sun shines bright and birds singing in the trees. Couples are strolling in the park together with blankets and picnic baskets. A slight breeze brings scents of cherry blossoms. Their pink petals float in the breeze and line the sidewalks. You see a rusted gate at the end of the street that looks familiar."
-        },
-        {
-          "buttons": [
-            {
-              "nextRoom": [
-                "returnCard"
-              ],
-              "text": "Ice Cream!"
-            },
-            {
-              "nextRoom": [
-                "frontParlor"
-              ],
-              "text": "back to the party!"
-            }
-          ],
-          "id": "card",
-          "name": "A Lovely Day",
-          "text": "As you stroll through the park an older man with the most adorable brown puppy and an ice cream cone passes by. He smiles at you friendlily. ‘Great day for a double dip,’ he says, motioning to the ice cream cart up the path. You remember that you appear to find yourself in an alternate reality and wonder if you should try to find your way back."
-        },
-        {
-          "buttons": [
-            {
-              "nextRoom": [
-                "trapDoor"
-              ],
-              "text": "Follow the music"
-            },
-            {
-              "nextRoom": [
-                "sleepingPorch"
-              ],
-              "text": "I’m Creeped Out"
-            }
-          ],
-          "id": "returnCard",
-          "name": "Off the beaten path",
-          "text": "This is the fanciest ice cream cart you’ve found in years. You get a giant scoop of strawberry ice cream in a waffle cone and drizzled with a (frankly, obscenely expensive) balsamic vinegar. The kindly woman running the cart smiles at you, and winks when returning your change. You notice the quarter’s faces here have Mary Ellen Pleasant on them instead of George Washington. Anyway, you see a path that leads off into the woods and you hear the sounds of a guitar strumming, perhaps flutes, coming from the wooded path.’"
-        }
-      ]
-    },
-    {
-      "config": {},
-      "rooms": [
-        {
-          "buttons": [
-            {
-              "nextRoom": [
-                "kitchen"
-              ],
-              "text": "A mere man"
-            },
-            {
-              "nextRoom": [
-                "outsideClarendon"
-              ],
-              "text": "A mighty moth"
-            }
-          ],
-          "id": "massAve",
-          "name": "MassAve",
-          "text": "You are walking along Mass Ave and see the NTB on the corner of Clarendon and Mass Ave. Do you keep walking or turn towards the glowing light away from Dunkin Donuts? Are you man or moth?"
-        },
-        {
-          "buttons": [
-            {
-              "nextRoom": [
-                "clarendon"
-              ],
-              "text": "Clarendon"
-            },
-            {
-              "nextRoom": [
-                "twentyFour"
-              ],
-              "text": "Twenty Four Please"
-            }
-          ],
-          "id": "outsideClarendon",
-          "name": "Outside Clarendon",
-          "text": "You mighty moth, you! Are you going to head into Clarendon then? Or do you go ahead for another block or two and see if anyone is around at 24?"
-        }
-      ]
-    }
-  ]
+    ]
 }

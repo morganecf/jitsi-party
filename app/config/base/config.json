@@ -1,46 +1,45 @@
 {
-	"debug": true,
-	"page_title": "Jitsi Party",
-	"mapUnlockThreshold": 3,
-	"jitsiServerUrl": "meet.jit.si",
-	"overrideJitsiServerUrlWithWindowHost": true,
-	"noJitsiServerSSL": false,
-	"useLocalSessions": true,
-	"moderation": {},
-	"startRoom": "vestibule",
-	"welcomePage": {
-		"avatarSelectionEnabled": true,
-		"enterSpaceButtonText": "Start",
-		"avatarSelectionText": "Select your Avatar",
-		"headerHtml": "<br><h1>Welcome</h1>"
-	},
-	"avatars": [
-	  {
-	  	"images": [
-	    	"https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-black.png",
-	    	"https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-blue.png",
-	    	"https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-red.png",
-	    	"https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-green.png"
-	    ]
-	  }
-	],
-	"specialAvatars": {
-	},
-	"map": {
-		"stats": {
-			"numberInHouse": {
-				"display": true,
-				"text": "🏚️ {count} in house"
-			},
-			"numberInRooms": {
-				"display": true,
-				"text": "🚪 {count} in rooms"
-			},
-			"numberInHallways": {
-				"display": true,
-				"text": "🌓 {count} roaming"
-			},
-			"additionalStats": []
-		}
-	}
+    "debug": true,
+    "page_title": "Jitsi Party",
+    "mapUnlockThreshold": 3,
+    "jitsiServerUrl": "meet.jit.si",
+    "overrideJitsiServerUrlWithWindowHost": true,
+    "noJitsiServerSSL": false,
+    "useLocalSessions": true,
+    "moderation": {},
+    "startRoom": "vestibule",
+    "welcomePage": {
+        "avatarSelectionEnabled": true,
+        "enterSpaceButtonText": "Start",
+        "avatarSelectionText": "Select your Avatar",
+        "headerHtml": "<br><h1>Welcome</h1>"
+    },
+    "avatars": [
+        {
+            "images": [
+                "https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-black.png",
+                "https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-blue.png",
+                "https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-red.png",
+                "https://jitsi-default.s3.amazonaws.com/default-avatar/default-avatar-green.png"
+            ]
+        }
+    ],
+    "specialAvatars": {},
+    "map": {
+        "stats": {
+            "numberInHouse": {
+                "display": true,
+                "text": "\ud83c\udfda\ufe0f {count} in house"
+            },
+            "numberInRooms": {
+                "display": true,
+                "text": "\ud83d\udeaa {count} in rooms"
+            },
+            "numberInHallways": {
+                "display": true,
+                "text": "\ud83c\udf13 {count} roaming"
+            },
+            "additionalStats": []
+        }
+    }
 }

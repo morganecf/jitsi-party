@@ -1,199 +1,199 @@
 {
     "rooms": [
         {
-           "id": "vestibule",
-           "name": "Vestibule",
-           "type": "JITSI",
-           "description": "Welcome!",
-           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/vestibule.png",
-           "directions": {
-               "north": "livingRoom",
-               "west": "closet",
-               "east": "gameRoom"
-           },
-           "map": {
-               "x": 16,
-               "y": 19,
-               "width": 5,
-               "height": 3,
-               "doors": {
-                   "north": 16,
-                   "west": 20,
-                   "east": 20
-               }
-           },
-           "doorTint": "#f5ccc5"
-       },
-       {
-           "id": "closet",
-           "name": "Closet",
-           "type": "JITSI",
-           "capacity": 2,
-           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/closet.png",
-           "description": "A quiet, cozy closet for two. Shhh.",
-           "directions": {
-               "east": "vestibule"
-           },
-           "map": {
-               "x": 15,
-               "y": 20,
-               "width": 1,
-               "height": 2,
-               "doors": {
-                   "east": 20
-               }
-           },
-           "doorTint": "f3bd1b"
-       },
-       {
-           "id": "livingRoom",
-           "name": "Living Room",
-           "type": "JITSI",
-           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/livingroom.jpg",
-           "directions": {
-               "north": "danceParty",
-               "south": "vestibule",
-               "west": "trashyBedroom",
-               "east": "kitchen"
-           },
-           "map": {
-               "x": 11,
-               "y": 14,
-               "width": 8,
-               "height": 5,
-               "doors": {
-                   "north": 15,
-                   "west": 15,
-                   "east": 15,
-                   "south": 16
-               }
-           },
-           "doorTint": "#FF5938"
-       },
-       {
-           "id": "danceParty",
-           "name": "Dave's Rave Cave",
-           "type": "IFRAME",
-           "description": "Dance until you die!!",
-           "muteRoom": true,
-           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/fvn_stvff_keep_it_pushin.jpg",
-           "iframeOptions": {
-               "src": "https://player.twitch.tv/?channel=david_codes&parent=cabinweekend.party"
-           },
-           "directions": {
-               "west": "bathroom",
-               "south": "livingRoom",
-               "north": "music"
-           },
-           "map": {
-               "x": 13,
-               "y": 9,
-               "width": 5,
-               "height": 5,
-               "doors": {
-                   "south": 15,
-                   "west": 12,
-                   "north": 15
-               }
-           },
-           "doorTint": "#E8BE3C"
-       },
-       {
-           "id": "music",
-           "name": "Music Room",
-           "type": "IFRAME",
-           "description": "@kadam is DJing all night!",
-           "muteRoom": true,
-           "iframeOptions": {
-               "src": "https://player.twitch.tv/?channel=kadaminimal&parent=cabinweekend.party"
-           },
-           "directions": {
-               "south": "danceParty",
-               "north": "outdoors"
-           },
-           "map": {
-               "x": 14,
-               "y": 5,
-               "width": 4,
-               "height": 4,
-               "doors": {
-                   "south": 15
-               }
-           },
-           "doorTint": "#9EFF7A"
-       },
-       {
-           "id": "bathroom",
-           "name": "Bathroom",
-           "type": "JITSI",
-           "capacity": 3,
-           "description": "A cozy bathroom.",
-           "directions": {
-               "east": "danceParty",
-               "south": "trashyBedroom",
-               "north": "boudoir"
-           },
-           "map": {
-               "x": 9,
-               "y": 11,
-               "width": 4,
-               "height": 2,
-               "doors": {
-                   "east": 12,
-                   "south": 9,
-                   "north": 10
-               }
-           },
-           "doorTint": "white"
-       },
-       {
-           "id": "boudoir",
-           "name": "Le Boudoir",
-           "type": "JITSI",
-           "capacity": 5,
-           "description": "One is a mass of lust and greed that absorbs and excrete.",
-           "directions": {
-               "south": "bathroom"
-           },
-           "map": {
-               "x": 10,
-               "y": 8,
-               "width": 3,
-               "height": 3,
-               "doors": {
-                   "south": 10
-               }
-           },
-           "doorTint": "red"
-       },
-       {
-           "id": "trashyBedroom",
-           "name": "Parent HQ",
-           "type": "JITSI",
-           "capacity": 10,
-           "description": "A gathering space for parents!",
-           "directions": {
-               "north": "bathroom",
-               "east": "livingRoom",
-               "west": "punishmentCloset",
-               "south": "bubbleBaths"
-           },
-           "map": {
-               "x": 8,
-               "y": 13,
-               "width": 3,
-               "height": 4,
-               "doors": {
-                   "north": 9,
-                   "east": 15,
-                   "west": 15,
-                   "south": 9
-               }
-           },
-           "doorTint": "black"
-       },
-       {
-           "id": "bubbleBaths",
+            "id": "vestibule",
+            "name": "Vestibule",
+            "type": "JITSI",
+            "description": "Welcome!",
+            "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/vestibule.png",
+            "directions": {
+                "north": "livingRoom",
+                "west": "closet",
+                "east": "gameRoom"
+            },
+            "map": {
+                "x": 16,
+                "y": 19,
+                "width": 5,
+                "height": 3,
+                "doors": {
+                    "north": 16,
+                    "west": 20,
+                    "east": 20
+                }
+            },
+            "doorTint": "#f5ccc5"
+        },
+        {
+            "id": "closet",
+            "name": "Closet",
+            "type": "JITSI",
+            "capacity": 2,
+            "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/closet.png",
+            "description": "A quiet, cozy closet for two. Shhh.",
+            "directions": {
+                "east": "vestibule"
+            },
+            "map": {
+                "x": 15,
+                "y": 20,
+                "width": 1,
+                "height": 2,
+                "doors": {
+                    "east": 20
+                }
+            },
+            "doorTint": "f3bd1b"
+        },
+        {
+            "id": "livingRoom",
+            "name": "Living Room",
+            "type": "JITSI",
+            "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/livingroom.jpg",
+            "directions": {
+                "north": "danceParty",
+                "south": "vestibule",
+                "west": "trashyBedroom",
+                "east": "kitchen"
+            },
+            "map": {
+                "x": 11,
+                "y": 14,
+                "width": 8,
+                "height": 5,
+                "doors": {
+                    "north": 15,
+                    "west": 15,
+                    "east": 15,
+                    "south": 16
+                }
+            },
+            "doorTint": "#FF5938"
+        },
+        {
+            "id": "danceParty",
+            "name": "Dave's Rave Cave",
+            "type": "IFRAME",
+            "description": "Dance until you die!!",
+            "muteRoom": true,
+            "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/fvn_stvff_keep_it_pushin.jpg",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=david_codes&parent=cabinweekend.party"
+            },
+            "directions": {
+                "west": "bathroom",
+                "south": "livingRoom",
+                "north": "music"
+            },
+            "map": {
+                "x": 13,
+                "y": 9,
+                "width": 5,
+                "height": 5,
+                "doors": {
+                    "south": 15,
+                    "west": 12,
+                    "north": 15
+                }
+            },
+            "doorTint": "#E8BE3C"
+        },
+        {
+            "id": "music",
+            "name": "Music Room",
+            "type": "IFRAME",
+            "description": "@kadam is DJing all night!",
+            "muteRoom": true,
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=kadaminimal&parent=cabinweekend.party"
+            },
+            "directions": {
+                "south": "danceParty",
+                "north": "outdoors"
+            },
+            "map": {
+                "x": 14,
+                "y": 5,
+                "width": 4,
+                "height": 4,
+                "doors": {
+                    "south": 15
+                }
+            },
+            "doorTint": "#9EFF7A"
+        },
+        {
+            "id": "bathroom",
+            "name": "Bathroom",
+            "type": "JITSI",
+            "capacity": 3,
+            "description": "A cozy bathroom.",
+            "directions": {
+                "east": "danceParty",
+                "south": "trashyBedroom",
+                "north": "boudoir"
+            },
+            "map": {
+                "x": 9,
+                "y": 11,
+                "width": 4,
+                "height": 2,
+                "doors": {
+                    "east": 12,
+                    "south": 9,
+                    "north": 10
+                }
+            },
+            "doorTint": "white"
+        },
+        {
+            "id": "boudoir",
+            "name": "Le Boudoir",
+            "type": "JITSI",
+            "capacity": 5,
+            "description": "One is a mass of lust and greed that absorbs and excrete.",
+            "directions": {
+                "south": "bathroom"
+            },
+            "map": {
+                "x": 10,
+                "y": 8,
+                "width": 3,
+                "height": 3,
+                "doors": {
+                    "south": 10
+                }
+            },
+            "doorTint": "red"
+        },
+        {
+            "id": "trashyBedroom",
+            "name": "Parent HQ",
+            "type": "JITSI",
+            "capacity": 10,
+            "description": "A gathering space for parents!",
+            "directions": {
+                "north": "bathroom",
+                "east": "livingRoom",
+                "west": "punishmentCloset",
+                "south": "bubbleBaths"
+            },
+            "map": {
+                "x": 8,
+                "y": 13,
+                "width": 3,
+                "height": 4,
+                "doors": {
+                    "north": 9,
+                    "east": 15,
+                    "west": 15,
+                    "south": 9
+                }
+            },
+            "doorTint": "black"
+        },
+        {
+            "id": "bubbleBaths",
             "name": "Bubble Baths",
             "type": "JITSI",
             "description": "Let's make a human soup!",
@@ -213,52 +213,52 @@
             "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/baths.jpg"
         },
         {
-           "id": "punishmentCloset",
-           "name": "Punishment Closet",
-           "type": "JITSI",
-           "capacity": 2,
-           "description": "Fits two.",
-           "directions": {
-               "east": "trashyBedroom"
-           },
-           "map": {
-               "x": 7,
-               "y": 15,
-               "width": 1,
-               "height": 2,
-               "doors": {
-                   "east": 15
-               }
-           },
-           "doorTint": "black"
-       },
-       {
-           "id": "bunnyRun",
-           "name": "The Bunny Run",
-           "type": "IFRAME",
-           "description": "🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰🐰",
-           "iframeOptions": {
-               "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
-           },
-           "directions": {
-               "west": "passageway",
-               "north": "cloister"
-           },
-           "map": {
-               "x": 27,
-               "y": 14,
-               "width": 3,
-               "height": 3,
-               "doors": {
-                   "west": 15,
-                   "north": 28
-               }
-           },
-           "doorTint": "#64E0E8",
-           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/bunnywedding.jpg"
-       },
-       {
-           "id": "passageway",
+            "id": "punishmentCloset",
+            "name": "Punishment Closet",
+            "type": "JITSI",
+            "capacity": 2,
+            "description": "Fits two.",
+            "directions": {
+                "east": "trashyBedroom"
+            },
+            "map": {
+                "x": 7,
+                "y": 15,
+                "width": 1,
+                "height": 2,
+                "doors": {
+                    "east": 15
+                }
+            },
+            "doorTint": "black"
+        },
+        {
+            "id": "bunnyRun",
+            "name": "The Bunny Run",
+            "type": "IFRAME",
+            "description": "\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30\ud83d\udc30",
+            "iframeOptions": {
+                "src": "https://player.twitch.tv/?channel=bunheroes&parent=cabinweekend.party"
+            },
+            "directions": {
+                "west": "passageway",
+                "north": "cloister"
+            },
+            "map": {
+                "x": 27,
+                "y": 14,
+                "width": 3,
+                "height": 3,
+                "doors": {
+                    "west": 15,
+                    "north": 28
+                }
+            },
+            "doorTint": "#64E0E8",
+            "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/bunnywedding.jpg"
+        },
+        {
+            "id": "passageway",
             "name": "Narrow Passage",
             "type": "JITSI",
             "capacity": 2,
@@ -280,33 +280,33 @@
             "doorTint": "#4b0202"
         },
         {
-           "id": "kitchen",
-           "name": "Kitchen",
-           "type": "JITSI",
-           "description": "The joy, joy, joy of eating someone new!",
-           "directions": {
-               "west": "livingRoom",
-               "east": "passageway",
-               "south": "gameRoom",
-               "north": "corridor"
-           },
-           "map": {
-               "x": 19,
-               "y": 12,
-               "width": 5,
-               "height": 6,
-               "doors": {
-                   "south": 22,
-                   "east": 15,
-                   "west": 15,
-                   "north": 21
-               }
-           },
-           "doorTint": "green",
-           "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/kitchen.jpg"
+            "id": "kitchen",
+            "name": "Kitchen",
+            "type": "JITSI",
+            "description": "The joy, joy, joy of eating someone new!",
+            "directions": {
+                "west": "livingRoom",
+                "east": "passageway",
+                "south": "gameRoom",
+                "north": "corridor"
+            },
+            "map": {
+                "x": 19,
+                "y": 12,
+                "width": 5,
+                "height": 6,
+                "doors": {
+                    "south": 22,
+                    "east": 15,
+                    "west": 15,
+                    "north": 21
+                }
+            },
+            "doorTint": "green",
+            "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/kitchen.jpg"
         },
         {
-           "id": "corridor",
+            "id": "corridor",
             "name": "Haunted Corridor",
             "type": "JITSI",
             "capacity": 3,
@@ -325,9 +325,9 @@
                 }
             },
             "doorTint": "grey"
-       },
+        },
         {
-           "id": "mapRoom",
+            "id": "mapRoom",
             "name": "Map Room",
             "type": "IFRAME",
             "iframeOptions": {
@@ -350,7 +350,7 @@
             "doorTint": "blue"
         },
         {
-           "id": "library",
+            "id": "library",
             "name": "Library",
             "type": "IMAGEMAP",
             "imageMapOptions": "library-map",
@@ -371,14 +371,14 @@
             "doorTint": "#a7240e"
         },
         {
-           "id": "gallery",
+            "id": "gallery",
             "name": "Art Gallery",
             "type": "ART",
             "description": "In case you missed it last time, here's a selection of submissions from previous parties.",
             "art": {
-              "title": "From left to right:",
-              "artist": "Daniel, Alex, Mihai, LaRen, Ramona",
-              "src": "https://cabin-weekend.s3.amazonaws.com/art/clarendon-retro.png"
+                "title": "From left to right:",
+                "artist": "Daniel, Alex, Mihai, LaRen, Ramona",
+                "src": "https://cabin-weekend.s3.amazonaws.com/art/clarendon-retro.png"
             },
             "directions": {
                 "west": "library",
@@ -398,7 +398,7 @@
             "backgroundImage": ""
         },
         {
-           "id": "cloister",
+            "id": "cloister",
             "name": "A Humble Cloister",
             "type": "JITSI",
             "capacity": 2,
@@ -422,7 +422,7 @@
             "backgroundImage": ""
         },
         {
-           "id": "gameRoom",
+            "id": "gameRoom",
             "name": "Game Room",
             "type": "JITSI",
             "description": "Ask Dan S if you want to play poker.",
@@ -446,7 +446,7 @@
             "backgroundImage": "https://cabin-weekend.s3.amazonaws.com/rooms/gameroom.jpg"
         },
         {
-           "id": "courtyard",
+            "id": "courtyard",
             "name": "The Courtyard",
             "type": "JITSI",
             "doorTint": "blue"

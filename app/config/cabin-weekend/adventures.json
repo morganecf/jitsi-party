@@ -9,11 +9,15 @@
                     "buttons": [
                         {
                             "text": "Teleport me!!",
-                            "nextRoom": ["*"]
+                            "nextRoom": [
+                                "*"
+                            ]
                         },
                         {
                             "text": "I want to leave >:(",
-                            "nextRoom": ["bye"]
+                            "nextRoom": [
+                                "bye"
+                            ]
                         }
                     ]
                 }
@@ -35,11 +39,15 @@
                     "buttons": [
                         {
                             "text": "Go through it",
-                            "nextRoom": ["courtyard2"]
+                            "nextRoom": [
+                                "courtyard2"
+                            ]
                         },
                         {
                             "text": "Keep walking",
-                            "nextRoom": ["cloister"]
+                            "nextRoom": [
+                                "cloister"
+                            ]
                         }
                     ]
                 },
@@ -50,56 +58,72 @@
                     "buttons": [
                         {
                             "text": "You approach the stage",
-                            "nextRoom": ["courtyard3"]
+                            "nextRoom": [
+                                "courtyard3"
+                            ]
                         },
                         {
                             "text": "You head to the bar",
-                            "nextRoom": ["courtyard4"]
+                            "nextRoom": [
+                                "courtyard4"
+                            ]
                         },
                         {
                             "text": "You approach the pianist",
-                            "nextRoom": ["courtyard5"]
+                            "nextRoom": [
+                                "courtyard5"
+                            ]
                         }
                     ]
                 },
                 {
-                    "id": "courtyard3", 
+                    "id": "courtyard3",
                     "name": "The stage",
                     "text": "The burlesque dancer looks down at you, tears streaming down her cheeks. I am sorry, she says.",
                     "buttons": [
                         {
                             "text": "But why?",
-                            "nextRoom": ["vestibule"]
+                            "nextRoom": [
+                                "vestibule"
+                            ]
                         }
                     ]
                 },
                 {
-                    "id": "courtyard4", 
+                    "id": "courtyard4",
                     "name": "The bar",
                     "text": "The bartender is wearing a white tux. You don't ask, but he tells you anyway: the courtyard is a great place to smoke.",
                     "buttons": [
                         {
                             "text": "Ask for a drink",
-                            "nextRoom": ["kitchen"]
+                            "nextRoom": [
+                                "kitchen"
+                            ]
                         },
                         {
                             "text": "Go to the courtyard",
-                            "nextRoom": ["courtyard"]
+                            "nextRoom": [
+                                "courtyard"
+                            ]
                         }
                     ]
                 },
                 {
-                    "id": "courtyard5", 
+                    "id": "courtyard5",
                     "name": "The pianist",
                     "text": "Most seem to have forgotten about us, the pianist says. He doesn't take his eyes off the keys. Will you be back?",
                     "buttons": [
                         {
                             "text": "Probably",
-                            "nextRoom": ["vestibule"]
+                            "nextRoom": [
+                                "vestibule"
+                            ]
                         },
                         {
                             "text": "Probably not",
-                            "nextRoom": ["bye"]
+                            "nextRoom": [
+                                "bye"
+                            ]
                         }
                     ]
                 }
@@ -129,7 +153,9 @@
                         },
                         {
                             "text": "Leave",
-                            "nextRoom": ["artGallery"]
+                            "nextRoom": [
+                                "artGallery"
+                            ]
                         }
                     ]
                 },
@@ -139,7 +165,9 @@
                     "buttons": [
                         {
                             "text": "Pop some molly",
-                            "nextRoom": ["ucTalk"]
+                            "nextRoom": [
+                                "ucTalk"
+                            ]
                         },
                         {
                             "text": "Sip your beer",
@@ -158,15 +186,21 @@
                         },
                         {
                             "text": "Attend the court of Lady Ketamine",
-                            "nextRoom": ["ucKetamine"]
+                            "nextRoom": [
+                                "ucKetamine"
+                            ]
                         },
                         {
                             "text": "You are above drugs",
-                            "nextRoom": ["ucNarc"]
+                            "nextRoom": [
+                                "ucNarc"
+                            ]
                         },
                         {
                             "text": "You are beyond drugs",
-                            "nextRoom": ["ucAliens"]
+                            "nextRoom": [
+                                "ucAliens"
+                            ]
                         }
                     ]
                 },
@@ -176,11 +210,15 @@
                     "buttons": [
                         {
                             "text": "Prod the sleeping form awake",
-                            "nextRoom": ["ucSmell"]
+                            "nextRoom": [
+                                "ucSmell"
+                            ]
                         },
                         {
                             "text": "Do nothing",
-                            "nextRoom": ["ucSmell"]
+                            "nextRoom": [
+                                "ucSmell"
+                            ]
                         }
                     ]
                 },
@@ -190,11 +228,15 @@
                     "buttons": [
                         {
                             "text": "You are upset. There can only be one you!",
-                            "nextRoom": ["vestibule"]
+                            "nextRoom": [
+                                "vestibule"
+                            ]
                         },
                         {
                             "text": "You are glad. Redundancy is valuable.",
-                            "nextRoom": ["ucBird"]
+                            "nextRoom": [
+                                "ucBird"
+                            ]
                         }
                     ]
                 },
@@ -204,11 +246,15 @@
                     "buttons": [
                         {
                             "text": "Sex",
-                            "nextRoom": ["trashyBedroom"]
+                            "nextRoom": [
+                                "trashyBedroom"
+                            ]
                         },
                         {
                             "text": "Ask them about their life",
-                            "nextRoom": ["ucQuestion"]
+                            "nextRoom": [
+                                "ucQuestion"
+                            ]
                         }
                     ]
                 },
@@ -218,7 +264,9 @@
                     "buttons": [
                         {
                             "text": "'Come with me,' they respond. 'I'll show you.'",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         }
                     ]
                 },
@@ -228,11 +276,15 @@
                     "buttons": [
                         {
                             "text": "Turn back now",
-                            "nextRoom": ["artGallery"]
+                            "nextRoom": [
+                                "artGallery"
+                            ]
                         },
                         {
                             "text": "Endure",
-                            "nextRoom": ["ucFeelings"]
+                            "nextRoom": [
+                                "ucFeelings"
+                            ]
                         }
                     ]
                 },
@@ -242,19 +294,27 @@
                     "buttons": [
                         {
                             "text": "Nostalgic",
-                            "nextRoom": ["ucNostalgic"]
+                            "nextRoom": [
+                                "ucNostalgic"
+                            ]
                         },
                         {
                             "text": "Horny",
-                            "nextRoom": ["trashyBedroom"]
+                            "nextRoom": [
+                                "trashyBedroom"
+                            ]
                         },
                         {
                             "text": "Terrified",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Lit",
-                            "nextRoom": ["trashyBedroom"]
+                            "nextRoom": [
+                                "trashyBedroom"
+                            ]
                         }
                     ]
                 },
@@ -264,11 +324,15 @@
                     "buttons": [
                         {
                             "text": "Keep drinking. Scientists know nothing.",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Run to the bathroom",
-                            "nextRoom": ["bathroom"]
+                            "nextRoom": [
+                                "bathroom"
+                            ]
                         }
                     ]
                 },
@@ -278,11 +342,15 @@
                     "buttons": [
                         {
                             "text": "Go back to the party",
-                            "nextRoom": ["artGallery"]
+                            "nextRoom": [
+                                "artGallery"
+                            ]
                         },
                         {
                             "text": "Talk to yourself",
-                            "nextRoom": ["ucRamble"]
+                            "nextRoom": [
+                                "ucRamble"
+                            ]
                         }
                     ]
                 },
@@ -292,15 +360,21 @@
                     "buttons": [
                         {
                             "text": "A catalogue of all of your sexual misdeeds, both real and imagined",
-                            "nextRoom": ["ucFeelings"]
+                            "nextRoom": [
+                                "ucFeelings"
+                            ]
                         },
                         {
                             "text": "Beep beep beep. Beep? Beeeeep!",
-                            "nextRoom": ["ucLose"]
+                            "nextRoom": [
+                                "ucLose"
+                            ]
                         },
                         {
                             "text": "\"I realize now that all my life has been confined in a prison of likes and dislikes.\"",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         }
                     ]
                 },
@@ -310,7 +384,9 @@
                     "buttons": [
                         {
                             "text": "The wide expanse of night sky",
-                            "nextRoom": ["ucStars"]
+                            "nextRoom": [
+                                "ucStars"
+                            ]
                         },
                         {
                             "text": "Jackson",
@@ -334,7 +410,9 @@
                     "buttons": [
                         {
                             "text": "Go outside",
-                            "nextRoom": ["outdoors"]
+                            "nextRoom": [
+                                "outdoors"
+                            ]
                         },
                         {
                             "text": "Smash your head against the wall",
@@ -371,11 +449,15 @@
                     "buttons": [
                         {
                             "text": "PAIN",
-                            "nextRoom": ["artGallery"]
+                            "nextRoom": [
+                                "artGallery"
+                            ]
                         },
                         {
                             "text": "PAAAAAAIN",
-                            "nextRoom": ["ucAliens"]
+                            "nextRoom": [
+                                "ucAliens"
+                            ]
                         }
                     ]
                 },
@@ -385,11 +467,15 @@
                     "buttons": [
                         {
                             "text": "Join her",
-                            "nextRoom": ["artGallery"]
+                            "nextRoom": [
+                                "artGallery"
+                            ]
                         },
                         {
                             "text": "Watch her and take notes",
-                            "nextRoom": ["ucThao"]
+                            "nextRoom": [
+                                "ucThao"
+                            ]
                         }
                     ]
                 },
@@ -399,11 +485,15 @@
                     "buttons": [
                         {
                             "text": "Let it happen",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Barge out of the closet, screaming THIS ENDS NOW",
-                            "nextRoom": ["ucLose"]
+                            "nextRoom": [
+                                "ucLose"
+                            ]
                         }
                     ]
                 },
@@ -413,15 +503,21 @@
                     "buttons": [
                         {
                             "text": "Try to make it happy",
-                            "nextRoom": ["ucAlienMusic"]
+                            "nextRoom": [
+                                "ucAlienMusic"
+                            ]
                         },
                         {
                             "text": "Stare at it stoically",
-                            "nextRoom": ["ucAlienAwkward"]
+                            "nextRoom": [
+                                "ucAlienAwkward"
+                            ]
                         },
                         {
                             "text": "Offer it some drugs",
-                            "nextRoom": ["ucAlienThanks"]
+                            "nextRoom": [
+                                "ucAlienThanks"
+                            ]
                         }
                     ]
                 },
@@ -431,11 +527,15 @@
                     "buttons": [
                         {
                             "text": "Try to make it happy",
-                            "nextRoom": ["ucAlienMusic"]
+                            "nextRoom": [
+                                "ucAlienMusic"
+                            ]
                         },
                         {
                             "text": "Offer it some drugs",
-                            "nextRoom": ["ucAlienThanks"]
+                            "nextRoom": [
+                                "ucAlienThanks"
+                            ]
                         }
                     ]
                 },
@@ -445,11 +545,15 @@
                     "buttons": [
                         {
                             "text": "Go toward the light",
-                            "nextRoom": ["ucKetamine"]
+                            "nextRoom": [
+                                "ucKetamine"
+                            ]
                         },
                         {
                             "text": "Try to find your way back to the closet",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         }
                     ]
                 },
@@ -459,15 +563,21 @@
                     "buttons": [
                         {
                             "text": "Dreaming of tea and crumpets",
-                            "nextRoom": ["ucLose"]
+                            "nextRoom": [
+                                "ucLose"
+                            ]
                         },
                         {
                             "text": "Plotting how to foil these degenerates",
-                            "nextRoom": ["ucLose"]
+                            "nextRoom": [
+                                "ucLose"
+                            ]
                         },
                         {
                             "text": "Doing drugs",
-                            "nextRoom": ["ucDrugs"]
+                            "nextRoom": [
+                                "ucDrugs"
+                            ]
                         }
                     ]
                 },
@@ -477,23 +587,33 @@
                     "buttons": [
                         {
                             "text": "Soft, blinking lights",
-                            "nextRoom": ["ucAliens"]
+                            "nextRoom": [
+                                "ucAliens"
+                            ]
                         },
                         {
                             "text": "Social anxiety",
-                            "nextRoom": ["ucTerrified"]
+                            "nextRoom": [
+                                "ucTerrified"
+                            ]
                         },
                         {
                             "text": "Lady Ketamine herself, smirking",
-                            "nextRoom": ["ucLadyK"]
+                            "nextRoom": [
+                                "ucLadyK"
+                            ]
                         },
                         {
                             "text": "Jackson, always Jackson",
-                            "nextRoom": ["ucJackson"]
+                            "nextRoom": [
+                                "ucJackson"
+                            ]
                         },
                         {
                             "text": "A red curtain",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         }
                     ]
                 },
@@ -503,15 +623,21 @@
                     "buttons": [
                         {
                             "text": "Metal",
-                            "nextRoom": ["ucAlienThanks"]
+                            "nextRoom": [
+                                "ucAlienThanks"
+                            ]
                         },
                         {
                             "text": "The History of Rome",
-                            "nextRoom": ["ucHistoryRome"]
+                            "nextRoom": [
+                                "ucHistoryRome"
+                            ]
                         },
                         {
                             "text": "Black metal",
-                            "nextRoom": ["ucAlienThanks"]
+                            "nextRoom": [
+                                "ucAlienThanks"
+                            ]
                         }
                     ]
                 },
@@ -521,11 +647,15 @@
                     "buttons": [
                         {
                             "text": "Fall asleep",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Learn a lot about Rome",
-                            "nextRoom": ["vestibule"]
+                            "nextRoom": [
+                                "vestibule"
+                            ]
                         }
                     ]
                 },
@@ -535,19 +665,27 @@
                     "buttons": [
                         {
                             "text": "Flogged someone for the first time",
-                            "nextRoom": ["trashyBedroom"]
+                            "nextRoom": [
+                                "trashyBedroom"
+                            ]
                         },
                         {
                             "text": "Forgot to eat all weekend",
-                            "nextRoom": ["kitchen"]
+                            "nextRoom": [
+                                "kitchen"
+                            ]
                         },
                         {
                             "text": "Literally became evil",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Had a lot of darned fun!",
-                            "nextRoom": ["ucFun"]
+                            "nextRoom": [
+                                "ucFun"
+                            ]
                         }
                     ]
                 },
@@ -557,11 +695,15 @@
                     "buttons": [
                         {
                             "text": "Take me home, sweet Mother...",
-                            "nextRoom": ["artGallery"]
+                            "nextRoom": [
+                                "artGallery"
+                            ]
                         },
                         {
                             "text": "No! I must endure!",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         }
                     ]
                 },
@@ -571,11 +713,15 @@
                     "buttons": [
                         {
                             "text": "Up into the sky",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Down into the earth",
-                            "nextRoom": ["ucDungeon"]
+                            "nextRoom": [
+                                "ucDungeon"
+                            ]
                         }
                     ]
                 },
@@ -585,11 +731,15 @@
                     "buttons": [
                         {
                             "text": "You love her",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "You loathe her",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         }
                     ]
                 },
@@ -599,19 +749,27 @@
                     "buttons": [
                         {
                             "text": "I don't know, I don't know, I DON'T KNOW",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Being confronted with the unknown",
-                            "nextRoom": ["ucAliens"]
+                            "nextRoom": [
+                                "ucAliens"
+                            ]
                         },
                         {
                             "text": "Something I can never have",
-                            "nextRoom": ["ucTerrified"]
+                            "nextRoom": [
+                                "ucTerrified"
+                            ]
                         },
                         {
                             "text": "Dancing like no one's watching, living every day like it's your last",
-                            "nextRoom": ["ucLose"]
+                            "nextRoom": [
+                                "ucLose"
+                            ]
                         }
                     ]
                 },
@@ -621,15 +779,21 @@
                     "buttons": [
                         {
                             "text": "Give Jackson a high five",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Thank Jackson for his service",
-                            "nextRoom": ["room314"]
+                            "nextRoom": [
+                                "room314"
+                            ]
                         },
                         {
                             "text": "Say nothing. Nod stoically.",
-                            "nextRoom": ["artGallery"]
+                            "nextRoom": [
+                                "artGallery"
+                            ]
                         }
                     ]
                 },
@@ -638,8 +802,10 @@
                     "text": "Wrong choice, bucko. That's how you *lose* this game.",
                     "buttons": [
                         {
-                            "text": "No, please, not again, I can't take it any—",
-                            "nextRoom": ["artCloset"]
+                            "text": "No, please, not again, I can't take it any\u2014",
+                            "nextRoom": [
+                                "artCloset"
+                            ]
                         }
                     ]
                 }
