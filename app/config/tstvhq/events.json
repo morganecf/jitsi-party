@@ -6,7 +6,7 @@
             "room": "grandBallroom",
             "start": "2021-04-29T20:00:00-05:00",
             "end": "2021-04-30T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "TST Sober Faction: Sobriety Without Superstition",
@@ -14,7 +14,7 @@
             "room": "garden",
             "start": "2021-04-29T20:00:00-05:00",
             "end": "2021-04-29T21:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "#StopAsianHate Discussion Panel",
@@ -22,7 +22,7 @@
             "room": "frontParlor",
             "start": "2021-04-29T20:30:00-05:00",
             "end": "2021-04-29T21:30:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Satanic Show + Tell Live",
@@ -30,7 +30,7 @@
             "room": "teaRoom",
             "start": "2021-04-29T22:00:00-05:00",
             "end": "2021-04-29T23:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Salem Witch Wiles",
@@ -38,7 +38,7 @@
             "room": "backParlor",
             "start": "2021-04-29T23:30:00-05:00",
             "end": "2021-04-30T01:30:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Bats in the Belfry!",
@@ -46,7 +46,7 @@
             "room": "belfry",
             "start": "2021-04-29T20:00:00-05:00",
             "end": "2021-05-03T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "A Happy Hooven Home: Goats!",
@@ -54,7 +54,7 @@
             "room": "sleepingPorch",
             "start": "2021-04-29T20:00:00-05:00",
             "end": "2021-05-03T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Grey Faction Satanic Archives",
@@ -62,7 +62,7 @@
             "room": "library",
             "start": "2021-04-29T20:00:00-05:00",
             "end": "2021-05-03T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-art.png"
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         }
     ]
 }
