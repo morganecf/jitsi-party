@@ -1,75 +1,67 @@
 {
     "events": [
         {
-            "name": "History of Bodily Autonomy, Non-Heteronormative Political Impacts and Culture in Caribbean Communities",
+            "name": "The Whimsical Blasphemy Show with Mercy Maelica",
             "description": "Join award-winning internationally touring recording artist and D.C. affiliate Director of Black Nonbelievers Rogiérs Fibby as he lectures regarding intra-community oppressive dynamics, sexual identities and revolution in the Caribbean communities. In addition to his work with Alicia Keys, Robert Glasper, Mo’Nique and others, he works closely with the American Humanist Association, Freedom From Religion Foundation, the Religious Freedom Forum, the Secular Coalition of America and serves on the board of the Washington Area Secular Humanists. Q&A to follow the lecture. Please join us in one of our three Back Parlors for this event.",
-            "room": "backParlor1",
-            "start": "2021-02-15T22:00:00-05:00",
-            "end": "2021-02-15T23:00:00-05:00",
+            "room": "grandBallroom",
+            "start": "2021-04-29T20:00:00-05:00",
+            "end": "2021-04-30T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "Whimsical Blasphemy",
-            "description": "Join DJ Mercy Maelica in one of our Grand Ballrooms all night long.",
-            "room": "grandBallroom1",
-            "start": "2021-02-15T20:00:00-05:00",
-            "end": "2021-02-16T02:00:00-05:00",
+            "name": "TST Sober Faction: Sobriety Without Superstition",
+            "description": "TST Sober Faction's co-directors will hold a meet & greet on April 29 to introduce themselves & the TST Sober Faction Campaign & discuss how Hex relates to their cause.",
+            "room": "garden",
+            "start": "2021-04-29T20:00:00-05:00",
+            "end": "2021-04-29T21:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
-            "name": "World's First Vegan Lamb Sacrifice with The Satanic Chef, Papa Lupus and Chef Jack",
-            "description": "On this day, we will be learning about the festive foods of Lupercalia, using goat cheese, milk, blood and honey, followed by an interactive destruction ritual used in The Satanic Chef's Devils Dinners. Join Papa Lupus as officiant and The Satanic Chef as host live for interactive-cooking class and ritual in the Kitchen on TSTVHQ. Chef Jack gets a special treat at the end! Available in one of our three (3!) kitchens!",
-            "room": "kitchen1",
-            "start": "2021-02-15T20:00:00-05:00",
-            "end": "2021-02-15T21:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
-        },
-        {
-            "name": "THOT Thoughts with Gloria Gray",
-            "description": "Stand Up Comedy from Sex Worker/Activist/Comedian Gloria Gray. She speaks of the trials and tribulations of sex work and everything in-between. A true Stripper philosopher. Wait a truly hot stripper philosopher. Well both. Also available in the Garden, Boudoir and Front Parlor.",
+            "name": "#StopAsianHate Discussion Panel",
+            "description": "teaRoom",
             "room": "frontParlor",
-            "start": "2021-02-15T21:00:00-05:00",
-            "end": "2021-02-15T22:00:00-05:00",
+            "start": "2021-04-29T20:30:00-05:00",
+            "end": "2021-04-29T21:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
+        },
+        {
+            "name": "Satanic Show + Tell Live",
+            "description": "Interact with La Carmina and Dr John Skutlin, hosts of the new 'Satanic Show + Tell' show on TST TV. Guests are invited to appear on-screen to show off their Satanic possessions, and tell the stories behind them. We look forward to seeing your devilish collections! Watch our show, 'Satanic Show + Tell,' on The Satanic Temple TV",
+            "room": "teaRoom",
+            "start": "2021-04-29T22:00:00-05:00",
+            "end": "2021-04-29T23:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
          {
-            "name": "Feast of the FLESH",
-            "description": "Sample the buffet of submitted written lust rituals with the ladies of FLESH: Mischief Madness and Chalice Blythe Audience Q&A to follow.",
-            "room": "theater1",
-            "start": "2021-02-15T23:00:00-05:00",
-            "end": "2021-02-16T01:00:00-05:00",
+            "name": "Salem Witch Wiles",
+            "description": "Join Thomas O'Brien Vallor, The Estate's resident Salem Witch for a conversation about Hexennacht.",
+            "room": "backParlor",
+            "start": "2021-04-29T23:30:00-05:00",
+            "end": "2021-04-30T01:30:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-lecture.png"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-02-15T20:00:00-05:00",
-            "end": "2021-02-16T02:00:00-05:00",
+            "start": "2021-04-29T20:00:00-05:00",
+            "end": "2021-05-03T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
             "name": "A Happy Hooven Home: Goats!",
             "description": "Livestream of goats. Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
-            "start": "2021-02-15T20:00:00-05:00",
-            "end": "2021-02-16T02:00:00-05:00",
+            "start": "2021-04-29T20:00:00-05:00",
+            "end": "2021-05-03T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
-            "name": "Lupercalia Wolves!",
-            "description": "Livestream of wolves. Donate at nywolf.org",
-            "room": "den",
-            "start": "2021-02-15T20:00:00-05:00",
-            "end": "2021-02-16T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
-        },
-        {
-            "name": "Late Night Library: Satanic Archives",
+            "name": "Grey Faction Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-02-15T20:00:00-05:00",
-            "end": "2021-02-16T02:00:00-05:00",
+            "start": "2021-04-29T20:00:00-05:00",
+            "end": "2021-05-03T02:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-art.png"
         }
     ]
