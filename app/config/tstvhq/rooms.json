@@ -2,14 +2,14 @@
     "rooms": [{
         "id": "kitchen",
         "name": "Kitchen",
-        "type": "JITSI",
+        "type": "CHATSTREAM",
         "capacity": 500,
         "doorTint": "#000000",
         "muteRoom": true,
         "hideVideo": true,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/VHQ+Room+Backgrounds/hexennacht/HexRooms1920x1080Kitchen.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Kitchen.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=satanicchef&parent=estate.tstvhq.com"
+            "src": "https://youtube.com/embed/iQaC34Fnp6o"
         },
         "description": "The Satanic Chef teaches us how to live deliciously in the kitchen.",
         "directions": {
@@ -38,7 +38,7 @@
         "hideVideo": false,
         "doorTint": "#000000",
         "description": "Freshen up with a few friends.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-powder-room.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/powder.png",
         "directions": {
             "east": "kitchen",
             "west": "massAve"
@@ -60,9 +60,9 @@
         "capacity": 100,
         "muteRoom": true,
         "hideVideo": true,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/VHQ+Room+Backgrounds/hexennacht/HexRooms1920x1080Ballroom.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Ballroom.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=estate.tstvhq.com"
+            "src": "https://youtube.com/embed/iQaC34Fnp6o"
         },
         "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
         "directions": {
@@ -87,7 +87,7 @@
         "hideVideo": false,
         "capacity": 10,
         "description": "The inspector won't return our calls. Should it be making that noise?",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-elevator.gif",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/elevator.png",
         "directions": {
             "north": "library",
             "east": "painting",
@@ -114,9 +114,9 @@
         "hideVideo": true,
         "description": "Loveseats, chaises, armchairs-- oh my!",
         "type": "CHATSTREAM",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/VHQ+Room+Backgrounds/hexennacht/HexRooms1920x1080A.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/frontparlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=dresdenvisage&parent=estate.tstvhq.com"
+            "src": "https://youtube.com/embed/iQaC34Fnp6o"
         },
         "directions": {
             "east": "teaRoom",
@@ -144,9 +144,9 @@
         "muteRoom": true,
         "hideVideo": true,
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=mandisa0904&parent=estate.tstvhq.com"
+            "src": "https://youtube.com/embed/iQaC34Fnp6o"
         },
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-tea-room.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/tea.png",
         "description": "Try a black looseleaf with a vanilla pod or a cinammon stick.",
         "directions": {
             "north": "den",
@@ -170,11 +170,8 @@
         "id": "den",
         "name": "Den",
         "type": "JITSI",
-        "iframeOptions": {
-            "src": "https://www.youtube.com/embed/T4iPx3JrTvc"
-        },
         "capacity": 20,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-barnyard.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/den.png",
         "description": "An intimate sitting room",
         "directions": {
             "north": "backParlor",
@@ -199,9 +196,9 @@
         "capacity": 500,
         "muteRoom": true,
         "hideVideo": true,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/VHQ+Room+Backgrounds/hexennacht/HexRooms1920x1080D.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/backparlor.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=salemwitchwiles&parent=estate.tstvhq.com"
+            "src": "https://youtube.com/embed/iQaC34Fnp6o"
         },
         "description": "Lectures and Lessons from Thomas O'Brien Vallor @SalemWitchWiles",
         "directions": {
@@ -228,9 +225,9 @@
         "muteRoom": true,
         "hideVideo": true,
         "description": "”With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.“ (-Serpentinae.com) Satanic services are held in this unholy space. ",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-ritual.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/ritual.png",
         "iframeOptions": {
-            "src": "https://www.youtube.com/embed/NU2zK5cRyUc"
+            "src": "https://youtube.com/embed/iQaC34Fnp6o"
         }, 
         "directions": {
             "east": "backParlor"
@@ -254,7 +251,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld! Donate at batworld.org",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/VHQ+Room+Backgrounds/hexennacht/HexRooms1920x1080C.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/belfry.png",
         "iframeOptions": {
             "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
         },
@@ -279,8 +276,8 @@
         "muteRoom": false,
         "hideVideo": false, 
         "description": "Give the goats from Woodstock Farm Sanctuary a snack at woodstocksanctuary.org/",
-        "type": "IFRAME",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-sleeping-porch.png",
+        "type": "JITSI",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/sleepingporch.png",
         "directions": {
             "west": "library",
             "east": "staircase"
@@ -307,7 +304,7 @@
         "capacity": 5,
         "muteRoom": false,
         "hideVideo": false,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-aviary.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/aviary.png",
         "description": "A cacophony of hoots, chirps and flutters.",
         "directions": {
             "east": "library"
@@ -357,7 +354,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "description": "Covert conversations regarding the Satanic Agenda",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-boudoir.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/boudoir.png",
         "iframeOptions": {
             "src": "https://player.twitch.tv/?channel=tstvhq&parent=estate.tstvhq.com"
         },
@@ -380,7 +377,7 @@
         "name": "Grand Staircase",
         "type": "JITSI",
         "description": "Mind the loose bannister-- others haven't.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-staircase.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/stair.png",
         "capacity": 20,
         "muteRoom": false,
         "hideVideo": false,
@@ -409,9 +406,9 @@
         "hideVideo": false,
         "locked": false,
         "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-theater.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/theater.png",
         "iframeOptions": {
-            "src": "https://player.twitch.tv/?channel=satanic_study_hall&parent=estate.tstvhq.com"
+            "src": "https://youtube.com/embed/iQaC34Fnp6o"
         },
         "directions": {
             "west": "staircase",
@@ -437,7 +434,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "description": "The amaryllis is already blooming!",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/VHQ+Room+Backgrounds/hexennacht/HexRooms1920x1080B.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/garden.png",
         "directions": {
             "west": "teaRoom",
             "east": "cemetery"
@@ -462,7 +459,7 @@
         "muteRoom": false,
         "hideVideo": false,
         "description": "The roses on this family plot are stunning!",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-cemetery.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/cemetery.png",
         "directions": {
             "west": "garden"
         },
@@ -481,13 +478,13 @@
         "id": "trapDoor",
         "name": "Trap Door to Hell!",
         "type": "IFRAME",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-trap-door.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/trap.png",
         "capacity": 15,
         "muteRoom": false,
         "hideVideo": false,
         "description": "Papa Lupus has been expecting you...",
         "iframeOptions": {
-            "src": "https://www.youtube.com/embed/-b6VRRMD66g"
+            "src": "https://youtube.com/embed/iQaC34Fnp6o"
         },
         "directions": {
             "east": "secretTunnels"
@@ -501,7 +498,7 @@
         "capacity": 15,
         "hideVideo": false,
         "muteRoom": false,
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-secret-tunnels.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/tunnel.png",
         "description": "This looks just like under McMartin Preschool!",
         "directions": {
             "west": "trapDoor",
@@ -518,7 +515,7 @@
         "hideVideo": false,
         "description": "Have a marshmallow. It's time for s'mores!",
         "doorTint": "#000000",
-        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-Crematorium.png",
+        "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/crematorium.png",
         "directions": {
         "west": "secretTunnels" }
     }
