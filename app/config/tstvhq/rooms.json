@@ -452,7 +452,7 @@
         {
             "id": "trapDoor",
             "name": "Trap Door to Hell!",
-            "type": "CHATSTREAM",
+            "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/trap.png",
             "capacity": 15,
             "muteRoom": false,
