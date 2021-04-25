@@ -4,64 +4,64 @@
             "name": "The Whimsical Blasphemy Show with Mercy Maelica",
             "description": "Music and Videos live from Salem",
             "room": "grandBallroom",
-            "start": "2021-04-29T20:00:00-05:00",
-            "end": "2021-04-30T02:00:00-05:00",
+            "start": "2021-04-29T20:00:00-04:00",
+            "end": "2021-04-30T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "TST Sober Faction: Sobriety Without Superstition",
             "description": "TST Sober Faction's co-directors will hold a meet & greet on April 29 to introduce themselves & the TST Sober Faction Campaign & discuss how Hex relates to their cause.",
             "room": "garden",
-            "start": "2021-04-29T20:00:00-05:00",
-            "end": "2021-04-29T21:00:00-05:00",
+            "start": "2021-04-29T20:00:00-04:00",
+            "end": "2021-04-29T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "#StopAsianHate Discussion Panel",
             "description": "teaRoom",
             "room": "frontParlor",
-            "start": "2021-04-29T20:30:00-05:00",
-            "end": "2021-04-29T21:30:00-05:00",
+            "start": "2021-04-29T20:30:00-04:00",
+            "end": "2021-04-29T21:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Satanic Show + Tell Live",
             "description": "Interact with La Carmina and Dr John Skutlin, hosts of the new 'Satanic Show + Tell' show on TST TV. Guests are invited to appear on-screen to show off their Satanic possessions, and tell the stories behind them. We look forward to seeing your devilish collections! Watch our show, 'Satanic Show + Tell,' on The Satanic Temple TV",
             "room": "teaRoom",
-            "start": "2021-04-29T22:00:00-05:00",
-            "end": "2021-04-29T23:00:00-05:00",
+            "start": "2021-04-29T22:00:00-04:00",
+            "end": "2021-04-29T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Salem Witch Wiles",
             "description": "Join Thomas O'Brien Vallor, The Estate's resident Salem Witch for a conversation about Hexennacht.",
             "room": "backParlor",
-            "start": "2021-04-29T23:30:00-05:00",
-            "end": "2021-04-30T01:30:00-05:00",
+            "start": "2021-04-29T23:30:00-04:00",
+            "end": "2021-04-30T01:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-04-29T20:00:00-05:00",
-            "end": "2021-05-03T02:00:00-05:00",
+            "start": "2021-04-29T20:00:00-04:00",
+            "end": "2021-05-03T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "A Happy Hooven Home: Goats!",
             "description": "Livestream of goats. Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
-            "start": "2021-04-29T20:00:00-05:00",
-            "end": "2021-05-03T02:00:00-05:00",
+            "start": "2021-04-29T20:00:00-04:00",
+            "end": "2021-05-03T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Grey Faction Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-04-29T20:00:00-05:00",
-            "end": "2021-05-03T02:00:00-05:00",
+            "start": "2021-04-29T20:00:00-04:00",
+            "end": "2021-05-03T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         }
     ]
