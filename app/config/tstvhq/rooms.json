@@ -196,9 +196,9 @@
         },
         {
             "id": "den",
-            "name": "Den",
+            "name": "Study",
             "type": "JITSI",
-            "capacity": 20,
+            "capacity": 50,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/den.png",
             "description": "Scoot the ottoman closer, would you?",
             "directions": {
