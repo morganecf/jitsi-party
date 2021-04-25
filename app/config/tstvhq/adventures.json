@@ -45,7 +45,7 @@
                     ],
                     "id": "catacombs",
                     "name": "What the hell just happened?",
-                    "text": "Stepping on the Nail because you didn\u2019t think you\u2019d feel it through 4 inch platform heels your foot catches and, miraculously, you trip at a 90 degree angle to the 3rd dimension and find yourself in the kitchen of a respectable middle class rural suburban household. It smells of fresh coffee, and there\u2019s a half eaten scone on the counter. The kitchen door is open to the outside and you can see a park across the street.\u2019"
+                    "text": "Stepping on the Nail because you didn\u2019t think you\u2019d feel it through 4 inch platform heels your foot catches and, miraculously, you trip at a 90 degree angle to the 3rd dimension and find yourself in the kitchen of a respectable middle class rural suburban household. It smells of fresh coffee, and there\u2019s a half eaten scone on the counter. The kitchen door is open to the outside and you can see a park across the street."
                 },
                 {
                     "buttons": [
@@ -97,12 +97,12 @@
                             "nextRoom": [
                                 "sleepingPorch"
                             ],
-                            "text": "I\u2019m Creeped Out"
+                            "text": "I'm Creeped Out"
                         }
                     ],
                     "id": "returnCard",
                     "name": "Off the beaten path",
-                    "text": "This is the fanciest ice cream cart you\u2019ve found in years. You get a giant scoop of strawberry ice cream in a waffle cone and drizzled with a (frankly, obscenely expensive) balsamic vinegar. The kindly woman running the cart smiles at you, and winks when returning your change. You notice the quarter\u2019s faces here have Mary Ellen Pleasant on them instead of George Washington. Anyway, you see a path that leads off into the woods and you hear the sounds of a guitar strumming, perhaps flutes, coming from the wooded path.\u2019"
+                    "text": "This is the fanciest ice cream cart you've found in years. You get a giant scoop of strawberry ice cream in a waffle cone and drizzled with a (frankly, obscenely expensive) balsamic vinegar. The kindly woman running the cart smiles at you, and winks when returning your change. You notice the quarter\u2019s faces here have Mary Ellen Pleasant on them instead of George Washington. Anyway, you see a path that leads off into the woods and you hear the sounds of a guitar strumming, perhaps flutes, coming from the wooded path."
                 }
             ]
         }
