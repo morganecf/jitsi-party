@@ -29,6 +29,9 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - TWILIO_NUMBER
+            - TWILIO_ACCOUNT_SID
+            - TWILIO_AUTH_TOKEN
         depends_on:
             - db
             - queue
@@ -42,6 +45,9 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - TWILIO_NUMBER
+            - TWILIO_ACCOUNT_SID
+            - TWILIO_AUTH_TOKEN
         depends_on:
             - db
             - queue
@@ -55,6 +61,9 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - TWILIO_NUMBER
+            - TWILIO_ACCOUNT_SID
+            - TWILIO_AUTH_TOKEN
         depends_on:
             - db
             - queue
@@ -68,6 +77,9 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - TWILIO_NUMBER
+            - TWILIO_ACCOUNT_SID
+            - TWILIO_AUTH_TOKEN
         depends_on:
             - db
             - queue
@@ -81,6 +93,9 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - TWILIO_NUMBER
+            - TWILIO_ACCOUNT_SID
+            - TWILIO_AUTH_TOKEN
         depends_on:
             - db
             - queue
@@ -94,6 +109,9 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - TWILIO_NUMBER
+            - TWILIO_ACCOUNT_SID
+            - TWILIO_AUTH_TOKEN
         depends_on:
             - db
             - queue
@@ -107,6 +125,9 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - TWILIO_NUMBER
+            - TWILIO_ACCOUNT_SID
+            - TWILIO_AUTH_TOKEN
         depends_on:
             - db
             - queue
@@ -120,6 +141,9 @@ services:
             - JITSI_PARTY_DB
             - JITSI_PARTY_DB_USER
             - JITSI_PARTY_DB_PASS
+            - TWILIO_NUMBER
+            - TWILIO_ACCOUNT_SID
+            - TWILIO_AUTH_TOKEN
         depends_on:
             - db
             - queue
