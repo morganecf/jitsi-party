@@ -83,7 +83,7 @@
             "id": "backParlor",
             "name": "Back Parlor",
             "type": "CHATSTREAM",
-            "capacity": 50,
+            "capacity": 500,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/backparlor.png",
@@ -137,7 +137,7 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 50,
+            "capacity": 500,
             "muteRoom": true,
             "hideVideo": true,
             "description": "Loveseats, chaises, armchairs-- oh my!",
@@ -382,7 +382,7 @@
             "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "It's warmer underground. Hand me that shovel, I'll show you.",
+            "description": "The roses are just starting to bloom on the family plot.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/cemetery.png",
             "directions": {
                 "west": "garden"
