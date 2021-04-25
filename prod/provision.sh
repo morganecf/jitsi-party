@@ -29,7 +29,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     docker-compose=1.21.0-3 \
     python3 \
     python3-pip \
-    jq
+    jq \
+    neovim \
+    htop \
+    iftop
 
 cat extra_keys >> ~/.ssh/authorized_keys
 echo 'PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
