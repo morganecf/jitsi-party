@@ -151,6 +151,7 @@ Component "{{ .Env.XMPP_MUC_DOMAIN }}" "muc"
     storage = "memory"
     modules_enabled = {
         "muc_meeting_id";
+        "mam";
         {{ if .Env.XMPP_MUC_MODULES }}
         "{{ join "\";\n\"" (splitList "," .Env.XMPP_MUC_MODULES) }}";
         {{ end }}
@@ -161,6 +162,11 @@ Component "{{ .Env.XMPP_MUC_DOMAIN }}" "muc"
     muc_room_cache_size = 1000
     muc_room_locking = false
     muc_room_default_public_jids = true
+    muc_room_default_history_length = 500
+    muc_room_default_persistent = true
+    muc_room_default_public = true
+    max_history_messages = 500
+
 
 Component "focus.{{ .Env.XMPP_DOMAIN }}"
     component_secret = "{{ .Env.JICOFO_COMPONENT_SECRET }}"
