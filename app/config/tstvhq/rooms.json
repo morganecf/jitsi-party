@@ -56,9 +56,9 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "JITSI",
-            "capacity": 20,
-            "muteRoom": false,
+            "type": "IFRAME",
+            "capacity": 50,
+            "muteRoom": true,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Ballroom.png",
             "iframeOptions": {
