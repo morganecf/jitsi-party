@@ -196,9 +196,12 @@
         },
         {
             "id": "den",
-            "name": "Den",
-            "type": "JITSI",
-            "capacity": 20,
+            "name": "Study",
+            "type": "CHATSTREAM",
+            "iframeOptions": {
+                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+            },
+            "capacity": 100,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/den.png",
             "description": "Scoot the ottoman closer, would you?",
             "directions": {
