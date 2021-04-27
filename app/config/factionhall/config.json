@@ -10,7 +10,7 @@
             "support@thesatanic.estate"
         ],
         "moderatorNumber": "+14802941991",
-        "formDescription": "Need a moderator to look into some unsavory behavior? Let us know what's going on, when, where and who is involved. We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+        "formDescription": "Need a moderator to look into some unsavory behavior? Let us know what's going on, when, where and who is involved. We\u2019ll keep what you tell us private, and we\u2019ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
@@ -19,28 +19,29 @@
         "avatarSelectionText": "Identify your Cabal",
         "headerHtml": "<div class='tst'><p>Welcome to</p><h1>The World Congress on Moral Panics</h1>"
     },
-    "avatars": [{
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF1.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF2.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF3.png"
-        ]
-    },
-    {
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF4.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF5.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF6.png"
-        ]
-    },
-    {
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF7.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF8.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF9.png"
-        ]
-    }
-],
+    "avatars": [
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF1.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF2.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF3.png"
+            ]
+        },
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF4.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF5.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF6.png"
+            ]
+        },
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF7.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF8.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF9.png"
+            ]
+        }
+    ],
     "specialAvatars": {
         "goodbye": {
             "images": [
@@ -55,21 +56,24 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "🖤  {count} at Faction Hall"
+                "text": "\ud83d\udda4  {count} at Faction Hall"
             },
             "numberInHallways": {
                 "display": true,
-                "text": "🖤 {count} haunting the hallways"
+                "text": "\ud83d\udda4 {count} haunting the hallways"
             },
             "numberInRooms": {
                 "display": false,
-                "text": "🖤 {count} learning"
+                "text": "\ud83d\udda4 {count} learning"
             },
-            "additionalStats": [{
-                "text": "🖤 {count} reading",
-                "match": ["library"]
-            }
-        ]
+            "additionalStats": [
+                {
+                    "text": "\ud83d\udda4 {count} reading",
+                    "match": [
+                        "library"
+                    ]
+                }
+            ]
         }
     },
     "poke": {

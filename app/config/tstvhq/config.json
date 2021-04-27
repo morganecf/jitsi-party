@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "page_title": "TST VHQ",
+    "page_title": "TSTVHQ",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "startRoom": "cemetery",
@@ -10,40 +10,41 @@
             "vhq@thesatanictemple.com"
         ],
         "moderatorNumber": "+14802941991",
-        "formDescription": "Someone harshing your vibe? Need a moderator to look into it? We’ll keep what you tell us private, and we’ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+        "formDescription": "Someone harshing your vibe? Need a moderator to look into it? We\u2019ll keep what you tell us private, and we\u2019ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-welcome.png",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/welcome.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your sigil",
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
     },
-    "avatars": [{
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
-        ]
-    },
-    {
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
-        ]
-    },
-    {
-        "images": [
-            "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
-            "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
-        ]
-    }
-],
+    "avatars": [
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
+            ]
+        },
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
+            ]
+        },
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
+            ]
+        }
+    ],
     "specialAvatars": {
         "goodbye": {
             "images": [
@@ -68,15 +69,21 @@
                 "display": false,
                 "text": "🖤 {count} exploring"
             },
-            "additionalStats": [{
-                "text": "🖤 {count} reading",
-                "match": ["library"]
-            },
-            {
-                "text": "🖤 {count} meeting animals",
-                "match": ["belfry", "den", "sleepingPorch"]
-            }
-        ]
+            "additionalStats": [
+                {
+                    "text": "🖤 {count} reading",
+                    "match": [
+                        "library"
+                    ]
+                },
+                {
+                    "text": "🖤 {count} meeting animals",
+                    "match": [
+                        "belfry",
+                        "sleepingPorch"
+                    ]
+                }
+            ]
         }
     },
     "poke": {

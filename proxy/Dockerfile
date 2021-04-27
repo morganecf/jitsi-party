@@ -3,6 +3,7 @@
 FROM alpine:3.13.4
 
 # Docker Build Arguments
+ARG FREP_VERSION=1.3.12
 ARG S6_OVERLAY_VERSION="1.21.4.0"
 ARG RESTY_VERSION="1.19.3.1"
 ARG RESTY_OPENSSL_VERSION="1.1.1j"
@@ -51,6 +52,7 @@ ARG _RESTY_CONFIG_DEPS="--with-openssl=/tmp/openssl-${RESTY_OPENSSL_VERSION} --w
 
 ENV S6_KEEP_ENV=1
 
+
 RUN apk add --no-cache --virtual .build-deps \
         build-base \
         curl \
@@ -74,6 +76,8 @@ RUN apk add --no-cache --virtual .build-deps \
         py3-cryptography \
         py3-pip \
     && curl -L -s https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-amd64.tar.gz | tar xvzf - -C / \
+    && curl -L -s https://github.com/subchen/frep/releases/download/v$FREP_VERSION/frep-$FREP_VERSION-linux-amd64 > /usr/bin/frep \
+    && chmod +x /usr/bin/frep \
     && pip3 install -U pip \
     && pip3 install -U \
         certbot \

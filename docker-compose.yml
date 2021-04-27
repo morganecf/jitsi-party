@@ -17,6 +17,7 @@ services:
             - PROXY_AUTH_CLIENT_ID
             - PROXY_AUTH_CLIENT_SECRET
             - PROXY_AUTH_ALLOWED_GROUPS
+            - PROXY_NUM_WORKERS=2
         networks:
             party.jitsi:
         depends_on:
@@ -230,6 +231,8 @@ services:
         image: cabinweekend/jitsi-party-node
         build:
             context: .
+            cache_from:
+                - cabinweekend/jitsi-party-node:latest
             dockerfile: node/Dockerfile
             args:
                 - BUILDKIT_INLINE_CACHE=1

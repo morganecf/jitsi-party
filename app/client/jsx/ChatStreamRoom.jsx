@@ -40,7 +40,8 @@ export const ChatStreamRoom = ({
       authentication: "anonymous",
       auto_login: true,
       auto_join_rooms: [
-        { jid: `${roomId}@muc.party.jitsi`, nick: displayName },
+        // gotta lowercase the roomId cuz for some reason uppercase breaks converse
+        { jid: `${roomId.toLowerCase()}@muc.party.jitsi`, nick: displayName },
       ],
       bosh_service_url: `${Config.baseUrl}jitsi/http-bind`,
       jid: "guest.party.jitsi",
@@ -56,6 +57,9 @@ export const ChatStreamRoom = ({
       },
       whitelisted_plugins: ["jitsi-plugin"],
       view_mode: "embedded",
+      message_archiving: "always",
+      debug: true,
+      muc_history_max_stanzas: 500,
     });
 
     // use mutation observer to reposition the conversejs div

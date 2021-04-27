@@ -81,7 +81,7 @@
         },
         {
             "id": "satanic-library-map",
-            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/LUPERCALIA/LUPERCALIA-BG-library.png",
+            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/sepiaLibrary.png",
             "areas": [
                 {
                     "shape": "poly",
@@ -350,6 +350,6 @@
                     ]
                 }
             ]
-}
-]
+        }
+    ]
 }

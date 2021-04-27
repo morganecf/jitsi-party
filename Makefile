@@ -76,3 +76,6 @@ clean-config:
 .PHONY: clean
 clean: env clean-docker clean-env clean-config clean-schema clean-theme clean-webpack
 
+.PHONY: format-config
+format-config:
+	./format_configs.sh

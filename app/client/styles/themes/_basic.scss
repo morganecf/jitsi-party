@@ -14,33 +14,34 @@ $matte-blue: #294b7f;
 $light-grey: #ece9e9;
 
 // Chat color variables
-$chat-border: $matte-purple; // border around the chat
+$chat-border: $dark-grey; // border around the chat
 $chat-border-width: 2px; // size of the chat border
-$chat-separator-bars: $matte-blue; // separator bars at the top of the chat area
-$chat-separator-text: $matte-blue; // text between the separators
-$chat-separator-text-bg: $fuckyou-turquoise; // background for the text area
-$chat-content: $fuckyou-turquoise; // the main chat area on the left
-$chat-notification-bg: $fuckyou-turquoise; // entry/exit notification background
-$chat-notification-text: $matte-blue; // entry/exit notification text color
-$chat-msg-author: $matte-blue; // color of user name
-$chat-msg-time: $matte-blue; // color of the chat time
-$chat-msg-text: $matte-blue; // color the chat text
-$chat-msg-menu: $matte-blue; // color the hamburgar menu to the right of the chat message
-$chat-msg-menu-bg: $fuckyou-turquoise; // background color of the menu dropdown
-$chat-msg-menu-items: $matte-blue; // color for the menu items
-$toolbox-bg: $fuckyou-turquoise; // background color for the location of the emoji picker icon
-$toolbox-emoji-color: $matte-blue; // the color for the emoji icon
-$emoji-header-footer: $matte-blue; // color for the header and footer inside the emoji popup
-$emoji-category-heading: $matte-blue; // color for the emoji heading text in the popup
-$emoji-popup-bg: $matte-purple; // background color of the emoji popup 
-$emoji-separator: $fuckyou-turquoise; // color for th emoji separator bar
-$message-area-bg: $fuckyou-turquoise; // background for the message text area
-$message-input-top-border: $matte-blue; // the border at the top of the message area
-$message-text: $matte-blue; // the text color in the message area
-$chat-participants: $fuckyou-turquoise; // the participants sidebar on the right of the chat
-$chat-participants-resize: $matte-blue; // color of the participants resize handle
-$participants-title: $matte-blue; // the title of the participants list
-$participants-name: $matte-blue; // the name of each participant in the list
+$chat-separator-bars: $dark-grey; // separator bars at the top of the chat area
+$chat-separator-text: $dark-grey; // text between the separators
+$chat-separator-text-bg: $dark-grey; // background for the text area
+$chat-content: $dark-grey; // the main chat area on the left
+$chat-notification-bg: $dark-grey; // entry/exit notification background
+$chat-notification-text: $white; // entry/exit notification text color
+$chat-msg-author: $light-grey; // color of user name
+$chat-msg-time: $light-grey; // color of the chat time
+$chat-msg-text: $white; // color the chat text
+$chat-msg-menu: $dark-grey; // color the hamburgar menu to the right of the chat message
+$chat-msg-menu-bg: $dark-grey; // background color of the menu dropdown
+$chat-msg-menu-items: $white; // color for the menu items
+$toolbox-bg: $light-blue; // background color for the location of the emoji picker icon
+$toolbox-emoji-color: $dark-grey; // the color for the emoji icon
+$emoji-header-footer: $dark-grey; // color for the header and footer inside the emoji popup
+$emoji-category-heading: $dark-grey; // color for the emoji heading text in the popup
+$emoji-popup-bg: $dark-grey; // background color of the emoji popup
+$emoji-separator: $dark-grey; // color for th emoji separator bar
+$message-area-bg: $dark-grey; // background for the message text area
+$message-input-top-border: $light-blue; // the border at the top of the message area
+$message-text: $white; // the text color in the message area
+$chat-participants: $dark-grey; // the participants sidebar on the right of the chat
+$chat-participants-resize: $white; // color of the participants resize handle
+$participants-title: $light-grey; // the title of the participants list
+$participants-name: $light-grey; // the name of each participant in the list
+
 
 // Hexing notifications & icon
 $accent-color: $fuckyou-turquoise;
@@ -116,7 +117,7 @@ body {
 }
 
 // .tst,
-// .room-header h2, 
+// .room-header h2,
 // #map-info .room-name,
 // .events-view .events-header,
 // .events-view .event-list .event-info .event-name,

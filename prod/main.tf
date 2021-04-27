@@ -211,11 +211,11 @@ resource "aws_iam_role" "main" {
 resource "aws_instance" "main" {
     count = var.vhq_enabled ? 1 : 0
     ami = data.aws_ami.jitsi-party.id
-    instance_type = "c5a.4xlarge"
+    instance_type = "m5.2xlarge"
     iam_instance_profile = aws_iam_instance_profile.main.name
     vpc_security_group_ids = [aws_security_group.main.id]
     key_name = aws_key_pair.main.key_name
-    user_data = file("first_run.sh")
+    user_data = templatefile("first_run.sh.tpl", { config = "tstvhq", theme = "hexennacht" })
 }
 
 resource "aws_route53_record" "main" {
