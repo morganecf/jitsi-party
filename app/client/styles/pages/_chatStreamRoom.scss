@@ -1,13 +1,21 @@
 $mobile_landscape_height: 450px !default;
 $mobile_portrait_length: 480px !default;
 
+#conversejs.converse-embedded.converse-singleton .flyout, #conversejs.converse-fullscreen.converse-singleton .flyout {
+  border: $chat-border-width solid $chat-border !important;
+  border-radius: 7px !important;
+}
+
+.chatstream-section {
+  flex: 0.5;
+  justify-content: space-around;
+  padding-top: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
 #conversejs {
-  position: absolute !important;
-  top: 10% !important;
-  bottom: auto !important;
-  width: 45vw !important;
-  left: 1vw !important;
-  height: 66% !important;
   z-index: 9 !important;
 
   .badge,
@@ -15,6 +23,13 @@ $mobile_portrait_length: 480px !default;
   .hide-occupants {
     display: none !important;
   }
+
+  // .chatroom {
+  //   .box-flyout {
+  //     border: 2px solid $chat-border !important;
+  //     border-radius: 8px !important;
+  //   }
+  // }
 
   .chat-head {
     background-color: $background-color !important;
@@ -100,13 +115,14 @@ $mobile_portrait_length: 480px !default;
       background-color: $message-area-bg !important;
       margin-bottom: -5px !important;
       color: $message-text !important;
+      font-size: 1.3rem !important;
       &::placeholder {
         color: lighten($message-text, 20%) !important;
       }
       &:focus {
         outline: 0px !important;
-        border: 2px solid $message-focus !important;
-        border-bottom: 3px solid $message-focus !important;
+        border: 0px !important;
+        border-bottom: 0px !important;
       }
     }
 

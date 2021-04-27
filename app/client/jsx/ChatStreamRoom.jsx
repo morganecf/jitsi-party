@@ -58,6 +58,21 @@ export const ChatStreamRoom = ({
       view_mode: "embedded",
     });
 
+    // use mutation observer to reposition the conversejs div
+    const convObserver = new MutationObserver((muts) => {
+      // reposition the conversejs div
+      if (document.querySelector('#conversejs') !== null) {
+        document.querySelector('.chatstream-section').appendChild(document.querySelector('#conversejs'))
+        convObserver.disconnect()
+      }
+    });
+
+    convObserver.observe(document, {
+      childList: true,
+      attributes: true,
+      subtree: true,
+    });    
+
     // use MutationObserver to restucture the chatbox
     const observer = new MutationObserver((muts) => {
       if (document.querySelector(".chatbox-title__buttons") !== null) {
@@ -91,7 +106,7 @@ export const ChatStreamRoom = ({
 
   return (
     <div className="iframe-room">
-      <div className="jitsi-video"></div>
+      <div className="chatstream-section"></div>
       <div className="iframe-section">
         <iframe src={src} height="100%" width="100%" frameBorder="0px"></iframe>
       </div>
