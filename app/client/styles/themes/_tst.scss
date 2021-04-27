@@ -14,6 +14,8 @@ $matte-blue: #294b7f;
 $light-grey: #ece9e9;
 
 // Chat color variables
+$chat-border: $matte-purple; // border around the chat
+$chat-border-width: 2px; // size of the chat border
 $chat-separator-bars: $matte-blue; // separator bars at the top of the chat area
 $chat-separator-text: $matte-blue; // text between the separators
 $chat-separator-text-bg: $fuckyou-turquoise; // background for the text area
@@ -34,7 +36,6 @@ $emoji-popup-bg: $matte-purple; // background color of the emoji popup
 $emoji-separator: $fuckyou-turquoise; // color for th emoji separator bar
 $message-area-bg: $fuckyou-turquoise; // background for the message text area
 $message-input-top-border: $matte-blue; // the border at the top of the message area
-$message-focus: $matte-blue; // the color of the message area border when focused
 $message-text: $matte-blue; // the text color in the message area
 $chat-participants: $fuckyou-turquoise; // the participants sidebar on the right of the chat
 $chat-participants-resize: $matte-blue; // color of the participants resize handle

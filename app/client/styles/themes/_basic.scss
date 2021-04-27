@@ -14,6 +14,8 @@ $matte-blue: #294b7f;
 $light-grey: #ece9e9;
 
 // Chat color variables
+$chat-border: $dark-grey; // border around the chat
+$chat-border-width: 2px; // size of the chat border
 $chat-separator-bars: $dark-grey; // separator bars at the top of the chat area
 $chat-separator-text: $dark-grey; // text between the separators
 $chat-separator-text-bg: $dark-grey; // background for the text area
@@ -34,7 +36,6 @@ $emoji-popup-bg: $dark-grey; // background color of the emoji popup
 $emoji-separator: $dark-grey; // color for th emoji separator bar
 $message-area-bg: $dark-grey; // background for the message text area
 $message-input-top-border: $light-blue; // the border at the top of the message area
-$message-focus: $light-grey; // the color of the message area border when focused
 $message-text: $white; // the text color in the message area
 $chat-participants: $dark-grey; // the participants sidebar on the right of the chat
 $chat-participants-resize: $white; // color of the participants resize handle
