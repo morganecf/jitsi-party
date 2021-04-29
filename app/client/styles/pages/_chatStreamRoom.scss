@@ -1,7 +1,8 @@
 $mobile_landscape_height: 450px !default;
 $mobile_portrait_length: 480px !default;
 
-#conversejs.converse-embedded.converse-singleton .flyout, #conversejs.converse-fullscreen.converse-singleton .flyout {
+#conversejs.converse-embedded.converse-singleton .flyout,
+#conversejs.converse-fullscreen.converse-singleton .flyout {
   border: $chat-border-width solid $chat-border !important;
   border-radius: 7px !important;
 }
@@ -23,13 +24,6 @@ $mobile_portrait_length: 480px !default;
   .hide-occupants {
     display: none !important;
   }
-
-  // .chatroom {
-  //   .box-flyout {
-  //     border: 2px solid $chat-border !important;
-  //     border-radius: 8px !important;
-  //   }
-  // }
 
   .chat-head {
     background-color: $background-color !important;
@@ -75,7 +69,7 @@ $mobile_portrait_length: 480px !default;
     }
 
     .fa-bars {
-      color: $chat-msg-menu !important
+      color: $chat-msg-menu !important;
     }
 
     .dropdown-menu {
@@ -90,8 +84,8 @@ $mobile_portrait_length: 480px !default;
     }
 
     .chat-content__notifications {
-      background-color: $chat-notification-bg  !important;
-      color: $chat-notification-text  !important;
+      background-color: $chat-notification-bg !important;
+      color: $chat-notification-text !important;
     }
 
     converse-muc-sidebar {
@@ -115,7 +109,6 @@ $mobile_portrait_length: 480px !default;
       background-color: $message-area-bg !important;
       margin-bottom: -5px !important;
       color: $message-text !important;
-      font-size: 1.3rem !important;
       &::placeholder {
         color: lighten($message-text, 20%) !important;
       }
@@ -162,7 +155,8 @@ $mobile_portrait_length: 480px !default;
 
       svg {
         fill: $toolbox-emoji-color !important;
-      }  .separator {
+      }
+      .separator {
         border-bottom: 2px solid $toolbox-bg !important;
       }
     }
