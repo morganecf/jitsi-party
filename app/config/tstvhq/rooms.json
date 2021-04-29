@@ -201,9 +201,9 @@
             "iframeOptions": {
                 "src": "https://youtube.com/embed/iQaC34Fnp6o"
             },
-            "capacity": 100,
+            "capacity": 15,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/den.png",
-            "description": "Scoot the ottoman closer, would you?",
+            "description": "Would you please set up an extra easel?",
             "directions": {
                 "north": "backParlor",
                 "south": "teaRoom"
@@ -352,10 +352,10 @@
         {
             "id": "theater",
             "name": "Theater",
-            "type": "CHATSTREAM",
-            "capacity": 200,
-            "muteRoom": true,
-            "hideVideo": true,
+            "type": "JITSI",
+            "capacity": 10,
+            "muteRoom": false,
+            "hideVideo": false,
             "locked": false,
             "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/theater.png",
