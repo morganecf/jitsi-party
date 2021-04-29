@@ -3,8 +3,8 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "CHATSTREAM",
-            "capacity": 500,
+            "type": "JITSI",
+            "capacity": 20,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
@@ -12,7 +12,7 @@
             "iframeOptions": {
                 "src": "https://youtube.com/embed/iQaC34Fnp6o"
             },
-            "description": "TheSatanicChef teaches us how to live deliciously in the kitchen.",
+            "description": "Live deliciously in the kitchen.",
             "directions": {
                 "west": "powderRoom",
                 "north": "grandBallroom",
@@ -62,7 +62,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Ballroom.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://angelthump.com/ledflashing"
             },
             "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
             "directions": {
@@ -88,7 +88,7 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/backparlor.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://www.youtube.com/embed/BUJXA2gCbj0"
             },
             "description": "Please use the incense burner instead of getting ash in the candles.",
             "directions": {
@@ -144,7 +144,7 @@
             "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/frontparlor.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://www.youtube.com/embed/Iz7eYifbemo"
             },
             "directions": {
                 "east": "teaRoom",
@@ -172,7 +172,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://www.youtube.com/embed/SXwaE6W8GmM"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/tea.png",
             "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick.",
@@ -197,7 +197,7 @@
         {
             "id": "den",
             "name": "Study",
-            "type": "CHATSTREAM",
+            "type": "JITSI",
             "iframeOptions": {
                 "src": "https://youtube.com/embed/iQaC34Fnp6o"
             },
@@ -286,7 +286,7 @@
                 "east": "theater"
             },
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/Jv5AwHpxwb4"
+                "src": "https://www.youtube.com/embed/OD3t0ODlY1o"
             },
             "map": {
                 "x": 14,
@@ -432,7 +432,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://www.youtube.com/embed/A5hxApOLl9U"
             },
             "description": "The amaryllis is already blooming!",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/garden.png",
