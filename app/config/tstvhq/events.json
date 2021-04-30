@@ -1,43 +1,35 @@
 {
     "events": [
         {
-            "name": "The Whimsical Blasphemy Show with Mercy Maelica",
-            "description": "Music and Videos live from Salem",
-            "room": "grandBallroom",
-            "start": "2021-04-29T20:00:00-04:00",
-            "end": "2021-04-30T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
-        },
-        {
             "name": "TST Sober Faction: Sobriety Without Superstition",
-            "description": "TST Sober Faction's co-directors will hold a meet & greet on April 29 to introduce themselves & the TST Sober Faction Campaign & discuss how Hex relates to their cause.",
+            "description": "Co-director Jon will host a speaker meeting on April 30.",
             "room": "garden",
-            "start": "2021-04-29T20:00:00-04:00",
-            "end": "2021-04-29T21:00:00-04:00",
+            "start": "2021-04-30T20:00:00-04:00",
+            "end": "2021-05-01T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "#StopAsianHate Discussion Panel",
-            "description": "#StopAsianHate is a conversation between members of the Satanists of Color Coalition discussing recent violence against Asian-Americans, bringing awareness and sharing lived experiences in a post Trump era America. SOCC is represented by Jayson Thomas, Ivy Loveless, Citlali Soona, Deborah Badie and Michael Monstrum.",
-            "room": "frontParlor",
-            "start": "2021-04-29T20:30:00-04:00",
-            "end": "2021-04-29T21:30:00-04:00",
+            "name": "The Satanic Chef",
+            "description": "Join Adam Dodge in the kitchen of VHQ for a cooking workshop and conversation. Keep your eyes out for Sous Chef Jack!",
+            "room": "kitchen",
+            "start": "2021-04-30T20:30:00-04:00",
+            "end": "2021-04-30T21:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Satanic Show + Tell Live",
-            "description": "Interact with La Carmina and Dr John Skutlin, hosts of the new 'Satanic Show + Tell' show on TST TV. Guests are invited to appear on-screen to show off their Satanic possessions, and tell the stories behind them. We look forward to seeing your devilish collections! Watch our show, 'Satanic Show + Tell,' on The Satanic Temple TV",
-            "room": "teaRoom",
-            "start": "2021-04-29T22:00:00-04:00",
-            "end": "2021-04-29T23:00:00-04:00",
+            "name": "Ave Satanas: A Candlelight Ritual",
+            "description": "An international candlelight ritual with guest participation written by Thomas O'Brien Vallor and Marissa Young. In memoriam to those who lost their lives and suffered under religious persecution and superstition by candlelight. Houseguests are encouraged to wear mourning attire and bring a candle to participate in the ritual.",
+            "room": "ritualChamber",
+            "start": "2021-04-30T22:00:00-04:00",
+            "end": "2021-04-30T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Salem Witch Wiles",
-            "description": "Join Thomas O'Brien Vallor, The Estate's resident Salem Witch for Crazed, Panicked, and Hysterical: Understanding Witch Hunts. A phrase used to describe actual atrocities is now used by con artists as a modern political rallying cry, but witch hunts are real and they still happen today. The only way to avoid them is to understand them and their history.",
-            "room": "backParlor",
-            "start": "2021-04-29T23:30:00-04:00",
-            "end": "2021-04-30T00:30:00-04:00",
+            "name": "Forgive Me Father, For I Have Synthed",
+            "description": "A synthwave/retrowave night of sin to honour our fallen sisters, persecuted by pseudoscience. All original music by Lazermortis.",
+            "room": "grandBallroom",
+            "start": "2021-04-30T23:30:00-04:00",
+            "end": "2021-05-01T01:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
