@@ -62,7 +62,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Ballroom.png",
             "iframeOptions": {
-                "src": "https://angelthump.com/ledflashing"
+                "src": "https://player.angelthump.com/?channel=LEDFlashing"
             },
             "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
             "directions": {
