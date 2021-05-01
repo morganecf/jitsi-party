@@ -2,34 +2,34 @@
     "events": [
         {
             "name": "TST Sober Faction: Sobriety Without Superstition",
-            "description": "Co-director Jon will host a speaker meeting on April 30.",
+            "description": "Co-director Joe Dee will host a speaker meeting on May 1.",
             "room": "garden",
-            "start": "2021-04-30T20:00:00-04:00",
+            "start": "2021-05-01T20:00:00-04:00",
             "end": "2021-05-01T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "The Satanic Chef",
-            "description": "Join Adam Dodge in the kitchen of VHQ for a cooking workshop and conversation. Keep your eyes out for Sous Chef Jack!",
-            "room": "kitchen",
-            "start": "2021-04-30T20:30:00-04:00",
-            "end": "2021-04-30T21:30:00-04:00",
+            "name": "Struggle For Justice: Scottsdale Analysis & Case Updates from TST's Legal Team",
+            "description": "The latest on our lawsuits: Scottsdale's Invocation lawsuit. Analysis & Case Updates from Lucien Greaves, joined by TST's Legal Team from Matthew Kezhaya (TST Counsel), Stu De Haan (TST Counsel). We are also joined by Monica Miller (American Humanists Association) -- a renowned Constitutional lawyer who provided preparatory support for the Scottsdale case.",
+            "room": "frontParlor",
+            "start": "2021-05-01T20:30:00-04:00",
+            "end": "2021-05-01T21:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Ave Satanas: A Candlelight Ritual",
-            "description": "An international candlelight ritual with guest participation written by Thomas O'Brien Vallor and Marissa Young. In memoriam to those who lost their lives and suffered under religious persecution and superstition by candlelight. Houseguests are encouraged to wear mourning attire and bring a candle to participate in the ritual.",
+            "name": "Embracing The Satanic Witch: Using Ritual + Tarot + Mysticism to Illuminate Your Path",
+            "description": "Join Priestess Shiva Honey as she discusses her path as a Satanic Witch, dispels common misconceptions about witchcraft and Satanism, and shows you how you can use ritual, tarot +  card reading, and mysticism to enrich your Satanic practice. This lecture will be followed by a DJ set by Shiva and Grahamzig.",
             "room": "ritualChamber",
-            "start": "2021-04-30T22:00:00-04:00",
-            "end": "2021-04-30T23:00:00-04:00",
+            "start": "2021-05-01T22:00:00-04:00",
+            "end": "2021-05-02T01:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Forgive Me Father, For I Have Synthed",
-            "description": "A synthwave/retrowave night of sin to honour our fallen sisters, persecuted by pseudoscience. All original music by Lazermortis.",
-            "room": "grandBallroom",
-            "start": "2021-04-30T23:30:00-04:00",
-            "end": "2021-05-01T01:00:00-04:00",
+            "name": "Struggle For Justice: Belle Plaine Analysis & Case Updates from TST's Legal Team",
+            "description": "The latest on our lawsuits: Belle Plaine's monument. Analysis & Case Updates from Lucien Greaves, joined by TST's Legal Team from Matthew Kezhaya (TST Counsel), Stu De Haan (TST Counsel), Jason Juran (TST Co-Counsel Belle Plaine.) We are also joined by Monica Miller (American Humanists Association) -- a renowned Constitutional lawyer who provided preparatory support for the Scottsdale case.",
+            "room": "backParlor",
+            "start": "2021-05-02T00:00:00-04:00",
+            "end": "2021-05-02T01:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
