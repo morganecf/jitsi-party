@@ -3,14 +3,14 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Kitchen.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://www.youtube.com/embed/yqDD72x3I1c"
             },
             "description": "Live deliciously in the kitchen.",
             "directions": {
@@ -62,7 +62,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Ballroom.png",
             "iframeOptions": {
-                "src": "https://angelthump.com/ledflashing"
+                "src": "https://www.youtube.com/embed/Xz7n1OfzhM8"
             },
             "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
             "directions": {
@@ -82,10 +82,10 @@
         {
             "id": "backParlor",
             "name": "Back Parlor",
-            "type": "CHATSTREAM",
-            "capacity": 500,
-            "muteRoom": true,
-            "hideVideo": true,
+            "type": "JITSI",
+            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/backparlor.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/BUJXA2gCbj0"
@@ -137,11 +137,11 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 500,
-            "muteRoom": true,
-            "hideVideo": true,
+            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
             "description": "Loveseats, chaises, armchairs-- oh my!",
-            "type": "CHATSTREAM",
+            "type": "JITSI",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/frontparlor.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/Iz7eYifbemo"
@@ -167,8 +167,8 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "CHATSTREAM",
-            "capacity": 500,
+            "type": "JITSI",
+            "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
@@ -201,9 +201,9 @@
             "iframeOptions": {
                 "src": "https://youtube.com/embed/iQaC34Fnp6o"
             },
-            "capacity": 100,
+            "capacity": 15,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/den.png",
-            "description": "Scoot the ottoman closer, would you?",
+            "description": "Would you please set up an extra easel?",
             "directions": {
                 "north": "backParlor",
                 "south": "teaRoom"
@@ -223,14 +223,14 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "JITSI",
-            "capacity": 25,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/ritual.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://www.youtube.com/embed/EQMEEzL0QNg"
             },
             "directions": {
                 "east": "backParlor"
@@ -352,15 +352,15 @@
         {
             "id": "theater",
             "name": "Theater",
-            "type": "CHATSTREAM",
-            "capacity": 200,
-            "muteRoom": true,
-            "hideVideo": true,
+            "type": "IFRAME",
+            "capacity": 10,
+            "muteRoom": false,
+            "hideVideo": false,
             "locked": false,
             "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/theater.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://www.youtube.com/embed/typxYRRULSo"
             },
             "directions": {
                 "west": "sleepingPorch",
@@ -432,7 +432,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/A5hxApOLl9U"
+                "src": "https://www.youtube.com/embed/7MFnjY3c0s4"
             },
             "description": "The amaryllis is already blooming!",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/garden.png",
