@@ -141,7 +141,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "Loveseats, chaises, armchairs-- oh my!",
-            "type": "IFRAME",
+            "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/frontparlor.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/VnZjRf04YMM"
