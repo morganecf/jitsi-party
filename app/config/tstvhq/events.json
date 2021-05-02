@@ -57,6 +57,14 @@
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
+            "name": "Whimsical Blasphemy",
+            "description": "Join Mercy for music and videos all night, live from Salem.",
+            "room": "grandBallroom",
+            "start": "2021-05-02T20:00:00-04:00",
+            "end": "2021-05-03T02:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
             "name": "Grey Faction Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
