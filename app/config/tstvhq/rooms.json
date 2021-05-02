@@ -56,13 +56,13 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "CHATSTREAM",
+            "capacity": 100,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Ballroom.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/Xz7n1OfzhM8"
+                "src": "https://player.angelthump.com/?channel=LEDFlashing"
             },
             "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
             "directions": {
@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/backparlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/WiNyUK6l4CE"
+                "src": "https://www.youtube.com/embed/_1gxbGJ51L8"
             },
             "description": "Please use the incense burner instead of getting ash in the candles.",
             "directions": {
@@ -144,7 +144,7 @@
             "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/frontparlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/4LzjMvwmB7U"
+                "src": "https://www.youtube.com/embed/ZE0JCKPaqCk"
             },
             "directions": {
                 "east": "teaRoom",
@@ -167,12 +167,12 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "CHATSTREAM",
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/SXwaE6W8GmM"
+                "src": "https://www.youtube.com/embed/lvBw1DbP138"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/tea.png",
             "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick.",
@@ -197,11 +197,11 @@
         {
             "id": "den",
             "name": "Study",
-            "type": "JITSI",
+            "type": "CHATSTREAM",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/iQaC34Fnp6o"
+                "src": "https://www.youtube.com/embed/3t5pk-UQ_BM"
             },
-            "capacity": 15,
+            "capacity": 200,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/den.png",
             "description": "Would you please set up an extra easel?",
             "directions": {
@@ -223,8 +223,8 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
@@ -432,7 +432,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/P8wayPSfUJs"
+                "src": "https://www.youtube.com/embed/4r2sz1eT6Rc"
             },
             "description": "The amaryllis is already blooming!",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/garden.png",
