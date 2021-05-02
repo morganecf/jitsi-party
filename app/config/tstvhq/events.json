@@ -2,34 +2,42 @@
     "events": [
         {
             "name": "TST Sober Faction: Sobriety Without Superstition",
-            "description": "Co-director Joe Dee will host a speaker meeting on May 1.",
+            "description": "TST Sober Faction will close on May 2 hosting a full open meeting where guests can participate in as well.",
             "room": "garden",
-            "start": "2021-05-01T20:00:00-04:00",
-            "end": "2021-05-01T21:00:00-04:00",
+            "start": "2021-05-02T20:00:00-04:00",
+            "end": "2021-05-02T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Struggle For Justice: Scottsdale Analysis & Case Updates from TST's Legal Team",
-            "description": "The latest on our lawsuits: Scottsdale's Invocation lawsuit. Analysis & Case Updates from Lucien Greaves, joined by TST's Legal Team from Matthew Kezhaya (TST Counsel), Stu De Haan (TST Counsel). We are also joined by Monica Miller (American Humanists Association) -- a renowned Constitutional lawyer who provided preparatory support for the Scottsdale case.",
+            "name": "Conspiracism and the Moral Cause",
+            "description": "Join Lucien Greaves for his lecture on how conspiracy theorists hijack victim's rights movements.",
             "room": "frontParlor",
-            "start": "2021-05-01T20:30:00-04:00",
-            "end": "2021-05-01T21:30:00-04:00",
+            "start": "2021-05-02T23:30:00-04:00",
+            "end": "2021-05-03T00:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Embracing The Satanic Witch: Using Ritual + Tarot + Mysticism to Illuminate Your Path",
-            "description": "Join Priestess Shiva Honey as she discusses her path as a Satanic Witch, dispels common misconceptions about witchcraft and Satanism, and shows you how you can use ritual, tarot +  card reading, and mysticism to enrich your Satanic practice. This lecture will be followed by a DJ set by Shiva and Grahamzig.",
-            "room": "ritualChamber",
-            "start": "2021-05-01T22:00:00-04:00",
-            "end": "2021-05-02T01:30:00-04:00",
+            "name": "An Atheist Enrolls in Bob Larson's International School of Exorcism",
+            "description": "Ross Blocher, co-host of the investigations podcast Oh No, Ross and Carrie, shares findings from his and Carrie's longest-running investigation. See what it's like to attend Satanic panic proponent Bob Larson's live exorcisms, enroll in his International School of Exorcism and Advanced Academy of Deliverance, and meet up with other exorcists at a convention in Texas.",
+            "room": "teaRoom",
+            "start": "2021-05-02T19:00:00-04:00",
+            "end": "2021-05-02T20:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Struggle For Justice: Belle Plaine Analysis & Case Updates from TST's Legal Team",
-            "description": "The latest on our lawsuits: Belle Plaine's monument. Analysis & Case Updates from Lucien Greaves, joined by TST's Legal Team from Matthew Kezhaya (TST Counsel), Stu De Haan (TST Counsel), Jason Juran (TST Co-Counsel Belle Plaine.) We are also joined by Monica Miller (American Humanists Association) -- a renowned Constitutional lawyer who provided preparatory support for the Scottsdale case.",
+            "name": "COMPASSION & EMPATHY: A Panel Discussion on Satanic Mental Health",
+            "description": "A panel discussion moderated by Kaelea Kae featuring Shiva Honey, Adam Ostrofsky and Lilith Starr, with an introduction by Simon Widdop. Discussions of personal experiences of how we heal, self-care and connect with others to improve our mental health as Satanists.",
             "room": "backParlor",
-            "start": "2021-05-02T00:00:00-04:00",
-            "end": "2021-05-02T01:00:00-04:00",
+            "start": "2021-05-02T22:00:00-04:00",
+            "end": "2021-05-02T23:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
+            "name": "Satanic Art Social Hour",
+            "description": "Hexennacht is a heavy Holiday for Satanists. Come unwind with Zoey Inferni for an hour of Satanic art! Bring whatever medium you prefer - crafts, painting, doodling, clay, etc. We will share on webcam while we chat.",
+            "room": "den",
+            "start": "2021-05-02T20:30:00-04:00",
+            "end": "2021-05-02T21:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
@@ -45,6 +53,14 @@
             "description": "Livestream of goats. Sponsor one of these good kids at woodstocksanctuary.org",
             "room": "sleepingPorch",
             "start": "2021-04-29T20:00:00-04:00",
+            "end": "2021-05-03T02:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
+            "name": "Whimsical Blasphemy",
+            "description": "Join Mercy for music and videos all night, live from Salem.",
+            "room": "grandBallroom",
+            "start": "2021-05-02T20:00:00-04:00",
             "end": "2021-05-03T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
