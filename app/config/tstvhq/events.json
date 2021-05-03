@@ -5,7 +5,7 @@
             "name": "The Satanic Chef",
             "description": "Join Adam Dodge in the kitchen of VHQ for a cooking workshop and conversation. Keep your eyes out for Sous Chef Jack!",
             "room": "kitchen",
-            "start": "2021-05-03T2030:00-04:00",
+            "start": "2021-05-03T20:30:00-04:00",
             "end": "2021-05-03T21:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
