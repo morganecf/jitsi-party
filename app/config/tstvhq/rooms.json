@@ -3,14 +3,14 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 400,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Kitchen.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/yqDD72x3I1c"
+                "src": "https://www.youtube.com/embed/dH-Bs2xHgvA"
             },
             "description": "Live deliciously in the kitchen.",
             "directions": {
@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/backparlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/_1gxbGJ51L8"
+                "src": "https://www.youtube.com/embed/H42iopEhc4U"
             },
             "description": "Please use the incense burner instead of getting ash in the candles.",
             "directions": {
@@ -137,11 +137,11 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 400,
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "Loveseats, chaises, armchairs-- oh my!",
-            "type": "CHATSTREAM",
+            "type": "JITSI",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/frontparlor.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/ZE0JCKPaqCk"
@@ -167,8 +167,8 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
@@ -197,11 +197,11 @@
         {
             "id": "den",
             "name": "Study",
-            "type": "CHATSTREAM",
+            "type": "JITSI",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/3t5pk-UQ_BM"
             },
-            "capacity": 200,
+            "capacity": 5,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/den.png",
             "description": "Would you please set up an extra easel?",
             "directions": {
@@ -352,15 +352,15 @@
         {
             "id": "theater",
             "name": "Theater",
-            "type": "IFRAME",
-            "capacity": 10,
+            "type": "CHATSTREAM",
+            "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
             "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/theater.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/typxYRRULSo"
+                "src": "https://www.youtube.com/embed/H42iopEhc4U"
             },
             "directions": {
                 "west": "sleepingPorch",
