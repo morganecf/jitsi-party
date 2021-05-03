@@ -427,10 +427,10 @@
         {
             "id": "garden",
             "name": "Garden",
-            "type": "CHATSTREAM",
-            "capacity": 400,
-            "muteRoom": true,
-            "hideVideo": true,
+            "type": "JITSI",
+            "capacity": 50,
+            "muteRoom": false,
+            "hideVideo": false,
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/4r2sz1eT6Rc"
             },
