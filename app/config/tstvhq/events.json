@@ -1,35 +1,28 @@
 {
     "events": [
-        {
-            "name": "TST Sober Faction: Sobriety Without Superstition",
-            "description": "Co-director Jon will host a speaker meeting on April 30.",
-            "room": "garden",
-            "start": "2021-04-30T20:00:00-04:00",
-            "end": "2021-05-01T21:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
-        },
+
         {
             "name": "The Satanic Chef",
             "description": "Join Adam Dodge in the kitchen of VHQ for a cooking workshop and conversation. Keep your eyes out for Sous Chef Jack!",
             "room": "kitchen",
-            "start": "2021-04-30T20:30:00-04:00",
-            "end": "2021-04-30T21:30:00-04:00",
+            "start": "2021-05-03T20:30:00-04:00",
+            "end": "2021-05-03T21:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Ave Satanas: A Candlelight Ritual",
-            "description": "An international candlelight ritual with guest participation written by Thomas O'Brien Vallor and Marissa Young. In memoriam to those who lost their lives and suffered under religious persecution and superstition by candlelight. Houseguests are encouraged to wear mourning attire and bring a candle to participate in the ritual.",
-            "room": "ritualChamber",
-            "start": "2021-04-30T22:00:00-04:00",
-            "end": "2021-04-30T23:00:00-04:00",
+            "name": "Salem Witch Wiles",
+            "description": "Join Thomas O'Brien Vallor, The Estate's resident Salem Witch for a conversation about Hexennacht.",
+            "room": "backParlor",
+            "start": "2021-05-03T22:00:00-04:00",
+            "end": "2021-05-03T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Forgive Me Father, For I Have Synthed",
-            "description": "A synthwave/retrowave night of sin to honour our fallen sisters, persecuted by pseudoscience. All original music by Lazermortis.",
-            "room": "grandBallroom",
-            "start": "2021-04-30T23:30:00-04:00",
-            "end": "2021-05-01T01:00:00-04:00",
+            "name": "The Love Witch with TST Oregon",
+            "description": "Join TST Oregon for a showing of Anna Biller's classic The Love Witch.",
+            "room": "theater",
+            "start": "2021-05-03T23:30:00-04:00",
+            "end": "2021-05-04T01:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
@@ -46,6 +39,14 @@
             "room": "sleepingPorch",
             "start": "2021-04-29T20:00:00-04:00",
             "end": "2021-05-03T02:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
+            "name": "Whimsical Blasphemy",
+            "description": "Join Mercy for music and videos all night, live from Salem.",
+            "room": "grandBallroom",
+            "start": "2021-05-03T20:00:00-04:00",
+            "end": "2021-05-04T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
