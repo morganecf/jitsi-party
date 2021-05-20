@@ -97,7 +97,7 @@ class Navigation extends Component {
                 <div className="column settings-container">
                     <div className="map-button-container">
                         {this.props.showMapButton && !this.props.hideSettings &&
-                            <button className={mapButtonClass} disabled={false} onClick={handleClickMap}>
+                            <button className={mapButtonClass} title={Config.tooltips.map} disabled={false} onClick={handleClickMap}>
                                 <FontAwesomeIcon icon={faMap}/>
                             </button>
                         }
@@ -107,21 +107,21 @@ class Navigation extends Component {
                     </div>
                     <div className="events-button-container">
                         {events && events.length > 0 && !this.props.hideSettings &&
-                            <button className="events-button" onClick={handleClickEvents}>
+                            <button className="events-button" title={Config.tooltips.events} onClick={handleClickEvents}>
                                 <FontAwesomeIcon icon={faCalendar}/>
                             </button>
                         }
                     </div>
                     <div className="email-button-container">
                         {Config.moderation && !_.isEmpty(Config.moderation.moderatorEmails) &&
-                            <button className="email-button" onClick={handleClickEmail}>
+                            <button className="email-button" title={Config.tooltips.moderator} onClick={handleClickEmail}>
                                 <FontAwesomeIcon icon={faEnvelope}/>
                             </button>
                         }
                     </div>
                     <div className="poke-button-container">
                         {Config.poke && this.props.isPokingUnlocked && !this.props.hideSettings &&
-                            <button className={pokeButtonClass} onClick={this.handleClickPokeButton.bind(this)}>
+                            <button className={pokeButtonClass} title={Config.tooltips.poke} onClick={this.handleClickPokeButton.bind(this)}>
                                 <FontAwesomeIcon icon={Config.poke.fontAwesomeIcon} />
                             </button>
                         }

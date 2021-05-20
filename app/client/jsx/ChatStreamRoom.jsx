@@ -83,6 +83,12 @@ export const ChatStreamRoom = ({
         document.querySelector(".chat-head").remove();
       }
 
+      if (document.querySelector(".chat-textarea") !== null) {
+        document.querySelector(".chat-textarea").addEventListener("keydown", (e) => {
+          if ([37, 38, 39, 40].includes(e.keyCode)) e.stopImmediatePropagation();
+        })
+      }
+
       if (document.querySelector(".send-button") !== null) {
         document.querySelector(".send-button").remove();
         observer.disconnect();
