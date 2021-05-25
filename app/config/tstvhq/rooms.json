@@ -324,17 +324,17 @@
             "doorTint": "#000000"
         },
         {
-            "id": "library",
-            "name": "Satanic Archive Library",
+            "id": "jukebox",
+            "name": "Satanic Jukebox",
             "type": "IMAGEMAP",
-            "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
+            "description": "Satanic Jukebox.",
             "directions": {
                 "south": "elevator",
                 "east": "sleepingPorch",
                 "north": "boudoir",
                 "west": "aviary"
             },
-            "imageMapOptions": "satanic-library-map",
+            "imageMapOptions": "satanic-jukebox-map",
             "map": {
                 "x": 7,
                 "y": 7,

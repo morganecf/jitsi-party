@@ -35,13 +35,13 @@ export default props => {
     // Get the width of the actual image file
     const [imgSize, setImgSize] = useState({})
     var img = new Image()
-    img.onload = () =>
-        setImgSize({"width":img.naturalWidth, "height":img.naturalHeight})
+    img.onload = () => setImgSize({"width":img.naturalWidth, "height":img.naturalHeight})
     img.src = props.imageMapOptions.img
 
     // Get the max width supported by the room
     const [maxWidth, setMaxWidth] = useState(0)
     const divRef = useRef(null)
+
     useEffect(() => {
         var newMaxWidth =
             calculateFullWidth(
