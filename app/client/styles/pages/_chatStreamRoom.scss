@@ -85,9 +85,13 @@ $mobile_portrait_length: 480px !default;
       }
     }
 
-    .chat-msg__avatar image {
-      width: 100% !important;
-      height: 100% !important;
+    .chat-msg__avatar {
+      background: $chat-msg-avatar-background !important;
+
+      image {
+        width: 100% !important;
+        height: 100% !important;
+      }
     }
 
     .chat-content__notifications {
