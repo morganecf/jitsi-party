@@ -221,7 +221,7 @@ resource "aws_instance" "main" {
 resource "aws_route53_record" "main" {
     zone_id = aws_route53_zone.main.zone_id
     name = "enter.thesatanic.estate"
-    type = "A"
-    ttl = "300"
-    records = [var.vhq_enabled ? aws_eip.main[0].public_ip : "8.8.8.8"]
+    type = var.vhq_enabled ? "A" : "CNAME"
+    ttl = "60"
+    records = [var.vhq_enabled ? aws_eip.main[0].public_ip : "d1u2lx0fagbi00.cloudfront.net"]
 }
