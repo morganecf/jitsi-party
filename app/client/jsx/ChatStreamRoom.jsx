@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Config from "./Config.jsx";
+import { imgURLtoDataURL } from './utils.js'
 
 /**
  * This component is used to render a Converse.js chat component on the
@@ -15,6 +16,7 @@ import Config from "./Config.jsx";
 export const ChatStreamRoom = ({
   id: roomId,
   displayName,
+  avatar,
   iframeOptions: { src },
 }) => {
   // register the 'jitsi-plugin' and initialize converse and cleanup after close
@@ -28,6 +30,17 @@ export const ChatStreamRoom = ({
         initialize: function () {
           logout = this._converse.api.user.logout;
           plugins = this._converse.pluggable.plugins;
+
+          // set the user's profile image
+          this._converse.api.listen.on('VCardsInitialized', () => {
+            const avatarUrl = Config.avatars[avatar.type].images[avatar.color]
+            imgURLtoDataURL(avatarUrl, dataUrl => {
+              const base64img = dataUrl.split(',')[1]
+              this._converse.api.vcard.set(this._converse.bare_jid, {
+                image: base64img
+              })
+            })
+          })
         },
       });
     } catch (error) {
@@ -75,12 +88,18 @@ export const ChatStreamRoom = ({
       childList: true,
       attributes: true,
       subtree: true,
-    });    
+    });
 
     // use MutationObserver to restucture the chatbox
     const observer = new MutationObserver((muts) => {
       if (document.querySelector(".chatbox-title__buttons") !== null) {
         document.querySelector(".chat-head").remove();
+      }
+
+      if (document.querySelector(".chat-textarea") !== null) {
+        document.querySelector(".chat-textarea").addEventListener("keydown", (e) => {
+          if ([37, 38, 39, 40].includes(e.keyCode)) e.stopImmediatePropagation();
+        })
       }
 
       if (document.querySelector(".send-button") !== null) {

@@ -3,6 +3,12 @@
     "page_title": "TSTVHQ",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
+    "tooltips": {
+        "map": "Estate Map",
+        "events": "Calendar of Events",
+        "moderator": "Contact a Moderator",
+        "poke": "Poke Someone"
+    },
     "startRoom": "cemetery",
     "videoDisplayName": "Satanist",
     "moderation": {

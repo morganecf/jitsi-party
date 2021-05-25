@@ -42,6 +42,7 @@ $mobile_portrait_length: 480px !default;
   }
 
   .chatroom {
+
     // color themes
     .separator {
       border-bottom: 2px solid $chat-separator-bars !important;
@@ -78,8 +79,18 @@ $mobile_portrait_length: 480px !default;
 
     .chat-msg__action {
       color: $chat-msg-menu-items !important;
+
       svg {
         fill: $chat-msg-menu-items !important;
+      }
+    }
+
+    .chat-msg__avatar {
+      background: $chat-msg-avatar-background !important;
+
+      image {
+        width: 100% !important;
+        height: 100% !important;
       }
     }
 
@@ -109,9 +120,11 @@ $mobile_portrait_length: 480px !default;
       background-color: $message-area-bg !important;
       margin-bottom: -5px !important;
       color: $message-text !important;
+
       &::placeholder {
         color: lighten($message-text, 20%) !important;
       }
+
       &:focus {
         outline: 0px !important;
         border: 0px !important;
@@ -156,6 +169,7 @@ $mobile_portrait_length: 480px !default;
       svg {
         fill: $toolbox-emoji-color !important;
       }
+
       .separator {
         border-bottom: 2px solid $toolbox-bg !important;
       }
