@@ -23,16 +23,16 @@ export function createAdventureActions(room, rooms) {
     * getNextRoom function can easily have access to the whole layout, rooms, which
     * is necessary for the wildcard option and might be useful for future action types.
     */
-   room.buttons.forEach(button => {
-       if (typeof button.nextRoom === 'string') {
+    room.buttons.forEach(button => {
+        if (typeof button.nextRoom === 'string') {
             if (button.nextRoom === '*') {
                 button.getNextRoom = teleport.bind({ rooms })
             } else {
                 button.getNextRoom = () => button.nextRoom
             }
-       } else {
-           button.getNextRoom = () => pickRandom(button.nextRoom)
-       }
+        } else {
+            button.getNextRoom = () => pickRandom(button.nextRoom)
+        }
     })
 }
 
@@ -88,4 +88,19 @@ export function formatEventFromNow(event) {
         return `started ${start.fromNow()}`
     }
     return `is starting ${start.fromNow()}`
+}
+
+export function imgURLtoDataURL(url, callback) {
+    const xhr = new XMLHttpRequest()
+    xhr.onload = () => {
+        const reader = new FileReader()
+        reader.onloadend = () => callback(reader.result)
+        reader.readAsDataURL(xhr.response)
+    }
+    xhr.open('GET', url)
+    // Forces preflight request, which gains permission from S3 to GET resources
+    // from localhost for dev testing purposes
+    xhr.setRequestHeader('Cache-Control', 'no-cache')
+    xhr.responseType = 'blob'
+    xhr.send()
 }
