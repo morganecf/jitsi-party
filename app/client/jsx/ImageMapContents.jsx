@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { PDFObject } from 'react-pdfobject'
+import { ReactAudio } from 'reactjs-media'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -54,6 +55,29 @@ function displayItem(props, item, returnFunc) {
 export default props => {
     const [itemIsShown, setItemIsShown] = useState(false)
     const [item, setItem] = useState({})
+
+    if (props.area.contents.length === 1) {
+        const {type, path} = props.area.contents[0]
+
+        switch (type) {
+            case "MP3":
+                return (
+                    <div className="imagemap-modal">
+                    <div className="header">
+                        <b>{props.area.label}</b>
+                        <button onClick={props.handleClose}>
+                            <FontAwesomeIcon icon={faTimes}/>
+                        </button>
+                    </div>
+                    <div className="contents">
+                        <ReactAudio src={path} autoPlay />
+                    </div>
+                </div>)
+            default:
+                return null;
+        }
+    }
+
     if (!itemIsShown) {
         return displayList(props, onSelectItem(setItemIsShown, setItem))
     }
