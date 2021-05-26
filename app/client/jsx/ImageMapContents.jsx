@@ -4,6 +4,26 @@ import { ReactAudio } from 'reactjs-media'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
+/**
+ * Wrapper component for handling various content displays.
+ * 
+ * @param {*} props 
+ * @returns 
+ */
+ const ContentWrapper = ({ label, handleClose, children }) => (
+    <div className="imagemap-modal">
+        <div className="header">
+            <b>{label}</b>
+            <button onClick={handleClose}>
+                <FontAwesomeIcon icon={faTimes}/>
+            </button>
+        </div>
+        <div className="contents">
+            {children}
+        </div>
+    </div>
+)
+
 function getContentsHtml(contentsList, onClickFunc) {
     return contentsList.map((c,i) => 
         <div className="item" key={i} onClick={() => onClickFunc(c)}>{c.title}</div>
@@ -62,17 +82,10 @@ export default props => {
         switch (type) {
             case "MP3":
                 return (
-                    <div className="imagemap-modal">
-                    <div className="header">
-                        <b>{props.area.label}</b>
-                        <button onClick={props.handleClose}>
-                            <FontAwesomeIcon icon={faTimes}/>
-                        </button>
-                    </div>
-                    <div className="contents">
+                    <ContentWrapper label={props.area.label} handleClose={props.handleClose}>
                         <ReactAudio src={path} autoPlay />
-                    </div>
-                </div>)
+                    </ContentWrapper>
+                )
             default:
                 return null;
         }
