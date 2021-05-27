@@ -278,7 +278,7 @@
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "Buy, buy, buy...your Satanic Merch here.",
+            "description": "Get your Satanic Merch here.",
             "type": "IMAGEMAP",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
             "directions": {
@@ -353,7 +353,7 @@
             "id": "jukebox",
             "name": "Satanic Jukebox",
             "type": "IMAGEMAP",
-            "description": "Satanic Jukebox.",
+            "description": "Satanic Jukebox",
             "directions": {
                 "south": "elevator",
                 "east": "satanicMerch",

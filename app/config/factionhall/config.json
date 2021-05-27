@@ -3,6 +3,12 @@
     "page_title": "Faction Hall",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
+    "tooltips": {
+        "map": "Estate Map",
+        "events": "Calendar of Events",
+        "moderator": "Contact a Moderator",
+        "poke": "Poke Someone"
+    },
     "startRoom": "foyer",
     "videoDisplayName": "Guest",
     "moderation": {
