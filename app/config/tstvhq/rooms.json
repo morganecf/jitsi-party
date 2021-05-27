@@ -262,16 +262,42 @@
                 "south": "theater"
             },
             "map": {
-                "x": 17,
+                "x": 19,
                 "y": 5,
                 "width": 2,
                 "height": 2,
                 "doors": {
-                    "south": 18
+                    "south": 20
                 }
             },
             "doorTint": "#000000"
         },
+        {
+            "id": "satanicMerch",
+            "name": "Satanic Merch",
+            "capacity": 25,
+            "muteRoom": false,
+            "hideVideo": false,
+            "description": "Buy, buy, buy...your Satanic Merch here.",
+            "type": "IMAGEMAP",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
+            "directions": {
+                "west": "jukebox",
+                "east": "sleepingPorch"
+            },
+            "imageMapOptions": "satanic-merch-map",
+            "map": {
+                "x": 14,
+                "y": 9,
+                "width": 2,
+                "height": 2,
+                "doors": {
+                    "west": 10,
+                    "east": 10
+                }
+            },
+            "doorTint": "#000000"
+        },        
         {
             "id": "sleepingPorch",
             "name": "Sleeping Porch",
@@ -282,14 +308,14 @@
             "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/sleepingporch.png",
             "directions": {
-                "west": "library",
+                "west": "satanicMerch",
                 "east": "theater"
             },
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/OD3t0ODlY1o"
             },
             "map": {
-                "x": 14,
+                "x": 16,
                 "y": 9,
                 "width": 2,
                 "height": 2,
@@ -330,7 +356,7 @@
             "description": "Satanic Jukebox.",
             "directions": {
                 "south": "elevator",
-                "east": "sleepingPorch",
+                "east": "satanicMerch",
                 "north": "boudoir",
                 "west": "aviary"
             },
@@ -367,13 +393,13 @@
                 "north": "belfry"
             },
             "map": {
-                "x": 16,
+                "x": 18,
                 "y": 7,
                 "width": 5,
                 "height": 5,
                 "doors": {
                     "west": 10,
-                    "north": 18
+                    "north": 20
                 }
             },
             "doorTint": "#000000"

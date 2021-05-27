@@ -85,6 +85,48 @@
             ]
         },
         {
+            "id": "satanic-merch-map",
+            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "635,1078,4,0",
+                    "label": "Shop The Satanic Temple",
+                    "contents": [
+                        {
+                            "title": "Shop The Satanic Temple",
+                            "path": "https://thesatanictemple.com/collections/satanic-planet",
+                            "type": "HTML"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1276,1077,645,2",
+                    "label": "Shop Kings Road Merch",
+                    "contents": [
+                        {
+                            "title": "Shop Kings Road Merch",
+                            "path": "https://kingsroadmerch.com/three-one-g/artist/845",
+                            "type": "HTML"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1917,1077,1288,0",
+                    "label": "Shop Shirt Killer",
+                    "contents": [
+                        {
+                            "title": "Shop Shirt Killer",
+                            "path": "https://shirtkiller.com/collections/satanicplanet",
+                            "type": "HTML"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "satanic-jukebox-map",
             "img": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/jukebox1920x1080bw.png",
             "areas": [

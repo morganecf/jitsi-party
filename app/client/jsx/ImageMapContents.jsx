@@ -86,6 +86,10 @@ export default props => {
                         <ReactAudio src={path} autoPlay />
                     </ContentWrapper>
                 )
+            case "HTML":
+                window.open(path, "_blank");
+                props.handleClose();
+                return null;
             default:
                 return null;
         }
@@ -94,5 +98,6 @@ export default props => {
     if (!itemIsShown) {
         return displayList(props, onSelectItem(setItemIsShown, setItem))
     }
+
     return displayItem(props, item, () => setItemIsShown(false))
 }

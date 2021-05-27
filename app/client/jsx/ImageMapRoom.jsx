@@ -33,9 +33,11 @@ export default props => {
     const [area, setArea] = useState({})
 
     // Get the width of the actual image file
-    const [imgSize, setImgSize] = useState({})
+    const imgSizeRef = useRef({width: 0, height: 0})
     var img = new Image()
-    img.onload = () => setImgSize({"width":img.naturalWidth, "height":img.naturalHeight})
+    img.onload = () => {
+        imgSizeRef.current = {"width": img.naturalWidth, "height": img.naturalHeight}
+    }
     img.src = props.imageMapOptions.img
 
     // Get the max width supported by the room
@@ -47,12 +49,12 @@ export default props => {
             calculateFullWidth(
                 divRef.current.clientWidth,
                 divRef.current.clientHeight,
-                imgSize.width,
-                imgSize.height)
+                imgSizeRef.current.width,
+                imgSizeRef.current.height)
         if (!isNaN(newMaxWidth) && newMaxWidth !== maxWidth) {
             setMaxWidth(newMaxWidth)
         }
-    }, [divRef.current && divRef.current.clientWidth, imgSize.width])
+    }, [divRef.current && divRef.current.clientWidth, imgSizeRef.current.width])
 
     return (
         <div className="imagemap-room" ref={divRef}>
@@ -61,7 +63,7 @@ export default props => {
                 map={{"name":"img", "areas":formatAreas(props.imageMapOptions.areas)}}
                 fillColor="rgba(255,255,255,0.25)"
                 onClick={onDisplayModal(props.imageMapOptions.areas, setIsShown, setArea)}
-                imgWidth={imgSize.width}
+                imgWidth={imgSizeRef.current.width}
                 width={maxWidth}
             />
 
