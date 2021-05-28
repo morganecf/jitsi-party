@@ -120,6 +120,9 @@
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomKitchen.png",
+            "iframeOptions": {
+                "src": "https://www.youtube.com/embed/mnzadSp70CE"
+            },
             "description": "Let's go check out the basement!",
             "directions": {
                 "north": "foyer",
@@ -168,7 +171,7 @@
             "type": "IMAGEMAP",
             "muteRoom": false,
             "hideVideo": false,
-            "capacity": 3,
+            "capacity": 20,
             "description": "Get your Satanic Planet Merch here.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
             "imageMapOptions": "satanic-merch-map",
@@ -291,7 +294,7 @@
             "id": "lounge",
             "name": "Adrenochrome Lounge",
             "type": "JITSI",
-            "capacity": 15,
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "Drink it all in.",
