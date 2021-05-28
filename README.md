@@ -9,7 +9,7 @@ This document assumes an environment with docker/docker-compose, with a user acc
 
 ### Running the app locally
 ```bash
-make up && make db
+make pull && make up && make db
 ```
 
 The default app installation should now be running on localhost:443 with a self-signed certificate.
