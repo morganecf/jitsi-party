@@ -22,7 +22,7 @@ clean-env:
 	rm -rf .env
 
 .PHONY: npm-update
-npm-update:
+npm-update: env
 	docker-compose build node
 	docker-compose run node cp /package-lock.json /app/client/package-lock.json
 
@@ -37,7 +37,6 @@ clean-theme:
 js = app/client/js
 webpack-files := $(js)/bundle.js $(js)/bundle.js.map
 $(webpack-files)&: env schema $(theme)
-	docker-compose pull node
 	docker-compose run node /node_modules/.bin/webpack
 
 .PHONY: webpack
@@ -49,7 +48,6 @@ clean-webpack:
 
 .PHONY: up
 up: webpack env schema
-	docker-compose pull
 	docker-compose up -d
 
 .PHONY: restart
@@ -79,3 +77,7 @@ clean: env clean-docker clean-env clean-config clean-schema clean-theme clean-we
 .PHONY: format-config
 format-config:
 	./format_configs.sh
+
+.PHONY: pull
+pull:
+	docker-compose pull
