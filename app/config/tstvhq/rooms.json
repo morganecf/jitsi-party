@@ -297,7 +297,7 @@
                 }
             },
             "doorTint": "#000000"
-        },        
+        },
         {
             "id": "sleepingPorch",
             "name": "Sleeping Porch",
@@ -486,7 +486,7 @@
             "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "First of May · Jonathan Coulton, Creative Commons",
+            "description": "First of May \u00b7 Jonathan Coulton, Creative Commons",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/WzZaJDg6E0A"
             },
@@ -526,4 +526,3 @@
         }
     ]
 }
-

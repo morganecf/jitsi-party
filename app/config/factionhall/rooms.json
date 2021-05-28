@@ -8,7 +8,7 @@
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfstormauditorium.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfstormauditorium.png",
             "iframeOptions": {
                 "src": "https://youtube.com/embed/KYGvH_s3BdQ"
             },
@@ -36,7 +36,7 @@
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfjudemirrahall.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfjudemirrahall.png",
             "iframeOptions": {
                 "src": "https://youtube.com/embed/njWYW2X8FbY"
             },
@@ -64,7 +64,7 @@
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmichelletallmadgehall.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfmichelletallmadgehall.png",
             "iframeOptions": {
                 "src": "https://youtube.com/embed/nZavCtc329s"
             },
@@ -95,7 +95,7 @@
             "hideVideo": true,
             "doorTint": "#000000",
             "description": "Fly with the Monarchs",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmkultratheater.jpeg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfmkultratheater.jpeg",
             "iframeOptions": {
                 "src": "https://youtube.com/embed/dW3-sFEUHpE"
             },
@@ -119,7 +119,7 @@
             "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfcometpizzaparlor.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfcometpizzaparlor.png",
             "description": "What do you mean you don't sell pizza here?",
             "directions": {
                 "north": "foyer",
@@ -146,7 +146,7 @@
             "capacity": 3,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfGundersondungeon.jpeg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfGundersondungeon.jpeg",
             "description": "A Satan-safe undisclosed location.",
             "directions": {
                 "south": "small-2"
@@ -198,7 +198,7 @@
             "hideVideo": false,
             "description": "Have a whiskey to forget or a sodium amytal to remember",
             "type": "JITSI",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmemorylounge.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfmemorylounge.png",
             "directions": {
                 "north": "small-2"
             },
@@ -220,7 +220,7 @@
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfIlluminatedfoyer.jpeg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfIlluminatedfoyer.jpeg",
             "description": "The entrance of a Virtual Conference Regarding Conspiracism and Pseudoscience in the Age of QAnon.",
             "directions": {
                 "north": "michelle-tallmadge",
@@ -249,7 +249,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 5,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfmcmartinchamber.jpeg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfmcmartinchamber.jpeg",
             "description": "Tunnels are closed for rennovation",
             "directions": {
                 "east": "large-lounge",
@@ -295,7 +295,7 @@
             "muteRoom": true,
             "hideVideo": false,
             "description": "Drink it all in.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfAdrenochromeloungered.jpeg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfAdrenochromeloungered.jpeg",
             "directions": {
                 "west": "large-lounge"
             },
