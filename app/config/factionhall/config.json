@@ -77,7 +77,7 @@
     "poke": {
         "text": "Mark of the Beast!",
         "fontAwesomeIcon": "skull",
-        "fromText": "{user} yells '666!",
+        "fromText": "{user} yells '666!'",
         "toText": "Mark of the Beast!",
         "unlockText": "You have unlocked the ability to hex",
         "selfPoke": "Mark of the Beast: 666!",
