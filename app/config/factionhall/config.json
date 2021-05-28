@@ -64,6 +64,14 @@
                 "display": true,
                 "text": "\ud83d\udda4  {count} at Faction Hall"
             },
+            "numberInHallways": {
+                "display": true,
+                "text": "\ud83d\udda4 {count} haunting the hallways"
+            },
+            "numberInRooms": {
+                "display": false,
+                "text": "\ud83d\udda4 {count} learning"
+            },
             "additionalStats": [
                 {
                     "text": "\ud83d\udda4 {count} listening to the new Satanic Planet album",

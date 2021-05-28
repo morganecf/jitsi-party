@@ -11,7 +11,7 @@
         {
             "name": "Unbaptism and DJ Set with Shiva Honey",
             "description": "Following the Group Unbaptism, join Priestess Shiva for a live DJ set",
-            "room": "hall",
+            "room": "jude-mirra",
             "start": "2021-05-29T00:30:00-04:00",
             "end": "2021-05-29T03:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"
@@ -19,15 +19,7 @@
         {
             "name": "Sharing the Planet: Band Inspired Art",
             "description": "A menagerie of SP! Come watch Grey Faction director Evan Anderson's video compilation of Grey Masses for Satanic Planet's track, 'Grey Faction.' Lucien shares some found footage. Drag performance by Die Schwarze Frau and illustrations by Naomi Rubin.",
-            "room": "theater",
-            "start": "2021-05-29T20:00:00-04:00",
-            "end": "2021-05-29T21:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"
-        },
-        {
-            "name": "Sharing the Planet: Band Inspired Art",
-            "description": "A menagerie of SP! Come watch Grey Faction director Evan Anderson's video compilation of Grey Masses for Satanic Planet's track, 'Grey Faction.' Lucien shares some found footage. Drag performance by Die Schwarze Frau and illustrations by Naomi Rubin.",
-            "room": "theater",
+            "room": "mkultra",
             "start": "2021-05-29T20:00:00-04:00",
             "end": "2021-05-29T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"
@@ -51,7 +43,7 @@
         {
             "name": "Interview of Satanic Planet's Music Videos Directors with La Carmina",
             "description": "Join La Carmina and the music video directors for the first Satanic Planet album including Eric Livingston (song: Satanic Planet) and Neil Edwards (song: Liturgy)",
-            "room": "rotunda",
+            "room": "foyer",
             "start": "2021-05-28T21:30:00-04:00",
             "end": "2021-05-28T22:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"

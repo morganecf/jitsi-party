@@ -65,25 +65,25 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "🖤  {count} at VHQ"
+                "text": "\ud83d\udda4  {count} at VHQ"
             },
             "numberInHallways": {
                 "display": true,
-                "text": "🖤 {count} haunting the hallways"
+                "text": "\ud83d\udda4 {count} haunting the hallways"
             },
             "numberInRooms": {
                 "display": false,
-                "text": "🖤 {count} exploring"
+                "text": "\ud83d\udda4 {count} exploring"
             },
             "additionalStats": [
                 {
-                    "text": "🖤 {count} reading",
+                    "text": "\ud83d\udda4 {count} reading",
                     "match": [
                         "library"
                     ]
                 },
                 {
-                    "text": "🖤 {count} meeting animals",
+                    "text": "\ud83d\udda4 {count} meeting animals",
                     "match": [
                         "belfry",
                         "sleepingPorch"

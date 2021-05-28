@@ -28,17 +28,17 @@ const EventGroup = props => {
                         </div>
                         <div className="event-coordinates">
                             <div className="event-time">
-                                <FontAwesomeIcon icon={faClock}/>
+                                <FontAwesomeIcon icon={faClock} />
                                 {formatEventTime(event)}
                             </div>
                             <div className="event-room">
-                                <FontAwesomeIcon icon={faCompass}/>
+                                <FontAwesomeIcon icon={faCompass} />
                                 {event.roomName}
                             </div>
                         </div>
                     </div>
                     <div className="event-image">
-                        <img src={event.image}/>
+                        <img src={event.image} />
                     </div>
                 </div>
             ))}
