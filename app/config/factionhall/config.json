@@ -20,7 +20,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomA.png",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomJ.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Get the Mark",
         "headerHtml": "<div class='tst'><p>Welcome to</p><h1>Satanic Planet's Album Release Party</h1>"
@@ -83,7 +83,7 @@
         }
     },
     "poke": {
-        "text": "Mark of the Beast!",
+        "text": "Sing to Someone!",
         "fontAwesomeIcon": "skull",
         "fromText": "{user} yells '666!'",
         "toText": "Mark of the Beast!",
