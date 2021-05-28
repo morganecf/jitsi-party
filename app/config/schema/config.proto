@@ -26,6 +26,10 @@ message Config {
     // Optional. Defaults to 0.
     int32 map_unlock_threshold = 2;
 
+    // Used for defining the tooltips used in the Navigation
+    // Required.
+    Tooltip tooltips = 19;
+
     // What base URL to use for iframing Jitsi video calls
     // Can be overridden by "overrideJitsiServerUrlWithWindowHost" (see below)
     // Optional. If not set, "overrideJitsiServerUrlWithWindowHost" must be true.
@@ -240,4 +244,22 @@ message EventTimeConfig {
     // Text to display when the space is closed 
     // Required (if using start or end times).
     string closed_text = 6;
+}
+
+message Tooltip {
+    // Tooltip for the map icon
+    // Required.
+    string map = 1;
+
+    // Tooltip for the calendar of events icon
+    // Required.
+    string events = 2;
+
+    // Tooltip for the contact moderator icon
+    // Required.
+    string moderator = 3;
+
+    // Tooltip for the poke/hex icon
+    // Required.
+    string poke = 4;
 }

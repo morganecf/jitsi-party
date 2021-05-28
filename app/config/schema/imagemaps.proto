@@ -53,4 +53,8 @@ message Content {
     // Path to the file for this PDF
     // Required.
     string path = 2;
+
+    // The type of element to be presented: PDF, MP3, HTML
+    // Required.
+    string type = 3;
 }

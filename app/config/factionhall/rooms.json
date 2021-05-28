@@ -164,13 +164,14 @@
         },
         {
             "id": "small-2",
-            "name": "The Rumor Lounge",
-            "type": "JITSI",
+            "name": "Satanic Merch",
+            "type": "IMAGEMAP",
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 3,
-            "description": "We're just asking questions. We have a right to know.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/Faction+Hall+Room+Backgrounds/Grey+Faction+Background+Images/gfrumorlounge.png",
+            "description": "Get your Satanic Merch here.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
+            "imageMapOptions": "satanic-merch-map",
             "directions": {
                 "north": "small-1",
                 "south": "small-3",
@@ -268,13 +269,13 @@
         },
         {
             "id": "library",
-            "name": "Satanic Panic Archives",
+            "name": "Satanic Jukebox",
             "type": "IMAGEMAP",
-            "description": "Satanic Panic Archive Library. Hover over the image to discover topics.",
+            "description": "Satanic Jukebox",
             "directions": {
                 "west": "foyer"
             },
-            "imageMapOptions": "satanic-library-map",
+            "imageMapOptions": "satanic-jukebox-map",
             "map": {
                 "x": 18,
                 "y": 16,

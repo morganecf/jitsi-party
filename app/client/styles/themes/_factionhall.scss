@@ -10,6 +10,8 @@ $medical-teal: #0f666b;
 $dirty-gown: #7c9c94;
 
 // Chat color variables
+$chat-border: $dark-grey; // border around the chat
+$chat-border-width: 2px; // size of the chat border
 $chat-separator-bars: $medical-teal; // separator bars at the top of the chat area
 $chat-separator-text: $dirty-gown; // text between the separators
 $chat-separator-text-bg: $dark-grey; // background for the text area
