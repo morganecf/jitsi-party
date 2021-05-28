@@ -2,20 +2,20 @@
     "rooms": [
         {
             "id": "auditorium",
-            "name": "The Storm Auditorium",
-            "type": "IFRAME",
-            "capacity": 500,
+            "name": "Satanic Planet Salon",
+            "type": "CHATSTREAM",
+            "capacity": 666,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfstormauditorium.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomA.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/KYGvH_s3BdQ"
+                "src": "https://www.youtube.com/embed/pZn9kQ23uAM"
             },
-            "description": "Smells like q droppings.",
+            "description": "Mark of the Beast -- 666",
             "directions": {
                 "east": "foyer",
-                "north": "jude-mirra"
+                "north": "hall"
             },
             "map": {
                 "x": 1,
@@ -29,20 +29,20 @@
             }
         },
         {
-            "id": "jude-mirra",
-            "name": "Jude Mirra Hall",
-            "type": "IFRAME",
-            "capacity": 250,
+            "id": "hall",
+            "name": "Baphomet Ballroom",
+            "type": "CHATSTREAM",
+            "capacity": 666,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfjudemirrahall.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomBaphomet.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/njWYW2X8FbY"
+                "src": "https://www.youtube.com/embed/ndhlNBuzkds"
             },
-            "description": "Pseudoscience Kills.",
+            "description": "The Two Sides of the Spectacle",
             "directions": {
-                "east": "michelle-tallmadge",
+                "east": "rotunda",
                 "south": "auditorium"
             },
             "map": {
@@ -57,22 +57,22 @@
             }
         },
         {
-            "id": "michelle-tallmadge",
-            "name": "Michelle Tallmadge Hall",
-            "type": "IFRAME",
-            "capacity": 100,
+            "id": "rotunda",
+            "name": "999 Rotunda",
+            "type": "CHATSTREAM",
+            "capacity": 666,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfmichelletallmadgehall.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomExorcism.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/nZavCtc329s"
+                "src": "https://www.youtube.com/embed/d-k0Tc1_JMM"
             },
-            "description": "Please pass the decanter of ritual chartreuse.",
+            "description": "You Were Saved-- At What Cost?",
             "directions": {
-                "west": "jude-mirra",
+                "west": "hall",
                 "south": "foyer",
-                "east": "mkultra"
+                "east": "theater"
             },
             "map": {
                 "x": 8,
@@ -87,20 +87,20 @@
             }
         },
         {
-            "id": "mkultra",
-            "name": "MKULTRA Theater",
-            "type": "IFRAME",
-            "capacity": 50,
+            "id": "theater",
+            "name": "Invocation Theater",
+            "type": "CHATSTREAM",
+            "capacity": 666,
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "Fly with the Monarchs",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfmkultratheater.jpeg",
+            "description": "That Which Will Not Bend Must Break",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomF.png",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/dW3-sFEUHpE"
+                "src": "https://www.youtube.com/embed/OwwFOTKghQg"
             },
             "directions": {
-                "west": "michelle-tallmadge"
+                "west": "rotunda"
             },
             "map": {
                 "x": 17,
@@ -115,12 +115,12 @@
         {
             "id": "large-lounge",
             "name": "Comet Pizza Parlor",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "CHATSTREAM",
+            "capacity": 666,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfcometpizzaparlor.png",
-            "description": "What do you mean you don't sell pizza here?",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomKitchen.png",
+            "description": "Let's go check out the basement!",
             "directions": {
                 "north": "foyer",
                 "west": "medium-lounge",
@@ -141,13 +141,13 @@
         },
         {
             "id": "small-1",
-            "name": "Gunderson\u2019s Dungeon",
+            "name": "Liturgy Lounge",
             "type": "JITSI",
-            "capacity": 3,
+            "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfGundersondungeon.jpeg",
-            "description": "A Satan-safe undisclosed location.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomE.png",
+            "description": "You Are Your Christ / You Are Your Satan",
             "directions": {
                 "south": "small-2"
             },
@@ -164,12 +164,12 @@
         },
         {
             "id": "small-2",
-            "name": "Satanic Merch",
+            "name": "Satanic Planet Merch Table",
             "type": "IMAGEMAP",
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 3,
-            "description": "Get your Satanic Merch here.",
+            "description": "Get your Satanic Planet Merch here.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
             "imageMapOptions": "satanic-merch-map",
             "directions": {
@@ -192,13 +192,13 @@
         },
         {
             "id": "small-3",
-            "name": "The Memory Lounge",
-            "capacity": 3,
-            "muteRoom": false,
-            "hideVideo": false,
-            "description": "Have a whiskey to forget or a sodium amytal to remember",
+            "name": "Passage Parlor",
+            "capacity": 10,
+            "muteRoom": true,
+            "hideVideo": true,
+            "description": "I Love The Hell Which Formed My Genius",
             "type": "JITSI",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfmemorylounge.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomE.png",
             "directions": {
                 "north": "small-2"
             },
@@ -217,13 +217,13 @@
             "id": "foyer",
             "name": "Illuminated Foyer",
             "type": "JITSI",
-            "capacity": 25,
+            "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfIlluminatedfoyer.jpeg",
-            "description": "The entrance of a Virtual Conference Regarding Conspiracism and Pseudoscience in the Age of QAnon.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomI.png",
+            "description": "You Have Now Landed on Satanic Planet: Welcome Home",
             "directions": {
-                "north": "michelle-tallmadge",
+                "north": "rotunda",
                 "east": "library",
                 "south": "large-lounge",
                 "west": "auditorium"
@@ -244,13 +244,13 @@
         },
         {
             "id": "medium-lounge",
-            "name": "McMartin Chamber",
+            "name": "Devil in Me Chamber",
             "type": "JITSI",
             "muteRoom": false,
             "hideVideo": false,
-            "capacity": 5,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfmcmartinchamber.jpeg",
-            "description": "Tunnels are closed for rennovation",
+            "capacity": 10,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomH.png",
+            "description": "Flame's Caress Inside of Me",
             "directions": {
                 "east": "large-lounge",
                 "west": "small-2"
@@ -269,9 +269,9 @@
         },
         {
             "id": "library",
-            "name": "Satanic Jukebox",
+            "name": "Satanic Planet Album Jukebox",
             "type": "IMAGEMAP",
-            "description": "Satanic Jukebox",
+            "description": "Click a button, play a song! No quarters needed.",
             "directions": {
                 "west": "foyer"
             },
@@ -290,9 +290,9 @@
         {
             "id": "lounge",
             "name": "Adrenochrome Lounge",
-            "type": "IFRAME",
-            "capacity": 150,
-            "muteRoom": true,
+            "type": "JITSI",
+            "capacity": 15,
+            "muteRoom": false,
             "hideVideo": false,
             "description": "Drink it all in.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfAdrenochromeloungered.jpeg",
