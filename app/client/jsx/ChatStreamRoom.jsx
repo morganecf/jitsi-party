@@ -93,7 +93,7 @@ export const ChatStreamRoom = ({
     // use MutationObserver to restucture the chatbox
     const observer = new MutationObserver((muts) => {
       if (document.querySelector(".chatbox-title__buttons") !== null) {
-        document.querySelector(".chat-head").remove();
+        document.querySelector(".chat-head").innerHTML = '';
       }
 
       if (document.querySelector(".chat-textarea") !== null) {
