@@ -15,7 +15,8 @@ aws --region us-east-2 secretsmanager get-secret-value --secret-id arn:aws:secre
 echo "PARTY_CONFIG=${config}" >> .env
 echo "PARTY_THEME=${theme}" >> .env
 echo "PROXY_LETSENCRYPT_ENABLED=1" >> .env
-echo "PROXY_LETSENCRYPT_DOMAIN=${domain},testing.${domain}" >> .env
+echo "PROXY_LETSENCRYPT_DOMAIN=${domain}" >> .env
+echo "PROXY_LETSENCRYPT_EXTRA_DOMAINS=testing.${domain}" >> .env
 
 sudo docker-compose up -d
 sleep 10
