@@ -1,16 +1,16 @@
 {
     "debug": true,
-    "page_title": "The Satanic Temple",
+    "page_title": "The Satanic Estate",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "tooltips": {
-        "map": "Estate Map",
+        "map": "Temple Map",
         "events": "Calendar of Events",
         "moderator": "Contact a Caretaker",
-        "poke": "Sing to Someone"
+        "poke": "Hex Someone"
     },
     "startRoom": "narthex",
-    "videoDisplayName": "Guest",
+    "videoDisplayName": "Satanist",
     "moderation": {
         "moderatorEmails": [
             "support@thesatanic.estate"
@@ -22,29 +22,29 @@
         "avatarSelectionEnabled": true,
         "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom13.png",
         "enterSpaceButtonText": "Enter",
-        "avatarSelectionText": "Get Your Mark",
+        "avatarSelectionText": "Select Your Symbol",
         "headerHtml": "<div class='tst'><p>Welcome to</p><h1>Temple</h1>"
     },
     "avatars": [
         {
             "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF1.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF2.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF3.png"
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar1.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar2.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar3.png"
             ]
         },
         {
             "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF4.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF5.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF6.png"
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar4.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar5.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar6.png"
             ]
         },
         {
             "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF7.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF8.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF9.png"
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar7.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar8.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Temple/TempleAvatar9.png"
             ]
         }
     ],
@@ -62,19 +62,19 @@
         "stats": {
             "numberInHouse": {
                 "display": true,
-                "text": "\ud83d\udda4  {count} at the Temple"
+                "text": "\ud83d\udda4  {count} at our Temple"
             },
             "numberInHallways": {
                 "display": true,
                 "text": "\ud83d\udda4 {count} haunting the hallways"
             },
             "numberInRooms": {
-                "display": false,
+                "display": true,
                 "text": "\ud83d\udda4 {count} congregating"
             },
             "additionalStats": [
                 {
-                    "text": "\ud83d\udda4 {count} browsing the library",
+                    "text": "\ud83d\udda4 {count} reading in the library",
                     "match": [
                         "library"
                     ]
@@ -83,12 +83,12 @@
         }
     },
     "poke": {
-        "text": "Sing to Someone!",
+        "text": "Hex Someone",
         "fontAwesomeIcon": "skull",
-        "fromText": "{user} yells '666!'",
-        "toText": "Mark of the Beast!",
+        "fromText": "{user} hexes you! Curses!'",
+        "toText": "You've been hexed! Curses!",
         "unlockText": "You have unlocked the ability to hex",
-        "selfPoke": "Mark of the Beast: 666!",
+        "selfPoke": "Curses!",
         "unlockAfterMinutes": 0
     }
 }
