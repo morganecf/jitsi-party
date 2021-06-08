@@ -30,6 +30,10 @@ message Config {
     // Required.
     Tooltip tooltips = 19;
 
+    // Defines the map width/height ratios for sizing and scaling the Map.
+    // Required.
+    MapSizeRatio mapSizeRatio = 20;
+
     // What base URL to use for iframing Jitsi video calls
     // Can be overridden by "overrideJitsiServerUrlWithWindowHost" (see below)
     // Optional. If not set, "overrideJitsiServerUrlWithWindowHost" must be true.
@@ -262,4 +266,14 @@ message Tooltip {
     // Tooltip for the poke/hex icon
     // Required.
     string poke = 4;
+}
+
+message MapSizeRatio {
+    // Width ratio used for scaling the map svg width
+    // Required.
+    float width = 1;
+
+    // Height ratio used for scaling the map svg height
+    // Required.
+    float height = 2;
 }

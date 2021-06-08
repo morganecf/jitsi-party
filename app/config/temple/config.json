@@ -9,6 +9,10 @@
         "moderator": "Contact a Caretaker",
         "poke": "Sing to Someone"
     },
+    "mapSizeRatio": {
+        "width": 2.5,
+        "height": 1.25
+    },
     "startRoom": "narthex",
     "videoDisplayName": "Guest",
     "moderation": {

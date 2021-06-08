@@ -6,6 +6,10 @@
     "overrideJitsiServerUrlWithWindowHost": true,
     "noJitsiServerSSL": false,
     "useLocalSessions": true,
+    "mapSizeRatio": {
+        "width": 1.5,
+        "height": 1.25
+    },
     "moderation": {},
     "startRoom": "vestibule",
     "welcomePage": {

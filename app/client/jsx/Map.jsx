@@ -26,8 +26,8 @@ class Map extends Component {
                 return room
             })
 
-        const width = document.querySelector('.map').clientWidth / 2.5
-        const height = document.querySelector('.map').clientHeight / 1.25
+        const width = document.querySelector('.map').clientWidth / Config.mapSizeRatio.width
+        const height = document.querySelector('.map').clientHeight / Config.mapSizeRatio.height
         const padding = 10;
         const mouseEvents = {
             onRoomClick: room => {
