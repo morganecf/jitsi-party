@@ -3,7 +3,7 @@ import json
 import copy
 import logging
 import subprocess
-from . import mail
+from . import mail, testf
 from .models import User
 from datetime import datetime
 from twilio.rest import Client
@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 
 main = Blueprint('main', __name__)
 logger = logging.getLogger(__name__)
+
 
 @main.route('/join', methods=['GET', 'POST'])
 def join():
@@ -58,6 +59,7 @@ def get_config():
         'events': events
     }
     return jsonify(config)
+
 
 @main.route('/text_moderator', methods=['POST'])
 def text_moderators():
@@ -115,7 +117,8 @@ def email_moderators():
     sender = current_app.config['MAIL_USERNAME']
     password = current_app.config['MAIL_PASSWORD']
     formatted_message = ''.join(
-        ['<p>{0}</p>'.format(paragraph) for paragraph in params['message'].split('\n')]
+        ['<p>{0}</p>'.format(paragraph)
+         for paragraph in params['message'].split('\n')]
     )
     html = '''
         <b>The following message was sent via the moderator contact form:</b>
@@ -153,9 +156,12 @@ def email_moderators():
 @main.route('/', defaults={'path': ''})
 @main.route('/<path:path>')
 def serve(path):
+    logger.info("testing!")
+    import boto3
+    logger.info("tested!")
     if path and not path.startswith('client'):
         return redirect(url_for('main.serve'))
-    return render_template('index.html', config = current_app.config)
+    return render_template('index.html', config=current_app.config)
 
 
 def compute_ip(num_proxies=0):
@@ -164,6 +170,7 @@ def compute_ip(num_proxies=0):
         return request.remote_addr
     else:
         return headers_list[-1 * num_proxies]
+
 
 def is_open():
     times = current_app.config.get("EVENT_TIMES")

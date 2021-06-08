@@ -1,21 +1,25 @@
-import os
 import eventlet
-
-eventlet.monkey_patch(socket=True)
-
+import os
+from jitsi import testfactory as tf
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
 from flask_cors import CORS
 from config import config, basedir
 from flask_mail import Mail
+import logging
 
+logging.basicConfig(filename="flask.log", level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+eventlet.monkey_patch(socket=True)
 
 staticdir = os.path.join(basedir, 'client/js')
 
 db = SQLAlchemy()
 socketio = SocketIO()
 mail = Mail()
+testf = tf.TestFactory()
 
 # Register socket events with SocketIO instance
 from . import events  # noqa
@@ -47,6 +51,11 @@ def create_app(config_name):
     # SocketIO
     queue = app_config.MESSAGE_QUEUE
     socketio.init_app(app, cors_allowed_origins='*', message_queue=queue)
+
+    # S3
+    logger.info("initializing fac")
+    testf.init_app(app)
+    logger.info("factory initialized")
 
     return app
 
