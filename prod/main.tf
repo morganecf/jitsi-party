@@ -244,5 +244,5 @@ resource "aws_route53_record" "testing" {
     name = "testing.enter.thesatanic.estate"
     type = "A"
     ttl = "60"
-    records = [aws_eip.main[0].public_ip]
+    records = [var.vhq_enabled ? aws_eip.main[0].public_ip : "8.8.8.8"]
 }
