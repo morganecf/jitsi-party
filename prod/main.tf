@@ -140,11 +140,24 @@ resource "aws_security_group" "main" {
               self             = false
               to_port          = 15000
             },
-          {
+            {
               cidr_blocks      = [
                   "24.61.42.92/32",
                 ]
               description      = "gbre ssh"
+              from_port        = 22
+              ipv6_cidr_blocks = []
+              prefix_list_ids  = []
+              protocol         = "tcp"
+              security_groups  = []
+              self             = false
+              to_port          = 22
+            },
+            {
+              cidr_blocks      = [
+                  "73.143.130.88/32",
+                ]
+              description      = "beach ssh"
               from_port        = 22
               ipv6_cidr_blocks = []
               prefix_list_ids  = []
@@ -215,13 +228,21 @@ resource "aws_instance" "main" {
     iam_instance_profile = aws_iam_instance_profile.main.name
     vpc_security_group_ids = [aws_security_group.main.id]
     key_name = aws_key_pair.main.key_name
-    user_data = templatefile("first_run.sh.tpl", { config = "factionhall", theme = "factionhall" })
+    user_data = templatefile("first_run.sh.tpl", { config = "temple", theme = "temple", domain = "enter.thesatanic.estate" })
 }
 
 resource "aws_route53_record" "main" {
     zone_id = aws_route53_zone.main.zone_id
     name = "enter.thesatanic.estate"
-    type = var.vhq_enabled ? "A" : "CNAME"
+    type = var.vhq_placeholder_enabled ? "CNAME" : "A"
     ttl = "60"
-    records = [var.vhq_enabled ? aws_eip.main[0].public_ip : "d1u2lx0fagbi00.cloudfront.net"]
+    records = [var.vhq_placeholder_enabled ? "d1u2lx0fagbi00.cloudfront.net" : aws_eip.main[0].public_ip]
+}
+
+resource "aws_route53_record" "testing" {
+    zone_id = aws_route53_zone.main.zone_id
+    name = "testing.enter.thesatanic.estate"
+    type = "A"
+    ttl = "60"
+    records = [var.vhq_enabled ? aws_eip.main[0].public_ip : "8.8.8.8"]
 }
