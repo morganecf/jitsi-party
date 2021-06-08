@@ -1,30 +1,6 @@
 {
     "rooms": [
         {
-            "id": "test",
-            "name": "single pixel room",
-            "type": "CHATSTREAM",
-            "capacity": 300,
-            "doorTint": "#000000",
-            "muteRoom": true,
-            "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
-            "iframeOptions": {
-                "src": "https://www.youtube.com/embed/pZn9kQ23uAM"
-            },
-            "description": "Chapel of Urizen",
-            "directions": {
-            },
-            "map": {
-                "x": 0,
-                "y": 0,
-                "width": 1,
-                "height": 1,
-                "doors": {
-                }
-            }
-        },
-        {
             "id": "urizen",
             "name": "Chapel of Urizen",
             "type": "CHATSTREAM",
@@ -69,11 +45,12 @@
             },
             "map": {
                 "x": 7,
-                "y": 10,
+                "y": 11,
                 "width": 2,
-                "height": 12,
+                "height": 11,
                 "doors": {
-                    "south": 7
+                    "south": 7,
+                    "east": 18
                 }
             }
         },
@@ -97,7 +74,7 @@
                 "x": 7,
                 "y": 22,
                 "width": 2,
-                "height": 8,
+                "height": 7,
                 "doors": {
                     "north": 7
                 }
@@ -177,11 +154,12 @@
             "doorTint": "#000000",
             "map": {
                 "x": 11,
-                "y": 10,
+                "y": 11,
                 "width": 2,
-                "height": 12,
+                "height": 11,
                 "doors": {
-                    "south": 12
+                    "south": 12,
+                    "west": 18
                 }
             }
         },
@@ -202,7 +180,7 @@
                 "x": 11,
                 "y": 22,
                 "width": 2,
-                "height": 8,
+                "height": 7,
                 "doors": {
                     "north": 12
                 }
@@ -234,7 +212,9 @@
                 "height": 23,
                 "doors": {
                     "north": 9,
-                    "south": 9
+                    "south": 9,
+                    "east": 46,
+                    "west": 46
                 }
             },
             "doorTint": "#000000"
@@ -279,7 +259,7 @@
             },
             "map": {
                 "x": 7,
-                "y": 54,
+                "y": 53,
                 "width": 6,
                 "height": 10,
                 "doors": {
