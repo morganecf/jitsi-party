@@ -26,7 +26,7 @@ class Map extends Component {
                 return room
             })
 
-        const width = document.querySelector('.map').clientWidth / 1.5
+        const width = document.querySelector('.map').clientWidth / 2.5
         const height = document.querySelector('.map').clientHeight / 1.25
         const padding = 10;
         const mouseEvents = {
@@ -57,7 +57,7 @@ class Map extends Component {
 
     updateMap(transition) {
         this.map.update(
-            _.pickBy(this.props.users,  (val, key) => key !== 'hallway'),
+            _.pickBy(this.props.users, (val, key) => key !== 'hallway'),
             transition
         )
     }
@@ -85,10 +85,10 @@ class Map extends Component {
                 count: numInHallways
             }
         ]
-        .filter(({ key }) => config[key].display)
-        .map(({ key, count }) => (
-            config[key].text.replace('{count}', count)
-        ))
+            .filter(({ key }) => config[key].display)
+            .map(({ key, count }) => (
+                config[key].text.replace('{count}', count)
+            ))
 
         config.additionalStats.forEach(({ text, match }) => {
             const rooms = _.isArray(match) ?
@@ -113,7 +113,7 @@ class Map extends Component {
         if (this.map) {
             this.updateMap(true)
         }
-        
+
         const roomId = this.state.highlighted
         const room = (this.props.rooms || {})[roomId]
         // TODO not lock unvisited rooms for now; this can be a future feature
@@ -127,7 +127,7 @@ class Map extends Component {
                 <div className="map-header">
                     {this.getGlobalStats()}
                     <button className="map-close-button" onClick={this.props.handleCloseMap}>
-                        <FontAwesomeIcon icon={faTimes}/>
+                        <FontAwesomeIcon icon={faTimes} />
                     </button>
                 </div>
                 <div className="map-area">
