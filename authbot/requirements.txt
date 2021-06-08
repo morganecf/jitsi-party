@@ -1,0 +1,4 @@
+gql[aiohttp]==v3.0.0a5
+slack_sdk
+click>=8.0.0
+boto3>=1.17

@@ -64,8 +64,7 @@ chat:
 
 .PHONY: clean-docker
 clean-docker:
-	docker-compose stop
-	docker-compose rm -f
+	docker-compose down
 
 .PHONY: clean-config
 clean-config:
