@@ -1,0 +1,44 @@
+{
+    "events": [
+        {
+            "name": "The Unholy Holy (and vice versa)",
+            "description": "Our religious discussions strive to be personal and inclusive. When Congregants enter the Temple Sanctuary, they will be able to watch the services on a video feed and will have access to a text chat. To facilitate the flow of conversation, we ask that those who would like to actively participate in the discussion connect on Zoom using a link that will be provided. (No requirement that your video be on.) Please use the text chat sparingly so you are not interfering with others' ability to attend and enjoy the video discussion.",
+            "room": "sanctuary",
+            "start": "2021-06-08T21:00:00-04:00",
+            "end": "2021-06-08T22:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"
+        },
+        {
+            "name": "Dungeons and Dragons",
+            "description": "After Services role playing sessions",
+            "room": "malthus",
+            "start": "2021-06-08T22:30:00-04:00",
+            "end": "2021-06-08T23:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"
+        },
+        {
+            "name": "Satanic Sober Faction",
+            "description": "Needs Description",
+            "room": "urizen",
+            "start": "2021-06-08T22:00:00-04:00",
+            "end": "2021-06-08T23:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"
+        },
+        {
+            "name": "Writing Workshop",
+            "description": "Needs Description",
+            "room": "los",
+            "start": "2021-06-08T22:00:00-04:00",
+            "end": "2021-06-08T23:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"
+        },
+        {
+            "name": "Dark Arts and Crafts",
+            "description": "Needs Description",
+            "room": "andromalius",
+            "start": "2021-06-08T22:00:00-04:00",
+            "end": "2021-06-08T23:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/speventimage.png"
+        }
+    ]
+}

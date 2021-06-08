@@ -1,0 +1,443 @@
+{
+    "imagemaps": [
+        {
+            "id": "secret-tunnel-map",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/secret tunnel.jpg",
+            "areas": [
+                {
+                    "shape": "circle",
+                    "coords": "333,287,54",
+                    "label": "The Real Tunnels Under McMartin Preschool",
+                    "contents": [
+                        {
+                            "title": "The Real Tunnels Under McMartin Preschool",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/secret-tunnel-map/tunnel2/Tunnels PDF 1.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "circle",
+                    "coords": "719,287,56",
+                    "label": "The Man Behind The Tunnels Under McMartin Preschool",
+                    "contents": [
+                        {
+                            "title": "The Man Behind The Tunnels Under McMartin Preschool",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/secret-tunnel-map/tunnel1/The Man Behind the Tunnels Under McMartin (1).pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "garden-map",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/garden.jpg",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "648,400,738,512",
+                    "label": "A lovely garden",
+                    "contents": [
+                        {
+                            "title": "Have you ever dreamed this man?",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/garden-map/topic/Christianity Today - Satanic Influence.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "grand-staircase-map",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/staircase1.jpg",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "332,107,455,335",
+                    "label": "What's behind this picture frame?",
+                    "contents": [
+                        {
+                            "title": "Take a closer look",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/grand-staircase-map/topic/Image 0929.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "staircase-map",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/staircase 2.jpg",
+            "areas": [
+                {
+                    "shape": "circle",
+                    "coords": "772,109,34",
+                    "label": "Hmm, this skull has an aura...",
+                    "contents": [
+                        {
+                            "title": "What does it remind you of?",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/staircase-map/topic/Mesner\u2014Repressed-Memory.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "satanic-jukebox-map",
+            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/jukebox1920x1080bw.png",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "233,39,591,159",
+                    "label": "Baphomet",
+                    "contents": [
+                        {
+                            "title": "Baphomet",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/BAPHOMET_MIX-MASTER_09-30-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "710,855,640,787",
+                    "label": "Baphomet",
+                    "contents": [
+                        {
+                            "title": "Baphomet",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/BAPHOMET_MIX-MASTER_09-30-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "591,281,226,163",
+                    "label": "999",
+                    "contents": [
+                        {
+                            "title": "999",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/999_MIX-MASTER_09-30-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "776,856,710,788",
+                    "label": "999",
+                    "contents": [
+                        {
+                            "title": "999",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/999_MIX-MASTER_09-30-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "591,393,223,283",
+                    "label": "Grey Faction",
+                    "contents": [
+                        {
+                            "title": "Grey Faction",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/GREY+FACTION_MIX-MASTER_09-30-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "840,856,781,790",
+                    "label": "Grey Faction",
+                    "contents": [
+                        {
+                            "title": "Grey Faction",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/GREY+FACTION_MIX-MASTER_09-30-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "591,521,230,392",
+                    "label": "Passage",
+                    "contents": [
+                        {
+                            "title": "Passage",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/PASSAGE_MIX-MASTER_09-28-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "904,858,842,792",
+                    "label": "Passage",
+                    "contents": [
+                        {
+                            "title": "Passage",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/PASSAGE_MIX-MASTER_09-28-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "591,619,226,522",
+                    "label": "Invocation",
+                    "contents": [
+                        {
+                            "title": "Invocation",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/INVOCATION_MIX-MASTER_11-23-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "972,855,904,793",
+                    "label": "Invocation",
+                    "contents": [
+                        {
+                            "title": "Invocation",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/INVOCATION_MIX-MASTER_11-23-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "963,159,593,39",
+                    "label": "Devil In Me",
+                    "contents": [
+                        {
+                            "title": "Devil In Me",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/DEVIL+IN+ME_MIX-MASTER_10-01-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "972,793,1040,853",
+                    "label": "Devil In Me",
+                    "contents": [
+                        {
+                            "title": "Devil In Me",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/DEVIL+IN+ME_MIX-MASTER_10-01-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "964,280,593,161",
+                    "label": "Unbaptism",
+                    "contents": [
+                        {
+                            "title": "Unbaptism",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/UNBAPTISM_MIX-MASTER_10-01-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1106,853,1038,793",
+                    "label": "Unbaptism",
+                    "contents": [
+                        {
+                            "title": "Unbaptism",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/UNBAPTISM_MIX-MASTER_10-01-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "963,400,594,281",
+                    "label": "Vete Al Infeirno",
+                    "contents": [
+                        {
+                            "title": "Vete Al Infeirno",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/VETE+AL+INFEIRNO_MIX-MASTER_10-23-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1172,855,1106,793",
+                    "label": "Vete Al Infeirno",
+                    "contents": [
+                        {
+                            "title": "Vete Al Infeirno",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/VETE+AL+INFEIRNO_MIX-MASTER_10-23-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "964,512,593,402",
+                    "label": "The Hell",
+                    "contents": [
+                        {
+                            "title": "The Hell",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/THE+HELL_MIX-MASTER_11-23-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1238,854,1170,789",
+                    "label": "The Hell",
+                    "contents": [
+                        {
+                            "title": "The Hell",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/THE+HELL_MIX-MASTER_11-23-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "963,622,591,514",
+                    "label": "Strangers",
+                    "contents": [
+                        {
+                            "title": "Strangers",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/STRANGERS_MIX-MASTER_10-01-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1303,852,1238,790",
+                    "label": "Strangers",
+                    "contents": [
+                        {
+                            "title": "Strangers",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/STRANGERS_MIX-MASTER_10-01-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1351,159,968,36",
+                    "label": "Exorcism",
+                    "contents": [
+                        {
+                            "title": "Exorcism",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/EXORCISM_MIX-MASTER_11-18-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "702,926,638,858",
+                    "label": "Exorcism",
+                    "contents": [
+                        {
+                            "title": "Exorcism",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/EXORCISM_MIX-MASTER_11-18-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1351,280,968,163",
+                    "label": "Satanic Planet",
+                    "contents": [
+                        {
+                            "title": "Satanic Planet",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/SATANIC+PLANET_MIX-MASTER_09-28-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "768,927,704,855",
+                    "label": "Satanic Planet",
+                    "contents": [
+                        {
+                            "title": "Satanic Planet",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/SATANIC+PLANET_MIX-MASTER_09-28-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1353,398,966,281",
+                    "label": "Liturgy",
+                    "contents": [
+                        {
+                            "title": "Liturgy",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/LITURGY_MIX-MASTER_07-31-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "838,927,774,857",
+                    "label": "Liturgy",
+                    "contents": [
+                        {
+                            "title": "Liturgy",
+                            "path": "https://tstvhq.s3.amazonaws.com/music/satanicplanet/LITURGY_MIX-MASTER_07-31-2020.mp3",
+                            "type": "MP3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "satanic-merch-map",
+            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "635,1078,4,0",
+                    "label": "Shop The Satanic Temple",
+                    "contents": [
+                        {
+                            "title": "Shop The Satanic Temple",
+                            "path": "https://thesatanictemple.com/collections/satanic-planet",
+                            "type": "HTML"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1276,1077,645,2",
+                    "label": "Shop Kings Road Merch",
+                    "contents": [
+                        {
+                            "title": "Shop Kings Road Merch",
+                            "path": "https://kingsroadmerch.com/three-one-g/artist/845",
+                            "type": "HTML"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1917,1077,1288,0",
+                    "label": "Shop Shirt Killer",
+                    "contents": [
+                        {
+                            "title": "Shop Shirt Killer",
+                            "path": "https://shirtkiller.com/collections/satanicplanet",
+                            "type": "HTML"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

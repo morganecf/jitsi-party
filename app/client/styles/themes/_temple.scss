@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+$accent-font: 'Philosopher';
+
+$dark-grey: #333232;
+$bisected-hall: #011d1f;
+$removed-tile: #333232;
+$offwhite: #F0F0F0;
+$grey: #595959;
+$medical-teal: #0f666b;
+$dirty-gown: #7c9c94;
+
+// Chat color variables
+$chat-border: $dark-grey; // border around the chat
+$chat-border-width: 2px; // size of the chat border
+$chat-separator-bars: $medical-teal; // separator bars at the top of the chat area
+$chat-separator-text: $dirty-gown; // text between the separators
+$chat-separator-text-bg: $dark-grey; // background for the text area
+$chat-content: $dark-grey; // the main chat area on the left
+$chat-notification-bg: $dark-grey; // entry/exit notification background
+$chat-notification-text: $offwhite; // entry/exit notification text color
+$chat-msg-author: $dirty-gown; // color of user name
+$chat-msg-time: $dirty-gown; // color of the chat time
+$chat-msg-text: $offwhite; // color the chat text
+$chat-msg-menu: $dark-grey; // color the hamburgar menu to the right of the chat message
+$chat-msg-menu-bg: $dark-grey; // background color of the menu dropdown
+$chat-msg-menu-items: $offwhite; // color for the menu items
+$chat-msg-avatar-background: $medical-teal;
+$toolbox-bg: $medical-teal; // background color for the location of the emoji picker icon
+$toolbox-emoji-color: $dark-grey; // the color for the emoji icon
+$emoji-header-footer: $dark-grey; // color for the header and footer inside the emoji popup
+$emoji-category-heading: $dark-grey; // color for the emoji heading text in the popup
+$emoji-popup-bg: $dark-grey; // background color of the emoji popup 
+$emoji-separator: $dark-grey; // color for th emoji separator bar
+$message-area-bg: $dark-grey; // background for the message text area
+$message-input-top-border: $medical-teal; // the border at the top of the message area
+$message-focus: $removed-tile; // the color of the message area border when focused
+$message-text: $offwhite; // the text color in the message area
+$chat-participants: $dark-grey; // the participants sidebar on the right of the chat
+$chat-participants-resize: $offwhite; // color of the participants resize handle
+$participants-title: $dirty-gown; // the title of the participants list
+$participants-name: $dirty-gown; // the name of each participant in the list
+
+// Hexing notifications & icon
+$accent-color: $medical-teal;
+$avatar-highlight-color: $medical-teal;
+
+// House decor
+$background-color: $dark-grey;
+$background-color-dark: $dark-grey;
+$door-background: darken($removed-tile, 10%);
+$room-content-background-color: $bisected-hall;
+$modal-background-color: $dark-grey;
+
+$text-color: $offwhite;
+$link-color: $medical-teal;
+
+$disabled-text-color: color("grey-700");
+$disabled-background-color: color("grey-500");
+
+$map-header-color: $dirty-gown;
+$map-header-background-color: $dark-grey;
+
+$map-room-fill: $dark-grey;
+$map-unvisited-color: $dark-grey;
+$map-room-stroke-color: $dirty-gown;
+$map-highlight-stroke: $dirty-gown;
+$map-highlight-fill: $dirty-gown;
+
+$events-header-color: $offwhite;
+$events-header-background-color: $dark-grey;
+$events-name-color: $offwhite;
+$events-description-color: $dirty-gown;
+$events-coordinates-color: $dirty-gown;
+$events-item-background-color: $dark-grey;
+
+$email-form-color: $dark-grey;
+$email-description-color: $offwhite;
+
+$poke-color: $dirty-gown;
+$poke-background-color: $dark-grey;
+
+$button-background-color: $dark-grey;
+$button-border-color: $dark-grey;
+$button-text-color: $offwhite;
+$button-border-radius: 2px;
+
+$opaque-button-background-color: $dark-grey;
+$opaque-button-text-color: $offwhite;
+$opaque-button-border-color: $medical-teal;
+
+$focused-button-background-color: $dark-grey;
+$focused-button-text-color: $offwhite;
+$focused-button-border-color: $medical-teal;
+
+$name-input-border-color: $offwhite;
+$name-input-background-color: $offwhite;
+
+$modal-overlay-color: rgba(66, 66, 66, 0.25);
+
+$art-image-border-color: color("grey-50"); //offwhite
+
+body {
+  font-family: $accent-font !important;
+}
+
+.vestibule .header {
+  margin-bottom: 0 !important;
+}
+
+.custom-login-description {
+  text-align: center;
+  font-size: smaller;
+  opacity: 0.8;
+}
+
+// .tst,
+// .room-header h2,
+// #map-info .room-name,
+// .events-view .events-header,
+// .events-view .event-list .event-info .event-name,
+// .navigation-container .settings-container .poke-button-container .poke-options .poke-header {
+//     font-family: $accent-font;
+// }
+
+.room .room-content {
+  max-height: 120px;
+  padding: 0.5em 50px;
+}
