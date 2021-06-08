@@ -140,11 +140,24 @@ resource "aws_security_group" "main" {
               self             = false
               to_port          = 15000
             },
-          {
+            {
               cidr_blocks      = [
                   "24.61.42.92/32",
                 ]
               description      = "gbre ssh"
+              from_port        = 22
+              ipv6_cidr_blocks = []
+              prefix_list_ids  = []
+              protocol         = "tcp"
+              security_groups  = []
+              self             = false
+              to_port          = 22
+            },
+            {
+              cidr_blocks      = [
+                  "73.143.130.88/32",
+                ]
+              description      = "beach ssh"
               from_port        = 22
               ipv6_cidr_blocks = []
               prefix_list_ids  = []
