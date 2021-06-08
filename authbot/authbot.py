@@ -15,7 +15,10 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
 
-SYNC_MAP = {"satanic-planet-album-release-party-ticket": "SatanicPlanet"}
+SYNC_MAP = {
+    "satanic-planet-album-release-party-ticket": "SatanicPlanet",
+    "the-unholy-holy": "TempleJune8",
+}
 
 
 @dataclass(frozen=True)
