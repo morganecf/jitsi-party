@@ -73,7 +73,6 @@
                 "width": 2,
                 "height": 12,
                 "doors": {
-                    "west": 18,
                     "south": 7
                 }
             }
@@ -82,7 +81,7 @@
             "id": "library",
             "name": "Library",
             "type": "IMAGEMAP",
-            "capacity": 5,
+            "capacity": 666,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
@@ -182,7 +181,6 @@
                 "width": 2,
                 "height": 12,
                 "doors": {
-                    "west": 18,
                     "south": 12
                 }
             }
@@ -233,12 +231,10 @@
                 "x": 7,
                 "y": 30,
                 "width": 6,
-                "height": 22,
+                "height": 23,
                 "doors": {
                     "north": 9,
-                    "south": 9,
-                    "east": 46,
-                    "west": 46
+                    "south": 9
                 }
             },
             "doorTint": "#000000"
