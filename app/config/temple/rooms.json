@@ -63,6 +63,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfLibrary.jpeg",
+            "imageMapOptions": "satanic-library-map",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/d-k0Tc1_JMM"
             },
