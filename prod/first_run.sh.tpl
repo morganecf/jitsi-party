@@ -17,6 +17,11 @@ echo "PARTY_THEME=${theme}" >> .env
 echo "PROXY_LETSENCRYPT_ENABLED=1" >> .env
 echo "PROXY_LETSENCRYPT_DOMAIN=${domain}" >> .env
 echo "PROXY_LETSENCRYPT_EXTRA_DOMAINS=testing.${domain}" >> .env
+echo "PROXY_AUTH_ENABLED=${auth_enabled}" >> .env
+echo "PROXY_AUTH_CLIENT_ID=${auth_client_id}" >> .env
+echo "PROXY_AUTH_CLIENT_SECRET=${auth_client_secret}" >> .env
+echo "PROXY_AUTH_ALLOWED_GROUPS=${auth_allowed_groups}" >> .env
+echo "PROXY_AUTH_DISCOVERY=${auth_discovery}" >> .env
 
 sudo docker-compose up -d
 sleep 10

@@ -1,5 +1,10 @@
+locals {
+  tst_domain = "enter.thesatanic.estate"
+  aws_region = "us-east-2"
+}
+
 provider "aws" {
-  region = "us-east-2"
+  region = local.aws_region
 }
 
 terraform {
@@ -221,6 +226,69 @@ resource "aws_iam_role" "main" {
   }
 }
 
+resource "aws_cognito_user_pool_client" "main" {
+    name = local.tst_domain
+    user_pool_id = "us-east-2_jeMStZcip"
+    allowed_oauth_flows = ["code"]
+    allowed_oauth_flows_user_pool_client = true
+    allowed_oauth_scopes = [
+      "email",
+      "openid",
+      "profile",
+    ]
+    callback_urls = [
+      "https://${local.tst_domain}/login",
+      "https://testing.${local.tst_domain}/login",
+    ]
+    logout_urls = [
+      "https://${local.tst_domain}/",
+      "https://testing.${local.tst_domain}/",
+    ]
+    explicit_auth_flows = ["ALLOW_REFRESH_TOKEN_AUTH"]
+    supported_identity_providers = ["COGNITO"]
+    read_attributes = [
+      "address",
+      "birthdate",
+      "email",
+      "email_verified",
+      "family_name",
+      "gender",
+      "given_name",
+      "locale",
+      "middle_name",
+      "name",
+      "nickname",
+      "phone_number",
+      "phone_number_verified",
+      "picture",
+      "preferred_username",
+      "profile",
+      "updated_at",
+      "website",
+      "zoneinfo",
+    ]
+    write_attributes = [
+      "address",
+      "birthdate",
+      "email",
+      "family_name",
+      "gender",
+      "given_name",
+      "locale",
+      "middle_name",
+      "name",
+      "nickname",
+      "phone_number",
+      "picture",
+      "preferred_username",
+      "profile",
+      "updated_at",
+      "website",
+      "zoneinfo",
+    ]
+    refresh_token_validity = 1
+}
+
 resource "aws_instance" "main" {
     count = var.vhq_enabled ? 1 : 0
     ami = data.aws_ami.jitsi-party.id
@@ -228,12 +296,24 @@ resource "aws_instance" "main" {
     iam_instance_profile = aws_iam_instance_profile.main.name
     vpc_security_group_ids = [aws_security_group.main.id]
     key_name = aws_key_pair.main.key_name
-    user_data = templatefile("first_run.sh.tpl", { config = "temple", theme = "temple", domain = "enter.thesatanic.estate" })
+    user_data = templatefile(
+      "first_run.sh.tpl",
+      {
+        config = "temple",
+        theme = "temple",
+        domain = local.tst_domain,
+        auth_enabled = "1",
+        auth_client_id = aws_cognito_user_pool_client.main.id,
+        auth_client_secret = aws_cognito_user_pool_client.main.client_secret,
+        auth_allowed_groups = "Caretakers PR",
+        auth_discovery = "https://cognito-idp.${local.aws_region}.amazonaws.com/${aws_cognito_user_pool_client.main.user_pool_id}/.well-known/openid-configuration",
+      }
+    )
 }
 
 resource "aws_route53_record" "main" {
     zone_id = aws_route53_zone.main.zone_id
-    name = "enter.thesatanic.estate"
+    name = local.tst_domain
     type = var.vhq_placeholder_enabled ? "CNAME" : "A"
     ttl = "60"
     records = [var.vhq_placeholder_enabled ? "d1u2lx0fagbi00.cloudfront.net" : aws_eip.main[0].public_ip]
@@ -241,7 +321,7 @@ resource "aws_route53_record" "main" {
 
 resource "aws_route53_record" "testing" {
     zone_id = aws_route53_zone.main.zone_id
-    name = "testing.enter.thesatanic.estate"
+    name = "testing.${local.tst_domain}"
     type = "A"
     ttl = "60"
     records = [var.vhq_enabled ? aws_eip.main[0].public_ip : "8.8.8.8"]
