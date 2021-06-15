@@ -18,6 +18,7 @@ from slack_sdk.errors import SlackApiError
 SYNC_MAP = {
     "satanic-planet-album-release-party-ticket": "SatanicPlanet",
     "the-unholy-holy": "TempleJune8",
+    "interior-and-exterior-satanism": "TempleJune15",
 }
 
 
