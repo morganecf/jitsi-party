@@ -1,6 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Config from "./Config.jsx";
 import { imgURLtoDataURL } from './utils.js'
+
+/**
+ * This function is used to remove info cached
+ * in the local and session storage for converse.js
+ */
+function clearStorage() {
+  // clear localStorage 
+  for(let i=0; i<localStorage.length; i++) {
+    const lsKey = localStorage.key(i)
+    if(lsKey.includes('converse')) {
+      localStorage.removeItem(lsKey)
+    }
+  }
+
+  // clear sessionStorage 
+  for(let i=0; i<sessionStorage.length; i++) {
+    const ssKey = sessionStorage.key(i)
+    if(ssKey.includes('converse')) {
+      sessionStorage.removeItem(ssKey)
+    }
+  }
+}
 
 /**
  * This component is used to render a Converse.js chat component on the
@@ -19,6 +41,9 @@ export const ChatStreamRoom = ({
   avatar,
   iframeOptions: { src },
 }) => {
+  // used for resetting the chat when it disappears
+  const [resetTime, setResetTime] = useState(0)
+
   // register the 'jitsi-plugin' and initialize converse and cleanup after close
   useEffect(() => {
     let logout = null;
@@ -56,6 +81,7 @@ export const ChatStreamRoom = ({
         // gotta lowercase the roomId cuz for some reason uppercase breaks converse
         { jid: `${roomId.toLowerCase()}@muc.party.jitsi`, nick: displayName },
       ],
+      auto_reconnect: true,
       bosh_service_url: `${Config.baseUrl}jitsi/http-bind`,
       jid: "guest.party.jitsi",
       singleton: true,
@@ -114,6 +140,25 @@ export const ChatStreamRoom = ({
       subtree: true,
     });
 
+    // use MutationObserver to resurect the chatbox when it vanishes
+    setTimeout(() => {
+      const vanObserver = new MutationObserver((muts) => {
+        if (document.querySelector(".chatroom") === null) {
+          clearStorage();          
+          plugins["jitsi-plugin"] = undefined;
+          logout();
+          setResetTime(new Date().getTime());
+          vanObserver.disconnect();
+        }
+      });
+  
+      vanObserver.observe(document, {
+        childList: true,
+        attributes: true,
+        subtree: true,
+      });      
+    }, 5000);
+
     // listen to beforeunload to logout and cleanup
     window.addEventListener("beforeunload", () => {
       plugins["jitsi-plugin"] = undefined;
@@ -125,7 +170,7 @@ export const ChatStreamRoom = ({
       plugins["jitsi-plugin"] = undefined;
       logout();
     };
-  }, []);
+  }, [resetTime]);
 
   return (
     <div className="iframe-room">
