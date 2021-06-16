@@ -19,6 +19,7 @@ class User(db.Model, SerializerMixin):
     username = db.Column(db.String(100))
     avatar = db.Column(db.String())
     ip = db.Column(db.String())
+    email = db.Column(db.String())
     last_seen = db.Column(db.Integer, default=lambda: datetime.utcnow().timestamp())
 
     room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'))
@@ -41,9 +42,9 @@ class User(db.Model, SerializerMixin):
         }
 
     @classmethod
-    def create(cls, username, avatar, ip):
+    def create(cls, username, avatar, ip, email):
         avatar = '{0}-{1}'.format(avatar['type'], avatar['color'])
-        user = cls(username=username, avatar=avatar, ip=ip)
+        user = cls(username=username, avatar=avatar, ip=ip, email=email)
         db.session.add(user)
         db.session.commit()
         return user
@@ -57,7 +58,7 @@ class User(db.Model, SerializerMixin):
             return
 
         if user.room.name != room_name:
-            logger.warning(f"User {user.id} ({user.username}) tried to leave room {room_name} but was in room {room.name}")
+            logger.warning(f"User {user.id} ({user.username}) tried to leave room {room_name} but was in room {user.room.name}")
             return
 
         user.room = None
