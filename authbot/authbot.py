@@ -333,7 +333,7 @@ def sync(
     for order in orders:
         if len(order.product_handles.intersection(SYNC_MAP.keys())) > 0:
             if order.email not in current_users:
-                new_users.add(order.email)
+                new_users.add(order.email.lower())
 
             if order.email not in user_groups.keys():
                 user_groups[order.email] = set()
