@@ -20,6 +20,7 @@ def join():
     num_proxies = current_app.config['NUM_PROXIES']
     params = request.get_json()['params']
     params['ip'] = compute_ip(num_proxies)
+    params['email'] = get_email()
     user = User.create(**params)
     return jsonify(user.to_json())
 
@@ -177,3 +178,6 @@ def is_open():
         if (now > end_time):
             return False
     return True
+
+def get_email():
+    return request.headers.get("X-Party-Email", "")
