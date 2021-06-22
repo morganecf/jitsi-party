@@ -19,6 +19,7 @@ SYNC_MAP = {
     "satanic-planet-album-release-party-ticket": "SatanicPlanet",
     "the-unholy-holy": "TempleJune8",
     "interior-and-exterior-satanism": "TempleJune15",
+    "temple-06-22": "TempleJune22",
 }
 
 
