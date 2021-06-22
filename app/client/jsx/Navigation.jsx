@@ -14,7 +14,8 @@ import {
     faArrowRight,
     faMap,
     faCalendar,
-    faEnvelope
+    faEnvelope,
+    faCommentAlt
 } from '@fortawesome/free-solid-svg-icons'
 
 class Navigation extends Component {
@@ -22,7 +23,8 @@ class Navigation extends Component {
         super(props)
 
         this.state = {
-            showPokeOptions: false
+            showPokeOptions: false,
+            hideChat: false
         }
 
         this.socketApi = new WebSocketApi()
@@ -34,6 +36,22 @@ class Navigation extends Component {
 
     componentWillUnmount() {
         document.removeEventListener("keydown", this.handleKeydown.bind(this))
+    }
+
+    componentDidUpdate() {
+        const chatbox = document.querySelector('#conversejs')
+
+        if(chatbox) {
+            if(this.state.hideChat) {
+                chatbox.style.visibility = "hidden";
+                chatbox.style.opacity = 0;
+                chatbox.style.transition = "visibility 0s linear 1s, opacity 1s";
+            } else {
+                chatbox.style.visibility = "visible";
+                chatbox.style.opacity = 1;
+                chatbox.style.transition = "visibility 0s linear 0s, opacity 1s";
+            }
+        }
     }
 
     handleKeydown(e) {
@@ -85,6 +103,7 @@ class Navigation extends Component {
 
         const room = this.props.currentRoom.room
         const audio = this.props.rooms[room].audio
+        const roomType = this.props.rooms[room].type
         const events = this.props.events
         const users = _.flatten(Object.values(this.props.users))
 
@@ -92,9 +111,11 @@ class Navigation extends Component {
         const handleClickEvents = () => this.props.handleOpenModal('events')
         const handleClickEmail = () => this.props.handleOpenModal('email')
 
+        console.dir(this.props)
+
         return (
             <div className="navigation-container">
-                <div className="column settings-container">
+                <div className="column settings-container">                    
                     <div className="map-button-container">
                         {this.props.showMapButton && !this.props.hideSettings &&
                             <button className={mapButtonClass} title={Config.tooltips.map} disabled={false} onClick={handleClickMap}>
@@ -119,6 +140,17 @@ class Navigation extends Component {
                             </button>
                         }
                     </div>
+                    {roomType.toUpperCase() === 'CHATSTREAM' && this.props.currentRoom.entered && !this.props.hideSettings ? (
+                        <div className="chat-button-container">
+                            <button 
+                                className={mapButtonClass} 
+                                title={Config.tooltips.chat} 
+                                disabled={false} 
+                                onClick={() => this.setState({hideChat: !this.state.hideChat})}>
+                                    <FontAwesomeIcon icon={faCommentAlt}/>
+                            </button>
+                        </div>  
+                    ) : null}                      
                     <div className="poke-button-container">
                         {Config.poke && this.props.isPokingUnlocked && !this.props.hideSettings &&
                             <button className={pokeButtonClass} title={Config.tooltips.poke} onClick={this.handleClickPokeButton.bind(this)}>

@@ -4,6 +4,7 @@
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "tooltips": {
+        "chat": "Show/Hide Chat",
         "map": "Temple Map",
         "events": "Calendar of Events",
         "moderator": "Contact a Caretaker",
