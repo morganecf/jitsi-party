@@ -266,6 +266,10 @@ message Tooltip {
     // Tooltip for the poke/hex icon
     // Required.
     string poke = 4;
+
+    // Tooltip for the show/hide chat icon
+    // Required.
+    string chat = 5;
 }
 
 message MapSizeRatio {
