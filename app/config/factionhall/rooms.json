@@ -10,7 +10,7 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomD.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/pZn9kQ23uAM"
+                "src": "https://youtube.com/embed/UvrVbSvPNlQ"
             },
             "description": "We can only see a short distance ahead, but we can see plenty there that needs to be done.",
             "directions": {
@@ -38,7 +38,7 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomBallroom.png",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/7a0b07da-c1af-39a6-561e-a13f2fae664e"
+                "src": "https://youtube.com/embed/BSoWbx1FCwE"
             },
             "description": "All my life I wanted to look like Elizabeth Taylor. Now Elizabeth Taylor looks like me.",
             "directions": {
@@ -66,7 +66,7 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomHall.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/d-k0Tc1_JMM"
+                "src": "https://youtube.com/embed/DkdALNMbrJk"
             },
             "description": "We have to be visible. We should not be ashamed of who we are.",
             "directions": {
@@ -97,7 +97,7 @@
             "description": "We are all in the gutter, but some of us are looking at the stars.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomZ.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/OwwFOTKghQg"
+                "src": "https://youtube.com/embed/iNqrS8CimAs"
             },
             "directions": {
                 "west": "rotunda"
@@ -121,7 +121,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomE.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/mnzadSp70CE"
+                "src": "https://youtube.com/embed/D6x1Jk8Hkuc"
             },
             "description": "It is not our differences that divide us. It is our inability to recognize, accept, and celebrate those differences.",
             "directions": {
