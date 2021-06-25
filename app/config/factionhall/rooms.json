@@ -2,17 +2,17 @@
     "rooms": [
         {
             "id": "auditorium",
-            "name": "Satanic Planet Salon",
+            "name": "Alan Turing Auditorium",
             "type": "CHATSTREAM",
             "capacity": 666,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomA.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomD.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/pZn9kQ23uAM"
+                "src": "https://youtube.com/embed/UvrVbSvPNlQ"
             },
-            "description": "Mark of the Beast -- 666",
+            "description": "We can only see a short distance ahead, but we can see plenty there that needs to be done.",
             "directions": {
                 "east": "foyer",
                 "north": "hall"
@@ -30,17 +30,17 @@
         },
         {
             "id": "hall",
-            "name": "Baphomet Ballroom",
+            "name": "Harris Glenn Milstead Hall",
             "type": "CHATSTREAM",
             "capacity": 666,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomBaphomet.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomBallroom.png",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/7a0b07da-c1af-39a6-561e-a13f2fae664e"
+                "src": "https://youtube.com/embed/BSoWbx1FCwE"
             },
-            "description": "The Two Sides of the Spectacle",
+            "description": "All my life I wanted to look like Elizabeth Taylor. Now Elizabeth Taylor looks like me.",
             "directions": {
                 "east": "rotunda",
                 "south": "auditorium"
@@ -58,17 +58,17 @@
         },
         {
             "id": "rotunda",
-            "name": "999 Rotunda",
+            "name": "Sylvia Rivera Rotunda",
             "type": "CHATSTREAM",
             "capacity": 666,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomExorcism.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomHall.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/d-k0Tc1_JMM"
+                "src": "https://youtube.com/embed/DkdALNMbrJk"
             },
-            "description": "You Were Saved-- At What Cost?",
+            "description": "We have to be visible. We should not be ashamed of who we are.",
             "directions": {
                 "west": "hall",
                 "south": "foyer",
@@ -88,16 +88,16 @@
         },
         {
             "id": "theater",
-            "name": "Invocation Theater",
+            "name": "Oscar Wilde Theater",
             "type": "CHATSTREAM",
             "capacity": 666,
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "That Which Will Not Bend Must Break",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomF.png",
+            "description": "We are all in the gutter, but some of us are looking at the stars.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomZ.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/OwwFOTKghQg"
+                "src": "https://youtube.com/embed/iNqrS8CimAs"
             },
             "directions": {
                 "west": "rotunda"
@@ -114,16 +114,16 @@
         },
         {
             "id": "large-lounge",
-            "name": "Comet Pizza Parlor",
+            "name": "Audre Lorde Lounge",
             "type": "CHATSTREAM",
             "capacity": 666,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomKitchen.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomE.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/mnzadSp70CE"
+                "src": "https://youtube.com/embed/D6x1Jk8Hkuc"
             },
-            "description": "Let's go check out the basement!",
+            "description": "It is not our differences that divide us. It is our inability to recognize, accept, and celebrate those differences.",
             "directions": {
                 "north": "foyer",
                 "west": "medium-lounge",
@@ -144,13 +144,13 @@
         },
         {
             "id": "small-1",
-            "name": "Liturgy Lounge",
+            "name": "James Baldwin Salon",
             "type": "JITSI",
             "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomE.png",
-            "description": "You Are Your Christ / You Are Your Satan",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomCauseuse.png",
+            "description": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
             "directions": {
                 "south": "small-2"
             },
@@ -167,13 +167,13 @@
         },
         {
             "id": "small-2",
-            "name": "Satanic Planet Merch Table",
-            "type": "IMAGEMAP",
+            "name": "Barbara Gittings Lounge",
+            "type": "JITSI",
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 20,
-            "description": "Get your Satanic Planet Merch here.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
+            "description": "Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomBoudoir.png",
             "imageMapOptions": "satanic-merch-map",
             "directions": {
                 "north": "small-1",
@@ -195,13 +195,13 @@
         },
         {
             "id": "small-3",
-            "name": "Passage Parlor",
+            "name": "Christine Jorgensen Lounge",
             "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "I Love The Hell Which Formed My Genius",
+            "description": "The answer to the problem must not lie in sleeping pills and suicides that look like accidents, or in jail sentences, but rather in life and the freedom to live it.",
             "type": "JITSI",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomE.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomA.png",
             "directions": {
                 "north": "small-2"
             },
@@ -218,13 +218,13 @@
         },
         {
             "id": "foyer",
-            "name": "Illuminated Foyer",
+            "name": "Marsha P Johnson Foyer",
             "type": "JITSI",
             "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomI.png",
-            "description": "You Have Now Landed on Satanic Planet: Welcome Home",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomLounge.png",
+            "description": "Darling, I want my gay rights now.",
             "directions": {
                 "north": "rotunda",
                 "east": "library",
@@ -247,13 +247,13 @@
         },
         {
             "id": "medium-lounge",
-            "name": "Devil in Me Chamber",
+            "name": "Bayard Rustin Boudoir",
             "type": "JITSI",
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 10,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomH.png",
-            "description": "Flame's Caress Inside of Me",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomStudy.png",
+            "description": "I believe in social dislocation and creative trouble.",
             "directions": {
                 "east": "large-lounge",
                 "west": "small-2"
@@ -272,13 +272,13 @@
         },
         {
             "id": "library",
-            "name": "Satanic Planet Album Jukebox",
+            "name": "Satanic Archives Library",
             "type": "IMAGEMAP",
-            "description": "Click a button, play a song! No quarters needed.",
+            "description": "Peruse the archives, courtesy of Grey Faction",
             "directions": {
                 "west": "foyer"
             },
-            "imageMapOptions": "satanic-jukebox-map",
+            "imageMapOptions": "library",
             "map": {
                 "x": 18,
                 "y": 16,
@@ -298,7 +298,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "Drink it all in.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/greyfaction/gfAdrenochromeloungered.jpeg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomF.png",
             "directions": {
                 "west": "large-lounge"
             },
