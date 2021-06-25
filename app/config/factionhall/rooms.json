@@ -2,7 +2,7 @@
     "rooms": [
         {
             "id": "auditorium",
-            "name": "Satanic Planet Salon",
+            "name": "Alan Turing Auditorium",
             "type": "CHATSTREAM",
             "capacity": 666,
             "doorTint": "#000000",
@@ -30,7 +30,7 @@
         },
         {
             "id": "hall",
-            "name": "Baphomet Ballroom",
+            "name": "Harris Glenn Milstead Hall",
             "type": "CHATSTREAM",
             "capacity": 666,
             "doorTint": "#000000",
@@ -58,7 +58,7 @@
         },
         {
             "id": "rotunda",
-            "name": "999 Rotunda",
+            "name": "Sylvia Rivera Rotunda",
             "type": "CHATSTREAM",
             "capacity": 666,
             "doorTint": "#000000",
@@ -88,7 +88,7 @@
         },
         {
             "id": "theater",
-            "name": "Invocation Theater",
+            "name": "Oscar Wilde Theater",
             "type": "CHATSTREAM",
             "capacity": 666,
             "muteRoom": true,
@@ -114,7 +114,7 @@
         },
         {
             "id": "large-lounge",
-            "name": "Comet Pizza Parlor",
+            "name": "Audre Lorde Lounge",
             "type": "CHATSTREAM",
             "capacity": 666,
             "muteRoom": false,
@@ -144,7 +144,7 @@
         },
         {
             "id": "small-1",
-            "name": "Liturgy Lounge",
+            "name": "James Baldwin Salon",
             "type": "JITSI",
             "capacity": 15,
             "muteRoom": false,
@@ -167,7 +167,7 @@
         },
         {
             "id": "small-2",
-            "name": "Satanic Planet Merch Table",
+            "name": "Barbara Gittings Lounge",
             "type": "IMAGEMAP",
             "muteRoom": false,
             "hideVideo": false,
@@ -195,7 +195,7 @@
         },
         {
             "id": "small-3",
-            "name": "Passage Parlor",
+            "name": "Christine Jorgensen Lounge",
             "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
@@ -218,7 +218,7 @@
         },
         {
             "id": "foyer",
-            "name": "Illuminated Foyer",
+            "name": "Marsha P Johnson Foyer",
             "type": "JITSI",
             "capacity": 50,
             "muteRoom": false,
@@ -247,7 +247,7 @@
         },
         {
             "id": "medium-lounge",
-            "name": "Devil in Me Chamber",
+            "name": "Bayard Rustin Boudoir",
             "type": "JITSI",
             "muteRoom": false,
             "hideVideo": false,
@@ -272,13 +272,13 @@
         },
         {
             "id": "library",
-            "name": "Satanic Planet Album Jukebox",
+            "name": "Satanic Archives Library",
             "type": "IMAGEMAP",
-            "description": "Click a button, play a song! No quarters needed.",
+            "description": "Peruse the archives, courtesy of Grey Faction",
             "directions": {
                 "west": "foyer"
             },
-            "imageMapOptions": "satanic-jukebox-map",
+            "imageMapOptions": "library",
             "map": {
                 "x": 18,
                 "y": 16,
