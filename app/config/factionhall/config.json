@@ -21,10 +21,10 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomJ.png",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomB.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Identify Your Cabal",
-        "headerHtml": "<div class='tst'><p>Welcome to</p><h1>Satanic Planet's Album Release Party</h1>"
+        "headerHtml": "<div class='tst'><p>Welcome to</p><h1>Welcome to Satanic Pride!</h1>"
     },
     "avatars": [
         {
@@ -75,7 +75,7 @@
             },
             "additionalStats": [
                 {
-                    "text": "\ud83d\udda4 {count} listening to the new Satanic Planet album",
+                    "text": "\ud83d\udda4 {count} reading",
                     "match": [
                         "library"
                     ]
@@ -84,12 +84,12 @@
         }
     },
     "poke": {
-        "text": "Sing to Someone!",
+        "text": "Hex Someone!",
         "fontAwesomeIcon": "skull",
-        "fromText": "{user} yells '666!'",
-        "toText": "Mark of the Beast!",
+        "fromText": "{user} hexes you'",
+        "toText": "Hex!",
         "unlockText": "You have unlocked the ability to hex",
-        "selfPoke": "Mark of the Beast: 666!",
+        "selfPoke": "Curses!",
         "unlockAfterMinutes": 0
     }
 }
