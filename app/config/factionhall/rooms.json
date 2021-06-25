@@ -12,7 +12,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/pZn9kQ23uAM"
             },
-            "description": "Mark of the Beast -- 666",
+            "description": "We can only see a short distance ahead, but we can see plenty there that needs to be done.",
             "directions": {
                 "east": "foyer",
                 "north": "hall"
@@ -40,7 +40,7 @@
             "iframeOptions": {
                 "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/7a0b07da-c1af-39a6-561e-a13f2fae664e"
             },
-            "description": "The Two Sides of the Spectacle",
+            "description": "All my life I wanted to look like Elizabeth Taylor. Now Elizabeth Taylor looks like me.",
             "directions": {
                 "east": "rotunda",
                 "south": "auditorium"
@@ -68,7 +68,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/d-k0Tc1_JMM"
             },
-            "description": "You Were Saved-- At What Cost?",
+            "description": "We have to be visible. We should not be ashamed of who we are.",
             "directions": {
                 "west": "hall",
                 "south": "foyer",
@@ -94,7 +94,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "That Which Will Not Bend Must Break",
+            "description": "We are all in the gutter, but some of us are looking at the stars.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomF.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/OwwFOTKghQg"
@@ -123,7 +123,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/mnzadSp70CE"
             },
-            "description": "Let's go check out the basement!",
+            "description": "It is not our differences that divide us. It is our inability to recognize, accept, and celebrate those differences.",
             "directions": {
                 "north": "foyer",
                 "west": "medium-lounge",
@@ -150,7 +150,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomE.png",
-            "description": "You Are Your Christ / You Are Your Satan",
+            "description": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
             "directions": {
                 "south": "small-2"
             },
@@ -172,7 +172,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 20,
-            "description": "Get your Satanic Planet Merch here.",
+            "description": "Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
             "imageMapOptions": "satanic-merch-map",
             "directions": {
@@ -199,7 +199,7 @@
             "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "I Love The Hell Which Formed My Genius",
+            "description": "The answer to the problem must not lie in sleeping pills and suicides that look like accidents, or in jail sentences, but rather in life and the freedom to live it.",
             "type": "JITSI",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomE.png",
             "directions": {
@@ -224,7 +224,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomI.png",
-            "description": "You Have Now Landed on Satanic Planet: Welcome Home",
+            "description": "Darling, I want my gay right now.",
             "directions": {
                 "north": "rotunda",
                 "east": "library",
@@ -253,7 +253,7 @@
             "hideVideo": false,
             "capacity": 10,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/SPRoomH.png",
-            "description": "Flame's Caress Inside of Me",
+            "description": "I believe in social dislocation and creative trouble.",
             "directions": {
                 "east": "large-lounge",
                 "west": "small-2"
