@@ -20,6 +20,7 @@ SYNC_MAP = {
     "the-unholy-holy": "TempleJune8",
     "interior-and-exterior-satanism": "TempleJune15",
     "temple-06-22": "TempleJune22",
+    "hail-pride": "Pride2021",
 }
 
 
