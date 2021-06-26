@@ -1,51 +1,51 @@
 {
     "events": [
         {
-            "name": "Pride Benediction with Minister Greg Stevens",
-            "description": "Minister Greg Stevens delivers an opening Benediction to kick off Pride at The Estate.",
-            "room": "auditorium",
-            "start": "2021-06-25T20:00:00-04:00",
-            "end": "2021-06-25T20:30:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/rainbowbaph.png"
-        },
-        {
-            "name": "Intersectionality and Activism Discussion with SoCC",
-            "description": "Kaelea chats with Ivy Valentine to discuss the importance of intersectionality in queer spaces and how that impacts LGBTQ+ activism.",
-            "room": "large-lounge",
-            "start": "2021-06-25T20:30:00-04:00",
-            "end": "2021-06-25T21:30:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/rainbowbaph.png"
-        },
-        {
-            "name": "What Can Satanists Learn from 80's Queer Activism with Rose D'Arc",
-            "description": "Comparing and contrasting the efforts of Satanists to the HIV/Aids activist groups of the 80's.",
+            "name": "Ace Presentation by TST Florida",
+            "description": "A collaborative project from several ace members of the Florida congregation compiled for Lupercalia.",
             "room": "rotunda",
-            "start": "2021-06-25T22:00:00-04:00",
-            "end": "2021-06-25T23:00:00-04:00",
+            "start": "2021-06-26T20:00:00-04:00",
+            "end": "2021-06-26T20:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/rainbowbaph.png"
         },
         {
-            "name": "Virtual Ballroom with Kaelea Kae & Hadrian Flyte",
-            "description": "Kaelea and Hadrian dish about the significance of ballroom within queer culture and its role in shaping queer activism. They will also explore how ballroom has entered and influenced the mainstream.",
+            "name": "Sex Work and Cupcakes: Conversations about identity with Ada King, Mischief Madness & Chalice Blythe",
+            "description": "Join Chalice Blythe, Mischief Madness and Ada King for unwrapping presents from @divinetoys, cupcakes and conversations about not being straight while doing sex work.",
+            "room": "auditorium",
+            "start": "2021-06-26T20:30:00-04:00",
+            "end": "2021-06-26T21:30:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/rainbowbaph.png"
+        },
+        {
+            "name": "Be Gay Do Witchcraft: LGBTQIA Witches Throughout the Ages with Salem Witch Wiles",
+            "description": "Join Thomas O'Brien Vallor for a journey through a telling of bitchin' gay witches throughout history.",
             "room": "theater",
-            "start": "2021-06-25T23:30:00-04:00",
-            "end": "2021-06-26T00:30:00-04:00",
+            "start": "2021-06-26T22:00:00-04:00",
+            "end": "2021-06-26T23:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/rainbowbaph.png"
         },
         {
-            "name": "Thot Thoughts and Art with Gloria Gray",
-            "description": "While drawing, Gloria speaks of the trials and tribulations of sex work and everything in-between. A true Stripper philosopher. Wait-- a truly hot stripper philosopher. Well...both.",
+            "name": "Gender Affirmation Ritual with Priest Joe Dee",
+            "description": "Pre-recorded video of Priest Joe Dee performing a gender affirmation ritual with members of TSTNYC. Eritque arcus, translating to rainbow in Latin, is a celebratory ritual of gender affirmation & the dismantling of social norms so all can live with Pride.",
             "room": "hall",
-            "start": "2021-06-26T01:00:00-04:00",
-            "end": "2021-06-26T02:00:00-04:00",
+            "start": "2021-06-26T23:30:00-04:00",
+            "end": "2021-06-27T00:30:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/rainbowbaph.png"
+        },
+        {
+            "name": "Queer Magick with Shiva Honey & Grahamzig",
+            "description": "Dj set with Shiva Honey and Grahamzig highlighting LGBTQ+ artists and dedicating the set to queer power + liberation.",
+            "room": "hall",
+            "start": "2021-06-27T00:30:00-04:00",
+            "end": "2021-06-27T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/rainbowbaph.png"
         },
         {
             "name": "Satanic Panic Archive Library",
             "description": "Browse the archives, courtesy of Grey Faction.",
             "room": "library",
-            "start": "2021-06-25T20:00:00-04:00",
-            "end": "2021-06-26T02:00:00-04:00",
+            "start": "2021-06-26T20:00:00-04:00",
+            "end": "2021-06-27T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/rainbowbaph.png"
         }
     ]
