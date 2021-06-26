@@ -24,7 +24,7 @@
         "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomB.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Identify Your Cabal",
-        "headerHtml": "<div class='tst'><p>Welcome to</p><h1>Welcome to Satanic Pride!</h1>"
+        "headerHtml": "<div class='tst'><p>Welcome to</p><h1>Satanic Pride!</h1>"
     },
     "avatars": [
         {
