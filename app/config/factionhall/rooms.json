@@ -115,7 +115,7 @@
         {
             "id": "large-lounge",
             "name": "Audre Lorde Lounge",
-            "type": "CHATSTREAM",
+            "type": "JITSI",
             "capacity": 666,
             "muteRoom": false,
             "hideVideo": false,
