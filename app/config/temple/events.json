@@ -1,51 +1,43 @@
 {
     "events": [
         {
-            "name": "The Popularity of Pop-Culture Satan with Minister James Payne",
+            "name": "Satan as the symbolic embodiment of individual liberty and the sanctity of one's authentic self. Led by: Minister René Grigori",
             "description": "Our religious discussions strive to be personal and inclusive. When Congregants enter the Temple Sanctuary, they will be able to watch the services on a video feed and will have access to a text chat. To facilitate the flow of conversation, we ask that those who would like to actively participate in the discussion connect on Zoom using a link that will be provided. (No requirement that your video be on.) Please use the text chat sparingly so you are not interfering with others' ability to attend and enjoy the video discussion.",
             "room": "sanctuary",
-            "start": "2021-06-22T21:00:00-04:00",
-            "end": "2021-06-22T22:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "After Services Activities: Hellfire Book Club",
-            "description": "Join The Satanic Temple Arizona and a rotating selection of guest speakers to discuss Satanic art, history, philosophy, and culture.",
-            "room": "sacristy",
-            "start": "2021-06-22T22:00:00-04:00",
-            "end": "2021-06-22T23:59:00-04:00",
+            "start": "2021-06-29T21:00:00-04:00",
+            "end": "2021-06-29T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dungeons and Dragons",
             "description": "Join Kaelea Kae for an adventure through a homebrew campaign that will prove memorable for players and viewers alike. We’ll be rolling lots of dice, cracking a bunch of jokes, telling some stories, and, most importantly, having fun.",
             "room": "malthus",
-            "start": "2021-06-22T22:00:00-04:00",
-            "end": "2021-06-22T23:59:00-04:00",
+            "start": "2021-06-29T22:00:00-04:00",
+            "end": "2021-06-29T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Sober Faction",
             "description": "TST Sober Faction will be hosting special meetings after weekly services such as Sober Book club hosted by Priest Joe Dee, Seven Ritual Workshop hosted by Reverend Jon Eldritch, & free talk Q&A sessions hosted by all of Sober Faction Council. Heal Thyself, Hail Thyself! Sobriety Without Superstition.",
             "room": "urizen",
-            "start": "2021-06-22T22:00:00-04:00",
-            "end": "2021-06-22T23:59:00-04:00",
+            "start": "2021-06-29T22:00:00-04:00",
+            "end": "2021-06-29T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Writers Circle",
             "description": "Join for our Satanic Writers Circle. Today we will follow up on projects we are all working on and share our work.",
             "room": "los",
-            "start": "2021-06-22T22:00:00-04:00",
-            "end": "2021-06-22T23:59:00-04:00",
+            "start": "2021-06-29T22:00:00-04:00",
+            "end": "2021-06-29T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dark Arts and Crafts",
             "description": "Join us for Dark Arts and Crafts! Open Photoshop or break out your paints and come create with us.",
             "room": "andromalius",
-            "start": "2021-06-22T22:00:00-04:00",
-            "end": "2021-06-22T23:59:00-04:00",
+            "start": "2021-06-29T22:00:00-04:00",
+            "end": "2021-06-29T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
