@@ -16,6 +16,25 @@ jobs:
     outputs:
       tag: ${{ steps.prep.outputs.tag }}
 
+    strategy:
+      matrix:
+        config: [base, temple, factionhall, tstvhq, gojo-video]
+        include:
+          - config: base
+            theme: basic
+
+          - config: temple
+            theme: temple
+
+          - config: factionhall
+            theme: factionhall
+
+          - config: tstvhq
+            theme: hexennacht
+
+          - config: gojo-video
+            theme: basic
+
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
@@ -31,9 +50,14 @@ jobs:
     - name: Prep tags
       id: prep
       run: |
-        TAG=base-basic-$(echo $GITHUB_SHA)
         IMAGE=cabinweekend/jitsi-party-web
+        TAG=${{ matrix.config }}-${{ matrix.theme }}-$(echo $GITHUB_SHA)
         echo ::set-output name=tagged_image::${IMAGE}:${TAG}
+
+    - name: Set config and theme
+      run:
+        app/set_config.sh ${{ matrix.config }}
+        app/set_theme.sh ${{ matrix.theme }}
 
     - name: Set up Docker Buildx
       id: buildx
