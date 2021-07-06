@@ -62,7 +62,7 @@ jobs:
         echo ::set-output name=tagged_image_latest::${IMAGE}:${TAG_LATEST}
 
     - name: Set config and theme
-      run:
+      run: |
         app/set_config.sh ${{ matrix.config }}
         app/set_theme.sh ${{ matrix.theme }}
 
@@ -72,7 +72,7 @@ jobs:
         version: '3.x'
 
     - name: Webpack
-      run:
+      run: |
         make env
         docker-compose pull node
         make webpack
