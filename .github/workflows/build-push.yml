@@ -73,6 +73,7 @@ jobs:
 
     - name: Webpack
       run:
+        docker-compose pull node
         make webpack
 
     - name: Set up Docker Buildx
