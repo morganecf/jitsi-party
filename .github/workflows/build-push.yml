@@ -13,7 +13,7 @@ defaults:
 jobs:
   build-test-push:
     runs-on: ubuntu-20.04
-    continue-on-error: ${{ matrix.experimental }}
+    fail-fast: false
     outputs:
       tag: ${{ steps.prep.outputs.tag }}
 
@@ -23,7 +23,6 @@ jobs:
         include:
           - config: base
             theme: basic
-            experimental: true
 
           - config: temple
             theme: temple
@@ -36,7 +35,6 @@ jobs:
 
           - config: gojo-video
             theme: basic
-            experimental: true
 
     steps:
     - name: Cancel Previous Runs
