@@ -34,16 +34,16 @@
         },
         {
             "name": "After Services Activities: Dark Arts and Crafts",
-            "description": "Join us for Dark Arts and Crafts! Open Photoshop or break out your paints and come create with us.",
+            "description": "Join us for Dark Arts and Crafts! Open Photoshop, sewing machine or break out your paints and come create with us.",
             "room": "andromalius",
             "start": "2021-07-06T22:00:00-04:00",
             "end": "2021-07-06T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "Literary Degeneracy: A book club",
+            "name": "After Services Activities: Literary Degeneracy: A Book Club",
             "description": "Dive deep into the world of unexpected, underappreciated, and down-right absurd literature in pursuit of aesthetic and broadened horizons. What does it mean to be a literary Satanist?",
-            "room": "Sacristy",
+            "room": "sacristy",
             "start": "2021-07-06T22:00:00-04:00",
             "end": "2021-07-06T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
