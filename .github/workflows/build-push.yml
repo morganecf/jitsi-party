@@ -73,6 +73,7 @@ jobs:
 
     - name: Webpack
       run:
+        make config
         docker-compose pull node
         make webpack
 
