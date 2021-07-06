@@ -22,6 +22,7 @@ jobs:
         include:
           - config: base
             theme: basic
+            experimental: true
 
           - config: temple
             theme: temple
@@ -34,6 +35,7 @@ jobs:
 
           - config: gojo-video
             theme: basic
+            experimental: true
 
     steps:
     - name: Cancel Previous Runs
