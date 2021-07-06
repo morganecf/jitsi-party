@@ -13,11 +13,11 @@ defaults:
 jobs:
   build-test-push:
     runs-on: ubuntu-20.04
-    fail-fast: false
     outputs:
       tag: ${{ steps.prep.outputs.tag }}
 
     strategy:
+      fail-fast: false
       matrix:
         config: [base, temple, factionhall, tstvhq, gojo-video]
         include:
