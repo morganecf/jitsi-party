@@ -66,6 +66,10 @@ jobs:
         app/set_config.sh ${{ matrix.config }}
         app/set_theme.sh ${{ matrix.theme }}
 
+    - name: Webpack
+      run:
+        make webpack
+
     - name: Set up Docker Buildx
       id: buildx
       uses: docker/setup-buildx-action@v1
