@@ -66,6 +66,11 @@ jobs:
         app/set_config.sh ${{ matrix.config }}
         app/set_theme.sh ${{ matrix.theme }}
 
+    - name: Install Protoc
+      uses: arduino/setup-protoc@v1
+      with:
+        version: '3.x'
+
     - name: Webpack
       run:
         make webpack
