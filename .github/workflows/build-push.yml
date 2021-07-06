@@ -56,8 +56,10 @@ jobs:
       id: prep
       run: |
         IMAGE=cabinweekend/jitsi-party-web
-        TAG=${{ matrix.config }}-${{ matrix.theme }}-$(echo $GITHUB_SHA)
-        echo ::set-output name=tagged_image::${IMAGE}:${TAG}
+        TAG_SHA=${{ matrix.config }}-${{ matrix.theme }}-$(echo $GITHUB_SHA)
+        TAG_LATEST=${{ matrix.config }}-${{ matrix.theme }}-latest
+        echo ::set-output name=tagged_image_sha::${IMAGE}:${TAG_SHA}
+        echo ::set-output name=tagged_image_latest::${IMAGE}:${TAG_LATEST}
 
     - name: Set config and theme
       run:
@@ -92,7 +94,7 @@ jobs:
         builder: ${{ steps.buildx.outputs.name }}
         file: ./app/Dockerfile
         push: true
-        tags: ${{ steps.prep.outputs.tagged_image }},latest
+        tags: ${{ steps.prep.outputs.tagged_image_sha }},${{ steps.prep.outputs.tagged_image_latest }}
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,mode=max,dest=/tmp/.buildx-cache-new
 
