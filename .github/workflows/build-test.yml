@@ -1,7 +1,7 @@
-name: build-push
+name: build-test
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
@@ -11,10 +11,8 @@ defaults:
     shell: bash
 
 jobs:
-  build-test-push:
+  build-test:
     runs-on: ubuntu-20.04
-    outputs:
-      tag: ${{ steps.prep.outputs.tag }}
 
     strategy:
       fail-fast: false
@@ -37,11 +35,6 @@ jobs:
             theme: basic
 
     steps:
-    - name: Cancel Previous Runs
-      uses: styfle/cancel-workflow-action@0.9.0
-      with:
-        access_token: ${{ github.token }}
-    
     - name: Checkout repo
       uses: actions/checkout@v2
 
@@ -67,46 +60,30 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-buildx
 
-    - name: Prep tags
-      id: prep
-      run: |
-        IMAGE=cabinweekend/jitsi-party-web
-        TAG_SHA=${{ matrix.config }}-${{ matrix.theme }}-$(echo $GITHUB_SHA)
-        TAG_LATEST=${{ matrix.config }}-${{ matrix.theme }}-latest
-        echo ::set-output name=tagged_image_sha::${IMAGE}:${TAG_SHA}
-        echo ::set-output name=tagged_image_latest::${IMAGE}:${TAG_LATEST}
-
     - name: Set config and theme
       run: |
         app/set_config.sh ${{ matrix.config }}
         app/set_theme.sh ${{ matrix.theme }}
 
-    - name: Install Protoc
+    - name: Install protoc
       uses: arduino/setup-protoc@v1
       with:
         version: '3.x'
 
-    - name: Webpack
+    - name: Build config and client
       run: |
         make env
         docker-compose pull node
         make webpack
 
-    - name: Login to DockerHub
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-    - name: Build and tag app image
+    - name: Build app image
       if: ${{ steps.changes.outputs.app }} == 'true'
       uses: docker/build-push-action@v2
       with:
         context: ./app
         builder: ${{ steps.buildx.outputs.name }}
         file: ./app/Dockerfile
-        push: true
-        tags: ${{ steps.prep.outputs.tagged_image_sha }},${{ steps.prep.outputs.tagged_image_latest }}
+        push: false
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,mode=max,dest=/tmp/.buildx-cache-new
 
