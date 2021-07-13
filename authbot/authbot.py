@@ -23,6 +23,7 @@ SYNC_MAP = {
     "hail-pride": "Pride2021",
     "temple-06-29": "TempleJune29",
     "temple-07-06": "TempleJuly6",
+    "temple-07-13": "TempleJuly13",
 }
 
 
