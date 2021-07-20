@@ -1,51 +1,43 @@
 {
     "events": [
         {
-            "name": "Knowing Our History: Constructing Identity & Building Pride. Led by: Chalice Blythe",
+            "name": "Topic: The Power of Naming Yourself. Led by: Minister Hadrian Flyte",
             "description": "Our religious discussions strive to be personal and inclusive. When Congregants enter the Temple Sanctuary, they will be able to watch the services on a video feed and will have access to a text chat. To facilitate the flow of conversation, we ask that those who would like to actively participate in the discussion connect on Zoom using a link that will be provided. (No requirement that your video be on.) Please use the text chat sparingly so you are not interfering with others' ability to attend and enjoy the video discussion.",
             "room": "sanctuary",
-            "start": "2021-07-13T21:00:00-04:00",
-            "end": "2021-07-13T22:00:00-04:00",
+            "start": "2021-07-20T21:00:00-04:00",
+            "end": "2021-07-20T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dungeons and Dragons",
             "description": "Join Kaelea Kae for an adventure through a homebrew campaign that will prove memorable for players and viewers alike. We’ll be rolling lots of dice, cracking a bunch of jokes, telling some stories, and, most importantly, having fun.",
             "room": "malthus",
-            "start": "2021-07-13T22:00:00-04:00",
-            "end": "2021-07-13T23:59:00-04:00",
+            "start": "2021-07-20T22:00:00-04:00",
+            "end": "2021-07-20T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Sober Faction",
             "description": "TST Sober Faction will be hosting special meetings after weekly services such as Sober Book club hosted by Priest Joe Dee, Seven Ritual Workshop hosted by Reverend Jon Eldritch, & free talk Q&A sessions hosted by all of Sober Faction Council. Heal Thyself, Hail Thyself! Sobriety Without Superstition.",
             "room": "urizen",
-            "start": "2021-07-13T22:00:00-04:00",
-            "end": "2021-07-13T23:59:00-04:00",
+            "start": "2021-07-20T22:00:00-04:00",
+            "end": "2021-07-20T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Writers Circle",
             "description": "Join for our Satanic Writers Circle. Today we will follow up on projects we are all working on and share our work.",
             "room": "los",
-            "start": "2021-07-13T22:00:00-04:00",
-            "end": "2021-07-13T23:59:00-04:00",
+            "start": "2021-07-20T22:00:00-04:00",
+            "end": "2021-07-20T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dark Arts and Crafts",
             "description": "Join us for Dark Arts and Crafts! Open Photoshop, sewing machine or break out your paints and come create with us.",
             "room": "andromalius",
-            "start": "2021-07-13T22:00:00-04:00",
-            "end": "2021-07-13T23:59:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "After Services Activities: Beyond the Grave: Satanic Death Rites with Mona Mourningstar",
-            "description": " Join the Hellfire Club Salon and Mona Mourningstar, funeral director and chapterhead of TST Atlantic Canada, for a conversation about all things thanatology. We’ll explore Satanist perspectives on death, find out more about what it’s like to work as a “last responder”, discuss the opportunities and challenges of collaborating with TST’s Ordination Program to create new Satanic funeral rites, and unveil the many meanings of mourning and memorial practices.",
-            "room": "sacristy",
-            "start": "2021-07-13T22:00:00-04:00",
-            "end": "2021-07-13T23:59:00-04:00",
+            "start": "2021-07-20T22:00:00-04:00",
+            "end": "2021-07-20T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
