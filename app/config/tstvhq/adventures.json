@@ -24,7 +24,7 @@
                             "text": "Push on that brick!"
                         }
                     ],
-                    "id": "brick",
+                    "id": "painting",
                     "name": "Loose Brick",
                     "text": "As you head down the stairs, you notice a rather peculiar brick sticking out from the otherwise smooth stone wall."
                 },
@@ -43,7 +43,7 @@
                             "text": "Enter the right hollow"
                         }
                     ],
-                    "id": "field",
+                    "id": "catacombs",
                     "name": "Where even am I?",
                     "text": "As you press on the brick, the others in the wall begin to move inward. They're about to crush you! You close your eyes, anticipating the smush, but, when you open them, find yourself in a wide open field. Before you are two massive trees, each with a hollow at their trunk"
                 },
