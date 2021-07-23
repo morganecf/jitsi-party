@@ -3,12 +3,12 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 20,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Kitchen.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomKitchen.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/dH-Bs2xHgvA"
             },
@@ -39,7 +39,7 @@
             "hideVideo": false,
             "doorTint": "#000000",
             "description": "Freshen up with a few friends.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/powder.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomDesk.png",
             "directions": {
                 "east": "kitchen"
             },
@@ -60,9 +60,9 @@
             "capacity": 100,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/HexRooms1920x1080Ballroom.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomBallroom.png",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=whimsicalblasphemy&parent=enter.thesatanic.estate"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/83cea71b-fda0-4ea7-0d5c-636e2a0695a9"
             },
             "description": "Minuet, Waltz, Foxtrot or Freeform: Dancing Commences!",
             "directions": {
@@ -86,9 +86,9 @@
             "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/backparlor.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomTwoSofas.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/H42iopEhc4U"
+                "src": "https://www.youtube.com/embed/TAzZ5GSEmMc"
             },
             "description": "Please use the incense burner instead of getting ash in the candles.",
             "directions": {
@@ -137,14 +137,14 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 20,
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "description": "Loveseats, chaises, armchairs-- oh my!",
-            "type": "JITSI",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/frontparlor.png",
+            "type": "CHATSTREAM",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomFoyer.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/ZE0JCKPaqCk"
+                "src": "https://www.youtube.com/embed/ZEuIv7W44yA"
             },
             "directions": {
                 "east": "teaRoom",
@@ -167,14 +167,14 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "CHATSTREAM",
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/lvBw1DbP138"
+                "src": "https://www.youtube.com/embed/AxFCXGJWPug"
             },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/tea.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomTea.png",
             "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick.",
             "directions": {
                 "north": "den",
@@ -196,13 +196,13 @@
         },
         {
             "id": "den",
-            "name": "Study",
-            "type": "JITSI",
+            "name": "Den",
+            "type": "CHATSTREAM",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/3t5pk-UQ_BM"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/3699646c-da67-c207-13f4-2853bc505a82"
             },
-            "capacity": 5,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/den.png",
+            "capacity": 666,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomCanape.png",
             "description": "Would you please set up an extra easel?",
             "directions": {
                 "north": "backParlor",
@@ -223,14 +223,14 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 666,
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/ritual.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomRitual.png",
             "iframeOptions": {
-                "src": "https://player.twitch.tv/?channel=shiva_honey&parent=enter.thesatanic.estate"
+                "src": "https://www.youtube.com/embed/mFjztVEL_xA"
             },
             "directions": {
                 "east": "backParlor"
@@ -254,7 +254,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "Meet your new best friend, a fruit bat or insect bat from BatWorld! Donate at batworld.org",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/belfry.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomWindow.png",
             "iframeOptions": {
                 "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
             },
@@ -273,19 +273,18 @@
             "doorTint": "#000000"
         },
         {
-            "id": "satanicMerch",
-            "name": "Satanic Merch",
+            "id": "library",
+            "name": "Satanic Panic Archive Library",
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "Get your Satanic Merch here.",
+            "description": "Peruse the Archives: Courtesy of Grey Faction",
             "type": "IMAGEMAP",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/satanicplanet/merchtable.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomLibrary.png",
             "directions": {
-                "west": "jukebox",
                 "east": "sleepingPorch"
             },
-            "imageMapOptions": "satanic-merch-map",
+            "imageMapOptions": "library",
             "map": {
                 "x": 14,
                 "y": 9,
@@ -305,10 +304,10 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "Give the goats from Woodstock Farm Sanctuary a snack at woodstocksanctuary.org/",
-            "type": "IFRAME",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/sleepingporch.png",
+            "type": "JITSI",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomSofa.png",
             "directions": {
-                "west": "satanicMerch",
+                "west": "library",
                 "east": "theater"
             },
             "iframeOptions": {
@@ -333,7 +332,7 @@
             "capacity": 5,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/aviary.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomLobby.png",
             "description": "A cacophony of hoots, chirps and flutters.",
             "directions": {
                 "east": "library"
@@ -350,32 +349,6 @@
             "doorTint": "#000000"
         },
         {
-            "id": "jukebox",
-            "name": "Satanic Jukebox",
-            "type": "IMAGEMAP",
-            "description": "Satanic Jukebox",
-            "directions": {
-                "south": "elevator",
-                "east": "satanicMerch",
-                "north": "boudoir",
-                "west": "aviary"
-            },
-            "imageMapOptions": "satanic-jukebox-map",
-            "map": {
-                "x": 7,
-                "y": 7,
-                "width": 7,
-                "height": 5,
-                "doors": {
-                    "south": 11,
-                    "north": 10,
-                    "east": 10,
-                    "west": 9
-                }
-            },
-            "doorTint": "#000000"
-        },
-        {
             "id": "theater",
             "name": "Theater",
             "type": "CHATSTREAM",
@@ -384,9 +357,9 @@
             "hideVideo": false,
             "locked": false,
             "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/theater.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomHall.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/nzgr6Jq_k2Y"
+                "src": "https://www.youtube.com/embed/E7OVb2tMkRU"
             },
             "directions": {
                 "west": "sleepingPorch",
@@ -412,7 +385,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "The roses are just starting to bloom on the family plot.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/cemetery.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomCemetery.png",
             "directions": {
                 "west": "garden"
             },
@@ -435,7 +408,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "Covert conversations regarding the Satanic Agenda",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/boudoir.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomBoudoir.png",
             "directions": {
                 "south": "library"
             },
@@ -461,7 +434,7 @@
                 "src": "https://www.youtube.com/embed/4r2sz1eT6Rc"
             },
             "description": "The amaryllis is already blooming!",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/garden.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomGarden.png",
             "directions": {
                 "west": "teaRoom",
                 "east": "cemetery"
@@ -481,12 +454,12 @@
         {
             "id": "trapDoor",
             "name": "Trap Door to Hell!",
-            "type": "IFRAME",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/trap.png",
+            "type": "JITSI",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomBun.png",
             "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "First of May \u00b7 Jonathan Coulton, Creative Commons",
+            "description": "It's so warm down here!",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/WzZaJDg6E0A"
             },
@@ -502,7 +475,7 @@
             "capacity": 15,
             "hideVideo": false,
             "muteRoom": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/tunnel.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomArches.png",
             "description": "This looks just like under McMartin Preschool!",
             "directions": {
                 "west": "trapDoor",
@@ -519,7 +492,7 @@
             "hideVideo": false,
             "description": "Have a marshmallow. It's time for s'mores!",
             "doorTint": "#000000",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/crematorium.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomHallway.png",
             "directions": {
                 "west": "secretTunnels"
             }
