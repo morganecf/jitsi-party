@@ -123,9 +123,9 @@
             },
             "map": {
                 "x": 11,
-                "y": 12,
+                "y": 11,
                 "width": 1,
-                "height": 12,
+                "height": 13,
                 "doors": {
                     "north": 11,
                     "south": 11,
@@ -282,17 +282,22 @@
             "type": "IMAGEMAP",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomLibrary.png",
             "directions": {
-                "east": "sleepingPorch"
+                "east": "sleepingPorch",
+                "north": "boudoir",
+                "south": "elevator",
+                "west": "aviary"
             },
-            "imageMapOptions": "library",
+            "imageMapOptions": "satanic-library-map",
             "map": {
-                "x": 14,
-                "y": 9,
-                "width": 2,
-                "height": 2,
+                "x": 7,
+                "y": 8,
+                "width": 8,
+                "height": 3,
                 "doors": {
-                    "west": 10,
-                    "east": 10
+                    "west": 9,
+                    "east": 10,
+                    "north": 10,
+                    "south": 11
                 }
             },
             "doorTint": "#000000"
@@ -314,9 +319,9 @@
                 "src": "https://www.youtube.com/embed/OD3t0ODlY1o"
             },
             "map": {
-                "x": 16,
+                "x": 15,
                 "y": 9,
-                "width": 2,
+                "width": 3,
                 "height": 2,
                 "doors": {
                     "west": 10,
@@ -416,7 +421,7 @@
                 "x": 9,
                 "y": 5,
                 "width": 3,
-                "height": 2,
+                "height": 3,
                 "doors": {
                     "south": 10
                 }
