@@ -5,7 +5,7 @@
                 "audio": {
                     "autoPlay": true,
                     "hideControls": true,
-                    "path": "https://tstvhq.s3.amazonaws.com/music/Ambient_Birds.mp3"
+                    "path": "https://tstvhq.s3.amazonaws.com/music/elevator_ritual.mp3"
                 }
             },
             "rooms": [
