@@ -1,59 +1,99 @@
 {
     "events": [
         {
-            "name": "The Satanic Chef",
-            "description": "Join Adam Dodge in the kitchen of VHQ for a cooking workshop and conversation. Keep your eyes out for Sous Chef Jack!",
-            "room": "kitchen",
-            "start": "2021-05-03T20:30:00-04:00",
-            "end": "2021-05-03T21:30:00-04:00",
+            "name": "Unveiling Benediction with Priest Joe Dee",
+            "description": "Join us as Satanic Ministry delivers an opening Benediction to kick off Unveiling Day Weekend",
+            "room": "frontParlor",
+            "start": "2021-07-23T19:00:00-04:00",
+            "end": "2021-07-23T19:15:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "Salem Witch Wiles",
-            "description": "Join Thomas O'Brien Vallor, The Estate's resident Salem Witch for a conversation about Hexennacht.",
-            "room": "backParlor",
-            "start": "2021-05-03T22:00:00-04:00",
-            "end": "2021-05-03T23:00:00-04:00",
+            "name": "Ordination Council Presents: The Satanic Temple's Annual Recognition Ceremony",
+            "description": "Join Satanic Ministers to honor Satanists who have made exceptionally substantive contributions to our organization, religion and community.",
+            "room": "frontParlor",
+            "start": "2021-07-23T19:15:00-04:00",
+            "end": "2021-07-23T20:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "The Love Witch with TST Oregon",
-            "description": "Join TST Oregon for a showing of Anna Biller's classic The Love Witch.",
+            "name": "The Witch: A Satanic Embrace",
+            "description": "Join the Spinsters of Horror as they go deep into the woods to explore Robert Eggers' The Witch. Jessica and Kelly will discuss the themes of Black Phillip as the symbol of Satan, Satanic witchcraft and its empowering force, womanhood, motherhood, even anti-motherhood. The Witch - our Sinister Rebel - is one of the oldest fighters against paternal domination with an important relationship to Satan. She will Reign & Hex the Patriarchy!",
             "room": "theater",
-            "start": "2021-05-03T23:30:00-04:00",
-            "end": "2021-05-04T01:00:00-04:00",
+            "start": "2021-07-23T20:00:00-04:00",
+            "end": "2021-07-23T21:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-04-29T20:00:00-04:00",
-            "end": "2021-05-03T02:00:00-04:00",
+            "start": "2021-07-23T19:00:00-04:00",
+            "end": "2021-07-25T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
-            "name": "A Happy Hooven Home: Goats!",
-            "description": "Livestream of goats. Sponsor one of these good kids at woodstocksanctuary.org",
-            "room": "sleepingPorch",
-            "start": "2021-04-29T20:00:00-04:00",
-            "end": "2021-05-03T02:00:00-04:00",
+            "name": "Disrobing Down Under: A Conversation on Burlesque, Satanism, and Body Positivity",
+            "description": "Hosted by Fliq Valentina, known on stage as Domino de Jour. Join Satanists and performers from Australia and New Zealand for an intimate conversation about burlesque, body positivity, and its interaction with their personal Satanic practices.",
+            "room": "backParlor",
+            "start": "2021-07-23T21:00:00-04:00",
+            "end": "2021-07-23T22:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
+            "name": "Special Announcement",
+            "description": "Stick around after Disrobing Down Under for a historic special announcement from TST Australia.",
+            "room": "backParlor",
+            "start": "2021-07-23T22:00:00-04:00",
+            "end": "2021-07-23T22:30:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
+            "name": "Lucien Greaves Interviews Baphomet",
+            "description": "Join Lucien Greaves and Baphomet for a discussion on the monument's history and as they reflect upon shared adventures.",
+            "room": "teaRoom",
+            "start": "2021-07-23T22:30:00-04:00",
+            "end": "2021-07-23T23:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
+            "name": "The Legacy of The Unveiling",
+            "description": "Shiva Honey and Hollow Axis, two of The Satanic Temple Detroit’s founding members, discuss the early history, accomplishments, and lessons learned from their time in The Satanic Temple Detroit - TST’s first chapter. This is the first part of an ongoing series that will cover the legacy of The Satanic Temple Detroit. This talk discusses the initial formation of the chapter, the Snaketivity of 2014, and The Satanic Temple Detroit's first party, which made The Daily Beast ask, Can the Satanic Temple Save America?",
+            "room": "ritualChamber",
+            "start": "2021-07-23T23:00:00-04:00",
+            "end": "2021-07-23T23:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
+            "name": "Panic in Detroit: The History + Infamy of The Satanic Temple’s First Chapter - Part I",
+            "description": "Shiva Honey chats with Lucien Greaves, Hollow Axis, William Morrison + James Nelson about security threats, venue changes, sexy time on Baphomet's lap, and the legacy of The Unveiling of Baphomet in Detroit in 2015.",
+            "room": "ritualChamber",
+            "start": "2021-07-24T00:00:00-04:00",
+            "end": "2021-07-24T01:00:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+        },
+        {
+            "name": "Live DJ set with Shiva Honey and Grahamzig",
+            "description": "Join Shiva Honey and Grahamzig for music and good vibes, honoring The Unveiling and a new Satanic Era.",
+            "room": "ritualChamber",
+            "start": "2021-07-24T01:00:00-04:00",
+            "end": "2021-07-24T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Whimsical Blasphemy",
             "description": "Join Mercy for music and videos all night, live from Salem.",
             "room": "grandBallroom",
-            "start": "2021-05-03T20:00:00-04:00",
-            "end": "2021-05-04T02:00:00-04:00",
+            "start": "2021-07-23T19:00:00-04:00",
+            "end": "2021-07-25T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         },
         {
             "name": "Grey Faction Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-04-29T20:00:00-04:00",
-            "end": "2021-05-03T02:00:00-04:00",
+            "start": "2021-07-23T19:00:00-04:00",
+            "end": "2021-07-24T02:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
         }
     ]
