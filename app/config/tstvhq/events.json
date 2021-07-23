@@ -6,7 +6,7 @@
             "room": "frontParlor",
             "start": "2021-07-23T19:00:00-04:00",
             "end": "2021-07-23T19:15:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "Ordination Council Presents: The Satanic Temple's Annual Recognition Ceremony",
@@ -14,7 +14,7 @@
             "room": "frontParlor",
             "start": "2021-07-23T19:15:00-04:00",
             "end": "2021-07-23T20:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "The Witch: A Satanic Embrace",
@@ -30,7 +30,7 @@
             "room": "belfry",
             "start": "2021-07-23T19:00:00-04:00",
             "end": "2021-07-25T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "Disrobing Down Under: A Conversation on Burlesque, Satanism, and Body Positivity",
@@ -38,7 +38,7 @@
             "room": "backParlor",
             "start": "2021-07-23T21:00:00-04:00",
             "end": "2021-07-23T22:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "Special Announcement",
@@ -46,7 +46,7 @@
             "room": "backParlor",
             "start": "2021-07-23T22:00:00-04:00",
             "end": "2021-07-23T22:30:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "Lucien Greaves Interviews Baphomet",
@@ -54,7 +54,7 @@
             "room": "teaRoom",
             "start": "2021-07-23T22:30:00-04:00",
             "end": "2021-07-23T23:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "The Legacy of The Unveiling",
@@ -62,7 +62,7 @@
             "room": "ritualChamber",
             "start": "2021-07-23T23:00:00-04:00",
             "end": "2021-07-23T23:59:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "Panic in Detroit: The History + Infamy of The Satanic Temple’s First Chapter - Part I",
@@ -70,7 +70,7 @@
             "room": "ritualChamber",
             "start": "2021-07-24T00:00:00-04:00",
             "end": "2021-07-24T01:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "Live DJ set with Shiva Honey and Grahamzig",
@@ -78,7 +78,7 @@
             "room": "ritualChamber",
             "start": "2021-07-24T01:00:00-04:00",
             "end": "2021-07-24T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "Whimsical Blasphemy",
@@ -86,7 +86,7 @@
             "room": "grandBallroom",
             "start": "2021-07-23T19:00:00-04:00",
             "end": "2021-07-25T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         },
         {
             "name": "Grey Faction Satanic Archives",
@@ -94,7 +94,7 @@
             "room": "library",
             "start": "2021-07-23T19:00:00-04:00",
             "end": "2021-07-24T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
         }
     ]
 }
