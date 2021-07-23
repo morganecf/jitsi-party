@@ -115,7 +115,7 @@
             "hideVideo": false,
             "capacity": 10,
             "description": "Going down?",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/elevator.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomElevator.png",
             "directions": {
                 "north": "library",
                 "east": "painting",
@@ -384,7 +384,7 @@
             "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "The roses are just starting to bloom on the family plot.",
+            "description": "The roses are in full bloom on the family plot.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomCemetery.png",
             "directions": {
                 "west": "garden"
@@ -454,14 +454,14 @@
         {
             "id": "trapDoor",
             "name": "Trap Door to Hell!",
-            "type": "JITSI",
+            "type": "IFRAME",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomBun.png",
             "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "It's so warm down here!",
+            "description": "It's so toasty down here! Is it because of Baphomet's Hot Take?",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/WzZaJDg6E0A"
+                "src": "https://www.youtube.com/embed/tWOXeocgsyc"
             },
             "directions": {
                 "east": "secretTunnels"
