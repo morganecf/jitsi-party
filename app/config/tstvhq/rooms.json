@@ -3,14 +3,14 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 666,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomKitchen.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/dH-Bs2xHgvA"
+                "src": "https://www.youtube.com/embed/8a2IqKYQU7k"
             },
             "description": "Live deliciously in the kitchen.",
             "directions": {
@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomTwoSofas.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/TAzZ5GSEmMc"
+                "src": "https://www.youtube.com/embed/VZpIfhwA3Ps"
             },
             "description": "Please use the incense burner instead of getting ash in the candles.",
             "directions": {
@@ -137,11 +137,11 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 400,
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "Loveseats, chaises, armchairs-- oh my!",
-            "type": "CHATSTREAM",
+            "type": "JITSI",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomFoyer.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/ZEuIv7W44yA"
@@ -172,7 +172,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/AxFCXGJWPug"
+                "src": "https://www.youtube.com/embed/dUxFWoMfyY0"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomTea.png",
             "description": "Try an English Breakfast looseleaf with a vanilla pod or a cinammon stick.",
@@ -199,9 +199,9 @@
             "name": "Den",
             "type": "CHATSTREAM",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/3699646c-da67-c207-13f4-2853bc505a82"
+                "src": "https://www.youtube.com/embed/E_yxi7iyIXE"
             },
-            "capacity": 666,
+            "capacity": 10,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomCanape.png",
             "description": "Would you please set up an extra easel?",
             "directions": {
@@ -223,8 +223,8 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "CHATSTREAM",
-            "capacity": 666,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
@@ -364,7 +364,7 @@
             "description": "The velvet seats recline! Are they red or black? Hard to tell in the dark.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomHall.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/E7OVb2tMkRU"
+                "src": "https://www.youtube.com/embed/-QPBiS1hlBg"
             },
             "directions": {
                 "west": "sleepingPorch",
@@ -408,11 +408,14 @@
         {
             "id": "boudoir",
             "name": "Boudoir",
-            "type": "JITSI",
-            "capacity": 25,
+            "type": "CHATSTREAM",
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "description": "Covert conversations regarding the Satanic Agenda",
+            "iframeOptions": {
+                "src": "https://www.youtube.com/embed/PlvAE9MHhw8"
+            },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomBoudoir.png",
             "directions": {
                 "south": "library"
@@ -432,7 +435,7 @@
             "id": "garden",
             "name": "Garden",
             "type": "JITSI",
-            "capacity": 50,
+            "capacity": 5,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
