@@ -28,6 +28,7 @@ SYNC_MAP = {
     "full-pass-unveiling-july-23-24": "full-pass-unveiling-july-23-24",
     "unveiling-july-23-ticket": "unveiling-july-23-ticket",
     "unveiling-july-24-ticket": "unveiling-july-24-ticket",
+    "temple-07-27": "TempleJuly27",
 }
 
 

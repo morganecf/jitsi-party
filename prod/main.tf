@@ -299,13 +299,13 @@ resource "aws_instance" "main" {
     user_data = templatefile(
       "first_run.sh.tpl",
       {
-        config = "tstvhq",
-        theme = "tst",
+        config = "temple",
+        theme = "temple",
         domain = local.tst_domain,
         auth_enabled = "1",
         auth_client_id = aws_cognito_user_pool_client.main.id,
         auth_client_secret = aws_cognito_user_pool_client.main.client_secret,
-        auth_allowed_groups = "Caretakers PR full-pass-unveiling-july-23-24 unveiling-july-23-ticket",
+        auth_allowed_groups = "Caretakers PR TempleJuly27"
         auth_discovery = "https://cognito-idp.${local.aws_region}.amazonaws.com/${aws_cognito_user_pool_client.main.user_pool_id}/.well-known/openid-configuration",
       }
     )
