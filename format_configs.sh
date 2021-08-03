@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /usr/bin/env zsh
 
 for f (app/config/**/*json); do
     g=${f//json/json.old}
