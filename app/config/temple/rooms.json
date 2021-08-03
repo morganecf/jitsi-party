@@ -3,7 +3,7 @@
         {
             "id": "urizen",
             "name": "Chapel of Urizen",
-            "type": "CHATSTREAM",
+            "type": "CHATSTREAM"
             "capacity": 300,
             "doorTint": "#000000",
             "muteRoom": true,
