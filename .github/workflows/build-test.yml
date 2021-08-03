@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 jobs:
-  build-test:
+  build-format-test:
     runs-on: ubuntu-20.04
 
     strategy:
@@ -64,6 +64,17 @@ jobs:
       run: |
         app/set_config.sh ${{ matrix.config }}
         app/set_theme.sh ${{ matrix.theme }}
+
+    - name: Test and format configs
+      run: |
+        ./format_configs.sh
+
+    - name: Commit config changes
+      uses: EndBug/add-and-commit@v7
+      with:
+        default_author: github_actions
+        message: 'Autoformat configs with format_configs.sh'
+        add: 'app/config/**/*json'
 
     - name: Install protoc
       uses: arduino/setup-protoc@v1
