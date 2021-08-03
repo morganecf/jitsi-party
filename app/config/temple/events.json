@@ -1,43 +1,51 @@
 {
     "events": [
         {
-            "name": "The Skillful Satanist or Satanic Upaya. Led by: Minister Regina Dentata",
-            "description": "Our religious discussions strive to be personal and inclusive. When Congregants enter the Temple Sanctuary, they will be able to watch the services on a video feed and will have access to a text chat. To facilitate the flow of conversation, we ask that those who would like to actively participate in the discussion connect on Zoom using a link that will be provided. (No requirement that your video be on.) Please use the text chat sparingly so you are not interfering with others' ability to attend and enjoy the video discussion.",
+            "name": "Unintended Doctrine: Opinions as Weaponized Canon Led by: Minister Chalice Blythe & Lucien Greaves",
+            "description": "The Temple services are meant as live discussions rather than lectures, so these will not be recorded to respect everyone's privacy when participating. However, the Minister's introduction to the discussion will be recorded for future posting on TSTTV.",
             "room": "sanctuary",
-            "start": "2021-07-27T21:00:00-04:00",
-            "end": "2021-07-27T22:00:00-04:00",
+            "start": "2021-08-03T21:00:00-04:00",
+            "end": "2021-07-08-03:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "After Services Activities: Dungeons and Dragons REBROADCAST",
+            "name": "Literary Degeneracy: A book club",
+            "description": "Dive deep into the world of unexpected, underappreciated, and down-right absurd literature in pursuit of aesthetic and broadened horizons. What does it mean to be a literary Satanist?",
+            "room": "sacristy",
+            "start": "2021-08-03T22:00:00-04:00",
+            "end": "2021-08-0323:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "After Services Activities: Dungeons and Dragons",
             "description": "Join Kaelea Kae for an adventure through a homebrew campaign that will prove memorable for players and viewers alike. We’ll be rolling lots of dice, cracking a bunch of jokes, telling some stories, and, most importantly, having fun.",
             "room": "malthus",
-            "start": "2021-07-27T22:00:00-04:00",
-            "end": "2021-07-27T23:59:00-04:00",
+            "start": "2021-08-03T22:00:00-04:00",
+            "end": "2021-08-0323:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Sober Faction",
             "description": "TST Sober Faction will be hosting special meetings after weekly services such as Sober Book club hosted by Priest Joe Dee, Seven Ritual Workshop hosted by Reverend Jon Eldritch, & free talk Q&A sessions hosted by all of Sober Faction Council. Heal Thyself, Hail Thyself! Sobriety Without Superstition.",
             "room": "urizen",
-            "start": "2021-07-27T22:00:00-04:00",
-            "end": "2021-07-27T23:59:00-04:00",
+            "start": "2021-08-03T22:00:00-04:00",
+            "end": "2021-08-03T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Writers Circle",
             "description": "Join Jack and Ada for our Satanic Writers Circle. Today we will follow up on projects we are all working on and share our work.",
             "room": "los",
-            "start": "2021-07-27T22:00:00-04:00",
-            "end": "2021-07-27T23:59:00-04:00",
+            "start": "2021-08-03T22:00:00-04:00",
+            "end": "2021-08-03T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dark Arts and Crafts",
             "description": "Join CraftSatan for Dark Arts and Crafts! Open Photoshop, sewing machine or break out your paints and come create with us.",
             "room": "andromalius",
-            "start": "2021-07-27T22:00:00-04:00",
-            "end": "2021-07-27T23:59:00-04:00",
+            "start": "2021-08-03T22:00:00-04:00",
+            "end": "2021-08-03T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
