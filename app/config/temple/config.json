@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "page_title": "Temple",
+    "page_title": "Happy Birthday Helene!",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "tooltips": {
@@ -25,10 +25,10 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom13.png",
-        "enterSpaceButtonText": "Enter",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/invertlast.png",
+        "enterSpaceButtonText": "HAVE SOME CAKE",
         "avatarSelectionText": "Select Your Symbol",
-        "headerHtml": "<div class='tst'><p>Welcome to</p><h1>Temple</h1>"
+        "headerHtml": "<div class='tst'><p>It is August 8th.</p><h1>HAPPY BIRTHDAY HELENE!</h1>"
     },
     "avatars": [
         {
