@@ -78,5 +78,5 @@ format-config:
 	./format_configs.sh
 
 .PHONY: pull
-pull:
+pull: env
 	docker-compose pull
