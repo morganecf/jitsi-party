@@ -74,6 +74,7 @@ PUBLIC_URL=https://localhost
 # See the "Running behind NAT or on a LAN environment" section in the README
 #DOCKER_HOST_ADDRESS=192.168.1.1
 
+DOCKER_HOST_ADDRESS=
 
 #
 # Let's Encrypt configuration
@@ -342,3 +343,9 @@ DISABLE_HTTPS=1
 # Redirect HTTP traffic to HTTPS
 # Necessary for Let's Encrypt, relies on standard HTTPS port (443)
 #ENABLE_HTTP_REDIRECT=1
+
+PROXY_AUTH_ENABLED=
+PROXY_AUTH_DISCOVERY=
+PROXY_AUTH_CLIENT_SECRET=
+PROXY_AUTH_ALLOWED_GROUPS=
+PROXY_AUTH_CLIENT_ID=

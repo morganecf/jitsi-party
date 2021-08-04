@@ -89,9 +89,7 @@ services:
         ports:
             - 81:80
         environment:
-            - ENABLE_AUTH
             - ENABLE_GUESTS
-            - ENABLE_TRANSCRIPTIONS
             - DISABLE_HTTPS
             - JICOFO_AUTH_USER
             - XMPP_DOMAIN
@@ -100,7 +98,6 @@ services:
             - XMPP_GUEST_DOMAIN
             - XMPP_MUC_DOMAIN
             - XMPP_RECORDER_DOMAIN
-            - ETHERPAD_URL_BASE
             - TZ
             - JIBRI_BREWERY_MUC
             - JIBRI_PENDING_TIMEOUT
@@ -108,7 +105,6 @@ services:
             - JIBRI_XMPP_PASSWORD
             - JIBRI_RECORDER_USER
             - JIBRI_RECORDER_PASSWORD
-            - ENABLE_RECORDING
             - BRIDGE_CHANNEL
             - ENABLE_XMPP_WEBSOCKET
         networks:
@@ -126,25 +122,7 @@ services:
                 - BUILDKIT_INLINE_CACHE=1
         image: cabinweekend/jitsi-party-prosody
         environment:
-            - AUTH_TYPE
-            - ENABLE_AUTH
             - ENABLE_GUESTS
-            - ENABLE_GUEST_DOMAIN
-            - GLOBAL_MODULES
-            - GLOBAL_CONFIG
-            - LDAP_URL
-            - LDAP_BASE
-            - LDAP_BINDDN
-            - LDAP_BINDPW
-            - LDAP_FILTER
-            - LDAP_AUTH_METHOD
-            - LDAP_VERSION
-            - LDAP_USE_TLS
-            - LDAP_TLS_CIPHERS
-            - LDAP_TLS_CHECK_PEER
-            - LDAP_TLS_CACERT_FILE
-            - LDAP_TLS_CACERT_DIR
-            - LDAP_START_TLS
             - XMPP_DOMAIN
             - XMPP_AUTH_DOMAIN
             - XMPP_GUEST_DOMAIN
@@ -165,15 +143,6 @@ services:
             - JIBRI_XMPP_PASSWORD
             - JIBRI_RECORDER_USER
             - JIBRI_RECORDER_PASSWORD
-            - JWT_APP_ID
-            - JWT_APP_SECRET
-            - JWT_ACCEPTED_ISSUERS
-            - JWT_ACCEPTED_AUDIENCES
-            - JWT_ASAP_KEYSERVER
-            - JWT_ALLOW_EMPTY
-            - JWT_AUTH_TYPE
-            - JWT_TOKEN_AUTH_MODULE
-            - LOG_LEVEL
             - TZ
         networks:
             party.jitsi:
@@ -183,7 +152,6 @@ services:
     jicofo:
         image: jitsi/jicofo:stable-5142-4
         environment:
-            - ENABLE_AUTH
             - XMPP_DOMAIN
             - XMPP_AUTH_DOMAIN
             - XMPP_INTERNAL_MUC_DOMAIN
@@ -191,10 +159,8 @@ services:
             - JICOFO_COMPONENT_SECRET
             - JICOFO_AUTH_USER
             - JICOFO_AUTH_PASSWORD
-            - JICOFO_RESERVATION_REST_BASE_URL
             - JVB_BREWERY_MUC
             - JIGASI_BREWERY_MUC
-            - JIGASI_SIP_URI
             - JIBRI_BREWERY_MUC
             - JIBRI_PENDING_TIMEOUT
             - TZ
@@ -209,7 +175,6 @@ services:
             - '${JVB_PORT}:${JVB_PORT}/udp'
             - '${JVB_TCP_PORT}:${JVB_TCP_PORT}'
         environment:
-            - DOCKER_HOST_ADDRESS
             - XMPP_AUTH_DOMAIN
             - XMPP_INTERNAL_MUC_DOMAIN
             - XMPP_SERVER
@@ -220,7 +185,6 @@ services:
             - JVB_TCP_HARVESTER_DISABLED
             - JVB_TCP_PORT
             - JVB_STUN_SERVERS
-            - JVB_ENABLE_APIS
             - TZ
         depends_on:
             - prosody
