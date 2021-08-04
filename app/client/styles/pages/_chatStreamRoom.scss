@@ -8,7 +8,7 @@ $mobile_portrait_length: 480px !default;
 }
 
 .chatstream-section {
-  flex: 0.5;
+  flex: 0.6;
   justify-content: space-around;
   padding-top: 6rem;
   padding-left: 2rem;
@@ -42,7 +42,6 @@ $mobile_portrait_length: 480px !default;
   }
 
   .chatroom {
-
     // color themes
     .separator {
       border-bottom: 2px solid $chat-separator-bars !important;
@@ -102,6 +101,7 @@ $mobile_portrait_length: 480px !default;
     converse-muc-sidebar {
       background-color: $chat-participants !important;
       border-left-color: $chat-participants-resize !important;
+      min-width: 30% !important;
     }
 
     .occupants-heading {
