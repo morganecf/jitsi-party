@@ -194,7 +194,7 @@
         {
             "id": "sanctuary",
             "name": "The Sanctuary",
-            "capacity": 2,
+            "capacity": 50,
             "muteRoom": true,
             "hideVideo": true,
             "description": "brithdya for freind is surpr1se",
