@@ -8,11 +8,11 @@
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/roombg4.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/YPAvW5Bgw-Q"
+                "src": "https://www.youtube.com/embed/p7O2DvkPEV4"
             },
-            "description": "BIRTHDAY BIRTHDAY BIRTHDAY",
+            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: See link in Chat",
             "directions": {
                 "east": "sanctuary"
             },
@@ -29,14 +29,14 @@
         {
             "id": "malthus",
             "name": "Malthus",
-            "type": "JITSI",
+            "type": "CHATSTREAM",
             "capacity": 300,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/roimbg3.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom2.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/6pXYO4jRQsc"
+                "src": "https://www.youtube.com/embed/ma4OgRLhzAg"
             },
             "description": "Join Dungeon Mistress Kaelea and a team of intrepid adventurers as they unravel mysteries in the Kingdom of Ekerion, a 5th Edition Dungeons & Dragons homebrew campaign. Tune in for laughs, silly voices, twists and turns, and lots of dice-rolling shenanigans.",
             "directions": {
@@ -89,10 +89,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "birth birth birth",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/roombg3.png",
+            "description": "What treasures lay undiscovered for those who gather here? JOIN THE ART PARTY: See link in chat",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom4.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/m8Bbev66y6o"
+                "src": "https://www.youtube.com/embed/j4niNhBhMKA"
             },
             "directions": {
                 "south": "sacristy"
@@ -111,10 +111,10 @@
             "id": "sacristy",
             "name": "The Sacristy",
             "type": "JITSI",
-            "capacity": 300,
+            "capacity": 25,
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/roombg4.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/jbs0-mjRP3s"
             },
@@ -142,12 +142,12 @@
         {
             "id": "bifrons",
             "name": "Bifrons",
-            "type": "JITSI",
+            "type": "CHATSTREAM",
             "capacity": 300,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/bg5.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
             "iframeOptions": {
                 "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/83cea71b-fda0-4ea7-0d5c-636e2a0695a9"
             },
@@ -175,7 +175,7 @@
             "hideVideo": false,
             "capacity": 5,
             "description": "Speak my friends of the past, present, future; of reconciliation, of foes, of love.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/invert.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom7.png",
             "imageMapOptions": "satanic-merch-map",
             "directions": {
                 "north": "bifrons"
@@ -194,15 +194,15 @@
         {
             "id": "sanctuary",
             "name": "The Sanctuary",
-            "capacity": 50,
+            "capacity": 666,
             "muteRoom": true,
             "hideVideo": true,
-            "description": "brithdya for freind is surpr1se",
+            "description": "Timelessness coalesces above the pews set out before you. Gather and be heard. Check the chat to join the conversation.",
             "type": "CHATSTREAM",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/qIiGbU8bc7o"
+                "src": "https://iframe.dacast.com/b/139852/c/581332"
             },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/roombg1.png",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom8.png",
             "directions": {
                 "north": "sacristy",
                 "east": "los",
@@ -231,10 +231,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/s-PNCsIw9Gk"
+                "src": "https://www.youtube.com/embed/Sh6wj2Xu51w"
             },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/invert2.png",
-            "description": "YOU WERE BORN, HAVE BUNS",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
+            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE WRITER'S CIRCLE: See link in chat",
             "directions": {
                 "west": "sanctuary"
             },
@@ -256,8 +256,8 @@
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 50,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/testevent/invert4.png",
-            "description": "HAIL HELENE BC BIRTHDAYTIME",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom10.png",
+            "description": "The whispers of bygone eras mingle with the faintest incense to bid you welcome. Select the map and calendar in the bottom left to explore our Temple.",
             "directions": {
                 "north": "sanctuary"
             },
