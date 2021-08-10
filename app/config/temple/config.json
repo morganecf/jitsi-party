@@ -3,6 +3,7 @@
     "page_title": "Temple",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
+    
     "tooltips": {
         "chat": "Show/Hide Chat",
         "map": "Temple Map",
