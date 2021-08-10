@@ -30,6 +30,7 @@ SYNC_MAP = {
     "unveiling-july-24-ticket": "unveiling-july-24-ticket",
     "temple-07-27": "TempleJuly27",
     "temple-08-03": "TempleAugust3",
+    "temple-08-10": "TempleAugust10",
 }
 
 
