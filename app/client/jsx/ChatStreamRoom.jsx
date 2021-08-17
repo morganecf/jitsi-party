@@ -22,9 +22,6 @@ function clearStorage() {
       sessionStorage.removeItem(ssKey)
     }
   }
-
-  // clear IndexedDB
-  window.indexedDB.deleteDatabase('converse-persistent')
 }
 
 /**
@@ -51,8 +48,6 @@ export const ChatStreamRoom = ({
   useEffect(() => {
     let logout = null;
     let plugins = null;
-
-    clearStorage();
 
     // configure the 'jitsi-plugin' to get our hands on the converse api logout
     try {
@@ -103,7 +98,6 @@ export const ChatStreamRoom = ({
       view_mode: "embedded",
       message_archiving: "always",
       debug: true,
-      persistent_store: "IndexedDB",
       muc_history_max_stanzas: 500,
     });
 
@@ -169,14 +163,12 @@ export const ChatStreamRoom = ({
     window.addEventListener("beforeunload", () => {
       plugins["jitsi-plugin"] = undefined;
       logout();
-      clearStorage();
     });
 
     // call the converse api logout at cleanup
     return () => {
       plugins["jitsi-plugin"] = undefined;
       logout();
-      clearStorage();
     };
   }, [resetTime]);
 
