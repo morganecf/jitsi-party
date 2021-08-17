@@ -7,6 +7,8 @@ A virtual party space.
 ### Prerequisites
 This document assumes an environment with docker/docker-compose, with a user account able to interact with the daemon (*without* needing sudo).
 
+Protocol Buffer Compiler is required to be installed before running.
+
 ### Running the app locally
 ```bash
 make pull && make up && make db
