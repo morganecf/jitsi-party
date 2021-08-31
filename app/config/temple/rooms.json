@@ -197,7 +197,7 @@
             "capacity": 666,
             "muteRoom": true,
             "hideVideo": true,
-            "description": "Timelessness coalesces above the pews set out before you. Gather and be heard. Check the chat to join the conversation.",
+            "description": "Timelessness coalesces above the pews set out before you. Gather and be heard.",
             "type": "CHATSTREAM",
             "iframeOptions": {
                 "src": "https://iframe.dacast.com/b/139852/c/581332"
