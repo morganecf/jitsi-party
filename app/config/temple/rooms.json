@@ -10,9 +10,9 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/Q3lojNhgZ-U"
+                "src": "https://www.youtube.com/embed/rn75n6Cz2XI"
             },
-            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/82428359845",
+            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/82916821280",
             "directions": {
                 "east": "sanctuary"
             },
@@ -36,7 +36,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom2.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/ZaQpLRL4VSQ"
+                "src": "https://www.youtube.com/embed/ebCmuNyI8IQ"
             },
             "description": "Join Dungeon Mistress Kaelea and a team of intrepid adventurers as they unravel mysteries in the Kingdom of Ekerion, a 5th Edition Dungeons & Dragons homebrew campaign. Tune in for laughs, silly voices, twists and turns, and lots of dice-rolling shenanigans.",
             "directions": {
@@ -89,10 +89,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "What treasures lay undiscovered for those who gather here? JOIN THE ART PARTY: https://us02web.zoom.us/j/82888321561",
+            "description": "What treasures lay undiscovered for those who gather here? JOIN THE ART PARTY: https://us02web.zoom.us/j/89282747466",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom4.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/NMsdVwmpezs"
+                "src": "https://www.youtube.com/embed/RzsnZfBNDog"
             },
             "directions": {
                 "south": "sacristy"
@@ -110,13 +110,13 @@
         {
             "id": "sacristy",
             "name": "The Sacristy",
-            "type": "JITSI",
+            "type": "CHATSTREAM",
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/jbs0-mjRP3s"
+                "src": "https://www.youtube.com/embed/AwH-tUTHh9c"
             },
             "description": "We line these walls with the vessels and vestments of our practice.",
             "directions": {
@@ -231,10 +231,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/HZ1sucnac8U"
+                "src": "https://www.youtube.com/embed/H6bf5ByHygE"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
-            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE WRITER'S CIRCLE: https://us02web.zoom.us/j/87237958664",
+            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE WRITER'S CIRCLE: https://us02web.zoom.us/j/87247430410",
             "directions": {
                 "west": "sanctuary"
             },
