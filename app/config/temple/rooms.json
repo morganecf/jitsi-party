@@ -111,7 +111,7 @@
             "id": "sacristy",
             "name": "The Sacristy",
             "type": "CHATSTREAM",
-            "capacity": 25,
+            "capacity": 300,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
