@@ -16,20 +16,10 @@ from slack_sdk.errors import SlackApiError
 
 
 SYNC_MAP = {
-    "satanic-planet-album-release-party-ticket": "SatanicPlanet",
-    "the-unholy-holy": "TempleJune8",
-    "interior-and-exterior-satanism": "TempleJune15",
-    "temple-06-22": "TempleJune22",
-    "hail-pride": "Pride2021",
-    "temple-06-29": "TempleJune29",
-    "temple-07-06": "TempleJuly6",
-    "temple-07-13": "TempleJuly13",
-    "temple-07-20": "TempleJuly20",
-    "full-pass-unveiling-july-23-24": "full-pass-unveiling-july-23-24",
-    "unveiling-july-23-ticket": "unveiling-july-23-ticket",
-    "unveiling-july-24-ticket": "unveiling-july-24-ticket",
-    "temple-07-27": "TempleJuly27",
-    "temple-08-03": "TempleAugust3",
+    "temple-08-17": "TempleAugust17",
+    "temple-08-24": "TempleAugust24",
+    "temple-08-31": "TempleAugust31",
+    "temple-09-07": "TempleSeptember7",
 }
 
 
