@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Config from "./Config.jsx";
 import { imgURLtoDataURL } from "./utils.js";
+import debug from "debug";
+
+const log = debug("chatroom");
 
 /**
  * This function is used to remove info cached
@@ -155,7 +158,7 @@ export const ChatStreamRoom = ({
     setTimeout(() => {
       const vanObserver = new MutationObserver((muts) => {
         if (document.querySelector(".chatroom") === null) {
-          console.log("###  CHATBOX VANISHED ###");
+          log("###  CHATBOX VANISHED ###");
           clearStorage();
           plugins["jitsi-plugin"] = undefined;
           setResetTime(new Date().getTime());
