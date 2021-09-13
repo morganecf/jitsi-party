@@ -155,10 +155,9 @@ export const ChatStreamRoom = ({
     setTimeout(() => {
       const vanObserver = new MutationObserver((muts) => {
         if (document.querySelector(".chatroom") === null) {
-          console.log("### CHATBOX VANISHED ###");
+          console.log("###  CHATBOX VANISHED ###");
           clearStorage();
           plugins["jitsi-plugin"] = undefined;
-          // logout();
           setResetTime(new Date().getTime());
           vanObserver.disconnect();
         }
