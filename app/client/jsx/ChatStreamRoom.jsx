@@ -3,7 +3,7 @@ import Config from "./Config.jsx";
 import { imgURLtoDataURL } from "./utils.js";
 import debug from "debug";
 
-const log = debug("chatroom");
+const log = debug("app:chatroom");
 
 /**
  * This function is used to remove info cached
