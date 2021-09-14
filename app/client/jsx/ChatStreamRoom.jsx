@@ -1,27 +1,33 @@
 import React, { useEffect, useState } from "react";
 import Config from "./Config.jsx";
-import { imgURLtoDataURL } from './utils.js'
+import { imgURLtoDataURL } from "./utils.js";
+import debug from "debug";
+
+const log = debug("app:chatroom");
 
 /**
  * This function is used to remove info cached
  * in the local and session storage for converse.js
  */
 function clearStorage() {
-  // clear localStorage 
-  for(let i=0; i<localStorage.length; i++) {
-    const lsKey = localStorage.key(i)
-    if(lsKey.includes('converse')) {
-      localStorage.removeItem(lsKey)
+  // clear localStorage
+  for (let i = 0; i < localStorage.length; i++) {
+    const lsKey = localStorage.key(i);
+    if (lsKey.includes("converse")) {
+      localStorage.removeItem(lsKey);
     }
   }
 
-  // clear sessionStorage 
-  for(let i=0; i<sessionStorage.length; i++) {
-    const ssKey = sessionStorage.key(i)
-    if(ssKey.includes('converse')) {
-      sessionStorage.removeItem(ssKey)
+  // clear sessionStorage
+  for (let i = 0; i < sessionStorage.length; i++) {
+    const ssKey = sessionStorage.key(i);
+    if (ssKey.includes("converse")) {
+      sessionStorage.removeItem(ssKey);
     }
   }
+
+  // clear IndexedDB
+  window.indexedDB.deleteDatabase("converse-persistent");
 }
 
 /**
@@ -42,12 +48,14 @@ export const ChatStreamRoom = ({
   iframeOptions: { src },
 }) => {
   // used for resetting the chat when it disappears
-  const [resetTime, setResetTime] = useState(0)
+  const [resetTime, setResetTime] = useState(0);
 
   // register the 'jitsi-plugin' and initialize converse and cleanup after close
   useEffect(() => {
     let logout = null;
     let plugins = null;
+
+    clearStorage();
 
     // configure the 'jitsi-plugin' to get our hands on the converse api logout
     try {
@@ -57,15 +65,15 @@ export const ChatStreamRoom = ({
           plugins = this._converse.pluggable.plugins;
 
           // set the user's profile image
-          this._converse.api.listen.on('VCardsInitialized', () => {
-            const avatarUrl = Config.avatars[avatar.type].images[avatar.color]
-            imgURLtoDataURL(avatarUrl, dataUrl => {
-              const base64img = dataUrl.split(',')[1]
+          this._converse.api.listen.on("VCardsInitialized", () => {
+            const avatarUrl = Config.avatars[avatar.type].images[avatar.color];
+            imgURLtoDataURL(avatarUrl, (dataUrl) => {
+              const base64img = dataUrl.split(",")[1];
               this._converse.api.vcard.set(this._converse.bare_jid, {
-                image: base64img
-              })
-            })
-          })
+                image: base64img,
+              });
+            });
+          });
         },
       });
     } catch (error) {
@@ -98,15 +106,18 @@ export const ChatStreamRoom = ({
       view_mode: "embedded",
       message_archiving: "always",
       debug: true,
+      persistent_store: "IndexedDB",
       muc_history_max_stanzas: 500,
     });
 
     // use mutation observer to reposition the conversejs div
     const convObserver = new MutationObserver((muts) => {
       // reposition the conversejs div
-      if (document.querySelector('#conversejs') !== null) {
-        document.querySelector('.chatstream-section').appendChild(document.querySelector('#conversejs'))
-        convObserver.disconnect()
+      if (document.querySelector("#conversejs") !== null) {
+        document
+          .querySelector(".chatstream-section")
+          .appendChild(document.querySelector("#conversejs"));
+        convObserver.disconnect();
       }
     });
 
@@ -119,13 +130,16 @@ export const ChatStreamRoom = ({
     // use MutationObserver to restucture the chatbox
     const observer = new MutationObserver((muts) => {
       if (document.querySelector(".chatbox-title__buttons") !== null) {
-        document.querySelector(".chat-head").innerHTML = '';
+        document.querySelector(".chat-head").innerHTML = "";
       }
 
       if (document.querySelector(".chat-textarea") !== null) {
-        document.querySelector(".chat-textarea").addEventListener("keydown", (e) => {
-          if ([37, 38, 39, 40].includes(e.keyCode)) e.stopImmediatePropagation();
-        })
+        document
+          .querySelector(".chat-textarea")
+          .addEventListener("keydown", (e) => {
+            if ([37, 38, 39, 40].includes(e.keyCode))
+              e.stopImmediatePropagation();
+          });
       }
 
       if (document.querySelector(".send-button") !== null) {
@@ -144,31 +158,33 @@ export const ChatStreamRoom = ({
     setTimeout(() => {
       const vanObserver = new MutationObserver((muts) => {
         if (document.querySelector(".chatroom") === null) {
-          clearStorage();          
+          log("###  CHATBOX VANISHED ###");
+          clearStorage();
           plugins["jitsi-plugin"] = undefined;
-          logout();
           setResetTime(new Date().getTime());
           vanObserver.disconnect();
         }
       });
-  
+
       vanObserver.observe(document, {
         childList: true,
         attributes: true,
         subtree: true,
-      });      
+      });
     }, 5000);
 
     // listen to beforeunload to logout and cleanup
     window.addEventListener("beforeunload", () => {
       plugins["jitsi-plugin"] = undefined;
       logout();
+      clearStorage();
     });
 
     // call the converse api logout at cleanup
     return () => {
       plugins["jitsi-plugin"] = undefined;
       logout();
+      clearStorage();
     };
   }, [resetTime]);
 
