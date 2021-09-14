@@ -12,7 +12,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/rn75n6Cz2XI"
             },
-            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/82916821280",
+            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/82907466667",
             "directions": {
                 "east": "sanctuary"
             },
@@ -89,7 +89,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "What treasures lay undiscovered for those who gather here? JOIN THE ART PARTY: https://us02web.zoom.us/j/89282747466",
+            "description": "What treasures lay undiscovered for those who gather here? JOIN THE ART PARTY: https://us02web.zoom.us/j/84670610024",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom4.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/RzsnZfBNDog"
@@ -110,8 +110,8 @@
         {
             "id": "sacristy",
             "name": "The Sacristy",
-            "type": "CHATSTREAM",
-            "capacity": 300,
+            "type": "JITSI",
+            "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
@@ -234,7 +234,7 @@
                 "src": "https://www.youtube.com/embed/H6bf5ByHygE"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
-            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE WRITER'S CIRCLE: https://us02web.zoom.us/j/87247430410",
+            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE WRITER'S CIRCLE: https://us04web.zoom.us/j/5729202435",
             "directions": {
                 "west": "sanctuary"
             },
