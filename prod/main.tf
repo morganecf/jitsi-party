@@ -305,7 +305,7 @@ resource "aws_instance" "main" {
         auth_enabled = "1",
         auth_client_id = aws_cognito_user_pool_client.main.id,
         auth_client_secret = aws_cognito_user_pool_client.main.client_secret,
-        auth_allowed_groups = "Caretakers PR TempleSeptember21"
+        auth_allowed_groups = "Caretakers PR TempleSeptember28"
         auth_discovery = "https://cognito-idp.${local.aws_region}.amazonaws.com/${aws_cognito_user_pool_client.main.user_pool_id}/.well-known/openid-configuration",
       }
     )
