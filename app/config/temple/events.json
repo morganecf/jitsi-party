@@ -1,51 +1,51 @@
 {
     "events": [
         {
-            "name": "Be Uncomfortable by: Minister Karl Kasarda",
+            "name": "Real Satanism by: Minister Penmue",
             "description": "The Temple services are meant as live discussions rather than lectures, so these will not be recorded to respect everyone's privacy when participating. However, the Minister's introduction to the discussion will be recorded and available on the Satanic Ministry website.",
             "room": "sanctuary",
-            "start": "2021-09-21T21:00:00-04:00",
-            "end": "2021-09-21T22:00:00-04:00",
+            "start": "2021-09-28T21:00:00-04:00",
+            "end": "2021-09-28T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dungeons and Dragons",
             "description": "Join Dungeon Mistress Kaelea and a team of intrepid adventurers as they unravel mysteries in the Kingdom of Ekerion, a 5th Edition Dungeons & Dragons homebrew campaign. Tune in for laughs, silly voices, twists and turns, and lots of dice-rolling shenanigans.",
             "room": "malthus",
-            "start": "2021-09-21T22:00:00-04:00",
-            "end": "2021-09-21T23:59:00-04:00",
+            "start": "2021-09-28T22:00:00-04:00",
+            "end": "2021-09-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Sober Faction",
             "description": "TST Sober Faction will be hosting special meetings after weekly services such as Sober Book club hosted by Priest Joe Dee, Seven Ritual Workshop hosted by Reverend Jon Eldritch, & free talk Q&A sessions hosted by all of Sober Faction Council. Heal Thyself, Hail Thyself! Sobriety Without Superstition.",
             "room": "urizen",
-            "start": "2021-09-21T22:00:00-04:00",
-            "end": "2021-09-21T23:59:00-04:00",
+            "start": "2021-09-28T22:00:00-04:00",
+            "end": "2021-09-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Writers Circle",
             "description": "Join us for our Satanic Writers Circle. Today we will follow up on projects we are all working on and share our work.",
             "room": "los",
-            "start": "2021-09-21T22:00:00-04:00",
-            "end": "2021-09-21T23:59:00-04:00",
+            "start": "2021-09-28T22:00:00-04:00",
+            "end": "2021-09-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "Whimsical Blasphemy: Music and Videos",
             "description": "Live from Salem, join Mercy Maelica for music and videos!",
             "room": "bifrons",
-            "start": "2021-09-21T22:00:00-04:00",
-            "end": "2021-09-21T23:59:00-04:00",
+            "start": "2021-09-28T22:00:00-04:00",
+            "end": "2021-09-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dark Arts and Crafts",
             "description": "Join Satanic artists for a very chill craft and chat session.",
             "room": "andromalius",
-            "start": "2021-09-21T22:00:00-04:00",
-            "end": "2021-09-21T23:59:00-04:00",
+            "start": "2021-09-28T22:00:00-04:00",
+            "end": "2021-09-28T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
