@@ -110,13 +110,13 @@
         {
             "id": "sacristy",
             "name": "The Sacristy",
-            "type": "JITSI",
-            "capacity": 25,
-            "muteRoom": false,
-            "hideVideo": false,
+            "type": "CHATSTREAM",
+            "capacity": 200,
+            "muteRoom": true,
+            "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/aM3pKbQXAww"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/6042ed47-2e52-18df-085a-089c07a50d26"
             },
             "description": "We line these walls with the vessels and vestments of our practice.",
             "directions": {
