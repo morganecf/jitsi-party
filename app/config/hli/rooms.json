@@ -1,0 +1,320 @@
+{
+    "rooms": [
+        {
+            "id": "auditorium",
+            "name": "Alan Turing Auditorium",
+            "type": "CHATSTREAM",
+            "capacity": 666,
+            "doorTint": "#000000",
+            "muteRoom": true,
+            "hideVideo": true,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomD.png",
+            "iframeOptions": {
+                "src": "https://youtube.com/embed/ghJJlek8UJs"
+            },
+            "description": "We can only see a short distance ahead, but we can see plenty there that needs to be done.",
+            "directions": {
+                "east": "foyer",
+                "north": "hall"
+            },
+            "map": {
+                "x": 1,
+                "y": 10,
+                "width": 11,
+                "height": 10,
+                "doors": {
+                    "north": 5,
+                    "east": 19
+                }
+            }
+        },
+        {
+            "id": "hall",
+            "name": "Harris Glenn Milstead Hall",
+            "type": "CHATSTREAM",
+            "capacity": 666,
+            "doorTint": "#000000",
+            "muteRoom": true,
+            "hideVideo": true,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomBallroom.png",
+            "iframeOptions": {
+                "src": "https://youtube.com/embed/8zGAysyWIiI"
+            },
+            "description": "All my life I wanted to look like Elizabeth Taylor. Now Elizabeth Taylor looks like me.",
+            "directions": {
+                "east": "rotunda",
+                "south": "auditorium"
+            },
+            "map": {
+                "x": 2,
+                "y": 2,
+                "width": 6,
+                "height": 8,
+                "doors": {
+                    "east": 5,
+                    "south": 5
+                }
+            }
+        },
+        {
+            "id": "rotunda",
+            "name": "Sylvia Rivera Rotunda",
+            "type": "CHATSTREAM",
+            "capacity": 666,
+            "doorTint": "#000000",
+            "muteRoom": true,
+            "hideVideo": true,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomHall.png",
+            "iframeOptions": {
+                "src": "https://youtube.com/embed/8ONdcDFUSHg"
+            },
+            "description": "We have to be visible. We should not be ashamed of who we are.",
+            "directions": {
+                "west": "hall",
+                "south": "foyer",
+                "east": "theater"
+            },
+            "map": {
+                "x": 8,
+                "y": 1,
+                "width": 9,
+                "height": 8,
+                "doors": {
+                    "south": 14,
+                    "west": 5,
+                    "east": 3
+                }
+            }
+        },
+        {
+            "id": "theater",
+            "name": "Oscar Wilde Theater",
+            "type": "CHATSTREAM",
+            "capacity": 666,
+            "muteRoom": true,
+            "hideVideo": true,
+            "doorTint": "#000000",
+            "description": "We are all in the gutter, but some of us are looking at the stars.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomZ.png",
+            "iframeOptions": {
+                "src": "https://youtube.com/embed/f40fV1wTyBc"
+            },
+            "directions": {
+                "west": "rotunda"
+            },
+            "map": {
+                "x": 17,
+                "y": 3,
+                "width": 2,
+                "height": 4,
+                "doors": {
+                    "west": 3
+                }
+            }
+        },
+        {
+            "id": "large-lounge",
+            "name": "Audre Lorde Lounge",
+            "type": "JITSI",
+            "capacity": 666,
+            "muteRoom": false,
+            "hideVideo": false,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomE.png",
+            "iframeOptions": {
+                "src": "https://youtube.com/embed/D6x1Jk8Hkuc"
+            },
+            "description": "It is not our differences that divide us. It is our inability to recognize, accept, and celebrate those differences.",
+            "directions": {
+                "north": "foyer",
+                "west": "medium-lounge",
+                "east": "lounge"
+            },
+            "doorTint": "#000000",
+            "map": {
+                "x": 10,
+                "y": 24,
+                "width": 6,
+                "height": 6,
+                "doors": {
+                    "east": 27,
+                    "north": 14,
+                    "west": 27
+                }
+            }
+        },
+        {
+            "id": "small-1",
+            "name": "James Baldwin Salon",
+            "type": "JITSI",
+            "capacity": 15,
+            "muteRoom": false,
+            "hideVideo": false,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomCauseuse.png",
+            "description": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
+            "directions": {
+                "south": "small-2"
+            },
+            "doorTint": "#000000",
+            "map": {
+                "x": 1,
+                "y": 23,
+                "width": 2,
+                "height": 3,
+                "doors": {
+                    "south": 1
+                }
+            }
+        },
+        {
+            "id": "small-2",
+            "name": "Barbara Gittings Lounge",
+            "type": "JITSI",
+            "muteRoom": false,
+            "hideVideo": false,
+            "capacity": 20,
+            "description": "Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomBoudoir.png",
+            "imageMapOptions": "satanic-merch-map",
+            "directions": {
+                "north": "small-1",
+                "south": "small-3",
+                "east": "medium-lounge"
+            },
+            "map": {
+                "x": 1,
+                "y": 26,
+                "width": 3,
+                "height": 3,
+                "doors": {
+                    "north": 1,
+                    "south": 1,
+                    "east": 27
+                }
+            },
+            "doorTint": "#000000"
+        },
+        {
+            "id": "small-3",
+            "name": "Christine Jorgensen Lounge",
+            "capacity": 10,
+            "muteRoom": false,
+            "hideVideo": false,
+            "description": "The answer to the problem must not lie in sleeping pills and suicides that look like accidents, or in jail sentences, but rather in life and the freedom to live it.",
+            "type": "JITSI",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomA.png",
+            "directions": {
+                "north": "small-2"
+            },
+            "map": {
+                "x": 1,
+                "y": 29,
+                "width": 2,
+                "height": 3,
+                "doors": {
+                    "north": 1
+                }
+            },
+            "doorTint": "#000000"
+        },
+        {
+            "id": "foyer",
+            "name": "Marsha P Johnson Foyer",
+            "type": "JITSI",
+            "capacity": 50,
+            "muteRoom": false,
+            "hideVideo": false,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomLounge.png",
+            "description": "Darling, I want my gay rights now.",
+            "directions": {
+                "north": "rotunda",
+                "east": "library",
+                "south": "large-lounge",
+                "west": "auditorium"
+            },
+            "map": {
+                "x": 12,
+                "y": 9,
+                "width": 6,
+                "height": 15,
+                "doors": {
+                    "west": 19,
+                    "east": 16,
+                    "north": 14,
+                    "south": 14
+                }
+            },
+            "doorTint": "#000000"
+        },
+        {
+            "id": "medium-lounge",
+            "name": "Bayard Rustin Boudoir",
+            "type": "JITSI",
+            "muteRoom": false,
+            "hideVideo": false,
+            "capacity": 10,
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomStudy.png",
+            "description": "I believe in social dislocation and creative trouble.",
+            "directions": {
+                "east": "large-lounge",
+                "west": "small-2"
+            },
+            "map": {
+                "x": 4,
+                "y": 25,
+                "width": 6,
+                "height": 4,
+                "doors": {
+                    "east": 27,
+                    "west": 27
+                }
+            },
+            "doorTint": "#000000"
+        },
+        {
+            "id": "library",
+            "name": "Satanic Archives Library",
+            "type": "IMAGEMAP",
+            "description": "Peruse the archives, courtesy of Grey Faction",
+            "directions": {
+                "west": "foyer"
+            },
+            "imageMapOptions": "satanic-library-map",
+            "map": {
+                "x": 18,
+                "y": 16,
+                "width": 2,
+                "height": 4,
+                "doors": {
+                    "west": 16
+                }
+            },
+            "doorTint": "#000000"
+        },
+        {
+            "id": "lounge",
+            "name": "Adrenochrome Lounge",
+            "type": "CHATSTREAM",
+            "capacity": 666,
+            "muteRoom": false,
+            "hideVideo": false,
+            "description": "Drink it all in.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomF.png",
+            "directions": {
+                "west": "large-lounge"
+            },
+            "iframeOptions": {
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/f7211aa5-999a-9586-26d5-d1ff15280df3"
+            },
+            "map": {
+                "x": 16,
+                "y": 24,
+                "width": 2,
+                "height": 5,
+                "doors": {
+                    "west": 27
+                }
+            },
+            "doorTint": "#000000"
+        }
+    ]
+}

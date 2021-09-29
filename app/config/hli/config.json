@@ -1,0 +1,95 @@
+{
+    "debug": true,
+    "page_title": "Faction Hall",
+    "mapUnlockThreshold": 0,
+    "useLocalSessions": false,
+    "tooltips": {
+        "chat": "Show/Hide Chat",
+        "map": "Estate Map",
+        "events": "Calendar of Events",
+        "moderator": "Contact a Caretaker",
+        "poke": "Sing to Someone"
+    },
+    "startRoom": "foyer",
+    "videoDisplayName": "Guest",
+    "moderation": {
+        "moderatorEmails": [
+            "support@thesatanic.estate"
+        ],
+        "moderatorNumber": "+14802941991",
+        "formDescription": "Need a Caretaker to look into some unsavory behavior? Let us know what's going on, when, where and who is involved. We\u2019ll keep what you tell us private, and we\u2019ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+    },
+    "welcomePage": {
+        "avatarSelectionEnabled": true,
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomB.png",
+        "enterSpaceButtonText": "Enter",
+        "avatarSelectionText": "Identify Your Cabal",
+        "headerHtml": "<div class='tst'><p>Welcome to</p><h1>Satanic Pride!</h1>"
+    },
+    "avatars": [
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF1.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF2.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF3.png"
+            ]
+        },
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF4.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF5.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF6.png"
+            ]
+        },
+        {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF7.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF8.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Faction+Hall/GF9.png"
+            ]
+        }
+    ],
+    "specialAvatars": {
+        "goodbye": {
+            "images": [
+                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
+                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
+            ]
+        }
+    },
+    "map": {
+        "stats": {
+            "numberInHouse": {
+                "display": true,
+                "text": "\ud83d\udda4  {count} at Faction Hall"
+            },
+            "numberInHallways": {
+                "display": true,
+                "text": "\ud83d\udda4 {count} haunting the hallways"
+            },
+            "numberInRooms": {
+                "display": false,
+                "text": "\ud83d\udda4 {count} partying"
+            },
+            "additionalStats": [
+                {
+                    "text": "\ud83d\udda4 {count} reading",
+                    "match": [
+                        "library"
+                    ]
+                }
+            ]
+        }
+    },
+    "poke": {
+        "text": "Hex Someone!",
+        "fontAwesomeIcon": "skull",
+        "fromText": "{user} hexes you'",
+        "toText": "Hex!",
+        "unlockText": "You have unlocked the ability to hex",
+        "selfPoke": "Curses!",
+        "unlockAfterMinutes": 0
+    }
+}

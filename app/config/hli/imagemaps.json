@@ -1,0 +1,355 @@
+{
+    "imagemaps": [
+        {
+            "id": "secret-tunnel-map",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/secret tunnel.jpg",
+            "areas": [
+                {
+                    "shape": "circle",
+                    "coords": "333,287,54",
+                    "label": "The Real Tunnels Under McMartin Preschool",
+                    "contents": [
+                        {
+                            "title": "The Real Tunnels Under McMartin Preschool",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/secret-tunnel-map/tunnel2/Tunnels PDF 1.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "circle",
+                    "coords": "719,287,56",
+                    "label": "The Man Behind The Tunnels Under McMartin Preschool",
+                    "contents": [
+                        {
+                            "title": "The Man Behind The Tunnels Under McMartin Preschool",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/secret-tunnel-map/tunnel1/The Man Behind the Tunnels Under McMartin (1).pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "garden-map",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/garden.jpg",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "648,400,738,512",
+                    "label": "A lovely garden",
+                    "contents": [
+                        {
+                            "title": "Have you ever dreamed this man?",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/garden-map/topic/Christianity Today - Satanic Influence.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "grand-staircase-map",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/staircase1.jpg",
+            "areas": [
+                {
+                    "shape": "rect",
+                    "coords": "332,107,455,335",
+                    "label": "What's behind this picture frame?",
+                    "contents": [
+                        {
+                            "title": "Take a closer look",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/grand-staircase-map/topic/Image 0929.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "staircase-map",
+            "img": "https://tstvhq.s3.amazonaws.com/imagemap-images/staircase 2.jpg",
+            "areas": [
+                {
+                    "shape": "circle",
+                    "coords": "772,109,34",
+                    "label": "Hmm, this skull has an aura...",
+                    "contents": [
+                        {
+                            "title": "What does it remind you of?",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/staircase-map/topic/Mesner\u2014Repressed-Memory.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "satanic-library-map",
+            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/factionhall/pride/PrideRoomLibrary.png",
+            "areas": [
+                {
+                    "shape": "poly",
+                    "coords": "274,364,273,226,407,240,428,592,275,647",
+                    "label": "Cult Crime",
+                    "contents": [
+                        {
+                            "title": "Cults: Their Symbols",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/Cults _ Their Symbols0001.pdf"
+                        },
+                        {
+                            "title": "Cult Cops",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/cult cops0001.pdf"
+                        },
+                        {
+                            "title": "Cult Crime Network Part 1",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/Cult Crime Network0001.pdf"
+                        },
+                        {
+                            "title": "Cult Crime Network Part 2",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/Cult Crime Network0002.pdf"
+                        },
+                        {
+                            "title": "Cult Crime Network Part 3",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/Cult Crime Network0003.pdf"
+                        },
+                        {
+                            "title": "Cult Crime Network Part 4",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/Cult Crime Network0004.pdf"
+                        },
+                        {
+                            "title": "Cult Crime Network Part 5",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/Cult Crime Network0005.pdf"
+                        },
+                        {
+                            "title": "Cult Crime Network Part 6",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/Cult Crime Network0006.pdf"
+                        },
+                        {
+                            "title": "Cult Crime Network Part 7",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/cult-crime/Cult Crime Network0007.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "1243,609,774,424",
+                    "label": "Panic Propaganda",
+                    "contents": [
+                        {
+                            "title": "NACE",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/panic-propaganda/NACE.pdf"
+                        },
+                        {
+                            "title": "Focus on the Family",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/panic-propaganda/Focus on The Family.pdf"
+                        },
+                        {
+                            "title": "Kids and Cults",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/panic-propaganda/Kids and Cults.pdf"
+                        },
+                        {
+                            "title": "Father Brennan",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/panic-propaganda/Father Brennan.pdf"
+                        },
+                        {
+                            "title": "Anti-Satan Book Catalogue",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/panic-propaganda/Anti-Satan Book Catalogue.pdf"
+                        },
+                        {
+                            "title": "Focus on the Family Part II",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/panic-propaganda/Focus on the Family 2.pdf"
+                        },
+                        {
+                            "title": "Christianity Today on Satanism",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/panic-propaganda/Christianity Today on Satanism.pdf"
+                        },
+                        {
+                            "title": "Christian Research Institute",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/panic-propaganda/ChristianResearchInst.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "538,538,471,242",
+                    "label": "Police Training",
+                    "contents": [
+                        {
+                            "title": "Ritualistic Crime Seminar",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Ritualistic Crime Seminar0001.pdf"
+                        },
+                        {
+                            "title": "Satanism and Homicide",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Satanism and Homocide0001 (1).pdf"
+                        },
+                        {
+                            "title": "Profiling Satanic Crime",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Profiling Satanic Crime0001.pdf"
+                        },
+                        {
+                            "title": "Police Articles",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Articles0001.pdf"
+                        },
+                        {
+                            "title": "Informant",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Informant0001.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 1",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0001.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 2",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0002.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 3",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0003.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 4",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0004.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 5",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0005.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 6",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0006.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 7",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0007.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 8",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0008.pdf"
+                        },
+                        {
+                            "title": "Police Training Part 9",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training0010.pdf"
+                        },
+                        {
+                            "title": "Police Training: Symbols",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/police-training/Police Training - symbols.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "583,183,477,80",
+                    "label": "Pop Culture",
+                    "contents": [
+                        {
+                            "title": "The Selling of Satan in Popular Literature",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/pop-culture/The Selling of Satan in Popular Literature.pdf"
+                        },
+                        {
+                            "title": "Temple of Nepthys",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/pop-culture/Temple of Nepthys0001.pdf"
+                        },
+                        {
+                            "title": "Dungeons & Dragons Part 1",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/pop-culture/Dungeons _ Dragons0001.pdf"
+                        },
+                        {
+                            "title": "Dungeons & Dragons Part 2",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/pop-culture/Dungeons _ Dragons0002.pdf"
+                        },
+                        {
+                            "title": "Dungeons & Dragons Part 3",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/pop-culture/Dungeons _ Dragons0003.pdf"
+                        },
+                        {
+                            "title": "The Backside of Satan",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/pop-culture/The Backside of Satan.pdf"
+                        },
+                        {
+                            "title": "Rock and the Media",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/pop-culture/Rock and the Media.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "781,35,997,155",
+                    "label": "Anti-Satanist News",
+                    "contents": [
+                        {
+                            "title": "Murder Part 1",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/murder0001.pdf"
+                        },
+                        {
+                            "title": "Murder Part 2",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/murder0002.pdf"
+                        },
+                        {
+                            "title": "Suicide Part 1",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/Suicide0001.pdf"
+                        },
+                        {
+                            "title": "Suicide Part 2",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/Suicide0002.pdf"
+                        },
+                        {
+                            "title": "Anti-Satanist News",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/Anti-Satanist News.pdf"
+                        },
+                        {
+                            "title": "Pizza Evanglism Part 1",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/Pizza Evangelism.pdf"
+                        },
+                        {
+                            "title": "Pizza Evangelism Part 2",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/Pizza Evangelism 2.pdf"
+                        },
+                        {
+                            "title": "Pizza Evangelism Part 3",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/Pizza Evangelism 3.pdf"
+                        },
+                        {
+                            "title": "Ministers v. Satan",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/Clippings - Ministers v Satan.pdf"
+                        },
+                        {
+                            "title": "Devil Worship Fad Report",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/anti-satanist-news/Devil Worship Fad Report.pdf"
+                        }
+                    ]
+                },
+                {
+                    "shape": "rect",
+                    "coords": "784,640,1253,713",
+                    "label": "Exorcism",
+                    "contents": [
+                        {
+                            "title": "Exorcism Spanos",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/exorcism/Exorcism Spanos0001.pdf"
+                        },
+                        {
+                            "title": "Exorcism Part 1",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/exorcism/Exorcism0001.pdf"
+                        },
+                        {
+                            "title": "Exorcism Part 2",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/exorcism/Exorcism0002.pdf"
+                        },
+                        {
+                            "title": "Exorcism Part 3",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/exorcism/exorcism0003.pdf"
+                        },
+                        {
+                            "title": "Exorcism Part 4",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/exorcism/Exorcism0004.pdf"
+                        },
+                        {
+                            "title": "Exorcism Clippings",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/exorcism/Exorcism Clippings0001.pdf"
+                        },
+                        {
+                            "title": "Exorcism in MPD",
+                            "path": "https://tstvhq.s3.amazonaws.com/imagemap-content/satanic-library-map/exorcism/Exorcism in MPD0001.pdf"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
