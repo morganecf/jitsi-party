@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "page_title": "TSTVHQ",
+    "page_title": "VHQ",
     "mapUnlockThreshold": 0,
     "useLocalSessions": false,
     "tooltips": {
@@ -21,44 +21,40 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomChandelier.png",
+        "backgroundImagePath": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomWelcome.png",
         "enterSpaceButtonText": "Enter",
-        "avatarSelectionText": "Select your sigil",
+        "avatarSelectionText": "Select your Spooky",
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
     },
     "avatars": [
         {
             "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons02.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons03.png"
             ]
         },
         {
             "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Berith01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Buer01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Bune01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Ipos01.png"
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons04.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons05.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons06.png"
             ]
         },
         {
             "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Naberius01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Shax01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Sitri01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Stolas01.png"
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons07.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons08.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons09.png"
             ]
         }
     ],
     "specialAvatars": {
         "goodbye": {
             "images": [
-                "https://tstvhq.s3.amazonaws.com/sigils/Andromalius01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Bathin01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Asmoday01.png",
-                "https://tstvhq.s3.amazonaws.com/sigils/Belial01.png"
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons07.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons08.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons09.png"
             ]
         }
     },
@@ -74,7 +70,7 @@
             },
             "numberInRooms": {
                 "display": false,
-                "text": "\ud83d\udda4 {count} exploring"
+                "text": "\ud83d\udda4 {count} congregating"
             },
             "additionalStats": [
                 {
