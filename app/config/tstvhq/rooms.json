@@ -118,7 +118,7 @@
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomElevator.png",
             "directions": {
                 "north": "library",
-                "east": "painting",
+                "east": "brick",
                 "south": "frontParlor"
             },
             "map": {
