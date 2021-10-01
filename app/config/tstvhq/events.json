@@ -1,76 +1,60 @@
 {
     "events": [
         {
-            "name": "Sculpting The Baphomet: A Conversation with Mark Porter",
-            "description": "Join caretaker Jack Matirko for an interview with Baphomet sculptor Mark Porter to discuss the historical monument symbolizing so much of why we fight.",
+            "name": "Halloween Benediction with Minister Vallor",
+            "description": "Join Minister Thomas O'Brien Vallor for a walking Halloween benediction from Salem.",
+            "room": "ritualChamber",
+            "start": "2021-10-01T20:00:00-04:00",
+            "end": "2021-10-01T20:05:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.jpg"
+        },
+        {
+            "name": "A Satanic Kitty Meet & Greet",
+            "description": "Join Minister Hadrian Flyte and Speedwagon for a Satanic Kitty Meet & Greet.",
+            "room": "frontParlor",
+            "start": "2021-10-01T20:05:00-04:00",
+            "end": "2021-10-01T20:30:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.jpg"
+        },
+        {
+            "name": "Live Art & Tunes with Mar Williams",
+            "description": "Join Mar, famed drawer of vaguely cat shaped creatures, Defcon artist of over a decade, and enjoyer of fine hams, for a live spooky art event to get Halloween month going right! Ask questions in the chat and Mar will answer them during the livestream!",
             "room": "boudoir",
-            "start": "2021-07-24T19:00:00-04:00",
-            "end": "2021-07-24T20:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
-        },
-        {
-            "name": "The Satanic Chef",
-            "description": "Feast your eyes with Adam Ostrofsky in the kitchen of The Satanic Estate for a cooking workshop and Satanic conversations. Keep your eyes out for Sous-Chef Jack!",
-            "room": "kitchen",
-            "start": "2021-07-24T20:00:00-04:00",
-            "end": "2021-07-24T21:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
-        },
-        {
-            "name": "Coming out as a Satanist: My Personal Unveiling.",
-            "description": "Join Dre Naylor as she unveils her journey in Satanism, her art process, her pilgrimage to Salem, The Devil's Dinners, working with other Satanic creators, and as she hails Satan. Let's talk about Satanism, community, Unveiling and the Devil.",
-            "room": "den",
-            "start": "2021-07-24T21:00:00-04:00",
-            "end": "2021-07-24T22:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hexennacht/events.png"
+            "start": "2021-10-01T20:30:00-04:00",
+            "end": "2021-10-01T21:30:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.jpg"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-07-24T19:00:00-04:00",
-            "end": "2021-07-24T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
+            "start": "2021-10-01T20:00:00-04:00",
+            "end": "2021-10-02T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.jpg"
         },
         {
-            "name": "Just Another Day in Hell",
-            "description": "Celebrate Unveiling Day with Baphomet (as designed by Dee Mendes) from breakfast to bedtime. Concept developed by the Satanic Writers Circle, voiceover by Maryline Spicy.",
-            "room": "teaRoom",
-            "start": "2021-07-24T22:30:00-04:00",
-            "end": "2021-07-24T23:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
-        },
-        {
-            "name": "Satanic Symbolism",
-            "description": "Join Salem Witch Wiles' Thomas O' Brien Vallor, our favorite Salem witch and in-house historian, for a presentation on Satanic Symbolism.",
+            "name": "Cute Little Demons: Black Cats",
+            "description": "Join Salem Witch Wiles for an exploration of the history of black cats in superstition and mythology.",
             "room": "backParlor",
-            "start": "2021-07-24T23:00:00-04:00",
-            "end": "2021-07-24T23:59:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
+            "start": "2021-10-01T22:00:00-04:00",
+            "end": "2021-10-01T23:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.jpg"
         },
         {
-            "name": "The Satanic Estate interviews Anna Biller",
-            "description": "TSE Caretaker, Morgane Ciot, interviews Anna Biller about The Love Witch, the art of cinema, witches, covens, Satanism & her upcoming projects.",
-            "room": "theater",
-            "start": "2021-07-25T00:00:00-04:00",
-            "end": "2021-07-25T01:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
-        },
-        {
-            "name": "Whimsical Blasphemy",
-            "description": "Join Mercy for music and videos all night, live from Salem.",
+            "name": "Autonetic Afterlife",
+            "description": "Join Lazermortis for the launch of her synthwave album Autonetic Afterlife. Autonetic Afterlife is Lazer’s imagining of what an afterlife might look like to artificial intelligence. Rebirth tells the story of a rogue sentient android running for her life in a post-apocalyptic world, only to be cornered by authorities and terminated. ",
             "room": "grandBallroom",
-            "start": "2021-07-24T19:00:00-04:00",
-            "end": "2021-07-25T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
+            "start": "2021-10-01T23:30:00-04:00",
+            "end": "2021-10-02T00:30:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.jpg"
         },
         {
             "name": "Grey Faction Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-07-24T19:00:00-04:00",
-            "end": "2021-07-25T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/unveilingevents.png"
+            "start": "2021-10-01T20:00:00-04:00",
+            "end": "2021-10-02T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.jpg"
         }
     ]
 }
