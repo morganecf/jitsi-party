@@ -5,7 +5,7 @@
                 "audio": {
                     "autoPlay": true,
                     "hideControls": true,
-                    "path": "https://tstvhq.s3.amazonaws.com/music/elevator_ritual.mp3"
+                  "path": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/music/halloween.mp3"
                 }
             },
             "rooms": [
@@ -13,7 +13,7 @@
                     "buttons": [
                         {
                             "nextRoom": [
-                                "catacombs"
+                                "subway"
                             ],
                             "text": "Weird... Oh well"
                         },
@@ -24,7 +24,7 @@
                             "text": "Push on that brick!"
                         }
                     ],
-                    "id": "painting",
+                    "id": "brick",
                     "name": "Loose Brick",
                     "text": "As you head down the stairs, you notice a rather peculiar brick sticking out from the otherwise smooth stone wall."
                 },
@@ -32,39 +32,39 @@
                     "buttons": [
                         {
                             "nextRoom": [
-                                "foundry"
+                                "train"
                             ],
-                            "text": "Enter the left hollow"
+                            "text": "Take the left-hand train"
                         },
                         {
                             "nextRoom": [
                                 "sleepingPorch"
                             ],
-                            "text": "Enter the right hollow"
+                            "text": "Take the right-hand train"
                         }
                     ],
-                    "id": "catacombs",
-                    "name": "Where even am I?",
-                    "text": "As you press on the brick, the others in the wall begin to move inward. They're about to crush you! You close your eyes, anticipating the smush, but, when you open them, find yourself in a wide open field. Before you are two massive trees, each with a hollow at their trunk"
+                    "id": "subway",
+                    "name": "Now boarding",
+                    "text": "As you press on the brick, the entire wall gives way, and you feel yourself stumble forward down a flight of stairs. You fall for what seems like ages before, gathering your senses, you find yourself on a subway platform. Two subway cars wait on either side of you."
                 },
                 {
                     "buttons": [
                         {
                             "nextRoom": [
-                                "desert"
+                                "station"
                             ],
-                            "text": "Go forward through the double doors"
+                            "text": "Better just keep to myself"
                         },
                         {
                             "nextRoom": [
                                 "cemetery"
                             ],
-                            "text": "Climb the stairs to the raised door"
+                            "text": "Let me off!"
                         }
                     ],
-                    "id": "foundry",
-                    "name": "Burning, sulfuric smells",
-                    "text": "You find yourself in some kind of factory or foundry. The sizzling, bubbling sounds fill the darkened space, only illuminated by the orange glow of molten metal. Crucibles pour the crackling viscous material from one container to another in luminscent streams. The whirring and clanging of the machinery is mesmerizing, but you manage to focus your attention on the layout of the cavernous room. Before you is a set of heavy-looking double doors. To your right, there is a steep flight of stairs leading to a raised door."
+                    "id": "train",
+                    "name": "Going downtown",
+                    "text": "The train is empty as you take a seat; it lurches forward and the lights begin to flicker. Wait a minute - there wasn't anyone in this car a second ago... you see a huddled figure sitting at the other end of the car."
                 },
                 {
                     "buttons": [
@@ -72,18 +72,18 @@
                             "nextRoom": [
                                 "cabin"
                             ],
-                            "text": "Drink the gold liquid"
+                            "text": "Make a run for it"
                         },
                         {
                             "nextRoom": [
                                 "frontParlor"
                             ],
-                            "text": "Drink the bubbling blue liquid"
+                            "text": "Close your eyes - this HAS to be a dream"
                         }
                     ],
-                    "id": "desert",
-                    "name": "So thirsty...",
-                    "text": "You find yourself in a vast desert, sand blowing over the dunes spread before you. The horizon is featureless and there is not a cloud in the sky. The sun beats down mercilessly and you feel the heat beginning to sap your energy and your throat beginning to dry. Stumbling over a dune, you see a small wooden table standing in the middle of the desert all by itself. On it are two golden chalices. One holds a golden, shimmering liquid that smells of fresh fruit. The other is blue, bubbling lightly, and seemingly odorless. Your thirst is rising..."
+                    "id": "station",
+                    "name": "Arrivals",
+                    "text": "As you sit the lights continue to flicker. In a blink you begin to hear a soft rasping noise from the bundled figure. The lights flash. Suddenly the figure is one seat closer. Flicker. Another closer. Faster and faster they're moving closer as the train begins to slow. The doors open. The figure is upon you and you can feel the hot, growling breaths of whoever or whatever this is."
                 },
                 {
                     "buttons": [
@@ -91,18 +91,18 @@
                             "nextRoom": [
                                 "trapDoor"
                             ],
-                            "text": "Get up and go through the door"
+                            "text": "Climb the stairs and follow the music"
                         },
                         {
                             "nextRoom": [
                                 "sleepingPorch"
                             ],
-                            "text": "Let me just rest"
+                            "text": "Take the other train back"
                         }
                     ],
-                    "id": "cabin",
-                    "name": "Miles to go before I sleep",
-                    "text": "In a blink you are lying on an enormous, comfortable bed with sheets that have GOT to be around 350 thread count. Looking around, you see that you are in a cabin, a massive winddow beside the bed overlooking a beautiful snowy landscape. Wind blows the light fluffy snow into swirling patterns between the trees of a dense pine forest. Within this room, there is a crackling fireplace and the herbal, woody smell of chicory. A sturdy wooden door stands by the corner of the room; you debate getting up for a closer look, but this bed is so comfy..."
+                    "id": "station",
+                    "name": "The night is young",
+                    "text": "Your heart still racing, you catch your breath on this platform as the train speeds away. You swear you can hear a cackling laugh fade into the darkness along with it. The only other sound is your heartbeat, pumping rhythmically in the dimly lit station. Or is that...music? You can hear it echoing throughout the cavernous tunnels. You turn around to find its source and discover a staircase leading upward. At that moment, another train pulls up to the opposite side of the platform."
                 }
             ]
         }
