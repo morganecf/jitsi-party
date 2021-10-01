@@ -5,7 +5,7 @@
                 "audio": {
                     "autoPlay": true,
                     "hideControls": true,
-                  path": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/music/halloween.mp3"
+                  "path": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/music/halloween.mp3"
                 }
             },
             "rooms": [
