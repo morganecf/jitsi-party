@@ -57,7 +57,7 @@
             "id": "grandBallroom",
             "name": "Grand Ballroom",
             "type": "CHATSTREAM",
-            "capacity": 100,
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBallroom.png",
@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBackParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/1v522VFfnLU"
+                "src": "https://www.youtube.com/embed/gZJyVfPYNUY"
             },
             "description": "The back parlor is the speakeasy...",
             "directions": {
