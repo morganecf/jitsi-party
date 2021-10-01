@@ -86,7 +86,7 @@
         },
         {
             "id": "satanic-library-map",
-            "img": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/unveiling/UnveilingRoomLibrary.png",
+            "img": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomLibrary.png",
             "areas": [
                 {
                     "shape": "poly",
