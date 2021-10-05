@@ -25,6 +25,7 @@ SYNC_MAP = {
     "temple-09-28": "TempleSeptember28",
     "october-1st-cats": "Oct1Cats",
     "october-events-full-pass": "OctFullPass",
+    "temple-10-05": "TempleOctober5",
 }
 
 
