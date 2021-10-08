@@ -1,60 +1,52 @@
 {
     "events": [
         {
-            "name": "Halloween Benediction with Minister Vallor",
-            "description": "Join Minister Thomas O'Brien Vallor for a walking Halloween benediction from Salem.",
-            "room": "ritualChamber",
-            "start": "2021-10-01T20:00:00-04:00",
-            "end": "2021-10-01T20:05:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.png"
+            "name": "The Masque of the Red Death",
+            "description": "Get cozy for story time! Join Minister Hadrian Flyte as he reads The Masque of the Red Death by Edgar Allan Poe.",
+            "room": "teaRoom",
+            "start": "2021-10-08T20:00:00-04:00",
+            "end": "2021-10-08T20:30:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/death.png"
         },
         {
-            "name": "A Satanic Kitty Meet & Greet",
-            "description": "Join Minister Hadrian Flyte and Speedwagon for a Satanic Kitty Meet & Greet.",
+            "name": "Friends Forever - The Art and History of Reanimating the Dead",
+            "description": "Join Satan's Craft Room for a presentation and discussion on the history, ethics, and art of taxidermy from its origins to its modern applications.",
             "room": "frontParlor",
-            "start": "2021-10-01T20:05:00-04:00",
-            "end": "2021-10-01T20:30:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.png"
+            "start": "2021-10-08T20:30:00-04:00",
+            "end": "2021-10-08T21:30:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/death.png"
         },
         {
-            "name": "Live Art & Tunes with Mar Williams",
-            "description": "Join Mar, famed drawer of vaguely cat shaped creatures, Defcon artist of over a decade, and enjoyer of fine hams, for a live spooky art event to get Halloween month going right! Ask questions in the chat and Mar will answer them during the livestream!",
-            "room": "boudoir",
-            "start": "2021-10-01T20:30:00-04:00",
-            "end": "2021-10-01T21:30:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.png"
+            "name": "Your meat suit has an expiry date",
+            "description": "Curious about mortality? Death rituals & Cultivating Death awareness? Death Doula and Satanist Bettie Bune will discuss death, rituals, and daily practice. This is an interactive discussion where we will discuss our mortality and how we can use the reality of our death to create a deeper and more meaningful life.",
+            "room": "backParlor",
+            "start": "2021-10-08T20:30:00-04:00",
+            "end": "2021-10-08T21:30:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/death.png"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-10-01T20:00:00-04:00",
-            "end": "2021-10-02T02:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.png"
+            "start": "2021-10-08T22:00:00-04:00",
+            "end": "2021-10-09T23:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/death.png"
         },
         {
-            "name": "Cute Little Demons: Black Cats",
-            "description": "Join Salem Witch Wiles for an exploration of the history of black cats in superstition and mythology.",
-            "room": "backParlor",
-            "start": "2021-10-01T22:00:00-04:00",
-            "end": "2021-10-01T23:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.png"
-        },
-        {
-            "name": "Autonetic Afterlife",
-            "description": "Join Lazermortis for the launch of her synthwave album Autonetic Afterlife. Autonetic Afterlife is Lazer’s imagining of what an afterlife might look like to artificial intelligence. Rebirth tells the story of a rogue sentient android running for her life in a post-apocalyptic world, only to be cornered by authorities and terminated. ",
-            "room": "grandBallroom",
-            "start": "2021-10-01T23:30:00-04:00",
-            "end": "2021-10-02T00:30:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.png"
+            "name": "Adversarial Deaths: How to Cope with the Death of Your Abuser",
+            "description": "Priestess Shiva Honey shares insights on how to cope with the death of abusers and those with whom we have had complicated relationships. She’ll share excerpts from her new book The Devil’s Death: Your Satanic Companion for Grief and Dying, learnings from her training as a death doula, as well as personal stories about how she dealt with the deaths of her abusive fathers. Stick around after the presentation as DJ Grahamzig + Shiva Honey will follow up with macabre music to get you moving.",
+            "room": "ritualChamber",
+            "start": "2021-10-08T23:30:00-04:00",
+            "end": "2021-10-09T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/death.png"
         },
         {
             "name": "Grey Faction Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-10-01T20:00:00-04:00",
-            "end": "2021-10-02T02:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/cats.png"
+            "start": "2021-10-08T20:00:00-04:00",
+            "end": "2021-10-09T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/death.png"
         }
     ]
 }
