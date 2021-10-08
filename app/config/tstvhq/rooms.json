@@ -56,8 +56,8 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBallroom.png",
@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBackParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/gZJyVfPYNUY"
+                "src": "https://www.youtube.com/embed/pmOobyOkbWQ"
             },
             "description": "The back parlor is the speakeasy...",
             "directions": {
@@ -144,7 +144,7 @@
             "type": "CHATSTREAM",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomFrontParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/_YKr-NYrqr8"
+                "src": "https://www.youtube.com/embed/V_zEFK1QOZ8"
             },
             "directions": {
                 "east": "teaRoom",
@@ -167,12 +167,12 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/dUxFWoMfyY0"
+                "src": "https://www.youtube.com/embed/qPbR6l1OzkY"
             },
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTea.png",
             "description": "The gentle spiced air revitalizes you even before your first sip.",
@@ -230,7 +230,7 @@
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomRitual.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/1v522VFfnLU"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/7a0b07da-c1af-39a6-561e"
             },
             "directions": {
                 "east": "backParlor"
@@ -408,8 +408,8 @@
         {
             "id": "boudoir",
             "name": "Boudoir",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
             "description": "Covert conversations; keep it to a low whisper.",
