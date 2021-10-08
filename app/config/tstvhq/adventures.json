@@ -15,13 +15,13 @@
                             "nextRoom": [
                                 "subway"
                             ],
-                            "text": "Weird... Oh well"
+                            "text": "Push on that brick!"
                         },
                         {
                             "nextRoom": [
                                 "library"
                             ],
-                            "text": "Push on that brick!"
+                            "text": "Weird...oh well..."
                         }
                     ],
                     "id": "brick",
