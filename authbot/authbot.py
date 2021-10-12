@@ -27,6 +27,7 @@ SYNC_MAP = {
     "october-events-full-pass": "OctFullPass",
     "temple-10-05": "TempleOctober5",
     "october-8th-death": "Oct8Death",
+    "temple-10-12": "TempleOctober12",
 }
 
 
