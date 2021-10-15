@@ -82,8 +82,8 @@
         {
             "id": "backParlor",
             "name": "Back Parlor",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBackParlor.png",
@@ -144,7 +144,7 @@
             "type": "CHATSTREAM",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomFrontParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/V_zEFK1QOZ8"
+                "src": "https://www.youtube.com/embed/4A0JBWvbZ2c"
             },
             "directions": {
                 "east": "teaRoom",
@@ -172,7 +172,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/qPbR6l1OzkY"
+                "src": "https://www.youtube.com/embed/CJQb3cH9KwQ"
             },
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTea.png",
             "description": "The gentle spiced air revitalizes you even before your first sip.",
@@ -223,8 +223,8 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
@@ -356,15 +356,15 @@
         {
             "id": "theater",
             "name": "Theater",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
             "description": "Appease the spirits dancing across the stage with applause.",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTheater.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/-QPBiS1hlBg"
+                "src": "https://www.youtube.com/embed/-aQoe1sc8Bk"
             },
             "directions": {
                 "west": "sleepingPorch",
