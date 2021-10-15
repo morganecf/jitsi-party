@@ -16,18 +16,12 @@ from slack_sdk.errors import SlackApiError
 
 
 SYNC_MAP = {
-    "temple-08-17": "TempleAugust17",
-    "temple-08-24": "TempleAugust24",
-    "temple-08-31": "TempleAugust31",
-    "temple-09-07": "TempleSeptember7",
-    "temple-09-14": "TempleSeptember14",
-    "temple-09-21": "TempleSeptember21",
-    "temple-09-28": "TempleSeptember28",
     "october-1st-cats": "Oct1Cats",
     "october-events-full-pass": "OctFullPass",
     "temple-10-05": "TempleOctober5",
     "october-8th-death": "Oct8Death",
     "temple-10-12": "TempleOctober12",
+    "october-15th-monsters": "Oct15Monsters",
 }
 
 
