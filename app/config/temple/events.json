@@ -47,6 +47,6 @@
             "start": "2021-10-19T22:00:00-04:00",
             "end": "2021-10-19T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
+        }
     ]
 }
