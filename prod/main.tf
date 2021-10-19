@@ -299,8 +299,8 @@ resource "aws_instance" "main" {
     user_data = templatefile(
       "first_run.sh.tpl",
       {
-        config = "tstvhq",
-        theme = "tst",
+        config = "temple",
+        theme = "temple",
         domain = local.tst_domain,
         auth_enabled = "1",
         auth_client_id = aws_cognito_user_pool_client.main.id,
