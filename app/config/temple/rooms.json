@@ -110,14 +110,11 @@
         {
             "id": "sacristy",
             "name": "The Sacristy",
-            "type": "CHATSTREAM",
-            "capacity": 200,
+            "type": "JITSI",
+            "capacity": 17,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
-            "iframeOptions": {
-                "src": "https://www.youtube.com/embed/DwhzPER0MBA"
-            },
             "description": "We line these walls with the vessels and vestments of our practice.",
             "directions": {
                 "north": "andromalius",
