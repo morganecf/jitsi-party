@@ -22,6 +22,7 @@ SYNC_MAP = {
     "october-8th-death": "Oct8Death",
     "temple-10-12": "TempleOctober12",
     "october-15th-monsters": "Oct15Monsters",
+    "temple-10-19": "TempleOctober19",
 }
 
 
