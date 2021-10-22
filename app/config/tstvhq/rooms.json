@@ -3,7 +3,7 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "JITSI",
+            "type": "IFRAME",
             "capacity": 20,
             "doorTint": "#000000",
             "muteRoom": false,
@@ -12,7 +12,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/8a2IqKYQU7k"
             },
-            "description": "Tonight's feast made here with eye of newt and hair of dog...",
+            "description": "Looks like somebun found a snack!",
             "directions": {
                 "west": "powderRoom",
                 "north": "grandBallroom",
@@ -62,7 +62,7 @@
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBallroom.png",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/c6ed76a9-b73f-3ebd-a7ed-0c7e2dd2166b"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/83cea71b-fda0-4ea7-0d5c-636e2a0695a9"
             },
             "description": "For we Danse Macabre: Was that organ playing itself?",
             "directions": {
@@ -82,13 +82,13 @@
         {
             "id": "backParlor",
             "name": "Back Parlor",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBackParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/pmOobyOkbWQ"
+                "src": "https://www.youtube.com/embed/lUxgbG10nCU"
             },
             "description": "The back parlor is the speakeasy...",
             "directions": {
@@ -144,7 +144,7 @@
             "type": "CHATSTREAM",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomFrontParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/4A0JBWvbZ2c"
+                "src": "https://www.youtube.com/embed/yXdUAMJXZ3M"
             },
             "directions": {
                 "east": "teaRoom",
@@ -172,7 +172,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/CJQb3cH9KwQ"
+                "src": "https://www.youtube.com/embed/PpTDipu0tJs"
             },
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTea.png",
             "description": "The gentle spiced air revitalizes you even before your first sip.",
@@ -364,7 +364,7 @@
             "description": "Appease the spirits dancing across the stage with applause.",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTheater.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/-aQoe1sc8Bk"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/6042ed47-2e52-18df-085a-089c07a50d26"
             },
             "directions": {
                 "west": "sleepingPorch",
