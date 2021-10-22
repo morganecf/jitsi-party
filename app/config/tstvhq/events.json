@@ -1,52 +1,68 @@
 {
     "events": [
         {
-            "name": "The Rise of Carmilla",
-            "description": "Historically, female vampires were portrayed as predatory lesbians or as subservient to a Master in the form of Dracula. They were the Brides, a means to bring victims to the male vampire. Modernized versions of the Brides have them liberated from any Master and are unconventional women fighting the patriarchy and the 'traditions' that try to keep them submissive. Through the films Bit (2019), Byzantium (2017), and Bliss (2019), we see the full spectrum of these women, we see the Rise of Carmilla.",
-            "room": "theater",
-            "start": "2021-10-15T20:00:00-04:00",
-            "end": "2021-10-15T21:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/monsters.png"
+            "name": "The Magic Parlor",
+            "description": "Join Rob from The Magic Parlor as he shows us around his shop in Salem, MA. Rob sits in the psychics reading room and tells us of spooky moments that made him feel a little superstitious.",
+            "room": "backParlor",
+            "start": "2021-10-22T20:00:00-04:00",
+            "end": "2021-10-22T20:30:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/superstition.png"
         },
         {
-            "name": "A Region of Prisoners",
-            "description": "Join us for a lecture about how to overcome racism and how to gain more allies in the Middle East. We will also discuss incidents where people were sent to jail solely for being suspected of being a Satanist or being LGBTQ+.",
-            "room": "frontParlor",
-            "start": "2021-10-15T21:00:00-04:00",
-            "end": "2021-10-15T22:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/monsters.png"
-        },
-        {
-            "name": "Southern Dandy Ghost",
-            "description": "Join Hadrian Flyte in a decaying Satanic manor from the illuminati golden age of the 1920s for a Southern Dandy Ghost evening.",
+            "name": "Folk Devils: Moral Panics and New Religious Movements in the 20th Century",
+            "description": "Join Grey Faction's Hadrian Flyte for a presentation on Folk Devils and their place in the social landscape of the 20th century.",
             "room": "teaRoom",
-            "start": "2021-10-15T22:00:00-04:00",
-            "end": "2021-10-15T23:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/monsters.png"
+            "start": "2021-10-22T20:30:00-04:00",
+            "end": "2021-10-22T21:30:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/superstition.png"
+        },
+        {
+            "name": "How to Start A Cult",
+            "description": "Join Ross Blocher (Oh No Ross and Carrie podcast) and learn how to fake having paranormal powers to gain a cult following.",
+            "room": "frontParlor",
+            "start": "2021-10-22T22:00:00-04:00",
+            "end": "2021-10-22T23:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/superstition.png"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-10-15T20:00:00-04:00",
-            "end": "2021-10-16T02:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/monsters.png"
+            "start": "2021-10-22T20:00:00-04:00",
+            "end": "2021-10-22T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/superstition.png"
         },
         {
-            "name": "DJ Kittybot",
-            "description": "Join DJ Kittybot for tunes and a monster mash.",
+            "name": "Ritual Healing: A screening and discussion of Alejandro Jodorowsky's Psychomagic: A Healing Art",
+            "description": "This documentary and accompanying discussion explores the healing power of non-supernatural ritual magic",
+            "room": "theater",
+            "start": "2021-10-22T23:30:00-04:00",
+            "end": "2021-10-22T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/superstition.png"
+        },
+        {
+            "name": "The Rabbit's Fall Harvest",
+            "description": "Come peek to see who found some snacks in the kitchen! Hint: It's Winston and Winona",
+            "room": "kitchen",
+            "start": "2021-10-22T20:30:00-04:00",
+            "end": "2021-10-23T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/superstition.png"
+        },
+        {
+            "name": "Whimsical Blasphemy: Music and Videos",
+            "description": "Join Mercy Maelica for music and videos live from Salem.",
             "room": "grandBallroom",
-            "start": "2021-10-16T00:30:00-04:00",
-            "end": "2021-10-16T02:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/monsters.png"
+            "start": "2021-10-22T20:00:00-04:00",
+            "end": "2021-10-23T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/superstition.png"
         },
         {
             "name": "Grey Faction Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-10-15T20:00:00-04:00",
-            "end": "2021-10-16T02:00:00-04:00",
-            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/monsters.png"
+            "start": "2021-10-22T20:00:00-04:00",
+            "end": "2021-10-23T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/event_images/superstition.png"
         }
     ]
 }
