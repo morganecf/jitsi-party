@@ -111,7 +111,7 @@
             "id": "sacristy",
             "name": "The Sacristy",
             "type": "JITSI",
-            "capacity": 17,
+            "capacity": 25,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
@@ -228,7 +228,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/CdSB8n615iw"
+                "src": "https://www.youtube.com/embed/hsJevoiP3ko"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
             "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE WRITER'S CIRCLE: https://us02web.zoom.us/j/84292706205",
