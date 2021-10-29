@@ -8,7 +8,7 @@
         "map": "Estate Map",
         "events": "Calendar of Events",
         "moderator": "Contact a Moderator",
-        "poke": "Poke Someone"
+        "poke": "Hex Someone"
     },
     "startRoom": "cemetery",
     "videoDisplayName": "Satanist",
@@ -21,7 +21,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBallroom.png",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/halloweenBG.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your Spooky",
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
