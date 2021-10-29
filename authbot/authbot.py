@@ -17,7 +17,7 @@ from slack_sdk.errors import SlackApiError
 
 SYNC_MAP = {
     "october-events-full-pass": "OctFullPass",
-    "temple-10-26": "TempleOctober26",
+    "october-29th-halloween": "Oct29Halloween",
 }
 
 
