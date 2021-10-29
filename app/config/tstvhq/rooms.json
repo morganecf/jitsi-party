@@ -10,7 +10,7 @@
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomKitchen.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/8a2IqKYQU7k"
+                "src": "https://www.youtube.com/embed/bz-1ujV-v2c"
             },
             "description": "Looks like somebun found a snack!",
             "directions": {
@@ -56,8 +56,8 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBallroom.png",
@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBackParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/lUxgbG10nCU"
+                "src": "https://www.youtube.com/embed/jsvkczDEPIM"
             },
             "description": "The back parlor is the speakeasy...",
             "directions": {
@@ -137,11 +137,11 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 400,
+            "capacity": 10,
             "muteRoom": false,
             "hideVideo": false,
             "description": "A devilish dance, a siren’s song.",
-            "type": "CHATSTREAM",
+            "type": "JITSI",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomFrontParlor.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/yXdUAMJXZ3M"
@@ -172,7 +172,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/PpTDipu0tJs"
+                "src": "https://www.youtube.com/embed/884vWIyOzCU"
             },
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTea.png",
             "description": "The gentle spiced air revitalizes you even before your first sip.",
@@ -223,14 +223,14 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "CHATSTREAM",
+            "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomRitual.png",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/7a0b07da-c1af-39a6-561e-a13f2fae664e"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/f7211aa5-999a-9586-26d5-d1ff15280df3"
             },
             "directions": {
                 "east": "backParlor"
@@ -356,8 +356,8 @@
         {
             "id": "theater",
             "name": "Theater",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
