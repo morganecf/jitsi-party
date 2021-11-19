@@ -8,7 +8,7 @@
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/10TempleRoom6.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/CSYC8OtyIVw"
             },
@@ -34,7 +34,7 @@
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom2.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/11TempleRoom6.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/c1qiQlpHw6w"
             },
@@ -90,6 +90,7 @@
             "hideVideo": true,
             "doorTint": "#000000",
             "description": "What treasures lay undiscovered for those who gather here?",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/13TempleRoom6.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/PB36K3nVnuM"
             },
@@ -113,7 +114,7 @@
             "capacity": 25,
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/1TempleRoom6.png",
             "description": "We line these walls with the vessels and vestments of our practice.",
             "directions": {
                 "north": "andromalius",
@@ -143,7 +144,7 @@
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/2TempleRoom6.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/3hVoZevrjG8"
             },
@@ -171,7 +172,7 @@
             "hideVideo": false,
             "capacity": 25,
             "description": "Speak my friends of the past, present, future; of reconciliation, of foes, of love.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom7.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/3TempleRoom6.png",
             "imageMapOptions": "satanic-merch-map",
             "directions": {
                 "north": "bifrons"
@@ -198,7 +199,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/LJ0SzmW8v5c"
             },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom8.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/6TempleRoom6.png",
             "directions": {
                 "north": "sacristy",
                 "east": "los",
@@ -229,7 +230,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/T_H5T_RAb20"
             },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/7TempleRoom6.png",
             "description": "The forges of imagination gleam and bellow with the rhythms of life.",
             "directions": {
                 "west": "sanctuary"
@@ -252,7 +253,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 50,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom10.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/5TempleRoom6.png",
             "description": "The whispers of bygone eras mingle with the faintest incense to bid you welcome. Select the map and calendar in the bottom left to explore our Temple.",
             "directions": {
                 "north": "sanctuary"
