@@ -29,8 +29,8 @@
         {
             "id": "malthus",
             "name": "Malthus",
-            "type": "CHATSTREAM",
-            "capacity": 300,
+            "type": "JITSI",
+            "capacity": 25,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
