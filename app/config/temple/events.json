@@ -1,51 +1,43 @@
 {
     "events": [
         {
-            "name": "Aesthetics by: Minister Hadrian Flyte",
-            "description": "The Temple services are meant as live discussions rather than lectures, so these will not be recorded to respect everyone's privacy when participating. However, the Minister's introduction to the discussion will be recorded and available on the Satanic Ministry website.",
+            "name": "Meaning of Ministry by: Minister Penemue",
+            "description": "Join Minister Penemue for the opening statement of the Inaugural Satanic Ministry Conference",
             "room": "sanctuary",
-            "start": "2021-11-16T21:00:00-05:00",
-            "end": "2021-11-16T22:00:00-05:00",
+            "start": "2021-11-19T17:00:00-05:00",
+            "end": "2021-11-19T17:45:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "After Services Activities: Dungeons & Dragons",
-            "description": "Join Dungeon Mistress Kaelea and a team of intrepid adventurers as they unravel mysteries in the Kingdom of Ekerion, a 5th Edition Dungeons & Dragons homebrew campaign. Tune in for laughs, silly voices, twists and turns, and lots of dice-rolling shenanigans.",
-            "room": "malthus",
-            "start": "2021-11-16T22:00:00-05:00",
-            "end": "2021-11-16T23:59:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "After Services Activities: Satanic Sober Faction",
-            "description": "TST Sober Faction will be hosting special meetings after weekly services such as Sober Book club hosted by Priest Joe Dee, Seven Ritual Workshop hosted by Reverend Jon Eldritch, & free talk Q&A sessions hosted by all of Sober Faction Council. Heal Thyself, Hail Thyself! Sobriety Without Superstition.",
-            "room": "urizen",
-            "start": "2021-11-16T22:00:00-05:00",
-            "end": "2021-11-16T23:59:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "After Services Activities: Satanic Writers Circle",
-            "description": "Join us for our Satanic Writers Circle. Today we will follow up on projects we are all working on and share our work.",
-            "room": "los",
-            "start": "2021-11-16T22:00:00-05:00",
-            "end": "2021-11-16T23:59:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "After Services Activities: Music and Videos at Whimsical Blasphemy",
-            "description": "Live from Salem, join Mercy Maelica for music and videos! Learn more at whimsicalblasphemy.com.",
-            "room": "bifrons",
-            "start": "2021-11-16T22:00:00-05:00",
-            "end": "2021-11-16T23:59:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "After Services Activities: Dark Arts and Crafts",
-            "description": "Join Satanic artists for a very chill craft and chat session.",
+            "name": "Science and Satanism with Minister Brian H",
+            "description": "Minister Brian H discusses the connection between Science and Satanism.",
             "room": "andromalius",
-            "start": "2021-11-16T22:00:00-05:00",
-            "end": "2021-11-16T23:59:00-05:00",
+            "start": "2021-11-19T18:00:00-05:00",
+            "end": "2021-11-19T18:45:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "Knowing our Roots with Minister Chalice Blythe",
+            "description": "Explore the history of Satanism with Chalice Blythe",
+            "room": "los",
+            "start": "2021-11-19T19:00:00-05:00",
+            "end": "2021-11-19T19:45:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "Satanism in the Culture War with Minister Dex Desjardins",
+            "description": "Learn the context of Satanism in the Culture War in America.",
+            "room": "bifrons",
+            "start": "2021-11-19T20:00:00-05:00",
+            "end": "2021-11-19T20:45:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "A Legion of Voices: Expanding the Ordination Curriculum",
+            "description": "A roundtable discussion on expanding the ordination curriculum to increase representation of the breadth of backgrounds and experiences within Satanism and The Satanic Temple.",
+            "room": "urizen",
+            "start": "2021-11-19T21:00:00-05:00",
+            "end": "2021-11-19T21:45:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
