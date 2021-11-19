@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 $accent-font: 'Philosopher';
 
-$dark-grey: #a00505;
+$dark-grey: #333232;
 $bisected-hall: #011d1f;
 $removed-tile: #333232;
 $offwhite: #F0F0F0;
 $grey: #595959;
 $medical-teal: #0f666b;
 $dirty-gown: #7c9c94;
-$red: #a00505;
 
 // Chat color variables
-$chat-border: $red; // border around the chat
+$chat-border: $dark-grey; // border around the chat
 $chat-border-width: 2px; // size of the chat border
 $chat-separator-bars: $medical-teal; // separator bars at the top of the chat area
 $chat-separator-text: $dirty-gown; // text between the separators
@@ -81,7 +80,7 @@ $poke-color: $dirty-gown;
 $poke-background-color: $dark-grey;
 
 $button-background-color: $dark-grey;
-$button-border-color: $red;
+$button-border-color: $dark-grey;
 $button-text-color: $offwhite;
 $button-border-radius: 2px;
 
