@@ -10,9 +10,9 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/V1KIcXiL8D8"
+                "src": "https://www.youtube.com/embed/CSYC8OtyIVw"
             },
-            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/81747423172",
+            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake.",
             "directions": {
                 "east": "sanctuary"
             },
@@ -89,10 +89,9 @@
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "What treasures lay undiscovered for those who gather here? JOIN THE ART PARTY: https://us02web.zoom.us/j/85204276368",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom4.png",
+            "description": "What treasures lay undiscovered for those who gather here?",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/VXH9b0hS75I"
+                "src": "https://www.youtube.com/embed/PB36K3nVnuM"
             },
             "directions": {
                 "south": "sacristy"
@@ -146,7 +145,7 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/83cea71b-fda0-4ea7-0d5c-636e2a0695a9"
+                "src": "https://www.youtube.com/embed/3hVoZevrjG8"
             },
             "description": "The mysteries of art and science will be known to us.",
             "directions": {
@@ -197,7 +196,7 @@
             "description": "Timelessness coalesces above the pews set out before you. Gather and be heard.",
             "type": "CHATSTREAM",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/326b552eccae2ac1d6f3eb805ebc99a3/7f8d96d1cc4bfa4930fc8369f15a4616"
+                "src": "https://www.youtube.com/embed/LJ0SzmW8v5c"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom8.png",
             "directions": {
@@ -228,10 +227,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/kfRopNzdilo"
+                "src": "https://www.youtube.com/embed/T_H5T_RAb20"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
-            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE WRITER'S CIRCLE: https://us02web.zoom.us/j/87008128808",
+            "description": "The forges of imagination gleam and bellow with the rhythms of life.",
             "directions": {
                 "west": "sanctuary"
             },
