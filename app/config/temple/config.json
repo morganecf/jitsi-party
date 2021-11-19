@@ -25,7 +25,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom13.png",
+        "backgroundImagePath": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/5TempleRoom6.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select Your Symbol",
         "headerHtml": "<div class='tst'><p>Welcome to the</p><h1>Satanic Ministry Conference</h1>"
