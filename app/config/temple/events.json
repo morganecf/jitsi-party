@@ -1,43 +1,35 @@
 {
     "events": [
         {
-            "name": "Meaning of Ministry by: Minister Penemue",
-            "description": "Join Minister Penemue for the opening statement of the Inaugural Satanic Ministry Conference",
+            "name": "Continuous Satanic Panic in the BIPOC Community: A Round Table of Experiences",
+            "description": "Minister Citlali Soona and Panelists discuss BIPOC experiences at the Inaugural Satanic Ministry Conference",
             "room": "sanctuary",
-            "start": "2021-11-19T17:00:00-05:00",
-            "end": "2021-11-19T17:45:00-05:00",
+            "start": "2021-11-20T16:30:00-05:00",
+            "end": "2021-11-20T17:30:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "Science and Satanism with Minister Brian H",
-            "description": "Minister Brian H discusses the connection between Science and Satanism.",
-            "room": "andromalius",
-            "start": "2021-11-19T18:00:00-05:00",
-            "end": "2021-11-19T18:45:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "Knowing our Roots with Minister Chalice Blythe",
-            "description": "Explore the history of Satanism with Chalice Blythe",
+            "name": "Working with Funeral Industry Professionals with Minister Mona Mourningstar",
+            "description": "Minister Mona Mourningstar discusses best practices for how Satanic Ministers can work with funeral industry professionals.",
             "room": "los",
-            "start": "2021-11-19T19:00:00-05:00",
-            "end": "2021-11-19T19:45:00-05:00",
+            "start": "2021-11-20T18:00:00-05:00",
+            "end": "2021-11-20T18:45:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "Satanism in the Culture War with Minister Dex Desjardins",
-            "description": "Learn the context of Satanism in the Culture War in America.",
-            "room": "bifrons",
-            "start": "2021-11-19T20:00:00-05:00",
-            "end": "2021-11-19T20:45:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "A Legion of Voices: Expanding the Ordination Curriculum",
-            "description": "A roundtable discussion on expanding the ordination curriculum to increase representation of the breadth of backgrounds and experiences within Satanism and The Satanic Temple.",
+            "name": "Praise Thyself: Non-Binary & Gender Affirmation in Ritual Practice with Minister Joe Dee",
+            "description": "Explore how Satanism can be gender affirming with Minister Joe Dee",
             "room": "urizen",
-            "start": "2021-11-19T21:00:00-05:00",
-            "end": "2021-11-19T21:45:00-05:00",
+            "start": "2021-11-20T19:30:00-05:00",
+            "end": "2021-11-20T20:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "The Meaning of 'Religion' in Australia",
+            "description": "A discussion of how Satanic religion in evolving Australia.",
+            "room": "andromalius",
+            "start": "2021-11-20T21:00:00-05:00",
+            "end": "2021-11-20T22:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
