@@ -10,7 +10,7 @@
             "hideVideo": true,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/10TempleRoom6.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/A6YxVBjxUtE"
+                "src": "https://www.youtube.com/embed/MhVzCaBPgk8"
             },
             "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake.",
             "directions": {
@@ -92,7 +92,7 @@
             "description": "What treasures lay undiscovered for those who gather here?",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/13TempleRoom6.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/EINUJVKkhBs"
+                "src": "https://www.youtube.com/embed/MfwLQEX5Exg"
             },
             "directions": {
                 "south": "sacristy"
@@ -139,14 +139,14 @@
         {
             "id": "bifrons",
             "name": "Bifrons",
-            "type": "JITSI",
-            "capacity": 10,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "doorTint": "#000000",
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/2TempleRoom6.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/3hVoZevrjG8"
+                "src": "https://www.youtube.com/embed/NB8h0IHnU-0"
             },
             "description": "The mysteries of art and science will be known to us.",
             "directions": {
@@ -197,7 +197,7 @@
             "description": "Timelessness coalesces above the pews set out before you. Gather and be heard.",
             "type": "CHATSTREAM",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/V-HlMhpgek4"
+                "src": "https://www.youtube.com/embed/MwEfCu4SzOw"
             },
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/6TempleRoom6.png",
             "directions": {
@@ -228,7 +228,7 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/8UAwCRqnXcg"
+                "src": "https://www.youtube.com/embed/va4LZ2XFYl8"
             },
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/temple/ministryconference2021/7TempleRoom6.png",
             "description": "The forges of imagination gleam and bellow with the rhythms of life.",
