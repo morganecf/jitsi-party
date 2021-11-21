@@ -16,8 +16,7 @@ from slack_sdk.errors import SlackApiError
 
 
 SYNC_MAP = {
-    "full-pass-first-annual-satanic-ministry-conference-developing-our-ministerial-practice-november-19-20": "MinistryFullPass",
-    "day-two-november-20th-first-annual-satanic-ministry-conference-developing-our-ministerial-practice": "MinistryDay2",
+    "day-three-sunday-november-21st-ministers-only": "MinistryDay3",
 }
 
 
