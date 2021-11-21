@@ -1,35 +1,43 @@
 {
     "events": [
         {
-            "name": "Continuous Satanic Panic in the BIPOC Community: A Round Table of Experiences",
-            "description": "Minister Citlali Soona and Panelists discuss BIPOC experiences at the Inaugural Satanic Ministry Conference",
+            "name": "Opening Statement with Minister Stephen Long",
+            "description": "Minister Stephen Long begins the final day of the Inaugural Satanic Ministry Conference with an opening statement",
             "room": "sanctuary",
-            "start": "2021-11-20T16:30:00-05:00",
-            "end": "2021-11-20T17:30:00-05:00",
+            "start": "2021-11-21T16:00:00-05:00",
+            "end": "2021-11-21T16:30:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "Working with Funeral Industry Professionals with Minister Mona Mourningstar",
-            "description": "Minister Mona Mourningstar discusses best practices for how Satanic Ministers can work with funeral industry professionals.",
-            "room": "los",
-            "start": "2021-11-20T18:00:00-05:00",
-            "end": "2021-11-20T19:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "Praise Thyself: Non-Binary & Gender Affirmation in Ritual Practice with Minister Joe Dee",
-            "description": "Explore how Satanism can be gender affirming with Minister Joe Dee",
-            "room": "urizen",
-            "start": "2021-11-20T19:30:00-05:00",
-            "end": "2021-11-20T20:30:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
-            "name": "The Meaning of 'Religion' in Australia",
-            "description": "A discussion of how Satanic religion in evolving Australia.",
+            "name": "Abortion as a (Religious) Right with Minister Mari Davis",
+            "description": "Minister Mari Davis discusses reproductive rights as religious rights.",
             "room": "andromalius",
-            "start": "2021-11-20T21:00:00-05:00",
-            "end": "2021-11-20T22:00:00-05:00",
+            "start": "2021-11-21T16:30:00-05:00",
+            "end": "2021-11-21T17:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "Creating a Satanic Funeral Liturgy with Minister Mona Mourningstar",
+            "description": "Explore how to create a Satanic Funeral Liturgy with Minister Mourningstar",
+            "room": "los",
+            "start": "2021-11-21T18:00:00-05:00",
+            "end": "2021-11-21T19:00:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "Navigating Social Media with Minister Penemue",
+            "description": "A workshop on social media best practices and pitfalls to avoid as a Satanic Minister",
+            "room": "bifrons",
+            "start": "2021-11-21T19:30:00-05:00",
+            "end": "2021-11-21T20:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "Satanic Weddings with Minister Viktor LaMent",
+            "description": "A workshop exploring Satanic Wedding ceremonies and rituals.",
+            "room": "urizen",
+            "start": "2021-11-21T21:00:00-05:00",
+            "end": "2021-11-21T22:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
