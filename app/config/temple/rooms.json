@@ -29,8 +29,8 @@
         {
             "id": "malthus",
             "name": "Malthus",
-            "type": "JITSI",
-            "capacity": 25,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
@@ -110,15 +110,15 @@
         {
             "id": "sacristy",
             "name": "The Sacristy",
-            "type": "JITSI",
-            "capacity": 25,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/V24tOiXrVLA"
             },
-            "description": "We line these walls with the vessels and vestments of our practice.",
+            "description": "We line these walls with the vessels and vestments of our practice. JOIN THE CONVERSATION: https://us06web.zoom.us/j/82572654692",
             "directions": {
                 "north": "andromalius",
                 "east": "bifrons",
@@ -149,7 +149,7 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/NB8h0IHnU-0"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/83cea71b-fda0-4ea7-0d5c-636e2a0695a9"
             },
             "description": "The mysteries of art and science will be known to us.",
             "directions": {
@@ -231,10 +231,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/va4LZ2XFYl8"
+                "src": "https://www.youtube.com/embed/fp9ZkLXkGYA"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
-            "description": "The forges of imagination gleam and bellow with the rhythms of life. Join the writers cirle!: https://us02web.zoom.us/j/82099027475",
+            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE CONVERSATION: https://us02web.zoom.us/j/82099027475",
             "directions": {
                 "west": "sanctuary"
             },
