@@ -1,43 +1,43 @@
 {
     "events": [
         {
-            "name": "Opening Statement with Minister Stephen Long",
-            "description": "Minister Stephen Long begins the final day of the Inaugural Satanic Ministry Conference with an opening statement",
+            "name": "Surviving the Holidays as a Satanist by Minister Salem Seladonia",
+            "description": "The Temple services are meant as live discussions rather than lectures, so these will not be recorded to respect everyone's privacy when participating. However, the Minister's introduction to the discussion will be recorded and available on the Satanic Ministry website.",
             "room": "sanctuary",
-            "start": "2021-11-21T16:00:00-05:00",
-            "end": "2021-11-21T16:30:00-05:00",
+            "start": "2021-11-23T21:00:00-05:00",
+            "end": "2021-11-23T22:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "Abortion as a (Religious) Right with Minister Mari Davis",
-            "description": "Minister Mari Davis discusses reproductive rights as religious rights.",
+            "name": "After Services Activities: Dark Arts and Crafts",
+            "description": "Join Satanic artists for a very chill craft and chat session.",
             "room": "andromalius",
-            "start": "2021-11-21T16:30:00-05:00",
-            "end": "2021-11-21T17:30:00-05:00",
+            "start": "2021-11-23T22:00:00-05:00",
+            "end": "2021-11-23T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "Creating a Satanic Funeral Liturgy with Minister Mona Mourningstar",
-            "description": "Explore how to create a Satanic Funeral Liturgy with Minister Mourningstar",
+            "name": "After Services Activities: Satanic Writers Circle",
+            "description": "Join us for our Satanic Writers Circle. Today we will follow up on projects we are all working on and share our work.",
             "room": "los",
-            "start": "2021-11-21T18:00:00-05:00",
-            "end": "2021-11-21T19:00:00-05:00",
+            "start": "2021-11-23T22:00:00-05:00",
+            "end": "2021-11-23T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "Navigating Social Media with Minister Penemue",
-            "description": "A workshop on social media best practices and pitfalls to avoid as a Satanic Minister",
+            "name": "After Services Activities: Music and Videos at Whimsical Blasphemy",
+            "description": "Live from Salem, join Mercy Maelica for music and videos! Learn more at whimsicalblasphemy.com.",
             "room": "bifrons",
-            "start": "2021-11-21T19:30:00-05:00",
-            "end": "2021-11-21T20:30:00-05:00",
+            "start": "2021-11-23T22:00:00-05:00",
+            "end": "2021-11-23T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
-            "name": "Satanic Weddings with Minister Viktor LaMent",
-            "description": "A workshop exploring Satanic Wedding ceremonies and rituals.",
+            "name": "After Services Activities: Satanic Sober Faction",
+            "description": "TST Sober Faction will be hosting special meetings after weekly services such as Sober Book club hosted by Priest Joe Dee, Seven Ritual Workshop hosted by Reverend Jon Eldritch, & free talk Q&A sessions hosted by all of Sober Faction Council. Heal Thyself, Hail Thyself! Sobriety Without Superstition.",
             "room": "urizen",
-            "start": "2021-11-21T21:00:00-05:00",
-            "end": "2021-11-21T22:00:00-05:00",
+            "start": "2021-11-23T22:00:00-05:00",
+            "end": "2021-11-23T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
