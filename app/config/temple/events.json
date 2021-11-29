@@ -1,51 +1,51 @@
 {
     "events": [
         {
-            "name": "Surviving the Holidays as a Satanist by Minister Salem Seladonia",
+            "name": "Grieving as a Satanist by Minister Ash Schade",
             "description": "The Temple services are meant as live discussions rather than lectures, so these will not be recorded to respect everyone's privacy when participating. However, the Minister's introduction to the discussion will be recorded and available on the Satanic Ministry website.",
             "room": "sanctuary",
-            "start": "2021-11-23T21:00:00-05:00",
-            "end": "2021-11-23T22:00:00-05:00",
+            "start": "2021-11-30T21:00:00-05:00",
+            "end": "2021-11-30T22:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dark Arts and Crafts",
             "description": "Join Satanic artists Satan's Craft Room and Zoey Inferni for a very chill craft and chat session.",
             "room": "andromalius",
-            "start": "2021-11-23T22:00:00-05:00",
-            "end": "2021-11-23T23:59:00-05:00",
+            "start": "2021-11-30T22:00:00-05:00",
+            "end": "2021-11-30T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Hellfire Club Salon",
             "description": "Decadence and Subcultural Influences with Minister Hadrian Flyte. Today's discussion centers on Charles Baudelaire and Edgar Allen Poe",
             "room": "sacristy",
-            "start": "2021-11-23T22:00:00-05:00",
-            "end": "2021-11-23T23:59:00-05:00",
+            "start": "2021-11-30T22:00:00-05:00",
+            "end": "2021-11-30T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Writers Circle",
             "description": "Join us for our Satanic Writers Circle. Today we will follow up on projects we are all working on and share our work.",
             "room": "los",
-            "start": "2021-11-23T22:00:00-05:00",
-            "end": "2021-11-23T23:59:00-05:00",
+            "start": "2021-11-30T22:00:00-05:00",
+            "end": "2021-11-30T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Music and Videos from Whimsical Blasphemy",
             "description": "Live from Salem, join Mercy Maelica for music and videos! Learn more at whimsicalblasphemy.com.",
             "room": "bifrons",
-            "start": "2021-11-23T22:00:00-05:00",
-            "end": "2021-11-23T23:59:00-05:00",
+            "start": "2021-11-30T22:00:00-05:00",
+            "end": "2021-11-30T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Sober Faction",
             "description": "TST Sober Faction will be hosting special meetings after weekly services such as Sober Book club hosted by Priest Joe Dee, Seven Ritual Workshop hosted by Reverend Jon Eldritch, & free talk Q&A sessions hosted by all of Sober Faction Council. Heal Thyself, Hail Thyself! Sobriety Without Superstition.",
             "room": "urizen",
-            "start": "2021-11-23T22:00:00-05:00",
-            "end": "2021-11-23T23:59:00-05:00",
+            "start": "2021-11-30T22:00:00-05:00",
+            "end": "2021-11-30T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
