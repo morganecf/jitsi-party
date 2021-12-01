@@ -110,15 +110,15 @@
         {
             "id": "sacristy",
             "name": "The Sacristy",
-            "type": "CHATSTREAM",
-            "capacity": 300,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/V24tOiXrVLA"
             },
-            "description": "We line these walls with the vessels and vestments of our practice. JOIN THE CONVERSATION: https://us06web.zoom.us/j/82572654692",
+            "description": "We line these walls with the vessels and vestments of our practice.",
             "directions": {
                 "north": "andromalius",
                 "east": "bifrons",
