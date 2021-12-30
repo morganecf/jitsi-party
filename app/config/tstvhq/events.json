@@ -1,52 +1,60 @@
 {
     "events": [
         {
-            "name": "Spook-kiki Costume Party",
-            "description": "Join Kaelea Kae & friends for a Spook-kiki, hangout and Halloween costume party. Get dressed up and share your spooky stories & memories of past Halloweens.",
+            "name": "Struggle for Justice: Legal Year in Review for TST",
+            "description": "Join Matthew Kezhaya, Sonia Kezhaya and Stu De Haan, part of the legal team fighting for our rights for an update on our court cases including Arkansas, Boston, Belle Plaine and others.",
             "room": "teaRoom",
-            "start": "2021-10-29T20:00:00-04:00",
-            "end": "2021-10-29T21:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/halloweenevents.png"
+            "start": "2021-12-30T20:00:00-04:00",
+            "end": "2021-12-30T21:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/eventimage.png"
         },
         {
-            "name": "Halloween in Salem",
-            "description": "Join Salem Witch Wiles, our favorite Salem witch and historian to learn about the history of Halloween.",
+            "name": "Demons, Monsters, and Pagans: The True Story of Christmas with Thomas Vallor",
+            "description": "Most people are familiar with the Christmas monster Krampus nowadays, but there is so much more - in fact, Christmas is like a second Halloween! Deluxe edition, now with more monsters!",
             "room": "backParlor",
-            "start": "2021-10-29T22:00:00-04:00",
-            "end": "2021-10-29T23:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/halloweenevents.png"
+            "start": "2021-12-30T21:00:00-04:00",
+            "end": "2021-12-30T22:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/eventimage.png"
         },
         {
-            "name": "Shiva Honey",
-            "description": "Join Shiva Honey, priestess, Minister of Satan and Death Doula, for a Satanic Halloween evening and DJ sesh.",
-            "room": "ritualChamber",
-            "start": "2021-10-29T23:30:00-04:00",
-            "end": "2021-10-30T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/halloweenevents.png"
+            "name": "Lucien's Christmas Miracle",
+            "description": "The second annual Lucien's Christmas Miracle. Fuck yeah!",
+            "room": "frontParlor",
+            "start": "2021-12-30T22:00:00-04:00",
+            "end": "2021-12-31T00:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/eventimage.png"
         },
         {
             "name": "Bats in the Belfry!",
             "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
             "room": "belfry",
-            "start": "2021-10-29T20:00:00-04:00",
-            "end": "2021-10-29T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/halloweenevents.png"
+            "start": "2021-12-30T20:00:00-04:00",
+            "end": "2021-12-31T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/eventimage.png"
         },
         {
-            "name": "The Rabbit's Fall Harvest",
-            "description": "Come peek to see who found some snacks in the kitchen! Hint: They Will Be Rabbits",
-            "room": "kitchen",
-            "start": "2021-10-29T20:00:00-04:00",
-            "end": "2021-10-30T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/halloweenevents.png"
+            "name": "Whimsical Blasphemy with Mercy Maelica",
+            "description": "Join Mercy for music and videos celebrating the season. Learn more about the show and pick up some sweet merch at whimsicalblasphemy.com",
+            "room": "grandBallroom",
+            "start": "2021-12-30T20:00:00-04:00",
+            "end": "2021-12-31T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/eventimage.png"
+        },
+        {
+            "name": "Movies that Hurt: The Star Wars Holiday Special",
+            "description": "CW: Mentions and depictions of drug use. Join Tanooki Lizzz, Randy Faust and Malak Gorcrow as TST3K takes on the Star Wars Holiday Special (with mostly factual trivia.) A notoriously painful movie to watch, see how far you get in this endurance test while learning what may or may not have happened on set.",
+            "room": "theater",
+            "start": "2021-12-31T00:00:00-04:00",
+            "end": "2021-12-31T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/eventimage.png"
         },
         {
             "name": "Grey Faction Satanic Archives",
             "description": "TSTVHQ's Satanic Archive Library is open all night. Texts courtesy of Center for Inquiry and Grey Faction.",
             "room": "library",
-            "start": "2021-10-29T20:00:00-04:00",
-            "end": "2021-10-30T02:00:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/events/halloweenevents.png"
+            "start": "2021-12-30T20:00:00-04:00",
+            "end": "2021-12-31T02:00:00-04:00",
+            "image": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/events/eventimage.png"
         }
     ]
 }
