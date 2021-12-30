@@ -3,16 +3,16 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "IFRAME",
+            "type": "JITSI",
             "capacity": 20,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomKitchen.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomKitchen.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/bz-1ujV-v2c"
             },
-            "description": "Looks like somebun found a snack!",
+            "description": "Mind grabbing me another cinnamon stick for my cider?",
             "directions": {
                 "west": "powderRoom",
                 "north": "grandBallroom",
@@ -38,8 +38,8 @@
             "muteRoom": false,
             "hideVideo": false,
             "doorTint": "#000000",
-            "description": "When you need a dark moment to yourself. just don't carry an open flame.",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomPowder.png",
+            "description": "Intimate conversations only",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomPowder.png",
             "directions": {
                 "east": "kitchen"
             },
@@ -56,15 +56,15 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "JITSI",
-            "capacity": 25,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBallroom.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomBallroom.png",
             "iframeOptions": {
                 "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/83cea71b-fda0-4ea7-0d5c-636e2a0695a9"
             },
-            "description": "For we Danse Macabre: Was that organ playing itself?",
+            "description": "The windows fog from the exaltation and dancing!",
             "directions": {
                 "south": "kitchen"
             },
@@ -86,9 +86,9 @@
             "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBackParlor.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomBackParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/jsvkczDEPIM"
+                "src": "https://www.youtube.com/embed/lf5XT_F5vtY"
             },
             "description": "The back parlor is the speakeasy...",
             "directions": {
@@ -114,8 +114,8 @@
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 10,
-            "description": "What goes up must come down. At terminal velocity.",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomElevator.png",
+            "description": "What goes up must come down-- at terminal velocity.",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterElevator.png",
             "directions": {
                 "north": "library",
                 "east": "brick",
@@ -137,14 +137,14 @@
         {
             "id": "frontParlor",
             "name": "Front Parlor",
-            "capacity": 10,
+            "capacity": 300,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "A devilish dance, a siren’s song.",
-            "type": "JITSI",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomFrontParlor.png",
+            "description": "This room could use a third fireplace, don't you think?",
+            "type": "CHATSTREAM",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomFrontParlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/yXdUAMJXZ3M"
+                "src": "https://www.youtube.com/embed/tHrtQ_1RK7w"
             },
             "directions": {
                 "east": "teaRoom",
@@ -172,10 +172,10 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/884vWIyOzCU"
+                "src": "https://www.youtube.com/embed/mVFrIO_s6M8"
             },
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTea.png",
-            "description": "The gentle spiced air revitalizes you even before your first sip.",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/HalloweenRoomTea.png",
+            "description": "The gentle spiced scent warms you even before your first sip.",
             "directions": {
                 "north": "den",
                 "west": "frontParlor",
@@ -202,7 +202,7 @@
                 "src": "https://www.youtube.com/embed/E_yxi7iyIXE"
             },
             "capacity": 30,
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomDen.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomDen.png",
             "description": "Rest your weary bones. No need to get up.",
             "directions": {
                 "north": "backParlor",
@@ -228,7 +228,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomRitual.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomRitual.png",
             "iframeOptions": {
                 "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/f7211aa5-999a-9586-26d5-d1ff15280df3"
             },
@@ -254,7 +254,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "Donate to support these bats at batworld.org",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBelfry.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomBelfry.png",
             "iframeOptions": {
                 "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
             },
@@ -280,7 +280,7 @@
             "hideVideo": false,
             "description": "Peruse the Archives: Courtesy of Grey Faction",
             "type": "IMAGEMAP",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomLibrary.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomLibrary.png",
             "directions": {
                 "east": "sleepingPorch",
                 "north": "boudoir",
@@ -308,7 +308,7 @@
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "Is the old man on the cot dead or sleeping? Do you dare try to wake him?",
+            "description": "The fireplace in the corner and the handmade black quilts make this bearable",
             "type": "JITSI",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomPorch.png",
             "directions": {
@@ -337,8 +337,8 @@
             "capacity": 5,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomAviary.png",
-            "description": "The birds sing for their new guests and the expectation of treasures.",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomAviary.png",
+            "description": "The birds huddle close, beaks under wings, protecting against the chill.",
             "directions": {
                 "east": "library"
             },
@@ -356,15 +356,15 @@
         {
             "id": "theater",
             "name": "Theater",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
-            "description": "Appease the spirits dancing across the stage with applause.",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTheater.png",
+            "description": "The black velvet seats are warm to the touch",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomTheater.png",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/6042ed47-2e52-18df-085a-089c07a50d26"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/3699646c-da67-c207-13f4-2853bc505a82"
             },
             "directions": {
                 "west": "sleepingPorch",
@@ -389,8 +389,8 @@
             "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "The languid chill of eternity is solemnized in etched stone.",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomCemetery.png",
+            "description": "The frost sparkles on the Mausoleum.",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomCemetery.png",
             "directions": {
                 "west": "garden"
             },
@@ -416,7 +416,7 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/uuMxoFsQ9XY"
             },
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomBoudoir.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomBoudoir.png",
             "directions": {
                 "south": "library"
             },
@@ -442,7 +442,7 @@
                 "src": "https://www.youtube.com/embed/4r2sz1eT6Rc"
             },
             "description": "The spider lily blooms in darkness",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomGarden.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomGarden.png",
             "directions": {
                 "west": "teaRoom",
                 "east": "cemetery"
@@ -463,13 +463,13 @@
             "id": "trapDoor",
             "name": "Trap Door to Hell!",
             "type": "IFRAME",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTrap.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomTrap.png",
             "capacity": 15,
             "muteRoom": false,
             "hideVideo": false,
             "description": "Is it hot in here?",
             "iframeOptions": {
-                "src": "https://youtube.com/embed/uJvPBGCcs1U"
+                "src": "https://www.youtube.com/embed/kiKzcTiVYzo"
             },
             "directions": {
                 "east": "secretTunnels"
@@ -483,7 +483,7 @@
             "capacity": 15,
             "hideVideo": false,
             "muteRoom": false,
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomTunnel.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomTunnel.png",
             "description": "This looks just like under McMartin Preschool!",
             "directions": {
                 "west": "trapDoor",
@@ -500,7 +500,7 @@
             "hideVideo": false,
             "description": "Come for the long pork",
             "doorTint": "#000000",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomCrematorium.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomCrematorium.png",
             "directions": {
                 "west": "secretTunnels"
             }
