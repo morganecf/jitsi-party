@@ -15,46 +15,46 @@
     "moderation": {
         "moderatorEmails": [
             "vhq@thesatanictemple.com"
-        ],
-        "moderatorNumber": "+14802941991",
-        "formDescription": "Someone harshing your vibe? Need a moderator to look into it? We\u2019ll keep what you tell us private, and we\u2019ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation."
+       ],
+        "moderatorNumber": "+14046420146",
+        "formDescription": "Someone harshing your vibe? Need a moderator to look into it? We\u2019ll keep what you tell us private, and we\u2019ll send someone your way as soon as you send this. Please include the time of the incident, the room in which it took place, the relevant username(s), and a brief description of the situation. You must submit at least 10 words and use a .com, .org or .net email address for the form to submit."
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/halloweenBG.png",
+        "backgroundImagePath": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/TeaRoomWinter.png",
         "enterSpaceButtonText": "Enter",
-        "avatarSelectionText": "Select your Spooky",
+        "avatarSelectionText": "Select your Sigil",
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
     },
     "avatars": [
         {
             "images": [
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons01.png",
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons02.png",
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons03.png"
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Andromalius01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Asmoday01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Bathin01.png"
             ]
         },
         {
             "images": [
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons04.png",
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons05.png",
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons06.png"
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Belial01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Berith01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Buer01.png"
             ]
         },
         {
             "images": [
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons07.png",
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons08.png",
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons09.png"
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Bune01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Ipos01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Naberius01.png"
             ]
         }
     ],
     "specialAvatars": {
         "goodbye": {
             "images": [
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons07.png",
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons08.png",
-                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/halloween/HalloweenIcons09.png"
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Shax01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Sitri01.png",
+                "https://s3.us-east-2.amazonaws.com/thesatanic.estate/sigils/Stolas01.png"
             ]
         }
     },
@@ -82,8 +82,7 @@
                 {
                     "text": "\ud83d\udda4 {count} meeting animals",
                     "match": [
-                        "belfry",
-                        "sleepingPorch"
+                        "belfry"
                     ]
                 }
             ]
