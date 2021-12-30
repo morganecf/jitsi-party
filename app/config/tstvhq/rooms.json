@@ -223,8 +223,8 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
@@ -310,7 +310,7 @@
             "hideVideo": false,
             "description": "The fireplace in the corner and the handmade black quilts make this bearable",
             "type": "JITSI",
-            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/halloween/HalloweenRoomPorch.png",
+            "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomGarden.png",
             "directions": {
                 "west": "library",
                 "east": "theater"
