@@ -5,7 +5,7 @@
                 "audio": {
                     "autoPlay": true,
                     "hideControls": true,
-                  "path": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/music/halloween.mp3"
+                  "path": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/music/lounge11loop.mp3"
                 }
             },
             "rooms": [
@@ -15,18 +15,18 @@
                             "nextRoom": [
                                 "subway"
                             ],
-                            "text": "Push on that brick!"
+                            "text": "Oh No, Not Again"
                         },
                         {
                             "nextRoom": [
                                 "library"
                             ],
-                            "text": "Weird...oh well..."
+                            "text": "Am I dead?"
                         }
                     ],
                     "id": "brick",
-                    "name": "Loose Brick",
-                    "text": "As you head down the stairs, you notice a rather peculiar brick sticking out from the otherwise smooth stone wall."
+                    "name": "Nothing",
+                    "text": "You see nothing, you feel nothing, you taste nothing, you smell nothing. You hear that goddamned music."
                 },
                 {
                     "buttons": [
@@ -34,18 +34,18 @@
                             "nextRoom": [
                                 "train"
                             ],
-                            "text": "Take the left-hand train"
+                            "text": "Every Year!"
                         },
                         {
                             "nextRoom": [
                                 "sleepingPorch"
                             ],
-                            "text": "Take the right-hand train"
+                            "text": "Evaporate"
                         }
                     ],
                     "id": "subway",
-                    "name": "Now boarding",
-                    "text": "As you press on the brick, the entire wall gives way, and you feel yourself stumble forward down a flight of stairs. You fall for what seems like ages before, gathering your senses, you find yourself on a subway platform. Two subway cars wait on either side of you."
+                    "name": "The Waiting",
+                    "text": "As the music drones on you begin to wonder if there are others, out there, in The Waiting. No one ever mentions the waiting. Yet you always seem to end up here one way or another."
                 },
                 {
                     "buttons": [
@@ -53,18 +53,18 @@
                             "nextRoom": [
                                 "station"
                             ],
-                            "text": "Better just keep to myself"
+                            "text": "Start Crawling"
                         },
                         {
                             "nextRoom": [
                                 "cemetery"
                             ],
-                            "text": "Let me off!"
+                            "text": "Panic"
                         }
                     ],
                     "id": "train",
-                    "name": "Going downtown",
-                    "text": "The train is empty as you take a seat; it lurches forward and the lights begin to flicker. Wait a minute - there wasn't anyone in this car a second ago... you see a huddled figure sitting at the other end of the car."
+                    "name": "sometimes nothing breaks",
+                    "text": "A pinpoint of light appears in your perepheral vision. Sensations of coldness and damp begin to creep over you, followed by the smell of earth, the feeling of grit in your teeth."
                 },
                 {
                     "buttons": [
@@ -72,18 +72,18 @@
                             "nextRoom": [
                                 "cabin"
                             ],
-                            "text": "Make a run for it"
+                            "text": "Looks Familiar"
                         },
                         {
                             "nextRoom": [
                                 "frontParlor"
                             ],
-                            "text": "Close your eyes - this HAS to be a dream"
+                            "text": "I'm Lost"
                         }
                     ],
                     "id": "station",
-                    "name": "Arrivals",
-                    "text": "As you sit the lights continue to flicker. In a blink you begin to hear a soft rasping noise from the bundled figure. The lights flash. Suddenly the figure is one seat closer. Flicker. Another closer. Faster and faster they're moving closer as the train begins to slow. The doors open. The figure is upon you and you can feel the hot, growling breaths of whoever or whatever this is."
+                    "name": "the Something",
+                    "text": "No choice but to claw your way back to reality. Slowly, you begin to move. The dirt is heavy. It will take along time. Through the dirt and worms and muck and slime, past bone and midden, through remnents of long dead civilizations and into labyrinthian tunnels carved by the entirely forgotten you slowly make your way towards the Something."
                 },
                 {
                     "buttons": [
@@ -91,18 +91,18 @@
                             "nextRoom": [
                                 "trapDoor"
                             ],
-                            "text": "Climb the stairs and follow the music"
+                            "text": "Get out"
                         },
                         {
                             "nextRoom": [
                                 "sleepingPorch"
                             ],
-                            "text": "Take the other train back"
+                            "text": "Explore Cave"
                         }
                     ],
                     "id": "station",
-                    "name": "The night is young",
-                    "text": "Your heart still racing, you catch your breath on this platform as the train speeds away. You swear you can hear a cackling laugh fade into the darkness along with it. The only other sound is your heartbeat, pumping rhythmically in the dimly lit station. Or is that...music? You can hear it echoing throughout the cavernous tunnels. You turn around to find its source and discover a staircase leading upward. At that moment, another train pulls up to the opposite side of the platform."
+                    "name": "It was only the end of the world again",
+                    "text": "You claw and scramble through the nothing and it begins to take shape. You can't tell how large the cavern is, but you know its big. Every little sound echoes. The sound of water driping from stalactites count time. The cave would be so much faster with wings, probably more dangerous though. The cave plays tricks on you. You wonder when the halucinations will start."
                 }
             ]
         }
