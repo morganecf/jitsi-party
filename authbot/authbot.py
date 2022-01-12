@@ -16,7 +16,7 @@ from slack_sdk.errors import SlackApiError
 
 
 SYNC_MAP = {
-    "temple-1-4-bipoc-during-the-holidays": "TempleJanuary4",
+    "temple-1-11-to-la-voisin-with-love": "TempleJanuary11",
 }
 
 
