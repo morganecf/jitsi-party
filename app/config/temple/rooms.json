@@ -110,8 +110,8 @@
         {
             "id": "sacristy",
             "name": "The Sacristy",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "muteRoom": true,
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
