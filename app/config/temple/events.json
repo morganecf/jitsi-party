@@ -55,14 +55,14 @@
             "start": "2022-01-18T22:00:00-05:00",
             "end": "2022-01-18T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        },
-        {
+        }
+       /* {
             "name": "After Services Activities: TST SoCal Racial and Ethnic Diversity Group",
             "description": "Join Satanists of Color within TST as they discuss how BIPOC issues align with our 7 tenets. BIPOC and allies of all walks of life welcome.",
             "room": "raum",
             "start": "2022-01-18T22:00:00-05:00",
             "end": "2022-01-18T23:59:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
-        }
+        } */
     ]
 }
