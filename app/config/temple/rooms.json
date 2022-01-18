@@ -110,10 +110,10 @@
         {
             "id": "sacristy",
             "name": "The Sacristy",
-            "type": "CHATSTREAM",
-            "capacity": 300,
-            "muteRoom": true,
-            "hideVideo": true,
+            "type": "JITSI",
+            "capacity": 20,
+            "muteRoom": false,
+            "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom5.png",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/ngD8EM0M680"
@@ -170,7 +170,7 @@
         {
             "id": "raum",
             "name": "Raum",
-            "type": "CHATSTREAM",
+            "type": "JITSI",
             "muteRoom": false,
             "hideVideo": false,
             "capacity": 25,
