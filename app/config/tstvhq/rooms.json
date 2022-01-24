@@ -3,8 +3,8 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
@@ -355,13 +355,13 @@
         },
         {
             "id": "theater",
-            "name": "Theater",
-            "type": "CHATSTREAM",
+            "name": "Gallery",
+            "type": "ART",
             "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
-            "description": "The black velvet seats are warm to the touch",
+            "description": "Browse Salem Art Gallery's Exhibit WOLFDREAM",
             "backgroundImage": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/WinterRoomTheater.png",
             "iframeOptions": {
                 "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/3699646c-da67-c207-13f4-2853bc505a82"
