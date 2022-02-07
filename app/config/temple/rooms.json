@@ -10,9 +10,9 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/XWNwqJrNg7U"
+                "src": "https://www.youtube.com/embed/6VCndS4TvYk"
             },
-            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/89455475392",
+            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/87691067783",
             "directions": {
                 "east": "sanctuary"
             },
@@ -36,7 +36,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom2.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/fUOvAEU9LIY"
+                "src": "https://www.youtube.com/embed/b9CqryDu2Pk"
             },
             "description": "Join Dungeon Mistress Kaelea and a team of intrepid adventurers as they unravel mysteries in the Kingdom of Ekerion, a 5th Edition Dungeons & Dragons homebrew campaign. Tune in for laughs, silly voices, twists and turns, and lots of dice-rolling shenanigans.",
             "directions": {
@@ -89,10 +89,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "What treasures lay undiscovered for those who gather here? JOIN THE PARTY: https://us02web.zoom.us/j/87883426157",
+            "description": "What treasures lay undiscovered for those who gather here? JOIN THE PARTY: https://us02web.zoom.us/j/89360838806",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom4.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/wJDlUWd3CxA"
+                "src": "https://www.youtube.com/embed/8nCsIolI5ZI"
             },
             "directions": {
                 "south": "sacristy"
@@ -170,14 +170,14 @@
         {
             "id": "raum",
             "name": "Raum",
-            "type": "JITSI",
+            "type": "CHATSTREAM",
             "muteRoom": false,
             "hideVideo": false,
-            "capacity": 25,
+            "capacity": 200,
             "description": "Speak my friends of the past, present, future; of reconciliation, of foes, of love.",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom7.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/KBK-BKEmI00"
+                "src": "https://www.youtube.com/embed/hFw4325B-TY"
             },
             "imageMapOptions": "satanic-merch-map",
             "directions": {
@@ -234,10 +234,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/PA8835_7u_U"
+                "src": "https://www.youtube.com/embed/G1YUiNXU9S0"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
-            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE CONVERSATION: https://us02web.zoom.us/j/89597083062",
+            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE CONVERSATION: https://us02web.zoom.us/j/89401296493",
             "directions": {
                 "west": "sanctuary"
             },
