@@ -21,7 +21,7 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/backgrounds/vhq/winter/TeaRoomWinter.png",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-welcome.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your Sigil",
         "headerHtml": "<div class='tst'><p>Welcome Home</p><h1>The Satanic Temple Virtual Headquarters</h1>"
