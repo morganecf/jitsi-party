@@ -377,6 +377,7 @@
                     "west": 10,
                     "north": 20
                 }
+            },
             "doorTint": "purple",
             "backgroundImage": ""
         },
