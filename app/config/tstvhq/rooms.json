@@ -355,13 +355,13 @@
         },
         {
             "id": "theater",
-            "name": "Theater",
+            "name": "Gallery",
             "type": "CHATSTREAM",
             "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
             "locked": false,
-            "description": "The black velvet seats are warm to the touch",
+            "description": "Browse Salem Art Gallery's Exhibit WOLFDREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-theater.png",
             "iframeOptions": {
                 "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/3699646c-da67-c207-13f4-2853bc505a82"
