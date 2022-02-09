@@ -4,13 +4,13 @@
             "id": "kitchen",
             "name": "Kitchen",
             "type": "CHATSTREAM",
-            "capacity": 200,
+            "capacity": 300,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-kitchen.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/bz-1ujV-v2c"
+                "src": "https://www.youtube.com/embed/ABxZDV7-aIA"
             },
             "description": "Mind grabbing me another cinnamon stick for my cider?",
             "directions": {
@@ -56,8 +56,8 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "CHATSTREAM",
-            "capacity": 300,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-grand-ballroom.png",
@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/lf5XT_F5vtY"
+                "src": "https://www.youtube.com/embed/jQ5SnjzY0tI"
             },
             "description": "The back parlor is the speakeasy...",
             "directions": {
@@ -144,7 +144,7 @@
             "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/tHrtQ_1RK7w"
+                "src": "https://www.youtube.com/embed/A6F-YwUtJl0"
             },
             "directions": {
                 "east": "teaRoom",
@@ -167,8 +167,8 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "CHATSTREAM",
-            "capacity": 400,
+            "type": "JITSI",
+            "capacity": 20,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
@@ -202,6 +202,8 @@
                 "src": "https://www.youtube.com/embed/E_yxi7iyIXE"
             },
             "capacity": 30,
+            "muteRoom": false,
+            "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-secret-tunnels.png",
             "description": "Rest your weary bones. No need to get up.",
             "directions": {
@@ -223,8 +225,8 @@
         {
             "id": "ritualChamber",
             "name": "Ritual Chamber",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 300,
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
