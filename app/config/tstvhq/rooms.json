@@ -356,16 +356,13 @@
         },
         {
             "id": "theater",
-            "name": "Gallery",
+            "name": "Salem Art Gallery",
             "type": "ART",
-            "capacity": 200,
-            "muteRoom": false,
-            "hideVideo": false,
-            "locked": false,
-            "description": "Browse Salem Art Gallery's Exhibit WOLFDREAM",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-theater.png",
-            "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/3699646c-da67-c207-13f4-2853bc505a82"
+            "description": "WOLFDREAM: Reception at VHQ",
+            "art": {
+                "title": "This exhibition, Juried by Wolf Hollow Director, Zee Soffron, explores and promotes the majesty of these beautiful creatures whose alluring energy continues to inspire.",
+                "artist": "As a commitment to the preservation of these important animals, The Salem Art Gallery at The Satanic Temple Salem pledges the proceeds of the works included in this exhibition towards our neighbors to the north, Wolf Hollow Conservation and Education Center.",
+                "src": "https://tstvhq.s3.amazonaws.com/art/WolfDreamPoster.jpg"
             },
             "directions": {
                 "west": "sleepingPorch",
@@ -380,8 +377,8 @@
                     "west": 10,
                     "north": 20
                 }
-            },
-            "doorTint": "#000000"
+            "doorTint": "purple",
+            "backgroundImage": ""
         },
         {
             "id": "cemetery",
