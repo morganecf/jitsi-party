@@ -24,7 +24,7 @@
         "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-welcome.png",
         "enterSpaceButtonText": "Enter",
         "avatarSelectionText": "Select your Sigil",
-        "headerHtml": "<div class='tst'><p>Welcome Home to</p><h1>The Satanic Temple Virtual Headquarters</h1><h2>Happy Lupercalia!/h2>"
+        "headerHtml": "<div class='tst'><p>Welcome Home to</p><h1>The Satanic Temple Virtual Headquarters</h1><h2>Happy Lupercalia!</h2>"
     },
     "avatars": [
         {
