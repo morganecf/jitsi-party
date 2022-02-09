@@ -118,7 +118,6 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-elevator.gif",
             "directions": {
                 "north": "library",
-                "east": "brick",
                 "south": "frontParlor"
             },
             "map": {
@@ -358,7 +357,7 @@
         {
             "id": "theater",
             "name": "Gallery",
-            "type": "CHATSTREAM",
+            "type": "ART",
             "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
