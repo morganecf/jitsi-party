@@ -455,6 +455,96 @@
             "backgroundImage": ""
         },
         {
+            "id": "gallery6",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "Solo Lobo",
+                "artist": "Joshua Beckett",
+                "src": "https://tstvhq.s3.amazonaws.com/art/BeckettJoshua01.png"
+            },
+            "directions": {
+                "west": "gallery5",
+                "north": "belfry",
+                "east": "gallery7"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery7",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "Solo Lobo",
+                "artist": "Joshua Beckett",
+                "src": "https://tstvhq.s3.amazonaws.com/art/BeckettJoshua01.png"
+            },
+            "directions": {
+                "west": "gallery6",
+                "north": "belfry",
+                "east": "gallery8"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery8",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "Mater Romae",
+                "artist": "Grace Becraft",
+                "src": "https://tstvhq.s3.amazonaws.com/art/BecraftGrace01.png"
+            },
+            "directions": {
+                "west": "gallery6",
+                "north": "belfry",
+                "east": "gallery8"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery9",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "Hjälten The Hero",
+                "artist": "Cory Benhatzel",
+                "src": "https://tstvhq.s3.amazonaws.com/art/BenhatzelCory01.png"
+            },
+            "directions": {
+                "west": "gallery8",
+                "north": "belfry",
+                "east": "gallery10"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery10",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "Hjälten The Hero",
+                "artist": "Jim Bostick",
+                "src": "https://tstvhq.s3.amazonaws.com/art/BostickJim.png"
+            },
+            "directions": {
+                "west": "gallery9",
+                "north": "belfry",
+                "east": "gallery11"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
             "id": "cemetery",
             "name": "Cemetery",
             "type": "JITSI",
