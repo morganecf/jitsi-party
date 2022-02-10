@@ -434,7 +434,7 @@
 
                 "artist": "Christopher Alday",
 
-                "src": "https://tstvhq.s3.amazonaws.com/art/AdlerLore01.png"
+                "src": "https://tstvhq.s3.amazonaws.com/art/AldayChristopher01.png"
 
             },
 
@@ -620,11 +620,11 @@
 
             "directions": {
 
-                "west": "gallery6",
+                "west": "gallery7",
 
                 "north": "belfry",
 
-                "east": "gallery8"
+                "east": "gallery9"
 
             },
 
