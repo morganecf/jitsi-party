@@ -1,6 +1,14 @@
 {
     "events": [
         {
+            "name": "WOLFDREAM: A Salem Art Gallery Exhibition",
+            "description": "The gallery will be open all night. Browse art, some of which is available for purchase, supporting a Salem local wolf sanctuary.",
+            "room": "theater",
+            "start": "2022-02-10T20:00:00-05:00",
+            "end": "2022-02-11T02:00:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+        },
+        {
             "name": "Mardi Gras, Lupercalia and Bananas Foster with The Satanic Chef",
             "description": "Learn how to cook the wonderful bananas foster & creme anglaise dessert which will light any Bible on fire at The Satanic Estate. Learn how Lupercalia traditions made its way into Mardi Gras from the pagan rituals of Lupercalia and saturnalia and eventually tied into the Cuisine of New Orleans.",
             "room": "kitchen",
