@@ -434,7 +434,7 @@
 
                 "artist": "Christopher Alday",
 
-                "src": "https://tstvhq.s3.amazonaws.com/art/AdlerLore01.png"
+                "src": "https://tstvhq.s3.amazonaws.com/art/AldayChristopher01.png"
 
             },
 
@@ -574,11 +574,11 @@
 
             "art": {
 
-                "title": "Solo Lobo",
+                "title": "Your Eyes Are My Eyes",
 
-                "artist": "Joshua Beckett",
+                "artist": "Heather Woodsum",
 
-                "src": "https://tstvhq.s3.amazonaws.com/art/BeckettJoshua01.png"
+                "src": "https://tstvhq.s3.amazonaws.com/art/WoodsumHeather01.png"
 
             },
 
@@ -620,11 +620,11 @@
 
             "directions": {
 
-                "west": "gallery6",
+                "west": "gallery7",
 
                 "north": "belfry",
 
-                "east": "gallery8"
+                "east": "gallery9"
 
             },
 
@@ -2803,7 +2803,7 @@
 
                 "north": "belfry",
 
-                "east": "gallery70"
+                "east": "theater"
 
             },
 
@@ -2812,42 +2812,6 @@
             "backgroundImage": ""
 
         },
-        {
-
-            "id": "gallery70",
-
-            "name": "Salem Art Gallery",
-
-            "type": "ART",
-
-            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
-
-            "art": {
-
-                "title": "Your Eyes Are My Eyes",
-
-                "artist": "Heather Woodsum",
-
-                "src": "https://tstvhq.s3.amazonaws.com/art/WoodsumHeather01.png"
-
-            },
-
-            "directions": {
-
-                "west": "gallery69",
-
-                "north": "belfry"
-
-
-
-            },
-
-            "doorTint": "purple",
-
-            "backgroundImage": ""
-
-        },
-
 
         {
             "id": "cemetery",
