@@ -358,15 +358,16 @@
             "id": "theater",
             "name": "Salem Art Gallery",
             "type": "ART",
-            "description": "WOLFDREAM: Reception at VHQ",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to purchase.",
             "art": {
-                "title": "This exhibition, Juried by Wolf Hollow Director, Zee Soffron, explores and promotes the majesty of these beautiful creatures whose alluring energy continues to inspire.",
-                "artist": "As a commitment to the preservation of these important animals, The Salem Art Gallery at The Satanic Temple Salem pledges the proceeds of the works included in this exhibition towards our neighbors to the north, Wolf Hollow Conservation and Education Center.",
+                "title": "This exhibition, Juried by Wolf Hollow Director, Zee Soffron, explores and promotes the majesty of these beautiful creatures whose alluring energy continues to inspire. As a commitment to the preservation of these important animals, The Salem Art Gallery at The Satanic Temple Salem pledges the proceeds of the works included in this exhibition towards our neighbors to the north, Wolf Hollow Conservation and Education Center.",
+                "artist": "",
                 "src": "https://tstvhq.s3.amazonaws.com/art/WolfDreamPoster.jpg"
             },
             "directions": {
                 "west": "sleepingPorch",
-                "north": "belfry"
+                "north": "belfry",
+                "east": "gallery1"
             },
             "map": {
                 "x": 18,
@@ -377,6 +378,60 @@
                     "west": 10,
                     "north": 20
                 }
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery1",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "Starry Night",
+                "artist": "Lore Adler",
+                "src": "https://tstvhq.s3.amazonaws.com/art/AdlerLore01.png"
+            },
+            "directions": {
+                "west": "theater",
+                "north": "belfry",
+                "east": "gallery2"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery2",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "W O L F",
+                "artist": "Christopher Alday",
+                "src": "https://tstvhq.s3.amazonaws.com/art/AdlerLore01.png"
+            },
+            "directions": {
+                "west": "gallery 1",
+                "north": "belfry",
+                "east": "gallery3"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery3",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "W O L F",
+                "artist": "Christopher Alday",
+                "src": "https://tstvhq.s3.amazonaws.com/art/AldayChristopher01.png"
+            },
+            "directions": {
+                "west": "gallery 2",
+                "north": "belfry",
+                "east": "gallery4"
             },
             "doorTint": "purple",
             "backgroundImage": ""
