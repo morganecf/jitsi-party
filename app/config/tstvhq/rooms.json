@@ -367,7 +367,7 @@
             "directions": {
                 "west": "sleepingPorch",
                 "north": "belfry",
-                "east": "gallery1"
+                "east": "gallery2"
             },
             "map": {
                 "x": 18,
@@ -383,7 +383,7 @@
             "backgroundImage": ""
         },
         {
-            "id": "gallery1",
+            "id": "gallery2",
             "name": "Salem Art Gallery",
             "type": "ART",
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
@@ -394,24 +394,6 @@
             },
             "directions": {
                 "west": "theater",
-                "north": "belfry",
-                "east": "gallery2"
-            },
-            "doorTint": "purple",
-            "backgroundImage": ""
-        },
-        {
-            "id": "gallery2",
-            "name": "Salem Art Gallery",
-            "type": "ART",
-            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
-            "art": {
-                "title": "W O L F",
-                "artist": "Christopher Alday",
-                "src": "https://tstvhq.s3.amazonaws.com/art/AdlerLore01.png"
-            },
-            "directions": {
-                "west": "gallery 1",
                 "north": "belfry",
                 "east": "gallery3"
             },
@@ -426,12 +408,48 @@
             "art": {
                 "title": "W O L F",
                 "artist": "Christopher Alday",
-                "src": "https://tstvhq.s3.amazonaws.com/art/AldayChristopher01.png"
+                "src": "https://tstvhq.s3.amazonaws.com/art/AdlerLore01.png"
             },
             "directions": {
-                "west": "gallery 2",
+                "west": "gallery2",
                 "north": "belfry",
                 "east": "gallery4"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery4",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "Dog House",
+                "artist": "Neeka Allsup",
+                "src": "https://tstvhq.s3.amazonaws.com/art/AllsupNeeka01.png"
+            },
+            "directions": {
+                "west": "gallery3",
+                "north": "belfry",
+                "east": "gallery5"
+            },
+            "doorTint": "purple",
+            "backgroundImage": ""
+        },
+        {
+            "id": "gallery5",
+            "name": "Salem Art Gallery",
+            "type": "ART",
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+            "art": {
+                "title": "Untitled",
+                "artist": "Brian Alves",
+                "src": "https://tstvhq.s3.amazonaws.com/art/AlvesBrian01.png"
+            },
+            "directions": {
+                "west": "gallery4",
+                "north": "belfry",
+                "east": "gallery6"
             },
             "doorTint": "purple",
             "backgroundImage": ""
