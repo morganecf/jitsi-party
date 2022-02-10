@@ -382,168 +382,2473 @@
             "doorTint": "purple",
             "backgroundImage": ""
         },
-        {
+   {
+
             "id": "gallery2",
+
             "name": "Salem Art Gallery",
+
             "type": "ART",
+
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
             "art": {
+
                 "title": "Starry Night",
+
                 "artist": "Lore Adler",
+
                 "src": "https://tstvhq.s3.amazonaws.com/art/AdlerLore01.png"
+
             },
+
             "directions": {
+
                 "west": "theater",
+
                 "north": "belfry",
+
                 "east": "gallery3"
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
         },
+
         {
+
             "id": "gallery3",
+
             "name": "Salem Art Gallery",
+
             "type": "ART",
+
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
             "art": {
+
                 "title": "W O L F",
+
                 "artist": "Christopher Alday",
+
                 "src": "https://tstvhq.s3.amazonaws.com/art/AdlerLore01.png"
+
             },
+
             "directions": {
+
                 "west": "gallery2",
+
                 "north": "belfry",
+
                 "east": "gallery4"
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
         },
+
         {
+
             "id": "gallery4",
+
             "name": "Salem Art Gallery",
+
             "type": "ART",
+
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
             "art": {
+
                 "title": "Dog House",
+
                 "artist": "Neeka Allsup",
+
                 "src": "https://tstvhq.s3.amazonaws.com/art/AllsupNeeka01.png"
+
             },
+
             "directions": {
+
                 "west": "gallery3",
+
                 "north": "belfry",
+
                 "east": "gallery5"
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
         },
+
         {
+
             "id": "gallery5",
+
             "name": "Salem Art Gallery",
+
             "type": "ART",
+
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
             "art": {
+
                 "title": "Untitled",
+
                 "artist": "Brian Alves",
+
                 "src": "https://tstvhq.s3.amazonaws.com/art/AlvesBrian01.png"
+
             },
+
             "directions": {
+
                 "west": "gallery4",
+
                 "north": "belfry",
+
                 "east": "gallery6"
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
         },
+
         {
+
             "id": "gallery6",
+
             "name": "Salem Art Gallery",
+
             "type": "ART",
+
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
             "art": {
+
                 "title": "Solo Lobo",
+
                 "artist": "Joshua Beckett",
+
                 "src": "https://tstvhq.s3.amazonaws.com/art/BeckettJoshua01.png"
+
             },
+
             "directions": {
+
                 "west": "gallery5",
+
                 "north": "belfry",
+
                 "east": "gallery7"
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
         },
+
         {
+
             "id": "gallery7",
+
             "name": "Salem Art Gallery",
+
             "type": "ART",
+
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
             "art": {
+
                 "title": "Solo Lobo",
+
                 "artist": "Joshua Beckett",
+
                 "src": "https://tstvhq.s3.amazonaws.com/art/BeckettJoshua01.png"
+
             },
+
             "directions": {
+
                 "west": "gallery6",
+
                 "north": "belfry",
+
                 "east": "gallery8"
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
         },
+
         {
+
             "id": "gallery8",
+
             "name": "Salem Art Gallery",
+
             "type": "ART",
+
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
             "art": {
+
                 "title": "Mater Romae",
+
                 "artist": "Grace Becraft",
+
                 "src": "https://tstvhq.s3.amazonaws.com/art/BecraftGrace01.png"
+
             },
+
             "directions": {
+
                 "west": "gallery6",
+
                 "north": "belfry",
+
                 "east": "gallery8"
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
         },
+
         {
+
             "id": "gallery9",
+
             "name": "Salem Art Gallery",
+
             "type": "ART",
+
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
             "art": {
+
                 "title": "Hjälten The Hero",
+
                 "artist": "Cory Benhatzel",
+
                 "src": "https://tstvhq.s3.amazonaws.com/art/BenhatzelCory01.png"
+
             },
+
             "directions": {
+
                 "west": "gallery8",
+
                 "north": "belfry",
+
                 "east": "gallery10"
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
+        },
+
+        {
+
+            "id": "gallery10",
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Hjälten The Hero",
+
+                "artist": "Jim Bostick",
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/BostickJim.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery9",
+
+                "north": "belfry",
+
+                "east": "gallery11"
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
         },
         {
-            "id": "gallery10",
+
+            "id": "gallery11”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Let Your Inner Wolf Loose”,
+
+                "artist": “Iryna Calincenco”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/CalincencoIryna.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery10”,
+
+                "north": "belfry",
+
+                "east": "gallery12”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery12”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Raku Fired Wolf Fur Urn 1",
+
+                "artist": “Colleen Callahan”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/CallahanColleen01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery11”,
+
+                "north": "belfry",
+
+                "east": "gallery13”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery13”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Cycle of Consumption”,
+
+                "artist": “SB Chandler”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/ChandlerSB01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery12”,
+
+                "north": "belfry",
+
+                "east": "gallery14”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery14”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Singing Lesson”,
+
+                "artist": "Susan Coons“,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/CoonsSusan.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery13”,
+
+                "north": "belfry",
+
+                "east": "gallery15”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery15”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Hungry Like the Wolf”,
+
+                "artist": “James Courtney”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/CourtneyJames.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery14”,
+
+                "north": "belfry",
+
+                "east": "gallery16”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery16”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “ARCADIA”,
+
+                "artist": "Angela Douglas“,
+
+                "src": "hhttps://tstvhq.s3.amazonaws.com/art/DouglasAngela03.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery15”,
+
+                "north": "belfry",
+
+                "east": "gallery17”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery17”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Lupercalia”,
+
+                "artist": “Autumn Ni Dubghaill”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/DubghaillAutumn01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery16”,
+
+                "north": "belfry",
+
+                "east": "gallery18”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery18”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “A Delicate Balance“,
+
+                "artist": "Mathew Dunn”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/DunnMathew01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery17”,
+
+                "north": "belfry",
+
+                "east": "gallery19”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery19”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Under the Moon”,
+
+                "artist": “Elliot Olson”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/ElliotOlson.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery18”,
+
+                "north": "belfry",
+
+                "east": "gallery20”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery20”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “The Spirit of Enlightenment”,
+
+                "artist": "Kimmie Etherton”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/EthertonKimmie01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery19”,
+
+                "north": "belfry",
+
+                "east": "gallery21”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery21”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “More Wolf Than Girl”,
+
+                "artist": “Sam Evans”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/EvansSam01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery20”,
+
+                "north": "belfry",
+
+                "east": "gallery22”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery22”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "in moonlight she cast no shadow",
+
+                "artist": “seaN fahleN”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/FahlenSean02.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery21”,
+
+                "north": "belfry",
+
+                "east": "gallery23”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery23”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Wolf Moon”,
+
+                "artist": “Alexandra Fische”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/FischeAlexandra01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery22”,
+
+                "north": "belfry",
+
+                "east": "gallery24”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery24”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “~”,
+
+                "artist": “Terri Frew”,
+
+                "src": "hhttps://tstvhq.s3.amazonaws.com/art/FrewTerriJo01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery23”,
+
+                "north": "belfry",
+
+                "east": "gallery25”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery25”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “WolfWalk”,
+
+                "artist": “Vishnu Gollakota”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/GollakotaVishnu.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery24”,
+
+                "north": "belfry",
+
+                "east": "gallery26”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery26”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Wild Blue” ,
+
+                "artist": “Mia Gonzalez”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/GonzalezMia02.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery25”,
+
+                "north": "belfry",
+
+                "east": "gallery27”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery27”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “WOLFMOON”,
+
+                "artist": “Mike Grimaldi“,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/GrimaldiMike01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery26”,
+
+                "north": "belfry",
+
+                "east": "gallery28”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery28”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Nocturnum Tempus Lupus”,
+
+                "artist": “Abram Grivois”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/GrivoisAbram.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery27”,
+
+                "north": "belfry",
+
+                "east": "gallery29”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery29”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Tears Turning into Snowflakes",
+
+                "artist": “Lana Guerra”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/GuerraLana03.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery28”,
+
+                "north": "belfry",
+
+                "east": "gallery30”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery30”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Paying Respects to a Fallen Giant",
+
+                "artist": “Melissa Gurr”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/GurrMelissa01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery29”,
+
+                "north": "belfry",
+
+                "east": "gallery31”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery31”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Dusk”,
+
+                "artist": “Courtney Hall”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/HallCourtney01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery30”,
+
+                "north": "belfry",
+
+                "east": "gallery32”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery32”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Untitled”,
+
+                "artist": “Lisa Hertel”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/HertelLisa.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery31”,
+
+                "north": "belfry",
+
+                "east": "gallery33”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery33”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Giant Wolf and Child”,
+
+                "artist": “Elizabeth Jancewicz”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/JancewiczElizabeth01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery32”,
+
+                "north": "belfry",
+
+                "east": "gallery34”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery34”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Wolfdream”,
+
+                "artist": “Sean Jenkins”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/JenkinsSean01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery33”,
+
+                "north": "belfry",
+
+                "east": "gallery35”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        
+        {
+
+            "id": "gallery35”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Howl No More”,
+
+                "artist": "Patt Kelley“,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/KelleyPat.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery34”,
+
+                "north": "belfry",
+
+                "east": "gallery36”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery36”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Wolf Moon”,
+
+                "artist": “Rebecca Klein”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/KleinRebecca02.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery35”,
+
+                "north": "belfry",
+
+                "east": "gallery37”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery37”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Sol”,
+
+                "artist": “Monica Lara Crabtree”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/LaraCrabtreeMonica01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery36”,
+
+                "north": "belfry",
+
+                "east": "gallery38”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery38”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Regina Lupa”,
+
+                "artist": "Szandora LaVey”,
+
+                "src": https://tstvhq.s3.amazonaws.com/art/LaVeySzandora01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery37”,
+
+                "north": "belfry",
+
+                "east": "gallery39”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery39”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Wolf Dream”,
+
+                "artist": “Amelia Leonard”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/LeonardAmeliaWolfDreamFull300Finished.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery38”,
+
+                "north": "belfry",
+
+                "east": "gallery40”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery40”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Vila”,
+
+                "artist": “Amilia Leonards”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/LeonardsAmiliaVilaFullFile.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery39”,
+
+                "north": "belfry",
+
+                "east": "gallery41”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery41”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Wolf”,
+
+                "artist": “Matt Murray”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/MurrayMatt01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery40”,
+
+                "north": "belfry",
+
+                "east": "gallery42”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery42”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Wolf in Fall”,
+
+                "artist": “Yili Lim“,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/LimYili01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery41”,
+
+                "north": "belfry",
+
+                "east": "gallery43”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery43”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Fever Dream”,
+
+                "artist": “Lindsay Martland”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/MartlandLindsay.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery42”,
+
+                "north": "belfry",
+
+                "east": "gallery44”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery44”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Im not bad Im just painted that way“,
+
+                "artist": "Brian Murphy,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/MurphyBrian.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery43”,
+
+                "north": "belfry",
+
+                "east": "gallery45”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery45”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Lone Wolf-in progress”,
+
+                "artist": “Meg Nichols”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/NicholsMeg01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery44”,
+
+                "north": "belfry",
+
+                "east": "gallery46”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery46”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “The Exit is Behind You”,
+
+                "artist": “Emi Night”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/NightEmilyGrace.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery45”,
+
+                "north": "belfry",
+
+                "east": "gallery47”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery47”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “wlf”,
+
+                "artist": “Kyl Owns”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/OwnsKyl.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery46”,
+
+                "north": "belfry",
+
+                "east": "gallery48”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery48”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “You dont phase me”,
+
+                "artist": “Meaghan Parris”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/ParrisMeaghan01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery47”,
+
+                "north": "belfry",
+
+                "east": "gallery49”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery49”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Night Bringer”,
+
+                "artist": “Rebecca Pietre”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/PietreRebecca01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery48”,
+
+                "north": "belfry",
+
+                "east": "gallery50”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery50”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Eyes of the Dreamer”,
+
+                "artist": “Jennifer Savage”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/PisanoJennifer.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery49”,
+
+                "north": "belfry",
+
+                "east": "gallery51”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery51”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Untitled",
+
+                "artist": “Ken Reker”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/RekerKen01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery50”,
+
+                "north": "belfry",
+
+                "east": "gallery52”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery52”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Lycan Bound”,
+
+                "artist": "Azura Rose”,
+
+                "src": https://tstvhq.s3.amazonaws.com/art/RoseAzura01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery51”,
+
+                "north": "belfry",
+
+                "east": "gallery53”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery53”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “More Precious Than Gold”,
+
+                "artist": “Sarah Rose”,
+
+                "src": "hhttps://tstvhq.s3.amazonaws.com/art/RoseSarah01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery52”,
+
+                "north": "belfry",
+
+                "east": "gallery54”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery54”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Dangerwood IV”,
+
+                "artist": “Sarah Rose”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/RoseSarah03.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery53”,
+
+                "north": "belfry",
+
+                "east": "gallery55”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery55”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “~”,
+
+                "artist": “Pax Savage”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/SavagePaige.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery54”,
+
+                "north": "belfry",
+
+                "east": "gallery56”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery56”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Chaos Reigns”,
+
+                "artist": “Kristin Scholz”s,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/ScholzKristin01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery55”,
+
+                "north": "belfry",
+
+                "east": "gallery57”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery57”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Pilgrimage”,
+
+                "artist": “Gabriela Sepulveda”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/SepulvdaGabriella.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery56”,
+
+                "north": "belfry",
+
+                "east": "gallery58”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery58”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Dream of a Wolf“,
+
+                "artist": “Christy Sexton Sturman”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/SextonSturmanChristy01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery57”,
+
+                "north": "belfry",
+
+                "east": "gallery59”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery59”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Untitled",
+
+                "artist": "Brian Alves",
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/SpellmanJack01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery58”,
+
+                "north": "belfry",
+
+                "east": "gallery60”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery60”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Wolf Kiss”,
+
+                "artist": "Dafna Steinberg”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/SteinbergDafnaWolfKiss.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery59”,
+
+                "north": "belfry",
+
+                "east": "gallery61”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery61”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Lady Qantaqa",
+
+                "artist": “Betsy Sullivan”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/SullivanBetsy01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery60”,
+
+                "north": "belfry",
+
+                "east": "gallery62”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery62”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Howl from within",
+
+                "artist": “Ylva Svensson”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/SvennsonYylva.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery61”,
+
+                "north": "belfry",
+
+                "east": "gallery63”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery63”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Untitled“,
+
+                "artist": “Katie Terza”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/TerzaKatie.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery62”,
+
+                "north": "belfry",
+
+                "east": "gallery64”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery64”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Fenrir Unbound”,
+
+                "artist": “Tyler Roland”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/TylerRoland01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery63”,
+
+                "north": "belfry",
+
+                "east": "gallery65”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+        {
+
+            "id": "gallery65”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Lupine Eyes”,
+
+                "artist": "Tyler Roland”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/TylerRoland02.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery64”,
+
+                "north": "belfry",
+
+                "east": "gallery66”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+    {
+
+            "id": "gallery66”,
             "name": "Salem Art Gallery",
             "type": "ART",
             "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
             "art": {
-                "title": "Hjälten The Hero",
-                "artist": "Jim Bostick",
-                "src": "https://tstvhq.s3.amazonaws.com/art/BostickJim.png"
+                "title": “Wolf Moon”,
+                "artist": "Tom Wilmott“,
+                "src": "https://tstvhq.s3.amazonaws.com/art/WilmottTom01.png"
             },
+
             "directions": {
-                "west": "gallery9",
+
+                "west": "gallery65”,
+
                 "north": "belfry",
-                "east": "gallery11"
+
+                "east": "gallery67”
+
             },
+
             "doorTint": "purple",
+
             "backgroundImage": ""
+
         },
+
+        {
+
+            "id": "gallery67”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Fervor”,
+
+                "artist": “Sam Walsh”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/WalshSam01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery66”,
+
+                "north": "belfry",
+
+                "east": "gallery68”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery68”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Hunters Moon”,
+
+                "artist": "Nichole Wimer”,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/WimerNicoleHuntersMoon.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery67”,
+
+                "north": "belfry",
+
+                "east": "gallery69”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery69”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": “Wolfs Moon”,
+
+                "artist": “Nichole Wimer“,
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/WimerNicoleWolfMoon.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery68”,
+
+                "north": "belfry",
+
+                "east": "gallery70”
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+        {
+
+            "id": "gallery70”,
+
+            "name": "Salem Art Gallery",
+
+            "type": "ART",
+
+            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to inquire about price and purchasing.",
+
+            "art": {
+
+                "title": "Your Eyes Are My Eyes",
+
+                "artist": “Heather Woodsum",
+
+                "src": "https://tstvhq.s3.amazonaws.com/art/WoodsumHeather01.png"
+
+            },
+
+            "directions": {
+
+                "west": "gallery69”,
+
+                "north": "belfry"
+
+
+
+            },
+
+            "doorTint": "purple",
+
+            "backgroundImage": ""
+
+        },
+
+
         {
             "id": "cemetery",
             "name": "Cemetery",
