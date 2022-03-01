@@ -171,6 +171,19 @@ resource "aws_security_group" "main" {
               self             = false
               to_port          = 22
             },
+            {
+              cidr_blocks      = [
+                  "71.235.127.86/32",
+                ]
+              description      = "bill ssh"
+              from_port        = 22
+              ipv6_cidr_blocks = []
+              prefix_list_ids  = []
+              protocol         = "tcp"
+              security_groups  = []
+              self             = false
+              to_port          = 22
+            },
     ]
 }
 
@@ -305,7 +318,7 @@ resource "aws_instance" "main" {
         auth_enabled = "1",
         auth_client_id = aws_cognito_user_pool_client.main.id,
         auth_client_secret = aws_cognito_user_pool_client.main.client_secret,
-        auth_allowed_groups = "Caretakers PR TempleFebruary15"
+        auth_allowed_groups = "Caretakers PR TempleMarch01"
         auth_discovery = "https://cognito-idp.${local.aws_region}.amazonaws.com/${aws_cognito_user_pool_client.main.user_pool_id}/.well-known/openid-configuration",
       }
     )
