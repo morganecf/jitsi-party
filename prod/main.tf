@@ -147,7 +147,7 @@ resource "aws_security_group" "main" {
             },
             {
               cidr_blocks      = [
-                  "24.61.42.92/32",
+                  "24.60.246.68/32",
                 ]
               description      = "gbre ssh"
               from_port        = 22
