@@ -16,7 +16,7 @@ from slack_sdk.errors import SlackApiError
 
 
 SYNC_MAP = {
-    "temple-3-29-22-the-malleus-maleficarum-obscurities-obscenities-atrocities-witch-hunts-in-16th-17th-century-germany": "Temple29March22",
+    "temple-4-5-22-beyond-the-tenets-an-interrogation-of-core-assumptions": "Temple5April22",
 }
 
 
