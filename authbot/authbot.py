@@ -16,7 +16,7 @@ from slack_sdk.errors import SlackApiError
 
 
 SYNC_MAP = {
-    "temple-4-5-22-beyond-the-tenets-an-interrogation-of-core-assumptions": "Temple5April22",
+    "temple-4-12-22-wrestling-with-the-tenets-part-1-empathy-and-compassion": "Temple12April22",
 }
 
 
