@@ -5,7 +5,7 @@
                 "audio": {
                     "autoPlay": true,
                     "hideControls": true,
-                  "path": "https://s3.us-east-2.amazonaws.com/thesatanic.estate/music/Lounge11loop.mp3"
+                    "path": "https://tstvhq.s3.amazonaws.com/music/Ambient_Birds.mp3"
                 }
             },
             "rooms": [
@@ -15,75 +15,75 @@
                             "nextRoom": [
                                 "subway"
                             ],
-                            "text": "Oh No, Not Again"
+                            "text": "Push on that brick!"
                         },
                         {
                             "nextRoom": [
                                 "library"
                             ],
-                            "text": "Am I dead?"
+                            "text": "Weird...oh well..."
                         }
                     ],
                     "id": "brick",
-                    "name": "Nothing",
-                    "text": "You see nothing, you feel nothing, you taste nothing, you smell nothing. You hear that goddamned music."
+                    "name": "Loose Brick",
+                    "text": "As you head down the stairs, you notice a rather peculiar brick sticking out from the otherwise smooth stone wall."
                 },
                 {
                     "buttons": [
                         {
                             "nextRoom": [
-                                "train"
+                                "branch"
                             ],
-                            "text": "Every Year!"
-                        },
-                        {
-                            "nextRoom": [
-                                "sleepingPorch"
-                            ],
-                            "text": "Evaporate"
-                        }
-                    ],
-                    "id": "subway",
-                    "name": "The Waiting",
-                    "text": "As the music drones on you begin to wonder if there are others, out there, in The Waiting. No one ever mentions the waiting. Yet you always seem to end up here one way or another."
-                },
-                {
-                    "buttons": [
-                        {
-                            "nextRoom": [
-                                "station"
-                            ],
-                            "text": "Start Crawling"
+                            "text": "Flail wildly to try to catch onto something!"
                         },
                         {
                             "nextRoom": [
                                 "cemetery"
                             ],
-                            "text": "Panic"
+                            "text": "Surrender to the void..."
                         }
                     ],
-                    "id": "train",
-                    "name": "sometimes nothing breaks",
-                    "text": "A pinpoint of light appears in your perepheral vision. Sensations of coldness and damp begin to creep over you, followed by the smell of earth, the feeling of grit in your teeth."
+                    "id": "falling",
+                    "name": "Whoops",
+                    "text": "As you press on the brick, the entire wall gives way, and you feel yourself stumble forward down a flight of stairs. You fall for what seems like ages before, gathering your senses, you find yourself on a subway platform. Two subway cars wait on either side of you."
                 },
                 {
                     "buttons": [
                         {
                             "nextRoom": [
-                                "cabin"
+                                "party"
                             ],
-                            "text": "Looks Familiar"
+                            "text": "Climb across the branch"
+                        },
+                        {
+                            "nextRoom": [
+                                "cemetery"
+                            ],
+                            "text": "Let go and return to the void..."
+                        }
+                    ],
+                    "id": "branch",
+                    "name": "Hang in there",
+                    "text": "You grab ahold of something in the dark. You realize as you come to a stop, that it is a large tree branch protruding from a hole in the stone wall."
+                },
+                {
+                    "buttons": [
+                        {
+                            "nextRoom": [
+                                "bunnies"
+                            ],
+                            "text": "Drink from the tiny lil' tea cup"
                         },
                         {
                             "nextRoom": [
                                 "frontParlor"
                             ],
-                            "text": "I'm Lost"
+                            "text": "Eat a tiny lil' cookie"
                         }
                     ],
-                    "id": "station",
-                    "name": "the Something",
-                    "text": "No choice but to claw your way back to reality. Slowly, you begin to move. The dirt is heavy. It will take along time. Through the dirt and worms and muck and slime, past bone and midden, through remnents of long dead civilizations and into labyrinthian tunnels carved by the entirely forgotten you slowly make your way towards the Something."
+                    "id": "party",
+                    "name": "A Very Important Date",
+                    "text": "As you move along the branch, you find an entryway in the darkness. As you pass through the entryway, you arrive in a neon-colored ballroom with a tea set six sizes too small."
                 },
                 {
                     "buttons": [
@@ -91,18 +91,18 @@
                             "nextRoom": [
                                 "trapDoor"
                             ],
-                            "text": "Get out"
+                            "text": "Hop on the bunny! (get it?)"
                         },
                         {
                             "nextRoom": [
                                 "sleepingPorch"
                             ],
-                            "text": "Explore Cave"
+                            "text": "Spurn the bunny with a turn of your tail"
                         }
                     ],
-                    "id": "station",
-                    "name": "It was only the end of the world again",
-                    "text": "You claw and scramble through the nothing and it begins to take shape. You can't tell how large the cavern is, but you know its big. Every little sound echoes. The sound of water driping from stalactites count time. The cave would be so much faster with wings, probably more dangerous though. The cave plays tricks on you. You wonder when the halucinations will start."
+                    "id": "bunnies",
+                    "name": "The night is bun...",
+                    "text": "As you drink your tiny lil' tea, pink fluffy bunnies materialize around you. One motions to hop on for a ride, wiggling its nose and ears."
                 }
             ]
         }
