@@ -118,7 +118,7 @@
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-elevator.gif",
             "directions": {
                 "north": "library",
-                "south": "frontParlor"
+                "south": "frontParlor",
                 "east": "trapDoor"
             },
             "map": {
