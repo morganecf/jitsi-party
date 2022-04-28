@@ -10,7 +10,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/kitchen.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/ABxZDV7-aIA"
+                "src": "https://www.youtube.com/embed/LqsKG7TWZWI"
             },
             "description": "Food meets fire, one way or another",
             "directions": {
@@ -56,13 +56,13 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "CHATSREAM",
+            "type": "CHATSTREAM",
             "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/grand_ballroom.jpg",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/83cea71b-fda0-4ea7-0d5c-636e2a0695a9"
+                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/f7211aa5-999a-9586-26d5-d1ff15280df3"
             },
             "description": "The windows fog from the exaltation and dancing!",
             "directions": {
@@ -166,8 +166,8 @@
         {
             "id": "teaRoom",
             "name": "Tea Room",
-            "type": "JITSI",
-            "capacity": 20,
+            "type": "CHATSTREAM",
+            "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
@@ -2899,7 +2899,7 @@
             "hideVideo": false,
             "description": "Is it hot in here?",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/kiKzcTiVYzo"
+                "src": "https://www.youtube.com/embed/cRL1GuyWDVI"
             },
             "directions": {
                 "east": "secretTunnels"
