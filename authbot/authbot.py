@@ -18,6 +18,7 @@ from slack_sdk.errors import SlackApiError
 SYNC_MAP = {
     "all-holidays-ticket-2022-pass": "AllHolidays2022",
     "hexennacht-at-the-estate-04-28": "Hex2022",
+    "spring-2022-benefactors-support-the-satanic-estate", "Benefactors",
 }
 
 
