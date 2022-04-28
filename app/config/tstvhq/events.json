@@ -1,68 +1,45 @@
 {
     "events": [
         {
-            "name": "WOLFDREAM: A Salem Art Gallery Exhibition",
-            "description": "The gallery will be open all night. Browse art, some of which is available for purchase, supporting a Salem local wolf sanctuary.",
-            "room": "theater",
-            "start": "2022-02-10T20:00:00-05:00",
-            "end": "2022-02-11T02:00:00-05:00",
+            "name": "TST Sober Faction's Second Annual Sober Mass",
+            "description": "The Satanic Temple Sober Faction will be performing their second Sober Mass honoring all those battling addiction who have been lost due to stigma, pseudoscience, & superstition in recovery.",
+            "room": "teaRoom",
+            "start": "2022-04-28T20:30:00-05:00",
+            "end": "2022-04-28T21:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
-            "name": "Mardi Gras, Lupercalia and Bananas Foster with The Satanic Chef",
-            "description": "Learn how to cook the wonderful bananas foster & creme anglaise dessert which will light any Bible on fire at The Satanic Estate. Learn how Lupercalia traditions made its way into Mardi Gras from the pagan rituals of Lupercalia and saturnalia and eventually tied into the Cuisine of New Orleans.",
-            "room": "kitchen",
-            "start": "2022-02-10T20:00:00-05:00",
-            "end": "2022-02-10T21:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
-        },
-        {
-            "name": "Tom The Witch's Neighborhood: Love",
-            "description": "Join local Salem witch, historian, and Satanic Minister Thomas O'Brien Vallor for some educational programming with special guests, field trips, and more! This episode is all about love. Brought to you by the number 666.",
-            "room": "backParlor",
-            "start": "2022-02-10T21:00:00-05:00",
-            "end": "2022-02-10T22:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
-        },
-        {
-            "name": "Abortion as a (Religious) Right with Religious Reproductive Rights Director Mari Davis",
-            "description": "This presentation will discuss The Satanic Temple’s Abortion Ritual, what that entails and includes, frequently asked questions surrounding the ritual, navigating misinformation as well as what information to provide to those seeking abortions.",
+            "name": "The Satanic Chef Presents ...",
+            "description": "A special meal for Hexennacht.",
             "room": "frontParlor",
-            "start": "2022-02-10T22:00:00-05:00",
-            "end": "2022-02-10T23:00:00-05:00",
+            "start": "2022-04-28T22:30:00-05:00",
+            "end": "2022-04-28T23:30:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
-            "name": "Bats in the Belfry!",
-            "description": "Livestreaming your new best friends, bats from BatWorld. Donate at batworld.org",
-            "room": "belfry",
-            "start": "2022-02-10T20:00:00-05:00",
-            "end": "2022-02-11T02:00:00-05:00",
+            "name": "Tom The Witch's Neighborhood: Hate",
+            "description": "Join Salem historian, Witch, and Satanic Minister Thomas O'Brien Vallor for some educational programming. Special guests, field trips, and more! This episode is all about HATE. Brought to you by the number 420! ",
+            "room": "backParlor",
+            "start": "2022-04-28T21:30:00-05:00",
+            "end": "2022-04-28T22:30:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
-            "name": "Finding Love & Self-Acceptance Through Satanism with Shiva Honey",
-            "description": "Shiva explores the role of love in modern Satanism and shares insights on how to cultivate self-acceptance and love within your Satanic practice. She will also discuss how rituals from her book, The Devil's Tome: A Book of Modern Satanic Ritual, have helped her on a self-love journey.",
+            "name": "Hexennacht Benediction by Minister Zither",
+            "description": "Benedictions explore the spirit of their respective holidays. Benedictions for Satanic holiday events focus people's attention on the religious importance of the holiday. They are a performance as much as they are a declaration, creating a feeling of religious connection and meaning.",
             "room": "ritualChamber",
-            "start": "2022-02-10T23:00:00-05:00",
-            "end": "2022-02-11T00:00:00-05:00",
+            "start": "2022-04-28T20:00:00-05:00",
+            "end": "2022-04-28T20:0:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
         {
-            "name": "I’m The Werewolf - Lupercalia DJ Set with Shiva Honey and Grahamzig",
-            "description": "Shiva and Grahamzig spin tunes with themes of passion, romance, and wolf’s milk to unleash the animal within.",
-            "room": "ritualChamber",
-            "start": "2022-02-11T00:00:00-05:00",
-            "end": "2022-02-11T01:00:00-05:00",
+            "name": "Whimsical Blasphemy with DJ Mercy Maelica",
+            "description": "Join Mercy, our veteran performer and Resident DJ for music and videos live from Salem.",
+            "room": "grandBallroom",
+            "start": "2022-04-28T20:00:00-05:00",
+            "end": "2022-04-29T01:00:00-05:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
         },
-        {
-            "name": "Grey Faction Satanic Archives",
-            "description": "The Satanic Estate's Satanic Archive Library is open all night for the holidays. Texts courtesy of Center for Inquiry and Grey Faction.",
-            "room": "library",
-            "start": "2022-02-10T20:00:00-05:00",
-            "end": "2022-02-11T02:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
-        }
+
     ]
 }
