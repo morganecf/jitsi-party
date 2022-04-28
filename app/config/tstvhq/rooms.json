@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-Back-Parlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/jQ5SnjzY0tI"
+                "src": "https://www.youtube.com/embed/O14nsQK1CVs"
             },
             "description": "The back parlor is the speakeasy...",
             "directions": {
@@ -143,7 +143,7 @@
             "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-front-parlor.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/A6F-YwUtJl0"
+                "src": "https://www.youtube.com/embed/LqsKG7TWZWI"
             },
             "directions": {
                 "east": "teaRoom",
@@ -171,7 +171,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/mVFrIO_s6M8"
+                "src": "https://www.youtube.com/embed/xjaMPU6LySA"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-tea-room.png",
             "description": "We take tea a bit more seriously in the winter. It warms away the chill",
@@ -231,7 +231,7 @@
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-ritual.png",
             "iframeOptions": {
-                "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/f7211aa5-999a-9586-26d5-d1ff15280df3"
+                "src": "https://www.youtube.com/embed/LRTZpuoHg_M"
             },
             "directions": {
                 "east": "backParlor"
