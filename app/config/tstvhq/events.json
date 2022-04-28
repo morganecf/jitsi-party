@@ -33,6 +33,14 @@
             "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
+            "name": "WOLFDREAM: An Art Show by Salem Art Gallery",
+            "description": "Walk through our gallery and experience the marvelous art. Purchases support Wolf Hollow, a wolf rescue in Salem",
+            "room": "theater",
+            "start": "2022-04-28T22:30:00-05:00",
+            "end": "2022-04-28T23:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
+        },
+        {
             "name": "Whimsical Blasphemy with DJ Mercy Maelica",
             "description": "Join Mercy, our veteran performer and Resident DJ for music and videos live from Salem.",
             "room": "grandBallroom",
