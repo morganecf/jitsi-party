@@ -6,7 +6,7 @@
             "room": "teaRoom",
             "start": "2022-04-28T20:30:00-05:00",
             "end": "2022-04-28T21:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
             "name": "The Satanic Chef Presents ...",
@@ -14,7 +14,7 @@
             "room": "frontParlor",
             "start": "2022-04-28T22:30:00-05:00",
             "end": "2022-04-28T23:30:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
             "name": "Tom The Witch's Neighborhood: Hate",
@@ -22,15 +22,23 @@
             "room": "backParlor",
             "start": "2022-04-28T21:30:00-05:00",
             "end": "2022-04-28T22:30:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
             "name": "Hexennacht Benediction by Minister Zither",
             "description": "Benedictions explore the spirit of their respective holidays. Benedictions for Satanic holiday events focus people's attention on the religious importance of the holiday. They are a performance as much as they are a declaration, creating a feeling of religious connection and meaning.",
             "room": "ritualChamber",
             "start": "2022-04-28T20:00:00-05:00",
-            "end": "2022-04-28T20:0:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+            "end": "2022-04-28T20:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
+        },
+        {
+            "name": "WOLFDREAM: An Art Show by Salem Art Gallery",
+            "description": "Walk through our gallery and experience the marvelous art. Purchases support Wolf Hollow, a wolf rescue in Salem",
+            "room": "theater",
+            "start": "2022-04-28T22:30:00-05:00",
+            "end": "2022-04-28T23:30:00-05:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
             "name": "Whimsical Blasphemy with DJ Mercy Maelica",
@@ -38,7 +46,7 @@
             "room": "grandBallroom",
             "start": "2022-04-28T20:00:00-05:00",
             "end": "2022-04-29T01:00:00-05:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/LUPERCALIA-CAL-animals.png"
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         }
     ]
 }
