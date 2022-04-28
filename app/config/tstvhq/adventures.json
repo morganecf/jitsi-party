@@ -13,7 +13,7 @@
                     "buttons": [
                         {
                             "nextRoom": [
-                                "subway"
+                                "falling"
                             ],
                             "text": "Push on that brick!"
                         },
