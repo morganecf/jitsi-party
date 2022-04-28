@@ -56,7 +56,7 @@
         {
             "id": "grandBallroom",
             "name": "Grand Ballroom",
-            "type": "CHATSREAM",
+            "type": "CHATSTREAM",
             "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
