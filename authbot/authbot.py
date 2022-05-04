@@ -19,6 +19,7 @@ SYNC_MAP = {
     "all-holidays-ticket-2022-pass": "AllHolidays2022",
     "spring-2022-benefactors-support-the-satanic-estate": "Benefactors",
     "temple-5-3-22-toxic-masculinity": "Temple3May22",
+    "temple-5-3-22-Roe-v-Wade-and-US-Theocracy": "Temple3May22",
 }
 
 
