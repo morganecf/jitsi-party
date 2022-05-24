@@ -10,9 +10,9 @@
             "hideVideo": true,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom1.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/x5tkwep02c8"
+                "src": "https://www.youtube.com/embed/rYIj38JmLVc"
             },
-            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/89650944463",
+            "description": "Laws of peace, of love, of unity not pity, compassion, forgiveness - William Blake. JOIN THE MEETING: https://us02web.zoom.us/j/82539240421",
             "directions": {
                 "east": "sanctuary"
             },
@@ -36,7 +36,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom2.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/yEyWea1AQk0"
+                "src": "https://www.youtube.com/embed/74o-tYBJg6Y"
             },
             "description": "Join Dungeon Mistress Kaelea and a team of intrepid adventurers as they unravel mysteries in the Kingdom of Ekerion, a 5th Edition Dungeons & Dragons homebrew campaign. Tune in for laughs, silly voices, twists and turns, and lots of dice-rolling shenanigans.",
             "directions": {
@@ -89,10 +89,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "doorTint": "#000000",
-            "description": "What treasures lay undiscovered for those who gather here? JOIN THE PARTY: https://us02web.zoom.us/j/81214616651",
+            "description": "What treasures lay undiscovered for those who gather here? JOIN THE PARTY: https://us02web.zoom.us/j/84273663431",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom4.png",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/VMYpW2LqoOI"
+                "src": "https://www.youtube.com/embed/FGXO4FMvN8w"
             },
             "directions": {
                 "south": "sacristy"
@@ -203,7 +203,7 @@
             "description": "Timelessness coalesces above the pews set out before you. Gather and be heard.",
             "type": "CHATSTREAM",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/KAwsEo6azaw"
+                "src": "https://www.youtube.com/embed/-OroygleuCk"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom8.png",
             "directions": {
@@ -234,10 +234,10 @@
             "muteRoom": true,
             "hideVideo": true,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/mVa7DCeSkM4"
+                "src": "https://www.youtube.com/embed/oUV0qS4VyCA"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/temple/TempleRoom9.png",
-            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE CONVERSATION: https://us02web.zoom.us/j/81474770002",
+            "description": "The forges of imagination gleam and bellow with the rhythms of life. JOIN THE CONVERSATION: https://us02web.zoom.us/j/82635903602",
             "directions": {
                 "west": "sanctuary"
             },
