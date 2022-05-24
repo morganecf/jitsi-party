@@ -332,6 +332,11 @@ def sync(
 
     for order in orders:
         if len(order.product_handles.intersection(SYNC_MAP.keys())) > 0:
+            if order.email is None:
+                print("Ignoring order with empty email")
+
+                continue
+
             if order.email not in current_users:
                 new_users.add(order.email.lower())
 
