@@ -1,51 +1,43 @@
 {
     "events": [
         {
-            "name": "TST Sober Faction's Second Annual Sober Mass",
-            "description": "The Satanic Temple Sober Faction will be performing their second Sober Mass honoring all those battling addiction who have been lost due to stigma, pseudoscience, & superstition in recovery.",
+            "name": "Supporting LGBQ/GNCT Youth by Nicole",
+            "description": "This presentation will provide an introduction and overview of some of the definitions & pronouns of youth who identify with the LGBTQ/GNCT (Lesbian, Gay, Bi-Sexual, Questioning or Gender Non-Conforming, Transgender) spectrums may use. Guiding principles will be presented as a foundation of discussion and areas of focus will include data pertaining to the risk factors of youth who end up homeless and in the juvenile justice system, brief history, and current law, advocacy happening in the country, and information on hormone replacement therapy, blockers, transitioning, and how it affects the lives of folx.",
             "room": "teaRoom",
-            "start": "2022-04-28T20:30:00-04:00",
-            "end": "2022-04-28T21:00:00-04:00",
+            "start": "2022-06-09T20:30:00-04:00",
+            "end": "2022-06-09T21:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
-            "name": "The Satanic Chef Presents ...",
-            "description": "A special meal for Hexennacht.",
+            "name": "Inviolable: Legal Spellwork and Practical Tools for Protecting Ourselves in Life and Death with Shiva Honey",
+            "description": "As Satanists, we believe that our body is inviolable, yet LGBTQIA+ individuals face significant discrimination within the healthcare system and often experience considerable barriers to having our wishes respected in death. Using the research, resources, and the tools from her latest book, The Devil’s Death: Your Satanic Companion for Grief and Dying, Priestess Shiva Honey will discuss how to use legal spellwork and practical tools to assert our rights and protect ourselves within a healthcare setting and have our end-of-life directives fulfilled.",
             "room": "frontParlor",
-            "start": "2022-04-28T22:30:00-04:00",
-            "end": "2022-04-28T23:30:00-04:00",
+            "start": "2022-06-09T22:30:00-04:00",
+            "end": "2022-06-09T23:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
-            "name": "Tom The Witch's Neighborhood: Hate",
-            "description": "Join Salem historian, Witch, and Satanic Minister Thomas O'Brien Vallor for some educational programming. Special guests, field trips, and more! This episode is all about HATE. Brought to you by the number 420! ",
+            "name": "Tom The Witch's Neighborhood: Pride",
+            "description": "Join Salem historian, witch, and satanic minister Thomas O'Brien Vallor for some educational programming. Special guests, field trips, and more! This episode is all about LGBT Pride. Brought to you by the number 69.",
             "room": "backParlor",
-            "start": "2022-04-28T21:30:00-04:00",
-            "end": "2022-04-28T22:30:00-04:00",
+            "start": "2022-06-09T21:30:00-04:00",
+            "end": "2022-06-09T22:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
-            "name": "Hexennacht Benediction by Minister Zither",
+            "name": "Pride Benediction by Minister Minister Rose D'Arc",
             "description": "Benedictions explore the spirit of their respective holidays. Benedictions for Satanic holiday events focus people's attention on the religious importance of the holiday. They are a performance as much as they are a declaration, creating a feeling of religious connection and meaning.",
             "room": "ritualChamber",
-            "start": "2022-04-28T20:00:00-04:00",
-            "end": "2022-04-28T20:30:00-04:00",
-            "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
-        },
-        {
-            "name": "WOLFDREAM: An Art Show by Salem Art Gallery",
-            "description": "Walk through our gallery and experience the marvelous art. Purchases support Wolf Hollow, a wolf rescue in Salem",
-            "room": "theater",
-            "start": "2022-04-28T20:30:00-04:00",
-            "end": "2022-04-29T01:00:00-04:00",
+            "start": "2022-06-09T20:00:00-04:00",
+            "end": "2022-06-09T20:30:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         },
         {
             "name": "Whimsical Blasphemy with DJ Mercy Maelica",
             "description": "Join Mercy, our veteran performer and Resident DJ for music and videos live from Salem.",
             "room": "grandBallroom",
-            "start": "2022-04-28T20:00:00-04:00",
-            "end": "2022-04-29T01:00:00-04:00",
+            "start": "2022-06-09T20:00:00-04:00",
+            "end": "2022-06-09T01:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/hex22.png"
         }
     ]
