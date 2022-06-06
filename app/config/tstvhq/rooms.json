@@ -88,7 +88,7 @@
             "hideVideo": false,
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/back_parlor.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/O14nsQK1CVs"
+                "src": "https://www.youtube.com/embed/jPO06Y2W-v8"
             },
             "description": "The back parlor is the speakeasy...",
             "directions": {
@@ -144,7 +144,7 @@
             "type": "CHATSTREAM",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/front_parlor.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/LqsKG7TWZWI"
+                "src": "https://www.youtube.com/embed/FoDk8_MPr9M"
             },
             "directions": {
                 "east": "teaRoom",
@@ -172,7 +172,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/xjaMPU6LySA"
+                "src": "https://www.youtube.com/embed/-nYzg7dPVlg"
             },
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/tea_room.jpg",
             "description": "We take tea a bit more seriously in the winter. It warms away the chill",
@@ -232,7 +232,7 @@
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
             "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/ritual_chamber.jpg",
             "iframeOptions": {
-                "src": "https://www.youtube.com/embed/LRTZpuoHg_M"
+                "src": "https://www.youtube.com/embed/jquDTZJAqig"
             },
             "directions": {
                 "east": "backParlor"
