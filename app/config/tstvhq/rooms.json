@@ -3,16 +3,16 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "CHATSTREAM",
-            "capacity": 300,
+            "type": "JITSI",
+            "capacity": 20,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/kitchen.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/kitchen.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/LqsKG7TWZWI"
             },
-            "description": "Food meets fire, one way or another",
+            "description": "Never be bullied into silence. Never allow yourself to be made a victim. Accept no one’s definition of your life; define yourself. — Harvey Fierstein",
             "directions": {
                 "west": "powderRoom",
                 "north": "grandBallroom",
@@ -38,8 +38,8 @@
             "muteRoom": false,
             "hideVideo": false,
             "doorTint": "#000000",
-            "description": "Beg our pardon, the wiring's gone. We've lit the oil lamp sconces",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/powder_room.jpg",
+            "description": "If you help elect more gay people, that gives a green light to all who feel disenfranchised a green light to move forward. — Harvey Milk",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/powderroom.jpg",
             "directions": {
                 "east": "kitchen"
             },
@@ -60,11 +60,11 @@
             "capacity": 200,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/grand_ballroom.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/grandballroom.jpg",
             "iframeOptions": {
                 "src": "https://iframe.dacast.com/live/335563b1-f2ee-04b3-c63b-0a7d13f03b92/83cea71b-fda0-4ea7-0d5c-636e2a0695a9"
             },
-            "description": "The windows fog from the exaltation and dancing!",
+            "description": "We are ordinary people, living our lives, and trying as civil rights activist Dorothy Cotton said, to ‘fix what ain’t right’ in our society. — Sen. Tammy",
             "directions": {
                 "south": "kitchen"
             },
@@ -86,11 +86,11 @@
             "capacity": 400,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/back_parlor.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/backparlor.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/jPO06Y2W-v8"
             },
-            "description": "The back parlor is the speakeasy...",
+            "description": "Love is never wrong. — Melissa Etheridge",
             "directions": {
                 "south": "den",
                 "west": "ritualChamber"
@@ -115,11 +115,11 @@
             "hideVideo": false,
             "capacity": 10,
             "description": "What goes up must come down-- at terminal velocity.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/LUPERCALIA/LUPERCALIA-BG-elevator.gif",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/elevator.jpg",
             "directions": {
                 "north": "library",
                 "south": "frontParlor",
-                "east": "library"
+                "east": "ritualChamber"
             },
             "map": {
                 "x": 11,
@@ -140,9 +140,9 @@
             "capacity": 300,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "This room could use a third fireplace, don't you think?",
+            "description": "Our society needs to recognize the unstoppable momentum toward unequivocal civil equality for every gay, lesbian, bisexual, and transgender citizen of this country. — Zachary Quinto",
             "type": "CHATSTREAM",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/front_parlor.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/frontparlor.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/FoDk8_MPr9M"
             },
@@ -174,8 +174,8 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/-nYzg7dPVlg"
             },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/tea_room.jpg",
-            "description": "We take tea a bit more seriously in the winter. It warms away the chill",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/tearoom.jpg",
+            "description": "I’m living by example by continuing on with my career and having a full, rich life, and I am incidentally gay. — Portia de Rossi",
             "directions": {
                 "north": "den",
                 "west": "frontParlor",
@@ -204,8 +204,8 @@
             "capacity": 30,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/the_den.jpg",
-            "description": "We've put in a wood stove and a very fluffy couch.",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/den.jpg",
+            "description": "To love oneself is the beginning of a lifelong romance. — Oscar Wilde",
             "directions": {
                 "north": "backParlor",
                 "south": "teaRoom"
@@ -230,7 +230,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "With a base of amber, sandalwood, tobacco, and frankincense, Baphomet evokes the smokey scent of hidden rooms, velvet thrones, and ancient ritual chambers.(-Serpentinae.com)",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/ritual_chamber.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/ritualchamber.jpg",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/jquDTZJAqig"
             },
@@ -256,7 +256,7 @@
             "muteRoom": false,
             "hideVideo": false,
             "description": "Donate to support these bats at batworld.org",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/belfry.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/belfry.jpg",
             "iframeOptions": {
                 "src": "https://video.nest.com/embedded/live/UYYI6tFUy2?autoplay=1"
             },
@@ -282,7 +282,7 @@
             "hideVideo": false,
             "description": "Peruse the Archives: Courtesy of Grey Faction",
             "type": "IMAGEMAP",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/library.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/library.jpg",
             "directions": {
                 "east": "sleepingPorch",
                 "north": "boudoir",
@@ -310,9 +310,9 @@
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "The fireplace in the corner and the handmade black quilts make this bearable",
+            "description": "Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts. — Barbara Gittings",
             "type": "JITSI",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/sleeping_porch.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/sleepingporch.jpg",
             "directions": {
                 "west": "library",
                 "east": "theater"
@@ -339,8 +339,8 @@
             "capacity": 5,
             "muteRoom": false,
             "hideVideo": false,
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/aviary.jpg",
-            "description": "You can see the cardinals during the day this time of year. Lovely red, the cardinals",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/aviary.jpg",
+            "description": "My silences had not protected me. Your silence will not protect you. — Audre Lorde",
             "directions": {
                 "east": "library"
             },
@@ -357,17 +357,17 @@
         },
         {
             "id": "theater",
-            "name": "Salem Art Gallery",
-            "type": "ART",
-            "description": "WOLFDREAM: Reception at VHQ. Contact nathan@salemartgallery.com to purchase.",
+            "name": "Infernal Theater",
+            "type": "JITSI",
+            "description": "If you do not tell the truth about yourself you cannot tell it about other people.― Virginia Woolf.",
             "art": {
                 "title": "This exhibition, Juried by Wolf Hollow Director, Zee Soffron, explores and promotes the majesty of these beautiful creatures whose alluring energy continues to inspire. As a commitment to the preservation of these important animals, The Salem Art Gallery at The Satanic Temple Salem pledges the proceeds of the works included in this exhibition towards our neighbors to the north, Wolf Hollow Conservation and Education Center.",
-                "src": "https://tstvhq.s3.amazonaws.com/art/WolfDreamPoster.jpg"
+                "src": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/infernaltheater.jpg"
             },
             "directions": {
                 "west": "sleepingPorch",
                 "north": "belfry",
-                "east": "gallery2"
+                "east": "grandBallroom"
             },
             "map": {
                 "x": 18,
@@ -2820,8 +2820,8 @@
             "capacity": 50,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "The frost sparkles on the Mausoleum.",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/cemetary.jpg",
+            "description": "We deserve to experience love fully, equally, without shame, and without compromise. — Elliot Page",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/cemetary.jpg",
             "directions": {
                 "west": "garden"
             },
@@ -2843,11 +2843,11 @@
             "capacity": 25,
             "muteRoom": false,
             "hideVideo": false,
-            "description": "Covert conversations; keep it to a low whisper.",
+            "description": "Nature made a mistake, which I have corrected. — Christine Jorgensen",
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/uuMxoFsQ9XY"
             },
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/boudoir.jpg",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/boudoir.jpg",
             "directions": {
                 "south": "library"
             },
@@ -2872,8 +2872,8 @@
             "iframeOptions": {
                 "src": "https://www.youtube.com/embed/4r2sz1eT6Rc"
             },
-            "description": "The moon shines off the new fallen snow covering the winter fallow through the baren apple tree",
-            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/garden.jpg",
+            "description": "The single best thing about coming out of the closet is that nobody can insult you by telling you what you’ve just told them. — Rachel Maddow",
+            "backgroundImage": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/garden.jpg",
             "directions": {
                 "west": "teaRoom",
                 "east": "cemetery"
