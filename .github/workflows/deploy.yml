@@ -1,0 +1,25 @@
+name: deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      partyConfigThemes:
+        type: choice
+        description: 'Party config/theme'
+        required: true
+        options:
+        - {config: base, theme: basic}
+        - {config: temple, theme: temple}
+
+defaults:
+  run:
+    # explicitly setting `bash` enables safe settings (errexit, pipefail, ...)
+    shell: bash
+
+jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}"
