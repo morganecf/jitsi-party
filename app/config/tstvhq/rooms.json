@@ -119,7 +119,7 @@
             "directions": {
                 "north": "library",
                 "south": "frontParlor",
-                "east": "brick"
+                "east": "library"
             },
             "map": {
                 "x": 11,
