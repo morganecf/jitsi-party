@@ -3,8 +3,8 @@
         {
             "id": "kitchen",
             "name": "Kitchen",
-            "type": "CHATSTREAM",
-            "capacity": 300,
+            "type": "JITSI",
+            "capacity": 20,
             "doorTint": "#000000",
             "muteRoom": false,
             "hideVideo": false,
@@ -119,7 +119,7 @@
             "directions": {
                 "north": "library",
                 "south": "frontParlor",
-                "east": "library"
+                "east": "ritualChamber"
             },
             "map": {
                 "x": 11,
