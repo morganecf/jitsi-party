@@ -60,7 +60,7 @@ jobs:
         cd prod
         terraform init
         terraform apply -auto-approve \
-         -var 'vhq_enabled=true' \
-         -var 'vhq_placeholder_enabled=true' \
+         -var 'vhq_enabled=${{ github.event.inputs.vhqEnabled }}' \
+         -var 'vhq_placeholder_enabled=${{ github.event.inputs.vhqPlaceholderEnabled }}' \
          -var 'party_config=${{ github.event.inputs.partyConfig }}' \
          -var 'party_theme=${{ github.event.inputs.partyTheme }}' \
