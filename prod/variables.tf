@@ -9,11 +9,9 @@ variable "vhq_placeholder_enabled" {
 }
 
 variable "party_config" {
-  type     = string
-  required = true
+  type = string
 }
 
 variable "party_theme" {
-  type     = string
-  required = true
+  type = string
 }
