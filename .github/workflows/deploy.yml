@@ -3,13 +3,28 @@ name: deploy
 on:
   workflow_dispatch:
     inputs:
-      partyConfigThemes:
+      partyConfig:
         type: choice
-        description: 'Party config/theme'
+        description: 'Party config'
         required: true
         options:
-        - {config: base, theme: basic}
-        - {config: temple, theme: temple}
+        - temple
+        - tstvhq
+      partyTheme:
+        type: choice
+        description: 'Party theme'
+        required: true
+        options:
+        - temple
+        - tst
+      vhqEnabled:
+        type: boolean
+        description: 'VHQ enabled'
+        default: true
+      vhqPlaceholderEnabled:
+        type: boolean
+        description: 'VHQ placeholder enabled'
+        default: true
 
 defaults:
   run:
@@ -17,9 +32,35 @@ defaults:
     shell: bash
 
 jobs:
-  printInputs:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}"
+    - name: "Print config"
+      run: |
+        echo "Config: ${{ github.event.inputs.partyConfig }}"
+        echo "Theme: ${{ github.event.inputs.partyTheme }}"
+
+    - name: Cancel Previous Runs
+      uses: styfle/cancel-workflow-action@0.9.0
+      with:
+        access_token: ${{ github.token }}
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-2
+
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Terraform apply
+      run: |
+        cd prod
+        terraform init
+        terraform apply -auto-approve \
+         -var 'vhq_enabled=true' \
+         -var 'vhq_placeholder_enabled=true' \
+         -var 'party_config=${{ github.event.inputs.partyConfig }}' \
+         -var 'party_theme=${{ github.event.inputs.partyTheme }}' \
