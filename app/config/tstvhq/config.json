@@ -21,10 +21,10 @@
     },
     "welcomePage": {
         "avatarSelectionEnabled": true,
-        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/hex22/infernal_theater.jpg",
-        "enterSpaceButtonText": "Enter",
+        "backgroundImagePath": "https://tstvhq.s3.amazonaws.com/backgrounds/vhq/Pride2022/welcome.jpg",
+        "enterSpaceButtonText": "ENTER",
         "avatarSelectionText": "Select your Sigil",
-        "headerHtml": "<div class='tst'><p>Welcome Home to</p><h1>The Satanic Temple Virtual Headquarters</h1><h2>Happy Hexennacht!</h2>"
+        "headerHtml": "<div class='tst'><p>Welcome Home to</p><h1>The Satanic Temple Virtual Headquarters</h1><h2>Hail Pride!</h2>"
     },
     "avatars": [
         {
