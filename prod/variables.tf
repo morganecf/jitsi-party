@@ -1,3 +1,7 @@
+variable "cognito_allowed_groups" {
+  type = string
+}
+
 variable "vhq_enabled" {
   type    = bool
   default = false
