@@ -25,6 +25,10 @@ on:
         type: boolean
         description: 'VHQ placeholder enabled'
         default: true
+      cognitoAllowedGroups:
+        type: string
+        description: 'Allowed Cognito groups'
+        default: 'Caretakers PR Benefactors AllHolidays2022 Temple1January22'
 
 defaults:
   run:
@@ -64,3 +68,4 @@ jobs:
          -var 'vhq_placeholder_enabled=${{ github.event.inputs.vhqPlaceholderEnabled }}' \
          -var 'party_config=${{ github.event.inputs.partyConfig }}' \
          -var 'party_theme=${{ github.event.inputs.partyTheme }}' \
+         -var 'cognito_allowed_groups=${{ github.event.inputs.cognitoAllowedGroups }}' \
