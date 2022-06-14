@@ -43,6 +43,9 @@ jobs:
       run: |
         echo "Config: ${{ github.event.inputs.partyConfig }}"
         echo "Theme: ${{ github.event.inputs.partyTheme }}"
+        echo "VHQ Enabled: ${{ github.event.inputs.vhqEnabled }}"
+        echo "VHQ Placeholder Enabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}"
+        echo "Cognito Allowed Groups: ${{ github.event.inputs.cognitoAllowedGroups }}"
 
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.9.0
