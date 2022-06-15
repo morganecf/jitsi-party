@@ -17,10 +17,6 @@ on:
         options:
         - temple
         - tst
-      vhqEnabled:
-        type: boolean
-        description: 'VHQ enabled'
-        default: true
       vhqPlaceholderEnabled:
         type: boolean
         description: 'VHQ placeholder enabled'
@@ -29,6 +25,11 @@ on:
         type: string
         description: 'Allowed Cognito groups'
         default: 'Caretakers PR Benefactors AllHolidays2022 Temple1January22'
+      shutdownTime:
+        description: 'Shutdown time'
+        type: string
+        required: true
+        default: '00:00:15'
 
 defaults:
   run:
@@ -62,13 +63,33 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - name: Terraform apply
-      run: |
-        cd prod
-        terraform init
-        terraform apply -auto-approve \
-         -var 'vhq_enabled=${{ github.event.inputs.vhqEnabled }}' \
-         -var 'vhq_placeholder_enabled=${{ github.event.inputs.vhqPlaceholderEnabled }}' \
-         -var 'party_config=${{ github.event.inputs.partyConfig }}' \
-         -var 'party_theme=${{ github.event.inputs.partyTheme }}' \
-         -var 'cognito_allowed_groups=${{ github.event.inputs.cognitoAllowedGroups }}' \
+    - name: Open
+      uses: ./.github/actions/tf-apply
+      with:
+        vhqEnabled: true
+        partyConfig: ${{ github.event.inputs.partyConfig }}
+        partyTheme: ${{ github.event.inputs.partyTheme }}
+        vhqPlaceholderEnabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}
+        cognitoAllowedGroups: ${{ github.event.inputs.cognitoAllowedGroups }}
+
+    - name: Delay
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: delay-until-time
+        token: ${{ secrets.PERSONAL_TOKEN }}
+        inputs: |
+          {
+            "targetTime": "${{github.event.inputs.shutdownTime}}"
+          }
+
+    - name: Close
+      uses: ./.github/actions/tf-apply
+      with:
+        vhqEnabled: false
+        partyConfig: ${{ github.event.inputs.partyConfig }}
+        partyTheme: ${{ github.event.inputs.partyTheme }}
+        vhqPlaceholderEnabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}
+        cognitoAllowedGroups: ${{ github.event.inputs.cognitoAllowedGroups }}
+
+
+
