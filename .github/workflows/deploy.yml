@@ -44,7 +44,6 @@ jobs:
       run: |
         echo "Config: ${{ github.event.inputs.partyConfig }}"
         echo "Theme: ${{ github.event.inputs.partyTheme }}"
-        echo "VHQ Enabled: ${{ github.event.inputs.vhqEnabled }}"
         echo "VHQ Placeholder Enabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}"
         echo "Cognito Allowed Groups: ${{ github.event.inputs.cognitoAllowedGroups }}"
 
@@ -72,24 +71,58 @@ jobs:
         vhqPlaceholderEnabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}
         cognitoAllowedGroups: ${{ github.event.inputs.cognitoAllowedGroups }}
 
-    - name: Delay
-      uses: benc-uk/workflow-dispatch@v1
-      with:
-        workflow: delay-until-time
-        token: ${{ secrets.PERSONAL_TOKEN }}
-        inputs: |
-          {
-            "targetTime": "${{github.event.inputs.shutdownTime}}"
-          }
-
-    - name: Close
-      uses: ./.github/actions/tf-apply
-      with:
-        vhqEnabled: false
-        partyConfig: ${{ github.event.inputs.partyConfig }}
-        partyTheme: ${{ github.event.inputs.partyTheme }}
-        vhqPlaceholderEnabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}
-        cognitoAllowedGroups: ${{ github.event.inputs.cognitoAllowedGroups }}
-
+        #    - name: Delay
+        #      uses: cardinalby/js-eval-action@v1
+        #      env:
+        #        targetTime: ${{ github.event.inputs.shutdownTime }}
+        #        timezone: America/New_York
+        #      with:
+        #        expression: |
+        #          {
+        #            function changeTimezone(date, ianatz) {
+        #              var invdate = new Date(date.toLocaleString('en-US', {
+        #                timeZone: ianatz
+        #              }));
+        #
+        #              var diff = date.getTime() - invdate.getTime();
+        #
+        #              return new Date(date.getTime() - diff); // needs to substract
+        #            }
+        #
+        #            const now = new Date();
+        #            const nowLocal = changeTimezone(now, env.timezone);
+        #
+        #            const targetTimeArray = /^(\d){2}:(\d){2}/.exec(env.targetTime);
+        #            const targetHours = targetTimeArray[0];
+        #            const targetMinutes = targetTimeArray[1];
+        #
+        #            if (nowLocal.getHours() - targetHours >= 0 &&
+        #                nowLocal.getMinutes() - targetMinutes >= 0) {
+        #              var targetTime = nowLocal;
+        #
+        #              if (nowLocal.getHours() - targetHours > 8) {
+        #                targetTime = targetTime + new Date(0, 0, 1);
+        #              }
+        #
+        #              targetTime.setHours(targetHours);
+        #              targetTime.setMinutes(targetMinutes);
+        #            }
+        #
+        #            while (nowLocal < targetTime) {
+        #              await sleep(1000);
+        #            }
+        #
+        #            return true;
+        #          }
+        #
+        #    - name: Close
+        #      uses: ./.github/actions/tf-apply
+        #      with:
+        #        vhqEnabled: false
+        #        partyConfig: ${{ github.event.inputs.partyConfig }}
+        #        partyTheme: ${{ github.event.inputs.partyTheme }}
+        #        vhqPlaceholderEnabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}
+        #        cognitoAllowedGroups: ${{ github.event.inputs.cognitoAllowedGroups }}
+        #
 
 
