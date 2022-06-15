@@ -22,7 +22,7 @@ jobs:
             {
               const
                 targetTime = parseInt(env.targetTime),
-              assert(targetTime == now);
+              assert(now >= targetTime);
               return true;
             }
 
