@@ -1,51 +1,59 @@
 {
     "events": [
         {
-            "name": "Vasectomies and Reproductive Rights: Led by Minister Karl Kasarda",
+            "name": "Pride: Vice Or Virtue: Led by Minister Joe Dee",
             "description": "Please visit the Satanic Ministry archive at services.satanicministry.com to view previous Temple services. Not all services are recorded.",
             "room": "sanctuary",
-            "start": "2022-06-14T21:00:00-04:00",
-            "end": "2022-06-14T22:00:00-04:00",
+            "start": "2022-06-21T21:00:00-04:00",
+            "end": "2022-06-21T22:00:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dark Arts and Crafts",
             "description": "Join Satanic artists CraftSatan and Zoey Inferni for a very chill craft and chat session.",
             "room": "andromalius",
-            "start": "2022-06-14T22:00:00-04:00",
-            "end": "2022-06-14T23:59:00-04:00",
+            "start": "2022-06-21T22:00:00-04:00",
+            "end": "2022-06-21T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Dungeons & Dragons",
             "description": "Join Dungeon Mistress Kaelea and a team of intrepid adventurers as they unravel mysteries in the Kingdom of Ekerion, a 5th Edition Dungeons & Dragons homebrew campaign. Tune in for laughs, silly voices, twists and turns, and lots of dice-rolling shenanigans.",
             "room": "malthus",
-            "start": "2022-06-14T22:00:00-04:00",
-            "end": "2022-06-14T23:59:00-04:00",
+            "start": "2022-06-21T22:00:00-04:00",
+            "end": "2022-06-21T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Writers Circle",
             "description": "Join us for our Satanic Writers Circle, lead by Meilin Kikkano",
             "room": "los",
-            "start": "2022-06-14T22:00:00-04:00",
-            "end": "2022-06-14T23:59:00-04:00",
+            "start": "2022-06-21T22:00:00-04:00",
+            "end": "2022-06-21T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Music and Videos from Whimsical Blasphemy",
             "description": "Live from Salem, join Mercy Maelica for music and videos! Learn more at whimsicalblasphemy.com.",
             "room": "bifrons",
-            "start": "2022-06-14T22:00:00-04:00",
-            "end": "2022-06-14T23:59:00-04:00",
+            "start": "2022-06-21T22:00:00-04:00",
+            "end": "2022-06-21T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         },
         {
             "name": "After Services Activities: Satanic Sober Faction",
             "description": "TST Sober Faction will be hosting special meetings after weekly services such as Sober Book club hosted by Priest Joe Dee, Seven Ritual Workshop hosted by Reverend Jon Eldritch, & free talk Q&A sessions hosted by all of Sober Faction Council. Heal Thyself, Hail Thyself! Sobriety Without Superstition.",
             "room": "urizen",
-            "start": "2022-06-14T22:00:00-04:00",
-            "end": "2022-06-14T23:59:00-04:00",
+            "start": "2022-06-21T22:00:00-04:00",
+            "end": "2022-06-21T23:59:00-04:00",
+            "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
+        },
+        {
+            "name": "After Services Activities: TST SoCal Racial and Equity Diversity Committee Presents - Shut Up and Listen: A Conversation with Satanic Allies",
+            "description": "Join BIPOC Satanists as we have a conversation with trusted and loved allies. For more information on TST SoCal Racial and Equity Diversity Committee consult SoCal RED's private Facebook group Answer a set of questions to be added. All members are welcome to join.  https://www.facebook.com/groups/661973187787781",
+            "room": "raum",
+            "start": "2022-06-21T22:00:00-04:00",
+            "end": "2022-06-21T23:59:00-04:00",
             "image": "https://tstvhq.s3.amazonaws.com/event_images/candle.png"
         }
     ]
