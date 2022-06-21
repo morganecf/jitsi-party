@@ -1,0 +1,30 @@
+name: wait-for-house
+
+inputs:
+  tries:
+    description: 'Number of tries'
+    default: 6
+  interval:
+    description: 'Interval (seconds)'
+    default: 10
+
+runs:
+  using: composite
+  steps:
+  - name: "Print config"
+    shell: bash
+    run: |
+      echo "Tries: ${{ inputs.tries }}"
+      echo "Interval: ${{ inputs.interval }}"
+
+  - name: Check house
+    shell: bash
+    run: |
+      i=0
+      ret=1
+      while [ $i -lt ${{ inputs.tries }} ] && [ ${ret} -eq 1 ]; do
+        curl https://testing.enter.thesatanic.estate/
+        ret=$?
+        let i++
+        sleep ${{ inputs.interval }}
+      done
