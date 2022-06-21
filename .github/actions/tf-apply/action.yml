@@ -1,0 +1,44 @@
+name: tf-apply
+
+inputs:
+  partyConfig:
+    description: 'Party config'
+    required: true
+  partyTheme:
+    description: 'Party theme'
+    required: true
+  vhqEnabled:
+    description: 'VHQ enabled'
+    type: boolean
+    required: true
+  vhqPlaceholderEnabled:
+    description: 'VHQ placeholder enabled'
+    required: true
+  cognitoAllowedGroups:
+    description: 'Allowed Cognito groups'
+    required: true
+
+runs:
+  using: composite
+  steps:
+  - name: "Print config"
+    shell: bash
+    run: |
+      echo "Config: ${{ inputs.partyConfig }}"
+      echo "Theme: ${{ inputs.partyTheme }}"
+      echo "VHQ Enabled: ${{ inputs.vhqEnabled }}"
+      echo "VHQ Placeholder Enabled: ${{ inputs.vhqPlaceholderEnabled }}"
+      echo "Cognito Allowed Groups: ${{ inputs.cognitoAllowedGroups }}"
+
+  - name: Terraform apply
+    shell: bash
+    run: |
+      cd prod
+      terraform init
+      terraform apply -auto-approve \
+        -var 'vhq_enabled=${{ inputs.vhqEnabled }}' \
+        -var 'vhq_placeholder_enabled=${{ inputs.vhqPlaceholderEnabled }}' \
+        -var 'party_config=${{ inputs.partyConfig }}' \
+        -var 'party_theme=${{ inputs.partyTheme }}' \
+        -var 'cognito_allowed_groups=${{ inputs.cognitoAllowedGroups }}' \
+

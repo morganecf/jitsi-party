@@ -1,0 +1,69 @@
+name: delay-until-time
+on:
+  workflow_dispatch:
+    inputs:
+      targetTime:
+        description: 'Target time'
+        type: string
+        required: true
+        default: '00:00'
+jobs:
+  delay-and-check:
+    runs-on: ubuntu-latest
+    environment: delay1Minute
+    steps:
+      - name: Check clock
+        id: checkClock
+        uses: cardinalby/js-eval-action@v1
+        continue-on-error: true
+        env:
+          targetTime: ${{ github.event.inputs.targetTime }}
+          timezone: America/New_York
+        with:
+          expression: |
+            {
+              function changeTimezone(date, ianatz) {
+                var invdate = new Date(date.toLocaleString('en-US', {
+                  timeZone: ianatz
+                }));
+
+                var diff = date.getTime() - invdate.getTime();
+
+                return new Date(date.getTime() - diff); // needs to substract
+              }
+
+              const now = new Date();
+              const nowLocal = changeTimezone(now, env.timezone);
+
+              const targetTimeArray = /^(\d){2}:(\d){2}/.exec(env.targetTime);
+              const targetHours = targetTimeArray[0];
+              const targetMinutes = targetTimeArray[1];
+
+              if (nowLocal.getHours() - targetHours >= 0 &&
+                  nowLocal.getMinutes() - targetMinutes >= 0) {
+                var targetTime = nowLocal;
+
+                if (nowLocal.getHours() - targetHours > 8) {
+                  console.log("More than 8 hours ahead, inferring tomorrow");
+                  targetTime = targetTime + new Date(0, 0, 1);
+                }
+
+                targetTime.setHours(targetHours);
+                targetTime.setMinutes(targetMinutes);
+              }
+
+              // assert(now >= targetTime);
+              return targetTime;
+            }
+
+      ## Call itself again
+      - uses: aurelien-baudet/workflow-dispatch@v2
+        if: |
+          steps.checkClock.outcome != 'success'
+        with:
+          workflow: ${{ github.workflow }}
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+          inputs: |
+            {
+              "targetTime": "${{github.event.inputs.targetTime}}"
+            }
