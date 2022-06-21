@@ -27,12 +27,11 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - name: Open
+    - name: Shut down house
       uses: ./.github/actions/tf-apply
       with:
         vhqEnabled: false
-        # partyConfig: ${{ github.event.inputs.partyConfig }}
-        # partyTheme: ${{ github.event.inputs.partyTheme }}
-        # vhqPlaceholderEnabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}
-        # cognitoAllowedGroups: ${{ github.event.inputs.cognitoAllowedGroups }}
-#
+        partyConfig: dummy
+        partyTheme: dummy
+        vhqPlaceholderEnabled: true
+        cognitoAllowedGroups: dummy
