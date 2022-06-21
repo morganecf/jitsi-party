@@ -39,3 +39,9 @@ jobs:
         partyTheme: temple
         vhqPlaceholderEnabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}
         cognitoAllowedGroups: "Caretakers PR Benefactors AllHolidays2022 ${{ github.event.inputs.cognitoAllowedGroups }}"
+
+    - name: Wait for temple
+      uses: ./.github/actions/wait-for-house
+      with:
+        tries: 6
+        interval: 10
