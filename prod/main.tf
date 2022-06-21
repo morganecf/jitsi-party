@@ -329,7 +329,7 @@ resource "aws_route53_record" "main" {
   name    = local.tst_domain
   type    = var.vhq_placeholder_enabled ? "CNAME" : "A"
   ttl     = "60"
-  records = [var.vhq_placeholder_enabled ? "d1u2lx0fagbi00.cloudfront.net" : aws_eip.main[0].public_ip]
+  records = [var.vhq_placeholder_enabled ? "ghs.googlehosted.com" : aws_eip.main[0].public_ip]
 }
 
 resource "aws_route53_record" "testing" {
