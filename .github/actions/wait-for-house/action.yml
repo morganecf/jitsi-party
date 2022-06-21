@@ -28,3 +28,4 @@ runs:
         let i++
         sleep ${{ inputs.interval }}
       done
+      exit 0
