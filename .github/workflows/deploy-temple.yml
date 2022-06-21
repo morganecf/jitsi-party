@@ -1,0 +1,40 @@
+name: deploy-temple
+
+on:
+  workflow_dispatch:
+    cognitoAllowedGroups:
+      type: string
+      description: 'Temple Cognito group'
+      default: 'Temple1January22'
+    vhqPlaceholderEnabled:
+      type: boolean
+      description: 'Enable placeholder page ("test mode")'
+      default: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Cancel Previous Runs
+      uses: styfle/cancel-workflow-action@0.9.0
+      with:
+        access_token: ${{ github.token }}
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-2
+
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Shut down house
+      uses: ./.github/actions/tf-apply
+      with:
+        vhqEnabled: true
+        partyConfig: temple
+        partyTheme: temple
+        vhqPlaceholderEnabled: ${{ github.event.inputs.vhqPlaceholderEnabled }}
+        cognitoAllowedGroups: "Caretakers PR Benefactors AllHolidays2022 ${{ github.event.inputs.cognitoAllowedGroups }}"
