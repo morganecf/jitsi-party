@@ -2,14 +2,15 @@ name: deploy-temple
 
 on:
   workflow_dispatch:
-    cognitoAllowedGroups:
-      type: string
-      description: 'Temple Cognito group'
-      default: 'Temple1January22'
-    vhqPlaceholderEnabled:
-      type: boolean
-      description: 'Enable placeholder page ("test mode")'
-      default: true
+    inputs:
+      cognitoAllowedGroups:
+        type: string
+        description: 'Temple Cognito group'
+        default: 'Temple1January22'
+      vhqPlaceholderEnabled:
+        type: boolean
+        description: 'Enable placeholder page ("test mode")'
+        default: true
 
 jobs:
   deploy:
@@ -30,7 +31,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - name: Shut down house
+    - name: Open temple
       uses: ./.github/actions/tf-apply
       with:
         vhqEnabled: true
