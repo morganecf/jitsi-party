@@ -9,7 +9,7 @@ defaults:
     shell: bash
 
 jobs:
-  deploy:
+  shutdown:
     runs-on: ubuntu-latest
     steps:
     - name: Cancel Previous Runs
