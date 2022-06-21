@@ -3,10 +3,10 @@ name: wait-for-house
 inputs:
   tries:
     description: 'Number of tries'
-    default: 6
+    default: 60
   interval:
     description: 'Interval (seconds)'
-    default: 10
+    default: 5
 
 runs:
   using: composite
@@ -18,14 +18,14 @@ runs:
       echo "Interval: ${{ inputs.interval }}"
 
   - name: Check house
-    shell: bash
+    shell: bash {0}
     run: |
       i=0
       ret=1
-      while [ $i -lt ${{ inputs.tries }} ] && [ ${ret} -eq 1 ]; do
-        curl https://testing.enter.thesatanic.estate/
+      while [ $i -lt ${{ inputs.tries }} ] && [ ! ${ret} -eq 0 ]; do
+        sleep ${{ inputs.interval }}
+        echo "Checking..."
+        curl -s https://testing.enter.thesatanic.estate/ > /dev/null
         ret=$?
         let i++
-        sleep ${{ inputs.interval }}
       done
-      exit 0
