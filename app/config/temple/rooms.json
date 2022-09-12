@@ -169,7 +169,7 @@
         },
         {
             "id": "raum",
-            "name": "Chapel of Los",
+            "name": "Raum",
             "type": "CHATSTREAM",
             "capacity": 300,
             "doorTint": "#000000",
