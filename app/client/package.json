@@ -32,7 +32,7 @@
     "reactjs-media": "^1.4.0",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.5.0",
     "socket.io-client": "^2.4.0",
     "url-loader": "^4.1.0"
   },
